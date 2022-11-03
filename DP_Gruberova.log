@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  3 NOV 2022 13:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  3 NOV 2022 18:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -881,7 +881,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 87.
  (C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<symbol_cvut_konturova_verze_cb.pdf, id=29, 126.78566pt x 96.54268pt>
+<symbol_cvut_konturova_verze_cb.pdf, id=37, 126.78566pt x 96.54268pt>
 File: symbol_cvut_konturova_verze_cb.pdf Graphic file (type pdf)
 <use symbol_cvut_konturova_verze_cb.pdf>
 Package pdftex.def Info: symbol_cvut_konturova_verze_cb.pdf  used on input line 92.
@@ -898,7 +898,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 
 ]
-<zadaniDP.pdf, id=44, 597.50829pt x 845.0471pt>
+<zadaniDP.pdf, id=52, 597.50829pt x 845.0471pt>
 File: zadaniDP.pdf Graphic file (type pdf)
 <use zadaniDP.pdf>
 Package pdftex.def Info: zadaniDP.pdf  used on input line 122.
@@ -911,7 +911,7 @@ File: zadaniDP.pdf Graphic file (type pdf)
 <use zadaniDP.pdf>
 Package pdftex.def Info: zadaniDP.pdf  used on input line 122.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-<zadaniDP.pdf, id=48, page=1, 597.50829pt x 845.0471pt>
+<zadaniDP.pdf, id=56, page=1, 597.50829pt x 845.0471pt>
 File: zadaniDP.pdf Graphic file (type pdf)
 <use zadaniDP.pdf, page 1>
 Package pdftex.def Info: zadaniDP.pdf , page1 used on input line 122.
@@ -933,7 +933,7 @@ File: zadaniDP.pdf Graphic file (type pdf)
 Package pdftex.def Info: zadaniDP.pdf , page1 used on input line 122.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [3 <./zadaniDP.pdf>]
-<zadaniDP.pdf, id=74, page=2, 597.50829pt x 845.0471pt>
+<zadaniDP.pdf, id=82, page=2, 597.50829pt x 845.0471pt>
 File: zadaniDP.pdf Graphic file (type pdf)
 <use zadaniDP.pdf, page 2>
 Package pdftex.def Info: zadaniDP.pdf , page2 used on input line 122.
@@ -966,9 +966,6 @@ Overfull \hbox (55.43954pt too wide) in paragraph at lines 193--212
 
 ]
 Kapitola 1.
-
-LaTeX Warning: Citation `Jones19970401' on page 13 undefined on input line 5.
-
 ) [13] [14
 
 ] (kapitoly/zaver.tex) [15] (tex/bibliografie1.tex [16
@@ -983,24 +980,21 @@ File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ]
 P\v {r}\'{\i }loha A.
 [19] (DP_Gruberova.aux)
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `DP_Gruberova.out' has not changed.
-(rerunfilecheck)             Checksum: 05472C16E94EA8212AA96E513EDD1C59;515.
+(rerunfilecheck)             Checksum: 13F3861FF70CDECBDB581109933B263C;760.
  ) 
 Here is how much of TeX's memory you used:
- 26449 strings out of 475380
- 494522 string characters out of 2775356
- 879484 words of memory out of 3000000
- 47266 multiletter control sequences out of 15000+600000
- 532529 words of font info for 86 fonts, out of 8000000 for 9000
+ 26459 strings out of 475380
+ 494634 string characters out of 2775356
+ 879487 words of memory out of 3000000
+ 47271 multiletter control sequences out of 15000+600000
+ 535475 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,17n,94p,513b,673s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 99i,17n,94p,721b,673s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}<C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on DP_Gruberova.pdf (19 pages, 228328 bytes).
+Output written on DP_Gruberova.pdf (19 pages, 231928 bytes).
 PDF statistics:
- 195 PDF objects out of 1000 (max. 8388607)
- 30 named destinations out of 1000 (max. 500000)
- 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 210 PDF objects out of 1000 (max. 8388607)
+ 35 named destinations out of 1000 (max. 500000)
+ 112 words of extra memory for PDF output out of 10000 (max. 10000000)
 

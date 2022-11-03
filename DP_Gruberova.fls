@@ -1271,6 +1271,7 @@ INPUT .\kapitoly\teorie.tex
 INPUT kapitoly\teorie.tex
 INPUT .\kapitoly\teorie.tex
 INPUT kapitoly\teorie.tex
+INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx12.tfm
 INPUT .\kapitoly\zaver.tex
 INPUT kapitoly\zaver.tex
 INPUT .\kapitoly\zaver.tex
