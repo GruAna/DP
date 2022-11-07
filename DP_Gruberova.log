@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  3 NOV 2022 18:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  3 NOV 2022 18:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -986,13 +986,13 @@ Package rerunfilecheck Info: File `DP_Gruberova.out' has not changed.
 Here is how much of TeX's memory you used:
  26459 strings out of 475380
  494634 string characters out of 2775356
- 879487 words of memory out of 3000000
+ 880487 words of memory out of 3000000
  47271 multiletter control sequences out of 15000+600000
  535475 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,17n,94p,721b,673s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 99i,17n,94p,774b,673s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}<C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on DP_Gruberova.pdf (19 pages, 231928 bytes).
+Output written on DP_Gruberova.pdf (19 pages, 232007 bytes).
 PDF statistics:
  210 PDF objects out of 1000 (max. 8388607)
  35 named destinations out of 1000 (max. 500000)
