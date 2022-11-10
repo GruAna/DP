@@ -3,7 +3,7 @@
 \contentsline {chapter}{\numberline {1}}{13}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Logistika}{13}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Štíhlá logistika}{14}{section.1.2}%
-\contentsline {chapter}{Závěr}{15}{chapter*.6}%
-\contentsline {chapter}{Literatura}{16}{chapter*.6}%
-\contentsline {chapter}{Přílohy}{18}{chapter*.7}%
-\contentsline {chapter}{\numberline {A}Obsah přiloženého CD}{19}{appendix.A}%
+\contentsline {chapter}{Závěr}{17}{chapter*.6}%
+\contentsline {chapter}{Literatura}{18}{chapter*.6}%
+\contentsline {chapter}{Přílohy}{20}{chapter*.7}%
+\contentsline {chapter}{\numberline {A}Obsah přiloženého CD}{21}{appendix.A}%
