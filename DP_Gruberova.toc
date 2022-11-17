@@ -1,11 +1,10 @@
-\babel@toc {czech}{}
-\contentsline {chapter}{\IeC {\'U}vod}{11}{chapter*.2}
-\contentsline {chapter}{\numberline {1}Teoretick\IeC {\'y} \IeC {\'u}vod do problematiky}{13}{chapter.1}
-\contentsline {section}{\numberline {1.1}Logistika}{13}{section.1.1}
-\contentsline {subsection}{\numberline {1.1.1}Definice Logistiky}{13}{subsection.1.1.1}
-\contentsline {section}{\numberline {1.2}\IeC {\v S}t\IeC {\'\i }hl\IeC {\'a} logistika}{14}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}Toyota Production System}{14}{subsection.1.2.1}
-\contentsline {chapter}{Z\IeC {\'a}v\IeC {\v e}r}{17}{chapter*.5}
-\contentsline {chapter}{Literatura}{18}{chapter*.5}
-\contentsline {chapter}{P\IeC {\v r}\IeC {\'\i }lohy}{20}{chapter*.6}
-\contentsline {chapter}{\numberline {A}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD}{21}{appendix.A}
+\babel@toc {czech}{}\relax 
+\contentsline {chapter}{Úvod}{11}{chapter*.2}%
+\contentsline {chapter}{\numberline {1}Logistika}{13}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Definice Logistiky}{13}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Štíhlá logistika}{13}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Toyota Production System}{14}{subsection.1.2.1}%
+\contentsline {chapter}{Závěr}{17}{chapter*.6}%
+\contentsline {chapter}{Literatura}{18}{chapter*.6}%
+\contentsline {chapter}{Přílohy}{20}{chapter*.7}%
+\contentsline {chapter}{\numberline {A}Obsah přiloženého CD}{21}{appendix.A}%
