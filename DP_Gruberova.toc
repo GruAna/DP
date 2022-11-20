@@ -4,7 +4,7 @@
 \contentsline {section}{\numberline {1.1}Definice Logistiky}{13}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Štíhlá logistika}{13}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}Toyota Production System}{14}{subsection.1.2.1}%
-\contentsline {chapter}{Závěr}{17}{chapter*.5}%
-\contentsline {chapter}{Literatura}{18}{chapter*.5}%
-\contentsline {chapter}{Přílohy}{20}{chapter*.6}%
-\contentsline {chapter}{\numberline {A}Obsah přiloženého CD}{21}{appendix.A}%
+\contentsline {chapter}{Závěr}{19}{chapter*.6}%
+\contentsline {chapter}{Literatura}{20}{chapter*.6}%
+\contentsline {chapter}{Přílohy}{22}{chapter*.7}%
+\contentsline {chapter}{\numberline {A}Obsah přiloženého CD}{23}{appendix.A}%
