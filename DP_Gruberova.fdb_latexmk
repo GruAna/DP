@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1668951097 "c:/Users/uzivatel/Documents/skola/DP/DP_Gruberova.tex" "DP_Gruberova.pdf" "DP_Gruberova" 1668951101
+["pdflatex"] 1668962085 "c:/Users/uzivatel/Documents/skola/DP/DP_Gruberova.tex" "DP_Gruberova.pdf" "DP_Gruberova" 1668962090
   "C:/Users/uzivatel/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1667472617 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/uzivatel/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1667471210 10789789 02d9a8b514ec08d575e4cf0e33c1259e ""
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc" 1256929440 2327 9d6df24f9c4f7368395224341a95523a ""
@@ -221,14 +221,15 @@
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656233319 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1650047684 2245 c8a4088d07cffc2e5207730c738edd76 ""
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1650047684 20785 71a3d72ab517959a6979c27e6176bec1 ""
-  "DP_Gruberova.aux" 1668951101 2492 683696949e20b180490eb1aef3ee44de "pdflatex"
-  "DP_Gruberova.out" 1668951101 1048 a42f019349ab49f068506da2e71ac3d5 "pdflatex"
+  "DP_Gruberova.aux" 1668962089 3071 3049e6765d28342c1c18a3fbfcc63748 "pdflatex"
+  "DP_Gruberova.out" 1668962089 1296 4432d5541c7b292b4b1fac9736b95b10 "pdflatex"
   "DP_Gruberova.tex" 1667474378 9566 a27969fbcf4fcba465c95c6622a6a1a1 ""
-  "DP_Gruberova.toc" 1668951101 632 0bc0f8bd0550a3d6f8b098371ed80361 "pdflatex"
+  "DP_Gruberova.toc" 1668962089 740 c9c7042fe8ee5fe42c9e30c8a0c5f81d "pdflatex"
   "c:/Users/uzivatel/Documents/skola/DP/DP_Gruberova.tex" 1667474378 9566 a27969fbcf4fcba465c95c6622a6a1a1 ""
-  "kapitoly/teorie.tex" 1668951089 13066 525e73c1c3c47ef6ff4a86ef525ea39a ""
+  "kapitoly/teorie.tex" 1668962077 16533 acee1e0a3bd78ca11d385562c4ca4653 ""
   "kapitoly/uvod.tex" 1667468236 156 4ec44cee48aa78884fe1d15c7886adcc ""
   "kapitoly/zaver.tex" 1667468236 19 a36f3ccfd7f6727b2df83bb47daf5060 ""
+  "obrazky/3M.jpg" 1668955934 51246 7ca27bd8a57acc9bf708462b4e30e569 ""
   "symbol_cvut_konturova_verze_cb.pdf" 1667468236 11278 cbc829789351b189a368bb313dedba7c ""
   "tex/bibliografie1.tex" 1668694363 2702 75cda8a436f4fc610dc9ae40836aa36d ""
   "tex/makra.tex" 1667468236 25357 b4ca43f3c5ac9a2b0e641f5937ddb06f ""
