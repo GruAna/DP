@@ -1,0 +1,56 @@
+\chapter{Shrink}
+
+Cílem této práce je analyzovat shrinky produktů, které byly zaznamenány v datech dané společnosti. V následující části je vysvětlen pojem shrink a popsány kategorie, které vybraná společnost rozeznává.
+
+\section{Definice}
+
+Slovem shrink se označuje ztráta zisku z neuskutečněného prodeje hotového produktu. Tento produkt je vyroben, či naskladněn, ale z nějakého důvodu nemohl být prodán zákazníkovi. Tímto důvodem může být například poničení produktu, jeho ztráta nebo prošlá doba spotřeby. Za shrink produktu lze označovat i stav, kdy cena produktu je neplánovaně snížena v důsledku zmíněných důvodů. Shrinkem je potom rozdíl plánované prodejní ceny a ceny, za kterou byl produkt skutečně prodán.\cite{bib:DefShrink}
+
+% Cílem každé společnosti by mělo být tyto shrinky minimalizovat, protože kvůli shrinkům firma přichází o zisk. 
+
+
+\section{Typy shrinků}
+
+Vybraná společnost rozlišuje ve svých datech tři kategorie shrinku -- inventory, damages, price downs. Dále se budu věnovat popisu jednotlivých typů.
+
+\subsection*{Inventory}
+
+Pojem inventory, který lze do češtiny přeložit jako inventář, sdružuje všechny shrinky týkající se změn v inventáři, tj. stavu zásob.
+
+\begin{table}[]
+    \begin{tabular}{lll}
+    ID (motive\_type) & Název             & Popis \\
+    \hline
+    924          & inventory+             & Kladné připsání zboží během inventury.      \\
+    923          & inventory-             & Záporné odepsání zboží během inventury.      \\
+    922          & vyrovnání s inventurou & Velká inventura skladu (zahrnuje položky )      \\
+    16           & oprava inventury       &       \\
+    15           & castecna inventura     &       \\
+    25           & neuzn. reklamace DC    &       \\
+    2            & pertes merchandise     &       \\
+    147          & inventura              &      
+    \end{tabular}
+\end{table}
+
+
+\subsection*{Damages}
+
+Do kategorie damages (česky škody) jsou řazeny zbylé důvody k odstranění produktu z prodeje, z důvodu degradace produktu. 
+
+\begin{table}[]
+    \begin{tabular}{lll}
+    ID (motive\_type) & Název                  & Popis \\
+    \hline
+    3            & broken                 &       \\
+    4            & out of date            &       \\
+    6            & potravinova banka      &       \\
+    8            & Pet dary               &       \\
+    32           & zakaznicka reklamace   &       \\
+    64           & kompostery             &       \\
+    31           & neupl. reklamace DC    &       \\
+    34           & internal use (err)     &       \\
+    28           & zniceno rozmrazenim    &       \\
+    \end{tabular}
+\end{table}
+
+

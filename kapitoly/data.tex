@@ -1,0 +1,55 @@
+\chapter{Zpracování dat}
+
+Úvod ke kapitole.... % dopsat!!!!!
+
+\section{Popis obdržených dat}
+
+Všechna data poskytnutá společností jsou uložena v databázi, ke které je byl zhotoven omezený přístup pro účely získání dat pro analýzy shrinku produktů společnosti. Zároveň s možností přístupu jsem obdržela i tabulku, která stručně komentuje všechny tabulky v databázi a sloupce v jednotlivých tabulkách. Celkem se v databázi nachází 412 tabulek, z nichž je potřeba vybrat ty s relevantními daty pro úlohu shrinků.
+
+Z důvodu ochrany dat nelze uvádět přesné názvy tabulek, nicméně pro lepší orientaci v textu, každé použité tabulce přiřadím název, který odpovídá obsaženým datům v tabulce.
+
+\subsubsection{Tabulky transakcí}
+V tabulce \texttt{transakce} se nachází údaje o všech provedených transakcích, a to jak skladové transakce, tak prodeje na prodejnách. V případě prodejen jsou údaje agregované podle prodejny, konkrétního produktu a dne transakce, tzn. v této tabulce nelze rozlišit konkrétní prodeje na jednotlivých pokladnách, ale pouze souhrn za jeden den. Tabulka obsahuje údaje za posledních dvanáct měsíců.
+
+Tabulka transakcí obsahuje 21 sloupců, jako podstatné pro analýzu jsem vybrala následující sloupce:
+
+\begin{itemize}
+    \item ID transakce, jedinečné pro každou transakci
+    \item Typ transakce
+    \item ID produktu, kterého se transakce týká
+    \item ID skladu (včetně prodejen)
+    \item Datum transakce (tzv. business datum, pokud samotná transakce proběhne až po půlnoci uvedeného dne, tak se posílá s datem z předchozího dne, neboť do toho dne businessově náleží.)
+    \item ID promoce 
+    \item Motive\_type z hlediska hledání shrinku produktu se jedná o klíčový sloupec, neboť obsahuje označení jednotlivých typů shrinků.
+    \item Množství produktu v dané transakci
+    \item Hodnota transakce v nákladové ceně
+    \item Hodnota transakce v prodejní ceně včetně DPH -- v případě prodejů se jedná o skutečnou cenu, u zbylých transakcích je uvedena odpovídající cena podle ceníku.
+\end{itemize}
+
+Tabulku, která obsahuje údaje o jednotlivých prodejích na prodejnách společnosti, jsem pro účely této práce nazvala \texttt{transakce\_prodeje}. Celkem obsahuje třináct sloupců, z nichž jsem vybrala následující:
+
+\begin{itemize}
+    \item ID transakce
+    \item ID produktu, kterého se transakce týká
+    \item ID prodejny
+    \item Datum a čas transakce 
+    \item ID promoce
+    \item Množství produktu v dané transakci
+    \item Hodnota transakce v prodejní ceně bez DPH
+    \item Hodnota DPH dané transakce
+\end{itemize}
+
+\subsubsection{Tabulky ceníků}
+
+
+
+
+
+\section{Statistické zpracování dat}
+
+\subsection*{Sledované údaje}
+
+
+
+\subsection*{Období jednoho měsíce}
+\subsection*{Období jednoho roku}

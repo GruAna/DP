@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  20 NOV 2022 17:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  7 FEB 2023 15:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -881,7 +881,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 87.
  (C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<symbol_cvut_konturova_verze_cb.pdf, id=45, 126.78566pt x 96.54268pt>
+<symbol_cvut_konturova_verze_cb.pdf, id=69, 126.78566pt x 96.54268pt>
 File: symbol_cvut_konturova_verze_cb.pdf Graphic file (type pdf)
 <use symbol_cvut_konturova_verze_cb.pdf>
 Package pdftex.def Info: symbol_cvut_konturova_verze_cb.pdf  used on input line 92.
@@ -898,7 +898,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 
 ]
-<zadaniDP.pdf, id=60, 597.50829pt x 845.0471pt>
+<zadaniDP.pdf, id=84, 597.50829pt x 845.0471pt>
 File: zadaniDP.pdf Graphic file (type pdf)
 <use zadaniDP.pdf>
 Package pdftex.def Info: zadaniDP.pdf  used on input line 122.
@@ -911,7 +911,7 @@ File: zadaniDP.pdf Graphic file (type pdf)
 <use zadaniDP.pdf>
 Package pdftex.def Info: zadaniDP.pdf  used on input line 122.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-<zadaniDP.pdf, id=64, page=1, 597.50829pt x 845.0471pt>
+<zadaniDP.pdf, id=88, page=1, 597.50829pt x 845.0471pt>
 File: zadaniDP.pdf Graphic file (type pdf)
 <use zadaniDP.pdf, page 1>
 Package pdftex.def Info: zadaniDP.pdf , page1 used on input line 122.
@@ -933,7 +933,7 @@ File: zadaniDP.pdf Graphic file (type pdf)
 Package pdftex.def Info: zadaniDP.pdf , page1 used on input line 122.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [3 <./zadaniDP.pdf>]
-<zadaniDP.pdf, id=90, page=2, 597.50829pt x 845.0471pt>
+<zadaniDP.pdf, id=114, page=2, 597.50829pt x 845.0471pt>
 File: zadaniDP.pdf Graphic file (type pdf)
 <use zadaniDP.pdf, page 2>
 Package pdftex.def Info: zadaniDP.pdf , page2 used on input line 122.
@@ -987,7 +987,7 @@ Overfull \hbox (2.45068pt too wide) in paragraph at lines 65--66
  []
 
 [16]
-<obrazky/3M.jpg, id=214, 361.35pt x 307.74976pt>
+<obrazky/3M.jpg, id=244, 361.35pt x 307.74976pt>
 File: obrazky/3M.jpg Graphic file (type jpg)
 <use obrazky/3M.jpg>
 Package pdftex.def Info: obrazky/3M.jpg  used on input line 77.
@@ -996,9 +996,37 @@ Package pdftex.def Info: obrazky/3M.jpg  used on input line 77.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[17]) [18 <./obrazky/3M.jpg>] (kapitoly/zaver.tex) [19
+[17]) (kapitoly/shrinky.tex [18 <./obrazky/3M.jpg>]
+Kapitola 2.
 
-] (tex/bibliografie1.tex [20
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 20.
+
+
+Overfull \hbox (36.72375pt too wide) in paragraph at lines 21--33
+[][] 
+ []
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 40.
+
+) (kapitoly/data.tex [19
+
+] [20]
+Kapitola 3.
+LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 12.
+(C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmtt.fd
+File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 17.
+ (C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [21
+
+]) [22] (kapitoly/zaver.tex) [23
+
+] (tex/bibliografie1.tex [24
 
 
 ]
@@ -1006,37 +1034,39 @@ Underfull \hbox (badness 1400) in paragraph at lines 19--20
 \OT1/lmr/m/n/12 In: \OT1/lmr/m/it/12 IIM Udai-pur Chro-nicles \OT1/lmr/m/n/12 [on-line]. 11. 10. 2019. [cit. 2022-11-07] Do-
  []
 
-LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 31.
-(C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmtt.fd
-File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
+
 Underfull \hbox (badness 1831) in paragraph at lines 40--42
 []\OT1/lmr/m/n/12 SKHMOT, Na-wras. The Lean Way Blog: What is Muda, Mura, and
  []
 
-) [21] [22
+
+Underfull \hbox (badness 1221) in paragraph at lines 44--45
+[]\OT1/lmr/m/n/12 Learning the Lingo: 3 de-fi-ni-ti-ons re-la-ted to un-sold food in-ven-tory. In:
+ []
+
+) [25] [26
 
 ]
 P\v {r}\'{\i }loha A.
-[23] (DP_Gruberova.aux)
+[27] (DP_Gruberova.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `DP_Gruberova.out' has not changed.
-(rerunfilecheck)             Checksum: 4432D5541C7B292B4B1FAC9736B95B10;1296.
+(rerunfilecheck)             Checksum: E8464BF44C78BC3382CEF2AEC5E80D41;2079.
  ) 
 Here is how much of TeX's memory you used:
- 26527 strings out of 475380
- 495364 string characters out of 2775356
- 890800 words of memory out of 3000000
- 47297 multiletter control sequences out of 15000+600000
- 543060 words of font info for 95 fonts, out of 8000000 for 9000
+ 26596 strings out of 475380
+ 496796 string characters out of 2775356
+ 890842 words of memory out of 3000000
+ 47338 multiletter control sequences out of 15000+600000
+ 543435 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,17n,94p,962b,673s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}<C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on DP_Gruberova.pdf (23 pages, 386052 bytes).
+{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}<C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
+Output written on DP_Gruberova.pdf (27 pages, 401259 bytes).
 PDF statistics:
- 309 PDF objects out of 1000 (max. 8388607)
- 66 named destinations out of 1000 (max. 500000)
- 133 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 373 PDF objects out of 1000 (max. 8388607)
+ 84 named destinations out of 1000 (max. 500000)
+ 181 words of extra memory for PDF output out of 10000 (max. 10000000)
 
