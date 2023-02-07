@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  7 FEB 2023 15:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  7 FEB 2023 16:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1003,7 +1003,12 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 20.
 
 
-Overfull \hbox (36.72375pt too wide) in paragraph at lines 21--33
+Underfull \hbox (badness 1184) in paragraph at lines 27--28
+[]|\OT1/lmr/m/n/12 Dodate^^Tcn^^Se opravy, kter^^Se bylo t^^Treba
+ []
+
+
+Overfull \hbox (20.18323pt too wide) in paragraph at lines 21--33
 [][] 
  []
 
@@ -1011,9 +1016,66 @@ Overfull \hbox (36.72375pt too wide) in paragraph at lines 21--33
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 40.
 
+
+Underfull \hbox (badness 2150) in paragraph at lines 44--45
+[]|\OT1/lmr/m/n/12 Odpis zbo^^Tz^^S^^P, kter^^Se bylo po^^Tskozen^^Se.
+ []
+
+
+Underfull \hbox (badness 3803) in paragraph at lines 45--46
+[]|\OT1/lmr/m/n/12 Odpis zbo^^Tz^^S^^P, kter^^Semu pro^^Tsla doba
+ []
+
+
+Underfull \hbox (badness 3657) in paragraph at lines 46--47
+[]|\OT1/lmr/m/n/12 Odpis po-tra-vin^^Sa^^Trsk^^Seho zbo^^Tz^^S^^P, kter^^Se
+ []
+
+
+Underfull \hbox (badness 1721) in paragraph at lines 46--47
+\OT1/lmr/m/n/12 Jedn^^Sa se o pro-dukty, kter^^Se ne-bylo
+ []
+
+
+Underfull \hbox (badness 3657) in paragraph at lines 47--48
+[]|\OT1/lmr/m/n/12 Odpis po-tra-vin^^Sa^^Trsk^^Seho zbo^^Tz^^S^^P, kter^^Se
+ []
+
+
+Underfull \hbox (badness 1270) in paragraph at lines 47--48
+\OT1/lmr/m/n/12 se o pro-dukty, kter^^Se ne-bylo mo^^Tzn^^Se
+ []
+
+
+Underfull \hbox (badness 3049) in paragraph at lines 50--51
+[]|\OT1/lmr/m/n/12 Odpis zbo^^Tz^^S^^P, kter^^Se je pro^^Tsl^^Se nebo
+ []
+
+
+Underfull \hbox (badness 3019) in paragraph at lines 52--53
+[]|\OT1/lmr/m/n/12 Odpis zbo^^Tz^^S^^P, kter^^Se bylo po^^Tskozeno
+ []
+
+
+Underfull \hbox (badness 7667) in paragraph at lines 52--53
+\OT1/lmr/m/n/12 nebo zni^^Tceno vli-vem t^^Tret^^S^^P strany
+ []
+
+
+Underfull \hbox (badness 6445) in paragraph at lines 52--53
+\OT1/lmr/m/n/12 vloup^^San^^S^^Pm) nebo p^^Tr^^S^^Prodn^^S^^Pmi ^^Tzivly.
+ []
+
+
+Overfull \hbox (119.76662pt too wide) in paragraph at lines 41--55
+[][] 
+ []
+
 ) (kapitoly/data.tex [19
 
-] [20]
+] [20] [21] [22
+
+]
 Kapitola 3.
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 12.
 (C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmtt.fd
@@ -1022,11 +1084,9 @@ File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 17.
  (C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [21
+) [23]) [24] (kapitoly/zaver.tex) [25
 
-]) [22] (kapitoly/zaver.tex) [23
-
-] (tex/bibliografie1.tex [24
+] (tex/bibliografie1.tex [26
 
 
 ]
@@ -1044,11 +1104,11 @@ Underfull \hbox (badness 1221) in paragraph at lines 44--45
 []\OT1/lmr/m/n/12 Learning the Lingo: 3 de-fi-ni-ti-ons re-la-ted to un-sold food in-ven-tory. In:
  []
 
-) [25] [26
+) [27] [28
 
 ]
 P\v {r}\'{\i }loha A.
-[27] (DP_Gruberova.aux)
+[29] (DP_Gruberova.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1056,17 +1116,17 @@ Package rerunfilecheck Info: File `DP_Gruberova.out' has not changed.
 (rerunfilecheck)             Checksum: E8464BF44C78BC3382CEF2AEC5E80D41;2079.
  ) 
 Here is how much of TeX's memory you used:
- 26596 strings out of 475380
- 496796 string characters out of 2775356
+ 26598 strings out of 475380
+ 496810 string characters out of 2775356
  890842 words of memory out of 3000000
  47338 multiletter control sequences out of 15000+600000
  543435 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,17n,94p,962b,673s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}<C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on DP_Gruberova.pdf (27 pages, 401259 bytes).
+Output written on DP_Gruberova.pdf (29 pages, 405174 bytes).
 PDF statistics:
- 373 PDF objects out of 1000 (max. 8388607)
- 84 named destinations out of 1000 (max. 500000)
+ 382 PDF objects out of 1000 (max. 8388607)
+ 86 named destinations out of 1000 (max. 500000)
  181 words of extra memory for PDF output out of 10000 (max. 10000000)
 
