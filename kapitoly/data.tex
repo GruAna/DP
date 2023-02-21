@@ -8,6 +8,19 @@ Všechna data poskytnutá společností jsou uložena v databázi, ke které je 
 
 Z důvodu ochrany dat nelze uvádět přesné názvy tabulek, nicméně pro lepší orientaci v textu, každé použité tabulce přiřadím název, který odpovídá obsaženým datům v tabulce.
 
+\subsubsection{Produkty}
+
+Základní číselník s údaji o produktech, se nachází v tabulce \texttt{produkt} se 27 sloupci. 
+\begin{itemize}
+    \item ID produktu a ID prodejní varianty, spolu tvoří primární klíč. 
+    \item Krátký a dlouhý název produktu
+    \item Expirace produktu ve dnech (hodnoty 0,999 a NULL označují neomezenou expiraci)
+    \item Rozměry produktu a jeho hmotnost
+    \item ID kategorie produktu v MS5 struktuře (pro lepší interpretaci, o jakou kategorii zboží se jedná, je výhodnější strukura 4BOX, kterou lze získat napojením )
+\end{itemize}
+
+Tabulka, která obsahuje 
+
 \subsubsection{Tabulky transakcí}
 V tabulce \texttt{transakce} se nachází údaje o všech provedených transakcích, a to jak skladové transakce, tak prodeje na prodejnách. V případě prodejen jsou údaje agregované podle prodejny, konkrétního produktu a dne transakce, tzn. v této tabulce nelze rozlišit konkrétní prodeje na jednotlivých pokladnách, ale pouze souhrn za jeden den. Tabulka obsahuje údaje za posledních dvanáct měsíců.
 
@@ -47,9 +60,13 @@ Tabulku, která obsahuje údaje o jednotlivých prodejích na prodejnách spole�
 
 \section{Statistické zpracování dat}
 
+
+
 \subsection*{Sledované údaje}
 
 
 
 \subsection*{Období jednoho měsíce}
 \subsection*{Období jednoho roku}
+
+\input{kapitoly/analyzy_rok.tex}
