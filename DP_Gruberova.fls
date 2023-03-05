@@ -1303,6 +1303,7 @@ INPUT .\kapitoly\metody.tex
 INPUT kapitoly\metody.tex
 INPUT .\kapitoly\metody.tex
 INPUT kapitoly\metody.tex
+INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmri10.tfm
 INPUT .\kapitoly\shrinky.tex
 INPUT kapitoly\shrinky.tex
 INPUT .\kapitoly\shrinky.tex
@@ -1359,10 +1360,10 @@ INPUT .\DP_Gruberova.out
 INPUT .\DP_Gruberova.out
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-ts1.enc
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rmtt.enc
+INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathex.enc
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathit.enc
-INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx12.pfb
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx12.pfb
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmex10.pfb
@@ -1379,10 +1380,14 @@ INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr1
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr12.pfb
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr17.pfb
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr17.pfb
+INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr6.pfb
+INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr6.pfb
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr7.pfb
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr7.pfb
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr8.pfb
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr8.pfb
+INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmri10.pfb
+INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmri10.pfb
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmri12.pfb
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmri12.pfb
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy10.pfb

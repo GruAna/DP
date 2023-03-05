@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  4 MAR 2023 17:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  5 MAR 2023 20:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -883,7 +883,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 88.
  (C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<symbol_cvut_konturova_verze_cb.pdf, id=81, 126.78566pt x 96.54268pt>
+<symbol_cvut_konturova_verze_cb.pdf, id=85, 126.78566pt x 96.54268pt>
 File: symbol_cvut_konturova_verze_cb.pdf Graphic file (type pdf)
 <use symbol_cvut_konturova_verze_cb.pdf>
 Package pdftex.def Info: symbol_cvut_konturova_verze_cb.pdf  used on input line 93.
@@ -900,7 +900,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 
 ]
-<zadaniDP.pdf, id=96, 597.50829pt x 845.0471pt>
+<zadaniDP.pdf, id=100, 597.50829pt x 845.0471pt>
 File: zadaniDP.pdf Graphic file (type pdf)
 <use zadaniDP.pdf>
 Package pdftex.def Info: zadaniDP.pdf  used on input line 123.
@@ -913,7 +913,7 @@ File: zadaniDP.pdf Graphic file (type pdf)
 <use zadaniDP.pdf>
 Package pdftex.def Info: zadaniDP.pdf  used on input line 123.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-<zadaniDP.pdf, id=100, page=1, 597.50829pt x 845.0471pt>
+<zadaniDP.pdf, id=104, page=1, 597.50829pt x 845.0471pt>
 File: zadaniDP.pdf Graphic file (type pdf)
 <use zadaniDP.pdf, page 1>
 Package pdftex.def Info: zadaniDP.pdf , page1 used on input line 123.
@@ -935,7 +935,7 @@ File: zadaniDP.pdf Graphic file (type pdf)
 Package pdftex.def Info: zadaniDP.pdf , page1 used on input line 123.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [3 <./zadaniDP.pdf>]
-<zadaniDP.pdf, id=126, page=2, 597.50829pt x 845.0471pt>
+<zadaniDP.pdf, id=130, page=2, 597.50829pt x 845.0471pt>
 File: zadaniDP.pdf Graphic file (type pdf)
 <use zadaniDP.pdf, page 2>
 Package pdftex.def Info: zadaniDP.pdf , page2 used on input line 123.
@@ -989,7 +989,7 @@ Overfull \hbox (2.45068pt too wide) in paragraph at lines 65--66
  []
 
 [16]
-<obrazky/3M.jpg, id=259, 361.35pt x 307.74976pt>
+<obrazky/3M.jpg, id=264, 361.35pt x 307.74976pt>
 File: obrazky/3M.jpg Graphic file (type jpg)
 <use obrazky/3M.jpg>
 Package pdftex.def Info: obrazky/3M.jpg  used on input line 77.
@@ -1001,28 +1001,38 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [17]) (kapitoly/metody.tex [18 <./obrazky/3M.jpg>]
 Kapitola 2.
 
-Overfull \hbox (16.73952pt too wide) in paragraph at lines 10--11
+Overfull \hbox (2.02165pt too wide) in paragraph at lines 15--16
+\OT1/lmr/m/n/12 Anal^^Syza hlavn^^S^^Pch kom-po-nent (an-g-licky \OT1/lmr/m/it/12 Prin-ci-pal com-po-nent ana-ly-sis\OT1/lmr/m/n/12 , d^^Sale jako PCA)
+ []
+
+
+Overfull \hbox (27.67496pt too wide) in paragraph at lines 15--16
+\OT1/lmr/m/n/12 je sta-tis-tick^^Sa me-toda vyu^^Tz^^S^^Pvan^^Sa pro pro ex-trakci prom^^Tenn^^Sych, re-dukci v^^S^^Pcedimenzion^^Saln^^S^^Pch
+ []
+
+
+Overfull \hbox (16.73952pt too wide) in paragraph at lines 17--19
 []\OT1/lmr/m/n/12 Jednotliv^^Sa po-zo-rov^^San^^S^^P obsa^^Tzen^^Sa v da-tech b^^Syvaj^^S^^P pops^^Sana n^^Tekolika r^^Wuzn^^Symi prom^^Tenn^^Symi.
  []
 
 
-Overfull \hbox (11.31711pt too wide) in paragraph at lines 10--11
+Overfull \hbox (11.31711pt too wide) in paragraph at lines 17--19
 \OT1/lmr/m/n/12 Tyto prom^^Tenn^^Se jsou ^^Tcasto vz^^Sajemn^^Te ko-re-lo-van^^Se a ob-sa-huj^^S^^P ^^Tsum. Me-toda PCA umo^^Tz^^Tnuje
- []
-
-
-Overfull \hbox (10.85513pt too wide) in paragraph at lines 24--25
-[]\OT1/lmr/m/n/12 Prvn^^S^^P hlavn^^S^^P kom-po-nentu, kter^^Sa po-pi-suje nejv^^Tet^^Ts^^S^^P roz-ptyl dat ozna^^Tc^^S^^Pme $\OML/lmm/m/it/12 y[]$ \OT1/lmr/m/n/12 a vypo^^Tcteme
  []
 
 [19
 
 ]
-Overfull \hbox (9.72482pt too wide) in paragraph at lines 59--62
+Overfull \hbox (10.85513pt too wide) in paragraph at lines 32--33
+[]\OT1/lmr/m/n/12 Prvn^^S^^P hlavn^^S^^P kom-po-nentu, kter^^Sa po-pi-suje nejv^^Tet^^Ts^^S^^P roz-ptyl dat ozna^^Tc^^S^^Pme $\OML/lmm/m/it/12 y[]$ \OT1/lmr/m/n/12 a vypo^^Tcteme
+ []
+
+
+Overfull \hbox (9.72482pt too wide) in paragraph at lines 67--70
 \OT1/lmr/m/n/12 prvn^^S^^P hlavn^^S^^P kom-po-nent^^Te -- druh^^Sa hlavn^^S^^P kom-po-nenta nesm^^S^^P b^^Syt ko-re-lo-van^^Sa s p^^Tredchoz^^S^^P,
  []
 
-) (kapitoly/shrinky.tex [20]
+[20] [21]) (kapitoly/shrinky.tex [22]
 Kapitola 3.
 
 LaTeX Warning: No positions in optional float specifier.
@@ -1097,9 +1107,9 @@ Overfull \hbox (7.54723pt too wide) in paragraph at lines 45--59
 [][] 
  []
 
-) (kapitoly/data.tex [21
+) (kapitoly/data.tex [23
 
-] [22] [23] [24
+] [24] [25] [26
 
 ]
 Kapitola 4.
@@ -1110,35 +1120,35 @@ File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 15.
  (C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [25] (kapitoly/analyzy_rok.tex [26]
+) [27] (kapitoly/analyzy_rok.tex [28]
 Overfull \hbox (10.70811pt too wide) in paragraph at lines 19--23
 \OT1/lmr/m/n/12 shrink^^Wu typu da-mage, co^^Tz od-pov^^S^^Pd^^Sa 13 mi-lion^^Wum ^^Tr^^Sadk^^Wum z^^Saznam^^Wu. V p^^Tr^^S^^Ppad^^Te mno^^Tzstv^^S^^P
  []
 
-<obrazky/grafy/Graf_celkem-D.png, id=340, 1087.06125pt x 271.0125pt>
+<obrazky/grafy/Graf_celkem-D.png, id=368, 1087.06125pt x 271.0125pt>
 File: obrazky/grafy/Graf_celkem-D.png Graphic file (type png)
 <use obrazky/grafy/Graf_celkem-D.png>
 Package pdftex.def Info: obrazky/grafy/Graf_celkem-D.png  used on input line 26.
 (pdftex.def)             Requested size: 426.79134pt x 106.40158pt.
-<obrazky/grafy/Grad_dny_tyden-D.png, id=341, 122.1363pt x 267.1581pt>
+<obrazky/grafy/Grad_dny_tyden-D.png, id=369, 122.1363pt x 267.1581pt>
 File: obrazky/grafy/Grad_dny_tyden-D.png Graphic file (type png)
 <use obrazky/grafy/Grad_dny_tyden-D.png>
 Package pdftex.def Info: obrazky/grafy/Grad_dny_tyden-D.png  used on input line 37.
 (pdftex.def)             Requested size: 213.39566pt x 466.81621pt.
-<obrazky/grafy/Grad_dny_mesic-D.png, id=343, 218.9781pt x 282.0939pt>
+<obrazky/grafy/Grad_dny_mesic-D.png, id=371, 218.9781pt x 282.0939pt>
 File: obrazky/grafy/Grad_dny_mesic-D.png Graphic file (type png)
 <use obrazky/grafy/Grad_dny_mesic-D.png>
 Package pdftex.def Info: obrazky/grafy/Grad_dny_mesic-D.png  used on input line 44.
 (pdftex.def)             Requested size: 426.79134pt x 549.82692pt.
 
-LaTeX Warning: Reference `' on page 27 undefined on input line 51.
+LaTeX Warning: Reference `' on page 29 undefined on input line 51.
 
 
-LaTeX Warning: Reference `' on page 27 undefined on input line 54.
+LaTeX Warning: Reference `' on page 29 undefined on input line 54.
 
-[27] [28 <./obrazky/grafy/Graf_celkem-D.png> <./obrazky/grafy/Grad_dny_tyden-D.png>] [29 <./obrazky/grafy/Grad_dny_mesic-D.png>])) [30] (kapitoly/zaver.tex) [31
+[29] [30 <./obrazky/grafy/Graf_celkem-D.png> <./obrazky/grafy/Grad_dny_tyden-D.png>] [31 <./obrazky/grafy/Grad_dny_mesic-D.png>])) [32] (kapitoly/zaver.tex) [33
 
-] (tex/bibliografie1.tex [32
+] (tex/bibliografie1.tex [34
 
 
 ]
@@ -1161,29 +1171,44 @@ Overfull \hbox (22.06178pt too wide) in paragraph at lines 19--20
 \OT1/lmtt/m/n/12 what-[]is-[]the-[]difference-[]between-[]logistics-[]and-[]supply-[]chain-[]management/$[] 
  []
 
-[33]) [34]
+
+Underfull \hbox (badness 4181) in paragraph at lines 37--38
+[]\OT1/lmr/m/n/12 ABDI, Herv^^Se, VA-LEN-TIN, Do-mi-nique. Mul-tiple corre-spon-dence ana-ly-
+ []
+
+
+Underfull \hbox (badness 5985) in paragraph at lines 37--38
+\OT1/lmr/m/n/12 sis. En-cyclo-pe-dia of me-a-su-re-ment and sta-tis-tics, 2007, 2.4: 651-657.
+ []
+
+
+Underfull \hbox (badness 3679) in paragraph at lines 37--38
+\OT1/lmr/m/n/12 [cit. 2023-03-05]. Do-stupn^^Se z: []$\OT1/lmtt/m/n/12 https : / / personal . utdallas . edu / []Herve /
+ []
+
+[35]) [36]
 P\v {r}\'{\i }loha A.
-[35
+[37
 
 ] (DP_Gruberova.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `DP_Gruberova.out' has not changed.
-(rerunfilecheck)             Checksum: CDA53AFB518442684DB4A726A2C17306;2496.
+(rerunfilecheck)             Checksum: DDED5311A20AD23449AF21B7831A4E26;2758.
  ) 
 Here is how much of TeX's memory you used:
- 27094 strings out of 475380
- 502867 string characters out of 2775356
- 893359 words of memory out of 3000000
- 47789 multiletter control sequences out of 15000+600000
- 543435 words of font info for 96 fonts, out of 8000000 for 9000
+ 27114 strings out of 475380
+ 503110 string characters out of 2775356
+ 893451 words of memory out of 3000000
+ 47794 multiletter control sequences out of 15000+600000
+ 547653 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,17n,94p,962b,673s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}<C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmib10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on DP_Gruberova.pdf (35 pages, 601135 bytes).
+{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmib10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
+Output written on DP_Gruberova.pdf (37 pages, 649510 bytes).
 PDF statistics:
- 503 PDF objects out of 1000 (max. 8388607)
- 117 named destinations out of 1000 (max. 500000)
- 220 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 549 PDF objects out of 1000 (max. 8388607)
+ 131 named destinations out of 1000 (max. 500000)
+ 228 words of extra memory for PDF output out of 10000 (max. 10000000)
 
