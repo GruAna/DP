@@ -89,7 +89,7 @@ Vícenásobná korespondenční analýza (anglicky \emph{Multiple correspondence
 % \subsubsection{Princip korespondenční analýzy}
 \subsubsection{Značení}
 %https://statmath.wu.ac.at/courses/CAandRelMeth/caipA.pdf
-Nechť $\mathbf{N}$ typu $I\times J$ je matice dat, kde I odpovídá počtu pozorování a J je počet kategorií. %asi pocet kategorii, najit !!!
+Nechť $\mathbf{N}$ je matice dat s rozměry $I\times J$, kde I odpovídá počtu pozorování a J je počet kategorií. %asi pocet kategorii, najit !!!
 Matice $\mathbf{N}$ je převedena na korespondenční matici $\mathbf{P}$ vydělením matice $\mathbf{N}$ jejím celkovým součtem $n = \sum_{i=1}^{I} \sum_{j=1}^{J} n_{ij}=\mathbf{1}^\top_I \mathbf{N}\mathbf{1}_J$. To zaručuje, že součet prvků matice $\mathbf{P}$ je roven jedné. Tyto kroky lze shrnout následujícím matematickým zápisem
 \begin{equation}
     \mathbf{P} = \frac{1}{n}\mathbf{N}, \qquad \mathbf{P} = \{p_{ij}\},  \qquad  \sum_{i=1}^{I} \sum_{j=1}^{J} p_{ij} = 1.
@@ -108,8 +108,8 @@ Pro další výpočty zavedeme značení pro diagonální matice, které mají n
 
 % Pro připomenutí je vhodné dodat, že součet matice P je jedna
 
-\subsubsection{Výpočetní algoritmus}\cite{bib:CA1}
-Označme $\mathbf{S}$ následující matici
+\subsubsection[Výpočetní algoritmus základní korespondeční analýzy]{Výpočetní algoritmus základní korespondeční analýzy \cite{bib:CA1,bib:MCA2}}
+Označme $\mathbf{S}  = \{s_{ij}\}$ následující matici
 \begin{equation}
     \mathbf{S} := \mathbf{D}_r^{-\frac{1}{2}} (\mathbf{P} - \bm{rc}^\top) \mathbf{D}_c^{-\frac{1}{2}}.
 \end{equation}
@@ -117,4 +117,27 @@ Po té proveďme singulární rozklad této matice
 \begin{equation}
     \mathbf{S} = \mathbf{U}\mathbf{\Delta}\mathbf{V}^\top,
 \end{equation}
-kde $\mathbf{U}^\top\mathbf{U}=\mathbf{V}^\top\mathbf{V}=\mathbf{I}$ a $\mathbf{\Lambda} = \mathbf{\Delta}^2$ je matice vlastních čísel.
+kde $\mathbf{\Lambda} = \mathbf{\Delta}^2$ je matice vlastních čísel $\lambda_k$ pro $k=1,\ldots,K$, kde $K=min\{I-1,J-1\}$. Potom rozměry matice $\mathbf{U}$, resp. $\mathbf{V}$ jsou $I\times k$, resp.  $J\times k$. Dále platí $\mathbf{U}^\top\mathbf{U}=\mathbf{V}^\top\mathbf{V}=\mathbf{I}$.%https://www.wikiwand.com/en/Correspondence_analysis
+
+
+% Zatímco u PCA je měřítkem úspěchu míra rozptylu popsaná prvními vybranými hlavními komponentami 
+Korespondenční analýza měří míru váženého rozptylu, tzv. inercii pomocí vlastních čísel $\lambda_k$ matice $\mathbf{S}$, $\lambda_k$ se pak nazývají hlavní inercie.
+Celková inercie je rovna
+\begin{equation}
+    I = \sum_{k=1}^{K} \lambda_k = \sum_{i=1}^{I}\sum_{j=1}^{J} s_{ij}^2.
+\end{equation}
+
+Hlavní komponenta řádků $\mathbf{F}$ je rovna
+\begin{equation}
+    \mathbf{F} = \mathbf{D}_r^{-\frac{1}{2}} \mathbf{U}  \mathbf{\Delta}.
+\end{equation}
+Hlavní komponenta sloupců $\mathbf{G}$ je rovna
+\begin{equation}
+    \mathbf{G} = \mathbf{D}_c^{-\frac{1}{2}} \mathbf{V}  \mathbf{\Delta}
+\end{equation}
+
+\subsubsection*{Výpočetní algoritmus MCA}
+
+Předpokládejme, že původní matice kategorických dat má tvar $N\times Q$, tj. $N$ pozorování a $Q$ proměnných. Matici dat převedeme na indikátorovou matici. Indikátorová matice  $\mathbf{Z} $ je vytvořena tak, že kategorická data jsou rozepsána do pomocných proměnných. Pokud $q$tá proměnná je má $J_q$ typů kategorií, tak příslušná indikátorová matice bude mít $J = \sum_{q=1}^{Q}J_q$ sloupců a $N$. Tzn. počet proměnných byl tímto rozepsáním rozšířen z počtu původních $Q$ proměnných na $J$ proměnných.
+% Klasická MCA má dvě podoby.
+První způsob MCA aplikuje základní algoritmus korespondenční analýzy na matici  $\mathbf{Z} $, takto se získají souřadnice pro N pozorování a J kategorií.
