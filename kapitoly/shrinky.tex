@@ -1,6 +1,6 @@
 \chapter{Shrink}
 
-Cílem této práce je analyzovat shrinky produktů, které byly zaznamenány v datech dané společnosti. V následující části je vysvětlen pojem shrink a popsány kategorie, které vybraná společnost rozeznává.
+Cílem této práce je analyzovat shrinky produktů, které byly zaznamenány v datech dané společnosti, a zjistit příčiny jejich vzniku. V následující části je vysvětlen pojem shrink a popsány kategorie, které vybraná společnost rozeznává ve svých datech.
 
 \section{Definice}
 
@@ -11,56 +11,52 @@ Slovem shrink se označuje ztráta zisku z neuskutečněného prodeje hotového 
 
 \section{Typy shrinků}
 
-Vybraná společnost rozlišuje ve svých datech tři kategorie shrinku -- inventory, damages, price downs. Dále se budu věnovat popisu jednotlivých typů.
-
-\subsection*{Inventory}
-
-Pojem inventory, který lze do češtiny přeložit jako inventář, sdružuje všechny shrinky týkající se změn v inventáři, tj. stavu zásob.
-
-\begin{table}[]
-    \caption{Tabulka}
-
-    \begin{tabular}{p{1cm} p{4cm} p{9cm}}
-    ID  & Název             & Popis \\
-    \hline
-    924          & inventory+             & Kladné připsání zboží během inventury.      \\
-    923          & inventory-             & Záporné odepsání zboží během inventury.      \\
-    922          & inventura              & Velká inventura skladu.     \\
-    16           & oprava inventury       & Dodatečné opravy, které bylo třeba provést po dokončení velké inventury.      \\
-    15           & částečná inventura     & Odpis, nebo naskladnění zboží při inventuře položek.      \\
-    25           & neuznané reklamace DC    &  Odpis zboží, které bylo fyzicky dodané distribučním centrem na prodejnu, ale prodejna jej vrátila, ale distribuční centrum vratku neuznalo.     \\
-    2            & partes merchandise     & Odpis prokazatelně ukradeného zboží nebo i ztraceného zboží.      \\
-    147          & inventura              & Starší verze ID používaného pro inventuru.
-    \end{tabular}
-\end{table}
-
+Vybraná společnost rozlišuje ve svých datech tři kategorie shrinku -- inventory, damages, price downs. Dále se budu věnovat popisu jednotlivých typů v rámci kategorií. Každý typ má přiřazeno jednoznačné identifikační číslo, podle kterého je zaznamenáván v databázi. Z důvodů anonymizace dat v práci nejsou uvedené přesné hodnoty těchto ID, namísto toho jsou uvedeny názvy, které  definují shrinky.
 
 \subsection*{Damages}
 
-Do kategorie damages (česky škody) jsou řazeny zbylé důvody k odstranění produktu z prodeje, z důvodu degradace produktu. 
+Do kategorie damages (česky škody) jsou řazeny zbylé důvody k odstranění produktu z prodeje z důvodu degradace produktu. V následující tabulce \ref{tab:sh:dam} jsou vypsané všechny typy, které moho být evidovány.
 
-\begin{table}[]
-    \caption{Tabulka}
-
-    \begin{tabular}{p{1cm} p{4cm} p{9cm}}
-        ID & Název             & Popis \\
+\begin{table}[hbtp!]
+    \caption{Přehled jednotlivých typů shrinků z kategorie damages.}
+    \label{tab:sh:dam}
+    \begin{tabular}{ p{4cm} p{10.5cm}}
+         Název             & Popis \\
     \hline
-    3            & poškození (broken)                 & Odpis zboží, které bylo poškozené. Např. nedopečené, spálené, špatně vyrobené nebo poškozené zaměstnancem nebo zákazníkem (kdy nelze uplatnit reklamaci na zákazníka.)       \\
-    4            & prošlé a zkažené zboží (out of date)            & Odpis zboží, kterému prošla doba spotřeby (v případě výrobků, kde je datum uvedené), zkažené či shnilé zboží (ovoce, zelenina) nebo ztvrdlé pečivo.       \\
-    6            & potravinová banka      & Odpis potravinářského zboží, které bylo darováno potravinovým bankám. Jedná se o produkty, které nebylo možné zařadit znovu do oběhu. (Ke každému předání se archivuje předávací protokol.)     \\
-    8            & zvířecí útulky              & Odpis potravinářského zboží, které bylo darováno do útulků zvířat. Jedná se o produkty, které nebylo možné zařadit znovu do oběhu.  (Ke každému předání se archivuje předávací protokol.)          \\
-    32           & uznané zákaznické reklamace   & Odpis zboží, které zákazník reklamoval a reklamace byla uznána, ale zároveň nelze toto zboží reklamovat u dodavatele.      \\
-    31           & neupl reklamace DC    &  Odpis zboží, které fyzicky nedorazilo z distribučního centra a nebylo možné ho reklamovat z důvodu nesplnění limitu pro vytvoření reklamace na distribučním centru. Také obsahuje odpisy neprodaných EXIT položek po ukončení výprodeje.     \\
-    64           & kompostéry             & Odpis zboží, které je prošlé nebo poškozené a které prodejna likviduje v kompostéru.       \\
-    34           & poškozeno vnějšími vlivy(internal use (err))
-    & Odpis zboží, které bylo poškozeno nebo zničeno vlivem třetí strany (výbuch, vytopení, poškození majetku vloupáním) nebo přírodními živly. Zboží se tedy na prodejně nenachází a nemůže proto být zlikvidováno.      \\
-    28           & zniceno rozmrazenim    &       \\
+                Poškození               & Odpis zboží, které bylo poškozené. Např. nedopečené, spálené, špatně vyrobené nebo poškozené zaměstnancem nebo zákazníkem (kdy nelze uplatnit reklamaci na zákazníka.)       \\
+                Prošlé a zkažené zboží  & Odpis zboží, kterému prošla doba spotřeby (v případě výrobků, kde je datum uvedené), zkažené či shnilé zboží (ovoce, zelenina) nebo ztvrdlé pečivo.       \\
+                Potravinová banka       & Odpis potravinářského zboží, které bylo darováno potravinovým bankám. Jedná se o produkty, které nebylo možné zařadit znovu do oběhu.    \\
+                Zvířecí útulky          & Odpis potravinářského zboží, které bylo darováno do útulků zvířat. Jedná se o produkty, které nebylo možné zařadit znovu do oběhu.          \\
+                Uznané zákaznické \par reklamace \strut  & Odpis zboží, které zákazník reklamoval a reklamace byla uznána, ale zároveň nelze toto zboží reklamovat u dodavatele.      \\
+                Neupl. reklamace \par distribučního centra \strut   &  Odpis zboží, které fyzicky nedorazilo z distribučního centra a nebylo možné ho reklamovat z důvodu nesplnění limitu pro vytvoření reklamace na distribučním centru. Také obsahuje odpisy neprodaných EXIT položek po ukončení výprodeje.     \\
+                Kompostéry              & Odpis zboží, které je prošlé nebo poškozené a které prodejna zlikviduje v kompostéru.       \\
+                Poškozeno vnějšími \par vlivy \strut %(internal use (err)) 
+                                        & Odpis zboží, které bylo poškozeno nebo zničeno vlivem třetí strany (výbuch, vytopení, poškození majetku vloupáním) nebo přírodními živly. Zboží se tedy na prodejně nenachází a nemůže proto být zlikvidováno.      \\
+                Zničeno  rozmražením    &       \\
+    \end{tabular}
+\end{table}
+
+\subsection*{Inventory}
+
+Pojem inventory, který lze do češtiny přeložit jako inventář, sdružuje všechny shrinky týkající se změn v inventáři, tj. stavu zásob či inventury. V tabulce \ref*{tab:sh:inv} se nachází přehled všech evidovaných typů.
+
+\begin{table}[hbtp!]
+    \caption{Přehled jednotlivých typů shrinků z kategorie inventory.}
+    \label{tab:sh:inv}
+    \begin{tabular}{ p{4cm} p{10.5cm}}
+     Název             & Popis \\
+    \hline
+              Inventura$+$             & Kladné připsání zboží během inventury.      \\
+              Inventura$-$             & Záporné odepsání zboží během inventury.      \\
+              Inventura              & Velká inventura skladu.     \\
+              Oprava inventury       & Dodatečné opravy, které bylo třeba provést po dokončení velké inventury.      \\
+              Částečná inventura     & Odpis, nebo naskladnění zboží při inventuře položek.      \\
+              Neuznané reklamace \par distribučního centra  \strut &  Odpis zboží, které bylo fyzicky dodané distribučním centrem na prodejnu, ale prodejna jej vrátila, ale distribuční centrum vratku neuznalo.     \\
+              Inventura              & Starší verze ID používaného pro inventuru.\\
+              Partes merchandise     & Odpis prokazatelně ukradeného zboží nebo i ztraceného zboží.      \\
     \end{tabular}
 \end{table}
 
 
+\subsection*{Price down}
 
-
-% chtěla bych Tě požádat, zda bys mohl během tohoto týdne napsat email doc. Fučíkovi (radek.fucik@fjfi.cvut.cz), že je možné mi udělit zápočet za diplomovou práci.
-% V souvislosti s tím by bylo dobré Ti ukázat progress práce. Dosavadní text práce (zlomek budoucí práce) je dostupný na https://github.com/GruAna/DP. Kódy, které zpracovávám jsou na Cloudu a tam jsou i výstupy, které zatím mám. Během tohoto týdne chci dosavadní výstupy sepsat do DP, aby byly přehledněji. O krocích, které dělám jsem se bavila a bavím hlavně s Domčou. S koncem zkouškového a začátkem nového semestru (už příští týden :)) s méně předměty se diplomce a shrinkům budu věnovat naplno a chtěla bych navrhnout společné, krátké, pravidelné schůzky, abys měl opravdu přehled a kontrou nad tím co dělám a já nad sebou bič, ať mi to jde rychleji. :)
-% Nevím, zda do konce týdne shrnu všechno, co jsem udělala do textu diplomky a procházet kódy a tak by bylo pro Tebe asi zbytečně náročné, takže Ti dávám své slovo, že jsem za semestr udělala část práce, případně se můžeš doptat Domči.

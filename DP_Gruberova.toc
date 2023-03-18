@@ -17,11 +17,15 @@
 \contentsline {section}{\numberline {3.2}Typy shrinků}{23}{section.3.2}%
 \contentsline {chapter}{\numberline {4}Zpracování dat}{27}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Popis obdržených dat}{27}{section.4.1}%
-\contentsline {subsubsection}{Produkty}{27}{section*.13}%
-\contentsline {subsubsection}{Tabulky transakcí}{28}{section*.14}%
-\contentsline {subsubsection}{Tabulky ceníků}{29}{section*.15}%
-\contentsline {section}{\numberline {4.2}Statistické zpracování dat}{29}{section.4.2}%
-\contentsline {chapter}{Závěr}{33}{chapter*.23}%
-\contentsline {chapter}{Literatura}{34}{chapter*.23}%
-\contentsline {chapter}{Přílohy}{37}{chapter*.24}%
-\contentsline {chapter}{\numberline {A}Obsah přiloženého CD}{37}{appendix.A}%
+\contentsline {subsubsection}{Produkty}{27}{section*.14}%
+\contentsline {subsubsection}{Tabulky transakcí}{28}{section*.15}%
+\contentsline {subsubsection}{Tabulky ceníků}{29}{section*.16}%
+\contentsline {section}{\numberline {4.2}Předzpracování dat}{29}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Statistické zpracování dat}{29}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Období jednoho roku}{29}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Období jednoho měsíce}{33}{subsection.4.3.2}%
+\contentsline {subsubsection}{Výběr dat}{34}{section*.22}%
+\contentsline {chapter}{Závěr}{41}{chapter*.23}%
+\contentsline {chapter}{Literatura}{42}{chapter*.23}%
+\contentsline {chapter}{Přílohy}{45}{chapter*.24}%
+\contentsline {chapter}{\numberline {A}Obsah přiloženého CD}{45}{appendix.A}%

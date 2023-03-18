@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  8 MAR 2023 11:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  18 MAR 2023 09:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -883,7 +883,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 88.
  (C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<symbol_cvut_konturova_verze_cb.pdf, id=85, 126.78566pt x 96.54268pt>
+<symbol_cvut_konturova_verze_cb.pdf, id=97, 126.78566pt x 96.54268pt>
 File: symbol_cvut_konturova_verze_cb.pdf Graphic file (type pdf)
 <use symbol_cvut_konturova_verze_cb.pdf>
 Package pdftex.def Info: symbol_cvut_konturova_verze_cb.pdf  used on input line 93.
@@ -900,7 +900,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 
 ]
-<zadaniDP.pdf, id=100, 597.50829pt x 845.0471pt>
+<zadaniDP.pdf, id=112, 597.50829pt x 845.0471pt>
 File: zadaniDP.pdf Graphic file (type pdf)
 <use zadaniDP.pdf>
 Package pdftex.def Info: zadaniDP.pdf  used on input line 123.
@@ -913,7 +913,7 @@ File: zadaniDP.pdf Graphic file (type pdf)
 <use zadaniDP.pdf>
 Package pdftex.def Info: zadaniDP.pdf  used on input line 123.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-<zadaniDP.pdf, id=104, page=1, 597.50829pt x 845.0471pt>
+<zadaniDP.pdf, id=116, page=1, 597.50829pt x 845.0471pt>
 File: zadaniDP.pdf Graphic file (type pdf)
 <use zadaniDP.pdf, page 1>
 Package pdftex.def Info: zadaniDP.pdf , page1 used on input line 123.
@@ -935,7 +935,7 @@ File: zadaniDP.pdf Graphic file (type pdf)
 Package pdftex.def Info: zadaniDP.pdf , page1 used on input line 123.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [3 <./zadaniDP.pdf>]
-<zadaniDP.pdf, id=130, page=2, 597.50829pt x 845.0471pt>
+<zadaniDP.pdf, id=142, page=2, 597.50829pt x 845.0471pt>
 File: zadaniDP.pdf Graphic file (type pdf)
 <use zadaniDP.pdf, page 2>
 Package pdftex.def Info: zadaniDP.pdf , page2 used on input line 123.
@@ -989,7 +989,7 @@ Overfull \hbox (2.45068pt too wide) in paragraph at lines 65--66
  []
 
 [16]
-<obrazky/3M.jpg, id=264, 361.35pt x 307.74976pt>
+<obrazky/3M.jpg, id=279, 361.35pt x 307.74976pt>
 File: obrazky/3M.jpg Graphic file (type jpg)
 <use obrazky/3M.jpg>
 Package pdftex.def Info: obrazky/3M.jpg  used on input line 77.
@@ -1032,89 +1032,39 @@ Overfull \hbox (9.72482pt too wide) in paragraph at lines 67--70
 \OT1/lmr/m/n/12 prvn^^S^^P hlavn^^S^^P kom-po-nent^^Te -- druh^^Sa hlavn^^S^^P kom-po-nenta nesm^^S^^P b^^Syt ko-re-lo-van^^Sa s p^^Tredchoz^^S^^P,
  []
 
-[20] [21]) (kapitoly/shrinky.tex
-Overfull \hbox (25.47919pt too wide) in paragraph at lines 141--1
+[20] [21]
+Overfull \hbox (25.47919pt too wide) in paragraph at lines 141--144
 \OT1/lmr/m/n/12 ma-tice $\OT1/lmr/bx/n/12 Z$ \OT1/lmr/m/n/12 je vy-tvo^^Trena tak, ^^Tze ka-te-go-rick^^Sa data jsou ro-zeps^^Sana do po-mocn^^Sych prom^^Tenn^^Sych.
  []
 
-[22]
+) (kapitoly/shrinky.tex [22]
 Kapitola 3.
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 20.
-
-
-Underfull \hbox (badness 2799) in paragraph at lines 30--31
-[]|\OT1/lmr/m/n/12 Odpis, nebo na-skladn^^Ten^^S^^P zbo^^Tz^^S^^P p^^Tri in-ventu^^Tre
+Underfull \hbox (badness 3919) in paragraph at lines 26--27
+\OT1/lmr/m/n/12 nebo z^^Sakazn^^S^^Pkem (kdy nelze uplat-nit re-kla-maci na
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--31
-[]|\OT1/lmr/m/n/12 neuznan^^Se re-kla-mace
+Underfull \hbox (badness 1132) in paragraph at lines 29--30
+[]|\OT1/lmr/m/n/12 Odpis po-tra-vin^^Sa^^Trsk^^Seho zbo^^Tz^^S^^P, kter^^Se bylo da-rov^^Sano do
  []
 
 
-Underfull \hbox (badness 2556) in paragraph at lines 31--32
-[]|\OT1/lmr/m/n/12 Odpis zbo^^Tz^^S^^P, kter^^Se bylo fy-zicky do-dan^^Se dis-
- []
-
-
-Overfull \hbox (7.54723pt too wide) in paragraph at lines 23--35
+Overfull \hbox (9.77362pt too wide) in paragraph at lines 23--37
 [][] 
  []
 
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 42.
+Underfull \vbox (badness 1400) has occurred while \output is active []
 
+ [23
 
-Underfull \hbox (badness 1097) in paragraph at lines 48--49
-[]|\OT1/lmr/m/n/12 Odpis zbo^^Tz^^S^^P, kter^^Se bylo po^^Tskozen^^Se. Nap^^Tr. ne-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
-\OT1/lmr/m/n/12 dope^^Tcen^^Se, sp^^Salen^^Se, ^^Tspatn^^Te vy-ro-ben^^Se nebo
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
-\OT1/lmr/m/n/12 po^^Tskozen^^Se zam^^Testnancem nebo z^^Sakazn^^S^^Pkem
- []
-
-
-Underfull \hbox (badness 1152) in paragraph at lines 49--50
-\OT1/lmr/m/n/12 ^^Tci shnil^^Se zbo^^Tz^^S^^P (ovoce, ze-le-nina) nebo ztvrdl^^Se
- []
-
-
-Underfull \hbox (badness 1874) in paragraph at lines 50--51
-\OT1/lmr/m/n/12 po-tra-vi-nov^^Sym bank^^Sam. Jedn^^Sa se o pro-dukty,
- []
-
-
-Underfull \hbox (badness 2781) in paragraph at lines 53--54
-[]|\OT1/lmr/m/n/12 Odpis zbo^^Tz^^S^^P, kter^^Se fy-zicky ne-do-ra-zilo z dis-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
-[]|\OT1/lmr/m/n/12 po^^Tskozeno vn^^Tej^^Ts^^S^^Pmi
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
-\OT1/lmr/m/n/12 vlivy(internal use
- []
-
-
-Overfull \hbox (7.54723pt too wide) in paragraph at lines 45--59
+] [24]
+Overfull \hbox (9.77362pt too wide) in paragraph at lines 46--58
 [][] 
  []
 
-) (kapitoly/data.tex [23
-
-] [24] [25] [26
+) (kapitoly/data.tex [25] [26
 
 ]
 Kapitola 4.
@@ -1125,35 +1075,125 @@ File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 15.
  (C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [27] (kapitoly/analyzy_rok.tex [28]
+) [27] [28] (kapitoly/analyzy_rok.tex
 Overfull \hbox (10.70811pt too wide) in paragraph at lines 19--23
 \OT1/lmr/m/n/12 shrink^^Wu typu da-mage, co^^Tz od-pov^^S^^Pd^^Sa 13 mi-lion^^Wum ^^Tr^^Sadk^^Wum z^^Saznam^^Wu. V p^^Tr^^S^^Ppad^^Te mno^^Tzstv^^S^^P
  []
 
-<obrazky/grafy/Graf_celkem-D.png, id=374, 1087.06125pt x 271.0125pt>
+[29]
+<obrazky/grafy/Graf_celkem-D.png, id=396, 1087.06125pt x 271.0125pt>
 File: obrazky/grafy/Graf_celkem-D.png Graphic file (type png)
 <use obrazky/grafy/Graf_celkem-D.png>
 Package pdftex.def Info: obrazky/grafy/Graf_celkem-D.png  used on input line 26.
 (pdftex.def)             Requested size: 426.79134pt x 106.40158pt.
-<obrazky/grafy/Grad_dny_tyden-D.png, id=375, 122.1363pt x 267.1581pt>
+<obrazky/grafy/Grad_dny_tyden-D.png, id=397, 122.1363pt x 267.1581pt>
 File: obrazky/grafy/Grad_dny_tyden-D.png Graphic file (type png)
 <use obrazky/grafy/Grad_dny_tyden-D.png>
 Package pdftex.def Info: obrazky/grafy/Grad_dny_tyden-D.png  used on input line 37.
 (pdftex.def)             Requested size: 213.39566pt x 466.81621pt.
-<obrazky/grafy/Grad_dny_mesic-D.png, id=377, 218.9781pt x 282.0939pt>
+<obrazky/grafy/Grad_dny_mesic-D.png, id=399, 218.9781pt x 282.0939pt>
 File: obrazky/grafy/Grad_dny_mesic-D.png Graphic file (type png)
 <use obrazky/grafy/Grad_dny_mesic-D.png>
 Package pdftex.def Info: obrazky/grafy/Grad_dny_mesic-D.png  used on input line 44.
 (pdftex.def)             Requested size: 426.79134pt x 549.82692pt.
 
-LaTeX Warning: Reference `' on page 29 undefined on input line 51.
+
+LaTeX Warning: Reference `' on page 30 undefined on input line 51.
 
 
-LaTeX Warning: Reference `' on page 29 undefined on input line 54.
+LaTeX Warning: Reference `' on page 30 undefined on input line 54.
 
-[29] [30 <./obrazky/grafy/Graf_celkem-D.png> <./obrazky/grafy/Grad_dny_tyden-D.png>] [31 <./obrazky/grafy/Grad_dny_mesic-D.png>])) [32] (kapitoly/zaver.tex) [33
+) (kapitoly/analyzy_mesic.tex [30 <./obrazky/grafy/Graf_celkem-D.png>] [31 <./obrazky/grafy/Grad_dny_tyden-D.png>] [32 <./obrazky/grafy/Grad_dny_mesic-D.png>] [33]
+<obrazky/grafy/zastoupeni1.png, id=427, 1858.69406pt x 452.4403pt>
+File: obrazky/grafy/zastoupeni1.png Graphic file (type png)
+<use obrazky/grafy/zastoupeni1.png>
+Package pdftex.def Info: obrazky/grafy/zastoupeni1.png  used on input line 38.
+(pdftex.def)             Requested size: 426.79134pt x 103.88649pt.
 
-] (tex/bibliografie1.tex [34
+Overfull \hbox (21.22023pt too wide) in paragraph at lines 43--44
+\OT1/lmr/m/n/12 pro-duktu a n^^Sakladovou cenu. Zbyl^^Sych je-den^^Sact sloupc^^Wu slou^^Tz^^S^^P jako vysv^^Tetluj^^S^^Pc^^S^^P prom^^Tenn^^Se,
+ []
+
+<obrazky/zntb/box_nominal.png, id=428, 448.7967pt x 313.6518pt>
+File: obrazky/zntb/box_nominal.png Graphic file (type png)
+<use obrazky/zntb/box_nominal.png>
+Package pdftex.def Info: obrazky/zntb/box_nominal.png  used on input line 51.
+(pdftex.def)             Requested size: 213.39566pt x 149.13928pt.
+<obrazky/zntb/box_ordinal.png, id=429, 469.0323pt x 313.6518pt>
+File: obrazky/zntb/box_ordinal.png Graphic file (type png)
+<use obrazky/zntb/box_ordinal.png>
+Package pdftex.def Info: obrazky/zntb/box_ordinal.png  used on input line 57.
+(pdftex.def)             Requested size: 213.39566pt x 142.70221pt.
+<obrazky/zntb/MyScatter.png, id=430, 1084.05pt x 1084.05pt>
+File: obrazky/zntb/MyScatter.png Graphic file (type png)
+<use obrazky/zntb/MyScatter.png>
+Package pdftex.def Info: obrazky/zntb/MyScatter.png  used on input line 68.
+(pdftex.def)             Requested size: 256.0774pt x 256.07509pt.
+[34 <./obrazky/grafy/zastoupeni1.png>] [35 <./obrazky/zntb/box_nominal.png> <./obrazky/zntb/box_ordinal.png> <./obrazky/zntb/MyScatter.png>]
+<obrazky/zntb/pearson.png, id=447, 632.3625pt x 560.0925pt>
+File: obrazky/zntb/pearson.png Graphic file (type png)
+<use obrazky/zntb/pearson.png>
+Package pdftex.def Info: obrazky/zntb/pearson.png  used on input line 80.
+(pdftex.def)             Requested size: 341.43436pt x 302.4198pt.
+<obrazky/zntb/MI_TE.png, id=449, 622.9674pt x 570.933pt>
+File: obrazky/zntb/MI_TE.png Graphic file (type png)
+<use obrazky/zntb/MI_TE.png>
+Package pdftex.def Info: obrazky/zntb/MI_TE.png  used on input line 90.
+(pdftex.def)             Requested size: 341.43436pt x 312.92514pt.
+<obrazky/zntb/cramers_u.png, id=450, 632.3625pt x 570.933pt>
+File: obrazky/zntb/cramers_u.png Graphic file (type png)
+<use obrazky/zntb/cramers_u.png>
+Package pdftex.def Info: obrazky/zntb/cramers_u.png  used on input line 99.
+(pdftex.def)             Requested size: 341.43436pt x 308.27309pt.
+<obrazky/zntb/theils_u.png, id=451, 632.3625pt x 570.933pt>
+File: obrazky/zntb/theils_u.png Graphic file (type png)
+<use obrazky/zntb/theils_u.png>
+Package pdftex.def Info: obrazky/zntb/theils_u.png  used on input line 106.
+(pdftex.def)             Requested size: 341.43436pt x 308.27309pt.
+<obrazky/zntb/VIF.png, id=452, 419.166pt x 407.6028pt>
+File: obrazky/zntb/VIF.png Graphic file (type png)
+<use obrazky/zntb/VIF.png>
+Package pdftex.def Info: obrazky/zntb/VIF.png  used on input line 117.
+(pdftex.def)             Requested size: 170.71718pt x 166.01115pt.
+<obrazky/zntb/MI_feature_selection.png, id=453, 416.2752pt x 408.3255pt>
+File: obrazky/zntb/MI_feature_selection.png Graphic file (type png)
+<use obrazky/zntb/MI_feature_selection.png>
+Package pdftex.def Info: obrazky/zntb/MI_feature_selection.png  used on input line 123.
+(pdftex.def)             Requested size: 170.71718pt x 167.45815pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--124
+[]\OT1/lmr/m/n/12 Obr^^Sazek 4.13: []Matice koe-fi-ci-ent^^Wu
+ []
+
+
+Underfull \hbox (badness 3536) in paragraph at lines 124--124
+\OT1/lmr/m/n/12 vz^^Sajemn^^Sa in-for-mace mezi p^^Tr^^S^^Pznaky a
+ []
+
+[36 <./obrazky/zntb/pearson.png>]
+<obrazky/zntb/pca-roztyl_komponetn.png, id=461, 406.8801pt x 328.1058pt>
+File: obrazky/zntb/pca-roztyl_komponetn.png Graphic file (type png)
+<use obrazky/zntb/pca-roztyl_komponetn.png>
+Package pdftex.def Info: obrazky/zntb/pca-roztyl_komponetn.png  used on input line 138.
+(pdftex.def)             Requested size: 170.71718pt x 137.66331pt.
+<obrazky/zntb/pca-kum_roztyl_komponetn.png, id=462, 442.2924pt x 328.1058pt>
+File: obrazky/zntb/pca-kum_roztyl_komponetn.png Graphic file (type png)
+<use obrazky/zntb/pca-kum_roztyl_komponetn.png>
+Package pdftex.def Info: obrazky/zntb/pca-kum_roztyl_komponetn.png  used on input line 144.
+(pdftex.def)             Requested size: 170.71718pt x 126.64403pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+[]\OT1/lmr/m/n/12 Obr^^Sazek 4.15: []PCA - ku-mu-la-tivn^^S^^P
+ []
+
+<obrazky/zntb/pca-prispevky.png, id=463, 413.3844pt x 407.6028pt>
+File: obrazky/zntb/pca-prispevky.png Graphic file (type png)
+<use obrazky/zntb/pca-prispevky.png>
+Package pdftex.def Info: obrazky/zntb/pca-prispevky.png  used on input line 152.
+(pdftex.def)             Requested size: 341.43436pt x 336.66205pt.
+)) [37 <./obrazky/zntb/MI_TE.png>] [38 <./obrazky/zntb/cramers_u.png> <./obrazky/zntb/theils_u.png>] [39 <./obrazky/zntb/VIF.png> <./obrazky/zntb/MI_feature_selection.png> <./obrazky/zntb/pca-roztyl_komponetn.png> <./obrazky/zntb/pca-kum_roztyl_komponetn.png>] [40 <./obrazky/zntb/pca-prispevky.png>] (kapitoly/zaver.tex) [41
+
+] (tex/bibliografie1.tex [42
 
 
 ]
@@ -1191,29 +1231,29 @@ Underfull \hbox (badness 3679) in paragraph at lines 37--38
 \OT1/lmr/m/n/12 [cit. 2023-03-05]. Do-stupn^^Se z: []$\OT1/lmtt/m/n/12 https : / / personal . utdallas . edu / []Herve /
  []
 
-[35]) [36]
+[43]) [44]
 P\v {r}\'{\i }loha A.
-[37
+[45
 
 ] (DP_Gruberova.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `DP_Gruberova.out' has not changed.
-(rerunfilecheck)             Checksum: 7A73D83950A365A960BFE82D08DF873E;2758.
+(rerunfilecheck)             Checksum: 185157F7C1059A82A9559AD9D3576AF8;3263.
  ) 
 Here is how much of TeX's memory you used:
- 27122 strings out of 475380
- 503206 string characters out of 2775356
- 893510 words of memory out of 3000000
- 47796 multiletter control sequences out of 15000+600000
+ 27262 strings out of 475380
+ 506796 string characters out of 2775356
+ 892742 words of memory out of 3000000
+ 47894 multiletter control sequences out of 15000+600000
  547653 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,17n,94p,962b,673s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 99i,17n,94p,1063b,673s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmib10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on DP_Gruberova.pdf (37 pages, 657306 bytes).
+Output written on DP_Gruberova.pdf (45 pages, 1310305 bytes).
 PDF statistics:
- 560 PDF objects out of 1000 (max. 8388607)
- 137 named destinations out of 1000 (max. 500000)
- 228 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 654 PDF objects out of 1000 (max. 8388607)
+ 162 named destinations out of 1000 (max. 500000)
+ 317 words of extra memory for PDF output out of 10000 (max. 10000000)
 

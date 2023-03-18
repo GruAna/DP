@@ -4,20 +4,22 @@
 
 \section{Popis obdržených dat}
 
-Všechna data poskytnutá společností jsou uložena v databázi, ke které je byl zhotoven omezený přístup pro účely získání dat pro analýzy shrinku produktů společnosti. Zároveň s možností přístupu jsem obdržela i tabulku, která stručně komentuje všechny tabulky v databázi a sloupce v jednotlivých tabulkách. Celkem se v databázi nachází 412 tabulek, z nichž je potřeba vybrat ty s relevantními daty pro úlohu shrinků.
+Všechna data poskytnutá společností jsou uložena v databázi, ke které je byl zhotoven omezený přístup pro účely získání dat pro analýzy shrinku produktů společnosti. Zároveň s možností přístupu jsem obdržela i tabulku, která stručně komentuje všechny tabulky v databázi a sloupce v jednotlivých tabulkách. Celkem se v databázi nachází přes čtyři sta tabulek, z nichž je potřeba vybrat ty, které obsahují relevantními data pro úlohu shrinků.
 
 Z důvodu ochrany dat nelze uvádět přesné názvy tabulek, nicméně pro lepší orientaci v textu, každé použité tabulce přiřadím název, který odpovídá obsaženým datům v tabulce.
 
 \subsubsection{Produkty}
 
-Základní číselník s údaji o produktech, se nachází v tabulce \texttt{produkt} se 27 sloupci. 
+Základní číselník s údaji o produktech, se nachází v tabulce \texttt{produkt} se 27 sloupci. Pro analýzu vzniku shrinků jsem z této tabulky vybrala jako možné významné údaje následující sloupce:
 \begin{itemize}
     \item ID produktu a ID prodejní varianty, spolu tvoří primární klíč. 
-    \item Krátký a dlouhý název produktu
-    \item Expirace produktu ve dnech (hodnoty 0,999 a NULL označují neomezenou expiraci)
+    \item Krátký a dlouhý název produktu (tento sloupec slouží především k lepší orientaci v datech)
+    \item Expirace produktu ve dnech (hodnoty 0, 999 a NULL označují neomezenou expiraci)
     \item Rozměry produktu a jeho hmotnost
-    \item ID kategorie produktu v MS5 struktuře (pro lepší interpretaci, o jakou kategorii zboží se jedná, je výhodnější strukura 4BOX, kterou lze získat napojením )
+    \item ID kategorie produktu v číselné struktuře (pro lepší interpretaci, o jakou kategorii zboží se jedná, je vhodnější použít strukuru 4BOX, kterou lze získat napojením na tabulku \texttt{produkt\_kategorie}.)
 \end{itemize}
+Tabulka \texttt{produkt\_kategorie} obsahuje převod z číselné struktury, která popisuje kategorii produktu na 4BOX strukturu. 4BOX struktura se skládá ze šesti úrovní. Šestá, nejnižší úroveň (ozn. L6) odpovídá nejjemnějšímu rozdělení produktů, které je ve vybrané společnosti možné rozlišit. Zároveň kategorie L6 je přímo napojená na hodnotu číselné struktury, která je uvedena v číselníku produktů (v tabulce \texttt{produkt}).
+
 
 Tabulka, která obsahuje 
 
@@ -55,18 +57,23 @@ Tabulku, která obsahuje údaje o jednotlivých prodejích na prodejnách spole�
 \subsubsection{Tabulky ceníků}
 
 
+\section{Předzpracování dat}
 
+Množství produktů - 
 
 
 \section{Statistické zpracování dat}
 
 
 
-\subsection*{Sledované údaje}
-
-
-
-\subsection*{Období jednoho měsíce}
-\subsection*{Období jednoho roku}
+\subsection{Období jednoho roku}
 
 \input{kapitoly/analyzy_rok.tex}
+
+
+
+\subsection{Období jednoho měsíce}
+
+\input{kapitoly/analyzy_mesic.tex}
+
+
