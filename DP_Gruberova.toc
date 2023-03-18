@@ -19,10 +19,10 @@
 \contentsline {section}{\numberline {4.1}Popis obdržených dat}{27}{section.4.1}%
 \contentsline {subsubsection}{Produkty}{27}{section*.14}%
 \contentsline {subsubsection}{Tabulky transakcí}{28}{section*.15}%
-\contentsline {subsubsection}{Tabulky ceníků}{29}{section*.16}%
-\contentsline {section}{\numberline {4.2}Předzpracování dat}{29}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Statistické zpracování dat}{29}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Období jednoho roku}{29}{subsection.4.3.1}%
+\contentsline {subsubsection}{Tabulky ceníků}{30}{section*.16}%
+\contentsline {section}{\numberline {4.2}Předzpracování dat}{30}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Statistické zpracování dat}{30}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Období jednoho roku}{30}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Období jednoho měsíce}{33}{subsection.4.3.2}%
 \contentsline {subsubsection}{Výběr dat}{34}{section*.22}%
 \contentsline {chapter}{Závěr}{41}{chapter*.23}%
