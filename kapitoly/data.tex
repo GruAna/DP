@@ -18,7 +18,7 @@ Základní číselník s údaji o produktech, se nachází v tabulce \texttt{pro
     \item Rozměry produktu a jeho hmotnost
     \item ID kategorie produktu v číselné struktuře (pro lepší interpretaci, o jakou kategorii zboží se jedná, je vhodnější použít strukuru 4BOX, kterou lze získat napojením na tabulku \texttt{produkt\_kategorie}.)
 \end{itemize}
-Tabulka \texttt{produkt\_kategorie} obsahuje převod z číselné struktury, která popisuje kategorii produktu na 4BOX strukturu. 4BOX struktura se skládá ze šesti úrovní. Struktura 4BOX je znázorněná na obrázku \ref*{obr:d:4box}.
+Tabulka \texttt{produkt\_kategorie} obsahuje převod z číselné struktury, která popisuje kategorii produktu na 4BOX strukturu. 4BOX struktura se skládá ze šesti úrovní. Hierarchie těchto úrovní je znázorněná na obrázku \ref*{obr:d:4box} spolu se stručným popisem složek první úrovně.
 
 \begin{figure}[hbtp!]
     \centering
@@ -29,18 +29,19 @@ Tabulka \texttt{produkt\_kategorie} obsahuje převod z číselné struktury, kte
 
 V tabulce \ref*{tab:d:4Bzast} jsou uvedeny počty podkategorií pro každou z kategorií L1 a také procentuální zastoupení kategorie L1 v rámci produktového portfolia vybrané společnosti. Zastoupení je odvozeno podle počtu produktů v kategorii.
 
-\begin{table}[]
+\begin{table}[hbtp!]
+    \captionsetup{justification=centering}
     \begin{center}
-    \caption{Počet podkategorií v L1 kategorii a zastoupení L1 kategorie v rámci produktového portfolia.}
+    \caption{Počet podkategorií v L1 kategorii a zastoupení L1 kategorie \\ v rámci produktového portfolia.}
     \label{tab:d:4Bzast}
     \begin{tabular}{p{3cm}  p{1cm} p{1cm} p{1cm} p{1cm} p{1cm}  c}
-        & \multicolumn{5}{c}{Počty kategorií} &                      \\
-        L1         & L2    & L3   & L4   & L5    & L6    & Zastoupení kategorie \\
+        L1 & \multicolumn{5}{c}{Počty kategorií} &      Zastoupení kategorie                \\
+                & L2    & L3   & L4   & L5    & L6    &  \\
         \hline
         nonfood    & 1     & 7    & 27   & 76    & 179   & 76,12\%              \\
-        dry   & 3     & 13   & 33   & 147   & 494   & 7,28\%               \\
+        dry         & 3     & 13   & 33   & 147   & 494   & 7,28\%               \\
         HBC        & 1     & 4    & 21   & 59    & 193   & 7,07\%               \\
-        fresh & 5     & 11   & 27   & 111   & 469   & 4,27\%               \\
+        fresh       & 5     & 11   & 27   & 111   & 469   & 4,27\%               \\
         superfresh & 6     & 10   & 31   & 92    & 271   & 4,04\%               \\
         others     & 4     & 4    & 4    & 5     & 5     & 1,06\%               \\
         tobacco    & 1     & 1    & 1    & 3     & 8     & 0,17\%            
@@ -48,43 +49,42 @@ V tabulce \ref*{tab:d:4Bzast} jsou uvedeny počty podkategorií pro každou z ka
     \end{center}
     \end{table}
 
-Zároveň kategorie L6 je přímo napojená na hodnotu číselné struktury, která je uvedena v číselníku produktů (v tabulce \texttt{produkt}).
+Kategorie L6 je přímo napojená na hodnotu číselné struktury, která je uvedena v číselníku produktů (v tabulce \texttt{produkt}). Pro získání všech úrovní kategorizace 4BOX k danému produktu je třeba vyhledat v tabulce \texttt{produkt} číselné ID kategorie daného produktu a napojit ho na kategorii L6 v tabulce \texttt{produkt\_kategorie}. V této tabulce je pak hodnota nejbližší nadřazené kategorie L5. Poté je potřeba opět vyhledat v tabulce tuto hodnotu a zjistit její nadřazenou kategorii L4. Takto se postupuje dokud není dosaženo úrovně L1. 
 
+Další tabulka, se kterou jsem pracovala obsahuje informace o velikosti a hmotnosti produktů. Tato tabulka je důležitá z toho důvodu, že některé položky jsou vážené a pokud se udává jejich množství udává se v gramech, zatímco nevážené položky jsou uváděny v kusech. Aby bylo možné porovnávat oba číselné údaje, ke každému váženému produktu existuje přepočet na počet kusů (ozn. SKU). K tomu jsou využity údaje o počtu kusů na vychystávací jednotku (dále označeno jako $SKU_{\mathrm{VJ}}$) a hmotnost jedné vychystávací jednotky daného produktu (ozn. $hmotnost_{\mathrm{VJ}}$). Vychystávací jednotka je jednotka množství používaná pro vychystávání produktů -- jeho balení a transport. Postup pro přepočet je následovný: $$SKU_{\mathrm{vazena}} = \frac{hmotnost_{\mathrm{vazena}} }{hmotnost_{\mathrm{VJ}}} \cdot SKU_{\mathrm{VJ}}.$$
 
-Tabulka, která obsahuje 
 
 \subsubsection{Tabulky transakcí}
-V tabulce \texttt{transakce} se nachází údaje o všech provedených transakcích, a to jak skladové transakce, tak prodeje na prodejnách. V případě prodejen jsou údaje agregované podle prodejny, konkrétního produktu a dne transakce, tzn. v této tabulce nelze rozlišit konkrétní prodeje na jednotlivých pokladnách, ale pouze souhrn za jeden den. Tabulka obsahuje údaje za posledních dvanáct měsíců.
+V tabulce \texttt{transakce} se nachází údaje o všech provedených transakcích, a to jak skladové transakce, tak prodeje a další pohyby na prodejnách. V případě prodejů prodejen jsou údaje agregované podle prodejny, konkrétního produktu a dne transakce, tzn. v této tabulce nelze rozlišit konkrétní prodeje na jednotlivých pokladnách, ale pouze souhrn za jeden den. Tabulka obsahuje údaje za posledních dvanáct měsíců.
 
-Tabulka transakcí obsahuje 21 sloupců, jako podstatné pro analýzu jsem vybrala následující sloupce:
+Tabulka transakcí obsahuje 21 sloupců, jako možné podstatné sloupce pro analýzu jsem vybrala následující sloupce:
 
 \begin{itemize}
-    \item ID transakce, jedinečné pro každou transakci
-    \item Typ transakce
-    \item ID produktu, kterého se transakce týká
-    \item ID skladu (včetně prodejen)
+    \item ID transakce, jedinečné pro každou transakci.
+    \item ID produktu, kterého se transakce týká. Každá transakce obsahuje údaje pouze o jediném produktu. 
+    \item ID prodejny (skladů i prodejen). Z důvodů ochrany dat jsem původní ID převedla na hodnoty od 0 do $p$, kde $p$ je počet prodejen.
     \item Datum transakce (tzv. business datum, pokud samotná transakce proběhne až po půlnoci uvedeného dne, tak se posílá s datem z předchozího dne, neboť do toho dne businessově náleží.)
-    \item ID promoce 
-    \item Motive\_type z hlediska hledání shrinku produktu se jedná o klíčový sloupec, neboť obsahuje označení jednotlivých typů shrinků.
-    \item Množství produktu v dané transakci
-    \item Hodnota transakce v nákladové ceně
+    \item ID promoce, příznak zda a v jaké promoční akci se produkt nacházel v čase uvedeném v datu transakce.
+    \item ID shrinku, neboli \emph{motive type}, z hlediska hledání shrinku produktu se jedná o klíčový sloupec, neboť obsahuje označení jednotlivých typů shrinků. Celkem je identifikováno 17 typů shrinků. V databázi parametr \emph{motive type} označuje i jiná data než data týkající se shrinků, z toho plyne, že bylo třeba vyfiltrovat pouze ta data, která obsahují oněch 17 identifikačních čísel patřící shrinkům. Z důvodu anonymity dat jsem původní ID přečíslovala na celočíselné hodnoty od 0 až do počtu shrinků (pro obě hlavní kategorie).
+    \item Množství produktu uvedené v transakci. U kusových produktů se jedná o celočíselný údaj u vážených to je desetinné číslo.
+    \item Hodnota transakce v nákladové ceně v českých korunách (desetinné číslo).
     \item Hodnota transakce v prodejní ceně včetně DPH -- v případě prodejů se jedná o skutečnou cenu, u zbylých transakcích je uvedena odpovídající cena podle ceníku.
 \end{itemize}
 
 Tabulku, která obsahuje údaje o jednotlivých prodejích na prodejnách společnosti, jsem pro účely této práce nazvala \texttt{transakce\_prodeje}. Celkem obsahuje třináct sloupců, z nichž jsem vybrala následující:
 
-\begin{itemize}
-    \item ID transakce
-    \item ID produktu, kterého se transakce týká
-    \item ID prodejny
-    \item Datum a čas transakce 
-    \item ID promoce
-    \item Množství produktu v dané transakci
-    \item Hodnota transakce v prodejní ceně bez DPH
-    \item Hodnota DPH dané transakce
-\end{itemize}
+% \begin{itemize}
+%     \item ID transakce
+%     \item ID produktu, kterého se transakce týká
+%     \item ID prodejny
+%     \item Datum a čas transakce 
+%     \item ID promoce
+%     \item Množství produktu v dané transakci
+%     \item Hodnota transakce v prodejní ceně bez DPH
+%     \item Hodnota DPH dané transakce
+% \end{itemize}
 
-\subsubsection{Tabulky ceníků}
+% \subsubsection{Tabulky ceníků}
 
 
 \section{Předzpracování dat}
@@ -96,9 +96,9 @@ Množství produktů -
 
 
 
-\subsection{Období jednoho roku}
+% \subsection{Období jednoho roku}
 
-\input{kapitoly/analyzy_rok.tex}
+% \input{kapitoly/analyzy_rok.tex}
 
 
 
