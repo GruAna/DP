@@ -122,35 +122,42 @@ Výslednou matici popisující korelační vztahy mezi příznaky jsem vizualizo
     \label{obr:nb:pearson}
 \end{figure}
 
-Dále jsem použila výpočet koeficientů vzájemná informace \footnote{\emph{mutual information}}, která určuje kolik informace sdílí dvě proměnné. % !!!zdroj
-Matice vypočítaných koeficientů je na obr.\ref*{obr:nb:MI}.
+Dále jsem použila výpočet koeficientů vzájemné informace \footnote{\emph{mutual information}}, který říká, jaká je podobnost mezi dvěma proměnnými \cite{bib:scikit}. % !!! odkaz na teorii
+Matice vypočítaných koeficientů je na obr.\ref*{obr:nb:MI}, jelikož se jedná o symetrickou vlastnost, jsou vynechány hodnoty pod vedlejší diagonálou. Z výsledků je opět vidět zřejmé, že ID produktu sdílí úrovněmi kategorizace tím více, čím je kategorizace jemnější.
 
 \begin{figure}[hbtp!]
     \centering
     \includegraphics[width=.8\textwidth]{obrazky/zntb/MI_TE.png}
-    \caption{Matice koeficientů vzájemná informace mezi příznaky.}
+    \caption{Matice koeficientů vzájemné informace mezi příznaky.}
     \label{obr:nb:MI}
 \end{figure}
 
-Opět pro znázornění závislosti mezi proměnnými jsem použila koeficient Cramers V a Thiels U. %!!! dopsat co to je %!!!zdroj, odkaz na teorii
-
+%https://www.statology.org/interpret-cramers-v/
+Dále jsem pro znázornění vztahu mezi proměnnými použila koeficient Cramerovo V. Koeficient jsem postupně počítala pro každou dvojici příznaků. Koeficient nabývá hodnot mezi 0 a 1. Číslo blízké nule indikuje, že mezi proměnnými není asociace, číslo blízké jedničce vysokou závislost \cite{bib:statology}. Na obr. \ref*{obr:nb:cramers} lze vidět, že pro kategorie L1 až L6 je hodnota koeficientu  po zaokrouhlení rovna jedné. Vysoká závislost je pak i mezi příznakem expirace a ID produktu a kategorií L1. Dále logicky mezi číslem dne a dnem v týdnu a obdobím v měsíci.
+%!!! dopsat co to je %!!!zdroj, odkaz na teorii
 \begin{figure}[hbtp!]
     \centering
     \includegraphics[width=.8\textwidth]{obrazky/zntb/cramers_u.png}
-    \caption{Matice koeficientů Cramers U mezi příznaky.}
+    \caption{Matice koeficientů Cramerovo V mezi příznaky.}
     \label{obr:nb:cramers}
 \end{figure}
+
+Další statistikou spočtenou na datech je Theilovo U (neboli koeficient nejistoty), který opět nabývá hodnot mezi 0 a 1 a měří vztah mezi dvěma proměnnými. Na rozdíl od předchozích statistik tento koeficient není symetrický a z výsledků lze vyvodit, ze které proměnné ze dvou zkoumaných můžeme vyvodit informaci o druhé proměnné \cite{bib:correl}. Z výsledků zobrazených v matici na obr. \ref*{obr:nb:thiels} plyne, že z ID produktu lze vyvodit část informace o kategoriích a expiraci. Zatímco úrovně L1 a L2 o ID produktu mnoho informace nenesou. Jak bylo ukázáno i v předchozích statistikách a jak vyplývá z logiky pro získání dne v týdnu a období měsíce, číslo dne nese informaci o těchto dvou příznacích.
+
 
 \begin{figure}[hbtp!]
     \centering
     \includegraphics[width=.8\textwidth]{obrazky/zntb/theils_u.png}
-    \caption{Matice koeficientů Thiels V mezi příznaky.}
+    \caption{Matice koeficientů Theilovo U mezi příznaky.}
     \label{obr:nb:thiels}
 \end{figure}
 
-V dalším testu jsem otestovala multikolinearitu dat pomocí rozptylového inflačního faktoru (VIF). Jako hraniční faktor jsem zvolila hodnotu 40 VIF. Čímž došlo k redukci příznaků z jedenácti na pět na kategorii L1, číslo dne, období měsíce, id prodejny a den v týdnu.
+Z vypočítaných statistik na datasetu je patrné, že některé příznaky jsou významně závislé, a proto je třeba je z dat odstranit. Kandidáti na vynechání jsou kategorie L2, L4, L6 a číslo dne. V dalších testech budou také vybráni kandidáti a v závěru vyhodnotím, které příznaky byly podle aplikovaných metod vybrány jako vhodné k vynechání a které nikoli.
 
-\begin{figure}
+V dalším testu jsem otestovala multikolinearitu dat pomocí rozptylového inflačního faktoru (VIF). Jako hraniční faktor jsem zvolila hodnotu 40 VIF. Vysvětlující proměnné jsem odebírala z datasetu postupně a odebírání jsem ukončila až, když hodnota VIF nebyla nižší než hraniční.
+Tímto došlo k redukci příznaků z jedenácti na pět, a to na kategorii L1, číslo dne, období měsíce, ID prodejny a den v týdnu. Hodnoty koeficientu VIF na datech jsou na obr. \ref*{obr:nb:vif}. 
+
+\begin{figure}[h!]
     \centering
     \begin{minipage}{.5\textwidth}
       \centering
@@ -161,26 +168,33 @@ V dalším testu jsem otestovala multikolinearitu dat pomocí rozptylového infl
     \begin{minipage}{.5\textwidth}
       \centering
       \includegraphics[width=.8\textwidth]{obrazky/zntb/MI_feature_selection.png}
-      \caption{Matice koeficientů vzájemná informace mezi příznaky a cílovým sloupcem typ shrinku.}
+      \caption{Koeficienty vzájemné informace mezi příznaky a cílovým sloupcem typ shrinku.}
       \label{obr:nb:MI_FS}
     \end{minipage}
     \end{figure}
 
+Jako další metodu po výběr příznaků jsem vypočítala hodnotu koeficientů vzájemné informace mezi všemi příznaky s cílovým sloupcem - ID shrinku. Na obrázku \ref*{obr:nb:MI_FS} lze vidět, jak jednotlivé proměnné souvisí s cílovým sloupcem. Pro výpočet tohoto koeficientu jsem použila jak data bez outlierů, tak tenotkrát data před jejich odstraněním. Zde můžeme vidět, že významnost příznaku ID prodejny klesla o téměř polovinu. Nejvíce informace je sdíleno s ID produktu, kategorií L6, dále L5, L4, L2 a expirace. Příznaky související s časovými údaji podle tohoto kritéria nenesou mnoho společné informace.
 
-Jako další metodu po výběr příznaků jsem vypočítala hodnotu koeficientů vzájemné informace mezi všemi příznaky s target sloupcem. Na obrázku \ref*{obr:nb:MI_FS} lze vidět jak hodnotu jednotlivé proměnné souvisí s cílovým sloupcem.
+Jako hlavní metodu pro výběr proměnných jsem se rozhodla použít metodu PCA 
+Využila jsem implementaci v knihovně \emph{Prince} v jazyce Python. 
+Předtím než jsem metodu aplikovala jsem otestovala předpoklad homoskedasticity, tedy shodnost rozptylů v datech, pomocí Bartlettova testu implementovaného v knihovně \emph{factor\_analyzer}. Nulová hypotéza o shodnosti rozptylů nebyla vyvrácena (p-hodnota vyšla nulová). Metodu PCA je proto možné použít.
 
-Potom jsem aplikovala na data analýzu hlavních komponent \ref*{obr:nb:pca_roztyl_komponetn}. Na obrázcích \ref*{obr:nb:pca_roztyl_komponetn} a \ref*{obr:nb:pca_kum_roztyl_komponetn} jsou znázorněny prvních deset komponent a rozptyl který v datech vysvětlují. Na základě hodnot jsem vybrala prvních pět komponent, poté jsem vypočítala příspěvky příznaků k těmto komponentám a vybrala jsem ty příznaky, které příspívají nejvíce - to jsou příznaky id prodejny, den v týdnu, expirace, den a období v měsíci.
+Na obrázcích \ref*{obr:nb:pca_roztyl_komponetn} a \ref*{obr:nb:pca_kum_roztyl_komponetn} je znázorněno prvních deset komponent a rozptyl který v datech vysvětlují. Na základě hodnot jsem vybrala prvních pět komponent. Již pátá komponenta (označená č. 4) spolu s předchozími vysvětluje více jak 95 \% variability dat. V dalším kroku jsem vypočítala příspěvky příznaků k těmto pěti komponentám a vybrala jsem ty příznaky, které přispívají nejvíce k prvním pěti komponentám. Jejich příspěvek je znázorněný na obr. \ref*{obr:nb:pca_prispevek}. Na základě výsledků analýzy hlavních komponent byly vybrány jako vhodné příznaky pro další práci s daty příznaky - příznaky ID prodejny, den v týdnu, expirace, den a období v měsíci.
 
-\begin{figure}
+\begin{figure}[h!]
     \centering
     \begin{minipage}{.5\textwidth}
       \centering
+      \captionsetup{justification=centering}
+
       \includegraphics[width=.8\textwidth]{obrazky/zntb/pca-roztyl_komponetn.png}
-      \caption{PCA - vysvětlený rozptyl hlavních komponent.}
+      \caption{PCA - vysvětlený \\ rozptyl hlavních komponent.}
       \label{obr:nb:pca_roztyl_komponetn}
     \end{minipage}%
     \begin{minipage}{.5\textwidth}
       \centering
+      \captionsetup{justification=centering}
+
       \includegraphics[width=.8\textwidth]{obrazky/zntb/pca-kum_roztyl_komponetn.png}
       \caption{PCA - kumulativní vysvětlený rozptyl hlavních komponent.}
       \label{obr:nb:pca_kum_roztyl_komponetn}

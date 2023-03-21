@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1679345353 "c:/Users/uzivatel/Documents/skola/DP/DP_Gruberova.tex" "DP_Gruberova.pdf" "DP_Gruberova" 1679345358
+["pdflatex"] 1679420911 "c:/Users/uzivatel/Documents/skola/DP/DP_Gruberova.tex" "DP_Gruberova.pdf" "DP_Gruberova" 1679420920
   "C:/Users/uzivatel/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1679137779 82686 2381c3433487640bf26aa76a10db7eb2 ""
   "C:/Users/uzivatel/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1667471210 10789789 02d9a8b514ec08d575e4cf0e33c1259e ""
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc" 1256929440 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
@@ -240,14 +240,14 @@
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656233319 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1650047684 2245 c8a4088d07cffc2e5207730c738edd76 ""
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1650047684 20785 71a3d72ab517959a6979c27e6176bec1 ""
-  "DP_Gruberova.aux" 1679345357 11591 37146b03b408b08d1c6d272512a4f3a1 "pdflatex"
-  "DP_Gruberova.out" 1679345357 3097 66b11f6b5dc6d9c7b709fa8e7367f9dd "pdflatex"
+  "DP_Gruberova.aux" 1679420919 11858 28383a1683297f3fd221d0b9e5731cad "pdflatex"
+  "DP_Gruberova.out" 1679420919 3144 93caf0e68ef997f4c4d07231ac78b010 "pdflatex"
   "DP_Gruberova.tex" 1679137765 9676 6ad1500c6998b3f6ddea809160ba30e8 ""
-  "DP_Gruberova.toc" 1679345357 2134 e7e7da05a4259b0f26006d601c481d30 "pdflatex"
+  "DP_Gruberova.toc" 1679420919 2195 7337b2d6ae891e1c536daad8bdb024f2 "pdflatex"
   "c:/Users/uzivatel/Documents/skola/DP/DP_Gruberova.tex" 1679137765 9676 6ad1500c6998b3f6ddea809160ba30e8 ""
-  "kapitoly/analyzy_mesic.tex" 1679345352 12562 2a97ccfa1feb437ba0a7deeae45dd57d ""
+  "kapitoly/analyzy_mesic.tex" 1679420910 16020 7db80ad973cb824dac1a6f9f15119b58 ""
   "kapitoly/data.tex" 1679341934 8243 f68b30126b2bd59c263c2abb172668c5 ""
-  "kapitoly/metody.tex" 1679062237 11010 53ea92d6c3eef505f3c54996f3ba8d76 ""
+  "kapitoly/metody.tex" 1679414157 11026 d8cd89fb93caaa88d74ff717d80b4beb ""
   "kapitoly/shrinky.tex" 1679126650 5423 d7c4092ca481b532bc79c3e782a78a3a ""
   "kapitoly/teorie.tex" 1668962077 16533 acee1e0a3bd78ca11d385562c4ca4653 ""
   "kapitoly/uvod.tex" 1667468236 156 4ec44cee48aa78884fe1d15c7886adcc ""
@@ -268,7 +268,7 @@
   "obrazky/zntb/pearson.png" 1678959190 94703 cd9ac59325340a556164a77a7f1a6200 ""
   "obrazky/zntb/theils_u.png" 1678959407 87131 76e0afa459507d04a2c3b4dfe23749dd ""
   "symbol_cvut_konturova_verze_cb.pdf" 1667468236 11278 cbc829789351b189a368bb313dedba7c ""
-  "tex/bibliografie1.tex" 1679342649 4612 517fde8dc813f442a6b118d830b4536f ""
+  "tex/bibliografie1.tex" 1679420747 5453 948a068f250185289c43bcad9ae4ab8f ""
   "tex/makra.tex" 1667468236 25357 b4ca43f3c5ac9a2b0e641f5937ddb06f ""
   "zadaniDP.pdf" 1667468236 55987 32808c6730645d7d18de73fa48f37020 ""
   (generated)
