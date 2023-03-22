@@ -24,7 +24,7 @@
 \contentsline {section}{\numberline {4.3}Statistické zpracování dat}{30}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Období jednoho měsíce}{30}{subsection.4.3.1}%
 \contentsline {subsubsection}{Výběr dat}{31}{section*.23}%
-\contentsline {chapter}{Závěr}{41}{chapter*.34}%
-\contentsline {chapter}{Literatura}{42}{chapter*.34}%
-\contentsline {chapter}{Přílohy}{45}{chapter*.35}%
-\contentsline {chapter}{\numberline {A}Obsah přiloženého CD}{45}{appendix.A}%
+\contentsline {chapter}{Závěr}{39}{chapter*.34}%
+\contentsline {chapter}{Literatura}{40}{chapter*.34}%
+\contentsline {chapter}{Přílohy}{43}{chapter*.35}%
+\contentsline {chapter}{\numberline {A}Obsah přiloženého CD}{43}{appendix.A}%
