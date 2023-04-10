@@ -1,0 +1,6 @@
+\babel@toc {czech}{}\relax 
+\beamer@sectionintoc {1}{Motivace a cíle práce}{3}{0}{1}
+\beamer@sectionintoc {2}{Teoretická část}{3}{0}{2}
+\beamer@sectionintoc {3}{Vybrané metody a datové sady}{4}{0}{3}
+\beamer@sectionintoc {4}{Postup implementace}{4}{0}{4}
+\beamer@sectionintoc {5}{Výsledky}{5}{0}{5}

@@ -24,7 +24,8 @@
 \contentsline {subsection}{\numberline {4.2.1}Předzpracování dat}{30}{subsection.4.2.1}%
 \contentsline {subsubsection}{Výběr dat}{31}{section*.22}%
 \contentsline {subsection}{\numberline {4.2.2}Klasifikace dat}{39}{subsection.4.2.2}%
-\contentsline {chapter}{Závěr}{41}{chapter*.34}%
-\contentsline {chapter}{Literatura}{42}{chapter*.34}%
-\contentsline {chapter}{Přílohy}{46}{chapter*.35}%
+\contentsline {subsubsection}{Výsledky}{40}{section*.34}%
+\contentsline {chapter}{Závěr}{41}{chapter*.36}%
+\contentsline {chapter}{Literatura}{42}{chapter*.36}%
+\contentsline {chapter}{Přílohy}{46}{chapter*.37}%
 \contentsline {chapter}{\numberline {A}Obsah přiloženého CD}{47}{appendix.A}%

@@ -1,0 +1,461 @@
+\documentclass{article}
+
+\usepackage{layout}
+\usepackage[utf8]{inputenc} 	%ut8 nebo cp1250
+\usepackage[T1]{fontenc}	%IL2 nebo T1
+\usepackage[czech]{babel}
+\usepackage{lmodern} %normalni velikost pismenek
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{xcolor,listings}
+\usepackage{textcomp}
+\usepackage{color}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{HTML}{C42043}
+\definecolor{backcolour}{HTML}{F2F2F2}
+\definecolor{bookColor}{cmyk}{0,0,0,0.90}  
+\color{bookColor}
+
+\lstset{upquote=true}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{codepurple},
+    numberstyle=\numberstyle,
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize\ttfamily,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=10pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+}
+\lstset{style=mystyle}
+
+\newcommand\numberstyle[1]{%
+    \footnotesize
+    \color{codegray}%
+    \ttfamily
+    \ifnum#1<10 0\fi#1 |%
+}
+
+
+\oddsidemargin=0mm \topmargin=-25mm \textheight=245mm \textwidth=170mm
+\parindent=0mm \parskip=3mm %\pagestyle{plain}
+
+
+\date{Datum: 16. 1. 2023}
+
+\begin{document}
+
+
+\begin{center}
+    \vspace*{10em}
+    \Huge Zookoutek
+    ------------------------------------------------------
+
+    \Large Zápočtová práce předmětu SQL
+
+    \Large 16. ledna 2023
+
+    \vspace*{23em}
+
+    
+
+    \huge Bc. Anna Gruberová
+
+\end{center}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Úvod}
+
+V této práci je zpracován model databáze pro zookoutek a realizován v jazyce SQL v databázovém systému Firebird verze 3.0.2, v distribuci pro Linux.
+
+Jako téma pro model databáze jsem zvolila zookoutek  neboli malou zoologickou zahradu  se zvířaty. Databáze dává přehled o zvířatech,která se vyskytují nebo vyskytovala v zookoutku, a to časové údaje o každém jedinci a také údaje o lokalitách, kde se zvířata nacházejí. Podrobné popisy údajů budou popsány dále.
+
+\section{Realizace v SQL}
+Databázi jsem realizovala v jazyce SQL pomocí databázového systému Firebird. Následující sekce obsahuje jednotlivé příkazy, které jsem vkládala do příkazové řádky isql pro Firebird, a dopňující komentář.
+
+\subsection{ERA diagram}
+Předtím, než popíšu ERA diagram databáze, je potřeba nejprve definovat domény, které jsem využívala pro tvorbu tabulek.
+
+\begin{lstlisting}
+CREATE DOMAIN identifikace AS INTEGER NOT NULL CHECK (VALUE>0);
+CREATE DOMAIN text35 AS VARCHAR(35) CHARACTER SET WIN1250 NOT NULL CHECK (VALUE NOT LIKE ' %' AND VALUE NOT LIKE '% ') COLLATE PXW_CSY;
+CREATE DOMAIN text20 AS VARCHAR(20) CHARACTER SET WIN1250 NOT NULL CHECK (VALUE NOT LIKE ' %' AND VALUE NOT LIKE '% ') COLLATE PXW_CSY;
+CREATE DOMAIN datum AS DATE NOT NULL CHECK (VALUE <= current_date);
+CREATE DOMAIN datum_nepov AS DATE CHECK (VALUE <= current_date);
+\end{lstlisting}
+
+Vytvořila jsem doménu pro identifikátory, dvě domény pro texty délky 35 a 20 znaků a dvě domény pro datum, kde jedno nesmí být nulové a druhé je nopivnné a může být nulové.
+
+Model tabulek a relací mezi nimi je na obrázku \ref{fig:era}. Celkem se databáze skládá z šesti tabulek, mezi kterými jsou relace 1:N, a to následující:
+\begin{itemize}
+    \item \texttt{pojmenovani} daného \texttt{druhu} (N:1),
+    \item \texttt{pojmenovani} v \texttt{jazyce} (N:1),
+    \item \texttt{zvire} daného \texttt{druhu} (N:1),
+    \item \texttt{umistěni} daného \texttt{zvirete} (N:1),
+    \item \texttt{umisteni} v \texttt{lokalite} (N:1).
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{era.png}
+    \caption{ERA diagram databáze zookoutek.}
+  
+    \label{fig:era}
+\end{figure}
+
+\newpage
+
+
+\subsection{Tabulky}
+
+V SQL jsem tento model realizovala takto:
+
+\begin{lstlisting}
+CREATE TABLE druh(
+    idd identifikace, 
+    latinsky text35,
+    CONSTRAINT druh_pk PRIMARY KEY (idd), 
+    CONSTRAINT druh_unik_nazev UNIQUE (latinsky)
+);
+
+CREATE TABLE jazyk(
+    idjaz identifikace, 
+    jazyk text20,
+    CONSTRAINT jazyk_pk PRIMARY KEY (idjaz), 
+    CONSTRAINT jazyk_unik UNIQUE (jazyk)
+);
+
+CREATE TABLE pojmenovani(
+    did identifikace,
+    jazid identifikace,
+    nazev text35,
+    CONSTRAINT pojmenovani_pk PRIMARY KEY (did, jazid), 
+    CONSTRAINT pojmenovani_unik UNIQUE (jazid, nazev),
+    CONSTRAINT pojmenovani_fk_druh FOREIGN KEY (did) REFERENCES druh (idd) ON UPDATE CASCADE, 
+    CONSTRAINT pojmenovani_fk_jazyk FOREIGN KEY (jazid) REFERENCES jazyk (idjaz) ON UPDATE CASCADE
+);
+
+CREATE TABLE zvire(
+    idz identifikace, 
+    did identifikace,
+    jmeno text20,
+    nar datum,
+    umr datum_nepov,
+    CONSTRAINT zvire_pk PRIMARY KEY (idz), 
+    CONSTRAINT zvire_fk_druh FOREIGN KEY (did) REFERENCES druh (idd) ON UPDATE CASCADE, 
+    CONSTRAINT zvire_unik UNIQUE (did, jmeno, nar)
+);
+
+CREATE TABLE lokalita(
+    idl identifikace, 
+    nazev text35,
+    CONSTRAINT lokalita_pk PRIMARY KEY (idl), 
+    CONSTRAINT lokalita_unik UNIQUE (nazev)
+);
+
+CREATE TABLE umisteni(
+    lid identifikace, 
+    zid identifikace,
+    odkdy datum,
+    dokdy datum_nepov,
+    CONSTRAINT umisteni_pk PRIMARY KEY (lid, zid, odkdy), 
+    CONSTRAINT umisteni_fk_lok FOREIGN KEY (lid) REFERENCES lokalita (idl) ON UPDATE CASCADE,
+    CONSTRAINT umisteni_fk_zvire FOREIGN KEY (zid) REFERENCES zvire (idz) ON UPDATE CASCADE
+);
+\end{lstlisting}
+
+
+\subsection{Vkládání dat}
+
+Aby se data vkládala jednodušeji do jednotlivých tabulek, vytvořila jsem čtyři generátory pro tabulky, kde je primárním klíčem jeden identifikátor. Generátor se automaicky stará o to, aby se klíče neopakovaly a postupně narůstala jejich hodnota.
+
+\begin{lstlisting}
+CREATE SEQUENCE g_druh;
+CREATE SEQUENCE g_jazyk;
+CREATE SEQUENCE g_zvire;
+CREATE SEQUENCE g_lokalita;
+\end{lstlisting}
+
+Do databáze jsem vložila několik dat, aby bylo možné sledovat fungování databáze.
+
+\begin{lstlisting}
+
+INSERT INTO lokalita VALUES (NEXT VALUE FOR g_lokalita, 'velka klec se stromy');
+INSERT INTO lokalita VALUES (NEXT VALUE FOR g_lokalita, 'pavilon tucnaku');
+INSERT INTO lokalita VALUES (NEXT VALUE FOR g_lokalita, 'vybeh u vstupu');
+INSERT INTO lokalita VALUES (NEXT VALUE FOR g_lokalita, 'ohrada');
+INSERT INTO lokalita VALUES (NEXT VALUE FOR g_lokalita, 'kralikarna');
+
+INSERT INTO druh VALUES (NEXT VALUE FOR g_druh, 'procyon lotor');
+INSERT INTO druh VALUES (NEXT VALUE FOR g_druh, 'spheniscus humboldti');
+INSERT INTO druh VALUES (NEXT VALUE FOR g_druh, 'cavia porcellus');
+INSERT INTO druh VALUES (NEXT VALUE FOR g_druh, 'lama pacos');
+
+INSERT INTO jazyk VALUES (NEXT VALUE FOR g_jazyk, 'cesky');
+
+INSERT INTO pojmenovani VALUES (1, 1, 'myval severny');
+INSERT INTO pojmenovani VALUES (2, 1, 'tucnak humboldtuv');
+INSERT INTO pojmenovani VALUES (3, 1, 'morce domaci');
+INSERT INTO pojmenovani VALUES (4, 1, 'lama alpaka');
+
+INSERT INTO zvire VALUES (NEXT VALUE FOR g_zvire, 1, 'Drapek', '2008-11-03', NULL);
+INSERT INTO zvire VALUES (NEXT VALUE FOR g_zvire, 1, 'Cumacek', '2009-10-11', NULL);
+INSERT INTO zvire VALUES (NEXT VALUE FOR g_zvire, 2, 'Vlocka', '2019-10-11', NULL);
+INSERT INTO zvire VALUES (NEXT VALUE FOR g_zvire, 2, 'Bublinka', '2012-10-31', NULL);
+INSERT INTO zvire VALUES (NEXT VALUE FOR g_zvire, 3, 'Tapka', '2020-01-11', NULL);
+INSERT INTO zvire VALUES (NEXT VALUE FOR g_zvire, 3, 'Tunta', '2002-02-22', '2005-12-12');
+INSERT INTO zvire VALUES (NEXT VALUE FOR g_zvire, 3, 'Drobecek', '2009-10-11', '2013-04-12');
+INSERT INTO zvire VALUES (NEXT VALUE FOR g_zvire, 3, 'Flicek', '2019-10-05', NULL);
+INSERT INTO zvire VALUES (NEXT VALUE FOR g_zvire, 4, 'Brepta', '2021-05-11', NULL);
+INSERT INTO zvire VALUES (NEXT VALUE FOR g_zvire, 4, 'Chomik', '2009-07-19', NULL);
+
+INSERT INTO umisteni VALUES (1, 1, '2008-12-03', NULL);
+INSERT INTO umisteni VALUES (1, 2, '2009-12-11', NULL);
+INSERT INTO umisteni VALUES (2, 3, '2020-10-11', NULL);
+INSERT INTO umisteni VALUES (2, 4, '2013-12-31', NULL);
+INSERT INTO umisteni VALUES (5, 5, '2020-01-11', NULL);
+INSERT INTO umisteni VALUES (5, 6, '2002-02-22', '2005-12-12');
+INSERT INTO umisteni VALUES (5, 11, '2009-10-11', '2013-04-12');
+INSERT INTO umisteni VALUES (5, 8, '2019-10-08', NULL);
+INSERT INTO umisteni VALUES (4, 9, '2021-07-11', NULL);
+INSERT INTO umisteni VALUES (3, 10, '2011-11-11', NULL);
+\end{lstlisting}
+
+
+\subsection{Procedury}
+
+Jako další jsem vytvořila procedury k lepšímu ovládání databáze.
+Celkem se jedná o sedm procedur -- šest neselektových a jedna selektová.
+
+V procedurách používám výjimku, kterou jsem si předem nadefinovala. Její text lze libovolně měnit.
+\begin{lstlisting}
+CREATE EXCEPTION chyba  'Neco se pokazilo.';
+\end{lstlisting}
+
+\subsubsection{Neselektové procedury}
+Vytvořila jsem tolik procedut kolik je tabulek, neboť tyto procedury slouží pro vkládání dat do tabulek, ale narozdíl od prostého \texttt{INSERT} mají ošetřené chyby a navíc je možné vkládat údaje ne podle id, ale podle pro člověka přívětivšjích názvů.
+Např. pro přidání nového zvířete se uvádí jeho latinské jméno a místo id druhu.
+
+\begin{lstlisting}
+    SET TERM ^ ;
+CREATE PROCEDURE p_druh_novy (latin_nazev TYPE OF COLUMN druh.latinsky)
+    RETURNS (id INTEGER)
+    AS
+    BEGIN
+        SELECT idd FROM druh WHERE latinsky=:latin_nazev INTO :id;
+        IF (id IS NOT NULL) THEN EXIT; 
+        id = NEXT VALUE FOR g_druh;
+    BEGIN
+        INSERT INTO druh VALUES (:id, :latin_nazev);
+        WHEN ANY DO EXCEPTION chyba 'Nelze vlozit novy druh zvirete!';
+    END
+END ^ 
+SET TERM ; ^ 
+
+SET TERM ^ ;
+CREATE PROCEDURE p_zvire_nove (
+    druh TYPE OF COLUMN druh.latinsky, 
+    jmeno TYPE OF COLUMN zvire.jmeno, 
+    narozeni TYPE OF COLUMN zvire.nar, 
+    umrti TYPE OF COLUMN zvire.umr)
+    RETURNS (idz INTEGER)
+    AS
+    DECLARE VARIABLE iddruhu INTEGER;
+    BEGIN
+        EXECUTE PROCEDURE p_druh_novy(:druh) RETURNING_VALUES :iddruhu;
+        idz = NEXT VALUE FOR g_zvire;
+        BEGIN
+            INSERT INTO zvire VALUES (:idz, :iddruhu, :jmeno, :narozeni, :umrti);
+            WHEN ANY DO EXCEPTION chyba 'Nelze vlozit nove zvire!';
+        END
+    END ^
+SET TERM ; ^
+
+SET TERM ^ ;
+CREATE PROCEDURE p_jazyk_novy (jazyk TYPE OF COLUMN jazyk.jazyk)
+    RETURNS (id INTEGER)
+    AS
+    BEGIN
+        SELECT idjaz FROM jazyk WHERE jazyk=:jazyk INTO :id;
+        IF (id IS NOT NULL) THEN EXIT; 
+        id = NEXT VALUE FOR g_jazyk;
+    BEGIN
+        INSERT INTO jazyk VALUES (:id, :jazyk);
+        WHEN ANY DO EXCEPTION chyba 'Nelze vlozit novy jazyk!';
+    END
+END ^ 
+SET TERM ; ^ 
+
+SET TERM ^ ;
+CREATE PROCEDURE p_pojmenovani_nove (
+    nazev TYPE OF COLUMN pojmenovani.nazev, 
+    druh TYPE OF COLUMN druh.latinsky, 
+    jazyk TYPE OF COLUMN jazyk.jazyk)
+    AS
+    DECLARE VARIABLE iddruhu INTEGER;
+    DECLARE VARIABLE idjazyka INTEGER;
+    BEGIN
+        EXECUTE PROCEDURE p_druh_novy(:druh) RETURNING_VALUES :iddruhu;
+        EXECUTE PROCEDURE p_jazyk_novy(:jazyk) RETURNING_VALUES :idjazyka;
+        BEGIN
+            INSERT INTO pojmenovani VALUES (:iddruhu, :idjazyka, :nazev);
+            WHEN ANY DO EXCEPTION chyba 'Nelze vlozit nove pojmenovani!';
+        END
+    END ^
+SET TERM ; ^
+
+SET TERM ^ ;
+CREATE PROCEDURE p_lokalita_nova (nazev TYPE OF COLUMN lokalita.nazev)
+    RETURNS (id INTEGER)
+    AS
+    BEGIN
+        SELECT idl FROM lokalita WHERE nazev=:nazev INTO :id;
+        IF (id IS NOT NULL) THEN EXIT; 
+        id = NEXT VALUE FOR g_lokalita;
+    BEGIN
+        INSERT INTO lokalita VALUES (:id, :nazev);
+        WHEN ANY DO EXCEPTION chyba 'Nelze vlozit novou lokalitu!';
+    END
+END ^ 
+SET TERM ; ^ 
+\end{lstlisting}
+
+Procedury jsem odzkoušela následnými vstupy:
+
+\begin{lstlisting}
+EXECUTE PROCEDURE p_druh_novy('phodopus sungorus')
+EXECUTE PROCEDURE p_zvire_nove('ovis', 'Dolly', '1996-07-05', '2003-02-14');
+EXECUTE PROCEDURE p_jazyk_novy('english');
+EXECUTE PROCEDURE p_pojmenovani_nove('guinea pig', 'cavia porcellus', 'english');
+EXECUTE PROCEDURE p_pojmenovani_nove('ovce', 'ovis', 'cesky');
+EXECUTE PROCEDURE p_umisteni_nove ('ohrada', 'Chomik', '2023-01-14', NULL);
+EXECUTE PROCEDURE p_zvire_nove('ovis', 'Molly', '1999-08-08', NULL);
+EXECUTE PROCEDURE p_umisteni_nove ('ohrada', 'Molly', '2023-01-10', NULL);
+
+UPDATE umisteni SET dokdy='2023-01-14' WHERE lid = 3 AND zid = 10 AND odkdy = '2011-11-11';
+\end{lstlisting}
+
+\subsubsection{Selektové procedury}
+
+Jedna selektová proocedura umožňuje zobrazit informace o všech jedincích (zvířatech), kde druh zvířete ale není uveden latinsky, ale v jazayce, který je specifikován ve vstupu procedury, Vstupem je id, neboť tato procedura se dále používá při tovrbě pohledů. Vyrobit proceduru, kde by se místo id uplatňoval název by samozřejmě šlo také vyrobit, ale byl by tam krok navíc s prohledáváním daného jazyka, což u většího množství jazyků může být zdlouhavé.
+
+\begin{lstlisting}
+SET TERM ^;
+CREATE PROCEDURE zvirata (idj identifikace)
+RETURNS (jmeno text20, druh text35,  narozeni datum, umrti datum_nepov)
+AS BEGIN 
+    BEGIN
+        IF (NOT EXISTS(SELECT * FROM jazyk WHERE idjaz=:idj)) THEN EXCEPTION chyba 'Jazyk neexistuje'; 
+    END 
+    FOR SELECT jmeno, pojmenovani.nazev AS druh, nar AS narozeni, umr AS umrti
+    FROM zvire JOIN pojmenovani on zvire.did=pojmenovani.did WHERE pojmenovani.jazid=:idj 
+    ORDER BY jmeno ASC, druh INTO :jmeno,:druh,:narozeni,:umrti 
+    DO SUSPEND; 
+    END^
+SET TERM ;^
+
+select * from zvirata(1);
+\end{lstlisting}
+
+\subsection{Pohledy}
+
+Databáze nabízí celkem sedm pohledů.
+
+První pohled se jmenuje \texttt{druhy} a obsahuje pojmenování všech evidovaných druhů ve všech evidovaných jazycích. Výpis je seřazený podle abecedy podle jazyků. Pohled se vytváří pomocí \texttt{JOINu}.
+
+\begin{lstlisting}
+CREATE VIEW druhy 
+AS
+SELECT jazyk, nazev, latinsky 
+FROM druh LEFT JOIN pojmenovani ON idd=did JOIN jazyk ON jazid=idjaz ORDER BY jazyk, latinsky;
+\end{lstlisting}
+
+Druhý pohled \texttt{ziva\_zvirata} obsahuje jmeno, název druhu v češtině, datum narození a dožitý věk k aktuálnímu dni všech živých zvířat v zoo. Pohled se vytváří pomocí \texttt{SELEKTu}.
+
+\begin{lstlisting}
+CREATE VIEW ziva_zvirata
+AS
+SELECT jmeno, druh, narozeni, datediff(YEAR,narozeni,CURRENT_DATE) AS vek FROM zvirata(1) WHERE umrti IS NULL ORDER BY jmeno ASC;
+\end{lstlisting}
+
+Analogicky k tomu existuje pohled \texttt{zemrela\_zvirata}, navíc ale obsajuje sloupec s úmrtím a věk, je dožitý věk zvířete. Pohled se vytváří pomocí \texttt{SELEKTu}.
+
+\begin{lstlisting}
+CREATE VIEW zemrela_zvirata
+AS
+SELECT jmeno, druh, narozeni, umrti, datediff(YEAR,narozeni,umrti) AS vek FROM zvirata(1) WHERE umrti IS NOT NULL ORDER BY jmeno ASC;
+\end{lstlisting}
+
+Další pohled obsahuje všechna zvířata, jak žijíci, tak nežíjící. Pohled vznikl spojením (\texttt{UNION}) dvou předchozích pohledů, kde ale nejprve bylo poptřeba sjednotit počet sloupců. 
+
+\begin{lstlisting}
+CREATE VIEW vsechna_zvirata
+AS SELECT * FROM 
+(SELECT * FROM zemrela_zvirata UNION SELECT jmeno, druh, narozeni, '-' as umrti, vek FROM ziva_zvirata)
+ORDER BY vek ASC;
+\end{lstlisting}
+
+Déle je pohled \texttt{nejstaší}, který ukazuje přehle nejstaršího zvířete pro každý druh v zookoutku (název druhu, jméno a věk). Pohled se vytváří pomocí agregace.
+
+\begin{lstlisting}
+CREATE VIEW nejstarsi
+AS
+SELECT druh, max(vek) AS vek, max(jmeno) AS jmeno
+FROM vsechna_zvirata GROUP BY druh ORDER BY druh ASC;
+\end{lstlisting}
+
+Pohled \texttt{o\_zviratech} obsahuje informaci o každém žijícím jedinci, kde se aktálně nachází a jeho druhové jméno v českém jazyce.  Tabulka se vytváří pomocí několika \texttt{JOINů} a \texttt{SELEKTů}.
+
+\begin{lstlisting}
+CREATE VIEW o_zviratech
+AS
+SELECT jmeno, lokalita, odkdy, pojmenovani.nazev AS druh
+FROM
+(SELECT jmeno, nazev as lokalita, odkdy, did
+FROM zvire JOIN 
+(SELECT zid, odkdy, nazev  FROM umisteni JOIN lokalita ON lid=idl WHERE dokdy IS NULL) ON idz=zid WHERE umr IS NULL) a
+JOIN 
+pojmenovani ON a.did=pojmenovani.did WHERE jazid=1
+ORDER BY jmeno ASC;
+\end{lstlisting}
+
+Poslední pohled popisuje všechny lokace a říká, kolik zvířat aktuálně je na lokalitě a kolik druhů zvířat tam žije. Tabulka se vytváří pomocí několika \texttt{JOINů} a pomocí agragace \texttt{GROUP BY}.
+
+\begin{lstlisting}
+CREATE VIEW lokace
+AS 
+SELECT nazev, COALESCE(pocet_zvirat,0) AS pocet_zvirat, COALESCE(pocet_ruznych_druhu,0) AS pocet_ruznych_druhu
+FROM lokalita
+LEFT JOIN 
+    (SELECT lid, count(did) AS pocet_zvirat, count(distinct did) AS pocet_ruznych_druhu
+    FROM zvire JOIN umisteni ON idz=zid 
+    WHERE dokdy IS NULL 
+    GROUP BY lid) 
+ON idl=lid
+ORDER BY nazev ASC;
+\end{lstlisting}
+
+
+\section{Závěr}
+
+Navrhla a naimplementovala jsem databázi pro zookoutek se zvířaty. Databáze může sloužit k evidenci jednotlivých zvířat v zookoutku. Celkem má databáze šest tabulek, sedm procedur a rovněž sedm pohledů.
+
+V tomto protokolu jsem uvedla kód potřebný pro vytvoření databáze v systému Firebird v jazyce SQL a stručně ho okomentovala.
+
+\end{document}

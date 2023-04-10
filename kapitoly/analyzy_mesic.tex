@@ -174,7 +174,7 @@ Tímto došlo k redukci příznaků z jedenácti na pět, a to na kategorii L1, 
       \caption{Koeficienty vzájemné informace mezi příznaky a cílovým sloupcem typ shrinku.}
       \label{obr:nb:MI_FS}
     \end{minipage}
-    \vspace*{-2em}
+    \vspace*{-1.5em}
     \end{figure}
 
 Jako další metodu po výběr příznaků jsem vypočítala hodnotu koeficientů vzájemné informace mezi všemi příznaky s cílovým sloupcem - ID shrinku. Na obrázku \ref*{obr:nb:MI_FS} lze vidět, jak jednotlivé proměnné souvisí s cílovým sloupcem. Pro výpočet tohoto koeficientu jsem použila jak data bez outlierů, tak tenotkrát data před jejich odstraněním. Zde můžeme vidět, že významnost příznaku ID prodejny klesla o téměř polovinu. Nejvíce informace je sdíleno s ID produktu, kategorií L6, dále L5, L4, L2 a expirace. Příznaky související s časovými údaji podle tohoto kritéria nenesou mnoho společné informace.
@@ -259,7 +259,37 @@ Naproti tomu multinomická log. regrese nevyhodnocuje třídy odděleně, ale po
 
 Další zvolenou metodu je klasifikátor implementující random forest algoritmus. Tento algoritmus jsem zvolila vzhledem ke skutečnosti, že je úspěšně využíván pro problémy z reálného světa a dovede pracovat s velkým objemem dat, které tyto úlohy obvykle zahrnují \cite{bib:rf}. Zároveň volba parametrů pro tuto metodu je intuitivní. Poslední zvolenou metoudou je klasifkátor, který využívá gradient boosting. Tento klasifikátor také vytváří rozhodovací stromy jako random forest. Narozdíl od zmíněného klasifikátoru, jsou ale stromy vytvářeny postupně v závislosti na naposledy vytvořeném stromu. Stromy jsou k sobě agregovány během procesu trénování. Zatímco random forest vytváří stromy nezávisle a agreguje je až na konci procesu.\cite{bib:rfgb}
 
+\subsubsection{Výsledky}
 
+Nejprve jsem pracovala s vybranými příznaky - L1, období měsíce, ID prodejny a den v týdnu.
+Data jsem rozdělila na tři skupiny - data pro trénování, validaci a testování v poměru 8:1:1. 
 
+Naimplementovala jsem metodu \texttt{perform\_classification} umožňuje spustit vybraný model s požadovanými parametry z knihovny \emph{scikit-learn}, provede $k$-fold crossvalidaci, nafituje model na trénovací data a poté ověří přesnost na trénovacích datech. V případě, že jsou předány i parametry pro ladění, na validačních je model doladěn a pak na nejlepších parametrech opět otestován. Celá metoda se nachází v příloze této práce. % !!! doplnit do přílohy kod k funkci...
+
+\begin{lstlisting}[language=Python, frame=none, numbers=left, numberstyle=\numberstyle, backgroundcolor=\color{backcolour}]
+def perform_classification(
+    model, 
+    parameters, 
+    train_x, train_y, valid_x, valid_y, test_x, test_y,
+    tuning_parameters, 
+    k-fold=5)
+\end{lstlisting}
+
+V tabulce \ref*{tab:klasifikace:VIF} jsou uvedeny přesnosti pro čtyři vybrané klasifikační metody. Uvedena je jak přesnost na trénovacích datech, tak na testovacích datech. Ve všech metodách byla použita metoda křížové validace, kdy data byla rozdělena do pěti skupin. Výsledná přesnost je pak průměrem dílčích přesností.
+
+\begin{table}[hbtp!]
+    \captionsetup{justification=centering}
+    \caption{Tabulka dosažených přesností pro čtyři vybrané klasifikační metody na datech se shrinky typu damages s vybranými příznaky podle varianty 1.}
+    \begin{tabular}{lcc}
+    Metoda                          & Přesnost \linebreak (trénovací data) & Přesnost \linebreak (testovací data) \\ \hline
+    Logistická regrese OVR          & 77,04 \%                  & 76,95 \%                  \\
+    Multinomická logistická regrese & 77,33 \%                  & 77,27 \%                  \\
+    Random forest                   & 82,54 \%                  & 82.12 \%                  \\
+    Gradient boosting               & 83.80 \%                  & 83,78 \%             
+    \end{tabular}
+    \label{tab:klasifikace:VIF}
+\end{table}
+
+Nejlepších výsledků dosahuje metoda Gradient 
 
 

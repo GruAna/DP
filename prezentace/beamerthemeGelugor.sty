@@ -1,0 +1,206 @@
+% Gelugor (Universiti Sains Malaysia) presentation theme for beamer
+%
+% LIM Lian Tze <liantze@gmail.com>, 2011
+% http://liantze.penguinattack.org/latextypesetting
+%
+% Changelog:
+%
+% Version 1.0:
+%   First public version.
+
+\ProvidesPackage{beamerthemeGelugor}[2011/09/20]
+
+\definecolor{CVUTmodra}{RGB}{0,101,189}
+\definecolor{CVUTseda}{RGB}{35,44,121}
+\definecolor{Barvicka}{RGB}{188,218,245} %light color that can be changed to get more interesting color theme
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Outer theme
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\useoutertheme[width=0\paperwidth]{sidebar}
+\setlength{\beamer@headheight}{.185\paperheight}
+\pgfdeclareimage[width=.1\paperwidth]{small-logo}{usmlg}
+\pgfdeclareimage[width=.33\paperwidth]{type-logo}{logotype}
+\pgfdeclareimage[width=.33\paperwidth]{white-logo}{USM-white}
+\pgfdeclareimage[width=.44\paperwidth]{velkahriva}{vlasyOrez}
+\pgfdeclareimage[height=1.5\beamer@headheight]{malahriva}{vlasyOrez}
+\setbeamertemplate{sidebar left}{
+    % \vskip7pt
+    % \insertverticalnavigation{\beamer@sidebarwidth}%
+}
+
+\setbeamertemplate{footline}{
+\begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex,right, rightskip=1mm, leftskip=1mm]{footline}
+    \insertshortauthor
+\strut\hfill
+\insertshorttitle\hfill
+\insertshortdate\hspace{4em}
+\insertframenumber/\inserttotalframenumber
+\end{beamercolorbox}
+}
+
+\addtobeamertemplate{frametitle}{}{%
+\begin{pgfpicture}
+\pgf@relevantforpicturesizefalse
+\pgftransformxshift{-\Gm@lmargin}
+\pgftransformyshift{\beamer@headheight+18pt}
+\pgftext[at=\pgfpoint{\paperwidth}{-\beamer@headheight},right,base]{\pgfuseimage{malahriva}}
+
+% pokud je sidebar  0 zakomentovat dole
+\pgfpathrectanglecorners{\pgfpoint{.15\paperwidth}{-.196\paperheight}}{\pgfpoint{\paperwidth}{-.246\paperheight}}
+\pgfsetfillcolor{Barvicka}
+\pgfusepath{fill}
+\pgfpathrectanglecorners{\pgfpoint{0pt}{-.196\paperheight}}{\pgfpoint{.15\paperwidth}{-.246\paperheight}}
+\pgfsetfillcolor{CVUTseda}
+\pgfusepath{fill}
+% A stroke down the middle
+\pgfpathmoveto{\pgfpoint{.15\paperwidth}{-.195\paperheight}}
+\pgfpathlineto{\pgfpoint{.15\paperwidth}{-.24\paperheight}}
+\pgfsetlinewidth{3pt}
+\pgfsetinnerlinewidth{0pt}
+\pgfsetinnerstrokecolor{Barvicka}
+\pgfsetrectcap
+\pgfsetcolor{white}
+\pgfusepath{stroke}
+
+% pokud je sidebar vetsi nez 0 odkomentovat dole
+
+% \pgfpathmoveto{\pgfpoint{.15\paperwidth}{0pt}}
+% \pgfpathlineto{\pgfpoint{.15\paperwidth}{-\beamer@headheight}}
+% \pgfsetlinewidth{3pt}
+% \pgfsetinnerlinewidth{0pt}
+% \pgfsetinnerstrokecolor{Barvicka}
+% \pgfsetcolor{white}
+% \pgfusepath{stroke}
+% \pgfpathmoveto{\pgfpoint{.15\paperwidth}{-.23\paperheight}}
+% \pgfpathlineto{\pgfpoint{.15\paperwidth}{-.94\paperheight}}
+% \pgfsetlinewidth{1pt}
+% \pgfsetinnerlinewidth{0pt}
+% \pgfsetcolor{Barvicka}
+% \pgfusepath{stroke}
+% \pgfpathrectanglecorners{\pgfpoint{0pt}{-.0\paperheight}}{\pgfpoint{.146\paperwidth}{-.185\paperheight}}
+% \pgfsetfillcolor{Barvicka}
+% \pgfusepath{fill}
+% \pgftext[at=\pgfpoint{.075\paperwidth}{-.94\paperheight},center,base]{\pgfuseimage{small-logo}}
+\end{pgfpicture}%
+\vskip-25pt%
+}
+
+\addtobeamertemplate{title page}{%
+\usebeamertemplate{title background}%
+}
+{
+\pgftransformyshift{\beamer@headheight+60pt}}
+
+\newcommand\DoPurpleBackground{%
+\pgfpathmoveto{\pgfpointorigin}
+\pgfpathrectanglecorners{\pgfpoint{0pt}{0pt}}{\pgfpoint{\paperwidth}{-\paperheight}}
+\pgfsetfillcolor{CVUTmodra}
+\pgfusepath{fill}
+\pgftext[at=\pgfpoint{\paperwidth}{-\paperheight},right,bottom]{\pgfuseimage{velkahriva}}
+}
+
+\setbeamertemplate{title background}{%
+\begin{pgfpicture}
+\pgf@relevantforpicturesizefalse
+\pgftransformxshift{-\Gm@lmargin}
+\pgftransformyshift{39pt}
+\DoPurpleBackground
+
+
+% White bar across top
+\pgfpathmoveto{\pgfpointorigin}
+\pgfpathrectanglecorners{\pgfpoint{-0\paperwidth}{44\paperheight}}{\pgfpoint{\paperwidth}{-.25\paperheight}}
+\pgfsetfillcolor{white}
+\pgfusepath{fill}
+
+% Logo
+\pgftext[at=\pgfpoint{-0.01\paperwidth}{-.19\paperheight},left,base]{\pgfuseimage{type-logo}}
+
+% Purple short bar on left
+\pgfpathrectanglecorners{\pgfpoint{0pt}{-.19\paperheight}}{\pgfpoint{.15\paperwidth}{-.24\paperheight}}
+\pgfsetfillcolor{CVUTseda}
+\pgfusepath{fill}
+
+% Followed by orange bar on right
+\pgfpathrectanglecorners{\pgfpoint{.15\paperwidth}{-.19\paperheight}}{\pgfpoint{\paperwidth}{-.24\paperheight}}
+\pgfsetfillcolor{Barvicka}
+\pgfusepath{fill}
+
+% A stroke down the middle
+\pgfpathmoveto{\pgfpoint{.15\paperwidth}{-.19\paperheight}}
+\pgfpathlineto{\pgfpoint{.15\paperwidth}{-.24\paperheight}}
+\pgfsetlinewidth{3pt}
+\pgfsetinnerlinewidth{0pt}
+\pgfsetinnerstrokecolor{Barvicka}
+\pgfsetrectcap
+\pgfsetcolor{white}
+\pgfusepath{stroke}
+
+% \pgfpathmoveto{\pgfpoint{.15\paperwidth}{-.28\paperheight}}
+% \pgfpathlineto{\pgfpoint{.15\paperwidth}{-.45\paperheight}}
+% \pgfsetlinewidth{1pt}
+% \pgfsetinnerlinewidth{0pt}
+% \pgfsetcolor{Barvicka}
+% \pgfusepath{stroke}
+
+% \pgfpathmoveto{\pgfpoint{.15\paperwidth}{-.5\paperheight}}
+% \pgfpathlineto{\pgfpoint{.15\paperwidth}{-.7\paperheight}}
+% \pgfsetlinewidth{1pt}
+% \pgfsetcolor{white}
+% \pgfusepath{stroke}
+
+% \pgfpathmoveto{\pgfpoint{.15\paperwidth}{-.9\paperheight}}
+% \pgfpathlineto{\pgfpoint{.15\paperwidth}{-.93\paperheight}}
+% \pgfsetlinewidth{1pt}
+% \pgfsetcolor{white}
+% \pgfusepath{stroke}
+
+% \pgftext[at=\pgfpoint{.16\paperwidth}{-.100\paperheight},left,base]{\tiny www.usm.my}
+\end{pgfpicture}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Inner Theme
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\useinnertheme{rectangles}
+\setbeamertemplate{navigation symbols}{}
+
+\setlength{\leftmargini}{.5em}
+\setlength{\leftmarginii}{1.0em}
+\setlength{\leftmarginiii}{1.5em}
+\setlength{\leftmarginiv}{2.0em}
+\setlength{\leftmarginv}{2.5em}
+\setlength{\leftmarginvi}{3.0em}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Colours
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usecolortheme[named=Barvicka]{structure}
+\usecolortheme{rose}
+\setbeamercolor{title page}{fg=white}
+\setbeamercolor{logo}{bg=Barvicka}
+\setbeamercolor{frametitle}{fg=Barvicka,bg=CVUTmodra}
+\setbeamercolor{footline}{fg=white,bg=CVUTseda}
+\setbeamercolor{section in sidebar}{fg=Barvicka}
+\setbeamerfont{section in sidebar}{series=\bfseries}
+\setbeamercolor{block title}{bg=CVUTmodra!28!white,fg=CVUTmodra}
+\setbeamercolor{block body}{bg=Barvicka!15!white}
+\setbeamercolor{section in toc}{fg=CVUTseda}
+\setbeamercolor{caption name}{fg=CVUTseda}
+\setbeamertemplate{itemize item}{$\blacksquare$}
+\setbeamertemplate{itemize subitem}{\color{CVUTseda}$\blacktriangleright$}
+
+
+\newcommand\ThankYouFrame{
+\begin{frame}[plain,t]
+\begin{pgfpicture}
+\pgf@relevantforpicturesizefalse
+\pgftransformxshift{-\Gm@lmargin}
+\pgftransformyshift{5.5pt}
+\DoPurpleBackground
+\pgftext[at=\pgfpoint{.5\paperwidth}{-.5\paperheight},center,center]{\pgfuseimage{white-logo}}
+\pgftext[at=\pgfpoint{.5\paperwidth}{-.3\paperheight},center,center]{\huge\structure{Děkuji za pozornost}}
+\end{pgfpicture}
+\end{frame}
+}
