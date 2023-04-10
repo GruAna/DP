@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1681152629 "c:/Users/uzivatel/Documents/skola/DP/DP_Gruberova.tex" "DP_Gruberova.pdf" "DP_Gruberova" 1681152636
+["pdflatex"] 1681152980 "c:/Users/uzivatel/Documents/skola/DP/DP_Gruberova.tex" "DP_Gruberova.pdf" "DP_Gruberova" 1681152988
   "C:/Users/uzivatel/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1679141379 82686 2381c3433487640bf26aa76a10db7eb2 ""
   "C:/Users/uzivatel/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1667474810 10789789 02d9a8b514ec08d575e4cf0e33c1259e ""
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc" 1256933040 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
@@ -245,12 +245,12 @@
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1650051284 2245 c8a4088d07cffc2e5207730c738edd76 ""
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1650051284 20785 71a3d72ab517959a6979c27e6176bec1 ""
-  "DP_Gruberova.aux" 1681152636 12764 b841796e94687565c39f114d996c7dae "pdflatex"
-  "DP_Gruberova.out" 1681152636 3183 50bd490499587528e99dd358b113f3c3 "pdflatex"
+  "DP_Gruberova.aux" 1681152987 12764 b841796e94687565c39f114d996c7dae "pdflatex"
+  "DP_Gruberova.out" 1681152987 3183 50bd490499587528e99dd358b113f3c3 "pdflatex"
   "DP_Gruberova.tex" 1681147718 10534 726d8b3cd86679ee6c3f075a68ae7bfc ""
-  "DP_Gruberova.toc" 1681152636 2268 580d20e6e4815a573f3ce7b79da2ff33 "pdflatex"
+  "DP_Gruberova.toc" 1681152987 2268 580d20e6e4815a573f3ce7b79da2ff33 "pdflatex"
   "c:/Users/uzivatel/Documents/skola/DP/DP_Gruberova.tex" 1681147718 10534 726d8b3cd86679ee6c3f075a68ae7bfc ""
-  "kapitoly/analyzy_mesic.tex" 1681152628 24367 0a2f40158d38a7f10c10de99ef706459 ""
+  "kapitoly/analyzy_mesic.tex" 1681152978 24769 291f054578a77dc81a796e80b9c22c4d ""
   "kapitoly/data.tex" 1681137318 8097 4282516c03dc2f60da032b872118f26e ""
   "kapitoly/metody.tex" 1679417757 11026 d8cd89fb93caaa88d74ff717d80b4beb ""
   "kapitoly/shrinky.tex" 1679130250 5423 d7c4092ca481b532bc79c3e782a78a3a ""

@@ -280,7 +280,7 @@ V tabulce \ref*{tab:klasifikace:VIF} jsou uvedeny přesnosti pro čtyři vybran�
 \begin{table}[hbtp!]
     \captionsetup{justification=centering}
     \caption{Tabulka dosažených přesností pro čtyři vybrané klasifikační metody na datech se shrinky typu damages s vybranými příznaky podle varianty 1.}
-    \begin{tabular}{lcc}
+    \begin{tabular}{lp{4cm}p{4cm}}
     Metoda                          & Přesnost \linebreak (trénovací data) & Přesnost \linebreak (testovací data) \\ \hline
     Logistická regrese OVR          & 77,04 \%                  & 76,95 \%                  \\
     Multinomická logistická regrese & 77,33 \%                  & 77,27 \%                  \\
@@ -290,6 +290,10 @@ V tabulce \ref*{tab:klasifikace:VIF} jsou uvedeny přesnosti pro čtyři vybran�
     \label{tab:klasifikace:VIF}
 \end{table}
 
-Nejlepších výsledků dosahuje metoda Gradient 
+
+Nejlepších výsledků dosahuje klasifikátor gradient boosting. Přesnost na testovacích datech je téměř 84 \%. V obou metodách, které využívají rozhodovací stromy, jsem implementovala ladění parametrů. Na následujících obrázcích \ref{} % doplnit obrazky !!!
+je znázorněna závislost mezi jednotlivými hodnotami parametrů a dosažené přesnosti.
+
+V případě random forest klasifikátoru se jedná o parametry 
 
 
