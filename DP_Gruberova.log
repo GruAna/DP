@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  22 MAR 2023 12:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  10 APR 2023 14:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1160,23 +1160,16 @@ Package pdftex.def Info: obrazky/zntb/theils_u.png  used on input line 150.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [34 <./obrazky/zntb/pearson.png>] [35 <./obrazky/zntb/MI_TE.png> <./obrazky/zntb/cramers_u.png>]
-Overfull \hbox (12.79494pt too wide) in paragraph at lines 157--159
-\OT1/lmr/m/n/12 fak-toru (VIF). Jako hrani^^Tcn^^S^^P fak-tor jsem zvo-lila hod-notu 40 VIF. Vysv^^Tetluj^^S^^Pc^^S^^P prom^^Tenn^^Se
- []
-
 <obrazky/zntb/VIF.png, id=472, 419.166pt x 407.6028pt>
 File: obrazky/zntb/VIF.png Graphic file (type png)
 <use obrazky/zntb/VIF.png>
 Package pdftex.def Info: obrazky/zntb/VIF.png  used on input line 164.
-(pdftex.def)             Requested size: 170.71718pt x 166.01115pt.
+(pdftex.def)             Requested size: 213.39566pt x 207.50772pt.
 <obrazky/zntb/MI_feature_selection.png, id=473, 416.2752pt x 408.3255pt>
 File: obrazky/zntb/MI_feature_selection.png Graphic file (type png)
 <use obrazky/zntb/MI_feature_selection.png>
 Package pdftex.def Info: obrazky/zntb/MI_feature_selection.png  used on input line 170.
-(pdftex.def)             Requested size: 170.71718pt x 167.45815pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+(pdftex.def)             Requested size: 213.39566pt x 209.32112pt.
 
 Underfull \vbox (badness 6364) has occurred while \output is active []
 
@@ -1184,25 +1177,25 @@ Underfull \vbox (badness 6364) has occurred while \output is active []
 <obrazky/zntb/pca-roztyl_komponetn.png, id=480, 406.8801pt x 328.1058pt>
 File: obrazky/zntb/pca-roztyl_komponetn.png Graphic file (type png)
 <use obrazky/zntb/pca-roztyl_komponetn.png>
-Package pdftex.def Info: obrazky/zntb/pca-roztyl_komponetn.png  used on input line 190.
-(pdftex.def)             Requested size: 170.71718pt x 137.66331pt.
+Package pdftex.def Info: obrazky/zntb/pca-roztyl_komponetn.png  used on input line 191.
+(pdftex.def)             Requested size: 213.39566pt x 172.07788pt.
 <obrazky/zntb/pca-kum_roztyl_komponetn.png, id=481, 442.2924pt x 328.1058pt>
 File: obrazky/zntb/pca-kum_roztyl_komponetn.png Graphic file (type png)
 <use obrazky/zntb/pca-kum_roztyl_komponetn.png>
-Package pdftex.def Info: obrazky/zntb/pca-kum_roztyl_komponetn.png  used on input line 198.
-(pdftex.def)             Requested size: 170.71718pt x 126.64403pt.
+Package pdftex.def Info: obrazky/zntb/pca-kum_roztyl_komponetn.png  used on input line 199.
+(pdftex.def)             Requested size: 213.39566pt x 158.30504pt.
 <obrazky/zntb/pca-prispevky.png, id=482, 413.3844pt x 407.6028pt>
 File: obrazky/zntb/pca-prispevky.png Graphic file (type png)
 <use obrazky/zntb/pca-prispevky.png>
-Package pdftex.def Info: obrazky/zntb/pca-prispevky.png  used on input line 206.
+Package pdftex.def Info: obrazky/zntb/pca-prispevky.png  used on input line 207.
 (pdftex.def)             Requested size: 341.43436pt x 336.66205pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[37 <./obrazky/zntb/VIF.png> <./obrazky/zntb/MI_feature_selection.png> <./obrazky/zntb/pca-roztyl_komponetn.png> <./obrazky/zntb/pca-kum_roztyl_komponetn.png>])) [38 <./obrazky/zntb/pca-prispevky.png>] (kapitoly/zaver.tex) [39
+[37 <./obrazky/zntb/VIF.png> <./obrazky/zntb/MI_feature_selection.png> <./obrazky/zntb/pca-roztyl_komponetn.png> <./obrazky/zntb/pca-kum_roztyl_komponetn.png>] [38 <./obrazky/zntb/pca-prispevky.png>])) [39] [40
 
-] (tex/bibliografie1.tex [40
+] (kapitoly/zaver.tex) [41] (tex/bibliografie1.tex [42
 
 
 ]
@@ -1240,7 +1233,7 @@ Underfull \hbox (badness 3679) in paragraph at lines 37--38
 \OT1/lmr/m/n/12 [cit. 2023-03-05]. Do-stupn^^Se z: []$\OT1/lmtt/m/n/12 https : / / personal . utdallas . edu / []Herve /
  []
 
-[41]
+[43]
 Underfull \hbox (badness 5288) in paragraph at lines 68--69
 []\OT1/lmr/m/n/12 BAIJAYANTA, Roy., \OT1/lmr/m/it/12 All about Ca-te-go-ri-cal Va-ri-a-ble En-co-ding  \OT1/lmr/m/n/12 [on-
  []
@@ -1270,29 +1263,29 @@ Underfull \hbox (badness 4832) in paragraph at lines 77--78
 \OT1/lmr/m/n/12 2018 [cit. 2023-03-14]. Do-stupn^^Se z: []$\OT1/lmtt/m/n/12 https : / / towardsdatascience . com /
  []
 
-) [42]
+) [44]
 P\v {r}\'{\i }loha A.
-[43
+[45
 
 ] (DP_Gruberova.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `DP_Gruberova.out' has not changed.
-(rerunfilecheck)             Checksum: 93CAF0E68EF997F4C4D07231AC78B010;3144.
+(rerunfilecheck)             Checksum: CD4E5E3EC69B283B7B1E12ECAA92972F;3144.
  ) 
 Here is how much of TeX's memory you used:
- 28591 strings out of 475380
- 532925 string characters out of 2775356
+ 28597 strings out of 475380
+ 532975 string characters out of 2775356
  919303 words of memory out of 3000000
  49225 multiletter control sequences out of 15000+600000
  550596 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,17n,94p,1298b,673s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 99i,17n,94p,1302b,673s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmib10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on DP_Gruberova.pdf (43 pages, 1174985 bytes).
+Output written on DP_Gruberova.pdf (45 pages, 1178304 bytes).
 PDF statistics:
- 665 PDF objects out of 1000 (max. 8388607)
- 157 named destinations out of 1000 (max. 500000)
+ 678 PDF objects out of 1000 (max. 8388607)
+ 163 named destinations out of 1000 (max. 500000)
  307 words of extra memory for PDF output out of 10000 (max. 10000000)
 

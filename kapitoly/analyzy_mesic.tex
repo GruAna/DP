@@ -60,7 +60,7 @@ Nejprve jsem graficky analyzovala zastoupení shrinků v závislosti na vybraný
 Jako cílové sloupce (\emph{target} sloupce) jsem určila sloupec s typem shrinku, množstvím produktu a nákladovou cenou. Zbylých jedenáct sloupců slouží jako vysvětlující pro-\linebreak měnné, dále budou označovány jako příznaky pro cílový sloupec. Všechny vybrané příznaky jsou kategorické proměnné, které lze dále rozdělit na nominální a ordinální. Nominální proměnné jsou ID prodejny, ID produktu, kategorie L1, L2, L4, L5 a L6. Ordinální proměnné jsou expirace, den v týdnu, číslo dne a období měsíce. Ordinální příznaky jsem přeznačila tak, aby každá obsahovala pouze hodnoty od nuly do $n_p$, kde $n_p$ je počet kategorií v $p$-tém příznaku. 
 
 Pro další výpočty bylo vhodné přesunout se z nominálních kategorických hodnot na číselné hodnoty. Pro tyto účely jsem zvolila metodu \emph{target encoding}.  %!!! odkaz do teorie, princip meotdy je vysvětlený v kapitole...
-Neboť toto kódování na numerické hodnoty zachovává velikost datového souboru, to je klíčové vzhledem k tomu, že nominální proměnné ve zkoumaných datech obsahují velký počet kategorií. Např. počet unikátních produktů v datech je $19\ 026$, což odpovídá stejnému počtu kategorií pro tuto proměnnou. Pokud bych použila one-hot kódování\footnote{One-hot kódování převádí kategorické hodnoty na numerické takovým způsobem že pro každou kategorii vytvoří samostatný sloupec s binárními hodnotami, kde 1 odpovídá dané kategorii a 0 zbylým kategoriím.}  mohlo by dojít k zásadnímu zvýšení počtu sloupců v datech, v tomto případě až o desítky tisíc. \emph{Target kódování} je podobné převodu, který jsem použila pro ordinální proměnné, ale na rozdíl od toho hodnota, která je kategorii přiřazena, souvisí se zastoupením této skupiny v cílovém sloupci a nesouvisí s uspořádáním hodnot uvnitř příznaku. Nevýhodou je, že takto upravená data mohou být náchylná na overfitting, proto je potřeba při predikování použít křížovou validaci.\cite{encoding}
+Neboť toto kódování na numerické hodnoty zachovává velikost datového souboru, to je klíčové vzhledem k tomu, že nominální proměnné ve zkoumaných datech obsahují velký počet kategorií. Např. počet unikátních produktů v datech je $19\ 026$, což odpovídá stejnému počtu kategorií pro tuto proměnnou. Pokud bych použila one-hot kódování\footnote{One-hot kódování převádí kategorické hodnoty na numerické takovým způsobem že pro každou kategorii vytvoří samostatný sloupec s binárními hodnotami, kde 1 odpovídá dané kategorii a 0 zbylým kategoriím.}  mohlo by dojít k zásadnímu zvýšení počtu sloupců v datech, v tomto případě až o desítky tisíc. \emph{Target kódování} je podobné převodu, který jsem použila pro ordinální proměnné. Avšak na rozdíl od něj, hodnota, která je kategorii přiřazena, souvisí se zastoupením této skupiny v cílovém sloupci a nesouvisí s uspořádáním hodnot uvnitř příznaku. Nevýhodou je, že takto upravená data mohou být náchylná na overfitting, proto je potřeba při predikování použít křížovou validaci.\cite{encoding}
 
 % warehouse_id 339
 % product_id 19026
@@ -122,8 +122,8 @@ Výslednou matici popisující korelační vztahy mezi příznaky jsem vizualizo
     \label{obr:nb:pearson}
 \end{figure}
 
-Dále jsem použila výpočet koeficientů vzájemné informace \footnote{\emph{mutual information}}, který říká, jaká je podobnost mezi dvěma proměnnými \cite{bib:scikit}. % !!! odkaz na teorii
-Matice vypočítaných koeficientů je na obr.\ref*{obr:nb:MI}, jelikož se jedná o symetrickou vlastnost, jsou vynechány hodnoty pod vedlejší diagonálou. Z výsledků je opět vidět zřejmé, že ID produktu sdílí úrovněmi kategorizace tím více, čím je kategorizace jemnější.
+Dále jsem použila výpočet koeficientů vzájemné informace\footnote{\emph{mutual information}}, který říká, jaká je podobnost mezi dvěma proměnnými \cite{bib:scikit}. % !!! odkaz na teorii
+Matice vypočítaných koeficientů je na obr. \ref*{obr:nb:MI}, jelikož se jedná o symetrickou vlastnost, jsou vynechány hodnoty pod vedlejší diagonálou. Z výsledků je opět vidět, že ID produktu sdílí informaci s úrovněmi kategorizace tím více, čím je kategorizace jemnější.
 
 \begin{figure}[hbtp!]
     \centering
@@ -154,23 +154,24 @@ Další statistikou spočtenou na datech je Theilovo U (neboli koeficient nejist
 
 Z vypočítaných statistik na datasetu je patrné, že některé příznaky jsou významně závislé, a proto je třeba je z dat odstranit. Kandidáti na vynechání jsou kategorie L2, L4, L6 a číslo dne. V dalších testech budou také vybráni kandidáti a v závěru vyhodnotím, které příznaky byly podle aplikovaných metod vybrány jako vhodné k vynechání a které nikoli.
 
-V dalším testu jsem otestovala multikolinearitu dat pomocí rozptylového inflačního faktoru (VIF). Jako hraniční faktor jsem zvolila hodnotu 40 VIF. Vysvětlující proměnné jsem odebírala z datasetu postupně a odebírání jsem ukončila až, když hodnota VIF nebyla nižší než hraniční.
+V dalším testu jsem otestovala multikolinearitu dat pomocí rozptylového inflačního faktoru (VIF). Jako hraniční faktor jsem zvolila hodnotu 40 VIF. Vysvětlující pro-\\měnné jsem odebírala z datasetu postupně a odebírání jsem ukončila až, když hodnota VIF nebyla nižší než hraniční.
 Tímto došlo k redukci příznaků z jedenácti na pět, a to na kategorii L1, číslo dne, období měsíce, ID prodejny a den v týdnu. Hodnoty koeficientu VIF na datech jsou na obr. \ref*{obr:nb:vif}. 
 
-\begin{figure}[h!]
+\begin{figure}[hbtp!]
     \centering
-    \begin{minipage}{.5\textwidth}
+    \begin{minipage}[t]{.5\textwidth}
       \centering
-      \includegraphics[width=.8\textwidth]{obrazky/zntb/VIF.png}
+      \includegraphics[width=\textwidth]{obrazky/zntb/VIF.png}
       \caption{Rozptylový inflační faktor.}
       \label{obr:nb:vif}
     \end{minipage}%
-    \begin{minipage}{.5\textwidth}
+    \begin{minipage}[t]{.5\textwidth}
       \centering
-      \includegraphics[width=.8\textwidth]{obrazky/zntb/MI_feature_selection.png}
+      \includegraphics[width=\textwidth]{obrazky/zntb/MI_feature_selection.png}
       \caption{Koeficienty vzájemné informace mezi příznaky a cílovým sloupcem typ shrinku.}
       \label{obr:nb:MI_FS}
     \end{minipage}
+    \vspace*{-2em}
     \end{figure}
 
 Jako další metodu po výběr příznaků jsem vypočítala hodnotu koeficientů vzájemné informace mezi všemi příznaky s cílovým sloupcem - ID shrinku. Na obrázku \ref*{obr:nb:MI_FS} lze vidět, jak jednotlivé proměnné souvisí s cílovým sloupcem. Pro výpočet tohoto koeficientu jsem použila jak data bez outlierů, tak tenotkrát data před jejich odstraněním. Zde můžeme vidět, že významnost příznaku ID prodejny klesla o téměř polovinu. Nejvíce informace je sdíleno s ID produktu, kategorií L6, dále L5, L4, L2 a expirace. Příznaky související s časovými údaji podle tohoto kritéria nenesou mnoho společné informace.
@@ -181,21 +182,21 @@ Předtím než jsem metodu aplikovala jsem otestovala předpoklad homoskedastici
 
 Na obrázcích \ref*{obr:nb:pca_roztyl_komponetn} a \ref*{obr:nb:pca_kum_roztyl_komponetn} je znázorněno prvních deset komponent a rozptyl který v datech vysvětlují. Na základě hodnot jsem vybrala prvních pět komponent. Již pátá komponenta (označená č. 4) spolu s předchozími vysvětluje více jak 95 \% variability dat. V dalším kroku jsem vypočítala příspěvky příznaků k těmto pěti komponentám a vybrala jsem ty příznaky, které přispívají nejvíce k prvním pěti komponentám. Jejich příspěvek je znázorněný na obr. \ref*{obr:nb:pca_prispevek}. Na základě výsledků analýzy hlavních komponent byly vybrány jako vhodné příznaky pro další práci s daty příznaky - příznaky ID prodejny, den v týdnu, expirace, den a období v měsíci.
 
-\begin{figure}[h!]
+\begin{figure}[hbtp!]
     \centering
-    \begin{minipage}{.5\textwidth}
+    \begin{minipage}[t]{.5\textwidth}
       \centering
       \captionsetup{justification=centering}
 
-      \includegraphics[width=.8\textwidth]{obrazky/zntb/pca-roztyl_komponetn.png}
+      \includegraphics[width=\textwidth]{obrazky/zntb/pca-roztyl_komponetn.png}
       \caption{PCA - vysvětlený \\ rozptyl hlavních komponent.}
       \label{obr:nb:pca_roztyl_komponetn}
     \end{minipage}%
-    \begin{minipage}{.5\textwidth}
+    \begin{minipage}[t]{.5\textwidth}
       \centering
       \captionsetup{justification=centering}
 
-      \includegraphics[width=.8\textwidth]{obrazky/zntb/pca-kum_roztyl_komponetn.png}
+      \includegraphics[width=\textwidth]{obrazky/zntb/pca-kum_roztyl_komponetn.png}
       \caption{PCA - kumulativní vysvětlený rozptyl hlavních komponent.}
       \label{obr:nb:pca_kum_roztyl_komponetn}
     \end{minipage}
@@ -221,3 +222,16 @@ Jak již bylo zmíněno pro redukci dimenzionality u kategorických dat lze pou�
 % weekday             0.035521
 % day                 0.362474
 % quarter_of_month    0.048981
+
+\subsubsection*{Závěr}
+
+Na základě předchozích metod jsem se rozhodla zredukovat původní příznaky datasetu na jejich výběr. Vzhledem k tomu, že různé metody vybraly různé příznaky, jsou stanoveny
+
+Korelované jsou hodnoty ID produktu, L6, L5, L4 a expirace. Dále také z označení dne lze určit období měsíce. Ze zmíněných korelovaných příznaků není proto vhodné začlenit více než jeden příznak. Pokud je tato myšlenka aplikována na výsledky metod PCA a MCA a výsledků zjištěných pomocí hraniční hodnoty VIF.
+
+\begin{enumerate}
+    \item ID prodejny, den v týdnu, expirace, období v měsíci, L5 - metodou PCA bylo zjištěno, které příznaky nejvíce přispívají ke komponentám, které popisují téměř 96 \% rozptylu v původních datech - jedná se o příznaky ID prodejny, den v týdnu, expirace, období v měsíci a číslo dne. Naopak metoda MCA vybrala kategorie L4 až L6 jako důležité. Sloučením a přihlédnutím ke korelačním koeficientům byly vybráno pět příznaků.
+    \item Kategorii L1, období měsíce, ID prodejny a den v týdnu - tyto sloupce byly získány podle hodnoty rozptylového inflačního faktoru. Touto metodou byl navržen i sloupec s číslem dne, ten však z důvodů korelace nebyl zahrnutý.
+\end{enumerate}
+
+\subsubsection{Klasifikace dat}
