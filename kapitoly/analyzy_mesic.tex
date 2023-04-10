@@ -1,3 +1,9 @@
+\section{Období jednoho měsíce - damages shrinky}
+
+Následující část text bude věnována rozboru dat pro shrinky typu damages v období jednoho kalendářního měsíce.
+
+\subsection{Předzpracování dat}
+
 
 Vzhledem k vysokému počtu dat pro jeden kalendářní rok, 
 v roce 2022 bylo v databázi evidováno přes 32 milionů záznamů o týkající se shrinků
@@ -39,10 +45,7 @@ Zkoumaná říjnová data obsahují $2\ 712\ 669$ řádků a patnáct sloupců. 
 Původní sloupec datum jsem rozdělila na tři jiné proměnné, a to den v týdnu, číslo dne a období v měsíci a sloupec datum jsem vynechala. Z důvodu vysokého počtu záznamů a odlišné povahy dvou typů shrinků jsem data dále rozdělila na shrinky typu damages a shrinky typu inventory. 
 
 
-\subsection*{Damages shrinky}
-Následující část text bude věnována rozboru dat pro shrinky typu damages.
-
-
+% \subsection*{Damages shrinky}
 
 \subsubsection{Výběr dat}
 % výběr dle zastoupení shrinků a kategorií produktů a dle outlierů.
@@ -60,7 +63,7 @@ Nejprve jsem graficky analyzovala zastoupení shrinků v závislosti na vybraný
 Jako cílové sloupce (\emph{target} sloupce) jsem určila sloupec s typem shrinku, množstvím produktu a nákladovou cenou. Zbylých jedenáct sloupců slouží jako vysvětlující pro-\linebreak měnné, dále budou označovány jako příznaky pro cílový sloupec. Všechny vybrané příznaky jsou kategorické proměnné, které lze dále rozdělit na nominální a ordinální. Nominální proměnné jsou ID prodejny, ID produktu, kategorie L1, L2, L4, L5 a L6. Ordinální proměnné jsou expirace, den v týdnu, číslo dne a období měsíce. Ordinální příznaky jsem přeznačila tak, aby každá obsahovala pouze hodnoty od nuly do $n_p$, kde $n_p$ je počet kategorií v $p$-tém příznaku. 
 
 Pro další výpočty bylo vhodné přesunout se z nominálních kategorických hodnot na číselné hodnoty. Pro tyto účely jsem zvolila metodu \emph{target encoding}.  %!!! odkaz do teorie, princip meotdy je vysvětlený v kapitole...
-Neboť toto kódování na numerické hodnoty zachovává velikost datového souboru, to je klíčové vzhledem k tomu, že nominální proměnné ve zkoumaných datech obsahují velký počet kategorií. Např. počet unikátních produktů v datech je $19\ 026$, což odpovídá stejnému počtu kategorií pro tuto proměnnou. Pokud bych použila one-hot kódování\footnote{One-hot kódování převádí kategorické hodnoty na numerické takovým způsobem že pro každou kategorii vytvoří samostatný sloupec s binárními hodnotami, kde 1 odpovídá dané kategorii a 0 zbylým kategoriím.}  mohlo by dojít k zásadnímu zvýšení počtu sloupců v datech, v tomto případě až o desítky tisíc. \emph{Target kódování} je podobné převodu, který jsem použila pro ordinální proměnné. Avšak na rozdíl od něj, hodnota, která je kategorii přiřazena, souvisí se zastoupením této skupiny v cílovém sloupci a nesouvisí s uspořádáním hodnot uvnitř příznaku. Nevýhodou je, že takto upravená data mohou být náchylná na overfitting, proto je potřeba při predikování použít křížovou validaci.\cite{encoding}
+Neboť toto kódování na numerické hodnoty zachovává velikost datového souboru, to je klíčové vzhledem k tomu, že nominální proměnné ve zkoumaných datech obsahují velký počet kategorií. Např. počet unikátních produktů v datech je $19\ 026$, což odpovídá stejnému počtu kategorií pro tuto proměnnou. Pokud bych použila one-hot kódování\footnote{One-hot kódování převádí kategorické hodnoty na numerické takovým způsobem že pro každou kategorii vytvoří samostatný sloupec s binárními hodnotami, kde 1 odpovídá dané kategorii a 0 zbylým kategoriím.}  mohlo by dojít k zásadnímu zvýšení počtu sloupců v datech, v tomto případě až o desítky tisíc. \emph{Target kódování} je podobné převodu, který jsem použila pro ordinální proměnné. Avšak na rozdíl od něj, hodnota, která je kategorii přiřazena, souvisí se zastoupením této skupiny v cílovém sloupci a nesouvisí s uspořádáním hodnot uvnitř příznaku. Nevýhodou je, že takto upravená data mohou být náchylná na overfitting, proto je potřeba při predikování použít křížovou validaci.\cite{bib:encoding}
 
 % warehouse_id 339
 % product_id 19026
@@ -78,7 +81,7 @@ Neboť toto kódování na numerické hodnoty zachovává velikost datového sou
 % day 31
 % quarter_of_month 5
 
-Dále jsem se zabývala identifikací odlehlých hodnot. Nejprve jsem vizualizovala hodnoty pomocí grafu, obrázky \ref*{obr:rok:g:outlierN} a \ref*{obr:rok:g:outlierO}. Z grafu je patrné, že problémová je proměnná $warehouse\_id$, která označuje ID prodejny. Prodejny, které tvoří outliery mohou být malé prodejny, které kvůli menšímu počtu celkových produktů neevidují větší počet shrinků. % !!! jakeho grafu 
+Dále jsem se zabývala identifikací odlehlých hodnot. Nejprve jsem vizualizovala hodnoty pomocí grafu, obrázky \ref*{obr:rok:g:outlierN} a \ref*{obr:rok:g:outlierO}. Z grafu je patrné, že problémová je proměnná \texttt{warehouse\_id}, která označuje ID prodejny. Prodejny, které tvoří outliery mohou být malé prodejny, které kvůli menšímu počtu celkových produktů neevidují větší počet shrinků. % !!! jakeho grafu 
 
 \begin{figure}[hbtp!]
     \centering
@@ -223,15 +226,40 @@ Jak již bylo zmíněno pro redukci dimenzionality u kategorických dat lze pou�
 % day                 0.362474
 % quarter_of_month    0.048981
 
-\subsubsection*{Závěr}
+\subsubsection*{Shrnutí pro výběr dat}
 
-Na základě předchozích metod jsem se rozhodla zredukovat původní příznaky datasetu na jejich výběr. Vzhledem k tomu, že různé metody vybraly různé příznaky, jsou stanoveny
+Na základě předchozích metod jsem se rozhodla zredukovat původní příznaky datasetu na jejich výběr. Vzhledem k tomu, že různé metody vybraly různé příznaky, jsou stanoveny dvě podmnožiny původních příznaků. 
 
 Korelované jsou hodnoty ID produktu, L6, L5, L4 a expirace. Dále také z označení dne lze určit období měsíce. Ze zmíněných korelovaných příznaků není proto vhodné začlenit více než jeden příznak. Pokud je tato myšlenka aplikována na výsledky metod PCA a MCA a výsledků zjištěných pomocí hraniční hodnoty VIF.
 
 \begin{enumerate}
-    \item ID prodejny, den v týdnu, expirace, období v měsíci, L5 - metodou PCA bylo zjištěno, které příznaky nejvíce přispívají ke komponentám, které popisují téměř 96 \% rozptylu v původních datech - jedná se o příznaky ID prodejny, den v týdnu, expirace, období v měsíci a číslo dne. Naopak metoda MCA vybrala kategorie L4 až L6 jako důležité. Sloučením a přihlédnutím ke korelačním koeficientům byly vybráno pět příznaků.
-    \item Kategorii L1, období měsíce, ID prodejny a den v týdnu - tyto sloupce byly získány podle hodnoty rozptylového inflačního faktoru. Touto metodou byl navržen i sloupec s číslem dne, ten však z důvodů korelace nebyl zahrnutý.
+    \item \textbf{L1, období měsíce, ID prodejny a den v týdnu} - tyto sloupce byly získány podle hodnoty rozptylového inflačního faktoru. Touto metodou byl navržen i sloupec s číslem dne, ten však z důvodů korelace nebyl zahrnutý.
+    \item \textbf{ID prodejny, den v týdnu, expirace, období v měsíci, L5} - metodou PCA bylo zjištěno, které příznaky nejvíce přispívají ke komponentám, které popisují téměř 96 \% rozptylu v původních datech - jedná se o příznaky ID prodejny, den v týdnu, expirace, období v měsíci a číslo dne. Naopak metoda MCA vybrala kategorie L4 až L6 jako důležité. Sloučením a přihlédnutím ke korelačním koeficientům byly vybráno pět příznaků.
 \end{enumerate}
 
-\subsubsection{Klasifikace dat}
+
+
+\subsection{Klasifikace dat}
+
+Tato část se věnuje předpovědi typu shrinku z dostupných dat. V předchozích sekcích bylo popsáno předzpracování dat a výběr vhodných příznaků pro úlohu klasifikace. Byly navrženy dvě skupiny příznaků, na kterých budou provedeny výpočty. K obě variantám se bude přistupovat stejným postupem a následně budou porovnány dosažené výsledky. 
+
+Cílový sloupec, který je předpovídán, je pouze jeden. Jedná se o ID shrinku. To obsahuje pět různých kategorií (označené číslicemi od 0 do 4). Proto úlohu můžeme označit jako klasifikační úlohu pro více tříd (neboli \emph{multiclass classification}). Jazyk Python nabízí v knihovně \emph{scikit-learn} řadu metod, které podporují klasifikace do více tříd.\cite{bib:scikit-multiclass}
+
+Vybrala jsem následující metody pro klasifikaci ID shrinku:
+\begin{itemize}
+    \item logistická regrese OVR,
+    \item multinomická logistická regrese,
+    \item random forest klasifikátor,
+    \item gradient boosting klasifikátor.
+\end{itemize} 
+
+Logistickou regresi jsem použila jako základní metodu pro klasifikaci v případě, že vstupní dataset se skládá z kategorických proměnných \cite{bib:chooseregression}. Balíček \emph{scikit-learn} umožňuje klasifikaci do více tříd spočítat dvěma způsoby, které se liší v přístupu provedení klasifikace. 
+První přístup využívá schématu OVR (\emph{One-vs-Rest} neboli jeden proti všem). Při použití OVR se každá třída trénuje samostatně. Pro každou třídu je úloha převedena na binární klasifikaci, kdy zkoumaná třída je označena jako pozitivní a všechny zbylé jako negativní. Pokud máme $N$ tříd, pak je vyhodnoceno $N$ binárních logistických regresí.
+Naproti tomu multinomická log. regrese nevyhodnocuje třídy odděleně, ale používá funkci softmax. Ta predikuje zda, daný bod náleží do jedné z tříd.\cite{bib:multiregression}
+
+Další zvolenou metodu je klasifikátor implementující random forest algoritmus. Tento algoritmus jsem zvolila vzhledem ke skutečnosti, že je úspěšně využíván pro problémy z reálného světa a dovede pracovat s velkým objemem dat, které tyto úlohy obvykle zahrnují \cite{bib:rf}. Zároveň volba parametrů pro tuto metodu je intuitivní. Poslední zvolenou metoudou je klasifkátor, který využívá gradient boosting. Tento klasifikátor také vytváří rozhodovací stromy jako random forest. Narozdíl od zmíněného klasifikátoru, jsou ale stromy vytvářeny postupně v závislosti na naposledy vytvořeném stromu. Stromy jsou k sobě agregovány během procesu trénování. Zatímco random forest vytváří stromy nezávisle a agreguje je až na konci procesu.\cite{bib:rfgb}
+
+
+
+
+
