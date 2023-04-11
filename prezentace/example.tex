@@ -70,8 +70,10 @@
 \begin{frame}
     \frametitle{Popis úlohy}
 	\begin{itemize}
+		\item Data vybrané společnosti za rok 2022.
     	\item Z obdržených dat analyzovat přičiny vzniku shrinku produktů
     	\item[] (předpovědět typ a množství).
+    	\item Otestovat hypotézy na dalších datech.
     \end{itemize}
 
 	\begin{definice}
@@ -83,9 +85,9 @@
 	\end{definice}
 	
 	% Za shrink produktu lze označovat i stav, kdy cena produktu je neplánovaně snížena v důsledku zmíněných důvodů. Shrinkem je potom rozdíl plánované prodejní ceny a ceny, za kterou byl produkt skutečně prodán.
-    \begin{itemize}
-    	\item 
-    \end{itemize}
+    % \begin{itemize}
+    % 	\item 
+    % \end{itemize}
 
 \end{frame}
 
@@ -113,9 +115,21 @@
 
 \begin{frame}
     \frametitle{Výsledky}
-	\begin{itemize}
-    	\item 
-    \end{itemize}
+	\framesubtitle{vybraných použitých metod}
+	% \begin{itemize}
+    % 	\item 
+    % \end{itemize}
+	\begin{textblock*}{10cm}(0.88cm,0.75cm)
+		\tiny Matice korelačních koeficientů
+	   \end{textblock*}
+
+	\begin{textblock*}{10cm}(0.2cm,0.9cm)
+        \includegraphics[width=0.4\textwidth]{pearson.png}
+    \end{textblock*}
+	\begin{textblock*}{10cm}(5.5cm,0.7cm)
+        \includegraphics[width=0.4\textwidth]{pca-prispevky.png}
+    \end{textblock*}
+	\vspace{5cm}
 	\resizebox{\textwidth}{!}{%
 	\begin{tabular}{lcc}
 		Metoda                          & Přesnost (trénovací data) & Přesnost (testovací data) \\ \hline
@@ -125,6 +139,7 @@
 		\textbf{Gradient boosting}               & \textbf{83,80 \% }                 & \textbf{83,78 }\%               
 		\end{tabular}
 	}
+	
 	
     % \includegraphics[width=\textwidth]{grafy/resCTW.png}
 

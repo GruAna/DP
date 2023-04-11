@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  10 APR 2023 20:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  11 APR 2023 06:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -865,48 +865,48 @@ Dictionary: translator-theorem-dictionary, Language: English
 {C:/Users/uzivatel/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./vlasyOrez.pdf> <./logotype.jpg>] (example.toc) [2
 
  <./vlasyOrez.pdf>]
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 90.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 92.
  (C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 90.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 92.
  (C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 90.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 92.
  (C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 90.
+(Font)              <10.95> on input line 92.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 90.
+(Font)              <8> on input line 92.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 90.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 90.
+(Font)              <6> on input line 92.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 92.
  (C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 90.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 92.
  (C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 90.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 92.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 90.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 92.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 90.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 90.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 92.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 92.
  (C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OT1/lmss/bx/it' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 90.
+(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 92.
 LaTeX Font Info:    Font shape `OT1/lmss/bx/it' in size <8> not available
-(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 90.
+(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 92.
 LaTeX Font Info:    Font shape `OT1/lmss/bx/it' in size <6> not available
-(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 90.
+(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 92.
  [3
 
 ]
@@ -915,13 +915,24 @@ pdfTeX warning: pdflatex (file ./pipelineDP.drawio.pdf): PDF inclusion: found PD
 <pipelineDP.drawio.pdf, id=78, 559.12888pt x 343.2825pt>
 File: pipelineDP.drawio.pdf Graphic file (type pdf)
 <use pipelineDP.drawio.pdf>
-Package pdftex.def Info: pipelineDP.drawio.pdf  used on input line 109.
+Package pdftex.def Info: pipelineDP.drawio.pdf  used on input line 111.
 (pdftex.def)             Requested size: 307.28987pt x 188.65929pt.
 [4
 
- <./pipelineDP.drawio.pdf>] [5
+ <./pipelineDP.drawio.pdf>]
+<pearson.png, id=98, 632.3625pt x 560.0925pt>
+File: pearson.png Graphic file (type png)
+<use pearson.png>
+Package pdftex.def Info: pearson.png  used on input line 146.
+(pdftex.def)             Requested size: 113.80928pt x 100.7952pt.
+<pca-prispevky.png, id=100, 413.3844pt x 407.6028pt>
+File: pca-prispevky.png Graphic file (type png)
+<use pca-prispevky.png>
+Package pdftex.def Info: pca-prispevky.png  used on input line 146.
+(pdftex.def)             Requested size: 113.80928pt x 112.21239pt.
+ [5
 
-] [6
+ <./pearson.png> <./pca-prispevky.png>] [6
 
 ]
 \tf@nav=\write6
@@ -938,17 +949,17 @@ Package rerunfilecheck Info: File `example.out' has not changed.
 (rerunfilecheck)             Checksum: D3E3FC7EB5452C408C1E95C471210834;721.
  ) 
 Here is how much of TeX's memory you used:
- 24940 strings out of 475380
- 486426 string characters out of 2775356
- 795966 words of memory out of 3000000
- 45744 multiletter control sequences out of 15000+600000
- 523398 words of font info for 69 fonts, out of 8000000 for 9000
+ 24964 strings out of 475380
+ 486923 string characters out of 2775356
+ 796965 words of memory out of 3000000
+ 45765 multiletter control sequences out of 15000+600000
+ 526125 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,14n,122p,459b,552s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}<C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on example.pdf (6 pages, 819550 bytes).
+{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}<C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss9.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on example.pdf (6 pages, 931836 bytes).
 PDF statistics:
- 137 PDF objects out of 1000 (max. 8388607)
+ 147 PDF objects out of 1000 (max. 8388607)
  18 named destinations out of 1000 (max. 500000)
- 113 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 123 words of extra memory for PDF output out of 10000 (max. 10000000)
 

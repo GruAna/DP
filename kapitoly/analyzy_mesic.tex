@@ -130,13 +130,13 @@ Matice vypočítaných koeficientů je na obr. \ref*{obr:nb:MI}, jelikož se jed
 
 \begin{figure}[hbtp!]
     \centering
-    \includegraphics[width=.8\textwidth]{obrazky/zntb/MI_TE.png}
+    \includegraphics[width=.8\textwidth]{obrazky/zntb/MI.png}
     \caption{Matice koeficientů vzájemné informace mezi příznaky.}
     \label{obr:nb:MI}
 \end{figure}
 
 %https://www.statology.org/interpret-cramers-v/
-Dále jsem pro znázornění vztahu mezi proměnnými použila koeficient Cramerovo V. Koeficient jsem postupně počítala pro každou dvojici příznaků. Koeficient nabývá hodnot mezi 0 a 1. Číslo blízké nule indikuje, že mezi proměnnými není asociace, číslo blízké jedničce vysokou závislost \cite{bib:statology}. Na obr. \ref*{obr:nb:cramers} lze vidět, že pro kategorie L1 až L6 je hodnota koeficientu  po zaokrouhlení rovna jedné. Vysoká závislost je pak i mezi příznakem expirace a ID produktu a kategorií L1. Dále logicky mezi číslem dne a dnem v týdnu a obdobím v měsíci.
+Dále jsem pro znázornění vztahu mezi proměnnými použila koeficient Cramerovo V. Koeficient jsem postupně počítala pro každou dvojici příznaků. Koeficient nabývá hodnot mezi 0 a 1. Číslopř blízké nule indikuje, že mezi proměnnými není asociace, číslo blízké jedničce vysokou závislost \cite{bib:statology}. Na obr. \ref*{obr:nb:cramers} lze vidět, že pro kategorie L1 až L6 je hodnota koeficientu  po zaokrouhlení rovna jedné. Vysoká závislost je pak i mezi příznakem expirace a ID produktu a kategorií L1. Dále logicky mezi číslem dne a dnem v týdnu a obdobím v měsíci.
 %!!! dopsat co to je %!!!zdroj, odkaz na teorii
 \begin{figure}[hbtp!]
     \centering
@@ -183,7 +183,7 @@ Jako hlavní metodu pro výběr proměnných jsem se rozhodla použít metodu PC
 Ve své práci jsem využila implementaci PCA v knihovně \emph{Prince} v jazyce Python. 
 Předtím než jsem metodu aplikovala jsem otestovala předpoklad homoskedasticity, tedy shodnost rozptylů v datech, pomocí Bartlettova testu implementovaného v knihovně \emph{factor\_analyzer}. Nulová hypotéza o shodnosti rozptylů nebyla vyvrácena (p-hodnota vyšla nulová). Metodu PCA je proto možné použít.
 
-Na obrázcích \ref*{obr:nb:pca_roztyl_komponetn} a \ref*{obr:nb:pca_kum_roztyl_komponetn} je znázorněno prvních deset komponent a rozptyl který v datech vysvětlují. Na základě hodnot jsem vybrala prvních pět komponent. Již pátá komponenta (označená č. 4) spolu s předchozími vysvětluje více jak 95 \% variability dat. V dalším kroku jsem vypočítala příspěvky příznaků k těmto pěti komponentám a vybrala jsem ty příznaky, které přispívají nejvíce k prvním pěti komponentám. Jejich příspěvek je znázorněný na obr. \ref*{obr:nb:pca_prispevek}. Na základě výsledků analýzy hlavních komponent byly vybrány jako vhodné příznaky pro další práci s daty příznaky - příznaky ID prodejny, den v týdnu, expirace, den a období v měsíci.
+Na obrázcích \ref*{obr:nb:pca_roztyl_komponetn} a \ref*{obr:nb:pca_kum_roztyl_komponetn} je znázorněno prvních deset komponent a rozptyl který v datech vysvětlují. Na základě hodnot jsem vybrala prvních pět komponent. Již pátá komponenta (označená č. 4) spolu s předchozími vysvětluje více jak 95 \% variability dat. V dalším kroku jsem vypočítala příspěvky příznaků k těmto pěti komponentám a vybrala jsem ty příznaky, které přispívají nejvíce k prvním pěti komponentám. Jejich příspěvek je znázorněný na obr. \ref*{obr:nb:pca_prispevek}. Na základě výsledků analýzy hlavních komponent byly vybrány jako vhodné příznaky pro další práci s daty tyto příznaky - ++ ID prodejny, den v týdnu, expirace, den a období v měsíci.
 
 \begin{figure}[hbtp!]
     \centering
@@ -280,13 +280,14 @@ V tabulce \ref*{tab:klasifikace:VIF} jsou uvedeny přesnosti pro čtyři vybran�
 \begin{table}[hbtp!]
     \captionsetup{justification=centering}
     \caption{Tabulka dosažených přesností pro čtyři vybrané klasifikační metody na datech se shrinky typu damages s vybranými příznaky podle varianty 1.}
-    \begin{tabular}{lp{4cm}p{4cm}}
-    Metoda                          & Přesnost \linebreak (trénovací data) & Přesnost \linebreak (testovací data) \\ \hline
-    Logistická regrese OVR          & 77,04 \%                  & 76,95 \%                  \\
-    Multinomická logistická regrese & 77,33 \%                  & 77,27 \%                  \\
-    Random forest                   & 82,54 \%                  & 82.12 \%                  \\
-    Gradient boosting               & 83.80 \%                  & 83,78 \%             
-    \end{tabular}
+    \begin{tabular}{lcc}
+        Metoda         & \multicolumn{2}{l}{Přesnost {[}\%{]}} \\
+                                        & Trénovací data    & Testovací data    \\ \hline
+        Logistická regrese OVR          & 77,04             & 76,95             \\
+        Multinomická logistická regrese & 77,33             & 77,27             \\
+        Random forest                   & 82,54             & 82,12             \\
+        Gradient boosting               & 83,80             & 83,78            
+        \end{tabular}
     \label{tab:klasifikace:VIF}
 \end{table}
 
@@ -294,6 +295,8 @@ V tabulce \ref*{tab:klasifikace:VIF} jsou uvedeny přesnosti pro čtyři vybran�
 Nejlepších výsledků dosahuje klasifikátor gradient boosting. Přesnost na testovacích datech je téměř 84 \%. V obou metodách, které využívají rozhodovací stromy, jsem implementovala ladění parametrů. Na následujících obrázcích \ref{} % doplnit obrazky !!!
 je znázorněna závislost mezi jednotlivými hodnotami parametrů a dosažené přesnosti.
 
-V případě random forest klasifikátoru se jedná o parametry 
+V případě random forest klasifikátoru se jedná o parametry, které určují počet stromů, hloubku stromu, minimální počet vzorků, který má obsahovat list a minimální počet vzorků, kdy se může rozdělit uzel stromu. Pro klasifikátor gradient boosting byly také laděny parametry pro počet stromů, hloubku a dále míru učení.
+
+Metoda random forest 
 
 
