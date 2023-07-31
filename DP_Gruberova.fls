@@ -1155,18 +1155,8 @@ INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex\latex\graphics\lscape.
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex\latex\graphics\lscape.sty
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex\latex\graphics\lscape.sty
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphics.sty
-INPUT .\DP_Gruberova.out
-INPUT DP_Gruberova.out
-INPUT .\DP_Gruberova.out
-INPUT DP_Gruberova.out
-INPUT .\DP_Gruberova.out
-INPUT DP_Gruberova.out
-INPUT .\DP_Gruberova.out
-INPUT DP_Gruberova.out
-OUTPUT DP_Gruberova.pdf
-INPUT .\DP_Gruberova.out
-INPUT .\DP_Gruberova.out
 OUTPUT DP_Gruberova.out
+OUTPUT DP_Gruberova.pdf
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr17.tfm
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr8.tfm
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr6.tfm
@@ -1305,9 +1295,6 @@ INPUT .\zadaniDP.pdf
 INPUT zadaniDP.pdf
 INPUT .\zadaniDP.pdf
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmri12.tfm
-INPUT .\DP_Gruberova.toc
-INPUT DP_Gruberova.toc
-INPUT DP_Gruberova.toc
 OUTPUT DP_Gruberova.toc
 INPUT .\kapitoly\uvod.tex
 INPUT kapitoly\uvod.tex
@@ -1334,6 +1321,7 @@ INPUT .\obrazky\3M.jpg
 INPUT .\obrazky\3M.jpg
 INPUT .\obrazky\3M.jpg
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr10.tfm
+INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx10.tfm
 INPUT .\kapitoly\metody.tex
 INPUT kapitoly\metody.tex
 INPUT .\kapitoly\metody.tex
@@ -1481,6 +1469,8 @@ INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rm.e
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathex.enc
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathit.enc
+INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx10.pfb
+INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx10.pfb
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx12.pfb
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx12.pfb
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmex10.pfb

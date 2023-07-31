@@ -228,16 +228,55 @@ Jak již bylo zmíněno pro redukci dimenzionality u kategorických dat lze pou�
 
 \subsubsection*{Shrnutí pro výběr dat}
 
-Na základě předchozích metod jsem se rozhodla zredukovat původní příznaky datasetu na jejich výběr. Vzhledem k tomu, že různé metody vybraly různé příznaky, jsou stanoveny dvě podmnožiny původních příznaků. 
+Na základě předchozích metod byly původní příznaky datasetu zredukovány na menší počet. Vzhledem k tomu, že různé metody vybraly různé příznaky, bylo stanoveno více možných výběrů.
 
 Korelované jsou hodnoty ID produktu, L6, L5, L4 a expirace. Dále také z označení dne lze určit období měsíce. Ze zmíněných korelovaných příznaků není proto vhodné začlenit více než jeden příznak. Pokud je tato myšlenka aplikována na výsledky metod PCA a MCA a výsledků zjištěných pomocí hraniční hodnoty VIF.
 
 \begin{enumerate}
-    \item \textbf{L1, období měsíce, ID prodejny a den v týdnu} - tyto sloupce byly získány podle hodnoty rozptylového inflačního faktoru. Touto metodou byl navržen i sloupec s číslem dne, ten však z důvodů korelace nebyl zahrnutý.
-    \item \textbf{ID prodejny, den v týdnu, expirace, období v měsíci, L5} - metodou PCA bylo zjištěno, které příznaky nejvíce přispívají ke komponentám, které popisují téměř 96 \% rozptylu v původních datech - jedná se o příznaky ID prodejny, den v týdnu, expirace, období v měsíci a číslo dne. Naopak metoda MCA vybrala kategorie L4 až L6 jako důležité. Sloučením a přihlédnutím ke korelačním koeficientům byly vybráno pět příznaků.
+    \item Následující sloupce byly získány podle hodnoty rozptylového inflačního faktoru. Touto metodou byl navržen i sloupec s číslem dne, ten však z důvodů korelace nebyl zahrnutý
+    \begin{enumerate}
+        \item[1.1.] L1, období měsíce, ID prodejny a den v týdnu.
+    \end{enumerate}
+    
+    \item[] K této variantě existují i dvě alternativy, ve kterých je obměněna úroveň kategorizace produktu:     
+    \begin{enumerate}
+    \item[1.2.] L5, období měsíce, ID prodejny a den v týdnu
+    \item[1.3.] L4, období měsíce, ID prodejny a den v týdnu
+    \end{enumerate}
+    \item Metodou PCA bylo zjištěno, které příznaky nejvíce přispívají ke komponentám, které popisují téměř 96 \% rozptylu v původních datech - jedná se o příznaky ID prodejny, den v týdnu, expirace, období v měsíci a číslo dne. Naopak metoda MCA vybrala kategorie L4 až L6 jako důležité. Sloučením a přihlédnutím ke korelačním koeficientům byly vybráno pět příznaků
+    \begin{enumerate}
+        \item[2.1.] ID prodejny, den v týdnu, expirace, období v měsíci, L5.
+    \end{enumerate}
+    \item[] Tato varianta příznaků byla ještě rozšířena o příznaky, které se týkají produktů. Přidané příznaky jsou spolu korelované, přesto 
+    \begin{enumerate}
+    \item[2.2.] ID prodejny, den v týdnu, expirace, období v měsíci, L5, L2
+    \item[2.3.] ID prodejny, den v týdnu, expirace, období v měsíci, L5, L2, ID produktu
+    \item[2.4.] ID prodejny, den v týdnu, období v měsíci, L2, ID produktu
+    \item[] columns8 = ['L2','L5', obdobi v mesici, 'warehouse_id', 'weekday', 'product_id', 'target']
+    \end{enumerate}
 \end{enumerate}
 
+Všech sedm možných výběrů bylo otestováno metodou gradient boosting. Pro další výpočty byla použita pouze varianta, která vykazovala nejlepší přesnost. Tabulka \ref*{tab:acc-gb} uvádí získané přesnosti.
 
+\begin{table}[hbtp!]
+    \centering
+    \captionsetup{justification=centering}
+    \caption{Tabulka dosažených přesností dosažených metodou gradient boosting pro varianty výběru příznaků.}
+    \begin{tabular}{ccc}
+    \multicolumn{1}{c}{\textbf{Varianta}} & \multicolumn{2}{c}{\textbf{Přesnost} {[}\%{]}} \\
+    \multicolumn{1}{c}{} & \multicolumn{1}{c}{Trénovací data} & \multicolumn{1}{c}{Testovací data} \\
+    \hline
+    1.1. & 79{,}27                & 79{,}15\\
+    1.2. & 82{,}88                & 82{,}77\\
+    1.3. & 82{,}80                & 82{,}67\\
+    2.1. & 83{,}21                & 83{,}07\\
+    2.2. & 83{,}38                & 83{,}30\\
+    2.3. & 83{,}67                & 83{,}54\\
+    2.4. & 83{,}44                & 83{,}33    \\
+    2.5 & 83,60&                    83,45      
+    \end{tabular}
+    \label{tab:acc-gb}
+    \end{table}
 
 \subsection{Klasifikace dat}
 
@@ -299,4 +338,30 @@ V případě random forest klasifikátoru se jedná o parametry, které určují
 
 Metoda random forest 
 
+% metoda Gradient boosting classifer
+% - Performing  5 -fold cross validation for  <class 'sklearn.ensemble._gb.GradientBoostingClassifier'> .
 
+% `columns1 = ['L1', 'quarter_of_month', 'warehouse_id', 'weekday', 'target']`
+% - Accuracy scores: [0.79125738 0.7928988  0.79164102 0.79304649 0.7924207 ]
+% - Average accuracy score: 0.7922528784970851
+% - Multinomial Logistic regression Train Accuracy ::  0.7926704159579466
+% - Multinomial Logistic regression Test Accuracy ::  0.7915319337524416
+%     - 30 min
+
+% `columns2 = ['L5', 'quarter_of_month', 'warehouse_id', 'weekday', 'target']`
+% - Accuracy scores: [0.82776361 0.83040015 0.82783454 0.82749087 0.82915795]
+% - Average accuracy score: 0.8285294245108925
+% - Multinomial Logistic regression Train Accuracy ::  0.828812571684165
+% - Multinomial Logistic regression Test Accuracy ::  0.8276841258637953
+
+% `columns3 = ['L4', 'quarter_of_month', 'warehouse_id', 'weekday', 'target']`
+% - Accuracy scores: [0.82768667 0.82912292 0.82777299 0.82781916 0.82722927]
+% - Average accuracy score: 0.8279262004907977
+% - Multinomial Logistic regression Train Accuracy ::  0.8280780334071292
+% - Multinomial Logistic regression Test Accuracy ::  0.8266910690543802
+
+% `columns4 = ['L5', 'quarter_of_month', 'warehouse_id', 'weekday', 'expirace', 'target']`
+% - Accuracy scores: [0.83163634 0.83345729 0.83200993 0.83231257 0.83187144]
+% - Average accuracy score: 0.8322575145742153
+% - Multinomial Logistic regression Train Accuracy ::  0.832070802924201
+% - Multinomial Logistic regression Test Accuracy ::  0.8307453671027363
