@@ -4,7 +4,7 @@
 
 \section{Popis obdržených dat}
 
-Všechna data poskytnutá společností jsou uložena v databázi, ke které je byl zhotoven omezený přístup pro účely získání dat pro analýzy shrinku produktů společnosti. Zároveň s možností přístupu jsem obdržela i tabulku, která stručně komentuje všechny tabulky v databázi a sloupce v jednotlivých tabulkách. Celkem se v databázi nachází přes čtyři sta tabulek, z nichž je potřeba vybrat ty, které obsahují relevantními data pro úlohu shrinků.
+Všechna data poskytnutá společností jsou uložena v databázi, ke které byl zhotoven omezený přístup pro účely získání dat pro analýzy shrinku produktů společnosti. Zároveň s možností přístupu jsem obdržela i tabulku, která stručně komentuje všechny tabulky v databázi a sloupce v jednotlivých tabulkách. Celkem se v databázi nachází přes čtyři sta tabulek, z nichž bylo potřeba vybrat pouze ty, které obsahují relevantní data pro úlohu shrinků.
 
 Z důvodu ochrany dat nelze uvádět přesné názvy tabulek, nicméně pro lepší orientaci v textu, každé použité tabulce přiřadím název, který odpovídá obsaženým datům v tabulce.
 
@@ -16,7 +16,7 @@ Základní číselník s údaji o produktech, se nachází v tabulce \texttt{pro
     \item Krátký a dlouhý název produktu (tento sloupec slouží především k lepší orientaci v datech)
     \item Expirace produktu ve dnech (hodnoty 0, 999 a NULL označují neomezenou expiraci)
     \item Rozměry produktu a jeho hmotnost
-    \item ID kategorie produktu v číselné struktuře (pro lepší interpretaci, o jakou kategorii zboží se jedná, je vhodnější použít strukuru 4BOX, kterou lze získat napojením na tabulku \texttt{produkt\_kategorie}.)
+    \item ID kategorie produktu v číselné struktuře (pro lepší interpretaci, o jakou kategorii zboží se jedná, je vhodnější použít strukturu 4BOX, kterou lze získat napojením na tabulku \texttt{produkt\_kategorie}.)
 \end{itemize}
 Tabulka \texttt{produkt\_kategorie} obsahuje převod z číselné struktury, která popisuje kategorii produktu na 4BOX strukturu. 4BOX struktura se skládá ze šesti úrovní. Hierarchie těchto úrovní je znázorněná na obrázku \ref*{obr:d:4box} spolu se stručným popisem složek první úrovně.
 
