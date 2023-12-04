@@ -1361,6 +1361,7 @@ INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex\latex\lm\ot1lmtt.fd
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex\latex\lm\ot1lmtt.fd
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex\latex\lm\ot1lmtt.fd
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmtt12.tfm
+INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmtt10.tfm
 INPUT .\obrazky\4box.pdf
 INPUT .\obrazky\4box.pdf
 INPUT obrazky\4box.pdf
@@ -1468,6 +1469,16 @@ INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmtt10.tfm
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmtk10.tfm
+INPUT .\kapitoly\korelace.tex
+INPUT kapitoly\korelace.tex
+INPUT .\kapitoly\korelace.tex
+INPUT kapitoly\korelace.tex
+INPUT .\obrazky\grafy\matice_korelace_typy_DP-graf.pdf
+INPUT .\obrazky\grafy\matice_korelace_typy_DP-graf.pdf
+INPUT obrazky\grafy\matice_korelace_typy_DP-graf.pdf
+INPUT .\obrazky\grafy\matice_korelace_typy_DP-graf.pdf
+INPUT .\obrazky\grafy\matice_korelace_typy_DP-graf.pdf
+INPUT .\obrazky\grafy\matice_korelace_typy_DP-graf.pdf
 INPUT .\kapitoly\zaver.tex
 INPUT kapitoly\zaver.tex
 INPUT .\kapitoly\zaver.tex

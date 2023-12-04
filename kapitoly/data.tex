@@ -11,13 +11,24 @@ Z důvodu ochrany dat nelze uvádět přesné názvy tabulek, nicméně pro lep�
 \subsubsection{Produkty}
 
 Základní číselník s údaji o produktech, se nachází v tabulce \texttt{produkt} se 27 sloupci. Pro analýzu vzniku shrinků jsem z této tabulky vybrala jako možné významné údaje následující sloupce:
-\begin{itemize}
-    \item ID produktu a ID prodejní varianty, spolu tvoří primární klíč. 
-    \item Krátký a dlouhý název produktu (tento sloupec slouží především k lepší orientaci v datech)
-    \item Expirace produktu ve dnech (hodnoty 0, 999 a NULL označují neomezenou expiraci)
-    \item Rozměry produktu a jeho hmotnost
-    \item ID kategorie produktu v číselné struktuře (pro lepší interpretaci, o jakou kategorii zboží se jedná, je vhodnější použít strukturu 4BOX, kterou lze získat napojením na tabulku \texttt{produkt\_kategorie}.)
-\end{itemize}
+
+\begin{table}[hbtp!]
+    \captionsetup{justification=centering}
+    \begin{center}
+    \caption{Vybrané sloupce v tabulce \texttt{produkt}.}
+    \label{tab:d:4Bzast}
+    \begin{tabular}{l l}
+        Název & Popis \\
+        \hline
+        ID produktu &  \\
+        ID prodejní varianty & Určuje o jaký typ balení daného produktu se jedná  \\   
+        Expirace & Expirace produktu ve dnech (hodnoty 0, 999 a NULL označují neomezenou expiraci) \\   
+        ID kategorie & Kategorie produktu v číselné struktuře (pro lepší interpretaci, o jakou kategorii zboží se jedná, je vhodnější použít strukturu podle úrovní (neboli levelů), kterou lze získat napojením na tabulku \texttt{produkt\_kategorie}.)
+    \end{tabular}
+    \end{center}
+\end{table}
+% \item Rozměry produktu a jeho hmotnost
+
 Tabulka \texttt{produkt\_kategorie} obsahuje převod z číselné struktury, která popisuje kategorii produktu na 4BOX strukturu. 4BOX struktura se skládá ze šesti úrovní. Hierarchie těchto úrovní je znázorněná na obrázku \ref*{obr:d:4box} spolu se stručným popisem složek první úrovně.
 
 \begin{figure}[hbtp!]

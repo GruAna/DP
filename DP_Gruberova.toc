@@ -21,13 +21,17 @@
 \contentsline {chapter}{\numberline {4}Zpracování dat}{29}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Popis obdržených dat}{29}{section.4.1}%
 \contentsline {subsubsection}{Produkty}{29}{section*.19}%
-\contentsline {subsubsection}{Tabulky transakcí}{31}{section*.22}%
+\contentsline {subsubsection}{Tabulky transakcí}{31}{section*.23}%
 \contentsline {section}{\numberline {4.2}Období jednoho měsíce - damages shrinky}{32}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Předzpracování dat}{32}{subsection.4.2.1}%
-\contentsline {subsubsection}{Výběr dat}{33}{section*.23}%
+\contentsline {subsubsection}{Výběr dat}{33}{section*.24}%
 \contentsline {subsection}{\numberline {4.2.2}Klasifikace dat}{42}{subsection.4.2.2}%
-\contentsline {subsubsection}{Výsledky}{42}{section*.36}%
-\contentsline {chapter}{Závěr}{45}{chapter*.38}%
-\contentsline {chapter}{Literatura}{46}{chapter*.38}%
-\contentsline {chapter}{Přílohy}{50}{chapter*.39}%
-\contentsline {chapter}{\numberline {A}Obsah přiloženého CD}{51}{appendix.A}%
+\contentsline {subsubsection}{Výsledky}{42}{section*.37}%
+\contentsline {section}{\numberline {4.3}Korelační analýza}{43}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Postup}{44}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Implementace}{45}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Výsledky}{46}{section.4.4}%
+\contentsline {chapter}{Závěr}{47}{chapter*.42}%
+\contentsline {chapter}{Literatura}{48}{chapter*.42}%
+\contentsline {chapter}{Přílohy}{52}{chapter*.43}%
+\contentsline {chapter}{\numberline {A}Obsah přiloženého CD}{53}{appendix.A}%
