@@ -27,11 +27,11 @@
 \contentsline {subsubsection}{Výběr dat}{33}{section*.24}%
 \contentsline {subsection}{\numberline {4.2.2}Klasifikace dat}{42}{subsection.4.2.2}%
 \contentsline {subsubsection}{Výsledky}{42}{section*.37}%
-\contentsline {section}{\numberline {4.3}Korelační analýza}{43}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Korelační analýza}{44}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Postup}{44}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Implementace}{45}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.2}Implementace}{46}{subsection.4.3.2}%
 \contentsline {section}{\numberline {4.4}Výsledky}{46}{section.4.4}%
-\contentsline {chapter}{Závěr}{49}{chapter*.42}%
-\contentsline {chapter}{Literatura}{50}{chapter*.42}%
-\contentsline {chapter}{Přílohy}{54}{chapter*.43}%
-\contentsline {chapter}{\numberline {A}Obsah přiloženého CD}{55}{appendix.A}%
+\contentsline {chapter}{Závěr}{51}{chapter*.43}%
+\contentsline {chapter}{Literatura}{52}{chapter*.43}%
+\contentsline {chapter}{Přílohy}{56}{chapter*.44}%
+\contentsline {chapter}{\numberline {A}Obsah přiloženého CD}{57}{appendix.A}%

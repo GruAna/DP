@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  5 DEC 2023 10:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  5 DEC 2023 12:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -811,6 +811,9 @@ File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
 LaTeX Warning: Label `tab:d:4Bzast' multiply defined.
 
+
+LaTeX Warning: Label `obr:ctg:g:kategorizace1' multiply defined.
+
 )
 \openout1 = `DP_Gruberova.aux'.
 
@@ -1264,26 +1267,30 @@ Overfull \hbox (14.70677pt too wide) in paragraph at lines 334--336
 <obrazky/grafy/matice_korelace_typy_DP-graf.pdf, id=577, 354.36388pt x 221.8689pt>
 File: obrazky/grafy/matice_korelace_typy_DP-graf.pdf Graphic file (type pdf)
 <use obrazky/grafy/matice_korelace_typy_DP-graf.pdf>
-Package pdftex.def Info: obrazky/grafy/matice_korelace_typy_DP-graf.pdf  used on input line 39.
+Package pdftex.def Info: obrazky/grafy/matice_korelace_typy_DP-graf.pdf  used on input line 40.
 (pdftex.def)             Requested size: 426.79134pt x 267.22987pt.
  [44] [45 <./obrazky/grafy/matice_korelace_typy_DP-graf.pdf>]
-Overfull \hbox (33.57002pt too wide) in paragraph at lines 107--130
+Overfull \hbox (33.57002pt too wide) in paragraph at lines 108--131
  [][] 
  []
 
+[46]
+<obrazky/grafy/categorization_charts/categorization_charts_L4_PROC. MEAT SERVICE.pdf, id=605, 462.52798pt x 346.89601pt>
+File: obrazky/grafy/categorization_charts/categorization_charts_L4_PROC. MEAT SERVICE.pdf Graphic file (type pdf)
+<use obrazky/grafy/categorization_charts/categorization_charts_L4_PROC. MEAT SERVICE.pdf>
+Package pdftex.def Info: obrazky/grafy/categorization_charts/categorization_charts_L4_PROC. MEAT SERVICE.pdf  used on input line 146.
+(pdftex.def)             Requested size: 426.79134pt x 320.11156pt.
 
-Overfull \hbox (9.10419pt too wide) in paragraph at lines 141--165
-\OT1/lmr/m/n/12 LENA PLET[]YNKA SY-PAN[]A M[]AKEM PLET[]YNKA SY-PAN[]A SOL[]I A KM. BRAM-
+Overfull \hbox (3.59305pt too wide) in paragraph at lines 153--155
+\OT1/lmr/m/n/12 rust.poh., bageta s gra-ha-mem, bageta chle-bov^^Sa, ban-ketka cere^^Saln^^S^^P, da-lam^^Sanek, kostka
  []
 
 
-Overfull \hbox (19.72668pt too wide) in paragraph at lines 141--165
-\OT1/lmr/m/n/12 ROHL[]IK NA STROUH.KARLOVA B ROHL.N STR.PENAM MAR-TI-NOVB HOUSKA
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[46]) [47] [48
+ [47] [48 <./obrazky/grafy/categorization_charts/categorization_charts_L4_PROC. MEAT SERVICE.pdf>]) [49] [50
 
-] (kapitoly/zaver.tex) [49] (tex/bibliografie1.tex [50
+] (kapitoly/zaver.tex) [51] (tex/bibliografie1.tex [52
 
 
 ]
@@ -1321,7 +1328,7 @@ Underfull \hbox (badness 3679) in paragraph at lines 37--38
 \OT1/lmr/m/n/12 [cit. 2023-03-05]. Do-stupn^^Se z: []$\OT1/lmtt/m/n/12 https : / / personal . utdallas . edu / []Herve /
  []
 
-[51]
+[53]
 Underfull \hbox (badness 5288) in paragraph at lines 68--69
 []\OT1/lmr/m/n/12 BAIJAYANTA, Roy., \OT1/lmr/m/it/12 All about Ca-te-go-ri-cal Va-ri-a-ble En-co-ding  \OT1/lmr/m/n/12 [on-
  []
@@ -1356,7 +1363,7 @@ Underfull \hbox (badness 1331) in paragraph at lines 87--88
 []\OT1/lmr/m/n/12 FROST, Jim. \OT1/lmr/m/it/12 Cho-o-sing the correct type of re-gres-sion ana-ly-sis. \OT1/lmr/m/n/12 [on-line].
  []
 
-[52]
+[54]
 Underfull \hbox (badness 10000) in paragraph at lines 96--97
 []\OT1/lmr/m/n/12 LOK, Leon. \OT1/lmr/m/it/12 De-ci-sion trees, ran-dom fo-rests and gra-di-
  []
@@ -1376,11 +1383,11 @@ Overfull \hbox (21.56178pt too wide) in paragraph at lines 96--97
 \OT1/lmtt/m/n/12 decision-[]trees-[]random-[]forests-[]gradient-[]boosting-[]whats-[]the-[]difference/$[] 
  []
 
-) [53] [54
+) [55] [56
 
 ]
 P\v {r}\'{\i }loha A.
-[55] (DP_Gruberova.aux)
+[57] (DP_Gruberova.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1388,20 +1395,20 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `DP_Gruberova.out' has not changed.
-(rerunfilecheck)             Checksum: 221BDE8698736737DDD46EB91689157B;3935.
+(rerunfilecheck)             Checksum: 5523C0A99527544AB56468E7FBB368B8;3935.
  ) 
 Here is how much of TeX's memory you used:
- 29183 strings out of 475380
- 539761 string characters out of 2775356
- 1103439 words of memory out of 3000000
- 49760 multiletter control sequences out of 15000+600000
+ 29191 strings out of 475380
+ 540406 string characters out of 2775356
+ 1101496 words of memory out of 3000000
+ 49763 multiletter control sequences out of 15000+600000
  551528 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,17n,94p,2358b,1407s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmib10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on DP_Gruberova.pdf (55 pages, 1300910 bytes).
+Output written on DP_Gruberova.pdf (57 pages, 2859696 bytes).
 PDF statistics:
- 809 PDF objects out of 1000 (max. 8388607)
- 197 named destinations out of 1000 (max. 500000)
- 360 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 858 PDF objects out of 1000 (max. 8388607)
+ 200 named destinations out of 1000 (max. 500000)
+ 365 words of extra memory for PDF output out of 10000 (max. 10000000)
 
