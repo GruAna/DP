@@ -31,7 +31,7 @@
 \contentsline {subsection}{\numberline {4.3.1}Postup}{44}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Implementace}{45}{subsection.4.3.2}%
 \contentsline {section}{\numberline {4.4}Výsledky}{46}{section.4.4}%
-\contentsline {chapter}{Závěr}{49}{chapter*.43}%
-\contentsline {chapter}{Literatura}{50}{chapter*.43}%
-\contentsline {chapter}{Přílohy}{54}{chapter*.44}%
+\contentsline {chapter}{Závěr}{49}{chapter*.42}%
+\contentsline {chapter}{Literatura}{50}{chapter*.42}%
+\contentsline {chapter}{Přílohy}{54}{chapter*.43}%
 \contentsline {chapter}{\numberline {A}Obsah přiloženého CD}{55}{appendix.A}%
