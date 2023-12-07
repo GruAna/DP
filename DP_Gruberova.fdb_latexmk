@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1701778761 "c:/Users/uzivatel/Documents/skola/DP/DP_Gruberova.tex" "DP_Gruberova.pdf" "DP_Gruberova" 1701778771
+["pdflatex"] 1701966510 "c:/Users/uzivatel/Documents/skola/DP/DP_Gruberova.tex" "DP_Gruberova.pdf" "DP_Gruberova" 1701966516
   "C:/Users/uzivatel/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1689942807 82686 2381c3433487640bf26aa76a10db7eb2 ""
   "C:/Users/uzivatel/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1667471210 10789789 02d9a8b514ec08d575e4cf0e33c1259e ""
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc" 1256929440 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
@@ -246,14 +246,14 @@
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656233319 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1650047684 2245 c8a4088d07cffc2e5207730c738edd76 ""
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1650047684 20785 71a3d72ab517959a6979c27e6176bec1 ""
-  "DP_Gruberova.aux" 1701778769 15691 12c049da8c74e953dfbe972453ff7522 "pdflatex"
-  "DP_Gruberova.out" 1701778769 4135 36f787bb1a03f2e8b4d237d6c169d50d "pdflatex"
+  "DP_Gruberova.aux" 1701966515 15691 12c049da8c74e953dfbe972453ff7522 "pdflatex"
+  "DP_Gruberova.out" 1701966515 4135 36f787bb1a03f2e8b4d237d6c169d50d "pdflatex"
   "DP_Gruberova.tex" 1701766911 10618 a2fd6bc9d57c4ec2eae01888343e7fea ""
-  "DP_Gruberova.toc" 1701778769 2831 b10a526138990e76c6ac584076339cf0 "pdflatex"
+  "DP_Gruberova.toc" 1701966515 2831 b10a526138990e76c6ac584076339cf0 "pdflatex"
   "c:/Users/uzivatel/Documents/skola/DP/DP_Gruberova.tex" 1701766911 10618 a2fd6bc9d57c4ec2eae01888343e7fea ""
   "kapitoly/analyzy_mesic.tex" 1701073634 28715 593f41905d496984e4db871c3953ecae ""
   "kapitoly/data.tex" 1701255884 8341 d7480f12e5200f8bd7c8376382af446b ""
-  "kapitoly/korelace.tex" 1701778748 65860 7732d92a103d853cea4300e83774c50e ""
+  "kapitoly/korelace.tex" 1701966508 66021 0aa6fa00fdc243f592d2712d77fe6167 ""
   "kapitoly/metody.tex" 1701073676 15642 8a691ccdfb765ffb4daf45115e18e9b0 ""
   "kapitoly/shrinky.tex" 1679126650 5423 d7c4092ca481b532bc79c3e782a78a3a ""
   "kapitoly/teorie.tex" 1668962077 16533 acee1e0a3bd78ca11d385562c4ca4653 ""

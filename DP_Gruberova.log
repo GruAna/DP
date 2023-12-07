@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  5 DEC 2023 13:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  7 DEC 2023 17:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1274,21 +1274,21 @@ File: obrazky/grafy/matice_korelace_typy_DP-graf.pdf Graphic file (type pdf)
 Package pdftex.def Info: obrazky/grafy/matice_korelace_typy_DP-graf.pdf  used on input line 40.
 (pdftex.def)             Requested size: 426.79134pt x 267.22987pt.
  [46 <./obrazky/grafy/matice_korelace_typy_DP-graf.pdf>] [47]
-Overfull \hbox (33.57002pt too wide) in paragraph at lines 108--131
+Overfull \hbox (33.57002pt too wide) in paragraph at lines 109--132
  [][] 
  []
 
 <obrazky/grafy/categorization_charts/categorization_charts_L4_PROC. MEAT SERVICE.pdf, id=613, 462.52798pt x 346.89601pt>
 File: obrazky/grafy/categorization_charts/categorization_charts_L4_PROC. MEAT SERVICE.pdf Graphic file (type pdf)
 <use obrazky/grafy/categorization_charts/categorization_charts_L4_PROC. MEAT SERVICE.pdf>
-Package pdftex.def Info: obrazky/grafy/categorization_charts/categorization_charts_L4_PROC. MEAT SERVICE.pdf  used on input line 146.
+Package pdftex.def Info: obrazky/grafy/categorization_charts/categorization_charts_L4_PROC. MEAT SERVICE.pdf  used on input line 147.
 (pdftex.def)             Requested size: 426.79134pt x 320.11156pt.
-
-Overfull \hbox (3.59305pt too wide) in paragraph at lines 153--155
+[48] [49 <./obrazky/grafy/categorization_charts/categorization_charts_L4_PROC. MEAT SERVICE.pdf>]
+Overfull \hbox (3.59305pt too wide) in paragraph at lines 154--156
 \OT1/lmr/m/n/12 rust.poh., bageta s gra-ha-mem, bageta chle-bov^^Sa, ban-ketka cere^^Saln^^S^^P, da-lam^^Sanek, kostka
  []
 
-[48] [49 <./obrazky/grafy/categorization_charts/categorization_charts_L4_PROC. MEAT SERVICE.pdf>]) [50] (kapitoly/zaver.tex) [51
+) [50] (kapitoly/zaver.tex) [51
 
 ] (tex/bibliografie1.tex [52
 
@@ -1406,7 +1406,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  99i,17n,94p,2358b,1407s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmib10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on DP_Gruberova.pdf (57 pages, 2860289 bytes).
+Output written on DP_Gruberova.pdf (57 pages, 2860463 bytes).
 PDF statistics:
  862 PDF objects out of 1000 (max. 8388607)
  200 named destinations out of 1000 (max. 500000)
