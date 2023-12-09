@@ -11,24 +11,24 @@ V rámci analýzy jsem srovnávala mezi pouze záznamy produktů, které se vysk
 
 \section{Postup}
 
-Hodnotu shrinku jsem porovnávala s následujícími ukazateli. 
+Hodnotu shrinku jsem porovnávala s~následujícími ukazateli. 
 \begin{itemize}
     \itemsep0em 
 
     \item Tržby daného produktu.
-    \item Tržby daného produktu, které byly v daný den v promoakci - ukázalo se, že takové, až na výjimky nejsou.
-    \item Součet tržeb všech ostatních produktů v kategorii.
-    \item Součet tržeb všech ostatních produktů v kategorii, které byly v daný den v promoakci.
-    \item Součet tržeb všech ostatních produktů v kategorii, které byly v daný den v promoakci nebo byly v rozmezí jednoho týdne po promoakci.
+    \item Tržby daného produktu, které byly v~daný den v~promoakci - ukázalo se, že takové, až na výjimky nejsou.
+    \item Součet tržeb všech ostatních produktů v~kategorii.
+    \item Součet tržeb všech ostatních produktů v~kategorii, které byly v~daný den v~promoakci.
+    \item Součet tržeb všech ostatních produktů v~kategorii, které byly v~daný den v~promoakci nebo byly v~rozmezí jednoho týdne po promoakci.
 \end{itemize}
 
-Ke každému ukazateli, jsem ještě vytvořila analogický ukazatel, který uvažoval zpoždění shrinku. V takovém ukazateli, se nebrala hodnota prodeje ze stejného dne, jako byl den záznamu shrinku, ale hodnota z předchozího dne. Důvodem pro vytvoření takových ukazatelů byla hypotéza, že shrink se může projevit až další den po uskutečněných tržbách. Důvodem může být to, že 
+Ke každému ukazateli, jsem ještě vytvořila analogický ukazatel, který uvažoval zpoždění shrinku. V takovém ukazateli, se nebrala hodnota prodeje ze stejného dne, jako byl den záznamu shrinku, ale hodnota z~předchozího dne. Důvodem pro vytvoření takových ukazatelů byla hypotéza, že shrink se může projevit až další den po uskutečněných tržbách. Důvodem může být to, že 
 
-Na základě korelační analýzy je možné roztřídit produkty v kategorii do tří skupin:
+Na základě korelační analýzy je možné roztřídit produkty v~kategorii do tří skupin:
 \begin{itemize}
     \itemsep0em 
     \item[] \textbf{Kategorie P} - Produkty, které si samy způsobují shrink.
-    \item[] \textbf{Kategorie O} - Produkty, jejichž shrink je způsoben tím, že ostatní produkty v~kategorii jsou v promoakci.
+    \item[] \textbf{Kategorie O} - Produkty, jejichž shrink je způsoben tím, že ostatní produkty v~kategorii jsou v~promoakci.
     \item[] \textbf{Kategorie X} - Produkty, jejichž shrink se nepodařilo vysvětlit pomocí korelační analýzy.
 \end{itemize}
 
@@ -44,7 +44,7 @@ Na obrázku \ref*{obr:ctg:g:kategorizace1} je znázorněno rozdělení produktů
 
 Hypotéza pro zařazení do kategorie P je následující:
 
-Pokud je korelace zaznamenaného shrinku s tržbami téhož produktu kladná, produkt si způsobuje shrinky sám.
+Pokud je korelace zaznamenaného shrinku s~tržbami téhož produktu kladná, produkt si způsobuje shrinky sám.
 Abych mohla tuto hypotézu potvrdit, nebo vyvrátit, je třeba statisticky otestovat významnost korelačního koeficientu. Formulovala jsem nulovou hypotézu $H_\mathrm{0}$ a alternativní hypotézu $H_\mathrm{A}$ pro koeficient $r_\mathrm{P}$, který měří korelaci mezi hodnotou shrinku a tržbami produktu.
 % $$
 %     H_\mathrm{0}: r_\mathrm{P} = 0 \qquad \mbox{Výběry nejsou korelované.}  
@@ -61,8 +61,8 @@ Abych mohla tuto hypotézu potvrdit, nebo vyvrátit, je třeba statisticky otest
 
 Hypotéza pro zařazení do kategorie O je následující:
 
-Pokud jsou kladně korelované hodnoty zaznamenaného shrinku a tržby ostatních produktů a zároveň korelace shrinků produktu s vlastními tržbami je záporná, potom lze vyslovit hypotézu, že shrinky na produktu jsou způsobené ostatními produkty v promoakci.
-Pro toto tvrzení je opět nutné statisticky otestovat koeficienty korelace. Pro koeficient $r_\mathrm{P}$ je statistický test stejný jako v předchozím případě. Pro koeficient $r_\mathrm{O}$ měřící, jak jsou korelované shrinky a tržby ostatních produktů, je třeba otestovat následující hypotézy.
+Pokud jsou kladně korelované hodnoty zaznamenaného shrinku a tržby ostatních produktů a zároveň korelace shrinků produktu s~vlastními tržbami je záporná, potom lze vyslovit hypotézu, že shrinky na produktu jsou způsobené ostatními produkty v~promoakci.
+Pro toto tvrzení je opět nutné statisticky otestovat koeficienty korelace. Pro koeficient $r_\mathrm{P}$ je statistický test stejný jako v~předchozím případě. Pro koeficient $r_\mathrm{O}$ měřící, jak jsou korelované shrinky a tržby ostatních produktů, je třeba otestovat následující hypotézy.
 \begin{equation*}
     \begin{aligned}
         H_\mathrm{0}: \quad & r_\mathrm{O} = 0 \qquad \mbox{Výběry nejsou korelované.}  \\
@@ -70,24 +70,47 @@ Pro toto tvrzení je opět nutné statisticky otestovat koeficienty korelace. Pr
     \end{aligned}
 \end{equation*}
 
-Pokud na zvolené hladině významnosti zamítneme nulovou hypotézu pro zkoumané korelační koeficienty, můžeme tvrdit že s danou pravděpodobností je koeficient statisticky významný. Na základě hodnoty korelace lze pak produkt zařadit do příslušné kategorie. Produkty, u kterých nelze zamítnout, není možné zařadit do tří uvedených kategorií.
+Pokud na zvolené hladině významnosti zamítneme nulovou hypotézu pro zkoumané korelační koeficienty, můžeme tvrdit že s~danou pravděpodobností je koeficient statisticky významný. Na základě hodnoty korelace lze pak produkt zařadit do příslušné kategorie. Produkty, u kterých nelze zamítnout, není možné zařadit do tří uvedených kategorií.
 
-Pro výpočet korelačního koeficientu je ještě třeba ověřit předpoklady. Pro Pearsonův korelační koeficient se jedná o předpoklad normality dat, shodnost rozptylů a nezávislost dat. Pro Spearmanův korelační koeficient jsou předpokládány nezávislé stejně rozdělené náhodné veličiny.
+Pro výpočet korelačního koeficientu je ještě třeba ověřit předpoklady. Pro Pearsonův korelační koeficient se jedná o~předpoklad normality dat, shodnost rozptylů a nezávislost dat. Pro Spearmanův korelační koeficient jsou předpokládány nezávislé stejně rozdělené náhodné veličiny.
 
 \section{Implementace}
 
-V této části je uveden přesný postup pro získání kategorizace produktů. Kód je napsaný v jazyce Python. Součástí kódu je výběr kategorií, které jsou zkoumány, propojení dat shrinků, prodejů a promoakcí, výpočet korelace a ověření předpokladů, statistické testování a rozřazení produktů.
+V~této části je uveden přesný postup pro získání kategorizace produktů. Kód je napsaný v~jazyce Python. Součástí kódu je výběr kategorií, které jsou zkoumány, propojení dat shrinků, prodejů a promoakcí, výpočet korelace a ověření předpokladů, statistické testování a rozřazení produktů.
 
 UML diagram pro analýzu.
 
-TBD...
+\subsection{Vstupy a výstupy}
+
+Pro korelační analýzu zaznamenaných shrinků s~tržbami dalších produktů je třeba zajistit data, které se týkají zaznamenaných prodejů, produktů a~prodejen. V~následující části jsou popsány tabulková data, která jsou nezbytná pro správné spuštění analýzy. Dále jsou definované i vstupy, které musí definovat uživatel pro specifikování názvů konkrétních sloupců v~souborech a parametry pro analýzu.
+
+Celkem je požadováno pět vstupních tabulek - záznamy shrinků, záznamy prodejů, záznamy o~promoakcích, číselník produktů s~rozdělením produktové hierarchie. %a~rozdělení prodejen.
+Tabulka se zaznamenanými shrinky musí obsahovat sloupec s~datem záznamu, ID produktu, ID prodejny, hodnotu zaznamenaného shrinku. Tabulka s~prodeji potřebuje stejné sloupce jako tabulka se shrinky s~výjimkou že hodnota prodejů je celková prodaná částka, která byla zaznamenaná na dané prodejně v~jeden den u daného produktu. Tabulka s~údaji o promoakcích by měla obsahovat ID produktu, kterého se promoakce týká, začáteční a koncové datum promoakce a ID prodejny, pro kterou promoakce platí.
+Všechny záznamové tabulky musí pokrývat stejné časové období. Období může být libovolně dlouhé.
+Tabulka produktové hierarchie obsahuje ID produktu, jeho název a libovolně hluboký strom hierarchií. Každá úroveň stromu má vlastní sloupec. Všechny úrovně jsou vyplněné pro každý produkt, tato podmínka je nutná jen pro kategorie, které bude chtít uživatel využít při analýze. 
+Tabulka s hierarchie produktů slouží k tomu, aby mohla být napojena na ostatní tabulky a data se pak mohla vyfiltrovat pouze na záznamy týkající se vybrané kategorie.
+
+Před spuštěním hlavní výpočetní části musí uživatel vypsat konkrétní pojmenování sloupců v tabulce do proměnných. V následujícím kódu je ukázka zadání. V komentářích je slovní popis o jaký sloupec se jedná. Sloupec by však měl být jasný přímo z názvu proměnné.
+
+\begin{lstlisting}[language=Python, frame=none, numbers=left, numberstyle=\numberstyle, backgroundcolor=\color{backcolour}]
+product_col      = 'product_id'             # Product ID column
+product_name_col = 'name'                   # Product name column
+whs_id_col       = 'warehouse_id'           # Store ID column
+date_col         = 'date_of_transaction'    # Date of transactions column - for sales and shrinks tables
+value_col_shrink = 'cost_value'             # Column with value of shrinks (shrink table)
+% value_col_promo  = 'promo_revenue'          # Column with value of promo sales (sales table)
+value_col_sales  = 'cost_value'             # Column with value of total sales (sales table)
+promo_col_from   = 'promotion_date_from'    
+promo_col_to     = 'promotion_date_to'
+promo_type_col   = 'promotion_type_1_id'
+\end{lstlisting}
 
 \subsection{Popis funkcí a struktura kódu}
 
-\emph{V závorce je nástin toho, co budu popisovat (TBD)}
+\emph{V~závorce je nástin toho, co budu popisovat (TBD)}
 
 \begin{itemize}
-    \item Výběr kategorie (Aby se nemuselo zadávat, přesné názvy kategorií systém vybere prvních $n$ nejsilnějších kategorií z pohledu shrinků.)
+    \item Výběr kategorie (Aby se nemuselo zadávat, přesné názvy kategorií systém vybere prvních $n$ nejsilnějších kategorií z~pohledu shrinků.)
     \item Propojení dat
     \item Korelace (Pearsonův, Spearmanův korelační koeficient) (oveření předpokladů (Kolmogorov-Smirnov test pro IID), testování statistické významnosti)
     \item Kategorizace (Nastavení prahu pro velikost korelačního koeficientu)
@@ -97,15 +120,15 @@ TBD...
 \section{Výsledky}
 Zvolila jsem 5\% hladinu významnosti pro testování statistické významnosti koeficientů korelace $r_\mathrm{P}$ a $r_\mathrm{O}$.
 
-Nejprve jsem se zaměřila na kategorie z úrovně 4, a to prvních deset kategorií s nejvyšší hodnotou shrinků (tj. s nejvyšší zaznamenanou ztrátou) 
+Nejprve jsem se zaměřila na kategorie z~úrovně 4, a to prvních deset kategorií s~nejvyšší hodnotou shrinků (tj. s~nejvyšší zaznamenanou ztrátou) 
 
-V tabulce č. \ref*{tab:kategCorrPorovnani} \emph{(TBD: Bude tam víc kategorii L4.)} jsou porovnání výsledků kategorizace pro kategorii Masné výrobky a Slané pečivo. Měřila jsem postupně korelaci velikosti shrinku s různými ukazateli pro celkové tržby ostatních produktů. Pro určení míry korelace jsem zvolila Spearmanův korelační koeficient, jelikož data nesplňují předpoklady, které jsou nutné pro použití Pearsonova korelačního koeficientu - data nejsou nezávislá a stejně rozdělená. 
-Z uvedených počtů produktů u jednotlivých kategoriích pro různé ukazatele, je patrné, že výsledky se příliš neliší. Pokud bychom se ale zaměřovali na celkové prodeje, nikoli promoční, tak získáváme větší množství produktů, u nichž nebylo možné vysvětlit shrink pomocí korelace. 
+V~tabulce č. \ref*{tab:kategCorrPorovnani} \emph{(TBD: Bude tam víc kategorii L4.)} jsou porovnání výsledků kategorizace pro kategorii Masné výrobky a Slané pečivo. Měřila jsem postupně korelaci velikosti shrinku s~různými ukazateli pro celkové tržby ostatních produktů. Pro určení míry korelace jsem zvolila Spearmanův korelační koeficient, jelikož data nesplňují předpoklady, které jsou nutné pro použití Pearsonova korelačního koeficientu - data nejsou nezávislá a stejně rozdělená. 
+Z uvedených počtů produktů u jednotlivých kategoriích pro různé ukazatele, je patrné, že výsledky se příliš neliší. Pokud bychom se ale zaměřovali na celkové prodeje, nikoli promoční, tak získáváme větší množství produktů, u~nichž nebylo možné vysvětlit shrink pomocí korelace. 
 
 \begin{table}[hbtp!]
     \centering
     \captionsetup{justification=centering}
-    \caption{Počet produktů v kategoriích v závislosti na různých ukazatelích. Kategorizace proběhla na základě Spearmanova korelačního koeficientu}
+    \caption{Počet produktů v~kategoriích v~závislosti na různých ukazatelích. Kategorizace proběhla na základě Spearmanova korelačního koeficientu}
     \begin{tabular}{l *{6}{r}}
     \toprule
     \multicolumn{1}{l}{} & \multicolumn{6}{c}{Korelace s~tržbami ostatních produktů} \\
@@ -135,34 +158,34 @@ Z uvedených počtů produktů u jednotlivých kategoriích pro různé ukazatel
 
 \textbf{Masné výrobky - pultový prodej}
 
-Shrink byl zaznamenaný u 111 produktů v této kategorii úrovně 4. 96 produktů bylo klasifikováno jako kategorie P, dva jako kategorie O, další dva jako X a u zbylých produktů nebyl koeficient korelace statisticky významný a proto nejde u těchto produktů vyslovit hypotézu pro jejich zařazení.
+Shrink byl zaznamenaný u 111 produktů v~této kategorii úrovně 4. 96 produktů bylo klasifikováno jako kategorie P, dva jako kategorie O, další dva jako X a u zbylých produktů nebyl koeficient korelace statisticky významný a proto nejde u těchto produktů vyslovit hypotézu pro jejich zařazení.
 
-Produkty, které patří do kategorie O: Velikonoční klobása a Velikonoční česnekový šál - jedná se zcela jistě o sezónní výrobky. \emph{TBD: vyjmenovat i další produkty, keré si způsobují samy, ale je to většina produktů a salámy, šunky, z kategorie...} 
+Produkty, které patří do kategorie O: Velikonoční klobása a Velikonoční česnekový šál - jedná se zcela jistě o sezónní výrobky. \emph{TBD: vyjmenovat i další produkty, keré si způsobují samy, ale je to většina produktů a salámy, šunky, z~kategorie...} 
 
-Dále jsem zkoumala podkategorie Masných výrobků. Porovnávala jsem prodeje v rámci kategorií na šesté úrovni produktové hierarchie. V podkategroii Salámy s krátkou dobou spotřeby se kategorizace potvrdila. Pro kategorii, do níž patří sezónní výrobky - Netučné masné výrobky, nově z této podkategorie byl jako kategorie O označen i produkt Kladenská pečeně.
+Dále jsem zkoumala podkategorie Masných výrobků. Porovnávala jsem prodeje v~rámci kategorií na šesté úrovni produktové hierarchie. V~podkategroii Salámy s~krátkou dobou spotřeby se kategorizace potvrdila. Pro kategorii, do níž patří sezónní výrobky - Netučné masné výrobky, nově z~této podkategorie byl jako kategorie O označen i produkt Kladenská pečeně.
 
 \begin{figure}[hbtp!]
     \centering
     \captionsetup{justification=centering}
     \includegraphics[width=\textwidth]{obrazky/grafy/categorization_charts/categorization_charts_L4_PROC. MEAT SERVICE.pdf}
-    \caption{Závislost mezi tržbami produktu a tržbami ostatních produktů v kategorii během promoakce (Masné výrobky - pultový prodej).}
-    \label{obr:ctg:g:kategorizace1}
+    \caption{Závislost mezi tržbami produktu a tržbami ostatních produktů v~kategorii během promoakce (Masné výrobky - pultový prodej).}
+    \label{obr:ctg:g:graf}
 \end{figure}
 
 \textbf{Slané pečivo}
 
 Produkty, které patří do kategorie O:
-pletýnka adélka, pletýnka malena, pletýnka sypaná mákem, pletýnka sypaná solí a km., bramborové pečivo s cibulí, veka cupeko kb, rohlík grahamový aspec, rohlík pivní ora, rohlík staročeský, rohlík obilný mam, rohlík na strouh.karlova, rohl.n str.penam, houska mašek, houska raženka, bageta rust.poh., bageta s grahamem, bageta chlebová, banketka cereální, dalamánek, kostka cereál malena, ciabatta mini natural, twistr se sýrem a špenatem, anglický rohlík, 
+pletýnka adélka, pletýnka malena, pletýnka sypaná mákem, pletýnka sypaná solí a km., bramborové pečivo s~cibulí, veka cupeko kb, rohlík grahamový aspec, rohlík pivní ora, rohlík staročeský, rohlík obilný mam, rohlík na strouh.karlova, rohl.n str.penam, houska mašek, houska raženka, bageta rust.poh., bageta s~grahamem, bageta chlebová, banketka cereální, dalamánek, kostka cereál malena, ciabatta mini natural, twistr se sýrem a špenatem, anglický rohlík, 
 
-\emph{Nevidím v této kategorii pravidlo v tom, co je v produktech, kterým shrink způsobují ostatní produkty, a které si za to mohou samy. TBD: názvy zobecním...}
+\emph{Nevidím v~této kategorii pravidlo v~tom, co je v~produktech, kterým shrink způsobují ostatní produkty, a které si za to mohou samy. TBD: názvy zobecním...}
 
 \textbf{Sladké pečivo}
 
-čokorolka, závin mák , skořicový vrut, donut bílý se sušnkami, závitek cereální nugátový, rohlík lístový s ořech. náp, kobliha vanilková šiška, kobliha vanilková v koš, kobliha s jablky a skořicí, kobliha s lísko.náp.a pol, koblih kapsa s jablky pécé, koláč wellartův, koláč tlač. vícezrnný, koláč šátek makový, koláč s ovocnou nápl, koláček švestkový , koláček meruňkový , koláček borůvkový, koláč rohový tři náplně , koláč s makovou náplní, koláč s tvarohovo nápl, máslový koláč tvaroh, šátek kyn. tvarohová nápl, šáteček s náplní višňovou , šáteček s tvaroh.náplní, šátek makový, loupák o., loupák v., loupák m., závin tvaroh , závin kvásk. makový, bavorská hvězdice, makovka pletená mašek, croissant máslový
+čokorolka, závin mák , skořicový vrut, donut bílý se sušnkami, závitek cereální nugátový, rohlík lístový s~ořech. náp, kobliha vanilková šiška, kobliha vanilková v~koš, kobliha s~jablky a skořicí, kobliha s~lísko.náp.a pol, koblih kapsa s~jablky pécé, koláč wellartův, koláč tlač. vícezrnný, koláč šátek makový, koláč s~ovocnou nápl, koláček švestkový , koláček meruňkový , koláček borůvkový, koláč rohový tři náplně , koláč s~makovou náplní, koláč s~tvarohovo nápl, máslový koláč tvaroh, šátek kyn. tvarohová nápl, šáteček s~náplní višňovou , šáteček s~tvaroh.náplní, šátek makový, loupák o., loupák v., loupák m., závin tvaroh , závin kvásk. makový, bavorská hvězdice, makovka pletená mašek, croissant máslový
 
 \textbf{Plodová zelenina}
 
-Shrink byl zaznamenaný u 28 produktů v této kategorii. 20 produktů bylo klasifikováno jako kategorie P, u zbylých produktů nebyl koeficient korelace statisticky významný a proto nejde u těchto produktů vyslovit hypotézu pro jejich zařazení.
+Shrink byl zaznamenaný u 28 produktů v~této kategorii. 20 produktů bylo klasifikováno jako kategorie P, u zbylých produktů nebyl koeficient korelace statisticky významný a proto nejde u těchto produktů vyslovit hypotézu pro jejich zařazení.
 
 
 % MEAT

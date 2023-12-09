@@ -1490,6 +1490,11 @@ INPUT obrazky\grafy\matice_korelace_typy_DP-graf.pdf
 INPUT .\obrazky\grafy\matice_korelace_typy_DP-graf.pdf
 INPUT .\obrazky\grafy\matice_korelace_typy_DP-graf.pdf
 INPUT .\obrazky\grafy\matice_korelace_typy_DP-graf.pdf
+INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmtt.fd
+INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmtt.fd
+INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmtt.fd
+INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmtt.fd
+INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ts1-lmtt10.tfm
 INPUT .\obrazky\grafy\categorization_charts\categorization_charts_L4_PROC. MEAT SERVICE.pdf
 INPUT .\obrazky\grafy\categorization_charts\categorization_charts_L4_PROC. MEAT SERVICE.pdf
 INPUT obrazky\grafy\categorization_charts\categorization_charts_L4_PROC. MEAT SERVICE.pdf
@@ -1507,8 +1512,8 @@ INPUT tex\bibliografie1.tex
 INPUT DP_Gruberova.aux
 INPUT .\DP_Gruberova.out
 INPUT .\DP_Gruberova.out
-INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rmtt.enc
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-ts1.enc
+INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rmtt.enc
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathex.enc
