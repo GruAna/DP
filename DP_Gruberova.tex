@@ -49,10 +49,10 @@
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.98,0.98,0.98}
 \newcommand\numberstyle[1]{%
-    \footnotesize
+    \tiny
     \color{codegray}%
     \ttfamily
-    \ifnum#1<10 0\fi#1  | %
+    \ifnum#1<10 0\fi#1%
 }
 
 
@@ -68,13 +68,15 @@
     captionpos=b,
     keepspaces=true,
     numbers=left,
-    numbersep=10pt,
+    numbersep=8pt,
     showspaces=false,
     showstringspaces=false,
     showtabs=false,
-    frame=lrtb,
-}
+    frame=none,
+    linewidth=1.05\textwidth}
 
+
+\lstset{style=mystyle}
 % \lstset{style=mystyle}  % balíček vhodný pro ukázky zdrojového kódu v~textu práce/příloh. Nutno nastavit! http://ftp.cvut.cz/tex-archive/macros/latex/contrib/listings/listings.pdf
 % \usepackage[autoload=true]{jlcode}
 % \lstset{language=Python}

@@ -90,19 +90,25 @@ Všechny záznamové tabulky musí pokrývat stejné časové období. Období m
 Tabulka produktové hierarchie obsahuje ID produktu, jeho název a libovolně hluboký strom hierarchií. Každá úroveň stromu má vlastní sloupec. Všechny úrovně jsou vyplněné pro každý produkt, tato podmínka je nutná jen pro kategorie, které bude chtít uživatel využít při analýze. 
 Tabulka s hierarchie produktů slouží k tomu, aby mohla být napojena na ostatní tabulky a data se pak mohla vyfiltrovat pouze na záznamy týkající se vybrané kategorie.
 
-Před spuštěním hlavní výpočetní části musí uživatel vypsat konkrétní pojmenování sloupců v tabulce do proměnných. V následujícím kódu je ukázka zadání. V komentářích je slovní popis o jaký sloupec se jedná. Sloupec by však měl být jasný přímo z názvu proměnné.
+Před spuštěním hlavní výpočetní části musí uživatel vypsat konkrétní pojmenování sloupců v tabulce do proměnných. Sloupce, které v různých tabulkách označují tytéž hodnoty, musí mít stejný název. V následujícím kódu \ref*{code:colnames} je ukázka zadání. V komentářích je slovní popis o jaký sloupec se jedná. Sloupec by však měl být jasný přímo z názvu proměnné.
 
-\begin{lstlisting}[language=Python, frame=none, numbers=left, numberstyle=\numberstyle, backgroundcolor=\color{backcolour}]
+\begin{lstlisting}[language=Python, style=mystyle, label={code:colnames}, caption={Definice konkrétních názvů sloupců.}]
 product_col      = 'product_id'             # Product ID column
 product_name_col = 'name'                   # Product name column
 whs_id_col       = 'warehouse_id'           # Store ID column
 date_col         = 'date_of_transaction'    # Date of transactions column - for sales and shrinks tables
 value_col_shrink = 'cost_value'             # Column with value of shrinks (shrink table)
-% value_col_promo  = 'promo_revenue'          # Column with value of promo sales (sales table)
 value_col_sales  = 'cost_value'             # Column with value of total sales (sales table)
-promo_col_from   = 'promotion_date_from'    
-promo_col_to     = 'promotion_date_to'
-promo_type_col   = 'promotion_type_1_id'
+promo_col_from   = 'promotion_date_from'    # Starting date of promotion (promotion table)
+promo_col_to     = 'promotion_date_to'      # Starting date of promotion (promotion table)
+categories       = ['L3','L4','L5','L6', 'name']  # Categories that we want to map to product ID (product hierarchy) 
+\end{lstlisting}
+
+Uživatel dále (viz ukázka kódu \ref*{code:params} zadefinuje formát data, který se používá v datumových sloupcích, aby se tyto sloupce mohly převést z~textového řetězce na typ \texttt{datetime}. V~proměnné \texttt{category\_column} je třeba vybrat jednu kategorii (název sloupce). Na této úrovni se poté budou procházet jednotlivé kategorie, v~rámci každé z~nich se pak budou porovnávat a třídit produkty. V dalších proměnných může uživatel změnit umístění tj. název složky, kam se ukládají výsledky kategorizace a grafy. Složky s~těmito názvy se vytvoří jako podsložky aktuální cesty.
+
+\begin{lstlisting}[language=Python,style=mystyle,, label={code:params},  caption={Definice parametrů.}]
+date_format = '%Y-%m-%d'                    # Format of date columns
+category_column = 'L6'                      # Level od product hierarchy, on which to compare products (have to be in categories)
 \end{lstlisting}
 
 \subsection{Popis funkcí a struktura kódu}
