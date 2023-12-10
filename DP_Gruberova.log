@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  10 DEC 2023 10:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  10 DEC 2023 19:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1281,24 +1281,27 @@ LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 9
  (C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [48]
-Overfull \hbox (33.57002pt too wide) in paragraph at lines 138--161
+Overfull \hbox (33.57002pt too wide) in paragraph at lines 150--173
  [][] 
  []
 
 [49]
-<obrazky/grafy/categorization_charts/categorization_charts_L4_PROC. MEAT SERVICE.pdf, id=643, 462.52798pt x 346.89601pt>
+<obrazky/grafy/categorization_charts/categorization_charts_L4_PROC. MEAT SERVICE.pdf, id=644, 462.52798pt x 346.89601pt>
 File: obrazky/grafy/categorization_charts/categorization_charts_L4_PROC. MEAT SERVICE.pdf Graphic file (type pdf)
 <use obrazky/grafy/categorization_charts/categorization_charts_L4_PROC. MEAT SERVICE.pdf>
-Package pdftex.def Info: obrazky/grafy/categorization_charts/categorization_charts_L4_PROC. MEAT SERVICE.pdf  used on input line 176.
+Package pdftex.def Info: obrazky/grafy/categorization_charts/categorization_charts_L4_PROC. MEAT SERVICE.pdf  used on input line 188.
 (pdftex.def)             Requested size: 426.79134pt x 320.11156pt.
 
-Overfull \hbox (3.59305pt too wide) in paragraph at lines 183--185
+Overfull \hbox (3.59305pt too wide) in paragraph at lines 195--197
 \OT1/lmr/m/n/12 rust.poh., bageta s gra-ha-mem, bageta chle-bov^^Sa, ban-ketka cere^^Saln^^S^^P, da-lam^^Sanek, kostka
  []
 
-[50 <./obrazky/grafy/categorization_charts/categorization_charts_L4_PROC. MEAT SERVICE.pdf>]) [51] [52
 
-] (kapitoly/zaver.tex) [53] (tex/bibliografie1.tex [54
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [50] [51 <./obrazky/grafy/categorization_charts/categorization_charts_L4_PROC. MEAT SERVICE.pdf>]) [52] (kapitoly/zaver.tex) [53
+
+] (tex/bibliografie1.tex [54
 
 
 ]
@@ -1403,20 +1406,20 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `DP_Gruberova.out' has not changed.
-(rerunfilecheck)             Checksum: E7E304045CF199E9EAD357EE198BB876;4286.
+(rerunfilecheck)             Checksum: 7C74B7A1BDFC99A7287660BB269CF99D;4286.
  ) 
 Here is how much of TeX's memory you used:
- 29264 strings out of 475380
- 541602 string characters out of 2775356
+ 29266 strings out of 475380
+ 541624 string characters out of 2775356
  1293764 words of memory out of 3000000
  49815 multiletter control sequences out of 15000+600000
  552146 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,17n,94p,2358b,1554s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmib10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt8.pfb>
-Output written on DP_Gruberova.pdf (59 pages, 2893943 bytes).
+Output written on DP_Gruberova.pdf (59 pages, 2896527 bytes).
 PDF statistics:
- 898 PDF objects out of 1000 (max. 8388607)
- 216 named destinations out of 1000 (max. 500000)
+ 904 PDF objects out of 1000 (max. 8388607)
+ 218 named destinations out of 1000 (max. 500000)
  381 words of extra memory for PDF output out of 10000 (max. 10000000)
 

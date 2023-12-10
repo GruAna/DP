@@ -33,7 +33,7 @@
 \contentsline {subsection}{\numberline {5.2.1}Vstupy a výstupy}{47}{subsection.5.2.1}%
 \contentsline {subsection}{\numberline {5.2.2}Popis funkcí a struktura kódu}{48}{subsection.5.2.2}%
 \contentsline {section}{\numberline {5.3}Výsledky}{49}{section.5.3}%
-\contentsline {chapter}{Závěr}{53}{chapter*.42}%
-\contentsline {chapter}{Literatura}{54}{chapter*.42}%
-\contentsline {chapter}{Přílohy}{58}{chapter*.43}%
+\contentsline {chapter}{Závěr}{53}{chapter*.44}%
+\contentsline {chapter}{Literatura}{54}{chapter*.44}%
+\contentsline {chapter}{Přílohy}{58}{chapter*.45}%
 \contentsline {chapter}{\numberline {A}Obsah přiloženého CD}{59}{appendix.A}%

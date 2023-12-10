@@ -113,22 +113,34 @@ category_column = 'L6'                      # Level od product hierarchy, on whi
 
 \subsection{Popis funkcí a struktura kódu}
 
+Funkce jsou rozčleněny do souborů podle toho, na jaký výpočet jsou zaměřené. Každá funkce má je zdokumentovaná pomocí docstring obsaženého ve své definici. Dokumentace funkce se skládá ze stručného popisu, co funkce dělá, jaké má vstupní parametry a jaký je jejich význam a co funkce vrací.
+
+Pro práci s tabulkovými daty, které jsou hlavním vstupem, jsem použila balíček \emph{pandas} jazyka Python
+
 \emph{V~závorce je nástin toho, co budu popisovat (TBD)}
 
 \begin{itemize}
     \item Výběr kategorie (Aby se nemuselo zadávat, přesné názvy kategorií systém vybere prvních $n$ nejsilnějších kategorií z~pohledu shrinků.)
     \item Propojení dat
-    \item Korelace (Pearsonův, Spearmanův korelační koeficient) (oveření předpokladů (Kolmogorov-Smirnov test pro IID), testování statistické významnosti)
+    \item Korelace (Pearsonův, Spearmanův korelační koeficient) (ověření předpokladů (Kolmogorov-Smirnov test pro IID), testování statistické významnosti)
     \item Kategorizace (Nastavení prahu pro velikost korelačního koeficientu)
     \item Pomocné funkce
 \end{itemize}
+
+\subsubsection*{Funkce pro vytipování rizikových kategorií}
+
+Funkce \texttt{define\_risk\_categories} vybere prvních $n$ kategorií v~dané produktové hierarchii, kde suma hodnot v dané kategorii, je nejvyšší, resp. nejnižší. Funkce vrací seznam těchto kategorií. Prvním vstupní parametrem je DataFrame, který obsahuje minimálně tři sloupce. Tyto sloupce je třeba definovat jako další parametry funkce. Jedná se o~sloupec \texttt{value\_column}, ve kterém jsou hodnoty, které ohodnocují řádky DataFramu a kategorie. Další sloupec je jedna z~úrovní produktové hierarchie, ve sloupci se nachází názvy, nebo jiné označení, kategorií. Posledním povinným parametrem je počet kategorií, které má funkce vrátit. Dale je funkci možné předat keyword argumenty, které se předají funkci \texttt{sort\_values} z~knihovny \emph{pandas}. Jedná se např. o~parametr pro vzestupné, nebo sestupné řazení. Defaultní řazení je vzestupné, což znamená, že se vezmou kategorie s~nejnižší hodnotou. V této analýze sledujeme vyhozené množství, resp. peníze. Tento ukazatel je záporný, tedy vzestupné řazení vybere ty kategorie, jejichž ztráta byla nejvyšší.
+
+\subsubsection*{Funkce pro výběr pouze dané kategorie ze všech záznamů}
+process\_dataframes
+select\_category
 
 \section{Výsledky}
 Zvolila jsem 5\% hladinu významnosti pro testování statistické významnosti koeficientů korelace $r_\mathrm{P}$ a $r_\mathrm{O}$.
 
 Nejprve jsem se zaměřila na kategorie z~úrovně 4, a to prvních deset kategorií s~nejvyšší hodnotou shrinků (tj. s~nejvyšší zaznamenanou ztrátou) 
 
-V~tabulce č. \ref*{tab:kategCorrPorovnani} \emph{(TBD: Bude tam víc kategorii L4.)} jsou porovnání výsledků kategorizace pro kategorii Masné výrobky a Slané pečivo. Měřila jsem postupně korelaci velikosti shrinku s~různými ukazateli pro celkové tržby ostatních produktů. Pro určení míry korelace jsem zvolila Spearmanův korelační koeficient, jelikož data nesplňují předpoklady, které jsou nutné pro použití Pearsonova korelačního koeficientu - data nejsou nezávislá a stejně rozdělená. 
+V~tabulce č.~\ref*{tab:kategCorrPorovnani} \emph{(TBD: Bude tam víc kategorii L4.)} jsou porovnání výsledků kategorizace pro kategorii Masné výrobky a Slané pečivo. Měřila jsem postupně korelaci velikosti shrinku s~různými ukazateli pro celkové tržby ostatních produktů. Pro určení míry korelace jsem zvolila Spearmanův korelační koeficient, jelikož data nesplňují předpoklady, které jsou nutné pro použití Pearsonova korelačního koeficientu - data nejsou nezávislá a stejně rozdělená. 
 Z uvedených počtů produktů u jednotlivých kategoriích pro různé ukazatele, je patrné, že výsledky se příliš neliší. Pokud bychom se ale zaměřovali na celkové prodeje, nikoli promoční, tak získáváme větší množství produktů, u~nichž nebylo možné vysvětlit shrink pomocí korelace. 
 
 \begin{table}[hbtp!]
