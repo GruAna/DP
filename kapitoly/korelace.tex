@@ -22,7 +22,7 @@ Hodnotu shrinku jsem porovnávala s~následujícími ukazateli.
     \item Součet tržeb všech ostatních produktů v~kategorii, které byly v~daný den v~promoakci nebo byly v~rozmezí jednoho týdne po promoakci.
 \end{itemize}
 
-Ke každému ukazateli, jsem ještě vytvořila analogický ukazatel, který uvažoval zpoždění shrinku. V takovém ukazateli, se nebrala hodnota prodeje ze stejného dne, jako byl den záznamu shrinku, ale hodnota z~předchozího dne. Důvodem pro vytvoření takových ukazatelů byla hypotéza, že shrink se může projevit až další den po uskutečněných tržbách. Důvodem může být to, že 
+Ke každému ukazateli, jsem ještě vytvořila analogický ukazatel, který uvažoval zpoždění shrinku. V~takovém ukazateli, se nebrala hodnota prodeje ze stejného dne, jako byl den záznamu shrinku, ale hodnota z~předchozího dne. Důvodem pro vytvoření takových ukazatelů byla hypotéza, že shrink se může projevit až další den po uskutečněných tržbách. Důvodem může být to, že 
 
 Na základě korelační analýzy je možné roztřídit produkty v~kategorii do tří skupin:
 \begin{itemize}
@@ -89,9 +89,9 @@ Celkem je požadováno pět vstupních tabulek - záznamy shrinků, záznamy pro
 Tabulka se zaznamenanými shrinky musí obsahovat sloupec s~datem záznamu, ID produktu, ID prodejny, hodnotu zaznamenaného shrinku. Tabulka s~prodeji potřebuje stejné sloupce jako tabulka se shrinky s~výjimkou že hodnota prodejů je celková prodaná částka, která byla zaznamenaná na dané prodejně v~jeden den u daného produktu. Tabulka s~údaji o promoakcích by měla obsahovat ID produktu, kterého se promoakce týká, začáteční a koncové datum promoakce a ID prodejny, pro kterou promoakce platí.
 Všechny záznamové tabulky musí pokrývat stejné časové období. Období může být libovolně dlouhé.
 Tabulka produktové hierarchie obsahuje ID produktu, jeho název a libovolně hluboký strom hierarchií. Každá úroveň stromu má vlastní sloupec. Všechny úrovně jsou vyplněné pro každý produkt, tato podmínka je nutná jen pro kategorie, které bude chtít uživatel využít při analýze. 
-Tabulka s hierarchie produktů slouží k tomu, aby mohla být napojena na ostatní tabulky a data se pak mohla vyfiltrovat pouze na záznamy týkající se vybrané kategorie.
+Tabulka s~hierarchie produktů slouží k~tomu, aby mohla být napojena na ostatní tabulky a data se pak mohla vyfiltrovat pouze na záznamy týkající se vybrané kategorie.
 
-Před spuštěním hlavní výpočetní části musí uživatel vypsat konkrétní pojmenování sloupců v tabulce do proměnných. Sloupce, které v různých tabulkách označují tytéž hodnoty, musí mít stejný název. V následujícím kódu \ref*{code:colnames} je ukázka zadání. V komentářích je slovní popis o jaký sloupec se jedná. Sloupec by však měl být jasný přímo z názvu proměnné.
+Před spuštěním hlavní výpočetní části musí uživatel vypsat konkrétní pojmenování sloupců v~tabulce do proměnných. Sloupce, které v~různých tabulkách označují tytéž hodnoty, musí mít stejný název. V~následujícím kódu \ref*{code:colnames} je ukázka zadání. V~komentářích je slovní popis o jaký sloupec se jedná. Sloupec by však měl být jasný přímo z~názvu proměnné.
 
 \begin{lstlisting}[language=Python, style=mystyle, label={code:colnames}, caption={Definice konkrétních názvů sloupců.}]
 product_col      = 'product_id'             # Product ID column
@@ -105,7 +105,7 @@ promo_col_to     = 'promotion_date_to'      # Starting date of promotion (promot
 categories       = ['L3','L4','L5','L6', 'name']  # Categories that we want to map to product ID (product hierarchy) 
 \end{lstlisting}
 
-Uživatel dále (viz ukázka kódu \ref*{code:params} zadefinuje formát data, který se používá v datumových sloupcích, aby se tyto sloupce mohly převést z~textového řetězce na typ \texttt{datetime}. V~proměnné \texttt{category\_column} je třeba vybrat jednu kategorii (název sloupce). Na této úrovni se poté budou procházet jednotlivé kategorie, v~rámci každé z~nich se pak budou porovnávat a třídit produkty. V dalších proměnných může uživatel změnit umístění tj. název složky, kam se ukládají výsledky kategorizace a grafy. Složky s~těmito názvy se vytvoří jako podsložky aktuální cesty.
+Uživatel dále (viz ukázka kódu \ref*{code:params} zadefinuje formát data, který se používá v~datumových sloupcích, aby se tyto sloupce mohly převést z~textového řetězce na typ \texttt{datetime}. V~proměnné \texttt{category\_column} je třeba vybrat jednu kategorii (název sloupce). Na této úrovni se poté budou procházet jednotlivé kategorie, v~rámci každé z~nich se pak budou porovnávat a třídit produkty. V~dalších proměnných může uživatel změnit umístění tj. název složky, kam se ukládají výsledky kategorizace a grafy. Složky s~těmito názvy se vytvoří jako podsložky aktuální cesty.
 
 \begin{lstlisting}[language=Python,style=mystyle,, label={code:params},  caption={Definice parametrů.}]
 date_format = '%Y-%m-%d'                    # Format of date columns
@@ -125,7 +125,7 @@ Kód pro korelační analýzu je umístěn ve složce \texttt{shrink\_categoriza
 
 Funkce jsou rozčleněny do modulů podle toho, na jaký výpočet jsou zaměřené. Každá funkce má je zdokumentovaná pomocí docstring obsaženého ve své definici. Dokumentace funkce se skládá ze stručného popisu, co funkce dělá, jaké má vstupní parametry a jaký je jejich význam a co funkce vrací. Funkce jsou otestované pomocí unit testů.
 
-Pro práci s tabulkovými daty, které jsou hlavním vstupem, jsem použila balíček \emph{pandas} jazyka Python.
+Pro práci s~tabulkovými daty, které jsou hlavním vstupem, jsem použila balíček \emph{pandas} jazyka Python.
 
 \emph{V~závorce je nástin toho, co budu popisovat (TBD)}
 
@@ -137,20 +137,20 @@ Pro práci s tabulkovými daty, které jsou hlavním vstupem, jsem použila bal�
     \item Pomocné funkce
 \end{itemize}
 
-\subsubsection*{Funkce pro přiřazení kategorií k produktům}
+\subsubsection*{Funkce pro přiřazení kategorií k~produktům}
 
-Jak je uvedeno na začátku sekce \ref*{ss:vstupyvystupy}, uživatel musí specifikovat názvy sloupců kategorií, které bude v analýze používat. Seznam těchto kategorií je pak parametrem pro funkci \texttt{assign\_levels}. Další parametry jsou DataFrame, kam se mají kategorie napojit a DataFrame odkud se kategorie napojují. Tyto DataFramy musí mít společný sloupec, podle kterého se napojení provede. Defaultně se jedná o sloupec s ID produktu. Defaulně se provádí \emph{left join}, aby nedošlo ke ztrátě dat, kdyby nějaký produkt neměl v DataFramu kategorií zastoupení. Funkci je také možné předat další argumenty, které se dají volat ve funkci \texttt{merge} knihovny \emph{pandas}. V analýze shrinků jeden řádek dat odpovídá transakci jednoho produktu, proto byl zvoleno ID produktu jako propojovací sloupec.
+Jak je uvedeno na začátku sekce \ref*{ss:vstupyvystupy}, uživatel musí specifikovat názvy sloupců kategorií, které bude v~analýze používat. Seznam těchto kategorií je pak parametrem pro funkci \texttt{assign\_levels}. Další parametry jsou DataFrame, kam se mají kategorie napojit a DataFrame odkud se kategorie napojují. Tyto DataFramy musí mít společný sloupec, podle kterého se napojení provede. Defaultně se jedná o sloupec s~ID produktu. Defaulně se provádí \emph{left join}, aby nedošlo ke ztrátě dat, kdyby nějaký produkt neměl v~DataFramu kategorií zastoupení. Funkci je také možné předat další argumenty, které se dají volat ve funkci \texttt{merge} knihovny \emph{pandas}. V~analýze shrinků jeden řádek dat odpovídá transakci jednoho produktu, proto byl zvoleno ID produktu jako propojovací sloupec.
 
 \subsubsection*{Funkce pro vytipování rizikových kategorií}
 
-Funkce \texttt{define\_risk\_categories} vybere prvních $n$ kategorií v~dané produktové hierarchii, kde suma hodnot v dané kategorii, je nejvyšší, resp. nejnižší. Funkce vrací seznam těchto kategorií. Prvním vstupní parametrem je DataFrame, který obsahuje minimálně tři sloupce. Tyto sloupce je třeba definovat jako další parametry funkce. Jedná se o~sloupec \texttt{value\_column}, ve kterém jsou hodnoty, které ohodnocují řádky DataFramu a kategorie. Další sloupec je jedna z~úrovní produktové hierarchie, ve sloupci se nachází názvy, nebo jiné označení, kategorií. Posledním povinným parametrem je počet kategorií, které má funkce vrátit. Pokud je zadán tento počet tak, že je větší než je počet unikátních kategorií, vrátí se všechny kategorie seřazené od nejrizikovější. Dale je funkci možné předat keyword argumenty, které se předají funkci \texttt{sort\_values} z~knihovny \emph{pandas}. Jedná se např. o~parametr pro vzestupné, nebo sestupné řazení. Defaultní řazení je vzestupné, což znamená, že se vezmou kategorie s~nejnižší hodnotou. V této analýze sledujeme vyhozené množství, resp. peníze. Tento ukazatel je záporný, tedy vzestupné řazení vybere ty kategorie, jejichž ztráta byla nejvyšší. Vrácený seznam kategorií je tedy seřazen od nejrizikovější kategorie.
+Funkce \texttt{define\_risk\_categories} vybere prvních $n$ kategorií v~dané produktové hierarchii, kde suma hodnot v~dané kategorii, je nejvyšší, resp. nejnižší. Funkce vrací seznam těchto kategorií. Prvním vstupní parametrem je DataFrame, který obsahuje minimálně tři sloupce. Tyto sloupce je třeba definovat jako další parametry funkce. Jedná se o~sloupec \texttt{value\_column}, ve kterém jsou hodnoty, které ohodnocují řádky DataFramu a kategorie. Další sloupec je jedna z~úrovní produktové hierarchie, ve sloupci se nachází názvy, nebo jiné označení, kategorií. Posledním povinným parametrem je počet kategorií, které má funkce vrátit. Pokud je zadán tento počet tak, že je větší než je počet unikátních kategorií, vrátí se všechny kategorie seřazené od nejrizikovější. Dale je funkci možné předat keyword argumenty, které se předají funkci \texttt{sort\_values} z~knihovny \emph{pandas}. Jedná se např. o~parametr pro vzestupné, nebo sestupné řazení. Defaultní řazení je vzestupné, což znamená, že se vezmou kategorie s~nejnižší hodnotou. V~této analýze sledujeme vyhozené množství, resp. peníze. Tento ukazatel je záporný, tedy vzestupné řazení vybere ty kategorie, jejichž ztráta byla nejvyšší. Vrácený seznam kategorií je tedy seřazen od nejrizikovější kategorie.
 
 \subsubsection*{Funkce pro výběr pouze dané kategorie ze všech záznamů}
-Ve funkci \texttt{select\_category} jsou vstupem DataFrame, název kategorie a úroveň, ve které se daná kategorie nachází. Funkce vrací DataFrame pouze s těmi řádky, kde je obsažena jmenovaná kategorie. V případě, že tato kategorie v datech není, je vrácen prázdný DataFrame.
+Ve funkci \texttt{select\_category} jsou vstupem DataFrame, název kategorie a úroveň, ve které se daná kategorie nachází. Funkce vrací DataFrame pouze s~těmi řádky, kde je obsažena jmenovaná kategorie. V~případě, že tato kategorie v~datech není, je vrácen prázdný DataFrame.
 
-Tato funkce je volána ve funkci \texttt{process\_dataframes}. Vstupy jsou totožné, avšak namísto jednoho DataFramu je možné jich zadat více jako samostatné parametry. Tělo funkce je v kódu \ref*{code:processdf}. Funkce vrací seznam všech vstupních DataFramů, a to pouze řádky, které obsahují zadanou kategorii.
+Tato funkce je volána ve funkci \texttt{process\_dataframes}. Vstupy jsou totožné, avšak namísto jednoho DataFramu je možné jich zadat více jako samostatné parametry. Tělo funkce je v~kódu \ref*{code:processdf}. Funkce vrací seznam všech vstupních DataFramů, a to pouze řádky, které obsahují zadanou kategorii.
 
-\begin{lstlisting}[language=Python,style=mystyle, label={code:processdf},  caption={Funkce pro výběr pouze dané katageorie z více DataFramů.}]
+\begin{lstlisting}[language=Python,style=mystyle, label={code:processdf},  caption={Funkce pro výběr pouze dané katageorie z~více DataFramů.}]
 def process_dataframes(category: str, category_column: str, *dataframes) -> list[pd.DataFrame]:
     result_dataframes = []
 
@@ -164,20 +164,20 @@ def process_dataframes(category: str, category_column: str, *dataframes) -> list
     return result_dataframes
 \end{lstlisting}
 
-\subsubsection*{Funkce pro přiřzení promoakcí}
+\subsubsection*{Funkce pro přiřazení promoakcí}
 
-V rámci korelační analýzy bylo potřeba přiřadit k jednotlivým zaznamenaným transakcím, zda byl produkt v den záznamu v promoakci nebo nikoli. V ideálním případě by tento příznak mohl být již uvedený u každého záznamu. Pokud tomu tak, ale není, je nutné data o promocích provázat na základě datumu, produktu a prodjeny podle číselníku promoakcí. Data vybrané společnosti, na jejíchž datech analýza probíhá, nemají promoakce přímo napojené na již proběhlé, zaznamenané transakce. Data o promoakcích jsou uložená v číselníku promoakcí. Ten obsahuje ID produktu, prodejny, začátek a konec promoakce a prioritu promoakce. V jeden den může být více promoakcí, v takovém případě platí ta s nejvyšší prioritou.
+V rámci korelační analýzy bylo potřeba přiřadit k~jednotlivým zaznamenaným transakcím, zda byl produkt v~den záznamu v~promoakci nebo nikoli. V~ideálním případě by tento příznak mohl být již uvedený u každého záznamu. Pokud tomu tak, ale není, je nutné data o promocích provázat na základě datumu, produktu a prodjeny podle číselníku promoakcí. Data vybrané společnosti, na jejíchž datech analýza probíhá, nemají promoakce přímo napojené na již proběhlé, zaznamenané transakce. Data o promoakcích jsou uložená v~číselníku promoakcí. Ten obsahuje ID produktu, prodejny, začátek a konec promoakce a prioritu promoakce. V~jeden den může být více promoakcí, v~takovém případě platí ta s~nejvyšší prioritou.
 
 
 \subsubsection*{Pomocné funkce}
 
-Funkce \texttt{create\_folder} vytvoří složku se zadaným jménem v aktuální cestě, pouze pokud již taková složka neexistuje. 
+Funkce \texttt{create\_folder} vytvoří složku se zadaným jménem v~aktuální cestě, pouze pokud již taková složka neexistuje. 
 
 Pro základní vizualizaci jsem vytvořila funkci, která pomocí knihovny \emph{matplotlib} vytváří bodový graf dvou proměnných. Graf je buď uložen nebo zobrazený při spuštění funkce. Funkci lze předat DataFrame a názvy dvou sloupců, které reprezentují vstupy pro osy $x$ a $y$ grafu. Další vstupy jsou názvy os a grafu, případně název souboru, pokud uživatel graf uložit. 
 
 \subsection{Testování}
 
-Pro testování funkcí jsem použila knihovny \emph{pytest} jazyka Python. Testy lze spustit příkazem \texttt{python -m pytest tests} v kořenovém adresáři projektu - \texttt{shrink\_categorization}.
+Pro testování funkcí jsem použila knihovny \emph{pytest} jazyka Python. Testy lze spustit příkazem \texttt{python -m pytest tests} v~kořenovém adresáři projektu - \texttt{shrink\_categorization}.
 
 \section{Výsledky}
 Zvolila jsem 5\% hladinu významnosti pro testování statistické významnosti koeficientů korelace $r_\mathrm{P}$ a $r_\mathrm{O}$.
@@ -220,7 +220,7 @@ Z uvedených počtů produktů u jednotlivých kategoriích pro různé ukazatel
 
 \textbf{Masné výrobky - pultový prodej}
 
-Shrink byl zaznamenaný u 111 produktů v~této kategorii úrovně 4. 96 produktů bylo klasifikováno jako kategorie P, dva jako kategorie O, další dva jako X a u zbylých produktů nebyl koeficient korelace statisticky významný a proto nejde u těchto produktů vyslovit hypotézu pro jejich zařazení.
+Shrink byl zaznamenaný u 111 produktů v~této kategorii úrovně 4. 96 produktů bylo klasifikováno jako kategorie P, dva jako kategorie O, další dva jako X. U zbylých produktů nebyl koeficient korelace statisticky významný a proto nejde u těchto produktů vyslovit hypotézu pro jejich zařazení.
 
 Produkty, které patří do kategorie O: Velikonoční klobása a Velikonoční česnekový šál - jedná se zcela jistě o sezónní výrobky. \emph{TBD: vyjmenovat i další produkty, keré si způsobují samy, ale je to většina produktů a salámy, šunky, z~kategorie...} 
 
