@@ -32,9 +32,9 @@
 \contentsline {section}{\numberline {5.2}Implementace}{47}{section.5.2}%
 \contentsline {subsection}{\numberline {5.2.1}Vstupy a výstupy}{47}{subsection.5.2.1}%
 \contentsline {subsection}{\numberline {5.2.2}Popis funkcí a struktura kódu}{48}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Testování}{50}{subsection.5.2.3}%
-\contentsline {section}{\numberline {5.3}Výsledky}{50}{section.5.3}%
-\contentsline {chapter}{Závěr}{55}{chapter*.45}%
-\contentsline {chapter}{Literatura}{56}{chapter*.45}%
-\contentsline {chapter}{Přílohy}{60}{chapter*.46}%
+\contentsline {subsection}{\numberline {5.2.3}Testování}{51}{subsection.5.2.3}%
+\contentsline {section}{\numberline {5.3}Výsledky}{51}{section.5.3}%
+\contentsline {chapter}{Závěr}{55}{chapter*.46}%
+\contentsline {chapter}{Literatura}{56}{chapter*.46}%
+\contentsline {chapter}{Přílohy}{60}{chapter*.47}%
 \contentsline {chapter}{\numberline {A}Obsah přiloženého CD}{61}{appendix.A}%
