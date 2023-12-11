@@ -113,7 +113,17 @@ category_column = 'L6'                      # Level od product hierarchy, on whi
 
 \subsection{Popis funkcí a struktura kódu}
 
-Funkce jsou rozčleněny do souborů podle toho, na jaký výpočet jsou zaměřené. Každá funkce má je zdokumentovaná pomocí docstring obsaženého ve své definici. Dokumentace funkce se skládá ze stručného popisu, co funkce dělá, jaké má vstupní parametry a jaký je jejich význam a co funkce vrací.
+Kód pro korelační analýzu je umístěn ve složce \texttt{shrink\_categorization}, struktura složky je vidět na obrázku \ref*{obr:strukturaslozky}.
+
+\begin{figure}[hbtp!]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=\textwidth]{obrazky/strukturaslozky.pdf}
+    \caption{Struktura souborů pro kód zpracovávající korelační analýzu.}
+    \label{obr:strukturaslozky}
+\end{figure}
+
+Funkce jsou rozčleněny do modulů podle toho, na jaký výpočet jsou zaměřené. Každá funkce má je zdokumentovaná pomocí docstring obsaženého ve své definici. Dokumentace funkce se skládá ze stručného popisu, co funkce dělá, jaké má vstupní parametry a jaký je jejich význam a co funkce vrací. Funkce jsou otestované pomocí unit testů.
 
 Pro práci s tabulkovými daty, které jsou hlavním vstupem, jsem použila balíček \emph{pandas} jazyka Python
 
@@ -134,6 +144,9 @@ Funkce \texttt{define\_risk\_categories} vybere prvních $n$ kategorií v~dané 
 \subsubsection*{Funkce pro výběr pouze dané kategorie ze všech záznamů}
 process\_dataframes
 select\_category
+\subsection{Testování}
+
+Pro testování funkcí jsem použila knihovny \emph(pytest) jazyka Python. Testy lze spustit příkazem \texttt{python -m pytest tests} v kořenovém adresáři projektu - ¨\texttt{shrink\_categorization}. Každý test
 
 \section{Výsledky}
 Zvolila jsem 5\% hladinu významnosti pro testování statistické významnosti koeficientů korelace $r_\mathrm{P}$ a $r_\mathrm{O}$.
