@@ -34,7 +34,7 @@
 \contentsline {subsection}{\numberline {5.2.2}Popis funkcí a struktura kódu}{48}{subsection.5.2.2}%
 \contentsline {subsection}{\numberline {5.2.3}Testování}{51}{subsection.5.2.3}%
 \contentsline {section}{\numberline {5.3}Výsledky}{51}{section.5.3}%
-\contentsline {chapter}{Závěr}{55}{chapter*.46}%
-\contentsline {chapter}{Literatura}{56}{chapter*.46}%
-\contentsline {chapter}{Přílohy}{60}{chapter*.47}%
+\contentsline {chapter}{Závěr}{55}{chapter*.48}%
+\contentsline {chapter}{Literatura}{56}{chapter*.48}%
+\contentsline {chapter}{Přílohy}{60}{chapter*.49}%
 \contentsline {chapter}{\numberline {A}Obsah přiloženého CD}{61}{appendix.A}%

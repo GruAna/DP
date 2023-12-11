@@ -117,9 +117,8 @@ category_column = 'L6'                      # Level od product hierarchy, on whi
 Kód pro korelační analýzu je umístěn ve složce \texttt{shrink\_categorization}, struktura složky je vidět na obrázku \ref*{obr:strukturaslozky}.
 
 \begin{figure}[hbtp!]
-    \centering
     \captionsetup{justification=centering}
-    \includegraphics[width=\textwidth]{obrazky/strukturaslozky.pdf}
+    \includegraphics[width=.3\textwidth]{obrazky/strukturaslozky.pdf}
     \caption{Struktura souborů pro kód zpracovávající korelační analýzu.}
     \label{obr:strukturaslozky}
 \end{figure}
@@ -138,7 +137,7 @@ Pro práci s tabulkovými daty, které jsou hlavním vstupem, jsem použila bal�
     \item Pomocné funkce
 \end{itemize}
 
-\subsection*{Funkce pro přiřazení kategorií k produktům}
+\subsubsection*{Funkce pro přiřazení kategorií k produktům}
 
 Jak je uvedeno na začátku sekce \ref*{ss:vstupyvystupy}, uživatel musí specifikovat názvy sloupců kategorií, které bude v analýze používat. Seznam těchto kategorií je pak parametrem pro funkci \texttt{assign\_levels}. Další parametry jsou DataFrame, kam se mají kategorie napojit a DataFrame odkud se kategorie napojují. Tyto DataFramy musí mít společný sloupec, podle kterého se napojení provede. Defaultně se jedná o sloupec s ID produktu. Defaulně se provádí \emph{left join}, aby nedošlo ke ztrátě dat, kdyby nějaký produkt neměl v DataFramu kategorií zastoupení. Funkci je také možné předat další argumenty, které se dají volat ve funkci \texttt{merge} knihovny \emph{pandas}. V analýze shrinků jeden řádek dat odpovídá transakci jednoho produktu, proto byl zvoleno ID produktu jako propojovací sloupec.
 
@@ -165,9 +164,20 @@ def process_dataframes(category: str, category_column: str, *dataframes) -> list
     return result_dataframes
 \end{lstlisting}
 
+\subsubsection*{Funkce pro přiřzení promoakcí}
+
+V rámci korelační analýzy bylo potřeba přiřadit k jednotlivým zaznamenaným transakcím, zda byl produkt v den záznamu v promoakci nebo nikoli. V ideálním případě by tento příznak mohl být již uvedený u každého záznamu. Pokud tomu tak, ale není, je nutné data o promocích provázat na základě datumu, produktu a prodjeny podle číselníku promoakcí. Data vybrané společnosti, na jejíchž datech analýza probíhá, nemají promoakce přímo napojené na již proběhlé, zaznamenané transakce. Data o promoakcích jsou uložená v číselníku promoakcí. Ten obsahuje ID produktu, prodejny, začátek a konec promoakce a prioritu promoakce. V jeden den může být více promoakcí, v takovém případě platí ta s nejvyšší prioritou.
+
+
+\subsubsection*{Pomocné funkce}
+
+Funkce \texttt{create\_folder} vytvoří složku se zadaným jménem v aktuální cestě, pouze pokud již taková složka neexistuje. 
+
+Pro základní vizualizaci jsem vytvořila funkci, která pomocí knihovny \emph{matplotlib} vytváří bodový graf dvou proměnných. Graf je buď uložen nebo zobrazený při spuštění funkce. Funkci lze předat DataFrame a názvy dvou sloupců, které reprezentují vstupy pro osy $x$ a $y$ grafu. Další vstupy jsou názvy os a grafu, případně název souboru, pokud uživatel graf uložit. 
+
 \subsection{Testování}
 
-Pro testování funkcí jsem použila knihovny \emph(pytest) jazyka Python. Testy lze spustit příkazem \texttt{python -m pytest tests} v kořenovém adresáři projektu - \texttt{shrink\_categorization}.
+Pro testování funkcí jsem použila knihovny \emph{pytest} jazyka Python. Testy lze spustit příkazem \texttt{python -m pytest tests} v kořenovém adresáři projektu - \texttt{shrink\_categorization}.
 
 \section{Výsledky}
 Zvolila jsem 5\% hladinu významnosti pro testování statistické významnosti koeficientů korelace $r_\mathrm{P}$ a $r_\mathrm{O}$.
