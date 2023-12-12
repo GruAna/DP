@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  12 DEC 2023 20:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  12 DEC 2023 22:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1286,12 +1286,7 @@ File: obrazky/strukturaslozky.pdf Graphic file (type pdf)
 <use obrazky/strukturaslozky.pdf>
 Package pdftex.def Info: obrazky/strukturaslozky.pdf  used on input line 121.
 (pdftex.def)             Requested size: 128.0387pt x 155.57233pt.
- [48] [49 <./obrazky/strukturaslozky.pdf>]
-Overfull \hbox (9.78781pt too wide) in paragraph at lines 171--173
-[]\OT1/lmr/m/n/12 Z^^Sakladn^^S^^P funkce pro p^^Tri^^Trazen^^S^^P pro-mo-akc^^S^^P k pro-dukt^^Wum se naz^^Syv^^Sa \OT1/lmtt/m/n/12 map[]all[]promotions\OT1/lmr/m/n/12 .
- []
-
-[50]
+ [48] [49 <./obrazky/strukturaslozky.pdf>] [50]
 Underfull \hbox (badness 10000) in paragraph at lines 208--208
 []|\OT1/lmr/m/n/12 Za^^Tc^^Satek
  []
@@ -1325,39 +1320,58 @@ Overfull \hbox (33.68207pt too wide) in paragraph at lines 178--232
 LaTeX Warning: Float too large for page by 28.50403pt on input line 232.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 243--243
+Underfull \hbox (badness 10000) in paragraph at lines 242--242
 []|\OT1/lmr/m/n/12 Datum
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 243--243
+Underfull \hbox (badness 10000) in paragraph at lines 242--242
 []|\OT1/lmr/m/n/12 Za^^Tc^^Satek
  []
 
 
-Overfull \hbox (54.17606pt too wide) in paragraph at lines 268--269
-\OT1/lmr/m/n/12 p^^Tr^^S^^Pkazem \OT1/lmtt/m/n/12 python -m pytest tests \OT1/lmr/m/n/12 v ko^^Trenov^^Sem ad-res^^Sa^^Tri pro-jektu - \OT1/lmtt/m/n/12 shrink[]categorization\OT1/lmr/m/n/12 . 
+LaTeX Warning: Reference `label' on page 51 undefined on input line 257.
+
+
+Overfull \hbox (39.10352pt too wide) in paragraph at lines 260--261
+\OT1/lmr/m/n/12 ob-sa-huj^^S^^Pc^^S^^P da-tumy se p^^Trevedou na typ \OT1/lmtt/m/n/12 datetime\OT1/lmr/m/n/12 . Pot^^Se se za-vol^^Sa funkce \OT1/lmtt/m/n/12 map[]all[]promotions\OT1/lmr/m/n/12 ,
  []
 
 
-Underfull \vbox (badness 2334) has occurred while \output is active []
+Overfull \hbox (20.3468pt too wide) in paragraph at lines 260--261
+\OT1/lmtt/m/n/12 find[]duplicated[]records \OT1/lmr/m/n/12 vy-be-rou v^^Tsechny ^^Tr^^Sadky, kter^^Se ob-sa-huj^^S^^P re-dun-dantn^^S^^P z^^Saznamy.
+ []
+
+
+Underfull \vbox (badness 4429) has occurred while \output is active []
 
  [51] [52]
-Overfull \hbox (33.57002pt too wide) in paragraph at lines 282--305
+Overfull \hbox (80.88744pt too wide) in paragraph at lines 264--265
+\OT1/lmtt/m/n/12 aggregate[]sum\OT1/lmr/m/n/12 , \OT1/lmtt/m/n/12 product[]sales[]correlation\OT1/lmr/m/n/12 , \OT1/lmtt/m/n/12 significance\OT1/lmr/m/n/12 , \OT1/lmtt/m/n/12 check[]identical\OT1/lmr/m/n/12 , \OT1/lmtt/m/n/12 categorization\OT1/lmr/m/n/12 ,
+ []
+
+
+Overfull \hbox (12.98993pt too wide) in paragraph at lines 268--270
+\OT1/lmr/m/n/12 tvo^^Trila funkci, kter^^Sa po-moc^^S^^P knihovny \OT1/lmr/m/it/12 mat-plot-lib \OT1/lmr/m/n/12 vytv^^Sa^^Tr^^S^^P bo-dov^^Sy graf dvou prom^^Tenn^^Sych.
+ []
+
+[53]
+Overfull \hbox (33.57002pt too wide) in paragraph at lines 288--311
  [][] 
  []
 
-<obrazky/grafy/categorization_charts/categorization_charts_L4_PROC. MEAT SERVICE.pdf, id=689, 462.52798pt x 346.89601pt>
+[54]
+<obrazky/grafy/categorization_charts/categorization_charts_L4_PROC. MEAT SERVICE.pdf, id=700, 462.52798pt x 346.89601pt>
 File: obrazky/grafy/categorization_charts/categorization_charts_L4_PROC. MEAT SERVICE.pdf Graphic file (type pdf)
 <use obrazky/grafy/categorization_charts/categorization_charts_L4_PROC. MEAT SERVICE.pdf>
-Package pdftex.def Info: obrazky/grafy/categorization_charts/categorization_charts_L4_PROC. MEAT SERVICE.pdf  used on input line 320.
+Package pdftex.def Info: obrazky/grafy/categorization_charts/categorization_charts_L4_PROC. MEAT SERVICE.pdf  used on input line 326.
 (pdftex.def)             Requested size: 426.79134pt x 320.11156pt.
-[53]
-Overfull \hbox (3.59305pt too wide) in paragraph at lines 327--329
+
+Overfull \hbox (3.59305pt too wide) in paragraph at lines 333--335
 \OT1/lmr/m/n/12 rust.poh., bageta s gra-ha-mem, bageta chle-bov^^Sa, ban-ketka cere^^Saln^^S^^P, da-lam^^Sanek, kostka
  []
 
-[54] [55 <./obrazky/grafy/categorization_charts/categorization_charts_L4_PROC. MEAT SERVICE.pdf>]) [56] (kapitoly/zaver.tex) [57
+[55 <./obrazky/grafy/categorization_charts/categorization_charts_L4_PROC. MEAT SERVICE.pdf>]) [56] (kapitoly/zaver.tex) [57
 
 ] (tex/bibliografie1.tex [58
 
@@ -1464,20 +1478,20 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `DP_Gruberova.out' has not changed.
-(rerunfilecheck)             Checksum: 25ADED4F46403217AE6D5C9FB7B5D125;4399.
+(rerunfilecheck)             Checksum: F249BAF389538D85BC0F1C7B243802E5;4399.
  ) 
 Here is how much of TeX's memory you used:
- 29314 strings out of 475380
- 542452 string characters out of 2775356
- 1295194 words of memory out of 3000000
- 49838 multiletter control sequences out of 15000+600000
+ 29316 strings out of 475380
+ 542470 string characters out of 2775356
+ 1295220 words of memory out of 3000000
+ 49839 multiletter control sequences out of 15000+600000
  552146 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,17n,94p,2358b,1554s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmib10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt8.pfb>
-Output written on DP_Gruberova.pdf (63 pages, 2932827 bytes).
+Output written on DP_Gruberova.pdf (63 pages, 2936377 bytes).
 PDF statistics:
- 959 PDF objects out of 1000 (max. 8388607)
- 242 named destinations out of 1000 (max. 500000)
+ 960 PDF objects out of 1000 (max. 8388607)
+ 243 named destinations out of 1000 (max. 500000)
  394 words of extra memory for PDF output out of 10000 (max. 10000000)
 

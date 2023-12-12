@@ -166,15 +166,15 @@ def process_dataframes(category: str, category_column: str, *dataframes) -> list
 
 \subsubsection*{Funkce pro přiřazení promoakcí}
 
-V rámci korelační analýzy bylo potřeba přiřadit k~jednotlivým zaznamenaným transakcím, zda byl produkt v~den záznamu v~promoakci nebo nikoli. V~ideálním případě by tento příznak mohl být již uvedený u každého záznamu. Pokud tomu tak, ale není, je nutné data o promocích provázat na základě datumu, produktu a prodjeny podle číselníku promoakcí. Data vybrané společnosti, na jejíchž datech analýza probíhá, nemají promoakce přímo napojené na již proběhlé, zaznamenané transakce. Data o promoakcích jsou uložená v~číselníku promoakcí. Ten obsahuje ID produktu, prodejny, začátek a konec promoakce a prioritu promoakce. V~jeden den může být více promoakcí, v~takovém případě platí ta s~nejvyšší prioritou.
+V rámci korelační analýzy bylo potřeba přiřadit k~jednotlivým zaznamenaným transakcím, zda byl produkt v~den záznamu v~promoakci nebo nikoli. V~ideálním případě by tento příznak mohl být již uvedený u každého záznamu. Pokud tomu tak, ale není, je nutné data o promocích provázat na základě data, produktu a prodejny podle číselníku promoakcí. Data vybrané společnosti, na jejíchž datech analýza probíhá, nemají promoakce přímo napojené na již proběhlé, zaznamenané transakce. Data o promoakcích jsou uložená v~číselníku promoakcí. Ten obsahuje ID produktu, prodejny, začátek a konec promoakce a prioritu promoakce. V~jeden den může být více promoakcí, v~takovém případě platí ta s~nejvyšší prioritou.
 
-Základní funkce pro přiřazení promoakcí k produktům se nazývá \texttt{map\_all\_promotions}. Tato funkce propojí DataFrame s promoakcemi s druhým DataFramem s transakcemi. Může se jednat jak o záznamy shrinků, tak i o prodeje. Důležité je, že tento DataFrame má sloupec s datem, protože díky datu pak lze identifikovat správnou promoakci. Nalezení správné promoakce je implementováno až ve funkci \texttt{promo\_}, viz dále v této sekci. Funkce \texttt{map\_all\_promotions} nejprve provede vnitřní spojení (neboli \emph{inner join}) obou vstupních DataFramů podle definovancýh sloupců v parametrech funkce. Tyto sloupce jsou vzhledem k datům společnosti - sloupce s ID produktu a ID prodejny. Tím je docíleno toho, že z promoakcí získáme pouze ty záznamy pouze těch produktů, které se prodali, a které zároveň byly v promoakci. Duplicitní záznamy se vynechají. U každého takového záznamu spočítá, kolikrát byl k němu byla přiřazeno promoakce (tj. kolik bylo promoakcí ve sledovaném období pro daný produkt a prodejnu) a ke každému záznamu toto číslo přiřadí. Spolu s číslem se přiřadí i identifkátor promoakce pro dvojici produkt-prodejna (viz tabulka C). Takto označené záznamy se připojí k původnímu DataFramu s transakcemi. Záznamy, kde není žádná promoakce je počet promoakcí roven nule, zbylé hondoty nejsou definované.
-Dále se identifikátor upraví tak, že dokáže rozlišit unikátní promoakci na trojici produkt-prodejna-datum (viz tabulka D). V tabulce \ref*{tab:tabulkypromoakceukaz} jsou umělá ukázková data, na kterých je znázorněno spojování dat.
+Základní funkce pro přiřazování promoakcí k~záznamům s transakcemi se nazývá \texttt{map\_all\_promotions}. Tato funkce propojí DataFrame s~promoakcemi s~druhým DataFramem s~transakcemi. Může se jednat jak o záznamy shrinků, tak i o prodeje. Důležité je, že tento DataFrame má sloupec s~datem, protože díky datu pak lze identifikovat správnou promoakci. Nalezení správné promoakce je implementováno až ve funkci \texttt{promo\_}, viz dále v~této sekci. Funkce \texttt{map\_all\_promotions} nejprve provede vnitřní spojení (neboli \emph{inner join}) obou vstupních DataFramů podle definovaných sloupců v~parametrech funkce. Tyto sloupce jsou vzhledem k~datům společnosti - sloupce s~ID produktu a ID prodejny. Tím je docíleno toho, že z~promoakcí získáme pouze ty záznamy pouze těch produktů, které se prodali, a které zároveň byly v~promoakci. Duplicitní záznamy se vynechají. U každého takového záznamu spočítá, kolikrát byl k~němu byla přiřazeno promoakce (tj.~kolik bylo promoakcí ve sledovaném období pro daný produkt a prodejnu) a ke~každému záznamu toto číslo přiřadí. Spolu s~číslem se přiřadí i identifikátor promoakce pro dvojici produkt-prodejna (viz tabulka C), tím je určena skupina k sobě patřících záznamů. Takto označené záznamy se připojí k~původnímu DataFramu s~transakcemi. Záznamy, kde není žádná promoakce je počet promoakcí roven nule, zbylé hodnoty nejsou definované.
+Dále se identifikátor upraví tak, že dokáže rozlišit unikátní promoakci na trojici produkt-prodejna-datum (viz tabulka D). V~tabulce \ref*{tab:tabulkypromoakceukaz} jsou umělá ukázková data, na kterých je znázorněno spojování dat.
 
 \begin{table}[hbtp!]
     \centering
     \captionsetup{justification=centering}
-    \caption{Umělá data pro znázornění přiřazování promoakcí k transakcím.}
+    \caption{Umělá data pro znázornění přiřazování promoakcí k~transakcím.}
     \begin{tabular}{llll}
     \multicolumn{4}{c}{Tab. A: Tabulka promoakcí } \\
     \toprule
@@ -231,13 +231,12 @@ Dále se identifikátor upraví tak, že dokáže rozlišit unikátní promoakci
     \label{tab:tabulkypromoakceukaz}
 \end{table}
 
-
-Z ukázky a z popsaného postupu plyne, že výsledný DataFrame může mít více řádků než ten původní, ke kterému se přidávali promoakce. V dalším kroku je tedy potřeba určit, která z přiřazených promoakcí probíhala ve stejný čas jako je čas transakce. K tomu jsem vytvořila funkci \texttt{label\_date\_with\_promo}. V této funkci je každý řádek promoakce olabelován jednou ze tří možností: \texttt{no promo, promo, after promo}. Tedy zda je datum transakce během promoakce, nebo nikoli, nebo zda je v rozmezí týden po evidované promoakci. Vzniklý příznak byl pojmenován jako typ promoakce. V tabulce\footnote[1]{Zbylé sloupce jsou vynechané, protože pro ukázku příznaku nejsou podstatné.} \ref*{tab:tabulkalabely} jsou podle těchto pravidel označené jednotlivé řádky.
+Z ukázky a z~popsaného postupu plyne, že výsledný DataFrame může mít více řádků než ten původní, ke kterému se přidávali promoakce. V~dalším kroku je tedy potřeba určit, která z~přiřazených promoakcí probíhala ve stejný čas jako je čas transakce. K~tomu jsem vytvořila funkci \texttt{label\_date\_with\_promo}. V~této funkci je každý řádek promoakce označen jednou ze tří možností: \texttt{no promo, promo, after promo}. Tedy zda je datum transakce během promoakce, nebo nikoli, nebo zda je v~rozmezí týden po evidované promoakci. Vzniklý příznak byl pojmenován jako typ promoakce. Ve funkci se pracuje pouze se záznamy u nichž byla nalezena alespoň jedna možná promoakce, tj. transakce, kde dvojice produkt-prodejna existuje i v~promoakcích. Zbylé řádky tato funkce neoznačuje. V~tabulce \ref*{tab:tabulkalabely} jsou podle těchto pravidel označené jednotlivé řádky\footnote[1]{Zbylé sloupce jsou vynechané, protože pro ukázku příznaku nejsou podstatné.}.
  
 \begin{table}[hbtp!]
     \centering
     \captionsetup{justification=centering}
-    \caption{Olabelovaná tabulka transakcí a promoakcí.}
+    \caption{Tabulka transakcí a promoakcí s přidaným příznakem typ promoakce.}
     \begin{tabular}{llp{2cm}p{2.1cm}p{2cm}p{2.5cm}}
         \toprule
         Produkt & Prodejna & Datum transakce & Začátek promoakce & Konec \newline promoakce& Typ \newline promoakce\\
@@ -255,17 +254,24 @@ Z ukázky a z popsaného postupu plyne, že výsledný DataFrame může mít ví
     \label{tab:tabulkalabely}
 \end{table}
 
+V dalším kroku je třeba vybrat pouze jednu přiřazenou promoakci o to se stará funkce \texttt{find\_duplicated\_records}. Tato funkce vrací seznam indexů řádků DataFramu, které se mohou zahodit. Algoritmus je znázorněný na obr. \ref*{label} \emph{TBD: obrázek UML}.
+Postupně se prochází každý řádek DataFramu. V pomocné proměnné se zaznamenává aktuální identifikátor určující jednoznačnou trojici produkt-prodejna-datum. Nejdříve se do pomocného seznamu nahrají všechny indexy řádků, které mají aktuální identifikátor. Potom se iteruje přes všechny tyto vybrané řádky. Pokud je typ promoakce iterovaného řádku typu \texttt{promo}, běh se zastaví a tento řádek se vybere ze skupiny záznamů, uloží se a pokračuje se na další skupinu. Pokud typ promoakce nebyl \texttt{promo}, ale \texttt{after promo}, tak se vybere tato promoakce, následné kroky jsou analogické předchozímu případu. Pokud nenastala ani jedna z možností zbývá situace, kdy typ promoakce je \texttt{no promo}. Až jsou takto prohledané všechny záznamy, na základě seznamu vybraných řádkových indexů se vytvoří seznam indexů ke smazání jako rozdíl všech indexů v~DataFramu a indexů s~vybranými promoakcemi.
 
+Funkce \texttt{match\_promo\_to\_sales} sdružuje dříve popsané funkce, které zpracovávají promoakce. Vstupními parametry funkce jsou DataFramy transakcí a promoakcí a názvy sloupců. Názvy sloupců mají předdefinovanou hodnotu, kterou lze změnit. V dalším volitelném parametru je možné specifikovat formát datumu. Všechny sloupce obsahující datumy se převedou na typ \texttt{datetime}. Poté se zavolá funkce \texttt{map\_all\_promotions}, která spojí transakce s~promoakcemi. Může vzniknout DataFrame, který má více řádků než původní. Výsledný DataFrame se předá funkci \texttt{label\_date\_with\_promo}, kde se označí u napojených promoakcích typ promoakce. Dále se pomocí funkce \texttt{find\_duplicated\_records} vyberou všechny řádky, které obsahují redundantní záznamy. Tyto řádky se odstraní z~DataFramu s~namapovanými promoakcemi. Ke všem řádkům, ke kterým neexistuje promoakce v~číselníku promoakcí, je přiřazen příznak \texttt{no promo}. Na závěr funkce zobrazí souhrn o velikostech dílčích DataFramů, aby měl uživatel informaci o počtech duplicitních záznamů. Během výpočtu jsou procesy iterování sledovány pomocí knihovny \emph{tqdm}.
+
+\subsubsection*{Funkce pro korelační analýzu}
+
+\texttt{aggregate\_sum}, \texttt{product\_sales\_correlation}, \texttt{significance}, \texttt{check\_identical}, \texttt{categorization}, \texttt{categorize\_products}, \texttt{unsignificant\_rows}, \texttt{correlation}
 
 \subsubsection*{Pomocné funkce}
 
-Funkce \texttt{create\_folder} vytvoří složku se zadaným jménem v~aktuální cestě, pouze pokud již taková složka neexistuje. 
-
+Funkce \texttt{create\_folder} vytvoří složku se zadaným jménem v~aktuální cestě, pouze pokud již taková složka neexistuje. Další pomocná funkce je \texttt{format\_date}, která využívá funkci z knihovny \emph{pandas} \texttt{to\_datetime}. 
 Pro základní vizualizaci jsem vytvořila funkci, která pomocí knihovny \emph{matplotlib} vytváří bodový graf dvou proměnných. Graf je buď uložen nebo zobrazený při spuštění funkce. Funkci lze předat DataFrame a názvy dvou sloupců, které reprezentují vstupy pro osy $x$ a $y$ grafu. Další vstupy jsou názvy os a grafu, případně název souboru, pokud uživatel graf uložit. 
 
 \subsection{Testování}
 
-Pro testování funkcí jsem použila knihovny \emph{pytest} jazyka Python. Testy lze spustit příkazem \texttt{python -m pytest tests} v~kořenovém adresáři projektu - \texttt{shrink\_categorization}.
+Pro testování funkcí jsem použila knihovnu \emph{pytest} jazyka Python. Testy lze spustit příkazem \texttt{python -m pytest tests} v~kořenovém adresáři projektu.
+
 
 \section{Výsledky}
 Zvolila jsem 5\% hladinu významnosti pro testování statistické významnosti koeficientů korelace $r_\mathrm{P}$ a $r_\mathrm{O}$.
@@ -273,7 +279,7 @@ Zvolila jsem 5\% hladinu významnosti pro testování statistické významnosti 
 Nejprve jsem se zaměřila na kategorie z~úrovně 4, a to prvních deset kategorií s~nejvyšší hodnotou shrinků (tj. s~nejvyšší zaznamenanou ztrátou) 
 
 V~tabulce č.~\ref*{tab:kategCorrPorovnani} \emph{(TBD: Bude tam víc kategorii L4.)} jsou porovnání výsledků kategorizace pro kategorii Masné výrobky a Slané pečivo. Měřila jsem postupně korelaci velikosti shrinku s~různými ukazateli pro celkové tržby ostatních produktů. Pro určení míry korelace jsem zvolila Spearmanův korelační koeficient, jelikož data nesplňují předpoklady, které jsou nutné pro použití Pearsonova korelačního koeficientu - data nejsou nezávislá a stejně rozdělená. 
-Z uvedených počtů produktů u jednotlivých kategoriích pro různé ukazatele, je patrné, že výsledky se příliš neliší. Pokud bychom se ale zaměřovali na celkové prodeje, nikoli promoční, tak získáváme větší množství produktů, u~nichž nebylo možné vysvětlit shrink pomocí korelace. 
+Z~uvedených počtů produktů u jednotlivých kategoriích pro různé ukazatele, je patrné, že výsledky se příliš neliší. Pokud bychom se ale zaměřovali na celkové prodeje, nikoli promoční, tak získáváme větší množství produktů, u~nichž nebylo možné vysvětlit shrink pomocí korelace. 
 
 \begin{table}[hbtp!]
     \centering
