@@ -168,6 +168,94 @@ def process_dataframes(category: str, category_column: str, *dataframes) -> list
 
 V rámci korelační analýzy bylo potřeba přiřadit k~jednotlivým zaznamenaným transakcím, zda byl produkt v~den záznamu v~promoakci nebo nikoli. V~ideálním případě by tento příznak mohl být již uvedený u každého záznamu. Pokud tomu tak, ale není, je nutné data o promocích provázat na základě datumu, produktu a prodjeny podle číselníku promoakcí. Data vybrané společnosti, na jejíchž datech analýza probíhá, nemají promoakce přímo napojené na již proběhlé, zaznamenané transakce. Data o promoakcích jsou uložená v~číselníku promoakcí. Ten obsahuje ID produktu, prodejny, začátek a konec promoakce a prioritu promoakce. V~jeden den může být více promoakcí, v~takovém případě platí ta s~nejvyšší prioritou.
 
+Základní funkce pro přiřazení promoakcí k produktům se nazývá \texttt{map\_all\_promotions}. Tato funkce propojí DataFrame s promoakcemi s druhým DataFramem s transakcemi. Může se jednat jak o záznamy shrinků, tak i o prodeje. Důležité je, že tento DataFrame má sloupec s datem, protože díky datu pak lze identifikovat správnou promoakci. Nalezení správné promoakce je implementováno až ve funkci \texttt{promo\_}, viz dále v této sekci. Funkce \texttt{map\_all\_promotions} nejprve provede vnitřní spojení (neboli \emph{inner join}) obou vstupních DataFramů podle definovancýh sloupců v parametrech funkce. Tyto sloupce jsou vzhledem k datům společnosti - sloupce s ID produktu a ID prodejny. Tím je docíleno toho, že z promoakcí získáme pouze ty záznamy pouze těch produktů, které se prodali, a které zároveň byly v promoakci. Duplicitní záznamy se vynechají. U každého takového záznamu spočítá, kolikrát byl k němu byla přiřazeno promoakce (tj. kolik bylo promoakcí ve sledovaném období pro daný produkt a prodejnu) a ke každému záznamu toto číslo přiřadí. Spolu s číslem se přiřadí i identifkátor promoakce pro dvojici produkt-prodejna (viz tabulka C). Takto označené záznamy se připojí k původnímu DataFramu s transakcemi. Záznamy, kde není žádná promoakce je počet promoakcí roven nule, zbylé hondoty nejsou definované.
+Dále se identifikátor upraví tak, že dokáže rozlišit unikátní promoakci na trojici produkt-prodejna-datum (viz tabulka D). V tabulce \ref*{tab:tabulkypromoakceukaz} jsou umělá ukázková data, na kterých je znázorněno spojování dat.
+
+\begin{table}[hbtp!]
+    \centering
+    \captionsetup{justification=centering}
+    \caption{Umělá data pro znázornění přiřazování promoakcí k transakcím.}
+    \begin{tabular}{llll}
+    \multicolumn{4}{c}{Tab. A: Tabulka promoakcí } \\
+    \toprule
+    ID produktu & Prodejna & Začátek promoakce & Konec promoakce  \\
+    \midrule
+    0001 & 01 & 2023-03-01 & 2023-03-05 \\
+    0001 & 01 & 2023-03-15 & 2023-03-25 \\
+    0002 & 02 & 2023-03-15 & 2023-03-25 \\
+    0003 & 10 & 2023-03-15 & 2023-03-25 \\
+    0004 & 02 & 2023-03-15 & 2023-03-25 \\
+    \bottomrule
+    \end{tabular}
+\bigskip
+    \begin{tabular}{lll}
+        \multicolumn{3}{c}{Tab. B: Tabulka transakcí} \\
+        \toprule
+        Produkt & Prodejna & Datum transakce  \\
+        \midrule
+        0001 & 01 & 2023-03-02  \\
+        0001 & 01 & 2023-03-09  \\
+        0002 & 02 & 2023-03-15 \\
+        0003 & 02 & 2023-03-15 \\
+        0004 & 10 & 2023-03-15 \\
+        0004 & 11 & 2023-03-30 \\
+        \bottomrule
+    \end{tabular}
+\bigskip
+    \begin{tabular}{llp{2cm}p{2.2cm}p{2cm}p{2cm}}
+        \multicolumn{6}{c}{Tab. C: Tabulka souhlasných dvojic promoakce-produkt} \\
+        \toprule
+        Produkt & Prodejna & Začátek promoakce & Konec \newline promoakce& Identifikátor dvojice & Počet \newline  promoakcí\\
+        \midrule
+        0001 & 01 & 2023-03-01 & 2023-03-05 & 1 & 2\\
+        0001 & 01 & 2023-03-15 & 2023-03-25 & 1 & 2\\
+        0002 & 02 & 2023-03-15 & 2023-03-25 & 2 & 1\\
+        \bottomrule
+    \end{tabular}
+\bigskip
+    \begin{tabular}{llp{2cm}p{2cm}p{2.1cm}p{2cm}p{2cm}}
+        \multicolumn{7}{c}{Tab. D: Tabulka souhlasných trojic promoakce-produkt-datum} \\
+        \toprule
+        Produkt & Prodejna & Datum transakce & Začátek promoakce & Konec \newline promoakce& Identifikátor trojice & Počet \newline promoakcí\\
+        \midrule
+        0001 & 01 & 2023-03-02 & 2023-03-01 & 2023-03-05 & 1A & 2 \\
+        0001 & 01 & 2023-03-02 & 2023-03-15 & 2023-03-25 & 1A & 2 \\
+        0001 & 01 & 2023-03-09 & 2023-03-01 & 2023-03-05 & 1B & 2 \\
+        0001 & 01 & 2023-03-09 & 2023-03-15 & 2023-03-25 & 1B & 2 \\
+        0002 & 02 & 2023-03-15 & 2023-03-15 & 2023-03-25 & 2A & 1 \\
+        0003 & 10 & 2023-03-15 & NaN & NaN & NaN & 0 \\
+        0004 & 10 & 2023-03-15 & NaN & NaN & NaN & 0 \\
+        0004 & 11 & 2023-03-30 & NaN& NaN & NaN & 0 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:tabulkypromoakceukaz}
+\end{table}
+
+
+Z ukázky a z popsaného postupu plyne, že výsledný DataFrame může mít více řádků než ten původní, ke kterému se přidávali promoakce. V dalším kroku je tedy potřeba určit, která z přiřazených promoakcí probíhala ve stejný čas jako je čas transakce. K tomu jsem vytvořila funkci \texttt{label\_date\_with\_promo}. V této funkci je každý řádek promoakce olabelován jednou ze tří možností: \texttt{no promo, promo, after promo}. Tedy zda je datum transakce během promoakce, nebo nikoli, nebo zda je v rozmezí týden po evidované promoakci. Vzniklý příznak byl pojmenován jako typ promoakce. V tabulce\footnote[1]{Zbylé sloupce jsou vynechané, protože pro ukázku příznaku nejsou podstatné.} \ref*{tab:tabulkalabely} jsou podle těchto pravidel označené jednotlivé řádky.
+ 
+\begin{table}[hbtp!]
+    \centering
+    \captionsetup{justification=centering}
+    \caption{Olabelovaná tabulka transakcí a promoakcí.}
+    \begin{tabular}{llp{2cm}p{2.1cm}p{2cm}p{2.5cm}}
+        \toprule
+        Produkt & Prodejna & Datum transakce & Začátek promoakce & Konec \newline promoakce& Typ \newline promoakce\\
+        \midrule
+        0001 & 01 & 2023-03-02 & 2023-03-01 & 2023-03-05 & promo \\
+        0001 & 01 & 2023-03-02 & 2023-03-15 & 2023-03-25 & no promo \\
+        0001 & 01 & 2023-03-09 & 2023-03-01 & 2023-03-05 & after promo \\
+        0001 & 01 & 2023-03-09 & 2023-03-15 & 2023-03-25 & no promo \\
+        0002 & 02 & 2023-03-15 & 2023-03-15 & 2023-03-25 & promo\\
+        0003 & 10 & 2023-03-15 & NaN & NaN & no promo \\
+        0004 & 10 & 2023-03-15 & NaN & NaN & no promo \\
+        0004 & 11 & 2023-03-30 & NaN & NaN & no promo \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:tabulkalabely}
+\end{table}
+
+
 
 \subsubsection*{Pomocné funkce}
 
