@@ -7,17 +7,15 @@
 % zkrtky PCA, MCA, CA,
 % znaceni jendotkový vektor rozměru J \mathbf{1}_J
 % Singulární rozklad (zkratkou SVD podle anglického názvu Singular Value Decomposition) matice + singulární hodnoty
-\section{}
 
 
 \section{Redukce dimenzionality} %Extrakce proměnných}
 
 \subsection{Analýza hlavních komponent}
 
+Analýza hlavních komponent (anglicky \emph{Principal component analysis}, dále jako PCA) je statistická metoda využívaná pro pro extrakci proměnných, redukci vícedimenzio-\\nálních dat nebo vizualizaci dat. Lze ji aplikovat pouze na kvantitativní data s numerickými, spojitými hodnotami, neboť metoda využívá lineární algebraické techniky, jako je například kovarianční matice, pro jejíž výpočet se předpokládají spojité hodnoty. 
 
-Analýza hlavních komponent (anglicky \emph{Principal component analysis}, dále jako PCA) je statistická metoda využívaná pro pro extrakci proměnných, redukci vícedimenzionálních dat nebo vizualizaci dat. Lze ji aplikovat pouze na kvantitativní data s numerickými, spojitými hodnotami, neboť metoda využívá lineární algebraické techniky, jako je například kovarianční matice, pro jejíž výpočet se předpokládají spojité hodnoty. 
-
-Jednotlivá pozorování obsažená v datech bývají popsána několika různými proměnnými. Tyto proměnné jsou často vzájemně korelované a obsahují šum. Metoda PCA umožňuje extrahovat pouze důležité informace z proměnných a snížit šum.~k tomu je třeba vypočítat nové ortogonální proměnné, nazývané hlavní komponenty, které se získají jako lineární kombinace původních proměnných \cite{bib:PCA1}. Hlavní komponenty reprezentují směry největšího rozptylu původních dat a jsou řazeny podle své významnosti. Jinými slovy, první hlavní komponenta zachycuje co nejvíce variability v datech, druhá hlavní komponenta zachycuje co nejvíce variability, která nebyla zachycena první hlavní komponentou, pro zbylé komponenty analogicky. 
+Jednotlivá pozorování obsažená v datech bývají popsána několika různými příznaky. Tyto příznaky jsou často vzájemně korelované a obsahují šum. Metoda PCA dovede extrahovat pouze důležité informace z proměnných a snížit šum. K~tomu je třeba vypočítat nové ortogonální proměnné, nazývané hlavní komponenty, které se získají jako lineární kombinace původních proměnných \cite{bib:PCA1}. Hlavní komponenty reprezentují směry největšího rozptylu původních dat a jsou řazeny podle své významnosti. Jinými slovy, první hlavní komponenta zachycuje co nejvíce variability v~datech, druhá hlavní komponenta zachycuje co nejvíce variability, která nebyla zachycena první hlavní komponentou, pro zbylé komponenty analogicky. \cite{bib:PCA3}
 %, jinými slovy se jedná o přímku,  které nesou největší informaci o datech. Hlavní komponentu si lze představit jako novou osu, která umožňuje vidět data v takovém rozložení, že rozdíly mezi pozorováními jsou lépe patrné.  %https://builtin.com/data-science/step-step-explanation-principal-component-analysis
 
 \subsubsection{Princip}
@@ -69,12 +67,12 @@ Druhá hlavní komponenta
     y_{2i} = \bm{a}_2^\top (\bm{x}_i - \bar{\bm{x}}), \quad \mbox{pro } i=1,\ldots,N,
 \end{equation}
 se vypočte obdobným způsobem s přidanou podmínkou ortogonality vzhledem~k první hlavní komponentě -- druhá hlavní komponenta nesmí být korelovaná s předchozí, první hlavní komponentou. Potom popisuje druhý největší možný rozptyl v datech. Znázornění dvou hlavních komponent ve dvoudimenzionálním prostoru je vyobrazeno na obrázku \ref*{obr:met:PCA1}.
-Vektor  $\bm{a}_2$ se opět získá jako jednotkový vlastní vektor kovarianční matice $\mathbf{C}$ příslušící druhému největšímu vlastnímu číslu $\lambda_2$.\cite{bib:PCA1} %https://builtin.com/data-science/step-step-explanation-principal-component-analysis
+Vektor  $\bm{a}_2$ se opět získá jako jednotkový vlastní vektor kovarianční matice $\mathbf{C}$ příslušící druhému největšímu vlastnímu číslu $\lambda_2$.\cite{bib:PCA1, bib:PCA3} %https://builtin.com/data-science/step-step-explanation-principal-component-analysis
 
 \begin{figure}[hbtp!]
     \centering
-    % \includegraphics[width=\textwidth]{obrazky/grafy/Graf_celkem-D.png}
-    \caption{Znázornění dvou hlavních komponent na dvoudimenzionálních datech.}
+    \includegraphics[width=\textwidth]{obrazky/PCA.pdf}
+    \caption{Znázornění dvou hlavních komponent na pro dvě proměnné. Zdroj: vlastní.}
     \label{obr:met:PCA1}
 \end{figure}
 
@@ -156,7 +154,16 @@ První způsob MCA aplikuje základní algoritmus korespondenční analýzy na m
 
 \subsubsection{Korelační koeficient}
 \subsubsection{Další způsoby měření závislosti}
-Metoda vzájemné informace
+
+Pro určení kolik informace o jedné proměnné nese druhá proměnná, je popsáno
+pomocí vzájemné informace \cite{bib:MI}. Informací lze rozumět obsah jakéhokoli oznámení nebo údaje, který se přenáší v daném čase a prostoru. Podle Shannona, zakladatele teorie informace, je informace míra množství neurčitosti nebo nejistoty o nějakém náhodném jevu, která se odstraní realizací daného jevu \cite{bib:MI2}. Informací tak může být stanovení výsledku náhodného jevu, tedy se jedná o hodnotu náhodné veličiny \cite{bib:MI}. Pro definování vzájemné informace je třeba definovat ještě vlastní informace a pojem entropie.
+
+Dále jsou sepsány předpoklady pro výpočet množství informace. Pokud má náhodný jev $X$ $n$ realizací, pak je množství informace funkcí $n$. Pakliže je $n=1$, množství informace se rovná nule, neboť se jedná o jev jistý. 
+Pokud jevy $X$ A $Y$ probíhají nezávisle, ale ve stejný čas, tj. $p(x,y)$, potom množství informace obou jevů se tovná součtu jejich množství.
+Pokud jev $X$ má $n $ realizací a jev $Y$ $m$ realizací, kde $m>n$, potom se očekává, že množství informace jevu $Y$ je větší než množství informace jevu $X$. \cite{bib:MI2}
+
+
+Entropie náhodného jevu $X$, který má $n$ realizací $X = x_1, x_2, \ldots, x_n$ s pravděpodobnostmi $X = p(x_1), p(x_2), \ldots, p(x_n)$
 
 Theilovo U a Cramerovo V
 %https://www.statology.org/interpret-cramers-v/

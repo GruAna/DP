@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2021.4.4)  15 DEC 2023 16:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2021.4.4)  15 DEC 2023 19:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1370,7 +1370,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 130.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<symbol_cvut_konturova_verze_cb.pdf, id=154, 126.78566pt x 96.54268pt>
+<symbol_cvut_konturova_verze_cb.pdf, id=150, 126.78566pt x 96.54268pt>
 File: symbol_cvut_konturova_verze_cb.pdf Graphic file (type pdf)
 <use symbol_cvut_konturova_verze_cb.pdf>
 Package pdftex.def Info: symbol_cvut_konturova_verze_cb.pdf  used on input line 135.
@@ -1387,7 +1387,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 
 ]
-<zadaniDP.pdf, id=169, 597.50829pt x 845.0471pt>
+<zadaniDP.pdf, id=165, 597.50829pt x 845.0471pt>
 File: zadaniDP.pdf Graphic file (type pdf)
 <use zadaniDP.pdf>
 Package pdftex.def Info: zadaniDP.pdf  used on input line 165.
@@ -1400,7 +1400,7 @@ File: zadaniDP.pdf Graphic file (type pdf)
 <use zadaniDP.pdf>
 Package pdftex.def Info: zadaniDP.pdf  used on input line 165.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-<zadaniDP.pdf, id=173, page=1, 597.50829pt x 845.0471pt>
+<zadaniDP.pdf, id=169, page=1, 597.50829pt x 845.0471pt>
 File: zadaniDP.pdf Graphic file (type pdf)
 <use zadaniDP.pdf, page 1>
 Package pdftex.def Info: zadaniDP.pdf , page1 used on input line 165.
@@ -1422,7 +1422,7 @@ File: zadaniDP.pdf Graphic file (type pdf)
 Package pdftex.def Info: zadaniDP.pdf , page1 used on input line 165.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [3 </home/anna/Documents/skola/DP/text/zadaniDP.pdf>]
-<zadaniDP.pdf, id=199, page=2, 597.50829pt x 845.0471pt>
+<zadaniDP.pdf, id=195, page=2, 597.50829pt x 845.0471pt>
 File: zadaniDP.pdf Graphic file (type pdf)
 <use zadaniDP.pdf, page 2>
 Package pdftex.def Info: zadaniDP.pdf , page2 used on input line 165.
@@ -1476,7 +1476,7 @@ Overfull \hbox (2.45068pt too wide) in paragraph at lines 65--66
  []
 
 [16]
-<obrazky/3M.jpg, id=352, 361.35pt x 307.74976pt>
+<obrazky/3M.jpg, id=347, 361.35pt x 307.74976pt>
 File: obrazky/3M.jpg Graphic file (type jpg)
 <use obrazky/3M.jpg>
 Package pdftex.def Info: obrazky/3M.jpg  used on input line 77.
@@ -1488,66 +1488,66 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [17]) (/home/anna/Documents/skola/DP/text/kapitoly/metody.tex [18 </home/anna/Documents/skola/DP/text/obrazky/3M.jpg>]
 Kapitola 2.
 
-Overfull \hbox (2.02165pt too wide) in paragraph at lines 18--19
+Overfull \hbox (2.02165pt too wide) in paragraph at lines 16--17
 \OT1/lmr/m/n/12 Anal^^Syza hlavn^^S^^Pch kom-po-nent (an-g-licky \OT1/lmr/m/it/12 Prin-ci-pal com-po-nent ana-ly-sis\OT1/lmr/m/n/12 , d^^Sale jako PCA)
  []
 
 
-Overfull \hbox (27.67496pt too wide) in paragraph at lines 18--19
-\OT1/lmr/m/n/12 je sta-tis-tick^^Sa me-toda vyu^^Tz^^S^^Pvan^^Sa pro pro ex-trakci prom^^Tenn^^Sych, re-dukci v^^S^^Pcedimenzion^^Saln^^S^^Pch
- []
+Underfull \vbox (badness 5726) has occurred while \output is active []
 
-
-Overfull \hbox (16.73952pt too wide) in paragraph at lines 20--22
-[]\OT1/lmr/m/n/12 Jednotliv^^Sa po-zo-rov^^San^^S^^P obsa^^Tzen^^Sa v da-tech b^^Syvaj^^S^^P pops^^Sana n^^Tekolika r^^Wuzn^^Symi prom^^Tenn^^Symi.
- []
-
-
-Overfull \hbox (11.31711pt too wide) in paragraph at lines 20--22
-\OT1/lmr/m/n/12 Tyto prom^^Tenn^^Se jsou ^^Tcasto vz^^Sajemn^^Te ko-re-lo-van^^Se a ob-sa-huj^^S^^P ^^Tsum. Me-toda PCA umo^^Tz^^Tnuje
- []
-
-[19
+ [19
 
 ]
-Overfull \hbox (10.85513pt too wide) in paragraph at lines 35--36
+Overfull \hbox (10.85513pt too wide) in paragraph at lines 33--34
 []\OT1/lmr/m/n/12 Prvn^^S^^P hlavn^^S^^P kom-po-nentu, kter^^Sa po-pi-suje nejv^^Tet^^Ts^^S^^P roz-ptyl dat ozna^^Tc^^S^^Pme $\OML/lmm/m/it/12 y[]$ \OT1/lmr/m/n/12 a vypo^^Tcteme
  []
 
 
-Overfull \hbox (9.72482pt too wide) in paragraph at lines 70--73
+Overfull \hbox (9.72482pt too wide) in paragraph at lines 68--71
 \OT1/lmr/m/n/12 prvn^^S^^P hlavn^^S^^P kom-po-nent^^Te -- druh^^Sa hlavn^^S^^P kom-po-nenta nesm^^S^^P b^^Syt ko-re-lo-van^^Sa s p^^Tredchoz^^S^^P,
  []
 
+<obrazky/PCA.pdf, id=381, 231.74579pt x 167.6664pt>
+File: obrazky/PCA.pdf Graphic file (type pdf)
+<use obrazky/PCA.pdf>
+Package pdftex.def Info: obrazky/PCA.pdf  used on input line 74.
+(pdftex.def)             Requested size: 426.79134pt x 308.81433pt.
 [20]
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 88.
+(hyperref)                removing `\textasciicaron' on input line 86.
 
-[21]
-Overfull \hbox (25.47919pt too wide) in paragraph at lines 144--147
+[21 </home/anna/Documents/skola/DP/text/obrazky/PCA.pdf>]
+Overfull \hbox (25.47919pt too wide) in paragraph at lines 142--145
 \OT1/lmr/m/n/12 ma-tice $\OT1/lmr/bx/n/12 Z$ \OT1/lmr/m/n/12 je vy-tvo^^Trena tak, ^^Tze ka-te-go-rick^^Sa data jsou ro-zeps^^Sana do po-mocn^^Sych prom^^Tenn^^Sych.
  []
 
+[22]
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 155.
+(hyperref)                removing `\textasciicaron' on input line 153.
 
-[22]
-Overfull \hbox (30.29178pt too wide) in paragraph at lines 169--170
+
+Overfull \hbox (25.23396pt too wide) in paragraph at lines 166--167
+[]\OT1/lmr/m/n/12 Entropie n^^Sahodn^^Seho jevu $\OML/lmm/m/it/12 X$\OT1/lmr/m/n/12 , kter^^Sy m^^Sa $\OML/lmm/m/it/12 n$ \OT1/lmr/m/n/12 re-a-li-zac^^S^^P $\OML/lmm/m/it/12 X \OT1/lmr/m/n/12 = \OML/lmm/m/it/12 x[]; x[]; [] ; x[]$ \OT1/lmr/m/n/12 s pravd^^Tepodobnostmi
+ []
+
+
+Overfull \hbox (30.29178pt too wide) in paragraph at lines 176--177
 \OT1/lmr/m/n/12 o-re-tick^^Symi a ob-serva^^Tcn^^S^^Pmi tvr-zen^^S^^Pmi ob-vykle plat^^S^^P vztah 1:1. Tento vztah je zprost^^Tredkov^^San
  []
 
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 176.
-(/usr/share/texmf/tex/latex/lm/omslmr.fd
+[23]
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 183.
+ (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 176.
- [23]
-Overfull \hbox (3.75386pt too wide) in paragraph at lines 190--191
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 183.
+
+Overfull \hbox (3.75386pt too wide) in paragraph at lines 197--198
 []\OT1/lmr/m/n/12 Konfidence aso-cia^^Tcn^^S^^Pho pra-vi-dla A $\OMS/lmsy/m/n/12  $ \OT1/lmr/m/n/12 S je pod^^S^^Pl (po^^Tcet ^^Tr^^Sadk^^Wu spl^^Tnuj^^S^^Pc^^S^^Pch A i S)/(po^^Tcet
  []
 
@@ -1622,23 +1622,23 @@ Package hyperref Warning: Composite letter `\textasciicaron+e'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textasciicaron' on input line 39.
 
-<obrazky/grafy/zastoupeni1.png, id=492, 834.11626pt x 205.5178pt>
+<obrazky/grafy/zastoupeni1.png, id=506, 834.11626pt x 205.5178pt>
 File: obrazky/grafy/zastoupeni1.png Graphic file (type png)
 <use obrazky/grafy/zastoupeni1.png>
 Package pdftex.def Info: obrazky/grafy/zastoupeni1.png  used on input line 47.
 (pdftex.def)             Requested size: 426.79134pt x 105.15764pt.
 [34 </home/anna/Documents/skola/DP/text/obrazky/grafy/zastoupeni1.png>]
-<obrazky/zntb/box_nominal.png, id=500, 448.7967pt x 313.6518pt>
+<obrazky/zntb/box_nominal.png, id=514, 448.7967pt x 313.6518pt>
 File: obrazky/zntb/box_nominal.png Graphic file (type png)
 <use obrazky/zntb/box_nominal.png>
 Package pdftex.def Info: obrazky/zntb/box_nominal.png  used on input line 81.
 (pdftex.def)             Requested size: 204.86125pt x 143.17601pt.
-<obrazky/zntb/box_ordinal.png, id=502, 469.0323pt x 313.6518pt>
+<obrazky/zntb/box_ordinal.png, id=516, 469.0323pt x 313.6518pt>
 File: obrazky/zntb/box_ordinal.png Graphic file (type png)
 <use obrazky/zntb/box_ordinal.png>
 Package pdftex.def Info: obrazky/zntb/box_ordinal.png  used on input line 89.
 (pdftex.def)             Requested size: 209.12683pt x 139.8498pt.
-<obrazky/zntb/MyScatter.png, id=503, 1084.05pt x 1084.05pt>
+<obrazky/zntb/MyScatter.png, id=517, 1084.05pt x 1084.05pt>
 File: obrazky/zntb/MyScatter.png Graphic file (type png)
 <use obrazky/zntb/MyScatter.png>
 Package pdftex.def Info: obrazky/zntb/MyScatter.png  used on input line 101.
@@ -1648,49 +1648,49 @@ Package pdftex.def Info: obrazky/zntb/MyScatter.png  used on input line 101.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [35 </home/anna/Documents/skola/DP/text/obrazky/zntb/box_nominal.png> </home/anna/Documents/skola/DP/text/obrazky/zntb/box_ordinal.png>]
-<obrazky/zntb/pearson.png, id=513, 632.3625pt x 560.0925pt>
+<obrazky/zntb/pearson.png, id=527, 632.3625pt x 560.0925pt>
 File: obrazky/zntb/pearson.png Graphic file (type png)
 <use obrazky/zntb/pearson.png>
 Package pdftex.def Info: obrazky/zntb/pearson.png  used on input line 112.
 (pdftex.def)             Requested size: 341.43436pt x 302.4198pt.
-<obrazky/zntb/MI.png, id=516, 622.9674pt x 555.7563pt>
+<obrazky/zntb/MI.png, id=530, 622.9674pt x 555.7563pt>
 File: obrazky/zntb/MI.png Graphic file (type png)
 <use obrazky/zntb/MI.png>
 Package pdftex.def Info: obrazky/zntb/MI.png  used on input line 122.
 (pdftex.def)             Requested size: 341.43436pt x 304.60689pt.
-<obrazky/zntb/cramers_u.png, id=518, 632.3625pt x 570.933pt>
+<obrazky/zntb/cramers_u.png, id=532, 632.3625pt x 570.933pt>
 File: obrazky/zntb/cramers_u.png Graphic file (type png)
 <use obrazky/zntb/cramers_u.png>
 Package pdftex.def Info: obrazky/zntb/cramers_u.png  used on input line 132.
 (pdftex.def)             Requested size: 341.43436pt x 308.27309pt.
  [36 </home/anna/Documents/skola/DP/text/obrazky/zntb/MyScatter.png>] [37 </home/anna/Documents/skola/DP/text/obrazky/zntb/pearson.png> </home/anna/Documents/skola/DP/text/obrazky/zntb/MI.png>]
-<obrazky/zntb/theils_u.png, id=538, 632.3625pt x 570.933pt>
+<obrazky/zntb/theils_u.png, id=552, 632.3625pt x 570.933pt>
 File: obrazky/zntb/theils_u.png Graphic file (type png)
 <use obrazky/zntb/theils_u.png>
 Package pdftex.def Info: obrazky/zntb/theils_u.png  used on input line 141.
 (pdftex.def)             Requested size: 341.43436pt x 308.27309pt.
-<obrazky/zntb/VIF.png, id=539, 419.166pt x 407.6028pt>
+<obrazky/zntb/VIF.png, id=553, 419.166pt x 407.6028pt>
 File: obrazky/zntb/VIF.png Graphic file (type png)
 <use obrazky/zntb/VIF.png>
 Package pdftex.def Info: obrazky/zntb/VIF.png  used on input line 155.
 (pdftex.def)             Requested size: 213.39566pt x 207.50772pt.
-<obrazky/zntb/MI_feature_selection.png, id=540, 416.2752pt x 408.3255pt>
+<obrazky/zntb/MI_feature_selection.png, id=554, 416.2752pt x 408.3255pt>
 File: obrazky/zntb/MI_feature_selection.png Graphic file (type png)
 <use obrazky/zntb/MI_feature_selection.png>
 Package pdftex.def Info: obrazky/zntb/MI_feature_selection.png  used on input line 161.
 (pdftex.def)             Requested size: 213.39566pt x 209.32112pt.
  [38 </home/anna/Documents/skola/DP/text/obrazky/zntb/cramers_u.png>] [39 </home/anna/Documents/skola/DP/text/obrazky/zntb/theils_u.png> </home/anna/Documents/skola/DP/text/obrazky/zntb/VIF.png> </home/anna/Documents/skola/DP/text/obrazky/zntb/MI_feature_selection.png>]
-<obrazky/zntb/pca-roztyl_komponetn.png, id=557, 406.8801pt x 328.1058pt>
+<obrazky/zntb/pca-roztyl_komponetn.png, id=571, 406.8801pt x 328.1058pt>
 File: obrazky/zntb/pca-roztyl_komponetn.png Graphic file (type png)
 <use obrazky/zntb/pca-roztyl_komponetn.png>
 Package pdftex.def Info: obrazky/zntb/pca-roztyl_komponetn.png  used on input line 182.
 (pdftex.def)             Requested size: 213.39566pt x 172.07788pt.
-<obrazky/zntb/pca-kum_roztyl_komponetn.png, id=558, 442.2924pt x 328.1058pt>
+<obrazky/zntb/pca-kum_roztyl_komponetn.png, id=572, 442.2924pt x 328.1058pt>
 File: obrazky/zntb/pca-kum_roztyl_komponetn.png Graphic file (type png)
 <use obrazky/zntb/pca-kum_roztyl_komponetn.png>
 Package pdftex.def Info: obrazky/zntb/pca-kum_roztyl_komponetn.png  used on input line 190.
 (pdftex.def)             Requested size: 213.39566pt x 158.30504pt.
-<obrazky/zntb/pca-prispevky.png, id=559, 413.3844pt x 407.6028pt>
+<obrazky/zntb/pca-prispevky.png, id=573, 413.3844pt x 407.6028pt>
 File: obrazky/zntb/pca-prispevky.png Graphic file (type png)
 <use obrazky/zntb/pca-prispevky.png>
 Package pdftex.def Info: obrazky/zntb/pca-prispevky.png  used on input line 198.
@@ -1760,7 +1760,7 @@ Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                removing `\textasciicaron' on input line 2.
 
 [49]
-<obrazky/grafy/matice_korelace_typy_DP-graf.pdf, id=642, 363.27718pt x 221.8689pt>
+<obrazky/grafy/matice_korelace_typy_DP-graf.pdf, id=656, 363.27718pt x 221.8689pt>
 File: obrazky/grafy/matice_korelace_typy_DP-graf.pdf Graphic file (type pdf)
 <use obrazky/grafy/matice_korelace_typy_DP-graf.pdf>
 Package pdftex.def Info: obrazky/grafy/matice_korelace_typy_DP-graf.pdf  used on input line 45.
@@ -1779,7 +1779,7 @@ Package hyperref Warning: Composite letter `\textasciicaron+e'
 (hyperref)                removing `\textasciicaron' on input line 120.
 
 [52]
-<obrazky/strukturaslozky.pdf, id=680, 125.5089pt x 152.4897pt>
+<obrazky/strukturaslozky.pdf, id=694, 125.5089pt x 152.4897pt>
 File: obrazky/strukturaslozky.pdf Graphic file (type pdf)
 <use obrazky/strukturaslozky.pdf>
 Package pdftex.def Info: obrazky/strukturaslozky.pdf  used on input line 141.
@@ -1876,7 +1876,7 @@ Overfull \hbox (33.57pt too wide) in paragraph at lines 336--359
 
 LaTeX Warning: File `obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf' not found on input line 374.
 
-<obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf, id=754, 462.52798pt x 346.89601pt>
+<obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf, id=768, 462.52798pt x 346.89601pt>
 File: obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf Graphic file (type pdf)
 <use obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf>
 Package pdftex.def Info: obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf  used on input line 374.
@@ -1902,132 +1902,132 @@ Package hyperref Warning: Composite letter `\textasciicaron+e'
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 19--20
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
 []\OT1/lmr/m/n/12 What is the di-f-fe-rence be-tween Lo-gis-tics and Sup-ply Chain Ma-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--20
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
 \OT1/lmr/m/n/12 nage-ment. In: \OT1/lmr/m/it/12 IIM Udai-pur Chro-nicles \OT1/lmr/m/n/12 [on-line]. 11. 10. 2019.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--20
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
 \OT1/lmr/m/n/12 [cit. 2022-11-07] Do-stupn^^Se z: []$\OT1/lmtt/m/n/12 https : / / www . iimu . ac . in / blog /
  []
 
 
-Overfull \hbox (22.06178pt too wide) in paragraph at lines 19--20
+Overfull \hbox (22.06178pt too wide) in paragraph at lines 23--24
 \OT1/lmtt/m/n/12 what-[]is-[]the-[]difference-[]between-[]logistics-[]and-[]supply-[]chain-[]management/$[] 
  []
 
 
-Underfull \hbox (badness 1715) in paragraph at lines 31--32
+Underfull \hbox (badness 1715) in paragraph at lines 35--36
 \OT1/lmr/m/n/12 San Fran-cisco (CA): Wi-ki-me-dia Foun-dation, 2022 [cit. 2023-03-04]. Do-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
+Underfull \hbox (badness 10000) in paragraph at lines 35--36
 \OT1/lmtt/m/n/12 let \ unhbox \ voidb @ x \ setbox \ @tempboxa \ hbox{y \ global \ mathchardef \
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
+Underfull \hbox (badness 10000) in paragraph at lines 35--36
 \OT1/lmtt/m/n/12 accent @ spacefactor \ spacefactor} \ accent19y \ egroup \ spacefactor \
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
+Underfull \hbox (badness 10000) in paragraph at lines 35--36
 \OT1/lmtt/m/n/12 accent @ spacefactorza _ hlavn \ unhbox \ voidb @ x \ bgroup \ let \ unhbox \
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
+Underfull \hbox (badness 10000) in paragraph at lines 35--36
 \OT1/lmtt/m/n/12 voidb @ x \ setbox \ @tempboxa \ hbox{\OT1 \ i \ global \ mathchardef \ accent @
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
+Underfull \hbox (badness 10000) in paragraph at lines 35--36
 \OT1/lmtt/m/n/12 spacefactor \ spacefactor} \ accent19 \ OT1 \ i \ egroup \ spacefactor \ accent @
  []
 
-
-Underfull \hbox (badness 5563) in paragraph at lines 37--38
+[69]
+Underfull \hbox (badness 3601) in paragraph at lines 45--46
 []\OT1/lmr/m/n/12 ABDI, Herv^^Se, VA-LEN-TIN, Do-mi-nique. \OT1/lmr/m/it/12 Mul-tiple corre-spon-dence ana-ly-
  []
 
 
-Underfull \hbox (badness 1895) in paragraph at lines 37--38
+Underfull \hbox (badness 1895) in paragraph at lines 45--46
 \OT1/lmr/m/it/12 sis\OT1/lmr/m/n/12 . In: \OT1/lmr/m/it/12 En-cyclo-pe-dia of me-a-su-re-ment and sta-tis-tics\OT1/lmr/m/n/12 . 2007, 2.4: 651-657.
  []
 
 
-Underfull \hbox (badness 3679) in paragraph at lines 37--38
+Underfull \hbox (badness 3679) in paragraph at lines 45--46
 \OT1/lmr/m/n/12 [cit. 2023-03-05]. Do-stupn^^Se z: []$\OT1/lmtt/m/n/12 https : / / personal . utdallas . edu / []Herve /
  []
 
-[69]
-Underfull \hbox (badness 5288) in paragraph at lines 68--69
+
+Underfull \hbox (badness 5288) in paragraph at lines 82--83
 []\OT1/lmr/m/n/12 BAIJAYANTA, Roy., \OT1/lmr/m/it/12 All about Ca-te-go-ri-cal Va-ri-a-ble En-co-ding  \OT1/lmr/m/n/12 [on-
  []
 
 
-Underfull \hbox (badness 4328) in paragraph at lines 68--69
+Underfull \hbox (badness 4328) in paragraph at lines 82--83
 \OT1/lmr/m/n/12 line]. [cit. 2023-03-13]. Do-stupn^^Se z: []$\OT1/lmtt/m/n/12 https : / / towardsdatascience . com /
  []
 
-
-Underfull \hbox (badness 6364) in paragraph at lines 77--78
+[70]
+Underfull \hbox (badness 6364) in paragraph at lines 91--92
 []\OT1/lmr/m/n/12 BOBBITT, Zach. \OT1/lmr/m/it/12 How to In-ter-pret Cra-mer's V \OT1/lmr/m/n/12 In \OT1/lmr/m/it/12 Sta-to-logy \OT1/lmr/m/n/12 [on-
  []
 
 
-Underfull \hbox (badness 3333) in paragraph at lines 77--78
+Underfull \hbox (badness 3333) in paragraph at lines 91--92
 \OT1/lmr/m/n/12 line]. 2021 [cit. 2023-03-21]. Do-stupn^^Se z: []$\OT1/lmtt/m/n/12 https : / / www . statology . org /
  []
 
 
-Underfull \hbox (badness 1721) in paragraph at lines 80--81
+Underfull \hbox (badness 1721) in paragraph at lines 94--95
 []\OT1/lmr/m/n/12 ZYCHLINSKI, Shaked. \OT1/lmr/m/it/12 The Search for Ca-te-go-ri-cal Corre-lation \OT1/lmr/m/n/12 [on-line].
  []
 
 
-Underfull \hbox (badness 4832) in paragraph at lines 80--81
+Underfull \hbox (badness 4832) in paragraph at lines 94--95
 \OT1/lmr/m/n/12 2018 [cit. 2023-03-14]. Do-stupn^^Se z: []$\OT1/lmtt/m/n/12 https : / / towardsdatascience . com /
  []
 
-[70]
-Underfull \hbox (badness 1331) in paragraph at lines 87--88
+
+Underfull \hbox (badness 1331) in paragraph at lines 101--102
 []\OT1/lmr/m/n/12 FROST, Jim. \OT1/lmr/m/it/12 Cho-o-sing the correct type of re-gres-sion ana-ly-sis. \OT1/lmr/m/n/12 [on-line].
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
 []\OT1/lmr/m/n/12 LOK, Leon. \OT1/lmr/m/it/12 De-ci-sion trees, ran-dom fo-rests and gra-di-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
 \OT1/lmr/m/it/12 ent bo-os-ting: What's the di-f-fe-rence? \OT1/lmr/m/n/12 [on-line]. 5. 1. 2022.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
 \OT1/lmr/m/n/12 [cit. 2023-04-10]. Do-stupn^^Se z: []$\OT1/lmtt/m/n/12 https : / / leonlok . co . uk / blog /
  []
 
 
-Overfull \hbox (21.56178pt too wide) in paragraph at lines 96--97
+Overfull \hbox (21.56178pt too wide) in paragraph at lines 110--111
 \OT1/lmtt/m/n/12 decision-[]trees-[]random-[]forests-[]gradient-[]boosting-[]whats-[]the-[]difference/$[] 
  []
 
 
-Underfull \hbox (badness 1215) in paragraph at lines 99--100
+Underfull \hbox (badness 1215) in paragraph at lines 113--114
 []\OT1/lmr/m/n/12 Scipy.stats.pearsonr. In \OT1/lmr/m/it/12 scipy.stats.pearsonr - SciPy v1.11.4 Ma-nual \OT1/lmr/m/n/12 [on-
  []
 
 
-Underfull \hbox (badness 1137) in paragraph at lines 99--100
+Underfull \hbox (badness 1137) in paragraph at lines 113--114
 \OT1/lmr/m/n/12 line]. [cit. 2023-12-10]. Do-stupn^^Se z: []$\OT1/lmtt/m/n/12 https : / / docs . scipy . org / doc / scipy /
  []
 
@@ -2053,7 +2053,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 322.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 322.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 322.
 Package rerunfilecheck Info: File `DP_Gruberova.out' has not changed.
-(rerunfilecheck)             Checksum: 2448A26F4FF7100B860DFB50A4D2A4BE;2384.
+(rerunfilecheck)             Checksum: 7DDA67E4934587A97A5150160764D290;2337.
 
 
 LaTeX Warning: There were undefined references.
@@ -2061,18 +2061,18 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 322.
  ) 
 Here is how much of TeX's memory you used:
- 32252 strings out of 494848
- 596356 string characters out of 6178431
- 798857 words of memory out of 5000000
- 34739 multiletter control sequences out of 15000+600000
+ 32263 strings out of 494848
+ 596540 string characters out of 6178431
+ 798048 words of memory out of 5000000
+ 34746 multiletter control sequences out of 15000+600000
  612168 words of font info for 94 fonts, out of 8000000 for 9000
  46 hyphenation exceptions out of 8191
  62i,18n,78p,10458b,1389s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmmib10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb>
-Output written on /home/anna/Documents/skola/DP/text/DP_Gruberova.pdf (73 pages, 2804732 bytes).
+Output written on /home/anna/Documents/skola/DP/text/DP_Gruberova.pdf (73 pages, 2837222 bytes).
 PDF statistics:
- 1022 PDF objects out of 1200 (max. 8388607)
- 833 compressed objects within 9 object streams
- 265 named destinations out of 1000 (max. 500000)
- 429 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1041 PDF objects out of 1200 (max. 8388607)
+ 849 compressed objects within 9 object streams
+ 268 named destinations out of 1000 (max. 500000)
+ 426 words of extra memory for PDF output out of 10000 (max. 10000000)
 
