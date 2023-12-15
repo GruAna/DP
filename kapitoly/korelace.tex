@@ -10,6 +10,7 @@ V rámci analýzy jsem srovnávala mezi pouze záznamy produktů, které se vysk
 % úrovně 4, neboť nižší kategorie ve většině případů produkty již dále nedělí, ale pouze specifikují popis kategorie na   
 
 \section{Postup}
+\label{sec:korpostup}
 
 Hodnotu shrinku jsem porovnávala s~následujícími ukazateli. 
 \begin{itemize}
@@ -78,7 +79,7 @@ Pro výpočet korelačního koeficientu je ještě třeba ověřit předpoklady.
 
 V~této části je uveden přesný postup pro získání kategorizace produktů. Kód je napsaný v~jazyce Python. Součástí kódu je výběr kategorií, které jsou zkoumány, propojení dat shrinků, prodejů a promoakcí, výpočet korelace a ověření předpokladů, statistické testování a rozřazení produktů.
 
-UML diagram pro analýzu.
+% UML diagram pro analýzu.
 
 \subsection{Vstupy a výstupy}
 \label{ss:vstupyvystupy}
@@ -105,12 +106,27 @@ promo_col_to     = "promotion_date_to"      # Starting date of promotion (promot
 categories       = ["L3","L4","L5","L6", "name"]  # Categories that we want to map to product ID (product hierarchy) 
 \end{lstlisting}
 
-Uživatel dále (viz ukázka kódu \ref*{code:params} zadefinuje formát data, který se používá v~datumových sloupcích, aby se tyto sloupce mohly převést z~textového řetězce na typ \texttt{datetime}. V~proměnné \texttt{category\_column} je třeba vybrat jednu kategorii (název sloupce). Na této úrovni se poté budou procházet jednotlivé kategorie, v~rámci každé z~nich se pak budou porovnávat a třídit produkty. V~dalších proměnných může uživatel změnit umístění tj. název složky, kam se ukládají výsledky kategorizace a grafy. Složky s~těmito názvy se vytvoří jako podsložky aktuální cesty.
+Uživatel dále zadefinuje formát data, který se používá v~datumových sloupcích, aby se tyto sloupce mohly převést z~textového řetězce na typ \texttt{datetime}. V~proměnné \texttt{category\_column} je třeba vybrat jednu kategorii (název sloupce). Na této úrovni se poté budou procházet jednotlivé kategorie, v~rámci každé z~nich se pak budou porovnávat a třídit produkty. V~dalších proměnných může uživatel změnit umístění tj. název složky, kam se ukládají výsledky kategorizace a grafy. Složky s~těmito názvy se vytvoří jako podsložky aktuální cesty.
 
-\begin{lstlisting}[language=Python,style=mystyle,, label={code:params},  caption={Definice parametrů.}]
-date_format = "%Y-%m-%d"                    # Format of date columns
-category_column = "L6"                      # Level od product hierarchy, on which to compare products (have to be in categories)
-\end{lstlisting}
+% \begin{lstlisting}[language=Python,style=mystyle,, label={code:params},  caption={Definice parametrů.}]
+% date_format = "%Y-%m-%d"                    # Format of date columns
+% category_column = "L6"                      # Level od product hierarchy, on which to compare products (have to be in categories)
+% \end{lstlisting}
+
+\subsection{Spuštění analýzy}
+
+Analýzu lze spustit pomocí předpřipraveného Jupyter Notebooku v jazyce Python. V první buňce notebooku se načítají potřebné balíčky a modul s definovanými funkcemi pro analýzu.
+
+V dalším buňce jsou definovány vstupní parametry do funkcí - názvy sloupců a úrovně produktové hierarchie.
+V následující buňce se načítají potřebné datasety. Přehled potřebných vstupů je v sekci \ref*{ss:vstupyvystupy}. V závislosti na konkrétních datech je třeba specifikovat, jak se mají tabulková data načíst - jedná se např. o parametry pro oddělovač hodnot v řádku, nebo značení desetinné čárky v datech. Pokud nahrané datasety pro prodeje, shrinky a promoakce mají pouze sloupec ID produktu s nenapojenou produktovou hierarchií, je třeba ji připojit.
+
+V další buňce se spouští samotná analýza. Nejprve se spustí funkce, která vrátí seznam kategorií, které jsou nejrizikovější. Je třeba definovat na které úrovni hierarchie se budou kategorie prohledávat a také, kolik kategorií budeme chtít prozkoumat.
+Nalezené kategorie se dále prochází v~cyklu.
+
+Z datasetů se vyfiltrují pouze záznamy dané kategorie. Pokud jsou v prodejích záznamy, kde je prodej kladný, tak se tyto záznamy vynechají. V dalším kroku se k údajům o prodejích navážou promoakce. Poté je spuštěna korelační analýza, lze definovat, jaká metoda se má použít s jakou alternativní hypotézou. Případně zda uživatel chce zkoumat shrinky oproti zpožděným prodejům a zda se má analýza zabývat pouze promočními prodeji, nebo i popromočními.
+
+Vypočítané korelační koeficienty se kategorizují a výsledky se uloží do souboru. Zároveň se pro zkoumanou kategorii uloží i graf závislosti shrinků na promočních prodejích.
+
 
 \subsection{Popis funkcí a struktura kódu}
 
@@ -278,8 +294,17 @@ Funkce vrací tři proměnné. První je DataFrame, který obsahuje seznam produ
 
 Funkce nejprve vytiskne hlášku, která metoda pro výpočet korelace se použije. Poté se incializují názvy sloupců pro ukládání korelací a příznaku o statistické významnosti. Počet sloupců se liší v~závislosti na tom, zda se v~analýze zkoumá i varianta se zpožděním shrinku oproti prodejům. Sloupce jsou seřazené tak, aby sloupce týkající se korelace s jedním ukazatelem byly vedle sebe v následujícím pořadí: korelační koeficient, statistická významnost, korelační koeficient se zpožděním, statistická významnost pro koeficient se zpožděním. Takto budou hodnoty uložené ve výsledném DataFramu. Pro všechny ukazatele se čtveřice (v případě zpoždění) nebo dvojice (bez zpoždění), opakuje. Dále se inicializuje prázný DataFrame pro ukládání výsledků s názvem sloupce pro ID produktu spolu s nově vytvořenými názvy. 
 
-Nejdříve se ve funkci 
+Dále je třeba ze vstupního DataFramu prodejů vybrat pouze záznamy produktů, které se prodaly během promoakce. Pokud je parametr \texttt{after\_promo} je \texttt{True}, pak se kromě záznamů produktů v promoakci vyberou i ty, kde produkty byly prodány v rámci týdne po promoakci. Dále se inicializují prázdné seznamy pro uchování produktů, které nemají žádné prodeje, resp. promoční prodeje.
 
+Následně probíhá iterace přes všechny unikátní produkty, pro které byl zaznamenaný shrink. Počet zkoumaných produktů se vytiskne. Na začátku každé iterace je třeba z DataFramů shrinků vybrat pouze záznamy s daným produktem. DataFrame se potom agreguje podle sloupců datum transakce a ID prodejny. Stejný postup se aplikuje pro DataFrame s prodeji. Navíc se obdobný postup aplikuje i na DataFramy s promočními záznamy a se všemi prodeji s tím rozdílem, že se vyhledají záznamy všech produktů kromě iterovaného produktu. Výdledné DataFramy se potom sloučí do jednoho podle sloupců ID prodejny a datumu. Jelikož může nastat situace, že ne všechny hodnoty jsou definované na každém řádku, nahradí se nedefinované hodnoty nulou.
+
+Na složený DataFrame se použije funkce \texttt{correlation}, které se předají příslušné parametry. Výsledky se pak vloží jako nový řádek do DataFramu pro ukládání výsledků. Pokud nebylo možné spočíst korelace, z důvodu, že rozptyl hodnot byl nulový - nastane pokud produkt nemá žádné prodeje -  nahradíme nedefinovanou korelaci nulou, která indikuje, že mezi veličinami není závislost.
+
+Výsledný DataFrame s korelací je vstupem do funkce \texttt{categorization}.  Dalšími vstupy je název sloupce, který obsahuje korelačními koeficienty shrinků produktu s jeho vlastními tržbami a sloupce s koeficienty shrinků produktu s prodeji ostatních produktů. Ve funkci se vytvoří nový DataFrame pro uložení výsledků kategorizace. Jeho indexem jsou ID produktů. Samotná kategorizace se získá spuštěním funkce \texttt{categorize\_products}, která vrací seznam kategorií pro každý řádek vstupního DataFramu. Funkce \texttt{categorize\_products} roztřídí produkty do tří kategorií: \texttt{itself, other, none}. V textu se o těchto kategoriích mluví jako o kategoriích P, O, X. Postup roztřídění produktů do těchto kategorií je popsaný v sekci \ref{sec:kor:postup}.
+
+Poté, co má každý produkt přiřazenou kategorii se ve funkci \texttt{categorization} označí každý produkt s kategorií, zda je výsledek statisticky reprezentativní, nebo ne. Rozhodující hodnota je získána pomocí funkce \texttt{unsignificant\_rows}. Která vrací logickou hodnotu výroku:
+$$ \mbox{Významnost(korelace produktu se sebou)} \lor ( (\mbox{Koeficient(korelace produktu se sebou)} \leq 0) \land  \mbox{Významnost(korelace produktu s ostatními)} ) $$
+Funkce pak vrátí DataFrame s takto označenými a kategorizovanými produkty.
 \texttt{categorization}, \texttt{categorize\_products}, \texttt{unsignificant\_rows}, 
 
 \subsubsection*{Pomocné funkce}
