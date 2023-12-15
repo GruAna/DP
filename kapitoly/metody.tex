@@ -182,15 +182,15 @@ Konfidence asociačního pravidla A $\leftarrow$  S je podíl (počet řádků s
 
 % Procedura 4ft-Miner pracuje s GUHA asociačními pravidly φ≈ψ kde φ a ψ jsou booleovské atributy. Pravidlo φ≈ψ je pravdivé v matici dat M, pokud φ a ψ jsou v matici dat M ve vztahu daném 4ft-kvantifikátorem ≈. Každý 4ft-kvantifikátor definuje podmínku týkající se kontingenční tabulky φ a ψ. GUHA asociační pravidla jsou obecnější než asociační pravidla produkovaná známým algoritmem apriori. Je možno pracovat i s podmíněnými GUHA asociační pravidly φ≈ψ/χ kde χ je booleovský atribut.
 
-\subsection{Genetický algoritmus}
+% \subsection{Genetický algoritmus}
 
-Genetický algoritmus byl inspirovaný evoluční teorií a přirozeným výběrem. Je založený na teorii, že jedinci, kteří jsou lepší než ostatní mají větší šanci na to, předat svou genetickou informaci dál. Jejich geny tk budou základem nové generace. Podobně jako ve zmíněné teorii, algoritmus používá následující informace: genetickou reprezentaci pomocí bitového  řetězce, funkci pro vyhodnocení tzv. fitness funkci, kombinování genů a mutaci. 
+% Genetický algoritmus byl inspirovaný evoluční teorií a přirozeným výběrem. Je založený na teorii, že jedinci, kteří jsou lepší než ostatní mají větší šanci na to, předat svou genetickou informaci dál. Jejich geny tk budou základem nové generace. Podobně jako ve zmíněné teorii, algoritmus používá následující informace: genetickou reprezentaci pomocí bitového  řetězce, funkci pro vyhodnocení tzv. fitness funkci, kombinování genů a mutaci. 
 
-Nejprve se vytvoří náhodná populace. Od této inicializační populace se postupně se iteruje dokud již další změny nevedou k lepšímu řešení, nebo dokud neskončí počet iterací. Jedna iterace je analogií k jedné evoluční generaci.
+% Nejprve se vytvoří náhodná populace. Od této inicializační populace se postupně se iteruje dokud již další změny nevedou k lepšímu řešení, nebo dokud neskončí počet iterací. Jedna iterace je analogií k jedné evoluční generaci.
 
-Bitový řetězec populace se vyhodnotí pomocí cílové funkce (objective function). Hodnota cílové funkce pak určuje hodnotu fitness daného řešení. Fitness je možné uvažovat jako minimalizační nebo maximalizační kritérium.
+% Bitový řetězec populace se vyhodnotí pomocí cílové funkce (objective function). Hodnota cílové funkce pak určuje hodnotu fitness daného řešení. Fitness je možné uvažovat jako minimalizační nebo maximalizační kritérium.
 
-Dále se vyberou dva rodiče podle své fitness hodnoty, kteří se mezi sebou zkříží a jejich potomek vstoupí do další iterace. Jeden ze způsobů výběru je vybrat k náhodných populací a znich vybrat populaci s nejvyšším fitness. Křížení rodičů je pravděpodobnostní, takže v některých případech ,ůže vzniknout potomek stejný jako jeho rodič. Obvykle se hyperparametr pro křížení se nastavuje na vyšší hodnoty např. 80 nebo 90 \%. Dalším parametrem je mutace, ta určuje zda přenesený bit zmutuje nebo ne. Jeho hodnota se nastavuje jako $1/L$, kde $L$ je délka řetězce.
+% Dále se vyberou dva rodiče podle své fitness hodnoty, kteří se mezi sebou zkříží a jejich potomek vstoupí do další iterace. Jeden ze způsobů výběru je vybrat k náhodných populací a znich vybrat populaci s nejvyšším fitness. Křížení rodičů je pravděpodobnostní, takže v některých případech ,ůže vzniknout potomek stejný jako jeho rodič. Obvykle se hyperparametr pro křížení se nastavuje na vyšší hodnoty např. 80 nebo 90 \%. Dalším parametrem je mutace, ta určuje zda přenesený bit zmutuje nebo ne. Jeho hodnota se nastavuje jako $1/L$, kde $L$ je délka řetězce.
 
 
 

@@ -11,11 +11,11 @@ Slovem shrink se označuje ztráta zisku z neuskutečněného prodeje hotového 
 
 \section{Typy shrinků}
 
-Vybraná společnost rozlišuje ve svých datech tři kategorie shrinku -- inventory, damages, price downs. Dále se budu věnovat popisu jednotlivých typů v rámci kategorií. Každý typ má přiřazeno jednoznačné identifikační číslo, podle kterého je zaznamenáván v databázi. Z důvodů anonymizace dat v práci nejsou uvedené přesné hodnoty těchto ID, namísto toho jsou uvedeny názvy, které  definují shrinky.
+Vybraná společnost rozlišuje ve svých datech tři kategorie shrinku -- shirnky způsobené inventurou, škodami a cenové snížení. Dále se budu věnovat popisu jednotlivých typů v rámci kategorií. Každý typ má přiřazeno jednoznačné identifikační číslo, podle kterého je zaznamenáván v databázi. Z důvodů anonymizace dat v práci nejsou uvedené přesné hodnoty těchto ID, namísto toho jsou uvedeny pouze názvy, které definují shrinky.
 
-\subsection*{Damages}
+\subsection*{Shrinky způsobené škodami}
 
-Do kategorie damages (česky škody) jsou řazeny zbylé důvody k odstranění produktu z prodeje z důvodu degradace produktu. V následující tabulce \ref{tab:sh:dam} jsou vypsané všechny typy, které moho být evidovány.
+Do kategorie shrinků způsobených škodami jsou řazeny zbylé důvody k odstranění produktu z prodeje z důvodu degradace produktu. V následující tabulce \ref{tab:sh:dam} jsou vypsané všechny typy, které moho být evidovány.
 
 \begin{table}[hbtp!]
     \caption{Přehled jednotlivých typů shrinků z kategorie damages.}
@@ -25,20 +25,19 @@ Do kategorie damages (česky škody) jsou řazeny zbylé důvody k odstranění 
     \hline
                 Poškození               & Odpis zboží, které bylo poškozené. Např. nedopečené, spálené, špatně vyrobené nebo poškozené zaměstnancem nebo zákazníkem (kdy nelze uplatnit reklamaci na zákazníka.)       \\
                 Prošlé a zkažené zboží  & Odpis zboží, kterému prošla doba spotřeby (v případě výrobků, kde je datum uvedené), zkažené či shnilé zboží (ovoce, zelenina) nebo ztvrdlé pečivo.       \\
+                Zákaznické \par reklamace \strut  & Odpis zboží, které zákazník reklamoval a reklamace byla uznána, ale zároveň nelze toto zboží reklamovat u dodavatele.      \\
+                Reklamace \par centrálního skladu \strut   &  Odpis zboží, které fyzicky nedorazilo z distribučního centra a nebylo možné ho reklamovat z důvodu nesplnění limitu pro vytvoření reklamace na distribučním centru. Také obsahuje odpisy neprodaných položek po ukončení výprodeje.     \\
+                Kompostéry              & Odpis zboží, které je prošlé nebo poškozené a které prodejna zlikviduje v kompostéru.       \\
                 Potravinová banka       & Odpis potravinářského zboží, které bylo darováno potravinovým bankám. Jedná se o produkty, které nebylo možné zařadit znovu do oběhu.    \\
                 Zvířecí útulky          & Odpis potravinářského zboží, které bylo darováno do útulků zvířat. Jedná se o produkty, které nebylo možné zařadit znovu do oběhu.          \\
-                Uznané zákaznické \par reklamace \strut  & Odpis zboží, které zákazník reklamoval a reklamace byla uznána, ale zároveň nelze toto zboží reklamovat u dodavatele.      \\
-                Neupl. reklamace \par distribučního centra \strut   &  Odpis zboží, které fyzicky nedorazilo z distribučního centra a nebylo možné ho reklamovat z důvodu nesplnění limitu pro vytvoření reklamace na distribučním centru. Také obsahuje odpisy neprodaných EXIT položek po ukončení výprodeje.     \\
-                Kompostéry              & Odpis zboží, které je prošlé nebo poškozené a které prodejna zlikviduje v kompostéru.       \\
-                Poškozeno vnějšími \par vlivy \strut %(internal use (err)) 
-                                        & Odpis zboží, které bylo poškozeno nebo zničeno vlivem třetí strany (výbuch, vytopení, poškození majetku vloupáním) nebo přírodními živly. Zboží se tedy na prodejně nenachází a nemůže proto být zlikvidováno.      \\
-                Zničeno  rozmražením    &       \\
+                Poškození vnějšími \par vlivy \strut %(internal use (err)) 
+                                        & Odpis zboží, které bylo poškozeno nebo zničeno vlivem třetí strany (výbuch, vytopení, poškození majetku) nebo přírodními živly. Zboží se tedy na prodejně nenachází a nemůže proto být zlikvidováno.      \\
+                Zničení & Jinak zničené zboží \\
     \end{tabular}
 \end{table}
 
-\subsection*{Inventory}
-
-Pojem inventory, který lze do češtiny přeložit jako inventář, sdružuje všechny shrinky týkající se změn v inventáři, tj. stavu zásob či inventury. V tabulce \ref*{tab:sh:inv} se nachází přehled všech evidovaných typů.
+\subsection*{Shrinky způsobené inventurou}
+Tato kategorie sdružuje všechny shrinky týkající se změn ve stavech zásob. Tyto změny se projeví při inventuře. V tabulce \ref*{tab:sh:inv} se nachází přehled všech evidovaných typů. Některé typy mají obdobný význam a jsou duplicitní. K tomu mohlo dajít patrnš tím, že některé subjekty používají dřívější značení pro inventuru, než jiné subjekty, které mohli přejít na nový, podorbnější způsob záznamu. 
 
 \begin{table}[hbtp!]
     \caption{Přehled jednotlivých typů shrinků z kategorie inventory.}
@@ -46,17 +45,22 @@ Pojem inventory, který lze do češtiny přeložit jako inventář, sdružuje v
     \begin{tabular}{ p{4cm} p{10.5cm}}
      Název             & Popis \\
     \hline
-              Inventura$+$             & Kladné připsání zboží během inventury.      \\
-              Inventura$-$             & Záporné odepsání zboží během inventury.      \\
-              Inventura              & Velká inventura skladu.     \\
-              Oprava inventury       & Dodatečné opravy, které bylo třeba provést po dokončení velké inventury.      \\
-              Částečná inventura     & Odpis, nebo naskladnění zboží při inventuře položek.      \\
-              Neuznané reklamace \par distribučního centra  \strut &  Odpis zboží, které bylo fyzicky dodané distribučním centrem na prodejnu, ale prodejna jej vrátila, ale distribuční centrum vratku neuznalo.     \\
+              Inventura - příjem           & Kladné připsání zboží během inventury.      \\
+              Inventura - odpis           & Záporné odepsání zboží během inventury.      \\
+              Inventura - velká             & Velká inventura skladu.     \\
+              Inventury - oprava       & Dodatečné opravy, které bylo třeba provést po dokončení velké inventury.      \\
+              Inventura - částečná    & Odpis, nebo naskladnění zboží při inventuře položek.      \\
+              Neuznané reklamace \par centrálním skladem  \strut &  Odpis zboží, které bylo fyzicky dodané z centrálního skladu na prodejnu, ale prodejna jej vrátila, ale vratka nebyla uznána.     \\
               Inventura              & Starší verze ID používaného pro inventuru.\\
-              Partes merchandise     & Odpis prokazatelně ukradeného zboží nebo i ztraceného zboží.      \\
+              Neexistující zboží     & Odpis prokazatelně ukradeného zboží nebo i ztraceného zboží.      \\
     \end{tabular}
 \end{table}
 
 
-\subsection*{Price down}
+\subsection*{Snížení ceny}
+ 
+Tento typ shrinku vzniká v důsledku snížení ceny na prodejně. Tento shrink není přímo evidovaný v datech, ale lze jej vypočítat ze záznamů prodejů. Jedná se o situaci, kdy přímo na prodejně je nějaký produkt zlevněný v důsledku blížící se expirace nebo z důvodu poničení obalu. Nejedná se tak o klasickou promoakci, ale o zlevnění, které není evidováno systémem, protože se netýká všech produktů daného typu, ale pouze jednoho či několika konkrétních produktů na vybrané prodejně.
 
+Postup pro zjištění velikosti shrinku pro jeden konkrétní produkt je následovný. Pro každou účtenku je třeba porovnat cenu každého prodaného produktu s ceníkovou cenou, případně promoční slevou. Pokud si tyto ceny nejsou rovné, pak rozdíl těchto cen je shrink daného produktu.
+
+Vzhledem k tomu, že denně se na každé prodejně zaevidují stovky účtenek, bylo by toto postupné procházení velmi časově náročné. Zároveň tento shrink postihuje jen velmi malou část celkového prodaného objemu. Tento shrink jsem ve svých analýzách již dále nezkoumala, protože nebyl shledán prioritním. Určení příčin vzniku takového shrinku se může lišit v závislosti na konkrétních prodejnách, a to jak na zaměstnaních, které vytváří snížení cen, tak na spotřebitelích, kteří na konkrétních prodejnách nakupují.

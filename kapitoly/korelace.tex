@@ -1,8 +1,9 @@
 \newpage
 \chapter{Korelační analýza}
 
-Vypočítala jsem korelaci mezi hodnotou shrinkem a tržbami. Jedno pozorování je na agregované na produkt, prodejnu a den záznamu. 
-V rámci analýzy jsem srovnávala mezi pouze záznamy produktů, které se vyskytují ve stejné kategorii. Je možné specifikovat úroveň kategorie, na které se analýza spočítá. Dále je třeba určit konkrétní název kategorie.
+Tato kapitola se věnuje popisu korelační analýza pro zjištění důvodu shrinků produktů. V kapitole je popsán postup a jeho implementace v jazyce Python. Analýza se zabývá korelací mezi hodnotou shrinkem a tržbami. Jedno pozorování je na agregované na produkt, prodejnu a den záznamu.  
+
+% Je možné specifikovat úroveň kategorie, na které se analýza spočítá. Dále je třeba určit konkrétní název kategorie.
 
 % https://mathstat.econ.muni.cz/media/12657/pear_cor.pdf
 % https://is.muni.cz/www/98951/41610771/43823411/43823458/44159634/44707073/Pavlik_-_Biostatistika_-_kapitola_11.pdf
@@ -11,6 +12,7 @@ V rámci analýzy jsem srovnávala mezi pouze záznamy produktů, které se vysk
 
 \section{Postup}
 \label{sec:korpostup}
+V rámci analýzy se porovnávají pouze záznamy produktů, které se vyskytují ve stejné kategorii. Základní hypotéza je, že shrink produktu mohou ovlivnit promoakce jiných produktů v kategorii.
 
 Hodnotu shrinku jsem porovnávala s~následujícími ukazateli. 
 \begin{itemize}
@@ -25,12 +27,14 @@ Hodnotu shrinku jsem porovnávala s~následujícími ukazateli.
 
 Ke každému ukazateli, jsem ještě vytvořila analogický ukazatel, který uvažoval zpoždění shrinku. V~takovém ukazateli, se nebrala hodnota prodeje ze stejného dne, jako byl den záznamu shrinku, ale hodnota z~předchozího dne. Důvodem pro vytvoření takových ukazatelů byla hypotéza, že shrink se může projevit až další den po uskutečněných tržbách. Důvodem může být to, že 
 
-Na základě korelační analýzy je možné roztřídit produkty v~kategorii do tří skupin:
+Na základě korelační analýzy je možné roztřídit produkty v~kategorii do pěti skupin:
 \begin{itemize}
     \itemsep0em 
     \item[] \textbf{Kategorie P} - Produkty, které si samy způsobují shrink.
     \item[] \textbf{Kategorie O} - Produkty, jejichž shrink je způsoben tím, že ostatní produkty v~kategorii jsou v~promoakci.
     \item[] \textbf{Kategorie X} - Produkty, jejichž shrink se nepodařilo vysvětlit pomocí korelační analýzy.
+    \item[] \textbf{Kategorie V} - Produkty, které jsou úspěšné ve výprodejích. Produkt se hodně prodává a zároveň má malé shrinky.
+    \item[] \textbf{Kategorie N} - Produkty, jejichž shrink je nezávislý na svých tržbách i tržbách ostatních produktů v kategorii. Shrink zůstává v podobném poměru, tj. pokud jsou tržby vyšší je i shrink vyšší, pokud jsou tržby nižší, je nižší i shrink.
 \end{itemize}
 
 Na obrázku \ref*{obr:ctg:g:kategorizace1} je znázorněno rozdělení produktů vzhledem ke korelačnímu koeficientu. 
@@ -73,7 +77,7 @@ Pro toto tvrzení je opět nutné statisticky otestovat koeficienty korelace. Pr
 
 Pokud na zvolené hladině významnosti zamítneme nulovou hypotézu pro zkoumané korelační koeficienty, můžeme tvrdit že s~danou pravděpodobností je koeficient statisticky významný. Na základě hodnoty korelace lze pak produkt zařadit do příslušné kategorie. Produkty, u kterých nelze zamítnout, není možné zařadit do tří uvedených kategorií.
 
-Pro výpočet korelačního koeficientu je ještě třeba ověřit předpoklady. Pro Pearsonův korelační koeficient se jedná o~předpoklad normality dat, shodnost rozptylů a nezávislost dat. Pro Spearmanův korelační koeficient jsou předpokládány nezávislé stejně rozdělené náhodné veličiny.
+Pro výpočet korelačního koeficientu je ještě třeba ověřit předpoklady. Pro Pearsonův korelační koeficient se jedná o~předpoklad normality dat, shodnost rozptylů a nezávislost dat. Pro Spearmanův korelační koeficient není třeba splňovat tyto předpoklady.
 
 \section{Implementace}
 
@@ -303,7 +307,7 @@ Na složený DataFrame se použije funkce \texttt{correlation}, které se předa
 Výsledný DataFrame s korelací je vstupem do funkce \texttt{categorization}.  Dalšími vstupy je název sloupce, který obsahuje korelačními koeficienty shrinků produktu s jeho vlastními tržbami a sloupce s koeficienty shrinků produktu s prodeji ostatních produktů. Ve funkci se vytvoří nový DataFrame pro uložení výsledků kategorizace. Jeho indexem jsou ID produktů. Samotná kategorizace se získá spuštěním funkce \texttt{categorize\_products}, která vrací seznam kategorií pro každý řádek vstupního DataFramu. Funkce \texttt{categorize\_products} roztřídí produkty do tří kategorií: \texttt{itself, other, none}. V textu se o těchto kategoriích mluví jako o kategoriích P, O, X. Postup roztřídění produktů do těchto kategorií je popsaný v sekci \ref{sec:kor:postup}.
 
 Poté, co má každý produkt přiřazenou kategorii se ve funkci \texttt{categorization} označí každý produkt s kategorií, zda je výsledek statisticky reprezentativní, nebo ne. Rozhodující hodnota je získána pomocí funkce \texttt{unsignificant\_rows}. Která vrací logickou hodnotu výroku:
-$$ \mbox{Významnost(korelace produktu se sebou)} \lor ( (\mbox{Koeficient(korelace produktu se sebou)} \leq 0) \land  \mbox{Významnost(korelace produktu s ostatními)} ) $$
+$$ \mbox{Významnost}(r_i) \lor ( (\mbox{Koeficient(korelace produktu se sebou)} \leq 0) \land  \mbox{Významnost(korelace produktu s ostatními)} ) $$
 Funkce pak vrátí DataFrame s takto označenými a kategorizovanými produkty.
 \texttt{categorization}, \texttt{categorize\_products}, \texttt{unsignificant\_rows}, 
 
@@ -322,7 +326,7 @@ Zvolila jsem 5\% hladinu významnosti pro testování statistické významnosti 
 
 Nejprve jsem se zaměřila na kategorie z~úrovně 4, a to prvních deset kategorií s~nejvyšší hodnotou shrinků (tj. s~nejvyšší zaznamenanou ztrátou) 
 
-V~tabulce č.~\ref*{tab:kategCorrPorovnani} \emph{(TBD: Bude tam víc kategorii L4.)} jsou porovnání výsledků kategorizace pro kategorii Masné výrobky a Slané pečivo. Měřila jsem postupně korelaci velikosti shrinku s~různými ukazateli pro celkové tržby ostatních produktů. Pro určení míry korelace jsem zvolila Spearmanův korelační koeficient, jelikož data nesplňují předpoklady, které jsou nutné pro použití Pearsonova korelačního koeficientu - data nejsou nezávislá a stejně rozdělená. 
+V~tabulce č.~\ref*{tab:kategCorrPorovnani} jsou porovnání výsledků kategorizace pro kategorii Masné výrobky a Slané pečivo. Měřila jsem postupně korelaci velikosti shrinku s~různými ukazateli pro celkové tržby ostatních produktů. Pro určení míry korelace jsem zvolila Spearmanův korelační koeficient, jelikož data nesplňují předpoklady, které jsou nutné pro použití Pearsonova korelačního koeficientu - data nejsou nezávislá a stejně rozdělená. 
 Z~uvedených počtů produktů u jednotlivých kategoriích pro různé ukazatele, je patrné, že výsledky se příliš neliší. Pokud bychom se ale zaměřovali na celkové prodeje, nikoli promoční, tak získáváme větší množství produktů, u~nichž nebylo možné vysvětlit shrink pomocí korelace. 
 
 \begin{table}[hbtp!]
@@ -376,8 +380,6 @@ Dále jsem zkoumala podkategorie Masných výrobků. Porovnávala jsem prodeje v
 
 Produkty, které patří do kategorie O:
 pletýnka adélka, pletýnka malena, pletýnka sypaná mákem, pletýnka sypaná solí a km., bramborové pečivo s~cibulí, veka cupeko kb, rohlík grahamový aspec, rohlík pivní ora, rohlík staročeský, rohlík obilný mam, rohlík na strouh.karlova, rohl.n str.penam, houska mašek, houska raženka, bageta rust.poh., bageta s~grahamem, bageta chlebová, banketka cereální, dalamánek, kostka cereál malena, ciabatta mini natural, twistr se sýrem a špenatem, anglický rohlík, 
-
-\emph{Nevidím v~této kategorii pravidlo v~tom, co je v~produktech, kterým shrink způsobují ostatní produkty, a které si za to mohou samy. TBD: názvy zobecním...}
 
 \textbf{Sladké pečivo}
 
