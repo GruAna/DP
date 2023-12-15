@@ -13,29 +13,35 @@
 \contentsline {subsection}{\numberline {2.2.2}Koresponden\IeC {\v c}n\IeC {\'\i } anal\IeC {\'y}za}{21}{subsection.2.2.2}
 \contentsline {subsubsection}{Zna\IeC {\v c}en\IeC {\'\i }}{21}{section*.10}
 \contentsline {subsubsection}{V\IeC {\'y}po\IeC {\v c}etn\IeC {\'\i } algoritmus z\IeC {\'a}kladn\IeC {\'\i } koresponde\IeC {\v c}n\IeC {\'\i } anal\IeC {\'y}zy}{22}{section*.11}
-\contentsline {subsection}{\numberline {2.2.3}Metoda GUHA}{23}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.3}Korela\IeC {\v c}n\IeC {\'\i } anal\IeC {\'y}za}{23}{subsection.2.2.3}
+\contentsline {subsubsection}{Korela\IeC {\v c}n\IeC {\'\i } koeficient}{23}{section*.13}
+\contentsline {subsubsection}{Dal\IeC {\v s}\IeC {\'\i } zp\IeC {\r u}soby m\IeC {\v e}\IeC {\v r}en\IeC {\'\i } z\IeC {\'a}vislosti}{23}{section*.14}
+\contentsline {subsection}{\numberline {2.2.4}Metoda GUHA}{23}{subsection.2.2.4}
 \contentsline {chapter}{\numberline {3}Shrink}{25}{chapter.3}
 \contentsline {section}{\numberline {3.1}Definice}{25}{section.3.1}
 \contentsline {section}{\numberline {3.2}Typy shrink\IeC {\r u}}{25}{section.3.2}
 \contentsline {chapter}{\numberline {4}Zpracov\IeC {\'a}n\IeC {\'\i } dat}{29}{chapter.4}
 \contentsline {section}{\numberline {4.1}Popis obdr\IeC {\v z}en\IeC {\'y}ch dat}{29}{section.4.1}
-\contentsline {subsubsection}{\IeC {\v C}\IeC {\'\i }seln\IeC {\'\i }ky}{29}{section*.19}
-\contentsline {subsubsection}{Tabulky transakc\IeC {\'\i }}{31}{section*.21}
-\contentsline {subsubsection}{Dal\IeC {\v s}\IeC {\'\i } datov\IeC {\'e} zdroje}{32}{section*.22}
-\contentsline {section}{\numberline {4.2}Obdob\IeC {\'\i } jednoho m\IeC {\v e}s\IeC {\'\i }ce - damages shrinky}{32}{section.4.2}
+\contentsline {subsubsection}{\IeC {\v C}\IeC {\'\i }seln\IeC {\'\i }ky}{29}{section*.21}
+\contentsline {subsubsection}{Tabulky transakc\IeC {\'\i }}{31}{section*.23}
+\contentsline {subsubsection}{Dal\IeC {\v s}\IeC {\'\i } datov\IeC {\'e} zdroje}{32}{section*.24}
+\contentsline {section}{\numberline {4.2}Obdob\IeC {\'\i } jednoho m\IeC {\v e}s\IeC {\'\i }ce}{33}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}P\IeC {\v r}edzpracov\IeC {\'a}n\IeC {\'\i } dat}{33}{subsection.4.2.1}
-\contentsline {subsubsection}{V\IeC {\'y}b\IeC {\v e}r dat}{34}{section*.23}
+\contentsline {subsubsection}{V\IeC {\'y}b\IeC {\v e}r dat}{33}{section*.25}
 \contentsline {subsection}{\numberline {4.2.2}Klasifikace dat}{42}{subsection.4.2.2}
-\contentsline {subsubsection}{V\IeC {\'y}sledky}{43}{section*.36}
-\contentsline {chapter}{\numberline {5}Korela\IeC {\v c}n\IeC {\'\i } anal\IeC {\'y}za}{45}{chapter.5}
-\contentsline {section}{\numberline {5.1}Postup}{45}{section.5.1}
-\contentsline {section}{\numberline {5.2}Implementace}{47}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Vstupy a v\IeC {\'y}stupy}{47}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Spu\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } anal\IeC {\'y}zy}{48}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Popis funkc\IeC {\'\i } a struktura k\IeC {\'o}du}{49}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Testov\IeC {\'a}n\IeC {\'\i }}{57}{subsection.5.2.4}
-\contentsline {section}{\numberline {5.3}V\IeC {\'y}sledky}{57}{section.5.3}
-\contentsline {chapter}{Z\IeC {\'a}v\IeC {\v e}r}{61}{chapter*.50}
-\contentsline {chapter}{Literatura}{62}{chapter*.50}
-\contentsline {chapter}{P\IeC {\v r}\IeC {\'\i }lohy}{66}{chapter*.51}
-\contentsline {chapter}{\numberline {A}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD}{67}{appendix.A}
+\contentsline {subsubsection}{V\IeC {\'y}sledky}{43}{section*.38}
+\contentsline {chapter}{\numberline {5}Anal\IeC {\'y}za pomoc\IeC {\'\i } n\IeC {\'a}stroje cleverminer}{45}{chapter.5}
+\contentsline {subsection}{\numberline {5.0.1}V\IeC {\'y}sledky}{45}{subsection.5.0.1}
+\contentsline {chapter}{\numberline {6}Korela\IeC {\v c}n\IeC {\'\i } anal\IeC {\'y}za}{47}{chapter.6}
+\contentsline {section}{\numberline {6.1}Postup}{47}{section.6.1}
+\contentsline {section}{\numberline {6.2}Implementace}{49}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Vstupy a v\IeC {\'y}stupy}{49}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Spu\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } anal\IeC {\'y}zy}{50}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Popis funkc\IeC {\'\i } a struktura k\IeC {\'o}du}{51}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.4}Testov\IeC {\'a}n\IeC {\'\i }}{59}{subsection.6.2.4}
+\contentsline {section}{\numberline {6.3}V\IeC {\'y}sledky}{59}{section.6.3}
+\contentsline {chapter}{\numberline {7}Vizualizace dat}{63}{chapter.7}
+\contentsline {chapter}{Z\IeC {\'a}v\IeC {\v e}r}{65}{chapter*.52}
+\contentsline {chapter}{Literatura}{66}{chapter*.52}
+\contentsline {chapter}{P\IeC {\v r}\IeC {\'\i }lohy}{70}{chapter*.53}
+\contentsline {chapter}{\numberline {A}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD}{71}{appendix.A}
