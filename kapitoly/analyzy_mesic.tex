@@ -1,9 +1,9 @@
-\section{Období jednoho měsíce}
+\chapter{Příprava vzorku dat pro dalsi analýzy}
 
 Vzhledem k rozsáhlosti dat
 Následující část text bude věnována rozboru dat pro shrinky typu damages v období jednoho kalendářního měsíce.
 
-\subsection{Předzpracování dat}
+\section{Předzpracování dat}
 
 
 Vzhledem k vysokému počtu dat pro jeden kalendářní rok, 
@@ -36,16 +36,16 @@ Původní sloupec datum jsem rozdělila na tři jiné proměnné, a to den v tý
 
 % \subsection*{Damages shrinky}
 
-\subsubsection{Výběr dat}
+\subsection{Výběr dat}
 % výběr dle zastoupení shrinků a kategorií produktů a dle outlierů.
 
-Nejprve jsem graficky analyzovala zastoupení shrinků v závislosti na vybraných proměnných pomocí nástroje Power BI, viz obr. \ref*{obr:rok:g:zastoupeni1}. V návaznosti na zjištěné zastoupení shrinků v datech jsem se rozhodla vybrat pouze ty typy shrinků, které tvoří více jak jedno procento z celkových nákladů (tj. náklady činily alespoň jeden milion korun). Vynechala jsem tedy shrinky s označením 5 až 9 a naopak shrinky 0 až 4 byly ponechány. Obdobně jsem přistupovala k záznamům i z hlediska kategorie produktu úrovně L1, jelikož z grafu je patrné, že majoritní zastoupení mají pouze dvě kategorie, a to kategorie superfresh a fresh produktů. Všechny záznamy se zbylými kategoriemi jsem z datasetu odstranila. Těmito kroky jsem zredukovala původní počet řádků datasetu na necelých jeden a půl milionu řádků.
+Nejprve jsem graficky analyzovala zastoupení shrinků v závislosti na vybraných proměnných pomocí nástroje Power BI, viz obr. \ref*{obr:rok:g:zastoupeni1}. V návaznosti na zjištěné zastoupení shrinků v datech jsem se rozhodla vybrat pouze ty typy shrinků, které tvoří více jak jedno procento z celkových nákladů (tj. náklady činily alespoň jeden milion korun). Vynechala jsem tedy shrinky s označením 5 až 9 a naopak shrinky 0 až 4 byly ponechány. Obdobně jsem přistupovala k záznamům i z hlediska kategorie produktu úrovně 1, jelikož z grafu je patrné, že majoritní zastoupení mají pouze dvě kategorie, a to kategorie superfresh a fresh produktů. Všechny záznamy se zbylými kategoriemi jsem z datasetu odstranila. Těmito kroky jsem zredukovala původní počet řádků datasetu na necelých jeden a půl milionu řádků.
 
 \begin{figure}[hbtp!]
     \centering
     \captionsetup{justification=centering}
     \includegraphics[width=\textwidth]{obrazky/grafy/zastoupeni1.png}
-    \caption{Zastoupení shrinků typu damage a zastoupení kategorie L1 v datech \\ z března roku 2023.}
+    \caption{Zastoupení shrinků typu damage a zastoupení kategorie 1 v datech \\ z března roku 2023.}
     \label{obr:rok:g:zastoupeni1}
 \end{figure}
 
@@ -59,11 +59,11 @@ Neboť toto kódování na numerické hodnoty zachovává velikost datového sou
 % date_of_transaction 31
 % motive_type 10
 % cost_value 173409
-% L1 7
-% L2 20
-% L4 141
-% L5 450
-% L6 1369
+% 1 7
+% 2 20
+% 4 141
+% 5 450
+% 6 1369
 % expirace 330
 % amount 48634
 % weekday 7
@@ -114,7 +114,7 @@ Výslednou matici popisující korelační vztahy mezi příznaky jsem vizualizo
     \label{obr:nb:pearson}
 \end{figure}
 
-Dále jsem použila výpočet koeficientů vzájemné informace\footnote{\emph{mutual information}}, který říká, jaká je podobnost mezi dvěma proměnnými \cite{bib:scikit}. % !!! odkaz na teorii
+Dále jsem použila výpočet koeficientů vzájemné informace\footnote{\emph{mutual information}}, který říká, jaká je podobnost mezi dvěma proměnnými \cite{bib:scikit}. % !!! odkaz na teorii TODO
 Matice vypočítaných koeficientů je na obr. \ref*{obr:nb:MI}, jelikož se jedná o symetrickou vlastnost, jsou vynechány hodnoty pod vedlejší diagonálou. Z výsledků je opět vidět, že ID produktu sdílí informaci s úrovněmi kategorizace tím více, čím je kategorizace jemnější.
 
 \begin{figure}[hbtp!]
@@ -124,9 +124,9 @@ Matice vypočítaných koeficientů je na obr. \ref*{obr:nb:MI}, jelikož se jed
     \label{obr:nb:MI}
 \end{figure}
 
-%https://www.statology.org/interpret-cramers-v/
-Dále jsem pro znázornění vztahu mezi proměnnými použila koeficient Cramerovo V. Koeficient jsem postupně počítala pro každou dvojici příznaků. Koeficient nabývá hodnot mezi 0 a 1. Číslopř blízké nule indikuje, že mezi proměnnými není asociace, číslo blízké jedničce vysokou závislost \cite{bib:statology}. Na obr. \ref*{obr:nb:cramers} lze vidět, že pro kategorie L1 až L6 je hodnota koeficientu  po zaokrouhlení rovna jedné. Vysoká závislost je pak i mezi příznakem expirace a ID produktu a kategorií L1. Dále logicky mezi číslem dne a dnem v týdnu a obdobím v měsíci.
-%!!! dopsat co to je %!!!zdroj, odkaz na teorii
+Dále jsem pro znázornění vztahu mezi proměnnými použila koeficient Cramerovo V. Koeficient jsem postupně počítala pro každou dvojici příznaků. Koeficient nabývá hodnot mezi 0 a 1. Číslopř blízké nule indikuje, že mezi proměnnými není asociace, číslo blízké jedničce vysokou závislost \cite{bib:statology}. Na obr. \ref*{obr:nb:cramers} lze vidět, že pro kategorie 1 až 6 je hodnota koeficientu  po zaokrouhlení rovna jedné. Vysoká závislost je pak i mezi příznakem expirace a ID produktu a kategorií 1. Dále logicky mezi číslem dne a dnem v týdnu a obdobím v měsíci.
+% TODO!!! dopsat co to je %!!!zdroj, odkaz na teorii TBD
+
 \begin{figure}[hbtp!]
     \centering
     \includegraphics[width=.8\textwidth]{obrazky/zntb/cramers_u.png}
@@ -134,8 +134,7 @@ Dále jsem pro znázornění vztahu mezi proměnnými použila koeficient Cramer
     \label{obr:nb:cramers}
 \end{figure}
 
-Další statistikou spočtenou na datech je Theilovo U (neboli koeficient nejistoty), který opět nabývá hodnot mezi 0 a 1 a měří vztah mezi dvěma proměnnými. Na rozdíl od předchozích statistik tento koeficient není symetrický a z výsledků lze vyvodit, ze které proměnné ze dvou zkoumaných můžeme vyvodit informaci o druhé proměnné \cite{bib:correl}. Z výsledků zobrazených v matici na obr. \ref*{obr:nb:thiels} plyne, že z ID produktu lze vyvodit část informace o kategoriích a expiraci. Zatímco úrovně L1 a L2 o ID produktu mnoho informace nenesou. Jak bylo ukázáno i v předchozích statistikách a jak vyplývá z logiky pro získání dne v týdnu a období měsíce, číslo dne nese informaci o těchto dvou příznacích.
-
+Další statistikou spočtenou na datech je Theilovo U (neboli koeficient nejistoty), který opět nabývá hodnot mezi 0 a 1 a měří vztah mezi dvěma proměnnými. Na rozdíl od předchozích statistik tento koeficient není symetrický a z výsledků lze vyvodit, ze které proměnné ze dvou zkoumaných můžeme vyvodit informaci o druhé proměnné \cite{bib:correl}. Z výsledků zobrazených v matici na obr. \ref*{obr:nb:thiels} plyne, že z ID produktu lze vyvodit část informace o kategoriích a expiraci. Zatímco úrovně 1 a 2 o ID produktu mnoho informace nenesou. Jak bylo ukázáno i v předchozích statistikách a jak vyplývá z logiky pro získání dne v týdnu a období měsíce, číslo dne nese informaci o těchto dvou příznacích.
 
 \begin{figure}[hbtp!]
     \centering
@@ -144,10 +143,10 @@ Další statistikou spočtenou na datech je Theilovo U (neboli koeficient nejist
     \label{obr:nb:thiels}
 \end{figure}
 
-Z vypočítaných statistik na datasetu je patrné, že některé příznaky jsou významně závislé, a proto je třeba je z dat odstranit. Kandidáti na vynechání jsou kategorie L2, L4, L6 a číslo dne. V dalších testech budou také vybráni kandidáti a v závěru vyhodnotím, které příznaky byly podle aplikovaných metod vybrány jako vhodné k vynechání a které nikoli.
+Z vypočítaných statistik na datasetu je patrné, že některé příznaky jsou významně závislé, a proto je třeba je z dat odstranit. Kandidáti na vynechání jsou kategorie 2, 4, 6 a číslo dne. V dalších testech budou také vybráni kandidáti a v závěru vyhodnotím, které příznaky byly podle aplikovaných metod vybrány jako vhodné k vynechání a které nikoli.
 
 V dalším testu jsem otestovala multikolinearitu dat pomocí rozptylového inflačního faktoru (VIF). Jako hraniční faktor jsem zvolila hodnotu 40 VIF. Vysvětlující pro-\\měnné jsem odebírala z datasetu postupně a odebírání jsem ukončila až, když hodnota VIF nebyla nižší než hraniční.
-Tímto došlo k redukci příznaků z jedenácti na pět, a to na kategorii L1, číslo dne, období měsíce, ID prodejny a den v týdnu. Hodnoty koeficientu VIF na datech jsou na obr. \ref*{obr:nb:vif}. 
+Tímto došlo k redukci příznaků z jedenácti na pět, a to na kategorii 1, číslo dne, období měsíce, ID prodejny a den v týdnu. Hodnoty koeficientu VIF na datech jsou na obr. \ref*{obr:nb:vif}. 
 
 \begin{figure}[hbtp!]
     \centering
@@ -166,7 +165,7 @@ Tímto došlo k redukci příznaků z jedenácti na pět, a to na kategorii L1, 
     \vspace*{-1.5em}
     \end{figure}
 
-Jako další metodu po výběr příznaků jsem vypočítala hodnotu koeficientů vzájemné informace mezi všemi příznaky s cílovým sloupcem - ID shrinku. Na obrázku \ref*{obr:nb:MI_FS} lze vidět, jak jednotlivé proměnné souvisí s cílovým sloupcem. Pro výpočet tohoto koeficientu jsem použila jak data bez outlierů, tak tenotkrát data před jejich odstraněním. Zde můžeme vidět, že významnost příznaku ID prodejny klesla o téměř polovinu. Nejvíce informace je sdíleno s ID produktu, kategorií L6, dále L5, L4, L2 a expirace. Příznaky související s časovými údaji podle tohoto kritéria nenesou mnoho společné informace.
+Jako další metodu po výběr příznaků jsem vypočítala hodnotu koeficientů vzájemné informace mezi všemi příznaky s cílovým sloupcem - ID shrinku. Na obrázku \ref*{obr:nb:MI_FS} lze vidět, jak jednotlivé proměnné souvisí s cílovým sloupcem. Pro výpočet tohoto koeficientu jsem použila jak data bez outlierů, tak tenotkrát data před jejich odstraněním. Zde můžeme vidět, že významnost příznaku ID prodejny klesla o téměř polovinu. Nejvíce informace je sdíleno s ID produktu, kategorií 6, dále 5, 4, 2 a expirace. Příznaky související s časovými údaji podle tohoto kritéria nenesou mnoho společné informace.
 
 Jako hlavní metodu pro výběr proměnných jsem se rozhodla použít metodu PCA, tuto metodu je možné použít protože kategorické proměnné jsem převedla na číselné hodnoty v předchozích krocích. Alternativou by bylo použití metody MCA, která se používá pro kategorické datasety, viz dále.
 Ve své práci jsem využila implementaci PCA v knihovně \emph{Prince} v jazyce Python. 
@@ -201,47 +200,47 @@ Na obrázcích \ref*{obr:nb:pca_roztyl_komponetn} a \ref*{obr:nb:pca_kum_roztyl_
     \label{obr:nb:pca_prispevek}
 \end{figure}
     
-Jak již bylo zmíněno pro redukci dimenzionality u kategorických dat lze použít metodu MCA, opět jsem využila implementaci z knihovny \emph{Prince}. V této implementaci jsou nominální kategorické hodnoty kódovány tak, že narůstá počet sloupců, a proto bylo nutné, vzhledem k nárokům na paměť k uložení matice, omezit množství dat. Vybrala jsem náhodný 20\% vzorek dat, na které jsem MCA aplikovala. Vypočítala jsem prvních pět komponent, které dohromady popisují 79 \% variability dat. Jelikož byla každá kategorie chápána jako samostatná proměnná příspěvky jednotlivých příznaků ke komponentám byly rozmístěny mezi všechny kategorie, nikoli k jednotlivým příznakům. Po agregaci podle původních příznaků největší příspěvek mělo ID produktu, kategorie L6, L5, L4, zatímco nejmenší ID prodejny, L1, den v týdnu a období měsíce. Tyto výsledky je třeba brát se zvážením neboť výpočty probíhali na řádově menším vzorku než u předchozích metod.
+Jak již bylo zmíněno pro redukci dimenzionality u kategorických dat lze použít metodu MCA, opět jsem využila implementaci z knihovny \emph{Prince}. V této implementaci jsou nominální kategorické hodnoty kódovány tak, že narůstá počet sloupců, a proto bylo nutné, vzhledem k nárokům na paměť k uložení matice, omezit množství dat. Vybrala jsem náhodný 20\% vzorek dat, na které jsem MCA aplikovala. Vypočítala jsem prvních pět komponent, které dohromady popisují 79 \% variability dat. Jelikož byla každá kategorie chápána jako samostatná proměnná příspěvky jednotlivých příznaků ke komponentám byly rozmístěny mezi všechny kategorie, nikoli k jednotlivým příznakům. Po agregaci podle původních příznaků největší příspěvek mělo ID produktu, kategorie 6, 5, 4, zatímco nejmenší ID prodejny, 1, den v týdnu a období měsíce. Tyto výsledky je třeba brát se zvážením neboť výpočty probíhali na řádově menším vzorku než u předchozích metod.
 
 % warehouse_id        0.024256
 % product_id          1.147270
-% L1                  0.035793
-% L2                  0.355452
-% L4                  0.841652
-% L5                  0.911692
-% L6                  0.930902
+% 1                  0.035793
+% 2                  0.355452
+% 4                  0.841652
+% 5                  0.911692
+% 6                  0.930902
 % expirace            0.306007
 % weekday             0.035521
 % day                 0.362474
 % quarter_of_month    0.048981
 
-\subsubsection*{Shrnutí pro výběr dat}
+\subsection*{Shrnutí pro výběr dat}
 
 Na základě předchozích metod byly původní příznaky datasetu zredukovány na menší počet. Vzhledem k tomu, že různé metody vybraly různé příznaky, bylo stanoveno více možných výběrů.
 
-Korelované jsou hodnoty ID produktu, L6, L5, L4 a expirace. Dále také z označení dne lze určit období měsíce. Ze zmíněných korelovaných příznaků není proto vhodné začlenit více než jeden příznak. Pokud je tato myšlenka aplikována na výsledky metod PCA a MCA a výsledků zjištěných pomocí hraniční hodnoty VIF.
+Korelované jsou hodnoty ID produktu, 6, 5, 4 a expirace. Dále také z označení dne lze určit období měsíce. Ze zmíněných korelovaných příznaků není proto vhodné začlenit více než jeden příznak. Pokud je tato myšlenka aplikována na výsledky metod PCA a MCA a výsledků zjištěných pomocí hraniční hodnoty VIF.
 
 \begin{enumerate}
     \item Následující sloupce byly získány podle hodnoty rozptylového inflačního faktoru. Touto metodou byl navržen i sloupec s číslem dne, ten však z důvodů korelace nebyl zahrnutý
     \begin{enumerate}
-        \item[1.1.] L1, období měsíce, ID prodejny a den v týdnu.
+        \item[1.1.] 1, období měsíce, ID prodejny a den v týdnu.
     \end{enumerate}
     
     \item[] K této variantě existují i dvě alternativy, ve kterých je obměněna úroveň kategorizace produktu:     
     \begin{enumerate}
-    \item[1.2.] L5, období měsíce, ID prodejny a den v týdnu
-    \item[1.3.] L4, období měsíce, ID prodejny a den v týdnu
+    \item[1.2.] 5, období měsíce, ID prodejny a den v týdnu
+    \item[1.3.] 4, období měsíce, ID prodejny a den v týdnu
     \end{enumerate}
-    \item Metodou PCA bylo zjištěno, které příznaky nejvíce přispívají ke komponentám, které popisují téměř 96 \% rozptylu v původních datech - jedná se o příznaky ID prodejny, den v týdnu, expirace, období v měsíci a číslo dne. Naopak metoda MCA vybrala kategorie L4 až L6 jako důležité. Sloučením a přihlédnutím ke korelačním koeficientům byly vybráno pět příznaků
+    \item Metodou PCA bylo zjištěno, které příznaky nejvíce přispívají ke komponentám, které popisují téměř 96 \% rozptylu v původních datech - jedná se o příznaky ID prodejny, den v týdnu, expirace, období v měsíci a číslo dne. Naopak metoda MCA vybrala kategorie 4 až 6 jako důležité. Sloučením a přihlédnutím ke korelačním koeficientům byly vybráno pět příznaků
     \begin{enumerate}
-        \item[2.1.] ID prodejny, den v týdnu, expirace, období v měsíci, L5.
+        \item[2.1.] ID prodejny, den v týdnu, expirace, období v měsíci, 5.
     \end{enumerate}
     \item[] Tato varianta příznaků byla ještě rozšířena o příznaky, které se týkají produktů. Přidané příznaky jsou spolu korelované, přesto 
     \begin{enumerate}
-    \item[2.2.] ID prodejny, den v týdnu, expirace, období v měsíci, L5, L2
-    \item[2.3.] ID prodejny, den v týdnu, expirace, období v měsíci, L5, L2, ID produktu
-    \item[2.4.] ID prodejny, den v týdnu, období v měsíci, L2, ID produktu
-    \item[] L2,L5, obdobi v mesici,  ID prodejny, den v týdnu, ID produktu, target
+    \item[2.2.] ID prodejny, den v týdnu, expirace, období v měsíci, 5, 2
+    \item[2.3.] ID prodejny, den v týdnu, expirace, období v měsíci, 5, 2, ID produktu
+    \item[2.4.] ID prodejny, den v týdnu, období v měsíci, 2, ID produktu
+    \item[] 2,5, obdobi v mesici,  ID prodejny, den v týdnu, ID produktu, target
     \end{enumerate}
 \end{enumerate}
 
@@ -269,6 +268,8 @@ Všech sedm možných výběrů bylo otestováno metodou gradient boosting. Pro 
 
 \subsection{Klasifikace dat}
 
+% TOhle tam asi vlastně ani nechci dávat TODO
+
 Tato část se věnuje předpovědi typu shrinku z dostupných dat. V předchozích sekcích bylo popsáno předzpracování dat a výběr vhodných příznaků pro úlohu klasifikace. Byly navrženy dvě skupiny příznaků, na kterých budou provedeny výpočty. K obě variantám se bude přistupovat stejným postupem a následně budou porovnány dosažené výsledky. 
 
 Cílový sloupec, který je předpovídán, je pouze jeden. Jedná se o ID shrinku. To obsahuje pět různých kategorií (označené číslicemi od 0 do 4). Proto úlohu můžeme označit jako klasifikační úlohu pro více tříd (neboli \emph{multiclass classification}). Jazyk Python nabízí v knihovně \emph{scikit-learn} řadu metod, které podporují klasifikace do více tříd.\cite{bib:scikit-multiclass}
@@ -289,7 +290,7 @@ Další zvolenou metodu je klasifikátor implementující random forest algoritm
 
 \subsubsection{Výsledky}
 
-Nejprve jsem pracovala s vybranými příznaky - L1, období měsíce, ID prodejny a den v týdnu.
+Nejprve jsem pracovala s vybranými příznaky - 1, období měsíce, ID prodejny a den v týdnu.
 Data jsem rozdělila na tři skupiny - data pro trénování, validaci a testování v poměru 8:1:1. 
 
 Naimplementovala jsem metodu \texttt{perform\_classification} umožňuje spustit vybraný model s požadovanými parametry z knihovny \emph{scikit-learn}, provede $k$-fold crossvalidaci, nafituje model na trénovací data a poté ověří přesnost na trénovacích datech. V případě, že jsou předány i parametry pro ladění, na validačních je model doladěn a pak na nejlepších parametrech opět otestován. Celá metoda se nachází v příloze této práce. % !!! doplnit do přílohy kod k funkci...
@@ -330,26 +331,26 @@ Metoda random forest
 % metoda Gradient boosting classifer
 % - Performing  5 -fold cross validation for  <class 'sklearn.ensemble._gb.GradientBoostingClassifier'> .
 
-% `columns1 = ['L1', 'quarter_of_month', 'warehouse_id', 'weekday', 'target']`
+% `columns1 = ['1', 'quarter_of_month', 'warehouse_id', 'weekday', 'target']`
 % - Accuracy scores: [0.79125738 0.7928988  0.79164102 0.79304649 0.7924207 ]
 % - Average accuracy score: 0.7922528784970851
 % - Multinomial Logistic regression Train Accuracy ::  0.7926704159579466
 % - Multinomial Logistic regression Test Accuracy ::  0.7915319337524416
 %     - 30 min
 
-% `columns2 = ['L5', 'quarter_of_month', 'warehouse_id', 'weekday', 'target']`
+% `columns2 = ['5', 'quarter_of_month', 'warehouse_id', 'weekday', 'target']`
 % - Accuracy scores: [0.82776361 0.83040015 0.82783454 0.82749087 0.82915795]
 % - Average accuracy score: 0.8285294245108925
 % - Multinomial Logistic regression Train Accuracy ::  0.828812571684165
 % - Multinomial Logistic regression Test Accuracy ::  0.8276841258637953
 
-% `columns3 = ['L4', 'quarter_of_month', 'warehouse_id', 'weekday', 'target']`
+% `columns3 = ['4', 'quarter_of_month', 'warehouse_id', 'weekday', 'target']`
 % - Accuracy scores: [0.82768667 0.82912292 0.82777299 0.82781916 0.82722927]
 % - Average accuracy score: 0.8279262004907977
 % - Multinomial Logistic regression Train Accuracy ::  0.8280780334071292
 % - Multinomial Logistic regression Test Accuracy ::  0.8266910690543802
 
-% `columns4 = ['L5', 'quarter_of_month', 'warehouse_id', 'weekday', 'expirace', 'target']`
+% `columns4 = ['5', 'quarter_of_month', 'warehouse_id', 'weekday', 'expirace', 'target']`
 % - Accuracy scores: [0.83163634 0.83345729 0.83200993 0.83231257 0.83187144]
 % - Average accuracy score: 0.8322575145742153
 % - Multinomial Logistic regression Train Accuracy ::  0.832070802924201

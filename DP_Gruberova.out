@@ -16,21 +16,22 @@
 \BOOKMARK [1][-]{section.3.2}{Typy shrinku}{chapter.3}% 16
 \BOOKMARK [0][-]{chapter.4}{Zpracov\341n\355 dat}{}% 17
 \BOOKMARK [1][-]{section.4.1}{Popis obdr\236en\375ch dat}{chapter.4}% 18
-\BOOKMARK [1][-]{section.4.2}{Obdob\355 jednoho mes\355ce}{chapter.4}% 19
-\BOOKMARK [2][-]{subsection.4.2.1}{Predzpracov\341n\355 dat}{section.4.2}% 20
-\BOOKMARK [2][-]{subsection.4.2.2}{Klasifikace dat}{section.4.2}% 21
-\BOOKMARK [0][-]{chapter.5}{Anal\375za pomoc\355 n\341stroje cleverminer}{}% 22
-\BOOKMARK [1][-]{subsection.5.0.1}{V\375sledky}{chapter.5}% 23
-\BOOKMARK [0][-]{chapter.6}{Korelacn\355 anal\375za}{}% 24
-\BOOKMARK [1][-]{section.6.1}{Postup}{chapter.6}% 25
-\BOOKMARK [1][-]{section.6.2}{Implementace}{chapter.6}% 26
-\BOOKMARK [2][-]{subsection.6.2.1}{Vstupy a v\375stupy}{section.6.2}% 27
-\BOOKMARK [2][-]{subsection.6.2.2}{Spu\235ten\355 anal\375zy}{section.6.2}% 28
-\BOOKMARK [2][-]{subsection.6.2.3}{Popis funkc\355 a struktura k\363du}{section.6.2}% 29
-\BOOKMARK [2][-]{subsection.6.2.4}{Testov\341n\355}{section.6.2}% 30
-\BOOKMARK [1][-]{section.6.3}{V\375sledky}{chapter.6}% 31
-\BOOKMARK [0][-]{chapter.7}{Vizualizace dat}{}% 32
-\BOOKMARK [0][-]{chapter*.52}{Z\341ver}{}% 33
-\BOOKMARK [0][-]{chapter*.52}{Literatura}{}% 34
-\BOOKMARK [0][-]{chapter*.53}{Pr\355lohy}{}% 35
-\BOOKMARK [0][-]{appendix.A}{Obsah prilo\236en\351ho CD}{}% 36
+\BOOKMARK [0][-]{chapter.5}{Pr\355prava vzorku dat pro dalsi anal\375zy}{}% 19
+\BOOKMARK [1][-]{section.5.1}{Predzpracov\341n\355 dat}{chapter.5}% 20
+\BOOKMARK [2][-]{subsection.5.1.1}{V\375ber dat}{section.5.1}% 21
+\BOOKMARK [2][-]{subsection.5.1.2}{Klasifikace dat}{section.5.1}% 22
+\BOOKMARK [0][-]{chapter.6}{Anal\375za pomoc\355 n\341stroje cleverminer}{}% 23
+\BOOKMARK [1][-]{subsection.6.0.1}{V\375sledky}{chapter.6}% 24
+\BOOKMARK [0][-]{chapter.7}{Korelacn\355 anal\375za}{}% 25
+\BOOKMARK [1][-]{section.7.1}{Postup}{chapter.7}% 26
+\BOOKMARK [1][-]{section.7.2}{Implementace}{chapter.7}% 27
+\BOOKMARK [2][-]{subsection.7.2.1}{Vstupy a v\375stupy}{section.7.2}% 28
+\BOOKMARK [2][-]{subsection.7.2.2}{Spu\235ten\355 anal\375zy}{section.7.2}% 29
+\BOOKMARK [2][-]{subsection.7.2.3}{Popis funkc\355 a struktura k\363du}{section.7.2}% 30
+\BOOKMARK [2][-]{subsection.7.2.4}{Testov\341n\355}{section.7.2}% 31
+\BOOKMARK [1][-]{section.7.3}{V\375sledky}{chapter.7}% 32
+\BOOKMARK [0][-]{chapter.8}{Vizualizace dat}{}% 33
+\BOOKMARK [0][-]{chapter*.59}{Z\341ver}{}% 34
+\BOOKMARK [0][-]{chapter*.59}{Literatura}{}% 35
+\BOOKMARK [0][-]{chapter*.60}{Pr\355lohy}{}% 36
+\BOOKMARK [0][-]{appendix.A}{Obsah prilo\236en\351ho CD}{}% 37

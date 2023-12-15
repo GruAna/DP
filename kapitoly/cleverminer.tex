@@ -3,8 +3,58 @@
 
 Pomocí nástroje Cleverminer, který je dostupný jako knihovna pro jazyk Python, jsem provedla analýzu shrinků produktu. Pracovala jsem pouze se vzorem dat jednoho měsíce a s kategorií produktů \emph{Velmi čerstvé}. Princip metod, které se používají v knihovně je popsán v sekci \ref*{sec:Teorie:Guha}. Dataset jsem rozšířila o další sledované sloupce, které dávají do srovnání hodnotu shrinku a objem tržeb. Vytvořila jsem takto sloupce: podíl shrinku na celkových tržbách prodejny, podíl shrinku na tržbách shrinkovaného produktu na prodejně, podíl shrinku a tržeb v kategorii úrovně 1.
 
+Na základě zastoupení jednotlivých typů shrinků, kde prošlé a zkažené zboží zaujímá více než 64 \% shrinků, se následující analýzy zaměřují pouze na tento typ.
+
 Metoda pracuje pouze s diskrétními hodnotami, proto bylo nutné kategorizovat sloupce s hodnotou shrinku, s množstvím shrinkovaných produktů a s jednotlivými podíly. Na obrázcích \ref*{} až \ref{} jsou zobrazené četnosti záznamů v kategoriích.
 
 TODO ukázky kategorizace TBD % TODO ukázky kategorizace TBD
 
 \subsection{Výsledky}
+
+Data jsem analyzovala metodou \emph{4ftMiner}, které jsem nastavovala parametry podle zkoumané hypotézy. 
+
+\subsubsection*{Hypotéza č. 1: Množství prošlého zboží je závislé na typu výprodeje a dni v týdnu}
+
+V datech je zboží bez promoce zastoupeno $58{,}2$ \%, zboží v postpromočním výprodeji $23{,}2$, zboží v promoci $18{,}6$ procentem.
+
+\subsubsection*{Hypotéza č. 2: Na některých lokalitách vyhazují často stejné produkty}
+
+Nejčastější shrinkovanou kategorií jsou masné produkty (úroveň hierarchie 3). S větší než 60\% pravděpodobností tato kategorie byla zaznamenána u prodejen  v okresech: Cheb, Jindřichův Hradec, Kladno, Ústí nad Labem, Nymburk, Písek, Strakonice a Praha-východ. Pokud se vynechá v analýzách tato kategorie, pak se jedná o kategorii pečiva. Ta se s pracděpodobnostyí alespoň 60 \% týkala okresu Pardubice a Plzeň-město. Po vynechání je to kategorie zelenina, ovšem už jen s nejvyšší pravděpodobností pod 35 \%.
+
+% |  4040 | 0.617 | +0.644 | **warehouse_type(HM) & region(Plzeň-město) => L3(SF CM BAKERY)**| --- |
+
+\subsubsection*{Hypotéza č. 3: Na některých v některých lokalitách mají často zaznamenaný shrink}
+\subsubsection*{Hypotéza č. 4: Některé produkty se vyhazují častěji než jiné, ale v malém množství.}
+
+ Kategorie MEAT PRODUCTS (PROC. MEAT SERVICE)-( masné produkty, šunka, salámy, klobásy) byla zaznamenána téměř 300 tisíckrát, a v 90 procentech se jednalo o množství odpovídající do jednoho balení. 
+%   Jedná o vážené pultové produkty - jde o
+ Pokud se vyhazují čerstvé ryby (fresh fish), tak v 94 
+\% záznamů je to množství do jednoho kusů. Tapas se vyhazují v 89 \% po jednom kusu (obvykle se jedná o sendviče a bagety)
+Kategorie vejce se vyhazuje v 82 \% po jednom kusu balení
+Kategorie pečiva se vyhazuje v 56 \% v počtu kusů do 10 ks v až 94 tis. záznamech.
+Kategorie CORE FRUIT (hrušky a jablka) se vyhazuje 74 \% případech záznamů (14 000 záznamů) v množství do jednoho kusu - váhový přepočet.
+
+\subsubsection*{Hypotéza č. 5: Některé vyhazované kategorie produktů jsou výrazně nákladnější.}
+
+Pokud se vyhazují čerstvé ryby (fresh fish), tak v téměř 80 \% případech záznamů jsou ztracené náklady vyšší  - 60-150 balení.
+Pokud se vyhazuje kategorie Red meat, tak z téměř 60 \% ve větším množství - 60-150 balení.
+Kategorie CHILLED PRODUCT SERVICE, která obsahuje čerstvé chlebíčky, saláty a pochutiny na pultovém prodeji, se v 50 \% vyhazují v množství
+
+\subsubsection*{Hypotéza č. 6: Shrink některých produktů je v porovnání s tržbami těchto produktů na stejné prodejně velký.}
+
+Nejedná se o porovnání s celkovými tržbami prodejny, ale pouze o týdenní tržbu těch produktů, které měli zaznamenaný v daném týdnu shrink.
+Tapas se mají share shrinku v 84 \% zaznamenaných případech mezi 10-40 \%.
+ Cukrářské výrobky  mají share shrinku v 74 \% zaznamenaných případech mezi 10-40 \%.
+ Banány mají share shrinku v 80 \% zaznamenaných případech do 1 \%.
+ Více než 30 tis. záznamů je u Citrusů, Jablek a hrušek a v okolo 65 \% je share shrinku do 1 \%.
+
+ Pokud mezi produkty, kterým byl zaznamenán dražší (30-60 Kč) shrink, jsou jogurty, tak jejich share shrinku na tržbách je mezi 10-40 \%, totéž se týká Tapas.
+Pokud mezi produkty, kterým byl zaznamenán levný (do 10 Kč) shrink, je ovoce, tak jejich share shrinku na tržbách je do 1 \%, totéž se týká in kořenové zeleniny.
+
+\subsubsection*{Hypotéza č. 7: Kategorie má vliv na zastoupení shrinku na celkových tržbách prodejny v dané kategorii úrovně 1.}
+
+S pracděpodobností vyšší než 50 \% se toto tvrzení potvrdilo pouze u kategorie Bylinky z úrovně 4. Kdy (0.002,0.005).
+
+\subsubsection*{Hypotéza č. 8: Den v týdnu nebo čtvrtina měsíce mají vliv na záznamy.}
+
+Ve středu, čtvrtek a pátek v poslední čtvrtině měsíce je dvakrát více záznamů než v jiných dnech. Ostatní části měsíce jsou konzistentní.
