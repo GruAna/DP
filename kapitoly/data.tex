@@ -1,6 +1,7 @@
 \chapter{Zpracování dat}
 
-Úvod ke kapitole.... % dopsat!!!!!
+Tato kapitola se zabývá popisem práce s konkrétní datovou sadou, kterou jsem obdržela. Z důvodu ochrany dat se v textu nevyskytují přesná pojmenování, ani není možné zobrazit přesnou strukturu uložení dat. 
+% TODO, TBD
 
 \section{Popis obdržených dat}
 
@@ -12,42 +13,27 @@ Z důvodu ochrany dat nelze uvádět přesné názvy tabulek, nicméně pro lep�
 
 Základní číselník s údaji o produktech, se nachází v tabulce \texttt{produkt} se 27 sloupci. Pro analýzu vzniku shrinků jsem z této tabulky vybrala jako možné významné údaje následující sloupce:
 
-\begin{table}[hbtp!]
-    \captionsetup{justification=centering}
-    \begin{center}
-    \caption{Vybrané sloupce v tabulce \texttt{produkt}.}
-    \label{tab:d:4Bzast}
-    \begin{tabular}{l l}
-        Název & Popis \\
-        \hline
-        ID produktu &  \\
-        ID prodejní varianty & Určuje o jaký typ balení daného produktu se jedná  \\   
-        Expirace & Expirace produktu ve dnech (hodnoty 0, 999 a NULL označují neomezenou expiraci) \\   
-        ID kategorie & Kategorie produktu v číselné struktuře (pro lepší interpretaci, o jakou kategorii zboží se jedná, je vhodnější použít strukturu podle úrovní (neboli levelů), kterou lze získat napojením na tabulku \texttt{produkt\_kategorie}.)
-    \end{tabular}
-    \end{center}
-\end{table}
-% \item Rozměry produktu a jeho hmotnost
+\begin{itemize}
+    \itemsep0em 
+    \item \textbf{ID produktu}
+    \item \textbf{ID prodejní varianty} - Určuje o jaký typ balení daného produktu se jedná    
+    \item \textbf{Expirace} - Expirace produktu ve dnech (hodnoty 0, 999 a NULL označují neomezenou expiraci)
+    \item \textbf{ID kategorie} - Kategorie produktu v číselné struktuře (pro lepší interpretaci, o jakou kategorii zboží se jedná, je vhodnější použít strukturu podle úrovní, kterou lze získat napojením na tabulku \texttt{produkt\_kategorie}.)
+    \item \textbf{Aktivní} -  Zda je tento produkt stále aktivní v portfoliu, nebo se jedná o produkt, který se již neprodává
+\end{itemize}
 
-Tabulka \texttt{produkt\_kategorie} obsahuje převod z číselné struktury, která popisuje kategorii produktu na 4BOX strukturu. 4BOX struktura se skládá ze šesti úrovní. Hierarchie těchto úrovní je znázorněná na obrázku \ref*{obr:d:4box} spolu se stručným popisem složek první úrovně.
+Tabulka \texttt{produkt\_kategorie} obsahuje převod z číselné struktury do struktury pomocí produktové hierarchie. V obdržených datech má produktová hierarchie šest úrovní. Hierarchie produktů tvoří tedy strom se šesti úrovněmi. Nejvyšší úroveň, tj. úroveň číslo 1 má šest kategroií.
 
-\begin{figure}[hbtp!]
-    \centering
-    \includegraphics[width=\textwidth]{obrazky/4box.pdf}
-    \caption{Hierarchie struktury 4BOX používané pro kategorizaci produktů.}
-    \label{obr:d:4box}
-\end{figure}
-
-V tabulce \ref*{tab:d:4Bzast} jsou uvedeny počty podkategorií pro každou z kategorií L1 a také procentuální zastoupení kategorie L1 v rámci produktového portfolia vybrané společnosti. Zastoupení je odvozeno podle počtu produktů v kategorii.
+V tabulce \ref*{tab:d:4Bzast} jsou uvedeny počty podkategorií pro každou z kategorií z nejvyšší úrovně. Také je uvedeno procentuální zastoupení kategorií v nejvyšší úrovni v rámci produktového portfolia vybrané společnosti. Zastoupení je odvozeno podle počtu produktů v kategorii.
 
 \begin{table}[hbtp!]
     \captionsetup{justification=centering}
     \begin{center}
-    \caption{Počet podkategorií v L1 kategorii a zastoupení L1 kategorie \\ v rámci produktového portfolia.}
+    \caption{Počet podkategorií na jendotlivých úrovních a zastoupení \\ nejvyšší kategorie v rámci produktového portfolia.}
     \label{tab:d:4Bzast}
     \begin{tabular}{p{3cm}  p{1cm} p{1cm} p{1cm} p{1cm} p{1cm}  c}
         L1 & \multicolumn{5}{c}{Počty kategorií} &      Zastoupení kategorie                \\
-                & L2    & L3   & L4   & L5    & L6    &  \\
+        L1       & L2    & L3   & L4   & L5    & L6    &  \\
         \hline
         nonfood    & 1     & 7    & 27   & 76    & 179   & 76,12\%              \\
         dry         & 3     & 13   & 33   & 147   & 494   & 7,28\%               \\
