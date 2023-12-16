@@ -159,12 +159,32 @@ Pro určení kolik informace o jedné proměnné nese druhá proměnná, je pops
 pomocí vzájemné informace \cite{bib:MI}. Informací lze rozumět obsah jakéhokoli oznámení nebo údaje, který se přenáší v daném čase a prostoru. Podle Shannona, zakladatele teorie informace, je informace míra množství neurčitosti nebo nejistoty o nějakém náhodném jevu, která se odstraní realizací daného jevu \cite{bib:MI2}. Informací tak může být stanovení výsledku náhodného jevu, tedy se jedná o hodnotu náhodné veličiny \cite{bib:MI}. Pro definování vzájemné informace je třeba definovat ještě vlastní informace a pojem entropie.
 
 Dále jsou sepsány předpoklady pro výpočet množství informace. Pokud má náhodný jev $X$ $n$ realizací, pak je množství informace funkcí $n$. Pakliže je $n=1$, množství informace se rovná nule, neboť se jedná o jev jistý. 
-Pokud jevy $X$ A $Y$ probíhají nezávisle, ale ve stejný čas, tj. $p(x,y)$, potom množství informace obou jevů se tovná součtu jejich množství.
+Pokud jevy $X$ A $Y$ probíhají nezávisle, ale ve stejný čas, tj. $p_{XY}(x,y)=p_X(x)\cdot p_Y(y)$, potom množství informace obou jevů se tovná součtu jejich množství.
 Pokud jev $X$ má $n $ realizací a jev $Y$ $m$ realizací, kde $m>n$, potom se očekává, že množství informace jevu $Y$ je větší než množství in
-formace jevu $X$. \cite{bib:MI2} Pokud je pravděpodobnost každé realizace stejná, tj. $p(x) = 1/n$, pak  Hartleyho míra informace je definována jako funkce $I: \mathbf{N} \leftarrow \mathbf{R}$ ve tvaru $I(n)=\log n$. Pro vlastní míru informace obsažené ve výsledku $x$ pak platí následující vztah: \cite{bib:MI2}
- $$I(x)=- \log p(x).$$
+formace jevu $X$. \cite{bib:MI2} Pokud je pravděpodobnost každé realizace stejná, tj. $p_X(x) = 1/n$, pak  Hartleyho míra informace je definována jako funkce $I: \mathbf{N} \leftarrow \mathbf{R}$ ve tvaru $I(n)=\log n$. Pro vlastní míru informace obsažené ve výsledku $x$ pak platí: \cite{bib:MI2, bib:MI3}
+ \begin{equation}
+    I(x)=- \log p(x).
+ \end{equation}
 
-Množství informace celého jevu je popsáno entropií náhodné veličiny. Entropie $H(X)$ náhodné veličiny $X$ s hodnotami $x_1, x_2, \ldots $ s pravděpodobnostní funkcí $p(x)$ je rovna: $$H(X) = -\sum_x p(x) \log p(x).$$
+Množství informace celého jevu je popsáno entropií náhodné veličiny. Entropie $H(X)$ náhodné veličiny $X$ s hodnotami $x_1, x_2, \ldots $ s pravděpodobnostní funkcí $p(x)$ je rovna: \cite{bib:MI2,bib:literatura}
+ \begin{equation}
+    H(X) = -\sum_x p(x) \log p(x).
+ \end{equation}
+
+Nechť je dán vektor $(X,Y)$, kde $X$, resp. $Y$ je náhodná veličina nabývající hodnot $x_1, x_2, \ldots $, resp. $y_1, y_2, \ldots$. Náhodný vektor nabývá hodnot $(x_1, y_1), (x_2, y_2), \ldots $. Sdružená entropie vektoru  $(X,Y)$ má tvar: \cite{bib:MI, bib:MI3}
+\begin{equation}
+    H(X) = -\sum_x p(x,y) \log p(x,y).
+ \end{equation}
+
+Pokles entropie se měří pomocí vzájemné informace, tj. platí věta \cite{bib:MI3}:
+\begin{equation}
+    I(X;Y) = -H(X,Y)+H(X)+H(Y).
+ \end{equation}
+
+Vzájemná informace měří ztrátu informace v důsledku závislosti $X$ a $Y$. Jinými slovy, kolik informace o jedné proměnné $X$ nese druhá proměnná $Y$. Matematicky je vzájemná informace definována následovně: \cite{bib:MI, bib:MI3, bib:literatura}
+\begin{equation}
+    I(X;Y) = \sum_{(x,y)} + \log \frac{p_{X\vert Y}(x\vert y)}{p_X(x)}
+\end{equation}
 
 \newpage
 Theilovo U a Cramerovo V
