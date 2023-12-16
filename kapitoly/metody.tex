@@ -193,11 +193,22 @@ rozptylový inflační faktor (VIF)
 
 \subsection{Metoda GUHA}
 \label{sec:Teorie:Guha}
-Uvažujeme potenciálně nekonečnou množinu objektů. Metoda předpokládá výsledky existenci pozorování této množiny reprezentované v~matici dat. Cílem je získat všechny zajímavé vztahy, které jsou pravdové pro celou množinu objektů
 
-Tvrzení pravdivé o celé množině objektů verifikovaným teoretickým tvrzením. Tvrzení na datech z~pozorování nazýváme observačním tvrzením. Důležité je, že mezi teoretickými a observačními tvrzeními obvykle platí vztah 1:1. Tento vztah je zprostředkován statistickými testy hypotéz.
+Metoda GUHA je původní česká metoda používaná pro nexplorační analýzu dat.
+První článek o této metodě vyšel v roce 1966. V současné době je jedním znejrozáshlejších implementací metody systém LISp-Miner. Jedná se o software vyvíjený na Fakultě informatiky a statistiky Vysoké školy ekonomické v Praze, kde se zároveň používá pro výuku a výzkum dobývaní znalostí z databází \cite{bib:GUHA}. Zároveň je také implementována knihovna \emph{CleverMiner} v jazyce Python, která disponuje částí funkcionalit softwaru LISp-Miner.
+
+Cílem metody GUHA je získat z pozorovaných dat všechny vztahy, které jsou jsou pravdivé pro množinu objektů, ze které pochází zkoumaná data. Vyuižívají se k tomu statistické testy hypotéz, které dovolují na základě platnosti určitého tvrzení o vzorku dat přijmout tvrzení o celé množině objektů. Pravdivé tvrzení o celé množině dat se nazývá \emph{teoretické tvrzení}. Tvrzení o vzorku dat se nazývá \emph{observační tvrzení}. Vztah $1:1$ mezi těmito tvrzeními zprostředkovávají statistické testy, znázorněno na obr. \ref*{obr:met:GUHA1}.
+
+\begin{figure}[hbtp!]
+    \centering
+    \includegraphics[width=.5\textwidth]{obrazky/GUHA/GUHA1.pdf}
+    \caption{Vztah mezi tvrzeními vzorku dat a celých dat v metodě GUHA. Zdroj: vlastní.}
+    \label{obr:met:GUHA1}
+\end{figure}
 
 GUHA procedura generuje a verifikuje napozorovaná data s množinou možných relevantních tvrzení, výstupem jsou potom všechna prostá observační tvrzení. \textit{Relevantní tvrzení je prosté, je-li pravdivé v~daných datech a zároveň neplyne zjevným způsobem z~jiného, kratšího a ve výstupu již uvedeného tvrzení.} % přepsat větu....!!!
+
+Uvažujeme potenciálně nekonečnou množinu objektů. Metoda předpokládá výsledky existenci pozorování této množiny reprezentované v~matici dat. Cílem je získat všechny zajímavé vztahy, které jsou pravdové pro celou množinu objektů
 
 Metoda pracuje s nádledujícími pojmy
 
