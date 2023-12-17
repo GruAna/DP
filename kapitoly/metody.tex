@@ -260,7 +260,7 @@ výraz
 \begin{equation}
     \varphi \approx \psi, 
 \end{equation}
-kde $\varphi, \psi$ jsou boolovské atributy, které nemají obsažený žádný společný boolovský atribut. $\varphi$ se nazývá \emph{antecedent} a $\phi$ \emph{sukcedent}\footnote{Antecedent, jako cedent, který předchází a sukcedent, jako cedent, který následuje.}. Symbol $\approx$ odpovídá \emph{4ft-kvantifikátoru}, viz dále v této sekci. Existují také podmíněná GUHA AP, která mají tvar  $\varphi \approx \psi | \chi$, kde $\chi$ je boolovský atribut.
+kde $\varphi, \psi$ jsou boolovské atributy, které nemají obsažený žádný společný boolovský atribut. $\varphi$ se nazývá \emph{antecedent} a $\phi$ \emph{sukcedent}\footnote{Antecedent, jako cedent, který předchází a sukcedent, jako cedent, který následuje.}. Symbol $\approx$ odpovídá \emph{4ft-kvantifikátoru}, viz dále v této sekci. Existují také podmíněná GUHA AP, která mají tvar  $\varphi \approx \psi | \chi$, kde $\chi$ je boolovský atribut.\cite{bib:GUHA}
 
 Pravdivost GUHA AP v matici dat $\mathbf{M}$ se určuje pomocí tzv. \emph{4ft-tabulky}. Nechť je dána matice vstupních dat $\mathbf{M}$, antecedent $\varphi$, sukcedent $\psi$. Pak \emph{4ft-tabulka} $\mathrm{4ft}(\varphi,\psi,\mathbf{M})$ je definována jako čtveřice čísel $(a,b,c,d)$, pro které platí:
 \begin{itemize}
@@ -268,7 +268,7 @@ Pravdivost GUHA AP v matici dat $\mathbf{M}$ se určuje pomocí tzv. \emph{4ft-t
     \item $a$ je počet řádků matice $M$, které splňují oba boolovské atributy $\varphi, \psi$.
     \item $b$ je počet řádků matice $M$, které splňují $\varphi$, ale nesplňují $\psi$.
     \item $c$ je počet řádků matice $M$, které nesplňují $\varphi$, ale splňují $\psi$.
-    \item $d$ je počet řádků matice $M$, které nesplňují ani jeden atribut $\varphi, \psi$.
+    \item $d$ je počet řádků matice $M$, které nesplňují ani jeden atribut $\varphi, \psi$.\cite{bib:GUHA}
 \end{itemize}
 Reprezentace této tabulky je zobrazena v tab. \ref*{tab:GUHA:tabulka}.
 
@@ -287,17 +287,85 @@ Reprezentace této tabulky je zobrazena v tab. \ref*{tab:GUHA:tabulka}.
 \end{center}
 \end{table}
 
-\emph{4ft-kvanitifikátor}, symbol $\approx$, definuje podmínku, která se týká hodnot $(a,b,c,d)$ v \emph{4ft-tabulce}. Kvantifikátor je formálně definovaný pomocí funkce $F_\approx$, která každé čtveřici nezáporných čísel přiřazuje hodnotu $1$, resp. $0$ pokud je, resp. není podmínka splněna.
+\emph{4ft-kvanitifikátor}, symbol $\approx$, definuje podmínku, která se týká hodnot $(a,b,c,d)$ v \emph{4ft-tabulce}. Kvantifikátor je formálně definovaný pomocí funkce $F_\approx$, která každé čtveřici nezáporných čísel přiřazuje hodnotu $1$, resp. $0$ pokud je, resp. není podmínka splněna. Zapisujeme $F_\approx(a,b,c,d)$ nebo zkráceně $\approx(a,b,c,d)$.\cite{bib:GUHA}
+\begin{equation}
+\begin{aligned}
+    \mbox{GUHA AP } & \varphi \approx \psi \mbox{ je pravdivé v matici dat }\mathbf{M} \\
+    & \Leftrightarrow \approx(a,b,c,d) = 1 \mbox{, formálně zapsáno jako } \mathrm{Val}(\varphi \approx \psi) = 1.   \\
+    \vspace*{.5em} \\
+    \mbox{GUHA AP } & \varphi \approx \psi \mbox{ je nepravdivé v matici dat }\mathbf{M} \\
+   & \Leftrightarrow \approx(a,b,c,d) = 1 \mbox{, formálně zapsáno jako } \mathrm{Val}(\varphi \approx \psi) = 1. 
+\end{aligned}
+\end{equation}
 
-GUHA AP je pravdivé pokud platí 
+Pro podmíněné AP $\varphi \approx \psi | \chi$ platí obdobné vztahy. Předpokládáme však, že boolovský atribut $\chi$ nemá ani jeden společný .atribut s atributy $\varphi$ a $\psi$. Platí tvrzení \cite{bib:GUHA}:
+\begin{equation}
+    \begin{aligned}
+        &\mbox{Nechť } \mathbf{M} \mbox{ je matice vstupních dat, } \varphi,\psi,\chi  \mbox{ boolovské atributy, } \approx \mbox{ kvantifikátor.} \\
+        & \mbox{Podmíněné AP } \varphi \approx \psi | \chi \; \mbox{je pravdivé v } \mathbf{M} \Leftrightarrow \varphi \approx \psi \; \mbox{ je pravdivé v matici } \mathbf{M|}\chi.
+    \end{aligned}
+\end{equation}
 
 \subsubsection{Procedury}
 
-V dokumentaci \cite{bib:GUHA} je popsáno sedm procedur -- \emph{4ft-Miner,  SD4ft-Miner, CF-Miner, SDCF-Miner,  KL-Miner,  SDKL-Miner,  Ac4ft-Miner}. V knihovně v jazyce Python jsou implementované pouze metody \emph{4ft-Miner, SD4ft-Miner, CF-Miner}. V této práci jsem použila metodu pouze první metodu, proto další je další teoretický popis věnován pouze metodě \emph{4ft-Miner}
+V dokumentaci \cite{bib:GUHA} je popsáno sedm procedur -- \emph{4ft-Miner,  SD4ft-Miner, CF-Miner, SDCF-Miner,  KL-Miner,  SDKL-Miner,  Ac4ft-Miner} \cite{bib:GUHA}. V knihovně v jazyce Python jsou implementované pouze metody \emph{4ft-Miner, SD4ft-Miner, CF-Miner} \cite{bib:GUHAclever}. V této práci jsem použila metodu pouze první metodu, proto další je další teoretický popis věnován pouze metodě \emph{4ft-Miner}.
 
-Tato procedura pracuje s aso
+Tato procedura pracuje s AP $\varphi \approx \psi$, nebo s podmíněnými AP $\varphi \approx \psi | \chi$. V knihovně \emph{Cleverminer} lze v hlavní funkci \texttt{cleverminer} předat vstupní DataFrame s daty, který reprezentuje vstupní matici dat, další parametr je jedna ze tří implementovaných procedur, dále seznam podmínek pro vyhodnocení tvrzení, vyplnutí optimalizace, limit pro výsledná tvrzení a seznam cedentů. Cedenty jsou rozdělny na antecedenty (parametr \texttt{ante}, tj. boolovský atribut $\varphi$), sukcedenty (parametr \texttt{succ}, tj. atribut $\psi$) a podmínky (parametr \texttt{cond}, tj. boolovský atribut $\chi$).
+Každý z boolovských atributů libovolného typu cedentu může mít tyto atributy:
+\begin{itemize}
+    \itemsep0em
+    \item \texttt{name} -- Název příznaku matice, tj. název sloupce v DataFramu.
+    \item \texttt{type} -- Jakým pravidlem se řídí výběr více kategorií v příznaku. Jedna z hodnot \texttt{subset, lcut, rcut, seq, one}. 
+    \item \texttt{minlen} -- Minimální počet kategorií v daném příznaku.
+    \item \texttt{maxlen} -- Maximální počet kategorií v daném příznaku.\cite{bib:GUHAclever}
+\end{itemize}
+
+Příznaky musí být kategorické a musí být možné je seřadit. Druhá vlastnost je třeba pro vybírání více kategorií v jednom cedentu určitými způsoby selekce. Pro textové řetězce reprezentující kategorie jsou názvy kategorií řazeny podle abecedy.\cite{bib:GUHAclever}
+
+Pro názornost jsou dále uvedeny příklady pro jendotlivé druhy atributu \texttt{type}. Nechť je dán příznak $\mathbf{A}$ s kategoriemi 1, 2, 3, 4, 5 a parametry jsou definovány následovně: \texttt{minlen=1}, \texttt{minlen=3}. Pokud je typ \texttt{one}, bere se jedna z kategorií daného příznaku. Pro typ \texttt{subset} jsou vybrány všechny následující možnosti:
+\begin{itemize}
+    \itemsep0em
+    \item Délka je rovna 1 --  $\mathbf{A(1), A(2), A(3), A(4), A(5)}.$
+    \item Délka je rovna 2 --  $\mathbf{A(1, 2), A(1, 3), A(1, 4), A(1, 5), A(2, 3), A(2, 4), A(2, 5)},$
+    \item[] $\mathbf{A(3, 4), A(3, 5), A(4, 5)}.$
+    \item Délka je rovna 3 --  $\mathbf{A(1, 2, 3), A(1, 2, 4), A(1, 2, 5),A(2, 3, 4), A(2, 3, 5),}$
+    \item[] $\mathbf{A(3, 4, 5)}$.\cite{bib:GUHA}
+\end{itemize}
+Pro typ sekvence, \texttt{seq} by se pak vybraly následující možnosti:
+\begin{itemize}
+    \itemsep0em
+    \item Délka je rovna 1 --  $\mathbf{A(1), A(2), A(3), A(4), A(5)}.$
+    \item Délka je rovna 2 --  $\mathbf{A(1, 2), A(2, 3), A(3, 4), A(4, 5)}.$
+    \item Délka je rovna 3 --  $\mathbf{A(1, 2, 3), A(2, 3, 4), A(3, 4, 5)}$.\cite{bib:GUHA}
+\end{itemize}
+
+Pro typ \texttt{lcut} se vybírají možnosti:
+\begin{itemize}
+    \itemsep0em
+    \item Délka je rovna 1 --  $\mathbf{A(1)}.$
+    \item Délka je rovna 2 --  $\mathbf{A(1, 2)}.$
+    \item Délka je rovna 3 --  $\mathbf{A(1, 2, 3)}$.\cite{bib:GUHA}
+\end{itemize}
+Anlogicky pro typ \texttt{rcut}.
+
+Literály v rámci cedentů lze také kombinovat obdobnými způsoby. Opět lze přiřa-\\dit minimální a maximální délku, typ pro kombinování leterálů je výběr konkunkce, nebo disjunkce. Tyto monžosti lze zpecifikovat pro antecedenty, sukcedenty i pod-\\mínky. Zadání podmínek není nezbytné v atributech funkce \texttt{cleverminer}.
+
+Další parametry, které lze předat této funkci jsou:
+\begin{itemize}
+    \itemsep0em
+    \item \texttt{Base} -- Minimální počet řádků, které splňují antecedenty i sukcedenty (číslo $a$ v tabulce \ref*{tab:GUHA:tabulka}).
+    \item \texttt{RelBase} -- Hodnota Base vydělená celkovým počtem řádků dat (případně počtem řádků v matici s aplikovanou podmínkou).
+    \item \texttt{conf} -- Konfidence, pravděpodobnost $/mathrm{P}(\psi|\varphi)$. Jinými slovy procen--\\tuální zastoupení řádků, které vyhovují $\psi$ (sukcendentům) z těch řádků, které vyhovují i $\varphi$ (antecendtům).
+    \item \texttt{aad} (nadprůměrná závislost) -- Jak moc $\varphi$ zvyšuje  pravděpodobnost $\psi$. Kolikrát se zvýší pravděpodobnost splnění sukcedentů, když se vezmou pouze záznamy, které vyhovují antecentům, oproti všem záznamům minus 1.
+    \item \texttt{bad} (podprůměrná závislost) -- Jak moc $\varphi$ snižuje  pravděpodobnost $\psi$.
+\end{itemize}
+
+Příklad volání funkce \texttt{cleverminer}
 
 
+\begin{lstlisting}[language=Python, style=mystyle, label={code:colnames}, caption={Příklad volání funkce \texttt{cleverminer}.}]
+
+\end{lstlisting}
 % \subsection{Genetický algoritmus}
 
 % Genetický algoritmus byl inspirovaný evoluční teorií a přirozeným výběrem. Je založený na teorii, že jedinci, kteří jsou lepší než ostatní mají větší šanci na to, předat svou genetickou informaci dál. Jejich geny tk budou základem nové generace. Podobně jako ve zmíněné teorii, algoritmus používá následující informace: genetickou reprezentaci pomocí bitového  řetězce, funkci pro vyhodnocení tzv. fitness funkci, kombinování genů a mutaci. 
