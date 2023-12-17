@@ -197,28 +197,51 @@ rozptylový inflační faktor (VIF)
 Metoda GUHA je původní česká metoda používaná pro nexplorační analýzu dat.
 První článek o této metodě vyšel v roce 1966. V současné době je jedním znejrozáshlejších implementací metody systém LISp-Miner. Jedná se o software vyvíjený na Fakultě informatiky a statistiky Vysoké školy ekonomické v Praze, kde se zároveň používá pro výuku a výzkum dobývaní znalostí z databází \cite{bib:GUHA}. Zároveň je také implementována knihovna \emph{CleverMiner} v jazyce Python, která disponuje částí funkcionalit softwaru LISp-Miner.
 
-Cílem metody GUHA je získat z pozorovaných dat všechny vztahy, které jsou jsou pravdivé pro množinu objektů, ze které pochází zkoumaná data. Vyuižívají se k tomu statistické testy hypotéz, které dovolují na základě platnosti určitého tvrzení o vzorku dat přijmout tvrzení o celé množině objektů. Pravdivé tvrzení o celé množině dat se nazývá \emph{teoretické tvrzení}. Tvrzení o vzorku dat se nazývá \emph{observační tvrzení}. Vztah $1:1$ mezi těmito tvrzeními zprostředkovávají statistické testy, znázorněno na obr. \ref*{obr:met:GUHA1}.
+\subsubsection{Základní princip metody}
+
+Cílem metody GUHA je získat z pozorovaných dat všechny vztahy, které jsou jsou pravdivé pro množinu objektů, ze které pochází zkoumaná data. Vyuižívají se k tomu statistické testy hypotéz, které dovolují na základě platnosti určitého tvrzení o vzorku dat přijmout tvrzení o celé množině objektů. Pravdivé tvrzení o celé množině dat se nazývá \emph{teoretické tvrzení}. Tvrzení o vzorku dat se nazývá \emph{observační tvrzení}. Vztah $1:1$ mezi těmito tvrzeními zprostředkovávají statistické testy, znázorněno na obr. \ref*{obr:met:GUHA1}.\cite{bib:GUHA}
 
 \begin{figure}[hbtp!]
     \centering
+    \captionsetup{justification=centering}
     \includegraphics[width=.5\textwidth]{obrazky/GUHA/GUHA1.pdf}
     \caption{Vztah mezi tvrzeními vzorku dat a celých dat v metodě GUHA. Zdroj: vlastní.}
     \label{obr:met:GUHA1}
 \end{figure}
 
-GUHA procedura generuje a verifikuje napozorovaná data s množinou možných relevantních tvrzení, výstupem jsou potom všechna prostá observační tvrzení. \textit{Relevantní tvrzení je prosté, je-li pravdivé v~daných datech a zároveň neplyne zjevným způsobem z~jiného, kratšího a ve výstupu již uvedeného tvrzení.} % přepsat větu....!!!
+Základní postup GUHA procedury je na obrázku \ref*{obr:met:GUHA2}. Vstupem pro procedury jsou vstupní data a parametry, které definují množinu relevantních tvrzení. Na základě definice jsou vytvořena všechna relevantní observační tvrzení, která jsou verifikována podle dat. Výstupem jsou pak všechna všechna prosté observační tvrzení vycházející ze vstupů. Prosté relevantní  tvrzení je takové tvrzení, které je pravdivé ve vstupních datech a zároveň neplyne již z uvedeného jiného tvrzení ve výstupu.\cite{bib:GUHA}
 
-Uvažujeme potenciálně nekonečnou množinu objektů. Metoda předpokládá výsledky existenci pozorování této množiny reprezentované v~matici dat. Cílem je získat všechny zajímavé vztahy, které jsou pravdové pro celou množinu objektů
+\begin{figure}[hbtp!]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=.5\textwidth]{obrazky/GUHA/GUHA2.pdf}
+    \caption{Základní postup procdury GUHA. Zdroj: vlastní.}
+    \label{obr:met:GUHA2}
+\end{figure}
 
-Metoda pracuje s nádledujícími pojmy
+\subsubsection{Důležité pojmy}
+
+
+% Uvažujeme potenciálně nekonečnou množinu objektů. Metoda předpokládá výsledky existenci pozorování této množiny reprezentované v~matici dat. Cílem je získat všechny zajímavé vztahy, které jsou pravdové pro celou množinu objektů
+
+Pro podrobnější popis procedur je nejprve třeba definovat několik pojmů, se kterými se v procedurách pracuje. Metoda pracuje s nádledujícími pojmy:
 
 \begin{itemize}
-    \item Matice dat a atributy - Řádky matice jsou jednotlová pozorování. Atributem se rozumí sledovaná vlastnost, jedná se o sloupec matice.
-    \item Základní booleovský atribut - Jedná se o výraz A(a), kde A je atribut a $a$ je vlastní pdomnožina A. $a$ může obsahovat více prvků než jeden.
-    \item Booleovský atribut -  Každý zákl. b. atribut je booleovský atribut. Boolovské atributy jsou negace, konjunkce a disjunkce základních boolovských atributů.
-    \item Literál - Zákaldní boolovský atribut nebo jeho negace
-    \item Dílčí cedent - jedná se o konjunkci nebo disjunkci literálů.
-    \item Cedent - Jedná se o konjunkci dílčích cedentů. Příkladem cedentu je booleovský atribut.
+    \itemsep0em
+    \item \textbf{Matice dat a atributy} - Řádky matice jsou jednotlivá pozorování. Atributem se rozumí sledovaná vlastnost, jedná se o sloupec matice.
+    \item \textbf{Základní booleovský atribut} - Jedná se o výraz $\bm{\mathrm{A(\alpha)}}$, kde $\bm{\mathrm{A}}$ je atribut a  $\bm{\alpha}$ je vlastní podmnožina $\bm{\mathrm{A}}$. $\bm{\alpha}$ může obsahovat více prvků než jeden.
+    \item \textbf{Booleovský atribut} - Každý základní boolovský atribut je booleovský atribut. Boolovské atributy jsou i negace, konjunkce a disjunkce základních boolovských atributů. 
+    \item[] Pro každý řádek $i$ matice $\mathbf{M}$ nabývá boolovský atribut  $\bm{\mathrm{A}}$ hodnotu $0$, nebo $1$.
+    \begin{equation*}
+    \bm{\mathrm{A}}\left[i\right] = 1 \Rightarrow \mbox{boolovský atribut } \bm{\mathrm{A}} \mbox{ je pravdivý pro řádek } i.
+    \end{equation*}
+    \begin{equation*}
+        \bm{\mathrm{A}}\left[i\right] = 0 \Rightarrow \mbox{boolovský atribut } \bm{\mathrm{A}} \mbox{ je nepravdivý pro řádek } i.
+        \end{equation*}
+
+    \item \textbf{Literál} - Základní boolovský atribut nebo jeho negace.
+    \item \textbf{Dílčí cedent} - Konjunkce nebo disjunkce literálů.
+    \item \textbf{Cedent} - Jedná se o konjunkci dílčích cedentů. Příkladem cedentu je booleovský atribut.
 \end{itemize}
 
 \subsubsection*{Procedury}
