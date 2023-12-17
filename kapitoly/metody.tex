@@ -224,13 +224,13 @@ Základní postup GUHA procedury je na obrázku \ref*{obr:met:GUHA2}. Vstupem pr
 
 % Uvažujeme potenciálně nekonečnou množinu objektů. Metoda předpokládá výsledky existenci pozorování této množiny reprezentované v~matici dat. Cílem je získat všechny zajímavé vztahy, které jsou pravdové pro celou množinu objektů
 
-Pro podrobnější popis procedur je nejprve třeba definovat několik pojmů, se kterými se v procedurách pracuje. Metoda pracuje s nádledujícími pojmy:
+Pro podrobnější popis procedur je nejprve třeba definovat několik pojmů, se kterými se v procedurách pracuje. Metoda pracuje s nádledujícími pojmy \cite{bib:GUHA}:
 
 \begin{itemize}
     \itemsep0em
-    \item \textbf{Matice dat a atributy} - Řádky matice jsou jednotlivá pozorování. Atributem se rozumí sledovaná vlastnost, jedná se o sloupec matice.
-    \item \textbf{Základní booleovský atribut} - Jedná se o výraz $\bm{\mathrm{A(\alpha)}}$, kde $\bm{\mathrm{A}}$ je atribut a  $\bm{\alpha}$ je vlastní podmnožina $\bm{\mathrm{A}}$. $\bm{\alpha}$ může obsahovat více prvků než jeden.
-    \item \textbf{Booleovský atribut} - Každý základní boolovský atribut je booleovský atribut. Boolovské atributy jsou i negace, konjunkce a disjunkce základních boolovských atributů. 
+    \item \textbf{Matice dat a atributy} -- Řádky matice jsou jednotlivá pozorování. Atributem se rozumí sledovaná vlastnost, jedná se o sloupec matice.
+    \item \textbf{Základní booleovský atribut} -- Jedná se o výraz $\bm{\mathrm{A(\alpha)}}$, kde $\bm{\mathrm{A}}$ je atribut a  $\bm{\alpha}$ je vlastní podmnožina $\bm{\mathrm{A}}$. $\bm{\alpha}$ může obsahovat více prvků než jeden.
+    \item \textbf{Booleovský atribut} -- Každý základní boolovský atribut je booleovský atribut. Boolovské atributy jsou i negace, konjunkce a disjunkce základních boolovských atributů. 
     \item[] Pro každý řádek $i$ matice $\mathbf{M}$ nabývá boolovský atribut  $\bm{\mathrm{A}}$ hodnotu $0$, nebo $1$.
     \begin{equation*}
     \bm{\mathrm{A}}\left[i\right] = 1 \Rightarrow \mbox{boolovský atribut } \bm{\mathrm{A}} \mbox{ je pravdivý pro řádek } i.
@@ -239,21 +239,64 @@ Pro podrobnější popis procedur je nejprve třeba definovat několik pojmů, s
         \bm{\mathrm{A}}\left[i\right] = 0 \Rightarrow \mbox{boolovský atribut } \bm{\mathrm{A}} \mbox{ je nepravdivý pro řádek } i.
         \end{equation*}
 
-    \item \textbf{Literál} - Základní boolovský atribut nebo jeho negace.
-    \item \textbf{Dílčí cedent} - Konjunkce nebo disjunkce literálů.
-    \item \textbf{Cedent} - Jedná se o konjunkci dílčích cedentů. Příkladem cedentu je booleovský atribut.
+    \item \textbf{Literál} -- Základní boolovský atribut nebo jeho negace.
+    \item \textbf{Dílčí cedent} -- Konjunkce nebo disjunkce literálů.
+    \item \textbf{Cedent} -- Jedná se o konjunkci dílčích cedentů. Příkladem cedentu je booleovský atribut, který vznikl konkujnkcí a disjunkcí dalších atributů.
+
 \end{itemize}
 
-\subsubsection*{Procedury}
 
-4ft-Miner pracující s GUHA asociačními pravidly a s podmíněnými GUHA asociačními pravidly $\phi \approx  \psi / \chi $
+Další pojmy se týkají vztahů, se kterými procedury pracují \cite{bib:GUHA}:
 
-Asociační pravidlo -  Asociačním pravidlem se tedy obvykle rozumí výraz A $\leftarrow$ S kde A i S jsou konjunkce dvojic atribut-hodnota. %!!! přepsat větu
+\begin{itemize}
+    \itemsep0em
+    \item \textbf{Asociační pravidlo} -- Výraz $\mathrm{X} \rightarrow \mathrm{Y}$, kde $\mathrm{X}$ a $\mathrm{Y}$ jsou konjunkce dvojic atribut a jeho hodnota. Dále v textu je použivaná pro tento pojem zkratka AP.
+    \item \textbf{Konfidence AP} -- Podíl počtu řádků, které splňují A a zároveň S a počtu řádků, které splňují pouze S.
+    \item \textbf{Podpora AP} -- Podíl počtu řádků, které splňují A a zároveň S a počtu řádků vstupní matice dat.
+\end{itemize}
 
-Konfidence asociačního pravidla A $\leftarrow$  S je podíl (počet řádků splňujících A i S)/(počet řádků splňujících S)  %!!! přepsat větu
+Častou úlohou pro dobývání AP je nalezení všech AP, u kterých je hodnota konfidence a podpory AP větší nebo rovna danému prahu. V rámci GUHA se AP zkoumají jako vztah dvou obecných boolovských atributů, které jsou odvozené ze sloupců vstupní matice. GUHA asociační pravidlo (GUHA AP) je 
+výraz 
+\begin{equation}
+    \varphi \approx \psi, 
+\end{equation}
+kde $\varphi, \psi$ jsou boolovské atributy, které nemají obsažený žádný společný boolovský atribut. $\varphi$ se nazývá \emph{antecedent} a $\phi$ \emph{sukcedent}\footnote{Antecedent, jako cedent, který předchází a sukcedent, jako cedent, který následuje.}. Symbol $\approx$ odpovídá \emph{4ft-kvantifikátoru}, viz dále v této sekci. Existují také podmíněná GUHA AP, která mají tvar  $\varphi \approx \psi | \chi$, kde $\chi$ je boolovský atribut.
 
+Pravdivost GUHA AP v matici dat $\mathbf{M}$ se určuje pomocí tzv. \emph{4ft-tabulky}. Nechť je dána matice vstupních dat $\mathbf{M}$, antecedent $\varphi$, sukcedent $\psi$. Pak \emph{4ft-tabulka} $\mathrm{4ft}(\varphi,\psi,\mathbf{M})$ je definována jako čtveřice čísel $(a,b,c,d)$, pro které platí:
+\begin{itemize}
+    \itemsep0em
+    \item $a$ je počet řádků matice $M$, které splňují oba boolovské atributy $\varphi, \psi$.
+    \item $b$ je počet řádků matice $M$, které splňují $\varphi$, ale nesplňují $\psi$.
+    \item $c$ je počet řádků matice $M$, které nesplňují $\varphi$, ale splňují $\psi$.
+    \item $d$ je počet řádků matice $M$, které nesplňují ani jeden atribut $\varphi, \psi$.
+\end{itemize}
+Reprezentace této tabulky je zobrazena v tab. \ref*{tab:GUHA:tabulka}.
 
-% Procedura 4ft-Miner pracuje s GUHA asociačními pravidly φ≈ψ kde φ a ψ jsou booleovské atributy. Pravidlo φ≈ψ je pravdivé v~matici dat M, pokud φ a ψ jsou v~matici dat M ve vztahu daném 4ft-kvantifikátorem ≈. Každý 4ft-kvantifikátor definuje podmínku týkající se kontingenční tabulky φ a ψ. GUHA asociační pravidla jsou obecnější než asociační pravidla produkovaná známým algoritmem apriori. Je možno pracovat i s podmíněnými GUHA asociační pravidly φ≈ψ/χ kde χ je booleovský atribut.
+\begin{table}[hbtp!]
+    \begin{center}
+            \captionsetup{justification=centering}
+    \caption{\emph{4ft-tabulka} matice $\mathbf{M}$ s asociačním pravidlem $\varphi \approx \psi$.}
+    \begin{tabular}{c|c|c}
+        $\mathbf{M}$ & $ \;\psi \;$& $\neg\,\psi$ \\
+        \hline
+        $\varphi$ & $a$& $b$ \\
+        \hline
+        $\neg\,\varphi$ & $c$& $d$ \\
+        \end{tabular}
+    \label{tab:GUHA:tabulka}
+\end{center}
+\end{table}
+
+\emph{4ft-kvanitifikátor}, symbol $\approx$, definuje podmínku, která se týká hodnot $(a,b,c,d)$ v \emph{4ft-tabulce}. Kvantifikátor je formálně definovaný pomocí funkce $F_\approx$, která každé čtveřici nezáporných čísel přiřazuje hodnotu $1$, resp. $0$ pokud je, resp. není podmínka splněna.
+
+GUHA AP je pravdivé pokud platí 
+
+\subsubsection{Procedury}
+
+V dokumentaci \cite{bib:GUHA} je popsáno sedm procedur -- \emph{4ft-Miner,  SD4ft-Miner, CF-Miner, SDCF-Miner,  KL-Miner,  SDKL-Miner,  Ac4ft-Miner}. V knihovně v jazyce Python jsou implementované pouze metody \emph{4ft-Miner, SD4ft-Miner, CF-Miner}. V této práci jsem použila metodu pouze první metodu, proto další je další teoretický popis věnován pouze metodě \emph{4ft-Miner}
+
+Tato procedura pracuje s aso
+
 
 % \subsection{Genetický algoritmus}
 
