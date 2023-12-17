@@ -153,6 +153,17 @@ První způsob MCA aplikuje základní algoritmus korespondenční analýzy na m
 \subsection{Korelační analýza}
 
 \subsubsection{Korelační koeficient}
+
+Pojem korelace obecně znamená vzájemný vztah mezi dvěma veličinami. Pokud se jedna veličina mění, pak se mění dle míry korelace i druhá veličina. Samotná korelace ale neurčuje míru vztahu, ani směr vztahu. Tedy která veličina je příčinou a která důsledkem. Tuto vlastnost popisuje kauzalita. Míra korelace mezi dvěma veličinami je určena pomocí korelačního koeficientu. Existuje více způsobů měření míry korelace, v následující části jsou popsány vybrané z nich.\cite{bib:MB}
+
+Nejčastěji používaným koeficientem pro měření korelace je Pearsonův korelační koeficient. Nechť $X$ a $Y$ jsou náhodné veličiny s realizacemi $x_1, x_2, \ldots$ a $y_1, y_2, \ldots$, potom hodnota Pearsonova koeficientu se vypočítá jako:
+\begin{equation}
+    r_p = \frac{\mathrm{cov}(X,Y)}{\sigma_X\sigma_Y} = 
+    \frac{ \sum_{i=1}^{n}(x_i-\mu_X)(y_i-\mu_Y) }{
+          \sqrt{\sum_{i=1}^{n}(x_i-\mu_X)^2}\sqrt{\sum_{i=1}^{n}(y_i-\mu_Y)^2}}.
+\end{equation}
+Tento koeficient měří lineární vztah mezi dvěma proměnnými. Hodnoty se pohybují v intervalu $\langle -1, 1 \rangle$. Krajní hodnoty znamenají dokonalou lineární závislost. Pokud je koeficient roven 1, pak pokud roste jedna veličina, roste i hodnota druhé veličiny. Pokud je koeficient roven -1, potom s rostoucí hodnotu jedné veličiny, klesá hodnota druhé. Zatímco je-li hodnota koeficientu rovna nule, veličiny jsou lineárně zcela nekorelované.\cite{bib:MB}
+
 \subsubsection{Další způsoby měření závislosti}
 
 Pro určení kolik informace o jedné proměnné nese druhá proměnná, je popsáno

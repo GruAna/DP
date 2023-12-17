@@ -43,6 +43,8 @@
 \contentsline {subsection}{\numberline {7.2.4}Testov\IeC {\'a}n\IeC {\'\i }}{71}{subsection.7.2.4}
 \contentsline {section}{\numberline {7.3}V\IeC {\'y}sledky}{71}{section.7.3}
 \contentsline {chapter}{\numberline {8}Vizualizace dat}{75}{chapter.8}
+\contentsline {section}{\numberline {8.1}Popis \IeC {\v r}e\IeC {\v s}en\IeC {\'\i }}{75}{section.8.1}
+\contentsline {section}{\numberline {8.2}V\IeC {\'y}sledky}{75}{section.8.2}
 \contentsline {chapter}{Z\IeC {\'a}v\IeC {\v e}r}{77}{chapter*.59}
 \contentsline {chapter}{Literatura}{78}{chapter*.59}
 \contentsline {chapter}{P\IeC {\v r}\IeC {\'\i }lohy}{83}{chapter*.60}
