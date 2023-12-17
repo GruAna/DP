@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2021.4.4)  17 DEC 2023 15:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2021.4.4)  17 DEC 2023 15:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1234,11 +1234,7 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'czech'.
- (/home/anna/Documents/skola/DP/text/DP_Gruberova.aux
-
-LaTeX Warning: Label `code:colnames' multiply defined.
-
-)
+ (/home/anna/Documents/skola/DP/text/DP_Gruberova.aux)
 \openout1 = `DP_Gruberova.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 119.
@@ -1575,17 +1571,15 @@ File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [27] [28] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 366.
-) (/home/anna/Documents/skola/DP/text/poznamky.tex) (/home/anna/Documents/skola/DP/text/kapitoly/shrinky.tex [29] [30
-
-]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 364.
+ [29]) (/home/anna/Documents/skola/DP/text/poznamky.tex) (/home/anna/Documents/skola/DP/text/kapitoly/shrinky.tex [30]
 Kapitola 3.
 
 Package hyperref Warning: Composite letter `\textring+u'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textring' on input line 14.
 
-<obrazky/typyshirnku.png, id=554, 933.4875pt x 670.505pt>
+<obrazky/typyshirnku.png, id=598, 933.4875pt x 670.505pt>
 File: obrazky/typyshirnku.png Graphic file (type png)
 <use obrazky/typyshirnku.png>
 Package pdftex.def Info: obrazky/typyshirnku.png  used on input line 22.
@@ -1595,7 +1589,9 @@ Overfull \hbox (7.10553pt too wide) in paragraph at lines 27--28
 []\OT1/lmr/m/n/12 Vybran^^Sa spole^^Tcnost rozli^^Tsuje ve sv^^Sych da-tech t^^Tri ka-te-go-rie shrinku -- shirnky zp^^Wusoben^^Se
  []
 
-[31] [32 </home/anna/Documents/skola/DP/text/obrazky/typyshirnku.png>]
+[31
+
+] [32 </home/anna/Documents/skola/DP/text/obrazky/typyshirnku.png>]
 Overfull \hbox (9.77362pt too wide) in paragraph at lines 51--63
 [][] 
  []
@@ -1649,23 +1645,23 @@ Package hyperref Warning: Composite letter `\textasciicaron+e'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textasciicaron' on input line 39.
 
-<obrazky/grafy/zastoupeni1.png, id=611, 834.11626pt x 205.5178pt>
+<obrazky/grafy/zastoupeni1.png, id=654, 834.11626pt x 205.5178pt>
 File: obrazky/grafy/zastoupeni1.png Graphic file (type png)
 <use obrazky/grafy/zastoupeni1.png>
 Package pdftex.def Info: obrazky/grafy/zastoupeni1.png  used on input line 47.
 (pdftex.def)             Requested size: 426.79134pt x 105.15764pt.
 [40 </home/anna/Documents/skola/DP/text/obrazky/grafy/zastoupeni1.png>]
-<obrazky/zntb/box_nominal.png, id=619, 448.7967pt x 313.6518pt>
+<obrazky/zntb/box_nominal.png, id=662, 448.7967pt x 313.6518pt>
 File: obrazky/zntb/box_nominal.png Graphic file (type png)
 <use obrazky/zntb/box_nominal.png>
 Package pdftex.def Info: obrazky/zntb/box_nominal.png  used on input line 81.
 (pdftex.def)             Requested size: 204.86125pt x 143.17601pt.
-<obrazky/zntb/box_ordinal.png, id=620, 469.0323pt x 313.6518pt>
+<obrazky/zntb/box_ordinal.png, id=663, 469.0323pt x 313.6518pt>
 File: obrazky/zntb/box_ordinal.png Graphic file (type png)
 <use obrazky/zntb/box_ordinal.png>
 Package pdftex.def Info: obrazky/zntb/box_ordinal.png  used on input line 89.
 (pdftex.def)             Requested size: 209.12683pt x 139.8498pt.
-<obrazky/zntb/MyScatter.png, id=621, 1084.05pt x 1084.05pt>
+<obrazky/zntb/MyScatter.png, id=664, 1084.05pt x 1084.05pt>
 File: obrazky/zntb/MyScatter.png Graphic file (type png)
 <use obrazky/zntb/MyScatter.png>
 Package pdftex.def Info: obrazky/zntb/MyScatter.png  used on input line 101.
@@ -1675,49 +1671,49 @@ Package pdftex.def Info: obrazky/zntb/MyScatter.png  used on input line 101.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [41 </home/anna/Documents/skola/DP/text/obrazky/zntb/box_nominal.png> </home/anna/Documents/skola/DP/text/obrazky/zntb/box_ordinal.png>]
-<obrazky/zntb/pearson.png, id=631, 632.3625pt x 560.0925pt>
+<obrazky/zntb/pearson.png, id=674, 632.3625pt x 560.0925pt>
 File: obrazky/zntb/pearson.png Graphic file (type png)
 <use obrazky/zntb/pearson.png>
 Package pdftex.def Info: obrazky/zntb/pearson.png  used on input line 112.
 (pdftex.def)             Requested size: 341.43436pt x 302.4198pt.
-<obrazky/zntb/MI.png, id=634, 622.9674pt x 555.7563pt>
+<obrazky/zntb/MI.png, id=677, 622.9674pt x 555.7563pt>
 File: obrazky/zntb/MI.png Graphic file (type png)
 <use obrazky/zntb/MI.png>
 Package pdftex.def Info: obrazky/zntb/MI.png  used on input line 122.
 (pdftex.def)             Requested size: 341.43436pt x 304.60689pt.
-<obrazky/zntb/cramers_u.png, id=636, 632.3625pt x 570.933pt>
+<obrazky/zntb/cramers_u.png, id=679, 632.3625pt x 570.933pt>
 File: obrazky/zntb/cramers_u.png Graphic file (type png)
 <use obrazky/zntb/cramers_u.png>
 Package pdftex.def Info: obrazky/zntb/cramers_u.png  used on input line 132.
 (pdftex.def)             Requested size: 341.43436pt x 308.27309pt.
  [42 </home/anna/Documents/skola/DP/text/obrazky/zntb/MyScatter.png>] [43 </home/anna/Documents/skola/DP/text/obrazky/zntb/pearson.png> </home/anna/Documents/skola/DP/text/obrazky/zntb/MI.png>]
-<obrazky/zntb/theils_u.png, id=656, 632.3625pt x 570.933pt>
+<obrazky/zntb/theils_u.png, id=699, 632.3625pt x 570.933pt>
 File: obrazky/zntb/theils_u.png Graphic file (type png)
 <use obrazky/zntb/theils_u.png>
 Package pdftex.def Info: obrazky/zntb/theils_u.png  used on input line 141.
 (pdftex.def)             Requested size: 341.43436pt x 308.27309pt.
-<obrazky/zntb/VIF.png, id=657, 419.166pt x 407.6028pt>
+<obrazky/zntb/VIF.png, id=700, 419.166pt x 407.6028pt>
 File: obrazky/zntb/VIF.png Graphic file (type png)
 <use obrazky/zntb/VIF.png>
 Package pdftex.def Info: obrazky/zntb/VIF.png  used on input line 155.
 (pdftex.def)             Requested size: 213.39566pt x 207.50772pt.
-<obrazky/zntb/MI_feature_selection.png, id=658, 416.2752pt x 408.3255pt>
+<obrazky/zntb/MI_feature_selection.png, id=701, 416.2752pt x 408.3255pt>
 File: obrazky/zntb/MI_feature_selection.png Graphic file (type png)
 <use obrazky/zntb/MI_feature_selection.png>
 Package pdftex.def Info: obrazky/zntb/MI_feature_selection.png  used on input line 161.
 (pdftex.def)             Requested size: 213.39566pt x 209.32112pt.
  [44 </home/anna/Documents/skola/DP/text/obrazky/zntb/cramers_u.png>] [45 </home/anna/Documents/skola/DP/text/obrazky/zntb/theils_u.png> </home/anna/Documents/skola/DP/text/obrazky/zntb/VIF.png> </home/anna/Documents/skola/DP/text/obrazky/zntb/MI_feature_selection.png>]
-<obrazky/zntb/pca-roztyl_komponetn.png, id=675, 406.8801pt x 328.1058pt>
+<obrazky/zntb/pca-roztyl_komponetn.png, id=719, 406.8801pt x 328.1058pt>
 File: obrazky/zntb/pca-roztyl_komponetn.png Graphic file (type png)
 <use obrazky/zntb/pca-roztyl_komponetn.png>
 Package pdftex.def Info: obrazky/zntb/pca-roztyl_komponetn.png  used on input line 182.
 (pdftex.def)             Requested size: 213.39566pt x 172.07788pt.
-<obrazky/zntb/pca-kum_roztyl_komponetn.png, id=676, 442.2924pt x 328.1058pt>
+<obrazky/zntb/pca-kum_roztyl_komponetn.png, id=720, 442.2924pt x 328.1058pt>
 File: obrazky/zntb/pca-kum_roztyl_komponetn.png Graphic file (type png)
 <use obrazky/zntb/pca-kum_roztyl_komponetn.png>
 Package pdftex.def Info: obrazky/zntb/pca-kum_roztyl_komponetn.png  used on input line 190.
 (pdftex.def)             Requested size: 213.39566pt x 158.30504pt.
-<obrazky/zntb/pca-prispevky.png, id=677, 413.3844pt x 407.6028pt>
+<obrazky/zntb/pca-prispevky.png, id=721, 413.3844pt x 407.6028pt>
 File: obrazky/zntb/pca-prispevky.png Graphic file (type png)
 <use obrazky/zntb/pca-prispevky.png>
 Package pdftex.def Info: obrazky/zntb/pca-prispevky.png  used on input line 198.
@@ -1785,7 +1781,7 @@ Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                removing `\textasciicaron' on input line 2.
 
 [55]
-<obrazky/grafy/matice_korelace_typy_DP-graf.pdf, id=759, 363.27718pt x 221.8689pt>
+<obrazky/grafy/matice_korelace_typy_DP-graf.pdf, id=801, 363.27718pt x 221.8689pt>
 File: obrazky/grafy/matice_korelace_typy_DP-graf.pdf Graphic file (type pdf)
 <use obrazky/grafy/matice_korelace_typy_DP-graf.pdf>
 Package pdftex.def Info: obrazky/grafy/matice_korelace_typy_DP-graf.pdf  used on input line 45.
@@ -1797,7 +1793,7 @@ Package hyperref Warning: Composite letter `\textasciicaron+e'
 (hyperref)                removing `\textasciicaron' on input line 120.
 
 [58]
-<obrazky/strukturaslozky.pdf, id=797, 125.5089pt x 152.4897pt>
+<obrazky/strukturaslozky.pdf, id=840, 125.5089pt x 152.4897pt>
 File: obrazky/strukturaslozky.pdf Graphic file (type pdf)
 <use obrazky/strukturaslozky.pdf>
 Package pdftex.def Info: obrazky/strukturaslozky.pdf  used on input line 141.
@@ -1878,7 +1874,7 @@ Overfull \hbox (33.57pt too wide) in paragraph at lines 337--360
 
 LaTeX Warning: File `obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf' not found on input line 375.
 
-<obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf, id=865, 462.52798pt x 346.89601pt>
+<obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf, id=907, 462.52798pt x 346.89601pt>
 File: obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf Graphic file (type pdf)
 <use obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf>
 Package pdftex.def Info: obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf  used on input line 375.
@@ -2059,24 +2055,21 @@ Package rerunfilecheck Info: File `DP_Gruberova.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 322.
  ) 
 Here is how much of TeX's memory you used:
- 32323 strings out of 494848
- 597590 string characters out of 6178431
- 798255 words of memory out of 5000000
- 34778 multiletter control sequences out of 15000+600000
+ 32373 strings out of 494848
+ 598348 string characters out of 6178431
+ 982530 words of memory out of 5000000
+ 34786 multiletter control sequences out of 15000+600000
  621372 words of font info for 103 fonts, out of 8000000 for 9000
  46 hyphenation exceptions out of 8191
- 62i,18n,78p,10458b,1410s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,18n,78p,10458b,2184s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmmib10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb>
-Output written on /home/anna/Documents/skola/DP/text/DP_Gruberova.pdf (79 pages, 3549389 bytes).
+Output written on /home/anna/Documents/skola/DP/text/DP_Gruberova.pdf (79 pages, 3553503 bytes).
 PDF statistics:
- 1158 PDF objects out of 1200 (max. 8388607)
- 948 compressed objects within 10 object streams
- 292 named destinations out of 1000 (max. 500000)
+ 1208 PDF objects out of 1440 (max. 8388607)
+ 998 compressed objects within 10 object streams
+ 334 named destinations out of 1000 (max. 500000)
  441 words of extra memory for PDF output out of 10000 (max. 10000000)
 

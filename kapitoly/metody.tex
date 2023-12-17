@@ -322,7 +322,7 @@ Každý z boolovských atributů libovolného typu cedentu může mít tyto atri
 
 Příznaky musí být kategorické a musí být možné je seřadit. Druhá vlastnost je třeba pro vybírání více kategorií v jednom cedentu určitými způsoby selekce. Pro textové řetězce reprezentující kategorie jsou názvy kategorií řazeny podle abecedy.\cite{bib:GUHAclever}
 
-Pro názornost jsou dále uvedeny příklady pro jendotlivé druhy atributu \texttt{type}. Nechť je dán příznak $\mathbf{A}$ s kategoriemi 1, 2, 3, 4, 5 a parametry jsou definovány následovně: \texttt{minlen=1}, \texttt{minlen=3}. Pokud je typ \texttt{one}, bere se jedna z kategorií daného příznaku. Pro typ \texttt{subset} jsou vybrány všechny následující možnosti:
+Pro názornost jsou dále uvedeny příklady pro jendotlivé druhy atributu \texttt{type}. Nechť je dán příznak $\mathbf{A}$ s kategoriemi 1, 2, 3, 4, 5 a parametry jsou definovány následovně: \texttt{minlen=1}, \texttt{minlen=3}. Pokud je typ \texttt{one}, bere se jedna z kategorií daného příznaku, tuto kategorii je třeba specifikovat. Pro typ \texttt{subset} jsou vybrány všechny následující možnosti:
 \begin{itemize}
     \itemsep0em
     \item Délka je rovna 1 --  $\mathbf{A(1), A(2), A(3), A(4), A(5)}.$
@@ -360,12 +360,53 @@ Další parametry, které lze předat této funkci jsou:
     \item \texttt{bad} (podprůměrná závislost) -- Jak moc $\varphi$ snižuje  pravděpodobnost $\psi$.
 \end{itemize}
 
-Příklad volání funkce \texttt{cleverminer}
-
-
-\begin{lstlisting}[language=Python, style=mystyle, label={code:colnames}, caption={Příklad volání funkce \texttt{cleverminer}.}]
-
+Příklad volání funkce \texttt{cleverminer} je sepsaný v ukázce kódu č. \ref*{code:cleverminer}.
+\begin{lstlisting}[language=Python, style=mystyle, label={code:cleverminer}, caption={Příklad volání funkce \texttt{cleverminer}.}]
+cleverminer(df = data,
+            proc = "4ftMiner", 
+            quantifiers = {"conf":0.6, "Base":1000},
+            ante = {
+                    "attributes":
+                    [
+                        {
+                            "name":"weekday", 
+                            "type":"subset", 
+                            "minlen":1, "maxlen":3
+                        },
+                        {
+                            "name":"quarter", 
+                            "type":"lcut", 
+                            "minlen":1, "maxlen":4
+                        }
+                    ], 
+                    "minlen":1, "maxlen":3, "type":"con"
+                    },
+            succ = {
+                    "attributes":
+                    [
+                        {
+                            "name":"L3", 
+                            "type":"subset", 
+                            "minlen":1, "maxlen":3
+                        }
+                    ], 
+                    "minlen":1, "maxlen":1, "type":"con"
+                    },
+            cond = {
+                    "attributes":
+                    [
+                        {
+                            "name":"promo", 
+                            "type":"one", 
+                            "value":"promo"
+                        }
+                    ],
+                    "minlen":1, "maxlen":1, "type":"con"
+                    }
+            )
 \end{lstlisting}
+
+
 % \subsection{Genetický algoritmus}
 
 % Genetický algoritmus byl inspirovaný evoluční teorií a přirozeným výběrem. Je založený na teorii, že jedinci, kteří jsou lepší než ostatní mají větší šanci na to, předat svou genetickou informaci dál. Jejich geny tk budou základem nové generace. Podobně jako ve zmíněné teorii, algoritmus používá následující informace: genetickou reprezentaci pomocí bitového  řetězce, funkci pro vyhodnocení tzv. fitness funkci, kombinování genů a mutaci. 
