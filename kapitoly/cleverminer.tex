@@ -1,15 +1,71 @@
-\chapter{Analýza pomocí nástroje cleverminer}
+\chapter{Analýza pomocí metody 4ftMiner}
 \label{ch:cleverminer}
 
-Pomocí nástroje Cleverminer, který je dostupný jako knihovna pro jazyk Python, jsem provedla analýzu shrinků produktu. Pracovala jsem pouze se vzorem dat jednoho měsíce a s kategorií produktů \emph{Velmi čerstvé}. Princip metod, které se používají v knihovně je popsán v sekci \ref*{sec:Teorie:Guha}. Dataset jsem rozšířila o další sledované sloupce, které dávají do srovnání hodnotu shrinku a objem tržeb. Vytvořila jsem takto sloupce: podíl shrinku na celkových tržbách prodejny, podíl shrinku na tržbách shrinkovaného produktu na prodejně, podíl shrinku a tržeb v kategorii úrovně 1.
+Pomocí metody 4ftMiner, která je jednou z metod procedury GUHA jsem provedla analýzu shrinků produktu. Tato metoda je implemnetovaná v  knihovně \emph{Cleverminer} pro jazyk Python. Pracovala jsem pouze se vzorem dat jednoho měsíce a s kategorií produktů \emph{Velmi čerstvé} a \emph{Čerstvé}. Princip metod, které se používají v knihovně, a důležité pojmy týkající se GUHA procedur jsou popsány v sekci \ref*{sec:Teorie:Guha}. 
+
+Zkoumaný dataset se záznamy shrinků produktů jsem rozšířila o další sledované sloupce, které dávají do srovnání hodnotu shrinku a objem tržeb. Vytvořila jsem takto sloupce: podíl shrinku na celkových tržbách prodejny, podíl shrinku na tržbách shrinkovaného produktu na prodejně, podíl shrinku a tržeb v kategorii úrovně 1.
 
 Na základě zastoupení jednotlivých typů shrinků, kde prošlé a zkažené zboží zaujímá více než 64 \% shrinků, se následující analýzy zaměřují pouze na tento typ.
 
-Metoda pracuje pouze s diskrétními hodnotami, proto bylo nutné kategorizovat sloupce s hodnotou shrinku, s množstvím shrinkovaných produktů a s jednotlivými podíly. Na obrázcích \ref*{} až \ref{} jsou zobrazené četnosti záznamů v kategoriích.
+Metoda pracuje pouze s diskrétními hodnotami, proto bylo nutné kategorizovat sloupce s hodnotou shrinku, s množstvím shrinkovaných produktů a s jednotlivými podíly. Na obrázcích \ref*{obr:nb:hist} až \ref{obr:nb:hist5} jsou zobrazené četnosti záznamů v kategoriích.
 
-TODO ukázky kategorizace TBD % TODO ukázky kategorizace TBD
+\begin{figure}[h!]
+    \centering
+    \begin{minipage}[b]{.55\textwidth}
+      \centering
+      \captionsetup{justification=centering}
 
-\subsection{Výsledky}
+      \includegraphics[width=\textwidth]{obrazky/grafy/histogram/newplot(2).png}
+      \vspace*{-3em}
+      \caption{Histogram pro hodnoty \\ velikosti shrinku v peněžních jednotkách.}
+      \label{obr:nb:hist}
+    \end{minipage}%
+    \hspace*{-2em}
+    \begin{minipage}[b]{.55\textwidth}
+        \centering
+        \captionsetup{justification=centering}
+        \includegraphics[width=\textwidth]{obrazky/grafy/histogram/newplot(1).png}
+        \vspace*{-3em}
+        \caption{Histogram pro hodnoty \\ objemu shrinku v kusech.}
+        \label{obr:nb:hist2}
+    \end{minipage}
+\end{figure}
+\vspace*{-2em}
+
+\begin{figure}[h!]
+    \centering
+    \begin{minipage}[b]{.55\textwidth}
+      \centering
+      \captionsetup{justification=centering}
+
+      \includegraphics[width=\textwidth]{obrazky/grafy/histogram/newplot.png}
+      \vspace*{-3em}
+      \caption{Histogram podílu shrinku \\na tržbách shrinkovaného produktu.}
+      \label{obr:nb:hist3}
+    \end{minipage}%
+    \hspace*{-2em}
+    \begin{minipage}[b]{.55\textwidth}
+        \centering
+        \captionsetup{justification=centering}
+  
+        \includegraphics[width=\textwidth]{obrazky/grafy/histogram/newplot(3).png}
+        \vspace*{-3em}
+        \caption{Histogram podílu shrinku \\a tržeb v kategorii úrovně 1.}
+        \label{obr:nb:hist4}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[h!]
+        \centering
+        \captionsetup{justification=centering}
+        \includegraphics[width=0.55\textwidth]{obrazky/grafy/histogram/newplot(4).png}
+        \caption{Histogram podílu shrinku \\na celkových tržbách prodejny.}
+        \label{obr:nb:hist5}
+\end{figure}
+
+% TODO ukázky kategorizace TBD % TODO ukázky kategorizace TBD
+
+\section{Hypotézy}
 
 Data jsem analyzovala metodou \emph{4ftMiner}, které jsem nastavovala parametry podle zkoumané hypotézy. 
 
