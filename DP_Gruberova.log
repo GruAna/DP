@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2021.4.4)  17 DEC 2023 20:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2021.4.4)  17 DEC 2023 21:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1751,6 +1751,11 @@ Overfull \hbox (14.70677pt too wide) in paragraph at lines 324--326
 
 )) (/home/anna/Documents/skola/DP/text/kapitoly/cleverminer.tex [50]
 Kapitola 6.
+
+Overfull \hbox (8.16264pt too wide) in paragraph at lines 6--7
+\OT1/lmr/m/n/12 takto sloupce: pod^^S^^Pl shrinku na cel-kov^^Sych tr^^Tzb^^Sach pro-dejny, pod^^S^^Pl shrinku na t^^Sydenn^^S^^Pch
+ []
+
 <obrazky/grafy/histogram/newplot(2).png, id=773, 615.29875pt x 526.96875pt>
 File: obrazky/grafy/histogram/newplot(2).png Graphic file (type png)
 <use obrazky/grafy/histogram/newplot(2).png>
@@ -1827,43 +1832,43 @@ Underfull \hbox (badness 4608) in paragraph at lines 157--158
  []
 
 [54]
-Overfull \hbox (2.50394pt too wide) in paragraph at lines 184--185
+Overfull \hbox (2.50394pt too wide) in paragraph at lines 186--187
 []\OT1/lmr/m/n/12 Pokud ^^Supln^^Te vy-nech^^Same ka-te-go-rie Masn^^Se pro-dukty ze vstupn^^S^^Pch dat, pak se nej^^Tcast^^Teji
  []
 
-
-Overfull \hbox (1.17825pt too wide) in paragraph at lines 200--207
-\OT1/lmr/m/n/12 Kategorie MEAT PRO-DUCTS (PROC. MEAT SERVICE)-( masn^^Se pro-dukty, ^^Tsunka,
+[55]
+Overfull \hbox (7.77353pt too wide) in paragraph at lines 239--244
+\OT1/lmr/m/n/12 mezi 10-40 %. Cukr^^Sa^^Trsk^^Se v^^Syrobky maj^^S^^P pod^^S^^Pl shrinku v 74 % za-zna-me-nan^^Sych p^^Tr^^S^^Ppadech
  []
 
-[55]) (/home/anna/Documents/skola/DP/text/kapitoly/korelace.tex [56]
+[56]) (/home/anna/Documents/skola/DP/text/kapitoly/korelace.tex [57] [58
+
+]
 Kapitola 7.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textasciicaron' on input line 2.
 
-[57
-
-]
-<obrazky/grafy/matice_korelace_typy_DP-graf.pdf, id=863, 363.27718pt x 221.8689pt>
+[59]
+<obrazky/grafy/matice_korelace_typy_DP-graf.pdf, id=869, 363.27718pt x 221.8689pt>
 File: obrazky/grafy/matice_korelace_typy_DP-graf.pdf Graphic file (type pdf)
 <use obrazky/grafy/matice_korelace_typy_DP-graf.pdf>
 Package pdftex.def Info: obrazky/grafy/matice_korelace_typy_DP-graf.pdf  used on input line 45.
 (pdftex.def)             Requested size: 426.79134pt x 260.67566pt.
- [58 </home/anna/Documents/skola/DP/text/obrazky/grafy/matice_korelace_typy_DP-graf.pdf>] [59]
+ [60 </home/anna/Documents/skola/DP/text/obrazky/grafy/matice_korelace_typy_DP-graf.pdf>] [61]
 
 Package hyperref Warning: Composite letter `\textasciicaron+e'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textasciicaron' on input line 120.
 
-[60]
-<obrazky/strukturaslozky.pdf, id=901, 125.5089pt x 152.4897pt>
+[62]
+<obrazky/strukturaslozky.pdf, id=908, 125.5089pt x 152.4897pt>
 File: obrazky/strukturaslozky.pdf Graphic file (type pdf)
 <use obrazky/strukturaslozky.pdf>
 Package pdftex.def Info: obrazky/strukturaslozky.pdf  used on input line 141.
 (pdftex.def)             Requested size: 128.0387pt x 155.57233pt.
- [61 </home/anna/Documents/skola/DP/text/obrazky/strukturaslozky.pdf>] [62] [63]
+ [63 </home/anna/Documents/skola/DP/text/obrazky/strukturaslozky.pdf>] [64] [65]
 Underfull \hbox (badness 10000) in paragraph at lines 228--228
 []|\OT1/lmr/m/n/12 Za^^Tc^^Satek
  []
@@ -1902,9 +1907,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 262--262
  []
 
 
-LaTeX Warning: Reference `label' on page 64 undefined on input line 277.
+LaTeX Warning: Reference `label' on page 66 undefined on input line 277.
 
-[64] [65]
+[66] [67]
 Overfull \hbox (4.23618pt too wide) in paragraph at lines 288--289
 \OT1/lmr/m/n/12 tes-tov^^San^^S^^P, zda dva zkou-man^^Se sloupce pat^^Tr^^S^^P do stejn^^Seho rozd^^Telen^^S^^P byl pou^^Tzit^^Sy Kolmogo-
  []
@@ -1914,12 +1919,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 288--289
 
  []
 
-[66]
+[68]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [67]
+ [69]
 
-LaTeX Warning: Reference `sec:kor:postup' on page 68 undefined on input line 307.
+LaTeX Warning: Reference `sec:kor:postup' on page 70 undefined on input line 307.
 
 
 Overfull \hbox (0.65588pt too wide) in paragraph at lines 307--308
@@ -1931,7 +1936,7 @@ Overfull \hbox (12.98993pt too wide) in paragraph at lines 317--319
 \OT1/lmr/m/n/12 tvo^^Trila funkci, kter^^Sa po-moc^^S^^P knihovny \OT1/lmr/m/it/12 mat-plot-lib \OT1/lmr/m/n/12 vytv^^Sa^^Tr^^S^^P bo-dov^^Sy graf dvou prom^^Tenn^^Sych.
  []
 
-[68]
+[70]
 Overfull \hbox (33.57pt too wide) in paragraph at lines 337--360
  [][] 
  []
@@ -1939,7 +1944,7 @@ Overfull \hbox (33.57pt too wide) in paragraph at lines 337--360
 
 LaTeX Warning: File `obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf' not found on input line 375.
 
-<obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf, id=970, 462.52798pt x 346.89601pt>
+<obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf, id=976, 462.52798pt x 346.89601pt>
 File: obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf Graphic file (type pdf)
 <use obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf>
 Package pdftex.def Info: obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf  used on input line 375.
@@ -1949,11 +1954,11 @@ Overfull \hbox (3.59305pt too wide) in paragraph at lines 382--384
 \OT1/lmr/m/n/12 rust.poh., bageta s gra-ha-mem, bageta chle-bov^^Sa, ban-ketka cere^^Saln^^S^^P, da-lam^^Sanek, kostka
  []
 
-[69] [70 </home/anna/Documents/skola/DP/text/obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf>]) (/home/anna/Documents/skola/DP/text/kapitoly/vizualizace.tex [71] [72
+[71] [72 </home/anna/Documents/skola/DP/text/obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf>]) (/home/anna/Documents/skola/DP/text/kapitoly/vizualizace.tex [73] [74
 
 ]
 Kapitola 8.
-) [73] [74
+) [75] [76
 
 ]
 
@@ -1961,7 +1966,7 @@ Package hyperref Warning: Composite letter `\textasciicaron+e'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textasciicaron' on input line 290.
 
-(/home/anna/Documents/skola/DP/text/kapitoly/zaver.tex) [75] (/home/anna/Documents/skola/DP/text/tex/bibliografie1.tex [76
+(/home/anna/Documents/skola/DP/text/kapitoly/zaver.tex) [77] (/home/anna/Documents/skola/DP/text/tex/bibliografie1.tex [78
 
 
 ]
@@ -2014,7 +2019,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--36
 \OT1/lmtt/m/n/12 spacefactor \ spacefactor} \ accent19 \ OT1 \ i \ egroup \ spacefactor \ accent @
  []
 
-[77]
+[79]
 Underfull \hbox (badness 3601) in paragraph at lines 45--46
 []\OT1/lmr/m/n/12 ABDI, Herv^^Se, VA-LEN-TIN, Do-mi-nique. \OT1/lmr/m/it/12 Mul-tiple corre-spon-dence ana-ly-
  []
@@ -2039,7 +2044,7 @@ Underfull \hbox (badness 4328) in paragraph at lines 85--86
 \OT1/lmr/m/n/12 line]. [cit. 2023-03-13]. Do-stupn^^Se z: []$\OT1/lmtt/m/n/12 https : / / towardsdatascience . com /
  []
 
-[78]
+[80]
 Underfull \hbox (badness 6364) in paragraph at lines 94--95
 []\OT1/lmr/m/n/12 BOBBITT, Zach. \OT1/lmr/m/it/12 How to In-ter-pret Cra-mer's V \OT1/lmr/m/n/12 In \OT1/lmr/m/it/12 Sta-to-logy \OT1/lmr/m/n/12 [on-
  []
@@ -2094,7 +2099,7 @@ Underfull \hbox (badness 1137) in paragraph at lines 116--117
 \OT1/lmr/m/n/12 line]. [cit. 2023-12-10]. Do-stupn^^Se z: []$\OT1/lmtt/m/n/12 https : / / docs . scipy . org / doc / scipy /
  []
 
-[79]) [80]
+[81]) [82]
 
 Package hyperref Warning: Composite letter `\textasciicaron+r'
 (hyperref)                not defined in PD1 encoding,
@@ -2106,7 +2111,7 @@ Package hyperref Warning: Composite letter `\textasciicaron+r'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textasciicaron' on input line 312.
 
-[81
+[83
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 322.
@@ -2115,7 +2120,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 322.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 322.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 322.
 Package rerunfilecheck Info: File `DP_Gruberova.out' has not changed.
-(rerunfilecheck)             Checksum: CD121D31A1DB4F45EEEF45301D310122;2330.
+(rerunfilecheck)             Checksum: 281FA4A16589EFD319D10667E1C5CE84;2330.
 
 
 LaTeX Warning: There were undefined references.
@@ -2123,18 +2128,18 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 322.
  ) 
 Here is how much of TeX's memory you used:
- 32451 strings out of 494848
- 600066 string characters out of 6178431
+ 32450 strings out of 494848
+ 600059 string characters out of 6178431
  983276 words of memory out of 5000000
  34814 multiletter control sequences out of 15000+600000
  621372 words of font info for 103 fonts, out of 8000000 for 9000
  46 hyphenation exceptions out of 8191
  62i,18n,78p,10458b,2184s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmmib10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb>
-Output written on /home/anna/Documents/skola/DP/text/DP_Gruberova.pdf (81 pages, 3623910 bytes).
+Output written on /home/anna/Documents/skola/DP/text/DP_Gruberova.pdf (83 pages, 3626924 bytes).
 PDF statistics:
- 1278 PDF objects out of 1440 (max. 8388607)
- 1055 compressed objects within 11 object streams
- 378 named destinations out of 1000 (max. 500000)
+ 1284 PDF objects out of 1440 (max. 8388607)
+ 1059 compressed objects within 11 object streams
+ 377 named destinations out of 1000 (max. 500000)
  466 words of extra memory for PDF output out of 10000 (max. 10000000)
 
