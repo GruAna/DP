@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2021.4.4)  17 DEC 2023 16:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2021.4.4)  17 DEC 2023 20:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1586,7 +1586,7 @@ Package pdftex.def Info: obrazky/typyshirnku.png  used on input line 22.
 (pdftex.def)             Requested size: 426.79134pt x 306.55353pt.
 
 Overfull \hbox (7.10553pt too wide) in paragraph at lines 27--28
-[]\OT1/lmr/m/n/12 Vybran^^Sa spole^^Tcnost rozli^^Tsuje ve sv^^Sych da-tech t^^Tri ka-te-go-rie shrinku -- shirnky zp^^Wusoben^^Se
+[]\OT1/lmr/m/n/12 Vybran^^Sa spole^^Tcnost rozli^^Tsuje ve sv^^Sych da-tech t^^Tri ka-te-go-rie shrinku -- shrinky zp^^Wusoben^^Se
  []
 
 [31
@@ -1754,85 +1754,116 @@ Kapitola 6.
 <obrazky/grafy/histogram/newplot(2).png, id=773, 615.29875pt x 526.96875pt>
 File: obrazky/grafy/histogram/newplot(2).png Graphic file (type png)
 <use obrazky/grafy/histogram/newplot(2).png>
-Package pdftex.def Info: obrazky/grafy/histogram/newplot(2).png  used on input line 18.
+Package pdftex.def Info: obrazky/grafy/histogram/newplot(2).png  used on input line 35.
 (pdftex.def)             Requested size: 234.73653pt x 201.03821pt.
 <obrazky/grafy/histogram/newplot(1).png, id=774, 615.29875pt x 526.96875pt>
 File: obrazky/grafy/histogram/newplot(1).png Graphic file (type png)
 <use obrazky/grafy/histogram/newplot(1).png>
-Package pdftex.def Info: obrazky/grafy/histogram/newplot(1).png  used on input line 27.
+Package pdftex.def Info: obrazky/grafy/histogram/newplot(1).png  used on input line 44.
 (pdftex.def)             Requested size: 234.73653pt x 201.03821pt.
 
-Overfull \hbox (21.79312pt too wide) in paragraph at lines 14--32
+Overfull \hbox (21.79312pt too wide) in paragraph at lines 31--50
  [][]|  [] 
  []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <obrazky/grafy/histogram/newplot.png, id=775, 615.29875pt x 526.96875pt>
 File: obrazky/grafy/histogram/newplot.png Graphic file (type png)
 <use obrazky/grafy/histogram/newplot.png>
-Package pdftex.def Info: obrazky/grafy/histogram/newplot.png  used on input line 41.
+Package pdftex.def Info: obrazky/grafy/histogram/newplot.png  used on input line 60.
 (pdftex.def)             Requested size: 234.73653pt x 201.03821pt.
 <obrazky/grafy/histogram/newplot(3).png, id=776, 615.29875pt x 526.96875pt>
 File: obrazky/grafy/histogram/newplot(3).png Graphic file (type png)
 <use obrazky/grafy/histogram/newplot(3).png>
-Package pdftex.def Info: obrazky/grafy/histogram/newplot(3).png  used on input line 51.
+Package pdftex.def Info: obrazky/grafy/histogram/newplot(3).png  used on input line 70.
 (pdftex.def)             Requested size: 234.73653pt x 201.03821pt.
 
-Overfull \hbox (21.79312pt too wide) in paragraph at lines 37--56
+Overfull \hbox (21.79312pt too wide) in paragraph at lines 56--76
  [][]|  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<obrazky/grafy/histogram/newplot(4).png, id=777, 615.29875pt x 526.96875pt>
+<obrazky/grafy/histogram/newplot(4).png, id=777, 580.1675pt x 437.635pt>
 File: obrazky/grafy/histogram/newplot(4).png Graphic file (type png)
 <use obrazky/grafy/histogram/newplot(4).png>
-Package pdftex.def Info: obrazky/grafy/histogram/newplot(4).png  used on input line 61.
-(pdftex.def)             Requested size: 234.73653pt x 201.03821pt.
+Package pdftex.def Info: obrazky/grafy/histogram/newplot(4).png  used on input line 81.
+(pdftex.def)             Requested size: 234.73653pt x 177.06758pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[51
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+]
 
- [51
+LaTeX Warning: Text page 52 contains only floats.
 
- </home/anna/Documents/skola/DP/text/obrazky/grafy/histogram/newplot(2).png> </home/anna/Documents/skola/DP/text/obrazky/grafy/histogram/newplot(1).png>]
-Underfull \vbox (badness 4036) has occurred while \output is active []
+[52 </home/anna/Documents/skola/DP/text/obrazky/grafy/histogram/newplot(2).png> </home/anna/Documents/skola/DP/text/obrazky/grafy/histogram/newplot(1).png> </home/anna/Documents/skola/DP/text/obrazky/grafy/histogram/newplot.png> </home/anna/Documents/skola/DP/text/obrazky/grafy/histogram/newplot(3).png> </home/anna/Documents/skola/DP/text/obrazky/grafy/histogram/newplot(4).png>] [53]
+Underfull \hbox (badness 4608) in paragraph at lines 148--149
+[]|\OT1/lmr/m/n/12 weekday(0) $\OMS/lmsy/m/n/12 ^$ \OT1/lmr/m/n/12 promo(after[]promo) $\OMS/lmsy/m/n/12 )$
+ []
 
- [52 </home/anna/Documents/skola/DP/text/obrazky/grafy/histogram/newplot.png> </home/anna/Documents/skola/DP/text/obrazky/grafy/histogram/newplot(3).png> </home/anna/Documents/skola/DP/text/obrazky/grafy/histogram/newplot(4).png>]
-Overfull \hbox (1.17825pt too wide) in paragraph at lines 85--92
+
+Underfull \hbox (badness 4608) in paragraph at lines 151--152
+[]|\OT1/lmr/m/n/12 weekday(1) $\OMS/lmsy/m/n/12 ^$ \OT1/lmr/m/n/12 promo(after[]promo) $\OMS/lmsy/m/n/12 )$
+ []
+
+
+Underfull \hbox (badness 4608) in paragraph at lines 154--155
+[]|\OT1/lmr/m/n/12 weekday(2) $\OMS/lmsy/m/n/12 ^$ \OT1/lmr/m/n/12 promo(after[]promo) $\OMS/lmsy/m/n/12 )$
+ []
+
+
+Underfull \hbox (badness 4608) in paragraph at lines 156--157
+[]|\OT1/lmr/m/n/12 weekday(3) $\OMS/lmsy/m/n/12 ^$ \OT1/lmr/m/n/12 promo(after[]promo) $\OMS/lmsy/m/n/12 )$
+ []
+
+
+Underfull \hbox (badness 4608) in paragraph at lines 157--158
+[]|\OT1/lmr/m/n/12 weekday(6) $\OMS/lmsy/m/n/12 ^$ \OT1/lmr/m/n/12 promo(after[]promo) $\OMS/lmsy/m/n/12 )$
+ []
+
+[54]
+Overfull \hbox (2.50394pt too wide) in paragraph at lines 184--185
+[]\OT1/lmr/m/n/12 Pokud ^^Supln^^Te vy-nech^^Same ka-te-go-rie Masn^^Se pro-dukty ze vstupn^^S^^Pch dat, pak se nej^^Tcast^^Teji
+ []
+
+
+Overfull \hbox (1.17825pt too wide) in paragraph at lines 200--207
 \OT1/lmr/m/n/12 Kategorie MEAT PRO-DUCTS (PROC. MEAT SERVICE)-( masn^^Se pro-dukty, ^^Tsunka,
  []
 
-[53]) (/home/anna/Documents/skola/DP/text/kapitoly/korelace.tex [54]
+[55]) (/home/anna/Documents/skola/DP/text/kapitoly/korelace.tex [56]
 Kapitola 7.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textasciicaron' on input line 2.
 
-[55
+[57
 
 ]
-<obrazky/grafy/matice_korelace_typy_DP-graf.pdf, id=815, 363.27718pt x 221.8689pt>
+<obrazky/grafy/matice_korelace_typy_DP-graf.pdf, id=863, 363.27718pt x 221.8689pt>
 File: obrazky/grafy/matice_korelace_typy_DP-graf.pdf Graphic file (type pdf)
 <use obrazky/grafy/matice_korelace_typy_DP-graf.pdf>
 Package pdftex.def Info: obrazky/grafy/matice_korelace_typy_DP-graf.pdf  used on input line 45.
 (pdftex.def)             Requested size: 426.79134pt x 260.67566pt.
- [56 </home/anna/Documents/skola/DP/text/obrazky/grafy/matice_korelace_typy_DP-graf.pdf>] [57]
+ [58 </home/anna/Documents/skola/DP/text/obrazky/grafy/matice_korelace_typy_DP-graf.pdf>] [59]
 
 Package hyperref Warning: Composite letter `\textasciicaron+e'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textasciicaron' on input line 120.
 
-[58]
-<obrazky/strukturaslozky.pdf, id=854, 125.5089pt x 152.4897pt>
+[60]
+<obrazky/strukturaslozky.pdf, id=901, 125.5089pt x 152.4897pt>
 File: obrazky/strukturaslozky.pdf Graphic file (type pdf)
 <use obrazky/strukturaslozky.pdf>
 Package pdftex.def Info: obrazky/strukturaslozky.pdf  used on input line 141.
 (pdftex.def)             Requested size: 128.0387pt x 155.57233pt.
- [59 </home/anna/Documents/skola/DP/text/obrazky/strukturaslozky.pdf>] [60] [61]
+ [61 </home/anna/Documents/skola/DP/text/obrazky/strukturaslozky.pdf>] [62] [63]
 Underfull \hbox (badness 10000) in paragraph at lines 228--228
 []|\OT1/lmr/m/n/12 Za^^Tc^^Satek
  []
@@ -1871,9 +1902,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 262--262
  []
 
 
-LaTeX Warning: Reference `label' on page 62 undefined on input line 277.
+LaTeX Warning: Reference `label' on page 64 undefined on input line 277.
 
-[62] [63]
+[64] [65]
 Overfull \hbox (4.23618pt too wide) in paragraph at lines 288--289
 \OT1/lmr/m/n/12 tes-tov^^San^^S^^P, zda dva zkou-man^^Se sloupce pat^^Tr^^S^^P do stejn^^Seho rozd^^Telen^^S^^P byl pou^^Tzit^^Sy Kolmogo-
  []
@@ -1883,12 +1914,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 288--289
 
  []
 
-[64]
+[66]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [65]
+ [67]
 
-LaTeX Warning: Reference `sec:kor:postup' on page 66 undefined on input line 307.
+LaTeX Warning: Reference `sec:kor:postup' on page 68 undefined on input line 307.
 
 
 Overfull \hbox (0.65588pt too wide) in paragraph at lines 307--308
@@ -1900,7 +1931,7 @@ Overfull \hbox (12.98993pt too wide) in paragraph at lines 317--319
 \OT1/lmr/m/n/12 tvo^^Trila funkci, kter^^Sa po-moc^^S^^P knihovny \OT1/lmr/m/it/12 mat-plot-lib \OT1/lmr/m/n/12 vytv^^Sa^^Tr^^S^^P bo-dov^^Sy graf dvou prom^^Tenn^^Sych.
  []
 
-[66]
+[68]
 Overfull \hbox (33.57pt too wide) in paragraph at lines 337--360
  [][] 
  []
@@ -1908,7 +1939,7 @@ Overfull \hbox (33.57pt too wide) in paragraph at lines 337--360
 
 LaTeX Warning: File `obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf' not found on input line 375.
 
-<obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf, id=921, 462.52798pt x 346.89601pt>
+<obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf, id=970, 462.52798pt x 346.89601pt>
 File: obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf Graphic file (type pdf)
 <use obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf>
 Package pdftex.def Info: obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf  used on input line 375.
@@ -1918,11 +1949,11 @@ Overfull \hbox (3.59305pt too wide) in paragraph at lines 382--384
 \OT1/lmr/m/n/12 rust.poh., bageta s gra-ha-mem, bageta chle-bov^^Sa, ban-ketka cere^^Saln^^S^^P, da-lam^^Sanek, kostka
  []
 
-[67] [68 </home/anna/Documents/skola/DP/text/obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf>]) (/home/anna/Documents/skola/DP/text/kapitoly/vizualizace.tex [69] [70
+[69] [70 </home/anna/Documents/skola/DP/text/obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf>]) (/home/anna/Documents/skola/DP/text/kapitoly/vizualizace.tex [71] [72
 
 ]
 Kapitola 8.
-) [71] [72
+) [73] [74
 
 ]
 
@@ -1930,7 +1961,7 @@ Package hyperref Warning: Composite letter `\textasciicaron+e'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textasciicaron' on input line 290.
 
-(/home/anna/Documents/skola/DP/text/kapitoly/zaver.tex) [73] (/home/anna/Documents/skola/DP/text/tex/bibliografie1.tex [74
+(/home/anna/Documents/skola/DP/text/kapitoly/zaver.tex) [75] (/home/anna/Documents/skola/DP/text/tex/bibliografie1.tex [76
 
 
 ]
@@ -1983,7 +2014,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--36
 \OT1/lmtt/m/n/12 spacefactor \ spacefactor} \ accent19 \ OT1 \ i \ egroup \ spacefactor \ accent @
  []
 
-[75]
+[77]
 Underfull \hbox (badness 3601) in paragraph at lines 45--46
 []\OT1/lmr/m/n/12 ABDI, Herv^^Se, VA-LEN-TIN, Do-mi-nique. \OT1/lmr/m/it/12 Mul-tiple corre-spon-dence ana-ly-
  []
@@ -2008,7 +2039,7 @@ Underfull \hbox (badness 4328) in paragraph at lines 85--86
 \OT1/lmr/m/n/12 line]. [cit. 2023-03-13]. Do-stupn^^Se z: []$\OT1/lmtt/m/n/12 https : / / towardsdatascience . com /
  []
 
-[76]
+[78]
 Underfull \hbox (badness 6364) in paragraph at lines 94--95
 []\OT1/lmr/m/n/12 BOBBITT, Zach. \OT1/lmr/m/it/12 How to In-ter-pret Cra-mer's V \OT1/lmr/m/n/12 In \OT1/lmr/m/it/12 Sta-to-logy \OT1/lmr/m/n/12 [on-
  []
@@ -2063,7 +2094,7 @@ Underfull \hbox (badness 1137) in paragraph at lines 116--117
 \OT1/lmr/m/n/12 line]. [cit. 2023-12-10]. Do-stupn^^Se z: []$\OT1/lmtt/m/n/12 https : / / docs . scipy . org / doc / scipy /
  []
 
-[77]) [78]
+[79]) [80]
 
 Package hyperref Warning: Composite letter `\textasciicaron+r'
 (hyperref)                not defined in PD1 encoding,
@@ -2075,7 +2106,7 @@ Package hyperref Warning: Composite letter `\textasciicaron+r'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textasciicaron' on input line 312.
 
-[79
+[81
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 322.
@@ -2084,7 +2115,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 322.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 322.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 322.
 Package rerunfilecheck Info: File `DP_Gruberova.out' has not changed.
-(rerunfilecheck)             Checksum: C5B1C3216063245E2AB8E6F68B887BBD;2330.
+(rerunfilecheck)             Checksum: CD121D31A1DB4F45EEEF45301D310122;2330.
 
 
 LaTeX Warning: There were undefined references.
@@ -2092,18 +2123,18 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 322.
  ) 
 Here is how much of TeX's memory you used:
- 32407 strings out of 494848
- 599392 string characters out of 6178431
- 982999 words of memory out of 5000000
- 34811 multiletter control sequences out of 15000+600000
+ 32451 strings out of 494848
+ 600066 string characters out of 6178431
+ 983276 words of memory out of 5000000
+ 34814 multiletter control sequences out of 15000+600000
  621372 words of font info for 103 fonts, out of 8000000 for 9000
  46 hyphenation exceptions out of 8191
  62i,18n,78p,10458b,2184s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmmib10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb>
-Output written on /home/anna/Documents/skola/DP/text/DP_Gruberova.pdf (79 pages, 3616390 bytes).
+Output written on /home/anna/Documents/skola/DP/text/DP_Gruberova.pdf (81 pages, 3623910 bytes).
 PDF statistics:
- 1224 PDF objects out of 1440 (max. 8388607)
- 1003 compressed objects within 11 object streams
- 337 named destinations out of 1000 (max. 500000)
+ 1278 PDF objects out of 1440 (max. 8388607)
+ 1055 compressed objects within 11 object streams
+ 378 named destinations out of 1000 (max. 500000)
  466 words of extra memory for PDF output out of 10000 (max. 10000000)
 
