@@ -156,13 +156,42 @@ První způsob MCA aplikuje základní algoritmus korespondenční analýzy na m
 
 Pojem korelace obecně znamená vzájemný vztah mezi dvěma veličinami. Pokud se jedna veličina mění, pak se mění dle míry korelace i druhá veličina. Samotná korelace ale neurčuje míru vztahu, ani směr vztahu. Tedy která veličina je příčinou a která důsledkem. Tuto vlastnost popisuje kauzalita. Míra korelace mezi dvěma veličinami je určena pomocí korelačního koeficientu. Existuje více způsobů měření míry korelace, v následující části jsou popsány vybrané z nich.\cite{bib:MB}
 
-Nejčastěji používaným koeficientem pro měření korelace je Pearsonův korelační koeficient. Nechť $X$ a $Y$ jsou náhodné veličiny s realizacemi $x_1, x_2, \ldots$ a $y_1, y_2, \ldots$, potom hodnota Pearsonova koeficientu se vypočítá jako:
+Nejčastěji používaným koeficientem pro měření korelace je \emph{Pearsonův korelační koeficient}. Nechť $X$ a $Y$ jsou náhodné veličiny s realizacemi $x_1, x_2, \ldots$ a $y_1, y_2, \ldots$, potom hodnota Pearsonova koeficientu se vypočítá jako:
 \begin{equation}
     r_p = \frac{\mathrm{cov}(X,Y)}{\sigma_X\sigma_Y} = 
-    \frac{ \sum_{i=1}^{n}(x_i-\mu_X)(y_i-\mu_Y) }{
-          \sqrt{\sum_{i=1}^{n}(x_i-\mu_X)^2}\sqrt{\sum_{i=1}^{n}(y_i-\mu_Y)^2}}.
+    \frac{ \sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y}) }
+    {
+        \sqrt{
+            \sum_{i=1}^{n}(x_i-\bar{x})^2
+            \sum_{i=1}^{n}(y_i-\bar{y})^2
+            }
+    } 
+    = \frac{ \sum_{i=1}^{n}x_i y_i - n\bar{x}\bar{y} }
+    {
+          (n-1) s_{x} s_{y}
+    }
 \end{equation}
+kde $\bar{x}, \bar{y}$ jsou výběrové průměry, $s_x, s_y$ výběrové směrodatné odchylky.\cite{bib:MB}
+
 Tento koeficient měří lineární vztah mezi dvěma proměnnými. Hodnoty se pohybují v intervalu $\langle -1, 1 \rangle$. Krajní hodnoty znamenají dokonalou lineární závislost. Pokud je koeficient roven 1, pak pokud roste jedna veličina, roste i hodnota druhé veličiny. Pokud je koeficient roven -1, potom s rostoucí hodnotu jedné veličiny, klesá hodnota druhé. Zatímco je-li hodnota koeficientu rovna nule, veličiny jsou lineárně zcela nekorelované.\cite{bib:MB}
+
+Další koeficient, který měří korelaci mezi dvěma veličinami, je \emph{Spearmanův korelační koeficient}. Tento neparametrický koeficient měří nelineární závislost dvou veličin, určuje, jak moc jejich vztah odpovídá monotónní funkci. Spearmanův koeficient je robustní vůči odlehlým hodnotám a pracuje se seřazenými hodnotami obou veličin. Hodnoty opět leží mezi $-1$ a $1$ a platí pro mě analogická tvrzení jako Pearsonův korelační koeficient.\cite{bib:MB,bib:correlation}
+
+Nechť $X$ a $Y$ jsou náhodné veličiny s realizacemi $x_1, x_2, \ldots$ a $y_1, y_2, \ldots$ a číslo $x_{ri}$ je pořadí čísla $x_i$ v rámci všech hodnot veličiny $X$, číslo $y_{ri}$ je pořadí čísla $y_i$ v rámci všech hodnot veličiny $Y$. $\bar{x}_r, \bar{y}_r$ jsou průměrná pořadí a $s_{x_r}, s_{y_r}$ příslušné směrodatné odchylky. Vztah pro výpočet Spearmanova koeficientu je:
+\begin{equation}
+    r_s =
+    \frac{ \sum_{i=1}^{n}x_iy_i - n\bar{x}_r\bar{y}_r }
+    {
+          (n-1) s_{x_r} s_{y_r}
+    }.
+\end{equation}
+Pokud předpokládáme, že pořadí hodnot je unikátní, tj. neexistují v rámci jedné veličiny hodnoty realizace se stejnou hodnotou, pak lze vzorec pro výpočet Spearmanova korelačního koeficientu zjednodušit na:
+\begin{equation}
+    r_s = 1-
+    \frac{ 6 \sum_{i=1}^{n}d_i^2 }{n(n^2-1)},
+\end{equation}
+kde $d_i = (x_{ri} - y_{ri})$ je diference pořadí hodnot veličin $X$ a $Y$.\cite{bib:MB,bib:correlation}
+
 
 \subsubsection{Další způsoby měření závislosti}
 
