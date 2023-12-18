@@ -44,8 +44,10 @@
 \contentsline {section}{\numberline {7.3}V\IeC {\'y}sledky}{72}{section.7.3}
 \contentsline {chapter}{\numberline {8}Vizualizace dat}{77}{chapter.8}
 \contentsline {section}{\numberline {8.1}Popis \IeC {\v r}e\IeC {\v s}en\IeC {\'\i }}{77}{section.8.1}
-\contentsline {section}{\numberline {8.2}V\IeC {\'y}sledky}{77}{section.8.2}
-\contentsline {chapter}{Z\IeC {\'a}v\IeC {\v e}r}{79}{chapter*.58}
-\contentsline {chapter}{Literatura}{80}{chapter*.58}
-\contentsline {chapter}{P\IeC {\v r}\IeC {\'\i }lohy}{85}{chapter*.59}
+\contentsline {subsection}{\numberline {8.1.1}Metriky}{78}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Reporting}{78}{subsection.8.1.2}
+\contentsline {section}{\numberline {8.2}V\IeC {\'y}sledky}{78}{section.8.2}
+\contentsline {chapter}{Z\IeC {\'a}v\IeC {\v e}r}{79}{chapter*.59}
+\contentsline {chapter}{Literatura}{80}{chapter*.59}
+\contentsline {chapter}{P\IeC {\v r}\IeC {\'\i }lohy}{85}{chapter*.60}
 \contentsline {chapter}{\numberline {A}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD}{85}{appendix.A}

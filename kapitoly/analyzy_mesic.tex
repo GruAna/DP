@@ -1,16 +1,17 @@
 \chapter{Příprava vzorku dat pro další analýzy}
 
-Vzhledem k rozsáhlosti dat
-Následující část text bude věnována rozboru dat pro shrinky typu damages v období jednoho kalendářního měsíce.
+Vzhledem k rozsáhlosti dat bylo třeba zjistit, které proměnné mohou ovlivňovat hodnotu shrinku a které proměnné jsou redundantní.
+Následující část text bude věnována rozboru dat pro typ shrinku \emph{prošlé a zkažené zboží} pro kategorie Velmi čerstvé a Čerstvé z produktové hierarchie úrovně 1.
+v období jednoho kalendářního měsíce.
 
 \section{Předzpracování dat}
 
+% Vzhledem k vysokému počtu dat pro jeden kalendářní rok, 
+% v roce 2022 bylo v databázi evidováno přes 32 milionů záznamů o týkající se shrinků
+% , jsem se rozhodla provést analýzu na měsíčním výběru dat z tohoto období. Jako zkoumaný měsíc jsem vybrala měsíc říjen, neboť v porovnání s letními měsíci a Vánocemi se v říjnu nevyskytují významné sezónní výkyvy.
 
-Vzhledem k vysokému počtu dat pro jeden kalendářní rok, 
-v roce 2022 bylo v databázi evidováno přes 32 milionů záznamů o týkající se shrinků
-, jsem se rozhodla provést analýzu na měsíčním výběru dat z tohoto období. Jako zkoumaný měsíc jsem vybrala měsíc říjen, neboť v porovnání s letními měsíci a Vánocemi se v říjnu nevyskytují významné sezónní výkyvy.
-
-Zkoumaná březnová data obsahují přes dva miliony řádků a patnáct sloupců. Každý řádek odpovídá jednomu záznamu v databázi shrinku daného produktu. Sledované údaje ve sloupcích jsou: 
+Zkoumaná březnová data obsahují přes dva miliony řádků a patnáct sloupců. %TODO zkontrolovat
+Každý řádek odpovídá jednomu záznamu v databázi shrinku daného produktu. Sledované údaje ve sloupcích jsou: 
 % \subsubsection{Sledované údaje}
 \begin{itemize}
     \itemsep0em
@@ -39,7 +40,8 @@ Původní sloupec datum jsem rozdělila na tři jiné proměnné, a to den v tý
 \subsection{Výběr dat}
 % výběr dle zastoupení shrinků a kategorií produktů a dle outlierů.
 
-Nejprve jsem graficky analyzovala zastoupení shrinků v závislosti na vybraných proměnných pomocí nástroje Power BI, viz obr. \ref*{obr:rok:g:zastoupeni1} a \ref*{obr:rok:g:zastoupenish1}. V návaznosti na zjištěné zastoupení shrinků v datech jsem se rozhodla vybrat pouze ty typy shrinků, které tvoří více jak jedno procento z celkových nákladů. Vynechala jsem tedy shrinky s označením 5 až 9 a naopak shrinky 0 až 4 byly ponechány. Obdobně jsem přistupovala k záznamům i z hlediska kategorie produktu úrovně 1, jelikož z grafu je patrné, že majoritní zastoupení mají pouze dvě kategorie, a to kategorie Velmi čerstvé a Čerstvé. Všechny záznamy se zbylými kategoriemi jsem z datasetu pro další analýzy odstranila. Těmito kroky jsem zredukovala původní počet řádků datasetu na necelých jeden a půl milionu řádků.
+Nejprve jsem graficky analyzovala zastoupení shrinků v závislosti na vybraných proměnných pomocí nástroje Power BI, viz obr. \ref*{obr:rok:g:zastoupeni1} a \ref*{obr:rok:g:zastoupenish1}. Více o analýze v tomto nástroji je v kapitole \ref{ch:vizualizace}. V návaznosti na zjištěné zastoupení shrinků v datech jsem se rozhodla vybrat pouze nejvíce zastoupený typ shrinku, který tvoří více jak 62 \% celkových nákladů.Ponechaný byl tedy pouze shirnk \emph{prošlé a zkažené zboží}. Obdobně jsem přistupovala k záznamům i z hlediska kategorie produktu úrovně 1, jelikož z grafu je patrné, že majoritní zastoupení mají pouze dvě kategorie, a to kategorie Velmi čerstvé a Čerstvé. Všechny záznamy se zbylými kategoriemi jsem z datasetu pro další analýzy odstranila. Těmito kroky byl zredukován původní počet řádků datasetu na % TODO ověřit číslo
+necelých jeden a půl milionu řádků.
 
 \begin{figure}[hbtp!]
     \centering
