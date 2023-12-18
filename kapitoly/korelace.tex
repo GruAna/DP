@@ -1,7 +1,7 @@
 \newpage
 \chapter{Korelační analýza}
 
-Tato kapitola se věnuje popisu korelační analýza pro zjištění důvodu shrinků produktů. V~kapitole je popsán postup a jeho implementace v~jazyce Python. Analýza se zabývá korelací mezi hodnotou shrinkem a tržbami. Jedno pozorování je na agregované na produkt, prodejnu a den záznamu.  
+Tato kapitola se věnuje popisu korelační analýza pro zjištění důvodu shrinků produktů. V~kapitole je popsán postup a jeho implementace v~jazyce Python. Analýza se zabývá korelací mezi hodnotou shrinku a tržbami. Jedno pozorování je na agregované na produkt, prodejnu a den záznamu.  
 
 % Je možné specifikovat úroveň kategorie, na které se analýza spočítá. Dále je třeba určit konkrétní název kategorie.
 
@@ -17,7 +17,6 @@ V rámci analýzy se porovnávají pouze záznamy produktů, které se vyskytuj�
 Hodnotu shrinku jsem porovnávala s~následujícími ukazateli. 
 \begin{itemize}
     \itemsep0em 
-
     \item Tržby daného produktu.
     \item Tržby daného produktu, které byly v~daný den v~promoakci - ukázalo se, že takové, až na výjimky nejsou.
     \item Součet tržeb všech ostatních produktů v~kategorii.
@@ -49,7 +48,7 @@ Na obrázku \ref*{obr:ctg:g:kategorizace1} je znázorněno rozdělení produktů
 
 Hypotéza pro zařazení do kategorie P je následující:
 
-Pokud je korelace zaznamenaného shrinku s~tržbami téhož produktu kladná, produkt si způsobuje shrinky sám.
+Pokud je korelační koeficient zaznamenaného shrinku s~tržbami téhož produktu kladná, produkt si způsobuje shrinky sám.
 Abych mohla tuto hypotézu potvrdit, nebo vyvrátit, je třeba statisticky otestovat významnost korelačního koeficientu. Formulovala jsem nulovou hypotézu $H_\mathrm{0}$ a alternativní hypotézu $H_\mathrm{A}$ pro koeficient $r_\mathrm{P}$, který měří korelaci mezi hodnotou shrinku a tržbami produktu.
 % $$
 %     H_\mathrm{0}: r_\mathrm{P} = 0 \qquad \mbox{Výběry nejsou korelované.}  
@@ -147,15 +146,15 @@ Funkce jsou rozčleněny do modulů podle toho, na jaký výpočet jsou zaměře
 
 Pro práci s~tabulkovými daty, které jsou hlavním vstupem, jsem použila balíček \emph{pandas} jazyka Python.
 
-\emph{V~závorce je nástin toho, co budu popisovat (TBD)}
+% \emph{V~závorce je nástin toho, co budu popisovat (TBD)}
 
-\begin{itemize}
-    \item Výběr kategorie (Aby se nemuselo zadávat, přesné názvy kategorií systém vybere prvních $n$ nejsilnějších kategorií z~pohledu shrinků.)
-    \item Propojení dat
-    \item Korelace (Pearsonův, Spearmanův korelační koeficient) (ověření předpokladů (Kolmogorov-Smirnov test pro IID), testování statistické významnosti)
-    \item Kategorizace (Nastavení prahu pro velikost korelačního koeficientu)
-    \item Pomocné funkce
-\end{itemize}
+% \begin{itemize}
+%     \item Výběr kategorie (Aby se nemuselo zadávat, přesné názvy kategorií systém vybere prvních $n$ nejsilnějších kategorií z~pohledu shrinků.)
+%     \item Propojení dat
+%     \item Korelace (Pearsonův, Spearmanův korelační koeficient) (ověření předpokladů (Kolmogorov-Smirnov test pro IID), testování statistické významnosti)
+%     \item Kategorizace (Nastavení prahu pro velikost korelačního koeficientu)
+%     \item Pomocné funkce
+% \end{itemize}
 
 \subsubsection*{Funkce pro přiřazení kategorií k~produktům}
 
@@ -285,7 +284,7 @@ Funkce \texttt{aggregate\_sum} je pomocná funkce použitá v~kategorizaci produ
 
 Hodnoty korelačních koeficientů se počítají ve funkci \texttt{correlation}. Funkci je předán DataFrame a sloupce, kterých se korelace týká. Tato analýza je zaměřena na korelaci hodnoty shrinku s~dalšími ukzateli, proto je jedním vstupem název sloupce se shrinky a dalším vstupem je seznam sloupců ostatních ukazatelů. Obecně se nemusí jednat o~sloupec shrinků, základní myšlenkou ale je, že korelace je počítána pro každý sloupec ze seznam sloupců s~právě tímto jedním shrink sloupcem. Jedním z~volitelných parametrů funkce je určení metody pro získání korelačního koeficientu. Implementovány jsou dvě metody Pearsonův korelační koeficient a Spearmanův korelační koeficient. Pro výpočet jsou využité metody z~knihovny \emph{scipy}. Těmto metodám lze předat argument, zda se má uvažovat jednostranná nebo oboustranná alternativní hypotéza. Defaultní metodou je Pearsonův korelační koeficient a oboustranná alternativní hypotéza \cite{bib:scipyPearson}.
 
-Před spuštěním výpočtů korelací jsou sloupce testované pro předpoklady IID. Pro testování, zda dva zkoumané sloupce patří do stejného rozdělení byl použitý Kolmogo-\\rov-Smirnovův test implementovaný v~knihovně \emph{scipy}. Pro nezávislost Ljung-Boxova metoda implementovaná v~knihovně \emph{statsmodels}.
+Před spuštěním výpočtů korelací jsou sloupce testované pro předpoklady IID. Pro testování, zda dva zkoumané sloupce patří do stejného rozdělení byl použitý Kolmo-\\gorov-Smirnovův test implementovaný v~knihovně \emph{scipy}. Pro nezávislost Ljung-Boxova metoda implementovaná v~knihovně \emph{statsmodels}.
 
 Pro každý vypočtený koeficient je spočtena i $p$-hodnota, díky které lze hodnotu koeficientu označit za statisticky významnou, nebo ne. Pro určení významnosti byla implementována pomocná funkce \texttt{significance}. Ta vrací \texttt{True}, resp. \texttt{False} pro statisticky významné, resp. nevýznamné výsledky, tedy pokud je $p$-hodnota menší, resp. větší než $\alpha$. Předpokládaná hladina významnosti $\alpha$ je 5 \%. Výši hladiny lze změnit v~parametru funkce pro výpočet korelace, odtud se předá funkci pro určení významnosti. Vypočtené koeficienty a boolovský příznak o jejich významnosti se ukládají do dvou seznamů, které funkce vrací. Oba seznamy mají takový počet hodnot, jaká je délka vstupního seznamu sloupců.
 
@@ -315,7 +314,7 @@ Funkce pak vrátí DataFrame s~takto označenými a kategorizovanými produkty.
 \subsubsection*{Pomocné funkce}
 
 Funkce \texttt{create\_folder} vytvoří složku se zadaným jménem v~aktuální cestě, pouze pokud již taková složka neexistuje. Další pomocná funkce je \texttt{format\_date}, která využívá funkci z~knihovny \emph{pandas} \texttt{to\_datetime}. 
-Pro základní vizualizaci jsem vytvořila funkci, která pomocí knihovny \emph{matplotlib} vytváří bodový graf dvou proměnných. Graf je buď uložen nebo zobrazený při spuštění funkce. Funkci lze předat DataFrame a názvy dvou sloupců, které reprezentují vstupy pro osy $x$ a $y$ grafu. Další vstupy jsou názvy os a grafu, případně název souboru, pokud uživatel graf uložit. 
+Pro základní vizualizaci jsem vytvořila funkci, která pomocí knihovny \emph{matplotlib} vytváří bodový graf dvou proměn-\\ných. Graf je buď uložen nebo zobrazený při spuštění funkce. Funkci lze předat DataFrame a názvy dvou sloupců, které reprezentují vstupy pro osy $x$ a $y$ grafu. Další vstupy jsou názvy os a grafu, případně název souboru, pokud uživatel graf uložit. 
 
 \subsection{Testování}
 
@@ -327,7 +326,7 @@ Zvolila jsem 5\% hladinu významnosti pro testování statistické významnosti 
 
 Nejprve jsem se zaměřila na kategorie z~úrovně 4, a to prvních deset kategorií s~nejvyšší hodnotou shrinků (tj. s~nejvyšší zaznamenanou ztrátou) 
 
-V~tabulce č.~\ref*{tab:kategCorrPorovnani} jsou porovnání výsledků kategorizace pro kategorii Masné výrobky a Slané pečivo. Měřila jsem postupně korelaci velikosti shrinku s~různými ukazateli pro celkové tržby ostatních produktů. Pro určení míry korelace jsem zvolila Spearmanův korelační koeficient, jelikož data nesplňují předpoklady, které jsou nutné pro použití Pearsonova korelačního koeficientu - data nejsou nezávislá a stejně rozdělená. 
+V~tabulce č.~\ref*{tab:kategCorrPorovnani} jsou porovnání výsledků kategorizace pro kategorii Masné výrobky a Slané pečivo. Měřila jsem postupně korelaci velikosti shrinku s~různými ukazateli pro celkové tržby ostatních produktů. Pro určení míry korelace jsem zvolila Spearmanův korelační koeficient, jelikož data nesplňují předpoklady, které jsou nutné pro použití Pearsonova korelačního koeficientu - data nejsou nezávislá a stejně rozdělená. Data vybrané společnosti, také nesplňují podmínku normality, to může být dáno tím, že data pochází z reálného světa a zaznamenávají jev, který závisí na mnoha faktorech.
 Z~uvedených počtů produktů u jednotlivých kategoriích pro různé ukazatele, je patrné, že výsledky se příliš neliší. Pokud bychom se ale zaměřovali na celkové prodeje, nikoli promoční, tak získáváme větší množství produktů, u~nichž nebylo možné vysvětlit shrink pomocí korelace. 
 
 \begin{table}[hbtp!]

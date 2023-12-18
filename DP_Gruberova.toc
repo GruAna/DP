@@ -18,7 +18,7 @@
 \contentsline {subsection}{\numberline {2.1.4}Metoda GUHA}{26}{subsection.2.1.4}
 \contentsline {subsubsection}{Z\IeC {\'a}kladn\IeC {\'\i } princip metody}{26}{section*.15}
 \contentsline {subsubsection}{D\IeC {\r u}le\IeC {\v z}it\IeC {\'e} pojmy}{27}{section*.18}
-\contentsline {subsubsection}{Procedury}{28}{section*.20}
+\contentsline {subsubsection}{Procedury}{29}{section*.20}
 \contentsline {chapter}{\numberline {3}Shrink}{33}{chapter.3}
 \contentsline {section}{\numberline {3.1}Definice}{33}{section.3.1}
 \contentsline {section}{\numberline {3.2}Typy shrink\IeC {\r u}}{33}{section.3.2}
@@ -40,8 +40,8 @@
 \contentsline {subsection}{\numberline {7.2.1}Vstupy a v\IeC {\'y}stupy}{63}{subsection.7.2.1}
 \contentsline {subsection}{\numberline {7.2.2}Spu\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } anal\IeC {\'y}zy}{64}{subsection.7.2.2}
 \contentsline {subsection}{\numberline {7.2.3}Popis funkc\IeC {\'\i } a struktura k\IeC {\'o}du}{65}{subsection.7.2.3}
-\contentsline {subsection}{\numberline {7.2.4}Testov\IeC {\'a}n\IeC {\'\i }}{73}{subsection.7.2.4}
-\contentsline {section}{\numberline {7.3}V\IeC {\'y}sledky}{73}{section.7.3}
+\contentsline {subsection}{\numberline {7.2.4}Testov\IeC {\'a}n\IeC {\'\i }}{72}{subsection.7.2.4}
+\contentsline {section}{\numberline {7.3}V\IeC {\'y}sledky}{72}{section.7.3}
 \contentsline {chapter}{\numberline {8}Vizualizace dat}{77}{chapter.8}
 \contentsline {section}{\numberline {8.1}Popis \IeC {\v r}e\IeC {\v s}en\IeC {\'\i }}{77}{section.8.1}
 \contentsline {section}{\numberline {8.2}V\IeC {\'y}sledky}{77}{section.8.2}

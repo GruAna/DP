@@ -76,12 +76,11 @@ Vektor  $\bm{a}_2$ se opět získá jako jednotkový vlastní vektor kovariančn
     \label{obr:met:PCA1}
 \end{figure}
 
-
 Získání předpisů pro další hlavní komponenty je analogické. Obecně lze zapsat metodu PCA a převod původních proměnných následujícím maticovým zápisem
 \begin{equation}
     \mathbf{Y} = \mathbf{XA}, 
 \end{equation}
-kde $\mathbf{X}$ je matice vstupních dat, $\mathbf{A}$ je matice vlastních vektorů kovarianční matice $\mathbf{C}$. Pro matici $\mathbf{A}$ zároveň platí $\mathbf{C} =  \mathbf{A} \mathbf{\Lambda} \mathbf{A}^\top$, kde $\mathbf{\Lambda}$ je diagonální matice vlastních čísel $\mathbf{C}$.\cite{bib:PCA2}  %wikipedia
+kde $\mathbf{Y}$ obsahuje komponenty $\bm{y}_{1}, \bm{y}_{2}, \ldots$, $\mathbf{X}$ je matice vstupních dat, $\mathbf{A}$ je matice vlastních vektorů kovarianční matice $\mathbf{C}$. Pro matici $\mathbf{A}$ zároveň platí $\mathbf{C} =  \mathbf{A} \mathbf{\Lambda} \mathbf{A}^\top$, kde $\mathbf{\Lambda}$ je diagonální matice vlastních čísel $\mathbf{C}$.\cite{bib:PCA2}
 
 \subsection{Korespondenční analýza}
 
@@ -173,9 +172,9 @@ Nejčastěji používaným koeficientem pro měření korelace je \emph{Pearson�
 \end{equation}
 kde $\bar{x}, \bar{y}$ jsou výběrové průměry, $s_x, s_y$ výběrové směrodatné odchylky.\cite{bib:MB}
 
-Tento koeficient měří lineární vztah mezi dvěma proměnnými. Hodnoty se pohybují v intervalu $\langle -1, 1 \rangle$. Krajní hodnoty znamenají dokonalou lineární závislost. Pokud je koeficient roven 1, pak pokud roste jedna veličina, roste i hodnota druhé veličiny. Pokud je koeficient roven -1, potom s rostoucí hodnotu jedné veličiny, klesá hodnota druhé. Zatímco je-li hodnota koeficientu rovna nule, veličiny jsou lineárně zcela nekorelované.\cite{bib:MB}
+Tento koeficient měří lineární vztah mezi dvěma proměnnými. Hodnoty se pohybují v intervalu $\langle -1, 1 \rangle$. Krajní hodnoty znamenají dokonalou lineární závislost. Pokud je koeficient roven 1, pak pokud roste jedna veličina, roste i hodnota druhé veličiny. Pokud je koeficient roven -1, potom s rostoucí hodnotu jedné veličiny, klesá hodnota druhé. Zatímco je-li hodnota koeficientu rovna nule, veličiny jsou lineárně zcela nekorelované. Pro výpočet totoho koeficientu je předpokládána normalita zkoumaných dat.\cite{bib:MB}
 
-Další koeficient, který měří korelaci mezi dvěma veličinami, je \emph{Spearmanův korelační koeficient}. Tento neparametrický koeficient měří nelineární závislost dvou veličin, určuje, jak moc jejich vztah odpovídá monotónní funkci. Spearmanův koeficient je robustní vůči odlehlým hodnotám a pracuje se seřazenými hodnotami obou veličin. Hodnoty opět leží mezi $-1$ a $1$ a platí pro mě analogická tvrzení jako Pearsonův korelační koeficient.\cite{bib:MB,bib:correlation}
+Další koeficient, který měří korelaci mezi dvěma veličinami, je \emph{Spearmanův korelační koeficient}. Tento neparametrický koeficient měří nelineární závislost dvou veličin, určuje, jak moc jejich vztah odpovídá monotónní funkci. Spearmanův koeficient je robustní vůči odlehlým hodnotám a nevyžaduje normalitu dat, protože pracuje se seřazenými hodnotami obou veličin. Hodnoty opět leží mezi $-1$ a $1$ a platí pro mě analogická tvrzení jako Pearsonův korelační koeficient.\cite{bib:MB,bib:correlation}
 
 Nechť $X$ a $Y$ jsou náhodné veličiny s realizacemi $x_1, x_2, \ldots$ a $y_1, y_2, \ldots$ a číslo $x_{ri}$ je pořadí čísla $x_i$ v rámci všech hodnot veličiny $X$, číslo $y_{ri}$ je pořadí čísla $y_i$ v rámci všech hodnot veličiny $Y$. $\bar{x}_r, \bar{y}_r$ jsou průměrná pořadí a $s_{x_r}, s_{y_r}$ příslušné směrodatné odchylky. Vztah pro výpočet Spearmanova koeficientu je:
 \begin{equation}
@@ -192,29 +191,50 @@ Pokud předpokládáme, že pořadí hodnot je unikátní, tj. neexistují v rá
 \end{equation}
 kde $d_i = (x_{ri} - y_{ri})$ je diference pořadí hodnot veličin $X$ a $Y$.\cite{bib:MB,bib:correlation}
 
+Jak je patrné ze vzorců pro oba korelační koeficienty tato míra lze aplikovat pouze na numerické veličiny. V případě kategorických veličin by bylo potřeba je převést na číselné hodnoty. K tomu slouží řada metod. Mezi dva nejznámější způsoby překódo-\\vání kategorických proměných patří one-hot kódování a label kódování. V případě one-hot kódování se ale může počet proměnných výrazně zvýšit, pokud v datech existují příznaky s větším počtem unikátních kategorií. Pro druhý zmíněný způsob kódování je nevýhodou fakt, že přiřazením čísel od 0 do $n$, kde $n$ je počet kategorií v příznaků, se kategorickým hodnotám přiřadí pořadí, které ale v datech vůbec nemusí být a tudíž je tato nová informace v datech na obtíž \cite{bib:encoding}. Proto jsou v další části této sekce uvedeny vybrané způsoby měření závislosti dvou kategorických proměnných.
 
 \subsubsection{Další způsoby měření závislosti}
 
+Pro měření míry závislosti dvou kategorických proměnných lze použít \emph{Cramerovo V}, dále značeno jako $V$. 
+Hodnota koeficientu se pohybuje mezi 0 a 1. 1 znamená dokonalou závislost mezi proměnnými, 0 neznamená žádnou závislost. Tento koeficient nemůže nabýt negativní hodnoty, tj. neexistuje negativní závislost. Stejně jako předchozí koeficienty pro korelaci je $V$ symetrické a nezáleží na pořadí veličin.\cite{bib:correl,bib:MB}
+
+Pro dvě zkoumané veličin $X, Y$ s hodnotami $x_1, x_2, \ldots, x_r$ a $y_1, y_2, \ldots, y_s$ existuje kontingenční tabulka $\mathbf{K}$ těchto veličin, jejíž prvky jsou četnosti hodnot proměnných $n_{ij}$,tj. kdy byly pozorovány hodnoty pro dvojici $(x_i, y_j)$. $r$, resp. $s$ je počet řádků, resp. sloupců kontingenční tabulky $\mathbf{K}$.
+Vzorec pro Cramerovo $V$ má tvar:
+\begin{equation}
+    V = \sqrt{\frac{\chi^2 / n}{min(r-1, s-1)}},
+\end{equation}
+kde statistika $\chi^2$ se výpočítá následovně
+\begin{equation}
+    \chi^2 = \sum_{i=1}^n \frac{(n_ij - n_in_j/n)^2}{n_in_j/n},
+\end{equation}
+kde $n_i$ je četnost výskytu hodnoty $x_i$, $n_j$ je četnost výskytu hodnoty $y_j$. Tedy platí $n_i=\sum_{i=0}^r{n_{ij}}$ a $n_j=\sum_{j=0}^s{n_{ij}}$.\cite{bib:statology,bib:correl,bib:MB}
+
 Pro určení kolik informace o jedné proměnné nese druhá proměnná, je popsáno
-pomocí vzájemné informace \cite{bib:MI}. Informací lze rozumět obsah jakéhokoli oznámení nebo údaje, který se přenáší v~daném čase a prostoru. Podle Shannona, zakladatele teorie informace, je informace míra množství neurčitosti nebo nejistoty o nějakém náhodném jevu, která se odstraní realizací daného jevu \cite{bib:MI2}. Informací tak může být stanovení výsledku náhodného jevu, tedy se jedná o hodnotu náhodné veličiny \cite{bib:MI}. Pro definování vzájemné informace je třeba definovat ještě vlastní informace a pojem entropie.
+pomocí \emph{ vzájemné informace} \cite{bib:MI}. Informací lze rozumět obsah jakéhokoli oznámení nebo údaje, který se přenáší v~daném čase a prostoru. Podle Shannona, zakladatele teorie informace, je informace míra množství neurčitosti nebo nejistoty o nějakém náhodném jevu, která se odstraní realizací daného jevu \cite{bib:MI2}. Informací tak může být stanovení výsledku náhodného jevu, tedy se jedná o hodnotu náhodné veličiny \cite{bib:MI}. Pro definování vzájemné informace je třeba definovat ještě \emph{vlastní informace} a pojem \emph{entropie}.
 
 Dále jsou sepsány předpoklady pro výpočet množství informace. Pokud má náhodný jev $X$ $n$ realizací, pak je množství informace funkcí $n$. Pakliže je $n=1$, množství informace se rovná nule, neboť se jedná o jev jistý. 
 Pokud jevy $X$ A $Y$ probíhají nezávisle, ale ve stejný čas, tj. $p_{XY}(x,y)=p_X(x)\cdot p_Y(y)$, potom množství informace obou jevů se tovná součtu jejich množství.
 Pokud jev $X$ má $n $ realizací a jev $Y$ $m$ realizací, kde $m>n$, potom se očekává, že množství informace jevu $Y$ je větší než množství in
 formace jevu $X$. \cite{bib:MI2} Pokud je pravděpodobnost každé realizace stejná, tj. $p_X(x) = 1/n$, pak  Hartleyho míra informace je definována jako funkce $I: \mathbf{N} \leftarrow \mathbf{R}$ ve tvaru $I(n)=\log n$. Pro vlastní míru informace obsažené ve výsledku $x$ pak platí: \cite{bib:MI2, bib:MI3}
  \begin{equation}
-    I(x)=- \log p(x).
+    I(x)=- \log p_{X}(x).
  \end{equation}
 
 Množství informace celého jevu je popsáno entropií náhodné veličiny. Entropie $H(X)$ náhodné veličiny $X$ s hodnotami $x_1, x_2, \ldots $ s pravděpodobnostní funkcí $p(x)$ je rovna: \cite{bib:MI2,bib:literatura}
  \begin{equation}
-    H(X) = -\sum_x p(x) \log p(x).
+    H(X) = -\sum_x p_{X}(x) \log p_{X}(x).
  \end{equation}
 
-Nechť je dán vektor $(X,Y)$, kde $X$, resp. $Y$ je náhodná veličina nabývající hodnot $x_1, x_2, \ldots $, resp. $y_1, y_2, \ldots$. Náhodný vektor nabývá hodnot $(x_1, y_1), (x_2, y_2), \ldots $. Sdružená entropie vektoru  $(X,Y)$ má tvar: \cite{bib:MI, bib:MI3}
+Nechť je dán vektor $(X,Y)$, kde $X$, resp. $Y$ je náhodná veličina nabývající hodnot $x_1, x_2, \ldots $, resp. $y_1, y_2, \ldots$. Náhodný vektor nabývá hodnot $(x_1, y_1), (x_2, y_2), \ldots $. Sdružená entropie vektoru  $(X,Y)$ má tvar: \cite{bib:MI,bib:MI3}
 \begin{equation}
-    H(X) = -\sum_x p(x,y) \log p(x,y).
+    H(X,Y) = -\sum_{(x,y)} p_{XY}(x,y) \log p_{XY}(x,y).
  \end{equation}
+Podmíněná entropie s předpokladem $p_Y(y)>0$: \cite{bib:MI3}
+\begin{equation}
+    H(X|Y=y) = -\sum_{(x,y)} p_{X|Y}(x|y) \log p_{X|Y}(x|y),
+    \label{eq:podmEntropie}
+ \end{equation}
+kde podmíněná pravděpodobnost je rovna $p_{X|Y}(x|y) = p_{XY}(x,y) / P_Y(y)$.
 
 Pokles entropie se měří pomocí vzájemné informace, tj. platí věta \cite{bib:MI3}:
 \begin{equation}
@@ -226,10 +246,11 @@ Vzájemná informace měří ztrátu informace v~důsledku závislosti $X$ a $Y$
     I(X;Y) = \sum_{(x,y)} + \log \frac{p_{X\vert Y}(x\vert y)}{p_X(x)}
 \end{equation}
 
-\newpage
-Theilovo U a Cramerovo V
-%https://www.statology.org/interpret-cramers-v/
-rozptylový inflační faktor (VIF)
+Míra, která dovede změřit asymetrickou závislost kategorických proměnných se nazý-//vá \emph{Thielovo U}, které se někdy označuje jako koeficient nejistoty. Pro jeho výpočet se používá podmíněná entropie, viz vztah \ref{eq:podmEntropie}. Thielovo $U$  nabývá hodnot z intervalu $\langle 0, 1 \rangle$, kde 0 neznamená žásnou závislost a 1 dokonalou závislost. Hodnota není symetrická, tj. $U(X,Y)\neq U(Y,X)$, proto se může používat značení, které určuje směr závislosti -- $U(X,Y) = U(X|Y)$. Vzorec pro výpočet koeficientu $U$ je: \cite{bib:thiel,bib:correl}
+\begin{equation}
+    U(X,Y) = U(X|Y) = \frac{H(X)-H(X-Y)}{H(X)}.
+\end{equation}
+% rozptylový inflační faktor (VIF)
 
 \subsection{Metoda GUHA}
 \label{sec:Teorie:Guha}
