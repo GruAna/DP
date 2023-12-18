@@ -460,9 +460,12 @@ INPUT /home/anna/Documents/skola/DP/text/kapitoly/data.tex
 INPUT /home/anna/Documents/skola/DP/text/kapitoly/data.tex
 INPUT /home/anna/Documents/skola/DP/text/kapitoly/analyzy_mesic.tex
 INPUT /home/anna/Documents/skola/DP/text/kapitoly/analyzy_mesic.tex
-INPUT /home/anna/Documents/skola/DP/text/obrazky/grafy/zastoupeni1.png
-INPUT /home/anna/Documents/skola/DP/text/obrazky/grafy/zastoupeni1.png
-INPUT /home/anna/Documents/skola/DP/text/obrazky/grafy/zastoupeni1.png
+INPUT /home/anna/Documents/skola/DP/text/obrazky/grafy/zastoupeniL1.png
+INPUT /home/anna/Documents/skola/DP/text/obrazky/grafy/zastoupeniL1.png
+INPUT /home/anna/Documents/skola/DP/text/obrazky/grafy/zastoupeniL1.png
+INPUT /home/anna/Documents/skola/DP/text/obrazky/grafy/zastoupenishrinky.png
+INPUT /home/anna/Documents/skola/DP/text/obrazky/grafy/zastoupenishrinky.png
+INPUT /home/anna/Documents/skola/DP/text/obrazky/grafy/zastoupenishrinky.png
 INPUT /home/anna/Documents/skola/DP/text/obrazky/zntb/box_nominal.png
 INPUT /home/anna/Documents/skola/DP/text/obrazky/zntb/box_nominal.png
 INPUT /home/anna/Documents/skola/DP/text/obrazky/zntb/box_nominal.png
@@ -499,7 +502,6 @@ INPUT /home/anna/Documents/skola/DP/text/obrazky/zntb/pca-kum_roztyl_komponetn.p
 INPUT /home/anna/Documents/skola/DP/text/obrazky/zntb/pca-prispevky.png
 INPUT /home/anna/Documents/skola/DP/text/obrazky/zntb/pca-prispevky.png
 INPUT /home/anna/Documents/skola/DP/text/obrazky/zntb/pca-prispevky.png
-INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmtk10.tfm
 INPUT /home/anna/Documents/skola/DP/text/kapitoly/cleverminer.tex
 INPUT /home/anna/Documents/skola/DP/text/kapitoly/cleverminer.tex
 INPUT /home/anna/Documents/skola/DP/text/obrazky/grafy/histogram/newplot(2).png
@@ -559,7 +561,6 @@ INPUT /usr/share/texmf/fonts/type1/public/lm/lmri10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmri12.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb
-INPUT /usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb

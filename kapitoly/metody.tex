@@ -150,7 +150,7 @@ První způsob MCA aplikuje základní algoritmus korespondenční analýzy na m
 % https://www.analyticsvidhya.com/blog/2021/10/an-introduction-to-particle-swarm-optimization-algorithm/
 
 \subsection{Korelační analýza}
-
+\label{sec:Teoriekorelace}
 \subsubsection{Korelační koeficient}
 
 Pojem korelace obecně znamená vzájemný vztah mezi dvěma veličinami. Pokud se jedna veličina mění, pak se mění dle míry korelace i druhá veličina. Samotná korelace ale neurčuje míru vztahu, ani směr vztahu. Tedy která veličina je příčinou a která důsledkem. Tuto vlastnost popisuje kauzalita. Míra korelace mezi dvěma veličinami je určena pomocí korelačního koeficientu. Existuje více způsobů měření míry korelace, v následující části jsou popsány vybrané z nich.\cite{bib:MB}
@@ -250,7 +250,16 @@ Míra, která dovede změřit asymetrickou závislost kategorických proměnnýc
 \begin{equation}
     U(X,Y) = U(X|Y) = \frac{H(X)-H(X-Y)}{H(X)}.
 \end{equation}
-% rozptylový inflační faktor (VIF)
+
+\subsection{Ostatní použité pojmy}
+
+Při analýze dat lze narazit na problém multikolinearity. \emph{Multikolinearita} je vzájemná lineární závislost vysvětlujících proměnných. Jeli $\mathbf{A}$ matice dat (vysvětlujích proměnných bez předpovídaného sloupce), pak multikolinearita v datech existuje, pokud platí rovnice pro alespň jedno nenulové $c_i$: $c_1\bm{a}_1 + ... + c_k\bm{a}_k$, kde $c_i$ jsou konstanty a $\bm{a}_i$ sloupce matice reprezentující jednotlivé příznaky, $k$ počet sloupců matice, tj. počet příznaků. V realných datech stačí, když je daná rovnice přibližně splněna.\cite{bib:MB}
+
+Měřítkem multikolinearity je \emph{rozptylový inflační faktor} (zkratka VIF z anglického variance inflation factor). Možné hodnoty pro koeficient jsou 1 až libovolné číslo větší než jedna, 1 znamená nezávislost. Nad určitou hodnotu koeficientu, v literatuře \cite{bib:multi} je uvedeno už číslo větší než 5, je značná multikolinearita již přítomna v datech. Koeficient má pro $i$-tý sloupec matice $\mathbf{A}$ tvar:
+\begin{equation}
+    VIF_i = \frac{1}{1-R_i^2},
+\end{equation}
+kde $R_i^2$ je koeficient determinace $i$-tého sloupce. Ten říká, jak velkou část variability závislé proměnné je možné vysvětlit.\cite{bib:multi}
 
 \subsection{Metoda GUHA}
 \label{sec:Teorie:Guha}
