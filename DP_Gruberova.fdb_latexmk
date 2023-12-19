@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1702994033 "c:/Users/uzivatel/Documents/skola/DP/DP_Gruberova.tex" "DP_Gruberova.pdf" "DP_Gruberova" 1702994039
+["pdflatex"] 1703000120 "c:/Users/uzivatel/Documents/skola/DP/DP_Gruberova.tex" "DP_Gruberova.pdf" "DP_Gruberova" 1703000129
   "C:/Users/uzivatel/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1689942807 82686 2381c3433487640bf26aa76a10db7eb2 ""
   "C:/Users/uzivatel/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1667471210 10789789 02d9a8b514ec08d575e4cf0e33c1259e ""
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc" 1256929440 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
@@ -249,14 +249,14 @@
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656233319 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1650047684 2245 c8a4088d07cffc2e5207730c738edd76 ""
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1650047684 20785 71a3d72ab517959a6979c27e6176bec1 ""
-  "DP_Gruberova.aux" 1702994038 25295 9a20d557a3dab920726347ff418c025d "pdflatex"
-  "DP_Gruberova.out" 1702994038 5634 9ee5817105471254cef4a9d740f6fc09 "pdflatex"
+  "DP_Gruberova.aux" 1703000128 25222 50dc044af5cf23d4cbdc317597baf460 "pdflatex"
+  "DP_Gruberova.out" 1703000128 5603 0cb88b7aae8040212c3c7ab315a35174 "pdflatex"
   "DP_Gruberova.tex" 1702985984 10727 e1fb26048b7c2e52b3b35197ca9c084d ""
-  "DP_Gruberova.toc" 1702994038 4045 41338f7199830e9a0f4f5cd5e8e3fe59 "pdflatex"
+  "DP_Gruberova.toc" 1703000128 4048 ad00eec99f0835fb2cac32b883eed5e5 "pdflatex"
   "c:/Users/uzivatel/Documents/skola/DP/DP_Gruberova.tex" 1702985984 10727 e1fb26048b7c2e52b3b35197ca9c084d ""
-  "kapitoly/analyzy_mesic.tex" 1702994032 30481 230ac0b00cc377606224d94b05717ab6 ""
+  "kapitoly/analyzy_mesic.tex" 1703000106 31034 f9077cd3a6dfc3054d3db99944944fa5 ""
   "kapitoly/cleverminer.tex" 1702985984 16910 b865e5c5f77f4befd36d5fdcd06c53ef ""
-  "kapitoly/data.tex" 1702985984 11522 9ee9e98d35dd347fb2e6d05f00533f7c ""
+  "kapitoly/data.tex" 1702998926 11809 90df29c5c61ffce9bc3b1f500e05114c ""
   "kapitoly/korelace.tex" 1702989784 96511 e86752683df898f4b9e0f8f6350ab45e ""
   "kapitoly/metody.tex" 1702985984 39316 031f2118ad5765c4ccbf35ab93d06356 ""
   "kapitoly/shrinky.tex" 1702985984 8508 7e4bf48993fc147488f2c2c985e70c71 ""

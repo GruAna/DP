@@ -1,11 +1,12 @@
-\chapter{Příprava vzorku dat pro další analýzy}
+\section{Příprava vzorku dat pro další analýzy}
+
+Data z výše popsaných tabulek bylo potřeba sloučit do jedné tabulky, aby nad nimi bylo možné provést analýzy. Napojení dat bylo provedeno v Jupyter Noteboocích v jazyce Python. Na tabulku s evidovanými shrinky bylo třeba napojit číselníky. Podle názvů prodejen byly napojeny na prodejny demografické údaje. Z data transakce bylo extrahováno datum pro den a na základě jeho hodnoty bylo určeno do jaké čtvrtiny měsíce patří. Z data také bylo odovzeno pomocí funkce v \emph{pandas} knihovně, o jaký den v týdnu se jedná.
+% Následující část text bude věnována rozboru dat pro typ shrinku \emph{prošlé a zkažené zboží} pro kategorie Velmi čerstvé a Čerstvé z produktové hierarchie úrovně 1.
+% v období jednoho kalendářního měsíce.
+
+\subsection{Rozbor dat}
 
 Vzhledem k rozsáhlosti dat bylo třeba zjistit, které proměnné mohou ovlivňovat hodnotu shrinku a které proměnné jsou redundantní.
-Následující část text bude věnována rozboru dat pro typ shrinku \emph{prošlé a zkažené zboží} pro kategorie Velmi čerstvé a Čerstvé z produktové hierarchie úrovně 1.
-v období jednoho kalendářního měsíce.
-
-\section{Předzpracování dat}
-
 % Vzhledem k vysokému počtu dat pro jeden kalendářní rok, 
 % v roce 2022 bylo v databázi evidováno přes 32 milionů záznamů o týkající se shrinků
 % , jsem se rozhodla provést analýzu na měsíčním výběru dat z tohoto období. Jako zkoumaný měsíc jsem vybrala měsíc říjen, neboť v porovnání s letními měsíci a Vánocemi se v říjnu nevyskytují významné sezónní výkyvy.

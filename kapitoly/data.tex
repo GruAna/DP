@@ -11,18 +11,18 @@ Z důvodu ochrany dat nelze uvádět přesné názvy tabulek, nicméně pro lep�
 
 \subsubsection{Číselníky}
 
-Základní číselník s údaji o produktech, se nachází v tabulce \texttt{produkt} se 27 sloupci. Pro analýzu vzniku shrinků jsem z této tabulky vybrala jako možné významné údaje následující sloupce:
+Základní číselník s údaji o produktech, se nachází v tabulce \emph{produkt} se 27 sloupci. Pro analýzu vzniku shrinků jsem z této tabulky vybrala jako možné významné údaje následující sloupce:
 
 \begin{itemize}
     \itemsep0em 
     \item \textbf{ID produktu}
     \item \textbf{ID prodejní varianty} -- Určuje o jaký typ balení daného produktu se jedná    
     \item \textbf{Expirace} -- Expirace produktu ve dnech (hodnoty 0, 999 a NULL označují neomezenou expiraci)
-    \item \textbf{ID kategorie} -- Kategorie produktu v číselné struktuře (pro lepší interpretaci, o jakou kategorii zboží se jedná, je vhodnější použít strukturu podle úrovní, kterou lze získat napojením na tabulku \texttt{produkt\_kategorie}.)
+    \item \textbf{ID kategorie} -- Kategorie produktu v číselné struktuře (pro lepší interpretaci, o jakou kategorii zboží se jedná, je vhodnější použít strukturu podle úrovní, kterou lze získat napojením na tabulku \emph{produkt\_kategorie}.)
     \item \textbf{Aktivní} --  Zda je tento produkt stále aktivní v portfoliu, nebo se jedná o produkt, který se již neprodává
 \end{itemize}
 
-Tabulka \texttt{produkt\_kategorie} obsahuje převod z číselné struktury do struktury pomocí produktové hierarchie. V obdržených datech má produktová hierarchie šest úrovní. Hierarchie produktů tvoří tedy strom se šesti úrovněmi. Nejvyšší úroveň, tj. úroveň číslo 1 má šest kategorií.
+Tabulka \emph{produkt\_kategorie} obsahuje převod z číselné struktury do struktury pomocí produktové hierarchie. V obdržených datech má produktová hierarchie šest úrovní. Hierarchie produktů tvoří tedy strom se šesti úrovněmi. Nejvyšší úroveň, tj. úroveň číslo 1 má šest kategorií.
 
 V tabulce \ref*{tab:d:4Bzast} jsou uvedeny počty podkategorií pro každou z kategorií z nejvyšší úrovně. Také je uvedeno procentuální zastoupení kategorií v nejvyšší úrovni v rámci produktového portfolia vybrané společnosti. Zastoupení je odvozeno podle počtu produktů v kategorii.
 
@@ -49,12 +49,12 @@ V tabulce \ref*{tab:d:4Bzast} jsou uvedeny počty podkategorií pro každou z ka
     \end{center}
     \end{table}
 
-Poslední, šestá úroveň hierarchie je přímo napojená na hodnotu číselné struktury, která je uvedena v číselníku produktů (v tabulce \texttt{produkt}). Pro získání všech úrovní kategorizace po úrovních k danému produktu je třeba vyhledat v tabulce \texttt{produkt} číselné ID kategorie daného produktu a napojit jej na poslední úroveň v tabulce produktové hierarchie (\texttt{produkt\_kategorie}). V této tabulce je pak uvedena rodičovská kategorie z úrovně 5. Poté je potřeba opět vyhledat v tabulce \texttt{produkt\_kategorie} tuto hodnotu a zjistit její nadřazenou kategorii. Takto se postupuje dokud není dosaženo nejvyšší úrovně. Tyto operace jsem provedla SQL příkazem přímo nad databází. Použila jsem vnitřní spojení na každou úroveň hierarchii na sloupce kategorie a rodičovská kategorie.
+Poslední, šestá úroveň hierarchie je přímo napojená na hodnotu číselné struktury, která je uvedena v číselníku produktů (v tabulce \emph{produkt}). Pro získání všech úrovní kategorizace po úrovních k danému produktu je třeba vyhledat v tabulce \emph{produkt} číselné ID kategorie daného produktu a napojit jej na poslední úroveň v tabulce produktové hierarchie (\emph{produkt\_kategorie}). V této tabulce je pak uvedena rodičovská kategorie z úrovně 5. Poté je potřeba opět vyhledat v tabulce \emph{produkt\_kategorie} tuto hodnotu a zjistit její nadřazenou kategorii. Takto se postupuje dokud není dosaženo nejvyšší úrovně. Tyto operace jsem provedla SQL příkazem přímo nad databází. Použila jsem vnitřní spojení na každou úroveň hierarchii na sloupce kategorie a rodičovská kategorie.
 
 Další tabulka, se kterou jsem pracovala obsahuje informace o velikosti a hmotnosti produktů. Tato tabulka je důležitá z toho důvodu, že některé položky jsou vážené. Pokud se udává jejich množství udává se v gramech, zatímco nevážené položky jsou uvedeny v kusech. Aby bylo možné porovnávat oba číselné údaje, ke každému váženému produktu existuje přepočet na počet kusů (ozn. SKU). K tomu jsou využity údaje o počtu kusů na jednu vychystávací jednotku (dále označeno jako $SKU_{\mathrm{VJ}}$) a hmotnost jedné vychystávací jednotky daného produktu (ozn. $m_{\mathrm{VJ}}$). Vychystávací jednotka je jednotka množství používaná pro vychystávání produktů -- jeho balení a transport. Postup pro přepočet hmotnosti produktu na počet kusů ($SKU_{\mathrm{v}}$) je následovný: $$SKU = \frac{m}{m_{\mathrm{VJ}}} \cdot SKU_{\mathrm{VJ}},$$
 kde $m$ je hmotnost produktu. Ze vzorce vyplývá, že může vejít neceločíselný počet kusů. Vzhledem k tomu, že tento přepočet se použije k porovnávání velikosti objemů, nikoli k objednávání zboží, tak tato skutečnost není problém.
 
-Číselník prodejen je obsažen v tabulce \texttt{prodejny}. Vybrala jsem z tabulky následující sloupce.
+Číselník prodejen je obsažen v tabulce \emph{prodejny}. Vybrala jsem z tabulky následující sloupce.
 \begin{itemize}
     \itemsep0em 
     \item \textbf{ID prodejny} -- Označení prodejny nebo skladu
@@ -62,17 +62,17 @@ kde $m$ je hmotnost produktu. Ze vzorce vyplývá, že může vejít neceločís
     \item \textbf{ID kategorie prodejny} -- Do jaké kategorie prodejna nebo sklad patří - zda se jedná o malou nebo velkou prodejnu nebo o sklad.
 \end{itemize}
 
-S číselníkem prodejen souvisí číselník pro jejich zařazení do skupin \texttt{prodejny\_skupiny}. Skupiny se mohou v čase měnit. Pro analýzu jsou relevantní tyto sloupce:
+S číselníkem prodejen souvisí číselník pro jejich zařazení do skupin \emph{prodejny\_skupiny}. Skupiny se mohou v čase měnit. Pro analýzu jsou relevantní tyto sloupce:
 \begin{itemize}
     \itemsep0em 
     \item \textbf{ID prodejny} -- Označení prodejny nebo skladu
     \item \textbf{ID skupiny prodejen} -- Prodejny jsou sdruženy do skupin. Ty se například používají pro hromadné objednávání, nebo pro plánování promoakcí.
 \end{itemize}    
 
-Promoakce se nachází v tabulce \texttt{promoakce}. Z této tabulky jsou pro následnou analýzu potřebné údaje o ID produktu, počátečním a koncovém datu promoakce a ID skupiny prodejen, na kterých promoakce platí. Promoakce nejsou přiřazené na konkrétní prodejny, ale na skupiny prodejen. Pro další analýzy shrinků je třeba zjistit, zda byl konkrétní zaznamenaný shrink v době záznamu v promoakci, nebo ne. Z tohoto důvodu bylo potřeba tabulky spojit pomocí příkazu \texttt{JOIN} s číselníkem \texttt{prodejny\_skupiny} podle ID prodejny.
+Promoakce se nachází v tabulce \emph{promoakce}. Z této tabulky jsou pro následnou analýzu potřebné údaje o ID produktu, počátečním a koncovém datu promoakce a ID skupiny prodejen, na kterých promoakce platí. Promoakce nejsou přiřazené na konkrétní prodejny, ale na skupiny prodejen. Pro další analýzy shrinků je třeba zjistit, zda byl konkrétní zaznamenaný shrink v době záznamu v promoakci, nebo ne. Z tohoto důvodu bylo potřeba tabulky spojit pomocí příkazu \texttt{JOIN} s číselníkem \emph{prodejny\_skupiny} podle ID prodejny.
 
 \subsubsection{Tabulky transakcí}
-V tabulce \texttt{transakce} se nachází údaje o všech provedených transakcích, a to jak skladové transakce, tak prodeje a další pohyby na prodejnách. V případě prodejů prodejen jsou údaje agregované podle prodejny, konkrétního produktu a dne transakce, tzn. v této tabulce nelze rozlišit konkrétní prodeje na jednotlivých pokladnách, ale pouze souhrn za jeden den. Tabulka obsahuje údaje za posledních dvanáct měsíců.
+V tabulce \emph{transakce} se nachází údaje o všech provedených transakcích, a to jak skladové transakce, tak prodeje a další pohyby na prodejnách. V případě prodejů prodejen jsou údaje agregované podle prodejny, konkrétního produktu a dne transakce, tzn. v této tabulce nelze rozlišit konkrétní prodeje na jednotlivých pokladnách, ale pouze souhrn za jeden den. Tabulka obsahuje údaje za posledních dvanáct měsíců.
 
 Tabulka transakcí obsahuje 21 sloupců, jako možné podstatné sloupce pro analýzu jsem vybrala následující sloupce:
 
@@ -83,14 +83,15 @@ Tabulka transakcí obsahuje 21 sloupců, jako možné podstatné sloupce pro ana
     \item \textbf{ID prodejny} -- Transakce je takto přiřazená prodejně, případně skladu. % Z důvodů ochrany dat jsem původní ID převedla na hodnoty od 0 do $p$, kde $p$ je počet prodejen. %TODO TBD (jo chci to tam?)
     \item \textbf{Datum transakce} -- Jedná se o obchodní datum, pokud samotná transakce proběhne až po půlnoci uvedeného dne, tak se posílá s datem z předchozího dne, neboť obchodně patří do toho dne.
     \item \textbf{ID promoce} -- Příznak zda a v jaké promoční akci se produkt nacházel v čase uvedeném v datu transakce. V rámci zpracování dat vyplynulo, že tento příznak není zcela věrohodný 
-    \item \textbf{ID shrinku} -- Obsahuje označení jednotlivých typů shrinků viz sekce \ref*{sec:shrinkyTypy}. Celkem je identifikováno sedmnáct typů shrinků. V databázi tento sloupec označuje i jiná ID než ta, která se týkají shrinků, z toho plyne, že bylo třeba vyfiltrovat pouze ta data, která obsahují sedmnáct identifikačních čísel označující shrinky. % Z důvodu anonymity dat jsem původní ID přečíslovala na celočíselné hodnoty od 0 až do počtu shrinků (pro obě hlavní kategorie). %TODO TBD (jo chci to tam?)
+    \item \textbf{Typ transakce} -- Příznak, zda se jedná např. o prodej, výdej, korekce pohybů a jiné. 
+    \item \textbf{ID shrinku} -- Obsahuje označení jednotlivých typů shrinků viz sekce \ref*{sec:shrinkyTypy}. Celkem je identifikováno sedmnáct typů shrinků. V databázi tento sloupec označuje i jiná ID než ta, která se týkají shrinků, z toho plyne, že bylo třeba vyfiltrovat pouze ta data, která obsahují sedmnáct identifikačních čísel označující shrinky. V případě, že typem transakce jsou např. příjmy tento parametr nehraje roli. % Z důvodu anonymity dat jsem původní ID přečíslovala na celočíselné hodnoty od 0 až do počtu shrinků (pro obě hlavní kategorie). %TODO TBD (jo chci to tam?)
     \item \textbf{Objem} -- Množství produktu uvedené v transakci. U kusových produktů se jedná o celočíselný údaj u vážených to je desetinné číslo.
     \item Hodnota transakce v nákladové ceně (desetinné číslo).
     \item Hodnota transakce v prodejní ceně včetně DPH -- v případě prodejů se jedná o skutečnou cenu, u zbylých transakcích je uvedena odpovídající cena podle ceníku.
 \end{itemize}
-Velikost tabulky transakcí za jeden kalendářní rok je přibližně $3.5$ GB. 
+Z transakční tabulky je možné získat tabulku se záznamy shrinků a tržeb prodejen. Velikost tabulky se záznamy shrinků za jeden kalendářní rok je přibližně $3.5$ GB.
 
-Tabulku, která obsahuje údaje o jednotlivých prodejích na prodejnách společnosti, jsem pro účely této práce nazvala \texttt{transakce\_prodeje}. Celkem obsahuje třináct sloupců. Tato tabulka je vhodná pro analýzu shrinků typu snížení ceny, analýzou tohoto typu se tato práce nezabývá. Pro ostatní typy, není tato tabulka relevantní. Stejně tak není třeba zkoumat ceník jednotlivých produktů, protože v souhrnné tabulce transakcí je již uvedená hodnota transakce v prodejní ceně.
+Tabulku, která obsahuje údaje o jednotlivých, neagregovaných prodejích na prodejnách společnosti, jsem pro účely této práce nazvala \emph{transakce\_prodeje}. Celkem obsahuje třináct sloupců. Tato tabulka je vhodná pro analýzu shrinků typu snížení ceny, analýzou tohoto typu se tato práce nezabývá. Pro ostatní typy, není tato tabulka relevantní. Stejně tak není třeba zkoumat ceník jednotlivých produktů, protože v souhrnné tabulce transakcí je již uvedená hodnota transakce v prodejní ceně.
 
 \subsubsection{Další datové zdroje}
 
