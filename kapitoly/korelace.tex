@@ -89,11 +89,11 @@ V~této části je uveden přesný postup pro získání kategorizace produktů.
 
 Pro korelační analýzu zaznamenaných shrinků s~tržbami dalších produktů je třeba zajistit data, které se týkají zaznamenaných prodejů, produktů a~prodejen. V násle-\\dující části jsou popsány tabulková data, která jsou nezbytná pro správné spuštění analýzy. Dále jsou definované i vstupy, které musí definovat uživatel pro specifikování názvů konkrétních sloupců v~souborech a parametry pro analýzu.
 
-Celkem je požadováno pět vstupních tabulek - záznamy shrinků, záznamy prodejů, záznamy o~promoakcích, číselník produktů s~rozdělením produktové hierarchie. %a~rozdělení prodejen.
+Celkem jsou požadovány čtyři vstupní tabulky - \emph{záznamy shrinků, záznamy prodejů, záznamy o~promoakcích, číselník produktů s~rozdělením produktové hierarchie}. %a~rozdělení prodejen.
 Tabulka se zaznamenanými shrinky musí obsahovat sloupec s~datem záznamu, ID produktu, ID prodejny, hodnotu zaznamenaného shrinku. Tabulka s~prodeji potřebuje stejné sloupce jako tabulka se shrinky s~výjimkou že hodnota prodejů je celková prodaná částka, která byla zaznamenaná na dané prodejně v~jeden den u daného produktu. Tabulka s~údaji o promoakcích by měla obsahovat ID produktu, kterého se promoakce týká, začáteční a koncové datum promoakce a ID prodejny, pro kterou promoakce platí.
 Všechny záznamové tabulky musí pokrývat stejné časové období. Období může být libovolně dlouhé.
 Tabulka produktové hierarchie obsahuje ID produktu, jeho název a libovolně hluboký strom hierarchií. Každá úroveň stromu má vlastní sloupec. Všechny úrovně jsou vyplněné pro každý produkt, tato podmínka je nutná jen pro kategorie, které bude chtít uživatel využít při analýze. 
-Tabulka s~hierarchie produktů slouží k~tomu, aby mohla být napojena na ostatní tabulky a data se pak mohla vyfiltrovat pouze na záznamy týkající se vybrané kategorie.
+Tabulka s~hierarchií produktů slouží k~tomu, aby mohla být napojena na ostatní tabulky a data se pak mohla vyfiltrovat pouze na záznamy týkající se vybrané kategorie.
 
 Před spuštěním hlavní výpočetní části musí uživatel vypsat konkrétní pojmenování sloupců v~tabulce do proměnných. Sloupce, které v~různých tabulkách označují tytéž hodnoty, musí mít stejný název. V~následujícím kódu \ref*{code:colnames} je ukázka zadání. V~komentářích je slovní popis o jaký sloupec se jedná. Sloupec by však měl být jasný přímo z~názvu proměnné.
 
