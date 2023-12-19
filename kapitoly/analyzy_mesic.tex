@@ -1,36 +1,39 @@
 \section{Příprava vzorku dat pro další analýzy}
+\label{sec:priprava}
+Data z výše popsaných tabulek bylo potřeba sloučit do jedné tabulky, aby nad nimi bylo možné provést analýzy. Napojení dat bylo provedeno v Jupyter Noteboocích v jazyce Python. Na tabulku s evidovanými shrinky bylo třeba napojit číselníky. Podle názvů prodejen byly napojeny na prodejny demografické údaje. Údaje o počtu obyvatelích, jsem rozdělila do pěti kategorií. s Z data transakce bylo extrahováno datum pro den a na základě jeho hodnoty bylo určeno do jaké čtvrtiny měsíce patří. Z data transakce také bylo odvozeno o jaký den v týdnu se jedná pomocí funkce v Python knihovně\emph{pandas}.
 
-Data z výše popsaných tabulek bylo potřeba sloučit do jedné tabulky, aby nad nimi bylo možné provést analýzy. Napojení dat bylo provedeno v Jupyter Noteboocích v jazyce Python. Na tabulku s evidovanými shrinky bylo třeba napojit číselníky. Podle názvů prodejen byly napojeny na prodejny demografické údaje. Z data transakce bylo extrahováno datum pro den a na základě jeho hodnoty bylo určeno do jaké čtvrtiny měsíce patří. Z data také bylo odovzeno pomocí funkce v \emph{pandas} knihovně, o jaký den v týdnu se jedná.
+Zkoumaný dataset se záznamy shrinků produktů jsem rozšířila o další sledované sloupce, které dávají do srovnání hodnotu shrinku a objem tržeb. Vytvořila jsem takto sloupce: podíl shrinku na celkových tržbách prodejny, podíl shrinku na týden-\\ních tržbách shrinkovaného produktu na prodejně, podíl shrinku a tržeb v~kategorii úrovně 1. Tabulka tržeb byla získaná z tabulky \emph{transakce}, pro ID transakcí, které odpovídají prodejům. Tabulka byla agregovaná podle sloupců: prodejna, datum transakce, čtvrtina měsíce, kategorie z úrovně 1.
+
 % Následující část text bude věnována rozboru dat pro typ shrinku \emph{prošlé a zkažené zboží} pro kategorie Velmi čerstvé a Čerstvé z produktové hierarchie úrovně 1.
 % v období jednoho kalendářního měsíce.
 
-\subsection{Rozbor dat}
+% \subsection{Rozbor dat}
 
-Vzhledem k rozsáhlosti dat bylo třeba zjistit, které proměnné mohou ovlivňovat hodnotu shrinku a které proměnné jsou redundantní.
+% Vzhledem k rozsáhlosti dat bylo třeba zjistit, které proměnné mohou ovlivňovat hodnotu shrinku a které proměnné jsou redundantní. 
 % Vzhledem k vysokému počtu dat pro jeden kalendářní rok, 
 % v roce 2022 bylo v databázi evidováno přes 32 milionů záznamů o týkající se shrinků
 % , jsem se rozhodla provést analýzu na měsíčním výběru dat z tohoto období. Jako zkoumaný měsíc jsem vybrala měsíc říjen, neboť v porovnání s letními měsíci a Vánocemi se v říjnu nevyskytují významné sezónní výkyvy.
 
-Zkoumaná březnová data obsahují přes dva miliony řádků a patnáct sloupců. %TODO zkontrolovat
+Zkoumaná březnová data obsahují přes $1{,6}$ milionů řádků.
 Každý řádek odpovídá jednomu záznamu v databázi shrinku daného produktu. Sledované údaje ve sloupcích jsou: 
 % \subsubsection{Sledované údaje}
 \begin{itemize}
-    \itemsep-0.4em
-    \item ID prodejny, kategorická proměnná,
-    \item ID produktu, kategorická proměnná,
-    \item datum transakce, kategorická proměnná,
-    \item ID shrinku, kategorická proměnná,
-    \item 1, kategorická proměnná,
-    \item 2, kategorická proměnná,
-    \item 4, kategorická proměnná,
-    \item 5, kategorická proměnná,
-    \item 6, kategorická proměnná,
-    \item expirace, kategorická proměnná,
-    \item množství, spojitá proměnná,
-    \item ztracená nákladová cena, spojitá proměnná,
-    \item den v týdnu, kategorická proměnná,
-    \item číslo den, kategorická proměnná,
-    \item období v měsíci (rozdělení měsíce na pět částí), kategorická proměnná.
+    \itemsep-0.34em
+    \item ID prodejny -- kategorická proměnná
+    \item ID produktu -- kategorická proměnná
+    \item datum transakce -- kategorická proměnná
+    \item ID shrinku -- kategorická proměnná
+    \item 1 -- kategorická proměnná
+    \item 2 -- kategorická proměnná
+    \item 4 -- kategorická proměnná
+    \item 5 -- kategorická proměnná
+    \item 6 -- kategorická proměnná
+    \item Expirace -- kategorická proměnná
+    \item Een v týdnu -- kategorická proměnná
+    \item Číslo den -- kategorická proměnná
+    \item Čtvrt měsíce (rozdělení měsíce na čtyři části) -- kategorická proměnná
+    \item Množství -- spojitá proměnná
+    \item Ztracená nákladová cena -- spojitá proměnná
 \end{itemize}
 Původní sloupec datum jsem rozdělila na tři jiné proměnné, a to den v týdnu, číslo dne a období v měsíci a sloupec datum jsem vynechala. 
 % Z důvodu vysokého počtu záznamů a odlišné povahy dvou typů shrinků jsem data dále rozdělila na shrinky typu damages a shrinky typu inventory. 
@@ -137,12 +140,12 @@ Matice vypočítaných koeficientů je na obr. \ref*{obr:nb:MI}, jelikož se jed
     \label{obr:nb:MI}
 \end{figure}
 
-Dále jsem pro znázornění vztahu mezi proměnnými použila koeficient Cramerovo $V$. Koeficient jsem postupně počítala pro každou dvojici příznaků. Koeficient nabývá hodnot mezi 0 a 1. Číslopř blízké nule indikuje, že mezi proměnnými není asociace, číslo blízké jedničce vysokou závislost \cite{bib:statology}. Na obr. \ref*{obr:nb:cramers} lze vidět, že pro kategorie 1 až 6 je hodnota koeficientu  po zaokrouhlení rovna jedné. Vysoká závislost je pak i mezi příznakem expirace a ID produktu a kategorií 1. Dále logicky mezi číslem dne a dnem v týdnu a obdobím v měsíci.
+Dále jsem pro znázornění vztahu mezi proměnnými použila koeficient Cramerovo $V$. Koeficient jsem postupně počítala pro každou dvojici příznaků. Koeficient nabývá hodnot mezi 0 a 1. Číslo blízké nule indikuje, že mezi proměnnými není asociace, číslo blízké jedničce vysokou závislost \cite{bib:statology}. Na obr. \ref*{obr:nb:cramers} lze vidět, že pro kategorie 1 až 6 a ID produktu je hodnota koeficientu po zaokrouhlení vždy rovna jedné. Vysoká závislost je pak i mezi příznakem promoakce a ID produktu. Dále logicky mezi datem transakce a dnem v týdnu a obdobím v měsíci. ID prodejny je extrémně závislé s demografickými údaji o lokalitách a typem prodejny.
 
 \begin{figure}[hbtp!]
     \centering
-    \includegraphics[width=.8\textwidth]{obrazky/zntb/cramers_u.png}
-    \caption{Matice koeficientů Cramerovo V mezi příznaky.}
+    \includegraphics[width=.8\textwidth]{obrazky/zntb/correlation_matrix_stores-cramers-prosleSFF.pdf}
+    \caption{Matice koeficientů Cramerovo $V$ pro kategorické příznaky.}
     \label{obr:nb:cramers}
 \end{figure}
 

@@ -1,0 +1,678 @@
+Analyzing category: PROC. MEAT SERVICE of L4 category level.
+============================================================
+Sizes of dataframes: 
+Shape of original df:  (811526, 24) Shape of new df:  (303847, 24)
+Shape of original df:  (5539222, 10) Shape of new df:  (70584, 10)
+Shape of original df:  (36575915, 14) Shape of new df:  (555853, 14)
+Labeling promotions.
+1679273it [04:59, 5598.59it/s] 
+Searching for duplicate records.
+1679273it [01:55, 14482.38it/s]
+Count of rows to drop:  1229830
+Shapes of dataframes: Transactions:  (554305, 14) Promotions:  (70584, 10) Transactions with promo:  (1719529, 19) Transactions with promo no duplicates:  (489699, 17)
+Method:  pearson  after promo:  False
+Calculating  pearson  correlation coefficient.
+Number of products in category:  111
+91it [00:25,  4.13it/s]
+
+93it [00:25,  3.70it/s]
+
+100it [00:27,  4.08it/s]
+
+101it [00:27,  3.76it/s]
+
+102it [00:27,  3.71it/s]
+
+104it [00:28,  3.89it/s]
+
+111it [00:30,  3.67it/s]
+Products that had no sales during promotion:  40 products.
+[20454081, 20454111, 25666854, 25961225, 26872896, 23180666, 20453978, 23373204, 24888967, 25478198, 25726787, 25961164, 26831718, 26831817, 27254783, 27571781, 27627761, 25726299, 25961140, 27150054, 25726046, 25726015, 25842371, 27571774, 20402082, 26835587, 25959000, 27722930, 27571798, 27736982, 27254486, 25726060, 27739174, 27737033, 27738504, 26835624, 27738733, 27611357, 25842579, 26831824]
+Products that had no sales at all:  6 products.
+[27722930, 27736982, 27739174, 27737033, 27738504, 27738733]
+Method:  pearson  after promo:  False
+Categorization:  correlation_with_other_products:
+sellout        64
+independent    31
+false          10
+itself          4
+other           2
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_past:
+sellout        64
+independent    22
+itself         13
+false          10
+other           2
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_promo_past:
+sellout        42
+independent    28
+other          24
+false          10
+itself          7
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_promo:
+sellout        39
+independent    35
+other          27
+false          10
+Name: Categorization, dtype: int64 
+
+Method:  spearman  after promo:  False
+Calculating  spearman  correlation coefficient.
+Number of products in category:  111
+91it [00:29,  3.62it/s]
+
+93it [00:29,  3.47it/s]
+
+100it [00:32,  3.23it/s]
+
+101it [00:32,  3.30it/s]
+
+102it [00:32,  3.06it/s]
+
+104it [00:33,  3.16it/s]
+
+111it [00:35,  3.12it/s]
+Products that had no sales during promotion:  40 products.
+[20454081, 20454111, 25666854, 25961225, 26872896, 23180666, 20453978, 23373204, 24888967, 25478198, 25726787, 25961164, 26831718, 26831817, 27254783, 27571781, 27627761, 25726299, 25961140, 27150054, 25726046, 25726015, 25842371, 27571774, 20402082, 26835587, 25959000, 27722930, 27571798, 27736982, 27254486, 25726060, 27739174, 27737033, 27738504, 26835624, 27738733, 27611357, 25842579, 26831824]
+Products that had no sales at all:  6 products.
+[27722930, 27736982, 27739174, 27737033, 27738504, 27738733]
+Method:  spearman  after promo:  False
+Categorization:  correlation_with_other_products:
+sellout        71
+independent    21
+false          13
+itself          4
+other           2
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_past:
+sellout        71
+independent    17
+false          13
+itself          8
+other           2
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_promo_past:
+other          41
+sellout        32
+independent    20
+false          13
+itself          5
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_promo:
+other          45
+sellout        28
+independent    23
+false          13
+itself          2
+Name: Categorization, dtype: int64 
+
+Method:  pearson  after promo:  True
+Calculating  pearson  correlation coefficient.
+Number of products in category:  111
+91it [00:32,  2.82it/s]
+
+93it [00:32,  2.84it/s]
+
+100it [00:35,  3.00it/s]
+
+101it [00:35,  2.92it/s]
+
+102it [00:35,  3.00it/s]
+
+104it [00:36,  2.78it/s]
+
+111it [00:39,  2.81it/s]
+Products that had no sales during promotion:  32 products.
+[26872896, 24888967, 25478198, 25726787, 25961164, 26831718, 26831817, 27254783, 27571781, 27627761, 25726299, 25961140, 27150054, 25726046, 25726015, 27571774, 20402082, 26835587, 25959000, 27722930, 27571798, 27736982, 27254486, 25726060, 27739174, 27737033, 27738504, 26835624, 27738733, 27611357, 25842579, 26831824]
+Products that had no sales at all:  6 products.
+[27722930, 27736982, 27739174, 27737033, 27738504, 27738733]
+Method:  pearson  after promo:  True
+Categorization:  correlation_with_other_products:
+sellout        66
+independent    34
+false          10
+itself          1
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_past:
+sellout        66
+independent    24
+itself         11
+false          10
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_promo_past:
+sellout        42
+independent    28
+other          24
+false          10
+itself          7
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_promo:
+sellout        39
+independent    35
+other          27
+false          10
+Name: Categorization, dtype: int64 
+
+Method:  spearman  after promo:  True
+Calculating  spearman  correlation coefficient.
+Number of products in category:  111
+91it [00:42,  2.07it/s]
+
+93it [00:43,  2.19it/s]
+
+100it [00:46,  2.27it/s]
+
+101it [00:47,  2.27it/s]
+
+102it [00:47,  2.18it/s]
+
+104it [00:48,  2.08it/s]
+
+111it [00:52,  2.13it/s]
+Products that had no sales during promotion:  32 products.
+[26872896, 24888967, 25478198, 25726787, 25961164, 26831718, 26831817, 27254783, 27571781, 27627761, 25726299, 25961140, 27150054, 25726046, 25726015, 27571774, 20402082, 26835587, 25959000, 27722930, 27571798, 27736982, 27254486, 25726060, 27739174, 27737033, 27738504, 26835624, 27738733, 27611357, 25842579, 26831824]
+Products that had no sales at all:  6 products.
+[27722930, 27736982, 27739174, 27737033, 27738504, 27738733]
+Method:  spearman  after promo:  True
+Categorization:  correlation_with_other_products:
+sellout        73
+independent    25
+false          13
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_past:
+sellout        72
+independent    17
+false          13
+itself          8
+other           1
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_promo_past:
+other          41
+sellout        32
+independent    20
+false          13
+itself          5
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_promo:
+other          45
+sellout        28
+independent    23
+false          13
+itself          2
+Name: Categorization, dtype: int64 
+
+./categorization_charts/categorization_charts_L4_PROC. MEAT SERVICE.pdf
+Analyzing category: SALTY PASTRY of L4 category level.
+======================================================
+Sizes of dataframes: 
+Shape of original df:  (811526, 24) Shape of new df:  (104427, 24)
+Shape of original df:  (5539222, 10) Shape of new df:  (8944, 10)
+Shape of original df:  (36575915, 14) Shape of new df:  (480412, 14)
+Labeling promotions.
+234020it [00:38, 6103.67it/s]
+Searching for duplicate records.
+234020it [00:16, 14295.59it/s]
+Count of rows to drop:  170308
+Shapes of dataframes: Transactions:  (477631, 14) Promotions:  (8944, 10) Transactions with promo:  (582403, 19) Transactions with promo no duplicates:  (412095, 17)
+Method:  pearson  after promo:  False
+Calculating  pearson  correlation coefficient.
+Number of products in category:  246
+44it [00:09,  4.97it/s]
+
+45it [00:10,  4.90it/s]
+
+48it [00:10,  4.71it/s]
+
+54it [00:11,  4.80it/s]
+
+58it [00:12,  5.03it/s]
+
+60it [00:13,  4.85it/s]
+
+63it [00:13,  4.90it/s]
+
+64it [00:13,  4.85it/s]
+
+65it [00:14,  4.78it/s]
+
+66it [00:14,  4.71it/s]
+
+67it [00:14,  4.63it/s]
+
+74it [00:16,  4.10it/s]
+
+94it [00:20,  5.04it/s]
+
+126it [00:27,  4.39it/s]
+
+192it 
+
+240it [00:52,  4.25it/s]
+
+241it [00:52,  4.13it/s]
+
+244it [00:53,  4.15it/s]
+
+246it [00:53,  4.59it/s]
+Products that had no sales during promotion:  227 products.
+[20428587, 20480905, 21852039, 23472266, 25467697, 27422731, 27442449, 27456934, 27516850, 27516867, 27544884, 27544907, 27544952, 27544983, 27578025, 27609699, 25672985, 26782034, 27544914, 27544938, 23472259, 27123195, 27544877, 27544891, 27603581, 25310863, 26576442, 26627373, 27123201, 27274750, 27574270, 22459466, 23194175, 23549074, 25895667, 26109718, 26737430, 26737461, 26737478, 27266038, 27269244, 27344064, 27603598, 27619810, 22095022, 26627342, 27638019, 20783808, 21488931, 21976056, 21976124, 22045751, 26627328, 26709468, 27442760, 27312759, 26737539, 26778808, 21471971, 24587136, 27544969, 25318074, 25322194, 25892369, 26960975, 25512700, 23319905, 25673005, 23635739, 25516234, 26359205, 25012200, 25175639, 25431483, 25430783, 25430837, 25430820, 25773071, 27075234, 27075227, 25629620, 26571362, 26571324, 26571331, 27601532, 26786698, 27710418, 22941404, 25504422, 27034071, 26975085, 27449943, 25548761, 25663075, 27195000, 24744881, 27641569, 26445540, 27201930, 22957733, 27374993, 22962294, 25426496, 25426502, 25254792, 27610640, 25506242, 26546117, 27610664, 27735190, 25507294, 25507256, 25506297, 25506303, 22993847, 22993885, 25504439, 25504460, 25571608, 25431599, 27329290, 21482922, 24174381, 25390261, 25390254, 25390643, 25394368, 24328579, 25665864, 24644167, 27329269, 25594836, 22933904, 22933973, 27619513, 27384039, 27384053, 25393422, 25891966, 27134641, 27134634, 23549067, 27152706, 25665802, 25605327, 26787008, 25630602, 26035062, 27455630, 25504446, 27620175, 25571615, 25571660, 27134658, 27134665, 27134689, 24323611, 25498554, 25630596, 25630619, 27619520, 26802046, 27134719, 26975740, 27603611, 25513318, 27282670, 27696729, 27466261, 22993892, 22662200, 25630466, 22019943, 27712306, 27684436, 27278116, 26381350, 26885506, 27307656, 26389400, 27329139, 22516657, 27329184, 27329115, 27032404, 27215937, 26386973, 27453179, 27715444, 25756999, 27128473, 26347394, 27136768, 25661224, 24277365, 25048698, 26434582, 27152492, 27715451, 23478992, 26975078, 26391175, 26802060, 25326185, 26381459, 26576848, 24644143, 25605273, 25066159, 25630657, 26581798, 27574225, 26975689, 27620182, 26381381, 24704427, 26975764, 24644150, 22126221, 25504491, 27710432, 27740767, 27710340, 26502755, 27312827, 27740750, 26579221]
+Products that had no sales at all:  18 products.
+[22459466, 23194175, 26109718, 27344064, 22095022, 26627342, 21488931, 21976056, 21976124, 22045751, 26627328, 26778808, 25773071, 27735190, 27684436, 27740767, 27710340, 27740750]
+Method:  pearson  after promo:  False
+Categorization:  correlation_with_other_products:
+sellout    143
+false      102
+itself       1
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_past:
+sellout    143
+false      102
+itself       1
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_promo_past:
+false          102
+other           78
+sellout         65
+independent      1
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_promo:
+false          102
+other           76
+sellout         67
+independent      1
+Name: Categorization, dtype: int64 
+
+Method:  spearman  after promo:  False
+Calculating  spearman  correlation coefficient.
+Number of products in category:  246
+44it [00:10,  4.73it/s]
+
+45it [00:10,  4.65it/s]
+
+48it [00:11,  4.64it/s]
+
+54it [00:12,  4.26it/s]
+
+58it [00:13,  4.06it/s]
+
+60it [00:14,  4.22it/s]
+
+63it [00:15,  4.01it/s]
+
+64it [00:15,  4.08it/s]
+
+65it [00:15,  4.21it/s]
+
+66it [00:15,  4.33it/s]
+
+67it [00:15,  4.35it/s]
+
+74it [00:17,  4.68it/s]
+
+94it [00:22,  3.73it/s]
+
+126it [00:29,  4.62it/s]
+
+192it [00:44,  4.22it/s]
+
+240it [00:56,  4.42it/s]
+
+241it [00:56,  4.53it/s]
+
+244it [00:57,  4.16it/s]
+
+246it [00:57,  4.25it/s]
+Products that had no sales during promotion:  227 products.
+[20428587, 20480905, 21852039, 23472266, 25467697, 27422731, 27442449, 27456934, 27516850, 27516867, 27544884, 27544907, 27544952, 27544983, 27578025, 27609699, 25672985, 26782034, 27544914, 27544938, 23472259, 27123195, 27544877, 27544891, 27603581, 25310863, 26576442, 26627373, 27123201, 27274750, 27574270, 22459466, 23194175, 23549074, 25895667, 26109718, 26737430, 26737461, 26737478, 27266038, 27269244, 27344064, 27603598, 27619810, 22095022, 26627342, 27638019, 20783808, 21488931, 21976056, 21976124, 22045751, 26627328, 26709468, 27442760, 27312759, 26737539, 26778808, 21471971, 24587136, 27544969, 25318074, 25322194, 25892369, 26960975, 25512700, 23319905, 25673005, 23635739, 25516234, 26359205, 25012200, 25175639, 25431483, 25430783, 25430837, 25430820, 25773071, 27075234, 27075227, 25629620, 26571362, 26571324, 26571331, 27601532, 26786698, 27710418, 22941404, 25504422, 27034071, 26975085, 27449943, 25548761, 25663075, 27195000, 24744881, 27641569, 26445540, 27201930, 22957733, 27374993, 22962294, 25426496, 25426502, 25254792, 27610640, 25506242, 26546117, 27610664, 27735190, 25507294, 25507256, 25506297, 25506303, 22993847, 22993885, 25504439, 25504460, 25571608, 25431599, 27329290, 21482922, 24174381, 25390261, 25390254, 25390643, 25394368, 24328579, 25665864, 24644167, 27329269, 25594836, 22933904, 22933973, 27619513, 27384039, 27384053, 25393422, 25891966, 27134641, 27134634, 23549067, 27152706, 25665802, 25605327, 26787008, 25630602, 26035062, 27455630, 25504446, 27620175, 25571615, 25571660, 27134658, 27134665, 27134689, 24323611, 25498554, 25630596, 25630619, 27619520, 26802046, 27134719, 26975740, 27603611, 25513318, 27282670, 27696729, 27466261, 22993892, 22662200, 25630466, 22019943, 27712306, 27684436, 27278116, 26381350, 26885506, 27307656, 26389400, 27329139, 22516657, 27329184, 27329115, 27032404, 27215937, 26386973, 27453179, 27715444, 25756999, 27128473, 26347394, 27136768, 25661224, 24277365, 25048698, 26434582, 27152492, 27715451, 23478992, 26975078, 26391175, 26802060, 25326185, 26381459, 26576848, 24644143, 25605273, 25066159, 25630657, 26581798, 27574225, 26975689, 27620182, 26381381, 24704427, 26975764, 24644150, 22126221, 25504491, 27710432, 27740767, 27710340, 26502755, 27312827, 27740750, 26579221]
+Products that had no sales at all:  18 products.
+[22459466, 23194175, 26109718, 27344064, 22095022, 26627342, 21488931, 21976056, 21976124, 22045751, 26627328, 26778808, 25773071, 27735190, 27684436, 27740767, 27710340, 27740750]
+Method:  spearman  after promo:  False
+Categorization:  correlation_with_other_products:
+sellout    148
+false       97
+itself       1
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_past:
+sellout    147
+false       97
+itself       1
+other        1
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_promo_past:
+other          101
+false           97
+sellout         47
+independent      1
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_promo:
+other          101
+false           97
+sellout         47
+independent      1
+Name: Categorization, dtype: int64 
+
+Method:  pearson  after promo:  True
+Calculating  pearson  correlation coefficient.
+Number of products in category:  246
+44it [00:09,  4.12it/s]
+
+45it [00:10,  3.96it/s]
+
+48it [00:10,  4.12it/s]
+
+54it [00:12,  3.92it/s]
+
+58it [00:13,  3.42it/s]
+
+60it [00:14,  3.52it/s]
+
+63it [00:14,  3.98it/s]
+
+64it [00:14,  4.02it/s]
+
+65it [00:15,  4.14it/s]
+
+66it [00:15,  4.10it/s]
+
+67it [00:15,  4.08it/s]
+
+74it [00:17,  4.90it/s]
+
+94it [00:21,  4.20it/s]
+
+126it [00:29,  3.97it/s]
+
+192it [00:44,  4.23it/s]
+
+240it [00:55,  4.55it/s]
+
+241it [00:55,  4.56it/s]
+
+244it [00:56,  4.81it/s]
+
+246it [00:56,  4.32it/s]
+Products that had no sales during promotion:  223 products.
+[20428587, 20480905, 21852039, 23472266, 25467697, 27442449, 27456934, 27516850, 27516867, 27544884, 27544907, 27544952, 27544983, 27578025, 27609699, 25672985, 26782034, 27544914, 27544938, 23472259, 27123195, 27544877, 27544891, 25310863, 26576442, 26627373, 27123201, 27274750, 27574270, 22459466, 23194175, 23549074, 25895667, 26109718, 26737430, 26737461, 26737478, 27266038, 27269244, 27344064, 27619810, 22095022, 26627342, 27638019, 20783808, 21488931, 21976056, 21976124, 22045751, 26627328, 26709468, 27442760, 27312759, 26737539, 26778808, 21471971, 24587136, 27544969, 25318074, 25322194, 25892369, 25512700, 23319905, 25673005, 23635739, 25516234, 26359205, 25012200, 25175639, 25431483, 25430783, 25430837, 25430820, 25773071, 27075234, 27075227, 25629620, 26571362, 26571324, 26571331, 27601532, 26786698, 27710418, 22941404, 25504422, 27034071, 26975085, 27449943, 25548761, 25663075, 27195000, 24744881, 27641569, 26445540, 27201930, 22957733, 27374993, 22962294, 25426496, 25426502, 25254792, 27610640, 25506242, 26546117, 27610664, 27735190, 25507294, 25507256, 25506297, 25506303, 22993847, 22993885, 25504439, 25504460, 25571608, 25431599, 27329290, 21482922, 24174381, 25390261, 25390254, 25390643, 25394368, 24328579, 25665864, 24644167, 27329269, 25594836, 22933904, 22933973, 27619513, 27384039, 27384053, 25393422, 25891966, 27134641, 27134634, 23549067, 27152706, 25665802, 25605327, 26787008, 25630602, 26035062, 27455630, 25504446, 27620175, 25571615, 25571660, 27134658, 27134665, 27134689, 24323611, 25498554, 25630596, 25630619, 27619520, 26802046, 27134719, 26975740, 27603611, 25513318, 27282670, 27696729, 27466261, 22993892, 22662200, 25630466, 22019943, 27712306, 27684436, 27278116, 26381350, 26885506, 27307656, 26389400, 27329139, 22516657, 27329184, 27329115, 27032404, 27215937, 26386973, 27453179, 27715444, 25756999, 27128473, 26347394, 27136768, 25661224, 24277365, 25048698, 26434582, 27152492, 27715451, 23478992, 26975078, 26391175, 26802060, 25326185, 26381459, 26576848, 24644143, 25605273, 25066159, 25630657, 26581798, 27574225, 26975689, 27620182, 26381381, 24704427, 26975764, 24644150, 22126221, 25504491, 27710432, 27740767, 27710340, 26502755, 27312827, 27740750, 26579221]
+Products that had no sales at all:  18 products.
+[22459466, 23194175, 26109718, 27344064, 22095022, 26627342, 21488931, 21976056, 21976124, 22045751, 26627328, 26778808, 25773071, 27735190, 27684436, 27740767, 27710340, 27740750]
+Method:  pearson  after promo:  True
+Categorization:  correlation_with_other_products:
+sellout    143
+false      102
+itself       1
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_past:
+sellout    143
+false      102
+itself       1
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_promo_past:
+false          102
+other           78
+sellout         65
+independent      1
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_promo:
+false          102
+other           76
+sellout         67
+independent      1
+Name: Categorization, dtype: int64 
+
+Method:  spearman  after promo:  True
+Calculating  spearman  correlation coefficient.
+Number of products in category:  246
+44it [00:10,  4.39it/s]
+
+45it [00:10,  4.08it/s]
+
+48it [00:11,  4.18it/s]
+
+54it [00:12,  4.05it/s]
+
+58it [00:13,  3.19it/s]
+
+60it [00:14,  3.54it/s]
+
+63it [00:14,  3.98it/s]
+
+64it [00:15,  3.88it/s]
+
+65it [00:15,  3.90it/s]
+
+66it [00:15,  3.85it/s]
+
+67it [00:15,  3.96it/s]
+
+74it [00:17,  4.43it/s]
+
+94it [00:22,  4.33it/s]
+
+126it [00:31,  3.91it/s]
+
+192it [00:49,  3.67it/s]
+
+240it [01:03,  4.36it/s]
+
+241it [01:03,  4.53it/s]
+
+244it [01:04,  4.51it/s]
+
+246it [01:05,  3.78it/s]
+Products that had no sales during promotion:  223 products.
+[20428587, 20480905, 21852039, 23472266, 25467697, 27442449, 27456934, 27516850, 27516867, 27544884, 27544907, 27544952, 27544983, 27578025, 27609699, 25672985, 26782034, 27544914, 27544938, 23472259, 27123195, 27544877, 27544891, 25310863, 26576442, 26627373, 27123201, 27274750, 27574270, 22459466, 23194175, 23549074, 25895667, 26109718, 26737430, 26737461, 26737478, 27266038, 27269244, 27344064, 27619810, 22095022, 26627342, 27638019, 20783808, 21488931, 21976056, 21976124, 22045751, 26627328, 26709468, 27442760, 27312759, 26737539, 26778808, 21471971, 24587136, 27544969, 25318074, 25322194, 25892369, 25512700, 23319905, 25673005, 23635739, 25516234, 26359205, 25012200, 25175639, 25431483, 25430783, 25430837, 25430820, 25773071, 27075234, 27075227, 25629620, 26571362, 26571324, 26571331, 27601532, 26786698, 27710418, 22941404, 25504422, 27034071, 26975085, 27449943, 25548761, 25663075, 27195000, 24744881, 27641569, 26445540, 27201930, 22957733, 27374993, 22962294, 25426496, 25426502, 25254792, 27610640, 25506242, 26546117, 27610664, 27735190, 25507294, 25507256, 25506297, 25506303, 22993847, 22993885, 25504439, 25504460, 25571608, 25431599, 27329290, 21482922, 24174381, 25390261, 25390254, 25390643, 25394368, 24328579, 25665864, 24644167, 27329269, 25594836, 22933904, 22933973, 27619513, 27384039, 27384053, 25393422, 25891966, 27134641, 27134634, 23549067, 27152706, 25665802, 25605327, 26787008, 25630602, 26035062, 27455630, 25504446, 27620175, 25571615, 25571660, 27134658, 27134665, 27134689, 24323611, 25498554, 25630596, 25630619, 27619520, 26802046, 27134719, 26975740, 27603611, 25513318, 27282670, 27696729, 27466261, 22993892, 22662200, 25630466, 22019943, 27712306, 27684436, 27278116, 26381350, 26885506, 27307656, 26389400, 27329139, 22516657, 27329184, 27329115, 27032404, 27215937, 26386973, 27453179, 27715444, 25756999, 27128473, 26347394, 27136768, 25661224, 24277365, 25048698, 26434582, 27152492, 27715451, 23478992, 26975078, 26391175, 26802060, 25326185, 26381459, 26576848, 24644143, 25605273, 25066159, 25630657, 26581798, 27574225, 26975689, 27620182, 26381381, 24704427, 26975764, 24644150, 22126221, 25504491, 27710432, 27740767, 27710340, 26502755, 27312827, 27740750, 26579221]
+Products that had no sales at all:  18 products.
+[22459466, 23194175, 26109718, 27344064, 22095022, 26627342, 21488931, 21976056, 21976124, 22045751, 26627328, 26778808, 25773071, 27735190, 27684436, 27740767, 27710340, 27740750]
+Method:  spearman  after promo:  True
+Categorization:  correlation_with_other_products:
+sellout    148
+false       97
+itself       1
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_past:
+sellout    148
+false       97
+itself       1
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_promo_past:
+other          101
+false           97
+sellout         47
+independent      1
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_promo:
+other          101
+false           97
+sellout         47
+independent      1
+Name: Categorization, dtype: int64 
+
+./categorization_charts/categorization_charts_L4_SALTY PASTRY.pdf
+Analyzing category: FRUIT VEGETABLE of L4 category level.
+=========================================================
+Sizes of dataframes: 
+Shape of original df:  (811526, 24) Shape of new df:  (34680, 24)
+Shape of original df:  (5539222, 10) Shape of new df:  (5556, 10)
+Shape of original df:  (36575915, 14) Shape of new df:  (179351, 14)
+Labeling promotions.
+114262it [00:15, 7497.62it/s]
+Searching for duplicate records.
+114262it [00:07, 15380.35it/s]
+Count of rows to drop:  77818
+Shapes of dataframes: Transactions:  (177703, 14) Promotions:  (5556, 10) Transactions with promo:  (227142, 19) Transactions with promo no duplicates:  (149324, 17)
+Method:  pearson  after promo:  False
+Calculating  pearson  correlation coefficient.
+Number of products in category:  28
+27it [00:02,  9.22it/s]
+
+28it [00:02,  9.54it/s]
+Products that had no sales during promotion:  17 products.
+[20444853, 20445836, 20698171, 26398969, 24363303, 20452094, 20445553, 21497513, 20446086, 27299395, 24228862, 24391078, 27186244, 26977775, 23930742, 27227947, 27333501]
+Products that had no sales at all:  1 products.
+[27333501]
+Method:  pearson  after promo:  False
+Categorization:  correlation_with_other_products:
+sellout    24
+false       3
+itself      1
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_past:
+sellout    24
+false       3
+itself      1
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_promo_past:
+sellout        22
+false           3
+other           2
+independent     1
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_promo:
+sellout        22
+false           3
+other           2
+independent     1
+Name: Categorization, dtype: int64 
+
+Method:  spearman  after promo:  False
+Calculating  spearman  correlation coefficient.
+Number of products in category:  28
+27it [00:03,  6.83it/s]
+
+28it [00:03,  7.41it/s]
+Products that had no sales during promotion:  17 products.
+[20444853, 20445836, 20698171, 26398969, 24363303, 20452094, 20445553, 21497513, 20446086, 27299395, 24228862, 24391078, 27186244, 26977775, 23930742, 27227947, 27333501]
+Products that had no sales at all:  1 products.
+[27333501]
+Method:  spearman  after promo:  False
+Categorization:  correlation_with_other_products:
+sellout    22
+false       5
+itself      1
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_past:
+sellout    22
+false       5
+itself      1
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_promo_past:
+sellout        18
+false           5
+other           4
+independent     1
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_promo:
+sellout        18
+false           5
+other           4
+independent     1
+Name: Categorization, dtype: int64 
+
+Method:  pearson  after promo:  True
+Calculating  pearson  correlation coefficient.
+Number of products in category:  28
+27it [00:03,  8.20it/s]
+
+28it [00:03,  7.66it/s]
+Products that had no sales during promotion:  16 products.
+[20444853, 20445836, 20698171, 26398969, 24363303, 20452094, 20445553, 21497513, 20446086, 27299395, 24228862, 24391078, 26977775, 23930742, 27227947, 27333501]
+Products that had no sales at all:  1 products.
+[27333501]
+Method:  pearson  after promo:  True
+Categorization:  correlation_with_other_products:
+sellout    24
+false       3
+itself      1
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_past:
+sellout    24
+false       3
+itself      1
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_promo_past:
+sellout        22
+false           3
+other           2
+independent     1
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_promo:
+sellout        22
+false           3
+other           2
+independent     1
+Name: Categorization, dtype: int64 
+
+Method:  spearman  after promo:  True
+Calculating  spearman  correlation coefficient.
+Number of products in category:  28
+27it [00:04,  4.52it/s]
+
+28it [00:04,  6.00it/s]
+Products that had no sales during promotion:  16 products.
+[20444853, 20445836, 20698171, 26398969, 24363303, 20452094, 20445553, 21497513, 20446086, 27299395, 24228862, 24391078, 26977775, 23930742, 27227947, 27333501]
+Products that had no sales at all:  1 products.
+[27333501]
+Method:  spearman  after promo:  True
+Categorization:  correlation_with_other_products:
+sellout        22
+false           5
+independent     1
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_past:
+sellout        22
+false           5
+independent     1
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_promo_past:
+sellout        18
+false           5
+other           4
+independent     1
+Name: Categorization, dtype: int64 
+
+Categorization:  correlation_with_other_products_promo:
+sellout        18
+false           5
+other           4
+independent     1
+Name: Categorization, dtype: int64 
+
+./categorization_charts/categorization_charts_L4_FRUIT VEGETABLE.pdf
