@@ -1,13 +1,13 @@
 \chapter{Vizualizace dat}
 \label{ch:vizualizace}
 
-Očištěná data zaznamenaných shrinků vybrané společnosti jsem vizualizovala v nástroji Power BI, který se používá pro business intelligence anlýzu. Vytvořila jsem report, který umožňuje pomocí interaktivních grafů analyzovat data. První část této kapitoly se věnuje technickému popisu reportu, zatímco druhá část shrnuje výsledky analýzy plynoucí z reportu.
+Očištěná data zaznamenaných shrinků vybrané společnosti jsem vizualizovala v nástroji Power BI, který se používá pro business intelligence analýzu. Vytvořila jsem report, který umožňuje pomocí interaktivních grafů analyzovat data. První část této kapitoly se věnuje technickému popisu reportu, zatímco druhá část shrnuje výsledky analýzy plynoucí z reportu.
 
 \section{Popis řešení}
 \label{sec:vizualizace:popis}
 
 Report obsahuje pět stránek. První stránka nabízí základní přehled, dashboard, týkající se všech shrinků. Druhý list je věnován prodejnám a údajům o lokalitách.
-Další stránky se již věnují pouze shrinkům zaviněných škodami a kategoriím Velmi čerstvé a Čerstvé z produktové hiearchie úrovně 1. Třetí list zobrazuje hodnoty ukazatelů hodnoty shirnku a odvozených podílů. Na čtvrtém a pátem listu jsou další přehledy z pohledu konkrétních produktů, kategorií a typů promoakce. Poslední stránka týkající se reportingu je z pohledu vybraného konkrétního produktu.
+Další stránky se již věnují pouze shrinkům zaviněných škodami a kategoriím Velmi čerstvé a Čerstvé z produktové hierarchie úrovně 1. Třetí list zobrazuje hodnoty ukazatelů hodnoty shirnku a odvozených podílů. Na čtvrtém a pátém listu jsou další přehledy z pohledu konkrétních produktů, kategorií a typů promoakce. Poslední stránka týkající se reportingu je z pohledu vybraného konkrétního produktu.
 
 Do Power BI souboru jsem pomocí integrovaného nástroje PowerQuery nahrála upravená data z databáze vybrané společnosti. Hlavní faktickou tabulkou je tabulka \emph{damages}, která obsahuje všechny zaznamenané shrinky z kategorie shrinků, které byly způsobeny škodami. Druhá faktická tabulka má název \emph{revenue} a obsahuje tržby v pozorovaném měsíci pro všechny prodejny, tržby jsou dále rozdělené podle kategorie z úrovně 1 a do čtvrtin měsíce. Doménové tabulky jsou číselník produktů, číselník shrinků a číselník prodejen, dále také číselníkové tabulky, které spojují faktické tabulky -- čtvrtina měsíce a seznam kategorií úrovně 1. 
 
@@ -23,7 +23,14 @@ Datový model tabulek, které jsou vstupem do reportu je znázorněný na obráz
 
 \subsection{Metriky}
 
-Pro 
+Power BI nabízí uživatelům reportu širokou interakci s vizuály. Díky metrikám se zobrazené hodnoty přepočítávají podle aktuálních filtrů nebo podle vybraných dat. 
+
+\textbf{Lost Cost} -- Základní metrika s hodnotou shrinku ze vstupních dat.
+\textbf{Product Share} -- Základní metrika, obsahuje podíl shrinku na tržbách produktu (přímo ze vstupních dat).
+\textbf{Store Product Share} -- Základní metrika, obsahuje podíl shrinku na tržbách produktu (přímo ze vstupních dat).
+\textbf{Number of Recorded Shrinks} -- Počet záznamů shrinků.
+\textbf{Number of Recorded Shrinks} -- Počet záznamů shrinků.
+
 
 \subsection{Reporting}
 
