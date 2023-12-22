@@ -316,15 +316,15 @@ Funkce pak vrátí DataFrame s~takto označenými a kategorizovanými produkty.
 Funkce \texttt{create\_folder} vytvoří složku se zadaným jménem v~aktuální cestě, pouze pokud již taková složka neexistuje. Další pomocná funkce je \texttt{format\_date}, která využívá funkci z~knihovny \emph{pandas} \texttt{to\_datetime}. 
 Pro základní vizualizaci jsem vytvořila funkci, která pomocí knihovny \emph{matplotlib} vytváří bodový graf dvou proměn-\\ných. Graf je buď uložen nebo zobrazený při spuštění funkce. Funkci lze předat DataFrame a názvy dvou sloupců, které reprezentují vstupy pro osy $x$ a $y$ grafu. Další vstupy jsou názvy os a grafu, případně název souboru, pokud uživatel graf uložit. 
 
-\subsection{Testování}
+\textbf{Testování}
 
 Pro testování funkcí jsem použila knihovnu \emph{pytest} jazyka Python. Testy lze spustit příkazem \texttt{python -m pytest tests} v~kořenovém adresáři projektu.
 
 
 \section{Výsledky}
 
-Zaměřila jsem se na kategorie ze čtvrté úrovně, a to prvních deset kategorií s~nejvyšší hodnotou shrinků (tj. s~nejvyšší zaznamenanou ztrátou). V práci jsou popsány výsledky pouze tří kategorií -- Masné výrobky - pultový prodej, Slané pečivo a Plodová zelenina. Na třetím místě byla kategorie Sladké pečivo, ale kvůli podobnosti s druhou kategorií, jsem zvolila následující kategorii v pořadí co do hodnoty shrinku.
-V tabulce \ref*{tab:lostcost4}
+Analýza se týká pouze dat jednoho měsíce a kategorií produktů první úrovně \emph{Velmi čerstvé} a \emph{Čerstvé} a typu shrinku -- prošlé a zkažené zboží, který zaujímá téměř 65 \% shrinků pro dané kategorie. Zaměřila jsem se na kategorie ze čtvrté úrovně, a to prvních deset kategorií s~nejvyšší hodnotou shrinků (tj. s~nejvyšší zaznamenanou ztrátou). V práci jsou popsány výsledky pouze tří kategorií -- Masné výrobky - pultový prodej, Slané pečivo a Plodová zelenina. Na třetím místě byla kategorie Sladké pečivo, ale kvůli podobnosti s druhou kategorií, jsem zvolila následující kategorii v pořadí co do hodnoty shrinku.
+V tabulce \ref*{tab:lostcost4} jsou procentuální hodnoty zastoupení čtyř kategorií mezi ostatními kategoriemi úrovně 4 podle velikosti shrinku. %% TODO upravit hodnoty !!!
 
 \begin{table}[hbtp!]
     \centering
@@ -342,15 +342,17 @@ V tabulce \ref*{tab:lostcost4}
     \label{tab:lostcost4}
     \end{table}
 
- Měřila jsem postupně korelaci velikosti shrinku s~různými ukazateli pro celkové tržby ostatních produktů. Pro určení míry korelace jsem zvolila Spearmanův korelační koeficient, jelikož data nesplňují předpoklady, které jsou nutné pro použití Pearsonova korelačního koeficientu - data nejsou nezávislá a stejně rozdělená. Data vybrané společnosti, také nesplňují podmínku normality, to může být dáno tím, že data pochází z reálného světa a zaznamenávají jev, který závisí na mnoha faktorech. Zvolila jsem 5\% hladinu významnosti pro testování statistické významnosti koeficientů korelace $r_\mathrm{P}$ a $r_\mathrm{O}$.
+ Měřila jsem postupně korelaci velikosti shrinku s~různými ukazateli pro celkové tržby ostatních produktů. Pro určení míry korelace jsem zvolila Spearmanův korelační koeficient, jelikož data nesplňují předpoklady, které jsou nutné pro použití Pearsonova korelačního koeficientu - data nejsou nezávislá a stejně rozdělená. Data vybrané společnosti, také nesplňují podmínku normality, to může být dáno tím, že data pochází z reálného světa a zaznamenávají jev, který závisí na mnoha faktorech. Nejprve jsem zvolila 5\% hladinu významnosti pro testování statistické významnosti koeficientů korelace $r_\mathrm{P}$ a $r_\mathrm{O}$. Výsledky ovšem ukázaly, že alespoň hodnoty třetiny produktů ve zkoumaných kategoriích  byly neprůkazné. Rozhodla jsem se tedy zvýšit hladinu významnosti na 10 \%.
 
-Na obrázcích~\ref*{img:kategCorrPorovnani} až~\ref*{img:kategCorrPorovnaniZel} jsou porovnání výsledků kategorizace pro zmíněné tři kategorie. 
-Z~uvedených počtů produktů u jednotlivých kategoriích pro různé ukazatele, je patrné, že výsledky se příliš neliší. Pokud bychom se ale zaměřovali na celkové prodeje, nikoli promoční, tak získáváme větší množství produktů, u~nichž nebylo možné vysvětlit shrink pomocí korelace. 
+Na obrázcích~\ref*{obr:kategCorrPorovnani} až~\ref*{obr:kategCorrPorovnaniZel} jsou porovnání výsledků kategorizace pro zmíněné tři kategorie. Pokaždé bylo spuštěno šest výpočtů. Korelace byla měřena mezi shrinky a tržbami ostatních produktů, ostatních produktů, kde prodeje byly posunuté o jeden den, dále mezi shrinky a tržbami produktů v promoakci a produktů v promoakci s posunem prodejů. Varianty s promoakcemi dále byly jak pro shrinky produktů během promoakce, tak pro během i po promoakci. Na obrázcích jsou zobrazené výsledky pro variantu během i po promoakci, protože zachytila stejně nebo více případů než varianta záznamů pouze během promoakce. 
+
+Z~uvedených počtů produktů u jednotlivých kategoriích pro různé ukazatele, je patrné, že výsledky se příliš neliší. Pokud bychom se ale zaměřovali na celkové prodeje, nikoli promoční, tak získáváme větší množství produktů, u~nichž nebylo možné vysvětlit shrink pomocí korelace. Avšak hypotézy pro rozřazení produktů uvažují právě promoční prodeje nikoli celkové prodeje. 
+% Nejvíce zařazených produktů bylo pro kategorie 
 
 \begin{figure}[h!]
     \centering
     \captionsetup{justification=centering}
-    \includegraphics[width=\textwidth]{obrazky/korelace-maso.pdf}
+    \includegraphics[width=\textwidth]{obrazky/kor_maso.pdf}
     \caption{Počet produktů z kategorie Masné výrobky - pultový prodej roztříděné pomocí korelační analýzy v~závislosti na různých ukazatelích.}
     \label{obr:kategCorrPorovnani}
 \end{figure}
@@ -358,7 +360,7 @@ Z~uvedených počtů produktů u jednotlivých kategoriích pro různé ukazatel
 \begin{figure}[h!]
     \centering
     \captionsetup{justification=centering}
-    \includegraphics[width=\textwidth]{obrazky/korelace-pecivo.pdf}
+    \includegraphics[width=\textwidth]{obrazky/kor-pecivo.pdf}
     \caption{Počet produktů z kategorie Slané pečivo roztříděné pomocí korelační analýzy v~závislosti na různých ukazatelích.}
     \label{obr:kategCorrPorovnaniPec}
 \end{figure}
@@ -366,7 +368,7 @@ Z~uvedených počtů produktů u jednotlivých kategoriích pro různé ukazatel
 \begin{figure}[h!]
     \centering
     \captionsetup{justification=centering}
-    \includegraphics[width=\textwidth]{obrazky/korelace-zel.pdf}
+    \includegraphics[width=\textwidth]{obrazky/kor-zel.pdf}
     \caption{Počet produktů z kategorie Plodová zelenina roztříděné pomocí korelační analýzy v~závislosti na různých ukazatelích.}
     \label{obr:kategCorrPorovnaniZel}
 \end{figure}
@@ -399,13 +401,11 @@ Z~uvedených počtů produktů u jednotlivých kategoriích pro různé ukazatel
 %     \label{tab:kategCorrPorovnani}
 % \end{table}
 
-
-
 \textbf{Masné výrobky - pultový prodej}
 
-Shrink byl zaznamenaný u 111 produktů v~této kategorii úrovně 4. 96 produktů bylo klasifikováno jako kategorie P, dva jako kategorie O, další dva jako X. U zbylých produktů nebyl koeficient korelace statisticky významný a proto nejde u těchto produktů vyslovit hypotézu pro jejich zařazení.
+Shrink byl zaznamenaný u 111 produktů v~této kategorii úrovně 4. 88 produktů bylo klasifikováno jako kategorie N, deset jako kategorie X, dva jako kategorie O, jeden jako V. U zbylých deseti produktů nebyl koeficient korelace statisticky významný a proto nejde u těchto produktů vyslovit hypotézu pro jejich zařazení.
 
-Produkty, které patří do kategorie O: Velikonoční klobása a Velikonoční česnekový šál - jedná se zcela jistě o sezónní výrobky. \emph{TBD: vyjmenovat i další produkty, keré si způsobují samy, ale je to většina produktů a salámy, šunky, z~kategorie...} 
+Produkty, které patří do kategorie O: Velikonoční klobása a Velikonoční šunka - jedná se zcela jistě o sezónní výrobky. Produkt, který byl označen jako výprodejový jsou Párky (Kuřecí striptýzky). %{TODO: vyjmenovat i další produkty, které si způsobují samy, ale je to většina produktů a salámy, šunky, z~kategorie...} 
 
 Dále jsem zkoumala podkategorie Masných výrobků. Porovnávala jsem prodeje v~rámci kategorií na šesté úrovni produktové hierarchie. V~podkategroii Salámy s~krátkou dobou spotřeby se kategorizace potvrdila. Pro kategorii, do níž patří sezónní výrobky - Netučné masné výrobky, nově z~této podkategorie byl jako kategorie O označen i produkt Kladenská pečeně.
 
@@ -419,12 +419,12 @@ Dále jsem zkoumala podkategorie Masných výrobků. Porovnávala jsem prodeje v
 
 \textbf{Slané pečivo}
 
-Produkty, které patří do kategorie O:
-pletýnka adélka, pletýnka malena, pletýnka sypaná mákem, pletýnka sypaná solí a km., bramborové pečivo s~cibulí, veka cupeko kb, rohlík grahamový aspec, rohlík pivní ora, rohlík staročeský, rohlík obilný mam, rohlík na strouh.karlova, rohl.n str.penam, houska mašek, houska raženka, bageta rust.poh., bageta s~grahamem, bageta chlebová, banketka cereální, dalamánek, kostka cereál malena, ciabatta mini natural, twistr se sýrem a špenatem, anglický rohlík, 
+% Produkty, které patří do kategorie O:
+% pletýnka adélka, pletýnka malena, pletýnka sypaná mákem, pletýnka sypaná solí a km., bramborové pečivo s~cibulí, veka cupeko kb, rohlík grahamový aspec, rohlík pivní ora, rohlík staročeský, rohlík obilný mam, rohlík na strouh.karlova, rohl.n str.penam, houska mašek, houska raženka, bageta rust.poh., bageta s~grahamem, bageta chlebová, banketka cereální, dalamánek, kostka cereál malena, ciabatta mini natural, twistr se sýrem a špenatem, anglický rohlík, 
 
 \textbf{Sladké pečivo}
 
-čokorolka, závin mák , skořicový vrut, donut bílý se sušnkami, závitek cereální nugátový, rohlík lístový s~ořech. náp, kobliha vanilková šiška, kobliha vanilková v~koš, kobliha s~jablky a skořicí, kobliha s~lísko.náp.a pol, koblih kapsa s~jablky, koláč wellartův, koláč tlač. vícezrnný, koláč šátek makový, koláč s~ovocnou nápl, koláček švestkový , koláček meruňkový , koláček borůvkový, koláč rohový tři náplně , koláč s~makovou náplní, koláč s~tvarohovo nápl, máslový koláč tvaroh, šátek kyn. tvarohová nápl, šáteček s~náplní višňovou , šáteček s~tvaroh.náplní, šátek makový, loupák o., loupák v., loupák m., závin tvaroh , závin kvásk. makový, bavorská hvězdice, makovka pletená mašek, croissant máslový
+% čokorolka, závin mák , skořicový vrut, donut bílý se sušnkami, závitek cereální nugátový, rohlík lístový s~ořech. náp, kobliha vanilková šiška, kobliha vanilková v~koš, kobliha s~jablky a skořicí, kobliha s~lísko.náp.a pol, koblih kapsa s~jablky, koláč wellartův, koláč tlač. vícezrnný, koláč šátek makový, koláč s~ovocnou nápl, koláček švestkový , koláček meruňkový , koláček borůvkový, koláč rohový tři náplně , koláč s~makovou náplní, koláč s~tvarohovo nápl, máslový koláč tvaroh, šátek kyn. tvarohová nápl, šáteček s~náplní višňovou , šáteček s~tvaroh.náplní, šátek makový, loupák o., loupák v., loupák m., závin tvaroh , závin kvásk. makový, bavorská hvězdice, makovka pletená mašek, croissant máslový
 
 \textbf{Plodová zelenina}
 

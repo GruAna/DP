@@ -39,7 +39,6 @@
 \contentsline {subsection}{\numberline {6.2.1}Vstupy a výstupy}{63}{subsection.6.2.1}%
 \contentsline {subsection}{\numberline {6.2.2}Spuštění analýzy}{64}{subsection.6.2.2}%
 \contentsline {subsection}{\numberline {6.2.3}Popis funkcí a struktura kódu}{65}{subsection.6.2.3}%
-\contentsline {subsection}{\numberline {6.2.4}Testování}{72}{subsection.6.2.4}%
 \contentsline {section}{\numberline {6.3}Výsledky}{72}{section.6.3}%
 \contentsline {chapter}{\numberline {7}Vizualizace dat}{77}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Popis řešení}{77}{section.7.1}%
