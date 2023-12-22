@@ -322,41 +322,82 @@ Pro testování funkcí jsem použila knihovnu \emph{pytest} jazyka Python. Test
 
 
 \section{Výsledky}
-Zvolila jsem 5\% hladinu významnosti pro testování statistické významnosti koeficientů korelace $r_\mathrm{P}$ a $r_\mathrm{O}$.
 
-Nejprve jsem se zaměřila na kategorie z~úrovně 4, a to prvních deset kategorií s~nejvyšší hodnotou shrinků (tj. s~nejvyšší zaznamenanou ztrátou) 
-
-V~tabulce č.~\ref*{tab:kategCorrPorovnani} jsou porovnání výsledků kategorizace pro kategorii Masné výrobky a Slané pečivo. Měřila jsem postupně korelaci velikosti shrinku s~různými ukazateli pro celkové tržby ostatních produktů. Pro určení míry korelace jsem zvolila Spearmanův korelační koeficient, jelikož data nesplňují předpoklady, které jsou nutné pro použití Pearsonova korelačního koeficientu - data nejsou nezávislá a stejně rozdělená. Data vybrané společnosti, také nesplňují podmínku normality, to může být dáno tím, že data pochází z reálného světa a zaznamenávají jev, který závisí na mnoha faktorech.
-Z~uvedených počtů produktů u jednotlivých kategoriích pro různé ukazatele, je patrné, že výsledky se příliš neliší. Pokud bychom se ale zaměřovali na celkové prodeje, nikoli promoční, tak získáváme větší množství produktů, u~nichž nebylo možné vysvětlit shrink pomocí korelace. 
+Zaměřila jsem se na kategorie ze čtvrté úrovně, a to prvních deset kategorií s~nejvyšší hodnotou shrinků (tj. s~nejvyšší zaznamenanou ztrátou). V práci jsou popsány výsledky pouze tří kategorií -- Masné výrobky - pultový prodej, Slané pečivo a Plodová zelenina. Na třetím místě byla kategorie Sladké pečivo, ale kvůli podobnosti s druhou kategorií, jsem zvolila následující kategorii v pořadí co do hodnoty shrinku.
+V tabulce \ref*{tab:lostcost4}
 
 \begin{table}[hbtp!]
     \centering
     \captionsetup{justification=centering}
-    \caption{Počet produktů v~kategoriích v~závislosti na různých ukazatelích. Kategorizace proběhla na základě Spearmanova korelačního koeficientu}
-    \begin{tabular}{l *{6}{r}}
-    \toprule
-    \multicolumn{1}{l}{} & \multicolumn{6}{c}{Korelace s~tržbami ostatních produktů} \\
-    \multicolumn{1}{l}{} & \multicolumn{2}{c}{Všechny prodeje} & \multicolumn{2}{c}{Prodeje v~promoakci}  & \multicolumn{2}{c}{Prodeje v~a po promoakci} \\
-    Kategorie & Stejný den & Další den & Stejný den & Další den & Stejný den & Další den \\
-    \midrule
-    \multicolumn{7}{c}{Masné výrobky - pultový prodej} \\
-    \midrule
-    P           & 96   & 96   & 96   & 96   & 96   & 96   \\
-    O           & 1     & 1   & 2   & 2   & 2   & 2   \\
-    X           & 3     & 3   & 2   & 2   & 2   & 2   \\
-    Nevýzn.     & 11    & 11   & 11   & 11   & 11   & 11   \\
-    \midrule
-    \multicolumn{7}{c}{Slané pečivo} \\
-    \midrule
-    P           & 131   & 131   & 131   & 131   & 131   & 131   \\
-    O           & 9     & 13   & 24   & 24   & 24   & 24   \\
-    X           & 16    & 12   & 1    & 1    & 1    & 1    \\
-    Nevýzn.     & 90    & 90   & 90   & 90   & 90   & 90   \\
-    \bottomrule
+    \caption{Tabulka čtyř kategorií ze čtvrté úrovně produktové hierarchie podle zastoupení zaznamenané hodnoty shrinku na všech evidovaných shrincích.}
+    \begin{tabular}{l r}
+        Kategorie & Zastoupení [\%] \\
 
+    \hline
+    Masné výrobky - pultový prodej & 19 \\
+    Slané pečivo&  $16{,}07$\\
+    Sladké pečivo&   $7{,}90$\\
+    Plodová zelenina&   $7{,}88$\\
     \end{tabular}
-    \label{tab:kategCorrPorovnani}
-\end{table}
+    \label{tab:lostcost4}
+    \end{table}
+
+ Měřila jsem postupně korelaci velikosti shrinku s~různými ukazateli pro celkové tržby ostatních produktů. Pro určení míry korelace jsem zvolila Spearmanův korelační koeficient, jelikož data nesplňují předpoklady, které jsou nutné pro použití Pearsonova korelačního koeficientu - data nejsou nezávislá a stejně rozdělená. Data vybrané společnosti, také nesplňují podmínku normality, to může být dáno tím, že data pochází z reálného světa a zaznamenávají jev, který závisí na mnoha faktorech. Zvolila jsem 5\% hladinu významnosti pro testování statistické významnosti koeficientů korelace $r_\mathrm{P}$ a $r_\mathrm{O}$.
+
+Na obrázcích~\ref*{img:kategCorrPorovnani} až~\ref*{img:kategCorrPorovnaniZel} jsou porovnání výsledků kategorizace pro zmíněné tři kategorie. 
+Z~uvedených počtů produktů u jednotlivých kategoriích pro různé ukazatele, je patrné, že výsledky se příliš neliší. Pokud bychom se ale zaměřovali na celkové prodeje, nikoli promoční, tak získáváme větší množství produktů, u~nichž nebylo možné vysvětlit shrink pomocí korelace. 
+
+\begin{figure}[h!]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=\textwidth]{obrazky/korelace-maso.pdf}
+    \caption{Počet produktů z kategorie Masné výrobky - pultový prodej roztříděné pomocí korelační analýzy v~závislosti na různých ukazatelích.}
+    \label{obr:kategCorrPorovnani}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=\textwidth]{obrazky/korelace-pecivo.pdf}
+    \caption{Počet produktů z kategorie Slané pečivo roztříděné pomocí korelační analýzy v~závislosti na různých ukazatelích.}
+    \label{obr:kategCorrPorovnaniPec}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=\textwidth]{obrazky/korelace-zel.pdf}
+    \caption{Počet produktů z kategorie Plodová zelenina roztříděné pomocí korelační analýzy v~závislosti na různých ukazatelích.}
+    \label{obr:kategCorrPorovnaniZel}
+\end{figure}
+
+% \begin{table}[hbtp!]
+%     \centering
+%     \captionsetup{justification=centering}
+%     \caption{Počet produktů v~kategoriích v~závislosti na různých ukazatelích. Kategorizace proběhla na základě Spearmanova korelačního koeficientu}
+%     \begin{tabular}{l *{6}{r}}
+%     \toprule
+%     \multicolumn{1}{l}{} & \multicolumn{6}{c}{Korelace s~tržbami ostatních produktů} \\
+%     \multicolumn{1}{l}{} & \multicolumn{2}{c}{Všechny prodeje} & \multicolumn{2}{c}{Prodeje v~promoakci}  & \multicolumn{2}{c}{Prodeje v~a po promoakci} \\
+%     Kategorie & Stejný den & Další den & Stejný den & Další den & Stejný den & Další den \\
+%     \midrule
+%     \multicolumn{7}{c}{Masné výrobky - pultový prodej} \\
+%     \midrule
+%     P           & 96   & 96   & 96   & 96   & 96   & 96   \\
+%     O           & 1     & 1   & 2   & 2   & 2   & 2   \\
+%     X           & 3     & 3   & 2   & 2   & 2   & 2   \\
+%     Nevýzn.     & 11    & 11   & 11   & 11   & 11   & 11   \\
+%     \midrule
+%     \multicolumn{7}{c}{Slané pečivo} \\
+%     \midrule
+%     P           & 131   & 131   & 131   & 131   & 131   & 131   \\
+%     O           & 9     & 13   & 24   & 24   & 24   & 24   \\
+%     X           & 16    & 12   & 1    & 1    & 1    & 1    \\
+%     Nevýzn.     & 90    & 90   & 90   & 90   & 90   & 90   \\
+%     \bottomrule
+%     \end{tabular}
+%     \label{tab:kategCorrPorovnani}
+% \end{table}
 
 
 
