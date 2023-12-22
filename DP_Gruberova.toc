@@ -45,8 +45,8 @@
 \contentsline {section}{\numberline {7.1}Popis řešení}{77}{section.7.1}%
 \contentsline {subsection}{\numberline {7.1.1}Metriky}{78}{subsection.7.1.1}%
 \contentsline {subsection}{\numberline {7.1.2}Reporting}{79}{subsection.7.1.2}%
-\contentsline {section}{\numberline {7.2}Výsledky}{83}{section.7.2}%
-\contentsline {chapter}{Závěr}{85}{chapter*.72}%
-\contentsline {chapter}{Literatura}{86}{chapter*.72}%
-\contentsline {chapter}{Přílohy}{91}{chapter*.73}%
-\contentsline {chapter}{\numberline {A}Obsah přiloženého CD}{91}{appendix.A}%
+\contentsline {section}{\numberline {7.2}Výsledky}{85}{section.7.2}%
+\contentsline {chapter}{Závěr}{87}{chapter*.74}%
+\contentsline {chapter}{Literatura}{88}{chapter*.74}%
+\contentsline {chapter}{Přílohy}{93}{chapter*.75}%
+\contentsline {chapter}{\numberline {A}Obsah přiloženého CD}{93}{appendix.A}%

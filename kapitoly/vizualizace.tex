@@ -62,7 +62,7 @@ U čísel 5 a 6 jsou umístěny filtry -- pro typ prodejny a pro typ shrinku. Vy
     \centering
     \captionsetup{justification=centering}
     \includegraphics[width=\textwidth]{obrazky/PBI/Catdrilldown.png}
-    \caption{Ukázka interakce grafu záznamů shrinku pro přístupy k různým úrovním produktové hierarchie.}
+    \caption{Ukázka interakce grafu záznamů shrinku pro přístupy \\ k různým úrovním produktové hierarchie.}
     \label{obr:PBI:drill}
 \end{figure}
 
@@ -97,7 +97,7 @@ Graf označený č. 4 zobrazuje ztrátu vlivem shrinku podle velikosti měst, ve
     \centering
     \captionsetup{justification=centering}
     \includegraphics[width=\textwidth]{obrazky/PBI/storesSFF.png}
-    \caption{Power BI reporting pro zobrazení údajů o shrincích kategorie Čerstvé a Velmi čerstvé z~pohledu prodejen.}
+    \caption{Power BI reporting pro zobrazení údajů o shrincích kategorie \\ Čerstvé a Velmi čerstvé z~pohledu prodejen.}
     \label{obr:PBI:storesSFF}
 \end{figure}
 
@@ -109,7 +109,7 @@ Další stránka zobrazuje data kategorií Velmi čerstvé a Čerstvé podle dal
     \centering
     \captionsetup{justification=centering}
     \includegraphics[width=\textwidth]{obrazky/PBI/levelsSFF.png}
-    \caption{Zobrazení údajů o shrincích kategorie Čerstvé a Velmi čerstvé se zaměřením na kategorie a produkty.}
+    \caption{Zobrazení údajů o shrincích kategorie Čerstvé a Velmi čerstvé \\ se zaměřením na kategorie a produkty.}
     \label{obr:PBI:storesSFF}
 \end{figure}
 
@@ -125,7 +125,7 @@ Tabulka č. 4 přiřazuje vybrané ukazatele k jednotlivým typů shrinku. Dalš
 
 \subsubsection*{Čas - Velmi čerstvé a Čerstvé}
 
-Na další stránce jsou data porovnávána vzhledem k datumu záznamu -- ke dni v týdnu a části měsíce. Na této stránce, kromě filtrování typů jako v předchozích případech, může uživatel určit pro který ukazatel budou grafy zobrazeny. Vybrat lze ze ztracených nákladů, podílu shrinku na celkových tržbách prodejny a z podílu shrinku na tržbách v dané kategorie a případně v části měsíce, viz č. 1 na obr.~\ref*{obr:PBI:timeSFF}
+Na další stránce jsou data porovnávána vzhledem k datumu záznamu -- ke dni v týdnu a části měsíce. Na této stránce, kromě filtrování typů jako v předchozích případech, může uživatel určit pro který ukazatel budou grafy zobrazeny. Vybrat lze ze ztracených nákladů, podílu shrinku na celkových tržbách prodejny a z podílu shrinku na tržbách v dané kategorie a případně v části měsíce, viz č. 1 na obr.~\ref*{obr:PBI:timeSFF}. Zbylé grafy jsou rozděleny na tři části -- podle typu shrinku, podle umístění prodejen a podle typu prodejny. V každé části je přehled, který říká v jakém poměru tyto příznaky jsou (v závislosti na zvoleném ukazateli). Dále jsou pro každou část je ukazatel z pohledu dne v týdnu nebo části měsíce, kdy byl shrink zaznamenán. 
 
 \begin{figure}[h!]
     \centering
@@ -135,5 +135,21 @@ Na další stránce jsou data porovnávána vzhledem k datumu záznamu -- ke dni
     \label{obr:PBI:timeSFF}
 \end{figure}
 
+\subsubsection*{Detail produktu}
+
+Poslední stránka je věnovaná analýze konkrétního produktu, snímek je na obr. \ref*{obr:PBI:detail}. Je zobrazené zastoupení produktu podel typu prodejny a podle kraje z pohledu ztracených nákladů (č. 1). Dále je na této stránce tabulka (č. 2) se záznamy agregovaná podle data záznamu. Každý řádek s datem lze dále rozbalit pro detail o jaký typ shrinku se jednalo, k jednotlivým řádkům jsou napočítané vybrané ukazatele. Další tabulka (č. 3) ukazuje, jaký podíl na tržbách produktu a celkových tržbách má který typ shrinku. 
+
+Zbylé grafy ukazují konkrétní prodejny, které měli největší podíl shrinku tohoto produktu na svých tržbách, opět celkových i produktových. Dále jak je shrink tohoto produktu rozložený do dní v týdnu, resp. do částí v měsíci (č. 4).
+
+\begin{figure}[h!]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=\textwidth]{obrazky/PBI/productdetail.png}
+    \caption{Power BI report -- Detail produktu.}
+    \label{obr:PBI:detail}
+\end{figure}
+
 \section{Výsledky}
+
+
 \label{sec:vizualizace:vysl}
