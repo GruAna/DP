@@ -1,7 +1,7 @@
 \chapter{Vizualizace dat}
 \label{ch:vizualizace}
 
-Očištěná data zaznamenaných shrinků vybrané společnosti jsem vizualizovala v nástroji Power BI, který se používá pro business intelligence analýzu. Vytvořila jsem report, který umožňuje pomocí interaktivních grafů analyzovat data. První část této kapitoly se věnuje technickému popisu reportu, zatímco druhá část shrnuje výsledky analýzy plynoucí z reportu.
+Očištěná data vybrané společnosti obsahující záznamy shrinků, které byly způsobeny škodami, jsem vizualizovala v nástroji Power BI, který se používá pro business intelligence analýzu. Vytvořila jsem report, který umožňuje pomocí interaktivních grafů analyzovat data. První část této kapitoly se věnuje technickému popisu reportu, zatímco druhá část shrnuje výsledky analýzy plynoucí z reportu.
 
 \section{Popis řešení}
 \label{sec:vizualizace:popis}
@@ -21,20 +21,46 @@ Datový model tabulek, které jsou vstupem do reportu je znázorněný na obráz
     \label{obr:datmod}
 \end{figure}
 
+Reporting je zpracován v angličtině, takže i dříve popsané názvy kategorií nebo shrinků jsou přeložené. Překlad je uvedený v příloze práce. Uvedené tržby v reportingu odpovídají nekonkrétní peněžní jednotce -- z důvodu ochrany dat vybrané společnosti byla skutečná čísla vynásobena jistým koeficientem. Poměry zobrazené v reportu ale vstupním datům společnosti odpovídají.
+
 \subsection{Metriky}
 
 Power BI nabízí uživatelům reportu širokou interakci s vizuály. Díky metrikám se zobrazené hodnoty přepočítávají podle aktuálních filtrů nebo podle vybraných dat. 
 
 \textbf{Lost Cost} -- Základní metrika s hodnotou shrinku ze vstupních dat.
-\textbf{Product Share} -- Základní metrika, obsahuje podíl shrinku na tržbách produktu (přímo ze vstupních dat).
-\textbf{Share on Store Revenue} -- Základní metrika, obsahuje podíl shrinku na tržbách produktu (přímo ze vstupních dat).
+\textbf{Product Share} -- Základní metrika, obsahuje podíl shrinku na tržbách produktu (přímo ze vstupních dat). Pokud je ve vizuálu agregovaná např. na kategorii nebo prodejnu, vypočítá se její průměr.
+\textbf{Share} -- Základní metrika, obsahuje podíl shrinku na tržbách produktu. Pokud je ve vizuálu agregovaná na prodejnu jedná se celkový evidovaný shrink prodejny dělený tržbou dané prodejny. Pokud je agregovaný podle typu shrinku jedná se o podíl součtu hodnot všech záznamů daného typu a tržeb všech prodejen. Bude-li agregace probíhat zároveň na typu shrinku a na kategorii z úrovně 1, pak je podíl spočítaný vzhledem k této kategorii typu shrinku zároveň. 
+\textbf{Share on Store Revenue} -- Základní metrika, obsahuje podíl shrinku na celkových tržbách produktu. Tj. pokud je agregace např. podle prodejny a podle kategorie jedná se o podíl všech shrinků produktu z dané kategorie vydělený celkovými tržbami vybrané prodejny. (Zatímco v předchozí metrice by se jednalo o tržby pouze za vybranou kategorii.)
 \textbf{Revenue of Stores} -- Celková tržba prodejny za celé sledované období
 \textbf{Revenue} -- Základní metrika s hodnotou tržeb prodejny rozdělená podle části měsíce podle kategorií z úrovně 1 a  ze vstupních dat.
 \textbf{Number of Recorded Shrinks} -- Počet záznamů shrinků.
 
-
 \subsection{Reporting}
 
+\subsubsection*{Přehled}
+
+První list obsahuje přehled týkající se všech typů shrinků v rámci kategorie shrinky způsobené škodami, přehled je v tabulce \ref*{tab:sh:dam} v kapitole \ref*{ch:shrinky}. Na obr. \ref*{obr:PBI:overview} je snímek tohoto listu, pro lepší orientaci při popisu jsem na snímek přidala označující čísla. Na této stránce jsou vyfiltrované všechny kategorie, shrinky i prodejny. V levé části jsou uvedeny souhrnné informace pro vyfiltrované záznamy (tj. implicitně nic vyfiltrováno není, jedná se o celkové hodnoty) (č. 1). 
+Na grafu označeném č. 2, je znázorněno jak velký podíl shrinku na tržbách mají jednotlivé kategorie. Zároveň je barevně označeno, jakou měrou je hodnota zastoupená na malých či velkých prodejnách. Defaultní nastavení vizuálu je zobrazení kategorií úrovně 1, díky funkcionalitě nástroje Power BI je možné postoupit v hierarchii kategorií níže viz \ref*{obr:PBI:drill}. První graf zobrazuje defaultní pohled, na druhém je vidět výsledek pokud uživatel klikne na ikonu $\downdownarrows$. V takovém případě se postoupí na další úroveň hierarchie napříč všemi kategoriemi. Třetí graf ukazuje stav, kterého uživatel docílí, pokud zaklikne ikonu $\downarrow$ \emph{přechod k podrobnostem}\footnote{Anglicky se přechod k podrobnostem v nástroji Power BI označuje jako \emph{drill down}.}. V takovém případě, poté co uživatel klikne na jednu z kategorií v grafu (její název nebo příslušný datový pruh), se zobrazí nižší úroveň hierarchie, ale pouze takové kategorie, které jsou podkategorií vybrané kategorie. 
+% Pokud by uživatel nezvolil \emph{přechod k podrobnostem} ve vizuálu, kliknutím na kategorii by 
+U čísel 5 a 6 jsou umístěny filtry -- pro typ prodejny a pro typ shrinku. Vyfiltrováním příslušného typu se hodnoty v reportingu automaticky upraví. 
+
+\begin{figure}[hbtp!]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=\textwidth]{obrazky/PBI/overview.png}
+    \caption{Power BI reporting pro zobrazení údajů o shrincích.}
+    \label{obr:PBI:overview}
+
+
+\end{figure}
+
+\begin{figure}[hbtp!]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=\textwidth]{obrazky/PBI/Catdrilldown.png}
+    \caption{Ukázka interakce grafu záznamů shrinku pro přístupy k různým úrovním produktové hierarchie.}
+    \label{obr:PBI:drill}
+\end{figure}
 
 \section{Výsledky}
 \label{sec:vizualizace:vysl}
