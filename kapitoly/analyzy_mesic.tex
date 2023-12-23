@@ -9,8 +9,8 @@ Zkoumaný dataset se záznamy shrinků produktů jsem rozšířila o další sle
 
 % \subsection{Rozbor dat}
 
-% Vzhledem k rozsáhlosti dat bylo třeba zjistit, které proměnné mohou ovlivňovat hodnotu shrinku a které proměnné jsou redundantní. 
-% Vzhledem k vysokému počtu dat pro jeden kalendářní rok, 
+% Vzhledem k~rozsáhlosti dat bylo třeba zjistit, které proměnné mohou ovlivňovat hodnotu shrinku a které proměnné jsou redundantní. 
+% Vzhledem k~vysokému počtu dat pro jeden kalendářní rok, 
 % v roce 2022 bylo v databázi evidováno přes 32 milionů záznamů o týkající se shrinků
 % , jsem se rozhodla provést analýzu na měsíčním výběru dat z tohoto období. Jako zkoumaný měsíc jsem vybrala měsíc říjen, neboť v porovnání s letními měsíci a Vánocemi se v říjnu nevyskytují významné sezónní výkyvy.
 
@@ -44,7 +44,7 @@ Původní sloupec datum jsem rozdělila na tři jiné proměnné, a to den v tý
 \subsection{Výběr dat}
 % výběr dle zastoupení shrinků a kategorií produktů a dle outlierů.
 
-Nejprve jsem graficky analyzovala zastoupení shrinků v závislosti na vybraných proměnných pomocí nástroje Power BI, viz obr. \ref*{obr:rok:g:zastoupeni1} a \ref*{obr:rok:g:zastoupenish1}. Více o analýze v tomto nástroji je v kapitole \ref{ch:vizualizace}. V návaznosti na zjištěné zastoupení shrinků v datech jsem se rozhodla vybrat pouze nejvíce zastoupený typ shrinku, který tvoří více jak 62 \% celkových nákladů.Ponechaný byl tedy pouze shirnk \emph{prošlé a zkažené zboží}. Obdobně jsem přistupovala k záznamům i z hlediska kategorie produktu úrovně 1, jelikož z grafu je patrné, že majoritní zastoupení mají pouze dvě kategorie, a to kategorie Velmi čerstvé a Čerstvé. Všechny záznamy se zbylými kategoriemi jsem z datasetu pro další analýzy odstranila. Těmito kroky byl zredukován původní počet řádků datasetu na % TODO ověřit číslo
+Nejprve jsem graficky analyzovala zastoupení shrinků v závislosti na vybraných proměnných pomocí nástroje Power BI, viz obr. \ref*{obr:rok:g:zastoupeni1} a \ref*{obr:rok:g:zastoupenish1}. Více o analýze v tomto nástroji je v kapitole \ref{ch:vizualizace}. V návaznosti na zjištěné zastoupení shrinků v datech jsem se rozhodla vybrat pouze nejvíce zastoupený typ shrinku, který tvoří více jak 62 \% celkových nákladů. Ponechaný byl tedy pouze shirnk \emph{prošlé a zkažené zboží}. Obdobně jsem přistupovala k~záznamům i z hlediska kategorie produktu úrovně 1, jelikož z grafu je patrné, že majoritní zastoupení mají pouze dvě kategorie, a to kategorie Velmi čerstvé a Čerstvé. Všechny záznamy se zbylými kategoriemi jsem z datasetu pro další analýzy odstranila. Těmito kroky byl zredukován původní počet řádků datasetu na % TODO ověřit číslo
 necelých jeden a půl milionu řádků.
 
 \begin{figure}[hbtp!]
@@ -66,7 +66,8 @@ necelých jeden a půl milionu řádků.
 Jako cílové sloupce (\emph{target} sloupce) jsem určila sloupec s typem shrinku, množstvím produktu a nákladovou cenou. Zbylých jedenáct sloupců slouží jako vysvětlující pro-\linebreak měnné, dále budou označovány jako příznaky pro cílový sloupec. Všechny vybrané příznaky jsou kategorické proměnné, které lze dále rozdělit na nominální a ordinální. Nominální proměnné jsou ID prodejny, ID produktu, kategorie 1, 2, 4, 5, 6. Ordinální proměnné jsou expirace, den v týdnu, číslo dne a období měsíce. Ordinální příznaky jsem přeznačila tak, aby každá obsahovala pouze hodnoty od nuly do $n_p$, kde $n_p$ je počet kategorií v $p$-tém příznaku. 
 
 Pro další postup bylo vhodné přesunout se z nominálních kategorických hodnot na číselné hodnoty. Pro tyto účely jsem zvolila metodu \emph{target encoding}.  %!!! odkaz do teorie, princip meotdy je vysvětlený v kapitole...
-Neboť toto kódování na numerické hodnoty zachovává velikost datového souboru, to je klíčové vzhledem k tomu, že nominální proměnné ve zkoumaných datech obsahují velký počet kategorií. Např. počet unikátních produktů v datech je $19\ 026$, což odpovídá stejnému počtu kategorií pro tuto proměnnou. Pokud bych použila one-hot kódování\footnote{One-hot kódování převádí kategorické hodnoty na numerické takovým způsobem že pro každou kategorii vytvoří samostatný sloupec s binárními hodnotami, kde 1 odpovídá dané kategorii a 0 zbylým kategoriím.}  mohlo by dojít k zásadnímu zvýšení počtu sloupců v datech, v tomto případě až o desítky tisíc. \emph{Target kódování} je podobné převodu, který jsem použila pro ordinální proměnné. Avšak na rozdíl od něj, hodnota, která je kategorii přiřazena, souvisí se zastoupením této skupiny v cílovém sloupci a nesouvisí s uspořádáním hodnot uvnitř příznaku. Nevýhodou je, že takto upravená data mohou být náchylná na overfitting. 
+Neboť toto kódování na numerické hodnoty zachovává velikost datového souboru, to je klíčové vzhledem k~tomu, že nominální proměnné ve zkoumaných datech obsahují velký počet kategorií. 
+Např. počet unikátních produktů v datech je více než 19 tisíc, což odpovídá stejnému počtu kategorií pro tuto proměnnou. Pokud bych použila one-hot kódování\footnote{One-hot kódování převádí kategorické hodnoty na numerické takovým způsobem že pro každou kategorii vytvoří samostatný sloupec s binárními hodnotami, kde 1 odpovídá dané kategorii a 0 zbylým kategoriím.}  mohlo by dojít k~zásadnímu zvýšení počtu sloupců v datech, v tomto případě až o desítky tisíc. \emph{Target kódování} je podobné převodu, který jsem použila pro ordinální proměnné. Avšak na rozdíl od něj, hodnota, která je kategorii přiřazena, souvisí se zastoupením této skupiny v cílovém sloupci a nesouvisí s uspořádáním hodnot uvnitř příznaku. Nevýhodou je, že takto upravená data mohou být náchylná na overfitting. 
 % proto je potřeba při predikování použít křížovou validaci.\cite{bib:encoding}
 
 % warehouse_id 339
@@ -85,7 +86,7 @@ Neboť toto kódování na numerické hodnoty zachovává velikost datového sou
 % day 31
 % quarter_of_month 5
 
-Dále jsem se zabývala identifikací odlehlých hodnot. Nejprve jsem vizualizovala hodnoty pomocí grafu, obrázky \ref*{obr:rok:g:outlierN} a \ref*{obr:rok:g:outlierO}. Z grafu je patrné, že problémová je proměnná s ID prodejny (na grafu vystupuje pod názvem \texttt{warehouse\_id}). Prodejny, které tvoří outliery mohou být malé prodejny, které kvůli menšímu počtu celkových produktů neevidují větší počet shrinků. % !!! TODO jakeho grafu 
+Dále jsem se zabývala identifikací odlehlých hodnot. Nejprve jsem vizualizovala hodnoty pomocí grafu pro vybrané proměnné, obrázky \ref*{obr:rok:g:outlierN} a \ref*{obr:rok:g:outlierO}. Z grafu je patrné, že problémová je proměnná s ID prodejny (na grafu vystupuje pod názvem \texttt{warehouse\_id}). Prodejny, které tvoří outliery mohou být malé prodejny, které kvůli menšímu počtu celkových produktů neevidují větší počet shrinků. % !!! TODO jakeho grafu 
 
 \begin{figure}[hbtp!]
     \centering
@@ -108,34 +109,35 @@ Dále jsem se zabývala identifikací odlehlých hodnot. Nejprve jsem vizualizov
 \end{figure}
 
 Pomocí Tukeyho testu jsem identifikovala přes $150\ 000$ outlierů pro příznak ID prodejny %(\texttt{warehouse\_id})
-, čímž se dataset zredukoval na $1\ 218\ 453$ řádků. S tímto krokem klesl i počet ostatních outlierů.
+, čímž se dataset zredukoval. S tímto krokem klesl i počet ostatních outlierů.
 
-V dalším kroku jsem se zaměřila na míru závislosti mezi proměnnými. Použitým metodám je věnována sekce v teoretické části \ref{sec:Teoriekorelace}. Vizualizovala jsem data pomocí scatter matice pro všechny proměnné, matice je možné vidět na obr. č. \ref*{obr:nb:scatter}. Z této matice můžeme na první pohled vidět, že příznaky odpovídající produktové hierarchii a ID produktu vykazují závislost, což plyne z definice uspořádání této hierarchické kategorizace. V následujících krocích je cílem vybrat tu kategorii, která nejlépe popisuje data ve vztahu k shrinkům.
+V dalším kroku jsem se zaměřila na míru závislosti mezi proměnnými. Použitým metodám je věnována sekce v teoretické části \ref{sec:Teoriekorelace}. 
+Pro měření závislosti jsem již pracovala s kategorickými hodnotami proměnných, tj. bez převodu na spojité hodnoty. Důvodem je to, že když jsem provedla měření korelace na překódovaných datech, byla míra zavislosti ovlivněna cílovým sloupcem, který byl použitý pro kódování.
+% Vizualizovala jsem data pomocí scatter matice pro všechny proměnné, matice je možné vidět na obr. č. \ref*{obr:nb:scatter}. Z této matice můžeme na první pohled vidět, že příznaky odpovídající produktové hierarchii a ID produktu vykazují závislost, což plyne z definice uspořádání této hierarchické kategorizace. V následujících krocích je cílem vybrat tu kategorii, která nejlépe popisuje data ve vztahu k~shrinkům.
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=.8\textwidth]{obrazky/zntb/MyScatter.png}
-    \caption{Scatter matice příznaků.}
-    \label{obr:nb:scatter}
-\end{figure}
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[width=.8\textwidth]{obrazky/zntb/MyScatter.png}
+%     \caption{Scatter matice příznaků.}
+%     \label{obr:nb:scatter}
+% \end{figure}
  
-Jako první metodu jsem zvolila  $\chi^2$ statistiku. Vzhledem k vysokému počtu dat je matice příliš řídká, a proto nejsou výsledné hodnoty vypovídající a test je tedy pro tuto úlohu nespolehlivý.
-Jiným měřítkem pro korelaci mezi proměnnými je Pearsonův korelační koeficient. % odkaz na teorii
-Výslednou matici popisující korelační vztahy mezi příznaky jsem vizualizovala teplotní mapou, která je zobrazena na obrázku \ref*{obr:nb:pearson}. Z výsledků je opět patrné, že mezi jednotlivými kategoriemi produktů a produkty je silná korelace. Toto zjištění je logické, neboť se jedná o stromovou strukturu kategorií. Zároveň existuje korelace mezi produktovými kategoriemi a expirací produktu. $p$-hodnota odpovídající jednotlivým koeficientům byla vždy nulová, kromě pro koeficient týkající se dvojice proměnných expirace a ID prodejny a expirace a pořadí dne v týdnu. Je tedy možné považovat výsledky (kromě těchto dvou výjimek) za statisticky významné.
+Jako první metodu jsem zvolila  $\chi^2$ statistiku. Vzhledem k~vysokému počtu dat je matice příliš řídká, a proto nejsou výsledné hodnoty vypovídající a test je tedy pro tuto úlohu nespolehlivý.
+% Jiným měřítkem pro korelaci mezi proměnnými je Pearsonův korelační koeficient. % odkaz na teorii
+% Výslednou matici popisující korelační vztahy mezi příznaky jsem vizualizovala teplotní mapou, která je zobrazena na obrázku \ref*{obr:nb:pearson}. Z výsledků je opět patrné, že mezi jednotlivými kategoriemi produktů a produkty je silná korelace. Toto zjištění je logické, neboť se jedná o stromovou strukturu kategorií. Zároveň existuje korelace mezi produktovými kategoriemi a expirací produktu. $p$-hodnota odpovídající jednotlivým koeficientům byla vždy nulová, kromě pro koeficient týkající se dvojice proměnných expirace a ID prodejny a expirace a pořadí dne v týdnu. Je tedy možné považovat výsledky (kromě těchto dvou výjimek) za statisticky významné.
+
+% \begin{figure}[hbtp!]
+%     \centering
+%     \includegraphics[width=.8\textwidth]{obrazky/zntb/pearson.png}
+%     \caption{Matice korelačních koeficientů mezi příznaky.}
+%     \label{obr:nb:pearson}
+% \end{figure}
+Použila jsem proto míru vzájemné informace, která říká, jaká je podobnost mezi dvěma proměnnými \cite{bib:scikit}.
+Matice vypočítaných koeficientů je na obr. \ref*{obr:nb:MI}. Jedná se o symetrickou vlastnost, proto jsou hodnoty pod a nad diagonálou stejné. Z výsledků je opět vidět, že ID produktu sdílí informaci s úrovněmi kategorizace tím více, čím je kategorizace jemnější.
 
 \begin{figure}[hbtp!]
     \centering
-    \includegraphics[width=.8\textwidth]{obrazky/zntb/pearson.png}
-    \caption{Matice korelačních koeficientů mezi příznaky.}
-    \label{obr:nb:pearson}
-\end{figure}
-
-Dále jsem použila výpočet koeficientů vzájemné informace\footnote{\emph{mutual information}}, který říká, jaká je podobnost mezi dvěma proměnnými \cite{bib:scikit}. % odkaz na teorii 
-Matice vypočítaných koeficientů je na obr. \ref*{obr:nb:MI}, jelikož se jedná o symetrickou vlastnost, jsou vynechány hodnoty pod vedlejší diagonálou. Z výsledků je opět vidět, že ID produktu sdílí informaci s úrovněmi kategorizace tím více, čím je kategorizace jemnější.
-
-\begin{figure}[hbtp!]
-    \centering
-    \includegraphics[width=.8\textwidth]{obrazky/zntb/MI.png}
+    \includegraphics[width=.8\textwidth]{obrazky/pripravadat/matrix_MI-everything-SFF-storesFETURES-002.pdf}
     \caption{Matice koeficientů vzájemné informace mezi příznaky.}
     \label{obr:nb:MI}
 \end{figure}
@@ -144,7 +146,7 @@ Dále jsem pro znázornění vztahu mezi proměnnými použila koeficient Cramer
 
 \begin{figure}[hbtp!]
     \centering
-    \includegraphics[width=.8\textwidth]{obrazky/zntb/correlation_matrix_stores-cramers-prosleSFF.pdf}
+    \includegraphics[width=.8\textwidth]{obrazky/pripravadat/correlation_matrix_cramers-everything-SFF-stores_targets002.pdf}
     \caption{Matice koeficientů Cramerovo $V$ pro kategorické příznaky.}
     \label{obr:nb:cramers}
 \end{figure}
@@ -153,41 +155,46 @@ Další statistikou spočtenou na datech je Theilovo $U$ (neboli koeficient neji
 
 \begin{figure}[hbtp!]
     \centering
-    \includegraphics[width=.8\textwidth]{obrazky/zntb/theils_u.png}
+    \includegraphics[width=.8\textwidth]{obrazky/pripravadat/theils_u-002.png}
     \caption{Matice koeficientů Theilovo $U$ mezi příznaky.}
     \label{obr:nb:thiels}
 \end{figure}
 
-Z vypočítaných statistik na datasetu je patrné, že některé příznaky jsou významně závislé, a proto je třeba je z dat odstranit. Kandidáti na vynechání jsou kategorie 2, 4, 6 a číslo dne. V dalších testech budou také vybráni kandidáti a v závěru vyhodnotím, které příznaky byly podle aplikovaných metod vybrány jako vhodné k vynechání a které nikoli.
+Z vypočítaných statistik na datasetu je patrné, že některé příznaky jsou významně závislé, a proto je třeba je z dat odstranit. Kandidáti na vynechání jsou kategorie 2, 4, 6 a číslo dne. 
+% V dalších testech budou také vybráni kandidáti a v závěru vyhodnotím, které příznaky byly podle aplikovaných metod vybrány jako vhodné k~vynechání a které nikoli.
+%  TODO  !!!!
 
-V dalším testu jsem otestovala multikolinearitu dat pomocí rozptylového inflačního faktoru (VIF). Jako hraniční faktor jsem zvolila hodnotu 40 VIF. % TODO opravdu az takhle trochu min
+V dalším testu jsem otestovala multikolinearitu dat pomocí rozptylového inflačního faktoru (VIF). Jako hraniční faktor jsem zvolila hodnotu 40 VIF. 
+% TODO opravdu az takhle trochu min
 Vysvětlující pro-\\měnné jsem odebírala z datasetu postupně a odebírání jsem ukončila až, když hodnota VIF nebyla nižší než hraniční.
-Tímto došlo k redukci příznaků z jedenácti na pět, a to na kategorii 1, číslo dne, období měsíce, ID prodejny a den v týdnu. Hodnoty koeficientu VIF na datech jsou na obr. \ref*{obr:nb:vif}. 
+Tímto došlo k~redukci příznaků z jedenácti na pět, a to na kategorii 1, číslo dne, období měsíce, ID prodejny a den v týdnu. Hodnoty koeficientu VIF na datech jsou na obr. \ref*{obr:nb:vif}. 
 
-\begin{figure}[hbtp!]
-    \centering
-    \begin{minipage}[t]{.5\textwidth}
+\begin{figure}[h!]
       \centering
-      \includegraphics[width=\textwidth]{obrazky/zntb/VIF.png}
+      \includegraphics[width=\textwidth]{obrazky/pripravadat/SFFVIF.png}
       \caption{Rozptylový inflační faktor.}
       \label{obr:nb:vif}
-    \end{minipage}%
-    \begin{minipage}[t]{.5\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{obrazky/zntb/MI_feature_selection.png}
-      \caption{Koeficienty vzájemné informace mezi příznaky a cílovým sloupcem typ shrinku.}
-      \label{obr:nb:MI_FS}
-    \end{minipage}
-    \vspace*{-1.5em}
+
     \end{figure}
 
-Jako další metodu po výběr příznaků jsem vypočítala hodnotu koeficientů vzájemné informace mezi všemi příznaky s cílovým sloupcem - ID shrinku. Na obrázku \ref*{obr:nb:MI_FS} lze vidět, jak jednotlivé proměnné souvisí s cílovým sloupcem. Pro výpočet tohoto koeficientu jsem použila jak data bez outlierů, tak tenotkrát data před jejich odstraněním. Zde můžeme vidět, že významnost příznaku ID prodejny klesla o téměř polovinu. Nejvíce informace je sdíleno s ID produktu, kategorií 6, dále 5, 4, 2 a expirace. Příznaky související s časovými údaji podle tohoto kritéria nenesou mnoho společné informace.
+Jako další metodu po výběr příznaků jsem vypočítala hodnotu koeficientů vzájemné informace mezi všemi příznaky s cílovým sloupcem - ID shrinku. Na obrázku \ref*{obr:nb:MI_FS} lze vidět, jak jednotlivé proměnné souvisí s cílovým sloupcem. 
+Zde můžeme vidět, že významnost příznaku ID prodejny klesla o téměř polovinu. Nejvíce informace je sdíleno s ID produktu, kategorií 6, dále 5, 4, 2. Příznaky související s časovými údaji podle tohoto kritéria nenesou mnoho společné informace.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{obrazky/pripravadat/matrix_MI-everything-SFF-stores-002.pdf}
+    \caption{Vzájemná informace mezi příznaky cílovými sloupci.}
+    \label{obr:nb:MI_FS}
+
+  \end{figure}
 
 Jako hlavní metodu pro výběr proměnných jsem se rozhodla použít metodu PCA, tuto metodu je možné použít, protože kategorické proměnné jsem převedla na číselné hodnoty v předchozích krocích. Alternativou by bylo použití metody MCA, která se používá pro kategorické datasety, viz dále.
 Ve své práci jsem využila implementaci PCA v knihovně \emph{Prince} v jazyce Python. 
 Předtím než jsem metodu aplikovala jsem otestovala předpoklad homoskedasticity, tedy shodnost rozptylů v datech, pomocí Bartlettova testu implementovaného v knihovně \emph{factor\_analyzer}. Nulová hypotéza o shodnosti rozptylů nebyla vyvrácena ($p$-hodnota vyšla nulová). Metodu PCA je proto možné použít.
 
-Na obrázcích \ref*{obr:nb:pca_roztyl_komponetn} a \ref*{obr:nb:pca_kum_roztyl_komponetn} je znázorněno prvních deset komponent a rozptyl který v datech vysvětlují. Na základě hodnot jsem vybrala prvních pět komponent. Již pátá komponenta (označená č. 4) spolu s předchozími vysvětluje více jak 95 \% variability dat. V dalším kroku jsem vypočítala příspěvky příznaků k těmto pěti komponentám a vybrala jsem ty příznaky, které přispívají nejvíce k prvním pěti komponentám. Jejich příspěvek je znázorněný na obr. \ref*{obr:nb:pca_prispevek}. Na základě výsledků analýzy hlavních komponent lze říci, že nejvíce rozptylu v datech nesou příznaky -- ID prodejny, den v týdnu, expirace, den a období v měsíci.
+Na obrázcích \ref*{obr:nb:pca_roztyl_komponetn} a \ref*{obr:nb:pca_kum_roztyl_komponetn} je znázorněno prvních deset komponent a rozptyl který v datech vysvětlují. 
+% Na základě hodnot jsem vybrala prvních deset komponent. 
+Desátá komponenta (označená č. 9) spolu s předchozími vysvětluje téměř 80 \% variability dat. V dalším kroku jsem vypočítala příspěvky příznaků k~těmto komponentám a vybrala jsem ty příznaky, které přispívají nejvíce k~prvním pěti komponentám. Jejich příspěvek je znázorněný na obr. \ref*{obr:nb:pca_prispevek}. Na základě výsledků analýzy hlavních komponent lze říci, že nejvíce rozptylu v datech nesou příznaky -- ID prodejny, den v týdnu, expirace, den a období v měsíci.
 % TODO tohle cele predlat na nova data.
 %byly vybrány jako vhodné příznaky pro další práci s daty tyto příznaky - ID prodejny, den v týdnu, expirace, den a období v měsíci.
 
@@ -197,7 +204,7 @@ Na obrázcích \ref*{obr:nb:pca_roztyl_komponetn} a \ref*{obr:nb:pca_kum_roztyl_
       \centering
       \captionsetup{justification=centering}
 
-      \includegraphics[width=\textwidth]{obrazky/zntb/pca-roztyl_komponetn.png}
+      \includegraphics[width=\textwidth]{obrazky/pripravadat/pca-roztyl_komponetn.png}
       \caption{PCA - vysvětlený \\ rozptyl hlavních komponent.}
       \label{obr:nb:pca_roztyl_komponetn}
     \end{minipage}%
@@ -205,7 +212,7 @@ Na obrázcích \ref*{obr:nb:pca_roztyl_komponetn} a \ref*{obr:nb:pca_kum_roztyl_
       \centering
       \captionsetup{justification=centering}
 
-      \includegraphics[width=\textwidth]{obrazky/zntb/pca-kum_roztyl_komponetn.png}
+      \includegraphics[width=\textwidth]{obrazky/pripravadat/pca-kum_roztyl_komponetn.png}
       \caption{PCA - kumulativní vysvětlený rozptyl hlavních komponent.}
       \label{obr:nb:pca_kum_roztyl_komponetn}
     \end{minipage}
@@ -213,12 +220,12 @@ Na obrázcích \ref*{obr:nb:pca_roztyl_komponetn} a \ref*{obr:nb:pca_kum_roztyl_
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=.8\textwidth]{obrazky/zntb/pca-prispevky.png}
-    \caption{Příspěvek proměnných ke komponentám 0 až 4.}
+    \includegraphics[width=.8\textwidth]{obrazky/pripravadat/pca-prispevky.png}
+    \caption{Příspěvek proměnných ke komponentám 0 až 10.}
     \label{obr:nb:pca_prispevek}
 \end{figure}
     
-Jak již bylo zmíněno pro redukci dimenzionality, příp. výběr proměnných, u kategorických dat lze použít metodu MCA, opět jsem využila implementaci z knihovny \emph{Prince}. V této implementaci jsou nominální kategorické hodnoty kódovány tak, že narůstá počet sloupců, a proto bylo nutné, vzhledem k nárokům na paměť k uložení matice, omezit množství dat. Vybrala jsem náhodný 20\% vzorek dat, na které jsem MCA aplikovala. Vypočítala jsem prvních pět komponent, které dohromady popisují 79 \% variability dat. Jelikož byla každá kategorie chápána jako samostatná proměnná příspěvky jednotlivých příznaků ke komponentám byly rozmístěny mezi všechny kategorie, nikoli k jednotlivým příznakům. 
+Jak již bylo zmíněno pro redukci dimenzionality, příp. výběr proměnných, u kategorických dat lze použít metodu MCA, opět jsem využila implementaci z knihovny \emph{Prince}. V této implementaci jsou nominální kategorické hodnoty kódovány tak, že narůstá počet sloupců, a proto bylo nutné, vzhledem k~nárokům na paměť k~uložení matice, omezit množství dat. Vybrala jsem náhodný 20\% vzorek dat, na které jsem MCA aplikovala. Vypočítala jsem prvních pět komponent, které dohromady popisují 79 \% variability dat. Jelikož byla každá kategorie chápána jako samostatná proměnná příspěvky jednotlivých příznaků ke komponentám byly rozmístěny mezi všechny kategorie, nikoli k~jednotlivým příznakům. 
 Po agregaci podle původních příznaků největší příspěvek mělo ID produktu, kategorie 6, 5, 4, zatímco nejmenší ID prodejny, 1, den v týdnu a období měsíce. Tyto výsledky je třeba brát se zvážením neboť výpočty probíhali na řádově menším vzorku než u předchozích metod.
 
 % warehouse_id        0.024256
@@ -237,7 +244,7 @@ Po agregaci podle původních příznaků největší příspěvek mělo ID prod
 
 Na základě předchozích metod bylo z  původních příznaků datasetu 
 vybráno několik příznaků, které popisují hodnotu shrinku.
-Vzhledem k tomu, že různé metody vybraly různé příznaky, níže je sepsáno shrnutí, které říká, jaké příznaku jsou na základě zkoumaných dat relevantní vzhledem k naměřeným hodnotám shrinku. 
+Vzhledem k~tomu, že různé metody vybraly různé příznaky, níže je sepsáno shrnutí, které říká, jaké příznaku jsou na základě zkoumaných dat relevantní vzhledem k~naměřeným hodnotám shrinku. 
 
 Korelované jsou hodnoty ID produktu, 6, 5, 4 a expirace. Dále také z označení dne lze určit období měsíce. Ze zmíněných korelovaných příznaků není proto vhodné začlenit více než jeden příznak. Pokud je tato myšlenka aplikována na výsledky metod PCA a MCA a výsledků zjištěných pomocí hraniční hodnoty VIF.
 
@@ -314,14 +321,14 @@ Tabulka \ref*{tab:acc-gb} uvádí získané přesnosti.
 % První přístup využívá schématu OVR (\emph{One-vs-Rest} neboli jeden proti všem). Při použití OVR se každá třída trénuje samostatně. Pro každou třídu je úloha převedena na binární klasifikaci, kdy zkoumaná třída je označena jako pozitivní a všechny zbylé jako negativní. Pokud máme $N$ tříd, pak je vyhodnoceno $N$ binárních logistických regresí.
 % Naproti tomu multinomická log. regrese nevyhodnocuje třídy odděleně, ale používá funkci softmax. Ta predikuje zda, daný bod náleží do jedné z tříd.\cite{bib:multiregression}
 
-% Další zvolenou metodu je klasifikátor implementující random forest algoritmus. Tento algoritmus jsem zvolila vzhledem ke skutečnosti, že je úspěšně využíván pro problémy z reálného světa a dovede pracovat s velkým objemem dat, které tyto úlohy obvykle zahrnují \cite{bib:rf}. Zároveň volba parametrů pro tuto metodu je intuitivní. Poslední zvolenou metoudou je klasifkátor, který využívá gradient boosting. Tento klasifikátor také vytváří rozhodovací stromy jako random forest. Narozdíl od zmíněného klasifikátoru, jsou ale stromy vytvářeny postupně v závislosti na naposledy vytvořeném stromu. Stromy jsou k sobě agregovány během procesu trénování. Zatímco random forest vytváří stromy nezávisle a agreguje je až na konci procesu.\cite{bib:rfgb}
+% Další zvolenou metodu je klasifikátor implementující random forest algoritmus. Tento algoritmus jsem zvolila vzhledem ke skutečnosti, že je úspěšně využíván pro problémy z reálného světa a dovede pracovat s velkým objemem dat, které tyto úlohy obvykle zahrnují \cite{bib:rf}. Zároveň volba parametrů pro tuto metodu je intuitivní. Poslední zvolenou metoudou je klasifkátor, který využívá gradient boosting. Tento klasifikátor také vytváří rozhodovací stromy jako random forest. Narozdíl od zmíněného klasifikátoru, jsou ale stromy vytvářeny postupně v závislosti na naposledy vytvořeném stromu. Stromy jsou k~sobě agregovány během procesu trénování. Zatímco random forest vytváří stromy nezávisle a agreguje je až na konci procesu.\cite{bib:rfgb}
 
 % \subsubsection{Výsledky}
 
 % Nejprve jsem pracovala s vybranými příznaky - 1, období měsíce, ID prodejny a den v týdnu.
 % Data jsem rozdělila na tři skupiny - data pro trénování, validaci a testování v poměru 8:1:1. 
 
-% Naimplementovala jsem metodu \texttt{perform\_classification} umožňuje spustit vybraný model s požadovanými parametry z knihovny \emph{scikit-learn}, provede $k$-fold crossvalidaci, nafituje model na trénovací data a poté ověří přesnost na trénovacích datech. V případě, že jsou předány i parametry pro ladění, na validačních je model doladěn a pak na nejlepších parametrech opět otestován. Celá metoda se nachází v příloze této práce. % !!! doplnit do přílohy kod k funkci...
+% Naimplementovala jsem metodu \texttt{perform\_classification} umožňuje spustit vybraný model s požadovanými parametry z knihovny \emph{scikit-learn}, provede $k$-fold crossvalidaci, nafituje model na trénovací data a poté ověří přesnost na trénovacích datech. V případě, že jsou předány i parametry pro ladění, na validačních je model doladěn a pak na nejlepších parametrech opět otestován. Celá metoda se nachází v příloze této práce. % !!! doplnit do přílohy kod k~funkci...
 
 % \begin{lstlisting}[language=Python, frame=none, numbers=left, numberstyle=\numberstyle, backgroundcolor=\color{backcolour}]
 % def perform_classification(
