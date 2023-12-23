@@ -30,7 +30,6 @@
 \contentsline {subsubsection}{Další datové zdroje}{40}{section*.27}%
 \contentsline {section}{\numberline {4.2}Příprava vzorku dat pro další analýzy}{41}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Výběr dat}{41}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Klasifikace dat}{51}{subsection.4.2.2}%
 \contentsline {chapter}{\numberline {5}Analýza pomocí metody 4ftMiner}{53}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Hypotézy}{55}{section.5.1}%
 \contentsline {chapter}{\numberline {6}Korelační analýza}{61}{chapter.6}%
@@ -45,7 +44,7 @@
 \contentsline {subsection}{\numberline {7.1.1}Metriky}{78}{subsection.7.1.1}%
 \contentsline {subsection}{\numberline {7.1.2}Reporting}{79}{subsection.7.1.2}%
 \contentsline {section}{\numberline {7.2}Výsledky}{85}{section.7.2}%
-\contentsline {chapter}{Závěr}{87}{chapter*.78}%
-\contentsline {chapter}{Literatura}{88}{chapter*.78}%
-\contentsline {chapter}{Přílohy}{93}{chapter*.79}%
+\contentsline {chapter}{Závěr}{87}{chapter*.77}%
+\contentsline {chapter}{Literatura}{88}{chapter*.77}%
+\contentsline {chapter}{Přílohy}{93}{chapter*.78}%
 \contentsline {chapter}{\numberline {A}Obsah přiloženého CD}{93}{appendix.A}%

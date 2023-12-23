@@ -226,8 +226,8 @@ Desátá komponenta (označená č. 9) spolu s předchozími vysvětluje témě�
 \end{figure}
     
 Jak již bylo zmíněno pro redukci dimenzionality, příp. výběr proměnných, u kategorických dat lze použít metodu MCA, opět jsem využila implementaci z knihovny \emph{Prince}. 
-% V této implementaci jsou nominální kategorické hodnoty kódovány tak, že narůstá počet sloupců, a proto bylo nutné, vzhledem k~nárokům na paměť k~uložení matice, omezit množství dat. 
-% Vybrala jsem náhodný 20\% vzorek dat, na které jsem MCA aplikovala. Vypočítala jsem prvních pět komponent, které dohromady popisují 79 \% variability dat. Jelikož byla každá kategorie chápána jako samostatná proměnná příspěvky jednotlivých příznaků ke komponentám byly rozmístěny mezi všechny kategorie, nikoli k~jednotlivým příznakům. 
+V této implementaci jsou nominální kategorické hodnoty kódovány tak, že narůstá počet sloupců, a proto bylo nutné, vzhledem k~nárokům na paměť k~uložení matice, omezit množství dat. 
+Vybrala jsem náhodný 20\% vzorek dat, na které jsem MCA aplikovala. Vypočítala jsem prvních pět komponent, které dohromady popisují 79 \% variability dat. Jelikož byla každá kategorie chápána jako samostatná proměnná příspěvky jednotlivých příznaků ke komponentám byly rozmístěny mezi všechny kategorie, nikoli k~jednotlivým příznakům. 
 % Po agregaci podle původních příznaků největší příspěvek mělo ID produktu, kategorie 6, 5, 4, zatímco nejmenší ID prodejny, 1, den v týdnu a období měsíce. Tyto výsledky je třeba brát se zvážením neboť výpočty probíhali na řádově menším vzorku než u předchozích metod.
 Z obrázků \ref*{obr:nb:mca_roztyl_komponetn} až \ref*{obr:nb:mca_prispevek} je vidět, že výsledky jsou obdobné jako pro předchozí metodu.
 
@@ -273,7 +273,7 @@ Z obrázků \ref*{obr:nb:mca_roztyl_komponetn} až \ref*{obr:nb:mca_prispevek} j
 
 \subsection*{Shrnutí pro výběr dat}
 
-Na základě předchozích metod bylo z  původních příznaků datasetu 
+Na základě předchozích metod bylo z~původních příznaků datasetu 
 vybráno několik příznaků, které popisují hodnotu shrinku.
 Vzhledem k~tomu, že různé metody vybraly různé příznaky, níže je sepsáno shrnutí, které říká, jaké příznaku jsou na základě zkoumaných dat relevantní vzhledem k~naměřeným hodnotám shrinku. 
 
@@ -281,7 +281,8 @@ Korelované jsou hodnoty ID produktu, 6, 5, 4 a expirace. Dále také z označen
 
 Následující sloupce byly získány podle hodnoty rozptylového inflačního faktoru. Touto metodou byl navržen i sloupec s číslem dne, ten však z důvodů korelace nebyl zahrnutý -- úroveň 1, období měsíce, ID prodejny a den v týdnu.
     
-Metodou PCA bylo zjištěno, které příznaky nejvíce přispívají ke komponentám, které popisují téměř 96 \% rozptylu v původních datech - jedná se o příznaky ID prodejny, den v týdnu, expirace, období v měsíci a číslo dne. Naopak metoda MCA vybrala kategorie 4 až 6 jako důležité. Sloučením a přihlédnutím ke korelačním koeficientům byly vybráno pět příznaků -- 
+Metodou PCA bylo zjištěno, které příznaky nejvíce přispívají ke komponentám, které popisují téměř 96 \% rozptylu v původních datech - jedná se o příznaky ID prodejny, den v týdnu, expirace, období v měsíci a číslo dne. 
+Naopak metoda MCA vybrala kategorie 4 až 6 jako důležité. Sloučením a přihlédnutím ke korelačním koeficientům byly vybráno pět příznaků -- 
     ID prodejny, den v týdnu, expirace, období v měsíci, 5.
 
 \begin{enumerate}
@@ -308,31 +309,31 @@ Metodou PCA bylo zjištěno, které příznaky nejvíce přispívají ke kompone
     \end{enumerate}
 \end{enumerate}
 
-Zda je možné z vybraných příznaků předpovídat hodnotu shirnku, jsem ověřila metodou gradient boosting. Tato metoda je implementovaná v knihovne \emph{scikit-learn} v Pythonu.
-Bylo otestováno všech sedm možných výběrů. 
-Tabulka \ref*{tab:acc-gb} uvádí získané přesnosti.
+% Zda je možné z vybraných příznaků předpovídat hodnotu shrinku, jsem ověřila metodou gradient boosting. Tato metoda je implementovaná v knihovně \emph{scikit-learn} v Pythonu.
+% Bylo otestováno všech sedm možných výběrů. 
+% Tabulka \ref*{tab:acc-gb} uvádí získané přesnosti.
 
-\begin{table}[hbtp!]
-    \centering
-    \captionsetup{justification=centering}
-    \caption{Tabulka dosažených přesností dosažených metodou gradient boosting pro varianty výběru příznaků.}
-    \begin{tabular}{ccc}
-    \multicolumn{1}{c}{\textbf{Varianta}} & \multicolumn{2}{c}{\textbf{Přesnost} {[}\%{]}} \\
-    \multicolumn{1}{c}{} & \multicolumn{1}{c}{Trénovací data} & \multicolumn{1}{c}{Testovací data} \\
-    \hline
-    1.1. & 79{,}27                & 79{,}15\\
-    1.2. & 82{,}88                & 82{,}77\\
-    1.3. & 82{,}80                & 82{,}67\\
-    2.1. & 83{,}21                & 83{,}07\\
-    2.2. & 83{,}38                & 83{,}30\\
-    2.3. & 83{,}67                & 83{,}54\\
-    2.4. & 83{,}44                & 83{,}33    \\
-    2.5 & 83,60&                    83,45      
-    \end{tabular}
-    \label{tab:acc-gb}
-    \end{table}
+% \begin{table}[hbtp!]
+%     \centering
+%     \captionsetup{justification=centering}
+%     \caption{Tabulka dosažených přesností dosažených metodou gradient boosting pro varianty výběru příznaků.}
+%     \begin{tabular}{ccc}
+%     \multicolumn{1}{c}{\textbf{Varianta}} & \multicolumn{2}{c}{\textbf{Přesnost} {[}\%{]}} \\
+%     \multicolumn{1}{c}{} & \multicolumn{1}{c}{Trénovací data} & \multicolumn{1}{c}{Testovací data} \\
+%     \hline
+%     1.1. & 79{,}27                & 79{,}15\\
+%     1.2. & 82{,}88                & 82{,}77\\
+%     1.3. & 82{,}80                & 82{,}67\\
+%     2.1. & 83{,}21                & 83{,}07\\
+%     2.2. & 83{,}38                & 83{,}30\\
+%     2.3. & 83{,}67                & 83{,}54\\
+%     2.4. & 83{,}44                & 83{,}33    \\
+%     2.5 & 83,60&                    83,45      
+%     \end{tabular}
+%     \label{tab:acc-gb}
+%     \end{table}
 
-\subsection{Klasifikace dat}
+% \subsection{Klasifikace dat}
 
 % TOhle tam asi vlastně ani nechci dávat TODO
 
