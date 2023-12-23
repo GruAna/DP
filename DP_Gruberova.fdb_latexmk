@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1703352799 "c:/Users/uzivatel/Documents/skola/DP/DP_Gruberova.tex" "DP_Gruberova.pdf" "DP_Gruberova" 1703352805
+["pdflatex"] 1703354041 "c:/Users/uzivatel/Documents/skola/DP/DP_Gruberova.tex" "DP_Gruberova.pdf" "DP_Gruberova" 1703354050
   "C:/Users/uzivatel/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1689942807 82686 2381c3433487640bf26aa76a10db7eb2 ""
   "C:/Users/uzivatel/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1667471210 10789789 02d9a8b514ec08d575e4cf0e33c1259e ""
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc" 1256929440 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
@@ -250,12 +250,12 @@
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656233319 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1650047684 2245 c8a4088d07cffc2e5207730c738edd76 ""
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1650047684 20785 71a3d72ab517959a6979c27e6176bec1 ""
-  "DP_Gruberova.aux" 1703352804 28920 85379749530b69d3166e3b2b544703ca "pdflatex"
-  "DP_Gruberova.out" 1703352804 5375 0b7be36d371c3ad3bf066030ce63e752 "pdflatex"
+  "DP_Gruberova.aux" 1703354049 29872 fb0250a353bf0db969fa9217d65bb548 "pdflatex"
+  "DP_Gruberova.out" 1703354049 5375 ca69da8d700b374ea74fba31d49d5427 "pdflatex"
   "DP_Gruberova.tex" 1702985984 10727 e1fb26048b7c2e52b3b35197ca9c084d ""
-  "DP_Gruberova.toc" 1703352804 3885 27cc1daf0d4a15f12d254516273c0315 "pdflatex"
+  "DP_Gruberova.toc" 1703354049 3885 c01039db7c5c151d5387728644f0c068 "pdflatex"
   "c:/Users/uzivatel/Documents/skola/DP/DP_Gruberova.tex" 1702985984 10727 e1fb26048b7c2e52b3b35197ca9c084d ""
-  "kapitoly/analyzy_mesic.tex" 1703352792 31999 af65ce957916c069aca28ebdaaa62ccb ""
+  "kapitoly/analyzy_mesic.tex" 1703354038 33386 56d519115db9043d6bd89c430e908445 ""
   "kapitoly/cleverminer.tex" 1703271128 17115 0568a3fbd01935bfccf54def1a36fc3d ""
   "kapitoly/data.tex" 1702998926 11809 90df29c5c61ffce9bc3b1f500e05114c ""
   "kapitoly/korelace.tex" 1703347752 104857 af364cc8f81d80e9d0da015290be86ed ""
@@ -295,6 +295,9 @@
   "obrazky/pripravadat/correlation_matrix_cramers-everything-SFF-stores_targets002.pdf" 1703349798 25374 383015773a2f7fa6fa7695dc5caee487 ""
   "obrazky/pripravadat/matrix_MI-everything-SFF-stores-002.pdf" 1703349851 21158 5bff144901913348c78ed2e049c33174 ""
   "obrazky/pripravadat/matrix_MI-everything-SFF-storesFETURES-002.pdf" 1703350279 25389 3704b83d4d9fa59174f3635ccc7ce6d2 ""
+  "obrazky/pripravadat/mca-kum_roztyl_komponetn.png" 1703353189 24370 2dea55aa34ba97b661e5006374e17c4a ""
+  "obrazky/pripravadat/mca-prispevky.png" 1703353209 34306 89037ec19c477a11a47b6cf4c6b00218 ""
+  "obrazky/pripravadat/mca-roztyl_komponetn.png" 1703353183 20639 781e6a94354a5d390c9f46a4fd4f5bfb ""
   "obrazky/pripravadat/pca-kum_roztyl_komponetn.png" 1703352590 25780 2292245fb9af048e22e78d444e359eac ""
   "obrazky/pripravadat/pca-prispevky.png" 1703352601 34235 e8bd2bdea7001620e3a6923bb75f7564 ""
   "obrazky/pripravadat/pca-roztyl_komponetn.png" 1703352556 21666 8485e03b95131875208d3cde1ccfffd4 ""
