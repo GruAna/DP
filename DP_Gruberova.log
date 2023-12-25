@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  23 DEC 2023 18:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  25 DEC 2023 20:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1188,37 +1188,54 @@ Package pdftex.def Info: obrazky/zntb/box_ordinal.png  used on input line 105.
 File: obrazky/pripravadat/matrix_MI-everything-SFF-storesFETURES-002.pdf Graphic file (type pdf)
 <use obrazky/pripravadat/matrix_MI-everything-SFF-storesFETURES-002.pdf>
 Package pdftex.def Info: obrazky/pripravadat/matrix_MI-everything-SFF-storesFETURES-002.pdf  used on input line 140.
-(pdftex.def)             Requested size: 341.43436pt x 280.87157pt.
+(pdftex.def)             Requested size: 426.79134pt x 351.08946pt.
 <obrazky/pripravadat/correlation_matrix_cramers-everything-SFF-stores_targets002.pdf, id=731, 742.66399pt x 692.21422pt>
 File: obrazky/pripravadat/correlation_matrix_cramers-everything-SFF-stores_targets002.pdf Graphic file (type pdf)
 <use obrazky/pripravadat/correlation_matrix_cramers-everything-SFF-stores_targets002.pdf>
 Package pdftex.def Info: obrazky/pripravadat/correlation_matrix_cramers-everything-SFF-stores_targets002.pdf  used on input line 149.
-(pdftex.def)             Requested size: 341.43436pt x 318.24284pt.
-<obrazky/pripravadat/theils_u-002.png, id=733, 641.7576pt x 580.3281pt>
-File: obrazky/pripravadat/theils_u-002.png Graphic file (type png)
-<use obrazky/pripravadat/theils_u-002.png>
-Package pdftex.def Info: obrazky/pripravadat/theils_u-002.png  used on input line 158.
-(pdftex.def)             Requested size: 341.43436pt x 308.75015pt.
- [44 <./obrazky/pripravadat/matrix_MI-everything-SFF-storesFETURES-002.pdf>] [45 <./obrazky/pripravadat/correlation_matrix_cramers-everything-SFF-stores_targets002.pdf>]
-<obrazky/pripravadat/SFFVIF.png, id=839, 476.982pt x 360.6273pt>
-File: obrazky/pripravadat/SFFVIF.png Graphic file (type png)
-<use obrazky/pripravadat/SFFVIF.png>
-Package pdftex.def Info: obrazky/pripravadat/SFFVIF.png  used on input line 174.
-(pdftex.def)             Requested size: 426.79134pt x 322.68513pt.
+(pdftex.def)             Requested size: 426.79134pt x 397.79828pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[44 <./obrazky/pripravadat/matrix_MI-everything-SFF-storesFETURES-002.pdf>]
+<obrazky/pripravadat/theils_u-002.png, id=787, 641.7576pt x 580.3281pt>
+File: obrazky/pripravadat/theils_u-002.png Graphic file (type png)
+<use obrazky/pripravadat/theils_u-002.png>
+Package pdftex.def Info: obrazky/pripravadat/theils_u-002.png  used on input line 158.
+(pdftex.def)             Requested size: 426.79134pt x 385.9399pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (12.79494pt too wide) in paragraph at lines 167--171
+\OT1/lmr/m/n/12 fak-toru (VIF). Jako hrani^^Tcn^^S^^P fak-tor jsem zvo-lila hod-notu 40 VIF. Vysv^^Tetluj^^S^^Pc^^S^^P prom^^Tenn^^Se
+ []
+
+<obrazky/zntb/VIF.png, id=788, 419.166pt x 407.6028pt>
+File: obrazky/zntb/VIF.png Graphic file (type png)
+<use obrazky/zntb/VIF.png>
+Package pdftex.def Info: obrazky/zntb/VIF.png  used on input line 174.
+(pdftex.def)             Requested size: 426.79134pt x 415.02165pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 2035) has occurred while \output is active []
+
+ [45 <./obrazky/pripravadat/correlation_matrix_cramers-everything-SFF-stores_targets002.pdf>]
 <obrazky/pripravadat/matrix_MI-everything-SFF-stores-002.pdf, id=840, 350.6715pt x 487.53331pt>
 File: obrazky/pripravadat/matrix_MI-everything-SFF-stores-002.pdf Graphic file (type pdf)
 <use obrazky/pripravadat/matrix_MI-everything-SFF-stores-002.pdf>
 Package pdftex.def Info: obrazky/pripravadat/matrix_MI-everything-SFF-stores-002.pdf  used on input line 185.
 (pdftex.def)             Requested size: 426.79134pt x 593.38377pt.
 
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \vbox (badness 5302) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [46 <./obrazky/pripravadat/theils_u-002.png>]
 <obrazky/pripravadat/pca-roztyl_komponetn.png, id=847, 406.8801pt x 328.1058pt>
@@ -1250,7 +1267,7 @@ File: obrazky/pripravadat/mca-kum_roztyl_komponetn.png Graphic file (type png)
 <use obrazky/pripravadat/mca-kum_roztyl_komponetn.png>
 Package pdftex.def Info: obrazky/pripravadat/mca-kum_roztyl_komponetn.png  used on input line 248.
 (pdftex.def)             Requested size: 213.39566pt x 148.81775pt.
-[47 <./obrazky/pripravadat/SFFVIF.png>]
+[47 <./obrazky/zntb/VIF.png>]
 <obrazky/pripravadat/mca-prispevky.png, id=858, 406.8801pt x 416.9979pt>
 File: obrazky/pripravadat/mca-prispevky.png Graphic file (type png)
 <use obrazky/pripravadat/mca-prispevky.png>
@@ -1372,75 +1389,86 @@ Kapitola 6.
 <obrazky/grafy/matice_korelace_typy_DP_colored.pdf, id=1040, 363.27718pt x 221.8689pt>
 File: obrazky/grafy/matice_korelace_typy_DP_colored.pdf Graphic file (type pdf)
 <use obrazky/grafy/matice_korelace_typy_DP_colored.pdf>
-Package pdftex.def Info: obrazky/grafy/matice_korelace_typy_DP_colored.pdf  used on input line 44.
+Package pdftex.def Info: obrazky/grafy/matice_korelace_typy_DP_colored.pdf  used on input line 43.
 (pdftex.def)             Requested size: 426.79134pt x 260.67566pt.
  [62 <./obrazky/grafy/matice_korelace_typy_DP_colored.pdf>] [63] [64]
 <obrazky/strukturaslozky.pdf, id=1078, 125.5089pt x 152.4897pt>
 File: obrazky/strukturaslozky.pdf Graphic file (type pdf)
 <use obrazky/strukturaslozky.pdf>
-Package pdftex.def Info: obrazky/strukturaslozky.pdf  used on input line 140.
+Package pdftex.def Info: obrazky/strukturaslozky.pdf  used on input line 134.
 (pdftex.def)             Requested size: 128.0387pt x 155.57233pt.
- [65 <./obrazky/strukturaslozky.pdf>] [66]
-Underfull \hbox (badness 10000) in paragraph at lines 229--229
+ [65 <./obrazky/strukturaslozky.pdf>]
+Underfull \vbox (badness 5161) has occurred while \output is active []
+
+ [66]
+Underfull \hbox (badness 10000) in paragraph at lines 223--223
 []|\OT1/lmr/m/n/12 Za^^Tc^^Satek
  []
 
 
-Overfull \hbox (6.7365pt too wide) in paragraph at lines 229--229
+Overfull \hbox (6.7365pt too wide) in paragraph at lines 223--223
 []|\OT1/lmr/m/n/12 Identifik^^Sator
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--240
+Underfull \hbox (badness 10000) in paragraph at lines 234--234
 []|\OT1/lmr/m/n/12 Datum
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--240
+Underfull \hbox (badness 10000) in paragraph at lines 234--234
 []|\OT1/lmr/m/n/12 Za^^Tc^^Satek
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--240
+Underfull \hbox (badness 10000) in paragraph at lines 234--234
 []\OT1/lmr/m/n/12 fik^^Sator
  []
 
 
-LaTeX Warning: Float too large for page by 42.00403pt on input line 253.
+LaTeX Warning: Float too large for page by 42.00403pt on input line 247.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--263
+Underfull \hbox (badness 10000) in paragraph at lines 257--257
 []|\OT1/lmr/m/n/12 Datum
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--263
+Underfull \hbox (badness 10000) in paragraph at lines 257--257
 []|\OT1/lmr/m/n/12 Za^^Tc^^Satek
  []
 
 
-LaTeX Warning: Reference `label' on page 67 undefined on input line 278.
+LaTeX Warning: Reference `label' on page 67 undefined on input line 272.
 
-[67] [68] [69]
+[67] [68]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [69]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [70]
 
-LaTeX Warning: Reference `sec:kor:postup' on page 71 undefined on input line 308.
+LaTeX Warning: Reference `sec:kor:postup' on page 71 undefined on input line 302.
 
 
-Overfull \hbox (0.65588pt too wide) in paragraph at lines 308--309
+Overfull \hbox (0.65588pt too wide) in paragraph at lines 302--303
 \OT1/lmr/m/n/12 taFramu. Funkce \OT1/lmtt/m/n/12 categorize[]products \OT1/lmr/m/n/12 rozt^^Tr^^S^^Pd^^S^^P pro-dukty do p^^Teti ka-te-gori^^S^^P: \OT1/lmtt/m/n/12 itself,
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [71] [72]
+ [71]
+Overfull \hbox (0.52849pt too wide) in paragraph at lines 341--342
+\OT1/lmr/m/n/12 hodla jsem se tedy zv^^Sy^^Tsit hla-dinu v^^Syznamnosti na 10 %. Zv^^Sy^^Tsen^^S^^P hla-diny v^^Syznamnosti
+ []
+
+[72]
 <obrazky/kor_maso.pdf, id=1133, 426.63388pt x 221.8689pt>
 File: obrazky/kor_maso.pdf Graphic file (type pdf)
 <use obrazky/kor_maso.pdf>
-Package pdftex.def Info: obrazky/kor_maso.pdf  used on input line 357.
+Package pdftex.def Info: obrazky/kor_maso.pdf  used on input line 351.
 (pdftex.def)             Requested size: 426.79134pt x 221.95297pt.
 
 
@@ -1449,7 +1477,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <obrazky/kor_pec.pdf, id=1134, 423.50218pt x 221.8689pt>
 File: obrazky/kor_pec.pdf Graphic file (type pdf)
 <use obrazky/kor_pec.pdf>
-Package pdftex.def Info: obrazky/kor_pec.pdf  used on input line 365.
+Package pdftex.def Info: obrazky/kor_pec.pdf  used on input line 359.
 (pdftex.def)             Requested size: 426.79134pt x 223.59152pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1457,28 +1485,24 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <obrazky/kor_zel.pdf, id=1135, 423.50218pt x 221.8689pt>
 File: obrazky/kor_zel.pdf Graphic file (type pdf)
 <use obrazky/kor_zel.pdf>
-Package pdftex.def Info: obrazky/kor_zel.pdf  used on input line 373.
+Package pdftex.def Info: obrazky/kor_zel.pdf  used on input line 367.
 (pdftex.def)             Requested size: 426.79134pt x 223.59152pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2096) has occurred while \output is active []
 
  [73]
 <obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf, id=1142, 462.52798pt x 346.89601pt>
 File: obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf Graphic file (type pdf)
 <use obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf>
-Package pdftex.def Info: obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf  used on input line 417.
+Package pdftex.def Info: obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf  used on input line 411.
 (pdftex.def)             Requested size: 341.43436pt x 256.0903pt.
 
+Underfull \vbox (badness 1762) has occurred while \output is active []
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[74 <./obrazky/kor_maso.pdf> <./obrazky/kor_pec.pdf>]
-Underfull \vbox (badness 3260) has occurred while \output is active []
-
- [75 <./obrazky/kor_zel.pdf> <./obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf>]) (kapitoly/vizualizace.tex [76]
+ [74 <./obrazky/kor_maso.pdf> <./obrazky/kor_pec.pdf>] [75 <./obrazky/kor_zel.pdf> <./obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf>]) (kapitoly/vizualizace.tex [76]
 Kapitola 7.
 <obrazky/PBI/datmodel.png, id=1240, 840.13875pt x 584.1825pt>
 File: obrazky/PBI/datmodel.png Graphic file (type png)
@@ -1696,14 +1720,14 @@ Package rerunfilecheck Info: File `DP_Gruberova.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  29652 strings out of 475380
- 551514 string characters out of 2775356
+ 551451 string characters out of 2775356
  1624161 words of memory out of 3000000
  49991 multiletter control sequences out of 15000+600000
  560424 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,17n,94p,2358b,2310s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}<C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmib10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on DP_Gruberova.pdf (93 pages, 4352953 bytes).
+Output written on DP_Gruberova.pdf (93 pages, 4369033 bytes).
 PDF statistics:
  1587 PDF objects out of 1728 (max. 8388607)
  399 named destinations out of 1000 (max. 500000)

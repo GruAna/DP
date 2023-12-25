@@ -135,27 +135,27 @@ Jako první metodu jsem zvolila  $\chi^2$ statistiku. Vzhledem k~vysokému počt
 Použila jsem proto míru vzájemné informace, která říká, jaká je podobnost mezi dvěma proměnnými \cite{bib:scikit}.
 Matice vypočítaných koeficientů je na obr. \ref*{obr:nb:MI}. Jedná se o symetrickou vlastnost, proto jsou hodnoty pod a nad diagonálou stejné. Z výsledků je opět vidět, že ID produktu sdílí informaci s úrovněmi kategorizace tím více, čím je kategorizace jemnější.
 
-\begin{figure}[hbtp!]
+\begin{figure}[h!]
     \centering
-    \includegraphics[width=.8\textwidth]{obrazky/pripravadat/matrix_MI-everything-SFF-storesFETURES-002.pdf}
+    \includegraphics[width=\textwidth]{obrazky/pripravadat/matrix_MI-everything-SFF-storesFETURES-002.pdf}
     \caption{Matice koeficientů vzájemné informace mezi příznaky.}
     \label{obr:nb:MI}
 \end{figure}
 
 Dále jsem pro znázornění vztahu mezi proměnnými použila koeficient Cramerovo $V$. Koeficient jsem postupně počítala pro každou dvojici příznaků. Koeficient nabývá hodnot mezi 0 a 1. Číslo blízké nule indikuje, že mezi proměnnými není asociace, číslo blízké jedničce vysokou závislost \cite{bib:statology}. Na obr. \ref*{obr:nb:cramers} lze vidět, že pro kategorie 1 až 6 a ID produktu je hodnota koeficientu po zaokrouhlení vždy rovna jedné. Vysoká závislost je pak i mezi příznakem promoakce a ID produktu. Dále logicky mezi datem transakce a dnem v týdnu a obdobím v měsíci. ID prodejny je extrémně závislé s demografickými údaji o lokalitách a typem prodejny.
 
-\begin{figure}[hbtp!]
+\begin{figure}[h!]
     \centering
-    \includegraphics[width=.8\textwidth]{obrazky/pripravadat/correlation_matrix_cramers-everything-SFF-stores_targets002.pdf}
+    \includegraphics[width=\textwidth]{obrazky/pripravadat/correlation_matrix_cramers-everything-SFF-stores_targets002.pdf}
     \caption{Matice koeficientů Cramerovo $V$ pro kategorické příznaky.}
     \label{obr:nb:cramers}
 \end{figure}
 
 Další statistikou spočtenou na datech je Theilovo $U$ (neboli koeficient nejistoty), který opět nabývá hodnot mezi 0 a 1 a měří vztah mezi dvěma proměnnými. Na rozdíl od předchozích statistik tento koeficient není symetrický a z výsledků lze vyvodit, ze které proměnné ze dvou zkoumaných můžeme vyvodit informaci o druhé proměnné \cite{bib:correl}. Z výsledků zobrazených v matici na obr. \ref*{obr:nb:thiels} plyne, že z ID produktu lze vyvodit část informace o kategoriích a expiraci. Zatímco úrovně 1 a 2 o ID produktu mnoho informace nenesou. Jak bylo ukázáno i v předchozích statistikách a jak vyplývá z logiky pro získání dne v týdnu a období měsíce, číslo dne nese informaci o těchto dvou příznacích.
 
-\begin{figure}[hbtp!]
+\begin{figure}[h!]
     \centering
-    \includegraphics[width=.8\textwidth]{obrazky/pripravadat/theils_u-002.png}
+    \includegraphics[width=\textwidth]{obrazky/pripravadat/theils_u-002.png}
     \caption{Matice koeficientů Theilovo $U$ mezi příznaky.}
     \label{obr:nb:thiels}
 \end{figure}
@@ -166,12 +166,12 @@ Z vypočítaných statistik na datasetu je patrné, že některé příznaky jso
 
 V dalším testu jsem otestovala multikolinearitu dat pomocí rozptylového inflačního faktoru (VIF). Jako hraniční faktor jsem zvolila hodnotu 40 VIF. 
 % TODO opravdu az takhle trochu min
-Vysvětlující pro-\\měnné jsem odebírala z datasetu postupně a odebírání jsem ukončila až, když hodnota VIF nebyla nižší než hraniční.
+Vysvětlující proměnné jsem odebírala z datasetu postupně a odebírání jsem ukončila až, když hodnota VIF nebyla nižší než hraniční.
 Tímto došlo k~redukci příznaků z jedenácti na pět, a to na kategorii 1, číslo dne, období měsíce, ID prodejny a den v týdnu. Hodnoty koeficientu VIF na datech jsou na obr. \ref*{obr:nb:vif}. 
 
 \begin{figure}[h!]
       \centering
-      \includegraphics[width=\textwidth]{obrazky/pripravadat/SFFVIF.png}
+      \includegraphics[width=\textwidth]{obrazky/zntb/VIF.png} % SEM DAT NOVY OBRAZEK TODO
       \caption{Rozptylový inflační faktor.}
       \label{obr:nb:vif}
 
@@ -194,7 +194,7 @@ Předtím než jsem metodu aplikovala jsem otestovala předpoklad homoskedastici
 
 Na obrázcích \ref*{obr:nb:pca_roztyl_komponetn} a \ref*{obr:nb:pca_kum_roztyl_komponetn} je znázorněno prvních deset komponent a rozptyl který v datech vysvětlují. 
 % Na základě hodnot jsem vybrala prvních deset komponent. 
-Desátá komponenta (označená č. 9) spolu s předchozími vysvětluje téměř 80 \% variability dat. V dalším kroku jsem vypočítala příspěvky příznaků k~těmto komponentám a vybrala jsem ty příznaky, které přispívají nejvíce k~prvním pěti komponentám. Jejich příspěvek je znázorněný na obr. \ref*{obr:nb:pca_prispevek}. Na základě výsledků analýzy hlavních komponent lze říci, že nejvíce rozptylu v datech nesou příznaky -- ID prodejny, den v týdnu, expirace, den a období v měsíci.
+Desátá komponenta (označená č. 9) spolu s předchozími vysvětluje téměř 80 \% variability dat. V dalším kroku jsem vypočítala příspěvky příznaků k~těmto komponentám a vybrala jsem ty příznaky, které přispívají nejvíce. Jejich příspěvek je znázorněný na obr. \ref*{obr:nb:pca_prispevek}. Na základě výsledků analýzy hlavních komponent lze říci, že nejvíce rozptylu v datech nesou příznaky -- ID prodejny, den v týdnu, expirace, den a období v měsíci.
 % TODO tohle cele predlat na nova data.
 %byly vybrány jako vhodné příznaky pro další práci s daty tyto příznaky - ID prodejny, den v týdnu, expirace, den a období v měsíci.
 

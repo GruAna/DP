@@ -1,7 +1,6 @@
-\newpage
 \chapter{Korelační analýza}
 
-Tato kapitola se věnuje popisu korelační analýza pro zjištění důvodu shrinků produktů. V~kapitole je popsán postup a jeho implementace v~jazyce Python. Analýza se zabývá korelací mezi hodnotou shrinku a tržbami. Jedno pozorování je na agregované na produkt, prodejnu a den záznamu.  
+Tato kapitola se věnuje popisu korelační analýzy pro zjištění důvodu shrinků produktů. Tuto analýzu je možné spustit na data libovolné společnosti, pokud obsahují vstupy, které jsou definované dále. Analýza byla napsána v~jazyce Python, jako sada funkcí sdružená do modulu. Ukázka volání funkcí pro spuštění analýzy je pak vytvořená v~Jupyter Notebooku. V~této kapitole je popsána implementace funkcí a princip analýzy. Analýza se hodnotí korelací mezi hodnotou shrinku a tržbami, na základě výsledku roztřídí produkty ve vstupních datech do několika kategorií. 
 
 % Je možné specifikovat úroveň kategorie, na které se analýza spočítá. Dále je třeba určit konkrétní název kategorie.
 
@@ -12,7 +11,7 @@ Tato kapitola se věnuje popisu korelační analýza pro zjištění důvodu shr
 
 \section{Postup}
 \label{sec:korpostup}
-V rámci analýzy se porovnávají pouze záznamy produktů, které se vyskytují ve stejné kategorii. Základní hypotéza je, že shrink produktu mohou ovlivnit promoakce jiných produktů v~kategorii.
+V rámci analýzy se porovnávají pouze záznamy produktů, které se vyskytují ve stejné kategorii. Jedno pozorování je na agregované na produkt, prodejnu a den záznamu. Základní hypotéza je, že shrink produktu může být ovlivněn promoakcemi jiných produktů v~kategorii.
 
 Hodnotu shrinku jsem porovnávala s~následujícími ukazateli. 
 \begin{itemize}
@@ -36,7 +35,7 @@ Na základě korelační analýzy je možné roztřídit produkty v~kategorii do
     \item[] \textbf{Kategorie N} - Produkty, jejichž shrink je nezávislý na svých tržbách i tržbách ostatních produktů v~kategorii. Shrink zůstává v~podobném poměru, tj. pokud jsou tržby vyšší je i shrink vyšší, pokud jsou tržby nižší, je nižší i shrink.
 \end{itemize}
 
-Na obrázku \ref*{obr:ctg:g:kategorizace1} je znázorněno rozdělení produktů vzhledem ke korelačnímu koeficientu. Kategorie jsou pro lepší orientaci na obrázku oddělené i barevně, zároveň s popisem je u každé části i písmenné označení kategorie. 
+Na obrázku \ref*{obr:ctg:g:kategorizace1} je znázorněno rozdělení produktů vzhledem ke korelačnímu koeficientu. Kategorie jsou pro lepší orientaci na obrázku oddělené i barevně, zároveň s~popisem je u každé části i písmenné označení kategorie. 
 
 \begin{figure}[hbtp!]
     \centering
@@ -50,12 +49,7 @@ Hypotéza pro zařazení do kategorie P je následující:
 
 Pokud je korelační koeficient zaznamenaného shrinku s~tržbami téhož produktu kladná, produkt si způsobuje shrinky sám.
 Abych mohla tuto hypotézu potvrdit, nebo vyvrátit, je třeba statisticky otestovat významnost korelačního koeficientu. Formulovala jsem nulovou hypotézu $H_\mathrm{0}$ a alternativní hypotézu $H_\mathrm{A}$ pro koeficient $r_\mathrm{P}$, který měří korelaci mezi hodnotou shrinku a tržbami produktu.
-% $$
-%     H_\mathrm{0}: r_\mathrm{P} = 0 \qquad \mbox{Výběry nejsou korelované.}  
-% $$
-% $$   
-%     H_\mathrm{A}: r_\mathrm{P} \neq 0 \qquad\mbox{Výběry jsou korelované.}  
-% $$
+
 \begin{equation*}
     \begin{aligned}
         H_\mathrm{0}: \quad & r_\mathrm{P} = 0 \qquad \mbox{Výběry nejsou korelované.}  \\
@@ -325,7 +319,7 @@ Pro testování funkcí jsem použila knihovnu \emph{pytest} jazyka Python. Test
 
 \section{Výsledky}
 
-Analýza se týká pouze dat jednoho měsíce a kategorií produktů první úrovně \emph{Velmi čerstvé} a \emph{Čerstvé} a typu shrinku -- prošlé a zkažené zboží, který zaujímá téměř 65 \% shrinků pro dané kategorie. Zaměřila jsem se na kategorie ze čtvrté úrovně, a to prvních deset kategorií s~nejvyšší hodnotou shrinků (tj. s~nejvyšší zaznamenanou ztrátou). V práci jsou popsány výsledky pouze tří kategorií -- Masné výrobky - pultový prodej, Slané pečivo a Plodová zelenina. Na třetím místě byla kategorie Sladké pečivo, ale kvůli podobnosti s druhou kategorií, jsem zvolila následující kategorii v pořadí co do hodnoty shrinku.
+Analýza se týká pouze dat jednoho měsíce a kategorií produktů první úrovně \emph{Velmi čerstvé} a \emph{Čerstvé} a typu shrinku -- prošlé a zkažené zboží, který zaujímá téměř 65 \% shrinků pro dané kategorie. Zaměřila jsem se na kategorie ze čtvrté úrovně, a to prvních deset kategorií s~nejvyšší hodnotou shrinků (tj. s~nejvyšší zaznamenanou ztrátou). V práci jsou popsány výsledky pouze tří kategorií -- Masné výrobky - pultový prodej, Slané pečivo a Plodová zelenina. Na třetím místě byla kategorie Sladké pečivo, ale kvůli podobnosti s~druhou kategorií, jsem zvolila následující kategorii v~pořadí vzhledem k~hodnotě shrinku.
 V tabulce \ref*{tab:lostcost4} jsou procentuální hodnoty zastoupení čtyř kategorií mezi ostatními kategoriemi úrovně 4 podle velikosti shrinku. %% TODO upravit hodnoty !!!
 
 \begin{table}[hbtp!]
@@ -344,18 +338,18 @@ V tabulce \ref*{tab:lostcost4} jsou procentuální hodnoty zastoupení čtyř ka
     \label{tab:lostcost4}
     \end{table}
 
- Měřila jsem postupně korelaci velikosti shrinku s~různými ukazateli pro celkové tržby ostatních produktů. Pro určení míry korelace jsem zvolila Spearmanův korelační koeficient, jelikož data nesplňují předpoklady, které jsou nutné pro použití Pearsonova korelačního koeficientu - data nejsou nezávislá a stejně rozdělená. Data vybrané společnosti, také nesplňují podmínku normality, to může být dáno tím, že data pochází z reálného světa a zaznamenávají jev, který závisí na mnoha faktorech. Nejprve jsem zvolila 5\% hladinu významnosti pro testování statistické významnosti koeficientů korelace $r_\mathrm{P}$ a $r_\mathrm{O}$. Výsledky ovšem ukázaly, že alespoň hodnoty třetiny produktů ve zkoumaných kategoriích  byly neprůkazné. Rozhodla jsem se tedy zvýšit hladinu významnosti na 10 \%. Zvýšení hladiny významnosti zvýšilo pravděpodobnost vzniku chyby druhého druhu, nicméně případné zařazení produktu do špatné kategorie nemá s businessového hlediska fatální následky.
+ Měřila jsem postupně korelaci velikosti shrinku s~různými ukazateli pro celkové tržby ostatních produktů. Pro určení míry korelace jsem zvolila Spearmanův korelační koeficient, jelikož data nesplňují předpoklady, které jsou nutné pro použití Pearsonova korelačního koeficientu - data nejsou nezávislá a stejně rozdělená. Data vybrané společnosti, také nesplňují podmínku normality, to může být dáno tím, že data pochází z~reálného světa a zaznamenávají jev, který závisí na mnoha, těžce predikovatelných faktorech. Nejprve jsem zvolila 5\% hladinu významnosti pro testování statistické významnosti koeficientů korelace $r_\mathrm{P}$ a $r_\mathrm{O}$. Výsledky ovšem ukázaly, že alespoň hodnoty třetiny produktů ve zkoumaných kategoriích  byly neprůkazné. Rozhodla jsem se tedy zvýšit hladinu významnosti na 10 \%. Zvýšení hladiny významnosti zvýšilo pravděpodobnost vzniku chyby druhého druhu, nicméně případné zařazení produktu do špatné kategorie nemá z~businessového hlediska fatální následky.
 
-Na obrázcích~\ref*{obr:kategCorrPorovnani} až~\ref*{obr:kategCorrPorovnaniZel} jsou porovnání výsledků kategorizace pro zmíněné tři kategorie. Pokaždé bylo spuštěno šest výpočtů. Korelace byla měřena mezi shrinky a tržbami ostatních produktů, ostatních produktů, kde prodeje byly posunuté o jeden den, dále mezi shrinky a tržbami produktů v promoakci a produktů v promoakci s posunem prodejů. Varianty s promoakcemi dále byly jak pro shrinky produktů během promoakce, tak pro během i po promoakci. Na obrázcích jsou zobrazené výsledky pro variantu během i po promoakci, protože zachytila stejně nebo více případů než varianta záznamů pouze během promoakce. 
+Na obrázcích~\ref*{obr:kategCorrPorovnani} až~\ref*{obr:kategCorrPorovnaniZel} jsou porovnání výsledků kategorizace pro zmíněné tři kategorie. Pokaždé bylo spuštěno šest výpočtů. Korelace byla měřena mezi shrinky a tržbami ostatních produktů, ostatních produktů, kde prodeje byly posunuté o jeden den, dále mezi shrinky a tržbami produktů v~promoakci a produktů v~promoakci s~posunem prodejů. Varianty s~promoakcemi dále byly jak pro shrinky produktů během promoakce, tak pro během i po promoakci. Na obrázcích jsou zobrazené výsledky pro variantu během i po promoakci, protože zachytila stejně nebo více případů než varianta záznamů pouze během promoakce. 
 
-Z~uvedených počtů produktů u jednotlivých kategoriích pro různé ukazatele, je patrné, že výsledky se příliš neliší. Pokud bychom se ale zaměřovali na celkové prodeje, nikoli promoční, tak získáváme větší množství produktů, u~nichž nebylo možné vysvětlit shrink pomocí korelace. Avšak hypotézy pro rozřazení produktů uvažují právě promoční prodeje nikoli celkové prodeje. Další popis se věnuje výsledkům korelace mezi shrinky a promočními a popromočními prodeji, které měly stejný den záznamu jako shrink, na obrázcích ~\ref*{obr:kategCorrPorovnani} až~\ref*{obr:kategCorrPorovnaniZel} se jedná o poslední řádek s výsledky.
+Z~uvedených počtů produktů u jednotlivých kategoriích pro různé ukazatele, je patrné, že výsledky se příliš neliší. Pokud bychom se ale zaměřovali na celkové prodeje, nikoli promoční, tak získáváme větší množství produktů, u~nichž nebylo možné vysvětlit shrink pomocí korelace. Avšak hypotézy pro rozřazení produktů uvažují právě promoční prodeje nikoli celkové prodeje. Další popis se věnuje výsledkům korelace mezi shrinky a promočními a popromočními prodeji, které měly stejný den záznamu jako shrink, na obrázcích ~\ref*{obr:kategCorrPorovnani} až~\ref*{obr:kategCorrPorovnaniZel} se jedná o poslední řádek s~výsledky.
 % Nejvíce zařazených produktů bylo pro kategorie 
 
 \begin{figure}[h!]
     \centering
     \captionsetup{justification=centering}
     \includegraphics[width=\textwidth]{obrazky/kor_maso.pdf}
-    \caption{Počet produktů z kategorie Masné výrobky - pultový prodej roztříděné pomocí korelační analýzy v~závislosti na různých ukazatelích.}
+    \caption{Počet produktů z~kategorie Masné výrobky - pultový prodej roztříděné pomocí korelační analýzy v~závislosti na různých ukazatelích.}
     \label{obr:kategCorrPorovnani}
 \end{figure}
 
@@ -363,7 +357,7 @@ Z~uvedených počtů produktů u jednotlivých kategoriích pro různé ukazatel
     \centering
     \captionsetup{justification=centering}
     \includegraphics[width=\textwidth]{obrazky/kor_pec.pdf}
-    \caption{Počet produktů z kategorie Slané pečivo roztříděné pomocí korelační analýzy v~závislosti na různých ukazatelích.}
+    \caption{Počet produktů z~kategorie Slané pečivo roztříděné pomocí korelační analýzy v~závislosti na různých ukazatelích.}
     \label{obr:kategCorrPorovnaniPec}
 \end{figure}
 
@@ -371,7 +365,7 @@ Z~uvedených počtů produktů u jednotlivých kategoriích pro různé ukazatel
     \centering
     \captionsetup{justification=centering}
     \includegraphics[width=\textwidth]{obrazky/kor_zel.pdf}
-    \caption{Počet produktů z kategorie Plodová zelenina roztříděné pomocí korelační analýzy v~závislosti na různých ukazatelích.}
+    \caption{Počet produktů z~kategorie Plodová zelenina roztříděné pomocí korelační analýzy v~závislosti na různých ukazatelích.}
     \label{obr:kategCorrPorovnaniZel}
 \end{figure}
 
@@ -407,7 +401,7 @@ Z~uvedených počtů produktů u jednotlivých kategoriích pro různé ukazatel
 
 Shrink byl zaznamenaný u 111 produktů v~této kategorii úrovně 4. 88 produktů bylo klasifikováno jako kategorie N, deset jako kategorie X, dva jako kategorie O, jeden jako V. U zbylých deseti produktů nebyl koeficient korelace statisticky významný, a proto nejde u těchto produktů vyslovit hypotézu pro jejich zařazení. Korelace mezi hodnotou shrinku a promočními tržbami je na obr. \ref*{obr:corr:maso}.
 
-Produkty, které patří do kategorie O: Velikonoční klobása a Velikonoční šunka - jedná se zcela jistě o sezónní výrobky. Produkt, který byl označen jako výprodejový jsou Párky (Kuřecí striptýzky). Šest produktů z kategorie nemělo během sledovaného období žádné evidované prodeje, všechny byly klasifikovány jako kategorie X, tedy hodota koeficientu korelace neznamenala závislost. %{TODO: vyjmenovat i další produkty, které si způsobují samy, ale je to většina produktů a salámy, šunky, z~kategorie...} 
+Produkty, které patří do kategorie O: Velikonoční klobása a Velikonoční šunka - jedná se zcela jistě o sezónní výrobky. Produkt, který byl označen jako výprodejový jsou Párky (Kuřecí striptýzky). Šest produktů z~kategorie nemělo během sledovaného období žádné evidované prodeje, všechny byly klasifikovány jako kategorie X, tedy hodota koeficientu korelace neznamenala závislost. %{TODO: vyjmenovat i další produkty, které si způsobují samy, ale je to většina produktů a salámy, šunky, z~kategorie...} 
 
 Dále jsem zkoumala podkategorie Masných výrobků. Porovnávala jsem prodeje v~rámci kategorií na šesté úrovni produktové hierarchie. V~podkategroii Salámy s~krátkou dobou spotřeby se kategorizace potvrdila. Pro kategorii, do níž patří sezónní výrobky - Netučné masné výrobky, nově z~této podkategorie byl jako kategorie O označen i produkt Kladenská pečeně.
 
@@ -421,7 +415,7 @@ Dále jsem zkoumala podkategorie Masných výrobků. Porovnávala jsem prodeje v
 
 \textbf{Slané pečivo}
 
-Shrink byl zaznamenaný u 246 produktů. 124 produktů bylo klasifikováno jako kategorie N, 16 jako kategorie X, 28 jako kategorie O, jeden jako P. Pro 77 produktů nebyl koeficient korelace statisticky významný. Jako produkt, který si způsobuje shrinky sám, byl označený obyčejný rohlík. Rohlík se tedy vyhazuje více čím vyšší jsou jeho vlastní tržby. Celkově patří tento produkt mezi ty s největšími shrinky.
+Shrink byl zaznamenaný u 246 produktů. 124 produktů bylo klasifikováno jako kategorie N, 16 jako kategorie X, 28 jako kategorie O, jeden jako P. Pro 77 produktů nebyl koeficient korelace statisticky významný. Jako produkt, který si způsobuje shrinky sám, byl označený obyčejný rohlík. Rohlík se tedy vyhazuje více čím vyšší jsou jeho vlastní tržby. Celkově patří tento produkt mezi ty s~největšími shrinky.
 
 Produkty, které byly zařazeny do kategorie X, tj. takové, u kterých nebyl koeficient korelace dostatečně velký, byly všechno produkty, které neměly během sledovaného období žádný prodej (promoční, či nepromoční).
 
@@ -434,7 +428,7 @@ Produkty, které byly zařazeny do kategorie X, tj. takové, u kterých nebyl ko
 
 \textbf{Plodová zelenina}
 
-Shrink byl zaznamenaný u 28 produktů v~této kategorii. 21 produktů bylo klasifikováno jako kategorie N, jeden produkt jako X a jeden jako O. U ostatních pěti produktů nebyl koeficient dostatečně významný. Produkt, který v této kategorii neměl žádné prodeje byl pouze Lilek Bio, pro který koeficient korelace byl označen jako nevýznamný. Produkt, z kategorie O, byla Cherry rajčata. Zatímco produkt z ktegorie X, byl Paprika barevná Mix.
+Shrink byl zaznamenaný u 28 produktů v~této kategorii. 21 produktů bylo klasifikováno jako kategorie N, jeden produkt jako X a jeden jako O. U ostatních pěti produktů nebyl koeficient dostatečně významný. Produkt, který v~této kategorii neměl žádné prodeje byl pouze Lilek Bio, pro který koeficient korelace byl označen jako nevýznamný. Produkt, z~kategorie O, byla Cherry rajčata. Zatímco produkt z~ktegorie X, byl Paprika barevná Mix.
 
 % product_id	warehouse_id	date_of_transaction	amount	cost_value	motive_type	weekday	quarter	warehouse_type	region	...	amount_share	whs_cost_value_share	promotion_type_1_id	promo	L1	L3	L4	L1_cost_value_share	L5	L6
 % 0	24293174	644	2023-03-01	-0.47	-52.29	4	2	1	SM	Praha	...	0.1423	0.000005	NaN	no promo	SUPERFRESH	SF CM RED MEAT	RED MEAT	0.000060	MIX OF RED MEAT CHILLED	READY TO COOK RED MEAT CHILLED
