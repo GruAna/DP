@@ -63,7 +63,7 @@ necelých jeden a půl milionu řádků.
     \label{obr:rok:g:zastoupenish1}
 \end{figure}
 
-Jako cílové sloupce (\emph{target} sloupce) jsem určila sloupec s typem shrinku, množstvím produktu a nákladovou cenou. Zbylých jedenáct sloupců slouží jako vysvětlující pro-\linebreak měnné, dále budou označovány jako příznaky pro cílový sloupec. Všechny vybrané příznaky jsou kategorické proměnné, které lze dále rozdělit na nominální a ordinální. Nominální proměnné jsou ID prodejny, ID produktu, kategorie 1, 2, 4, 5, 6. Ordinální proměnné jsou expirace, den v týdnu, číslo dne a období měsíce. Ordinální příznaky jsem přeznačila tak, aby každá obsahovala pouze hodnoty od nuly do $n_p$, kde $n_p$ je počet kategorií v $p$-tém příznaku. 
+Jako cílové sloupce (\emph{target} sloupce) jsem určila sloupec s typem shrinku, množstvím produktu a nákladovou cenou. Zbylých jedenáct sloupců slouží jako vysvětlující pro-\linebreak měnné, dále budou označovány jako příznaky pro cílový sloupec. Všechny vybrané příznaky jsou kategorické proměnné, které lze dále rozdělit na nominální a ordinální. Nominální proměnné jsou ID prodejny, ID produktu a kategorie produktové hierarchie. Ordinální proměnné jsou den v týdnu, číslo dne a období měsíce. Ordinální příznaky jsem přeznačila tak, aby každá obsahovala pouze hodnoty od nuly do $n_p$, kde $n_p$ je počet kategorií v $p$-tém příznaku. 
 
 Pro další postup bylo vhodné přesunout se z nominálních kategorických hodnot na číselné hodnoty. Pro tyto účely jsem zvolila metodu \emph{target encoding}.  %!!! odkaz do teorie, princip meotdy je vysvětlený v kapitole...
 Neboť toto kódování na numerické hodnoty zachovává velikost datového souboru, to je klíčové vzhledem k~tomu, že nominální proměnné ve zkoumaných datech obsahují velký počet kategorií. 
@@ -151,7 +151,7 @@ Dále jsem pro znázornění vztahu mezi proměnnými použila koeficient Cramer
     \label{obr:nb:cramers}
 \end{figure}
 
-Další statistikou spočtenou na datech je Theilovo $U$ (neboli koeficient nejistoty), který opět nabývá hodnot mezi 0 a 1 a měří vztah mezi dvěma proměnnými. Na rozdíl od předchozích statistik tento koeficient není symetrický a z výsledků lze vyvodit, ze které proměnné ze dvou zkoumaných můžeme vyvodit informaci o druhé proměnné \cite{bib:correl}. Z výsledků zobrazených v matici na obr. \ref*{obr:nb:thiels} plyne, že z ID produktu lze vyvodit část informace o kategoriích a expiraci. Zatímco úrovně 1 a 2 o ID produktu mnoho informace nenesou. Jak bylo ukázáno i v předchozích statistikách a jak vyplývá z logiky pro získání dne v týdnu a období měsíce, číslo dne nese informaci o těchto dvou příznacích.
+Další statistikou spočtenou na datech je Theilovo $U$ (neboli koeficient nejistoty), který opět nabývá hodnot mezi 0 a 1 a měří vztah mezi dvěma proměnnými. Na rozdíl od předchozích statistik tento koeficient není symetrický a z výsledků lze vyvodit, ze které proměnné ze dvou zkoumaných můžeme vyvodit informaci o druhé proměnné \cite{bib:correl}. Z výsledků zobrazených v matici na obr. \ref*{obr:nb:thiels} plyne, že z ID produktu lze vyvodit část informace o kategoriích. Zatímco úrovně 1 a 2 o ID produktu mnoho informace nenesou. Jak bylo ukázáno i v předchozích statistikách a jak vyplývá z logiky pro získání dne v týdnu a období měsíce, číslo dne nese informaci o těchto dvou příznacích.
 
 \begin{figure}[h!]
     \centering
@@ -281,9 +281,9 @@ Korelované jsou hodnoty ID produktu, 6, 5, 4 a expirace. Dále také z označen
 
 Následující sloupce byly získány podle hodnoty rozptylového inflačního faktoru. Touto metodou byl navržen i sloupec s číslem dne, ten však z důvodů korelace nebyl zahrnutý -- úroveň 1, období měsíce, ID prodejny a den v týdnu.
     
-Metodou PCA bylo zjištěno, které příznaky nejvíce přispívají ke komponentám, které popisují téměř 96 \% rozptylu v původních datech - jedná se o příznaky ID prodejny, den v týdnu, expirace, období v měsíci a číslo dne. 
+Metodou PCA bylo zjištěno, které příznaky nejvíce přispívají ke komponentám, které popisují téměř 96 \% rozptylu v původních datech - jedná se o příznaky ID prodejny, den v týdnu, období v měsíci a číslo dne. 
 Naopak metoda MCA vybrala kategorie 4 až 6 jako důležité. Sloučením a přihlédnutím ke korelačním koeficientům byly vybráno pět příznaků -- 
-    ID prodejny, den v týdnu, expirace, období v měsíci, 5.
+    ID prodejny, den v týdnu, období v měsíci, 5.
 
 \begin{enumerate}
     \item Následující sloupce byly získány podle hodnoty rozptylového inflačního faktoru. Touto metodou byl navržen i sloupec s číslem dne, ten však z důvodů korelace nebyl zahrnutý
@@ -296,14 +296,14 @@ Naopak metoda MCA vybrala kategorie 4 až 6 jako důležité. Sloučením a při
     \item[1.2.] 5, období měsíce, ID prodejny a den v týdnu
     \item[1.3.] 4, období měsíce, ID prodejny a den v týdnu
     \end{enumerate}
-    \item Metodou PCA bylo zjištěno, které příznaky nejvíce přispívají ke komponentám, které popisují téměř 96 \% rozptylu v původních datech - jedná se o příznaky ID prodejny, den v týdnu, expirace, období v měsíci a číslo dne. Naopak metoda MCA vybrala kategorie 4 až 6 jako důležité. Sloučením a přihlédnutím ke korelačním koeficientům byly vybráno pět příznaků
+    \item Metodou PCA bylo zjištěno, které příznaky nejvíce přispívají ke komponentám, které popisují téměř 96 \% rozptylu v původních datech - jedná se o příznaky ID prodejny, den v týdnu, období v měsíci a číslo dne. Naopak metoda MCA vybrala kategorie 4 až 6 jako důležité. Sloučením a přihlédnutím ke korelačním koeficientům byly vybráno pět příznaků
     \begin{enumerate}
-        \item[2.1.] ID prodejny, den v týdnu, expirace, období v měsíci, 5.
+        \item[2.1.] ID prodejny, den v týdnu, období v měsíci, 5.
     \end{enumerate}
     \item[] Tato varianta příznaků byla ještě rozšířena o příznaky, které se týkají produktů. Přidané příznaky jsou spolu korelované, přesto 
     \begin{enumerate}
-    \item[2.2.] ID prodejny, den v týdnu, expirace, období v měsíci, 5, 2
-    \item[2.3.] ID prodejny, den v týdnu, expirace, období v měsíci, 5, 2, ID produktu
+    \item[2.2.] ID prodejny, den v týdnu, období v měsíci, 5, 2
+    \item[2.3.] ID prodejny, den v týdnu, období v měsíci, 5, 2, ID produktu
     \item[2.4.] ID prodejny, den v týdnu, období v měsíci, 2, ID produktu
     \item[] 2,5, obdobi v mesici,  ID prodejny, den v týdnu, ID produktu, target
     \end{enumerate}

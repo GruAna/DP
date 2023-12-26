@@ -1,5 +1,5 @@
 \chapter{Korelační analýza}
-
+\label{ch:korelacnianalyza}
 Tato kapitola se věnuje popisu korelační analýzy pro zjištění důvodu shrinků produktů. Tuto analýzu je možné spustit na data libovolné společnosti, pokud obsahují vstupy, které jsou definované dále. Analýza byla napsána v~jazyce Python, jako sada funkcí sdružená do modulu. Ukázka volání funkcí pro spuštění analýzy je pak vytvořená v~Jupyter Notebooku. V~této kapitole je popsána implementace funkcí a princip analýzy. Analýza se hodnotí korelací mezi hodnotou shrinku a tržbami, na základě výsledku roztřídí produkty ve vstupních datech do několika kategorií. 
 
 % Je možné specifikovat úroveň kategorie, na které se analýza spočítá. Dále je třeba určit konkrétní název kategorie.
@@ -319,10 +319,27 @@ Pro testování funkcí jsem použila knihovnu \emph{pytest} jazyka Python. Test
 
 \section{Výsledky}
 
-Analýza se týká pouze dat jednoho měsíce a kategorií produktů první úrovně \emph{Velmi čerstvé} a \emph{Čerstvé} a typu shrinku -- prošlé a zkažené zboží, který zaujímá téměř 65 \% shrinků pro dané kategorie. Zaměřila jsem se na kategorie ze čtvrté úrovně, a to prvních deset kategorií s~nejvyšší hodnotou shrinků (tj. s~nejvyšší zaznamenanou ztrátou). V práci jsou popsány výsledky pouze tří kategorií -- Masné výrobky - pultový prodej, Slané pečivo a Plodová zelenina. Na třetím místě byla kategorie Sladké pečivo, ale kvůli podobnosti s~druhou kategorií, jsem zvolila následující kategorii v~pořadí vzhledem k~hodnotě shrinku.
+Analýza se týká pouze dat jednoho měsíce a kategorií produktů první úrovně \emph{Velmi čerstvé}, zastoupena 48 \% a \emph{Čerstvé}, zastoupena 52 \% ve vybraných datech. Data obsahují pouze jeden typ shrinku -- prošlé a zkažené zboží, který zaujímá téměř 65 \% shrinků pro dané kategorie. Zastoupení typů shrinků, které zabírají v datech více jak dvě procenta se nachází v tabulce \ref*{tab:shrinkyZastoupeni}.
+Zaměřila jsem se na kategorie ze čtvrté úrovně, a to prvních deset kategorií s~nejvyšší hodnotou shrinků (tj. s~nejvyšší zaznamenanou ztrátou). V práci jsou popsány výsledky pouze tří kategorií -- Masné výrobky - pultový prodej, Slané pečivo a Plodová zelenina. Na třetím místě byla kategorie Sladké pečivo, ale kvůli podobnosti s~druhou kategorií, jsem zvolila následující kategorii v~pořadí vzhledem k~hodnotě shrinku.
 V tabulce \ref*{tab:lostcost4} jsou procentuální hodnoty zastoupení čtyř kategorií mezi ostatními kategoriemi úrovně 4 podle velikosti shrinku. %% TODO upravit hodnoty !!!
+\begin{table}[h!]
+    \begin{center}
+            \captionsetup{justification=centering}
+    \caption{Zastoupení vybraných shrinků ve zkoumaných datech \\(kategorie Čerstvé a Velmi čerstvé).}
+    \begin{tabular}{l r}
+        Typ shrinku & Zastoupení v~kategoriích [\%]\\
+        \midrule
+        Prošlé a zkažené zboží & $64{,}97$ \\
+        Potravinová banka & $23{,}72$ \\
+        Poškození & $6{,}26$ \\
+        Zvířecí útulky & $2{,}69$ \\
+        Kompostéry &  $2{,}36$ \\
+        \end{tabular}
+    \label{tab:shrinkyZastoupeni}
+\end{center}
+\end{table}
 
-\begin{table}[hbtp!]
+\begin{table}[h!]
     \centering
     \captionsetup{justification=centering}
     \caption{Tabulka čtyř kategorií ze čtvrté úrovně produktové hierarchie podle zastoupení zaznamenané hodnoty shrinku na všech evidovaných shrincích.}
@@ -338,7 +355,7 @@ V tabulce \ref*{tab:lostcost4} jsou procentuální hodnoty zastoupení čtyř ka
     \label{tab:lostcost4}
     \end{table}
 
- Měřila jsem postupně korelaci velikosti shrinku s~různými ukazateli pro celkové tržby ostatních produktů. Pro určení míry korelace jsem zvolila Spearmanův korelační koeficient, jelikož data nesplňují předpoklady, které jsou nutné pro použití Pearsonova korelačního koeficientu - data nejsou nezávislá a stejně rozdělená. Data vybrané společnosti, také nesplňují podmínku normality, to může být dáno tím, že data pochází z~reálného světa a zaznamenávají jev, který závisí na mnoha, těžce predikovatelných faktorech. Nejprve jsem zvolila 5\% hladinu významnosti pro testování statistické významnosti koeficientů korelace $r_\mathrm{P}$ a $r_\mathrm{O}$. Výsledky ovšem ukázaly, že alespoň hodnoty třetiny produktů ve zkoumaných kategoriích  byly neprůkazné. Rozhodla jsem se tedy zvýšit hladinu významnosti na 10 \%. Zvýšení hladiny významnosti zvýšilo pravděpodobnost vzniku chyby druhého druhu, nicméně případné zařazení produktu do špatné kategorie nemá z~businessového hlediska fatální následky.
+Měřila jsem postupně korelaci velikosti shrinku s~různými ukazateli pro celkové tržby ostatních produktů. Pro určení míry korelace jsem zvolila Spearmanův korelační koeficient, jelikož data nesplňují předpoklady, které jsou nutné pro použití Pearsonova korelačního koeficientu - data nejsou nezávislá a stejně rozdělená. Data vybrané společnosti, také nesplňují podmínku normality, to může být dáno tím, že data pochází z~reálného světa a zaznamenávají jev, který závisí na mnoha, těžce predikovatelných faktorech. Nejprve jsem zvolila 5\% hladinu významnosti pro testování statistické významnosti koeficientů korelace $r_\mathrm{P}$ a $r_\mathrm{O}$. Výsledky ovšem ukázaly, že alespoň hodnoty třetiny produktů ve zkoumaných kategoriích  byly neprůkazné. Rozhodla jsem se tedy zvýšit hladinu významnosti na 10 \%. Zvýšení hladiny významnosti zvýšilo pravděpodobnost vzniku chyby druhého druhu, nicméně případné zařazení produktu do špatné kategorie nemá z~businessového hlediska fatální následky.
 
 Na obrázcích~\ref*{obr:kategCorrPorovnani} až~\ref*{obr:kategCorrPorovnaniZel} jsou porovnání výsledků kategorizace pro zmíněné tři kategorie. Pokaždé bylo spuštěno šest výpočtů. Korelace byla měřena mezi shrinky a tržbami ostatních produktů, ostatních produktů, kde prodeje byly posunuté o jeden den, dále mezi shrinky a tržbami produktů v~promoakci a produktů v~promoakci s~posunem prodejů. Varianty s~promoakcemi dále byly jak pro shrinky produktů během promoakce, tak pro během i po promoakci. Na obrázcích jsou zobrazené výsledky pro variantu během i po promoakci, protože zachytila stejně nebo více případů než varianta záznamů pouze během promoakce. 
 

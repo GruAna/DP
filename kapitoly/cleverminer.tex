@@ -1,37 +1,19 @@
 \chapter{Analýza pomocí metody 4ftMiner}
 \label{ch:cleverminer}
 
-Pomocí metody 4ftMiner, která je jednou z~metod procedury GUHA jsem provedla analýzu shrinků produktu. Tato metoda je implementovaná v~ knihovně \emph{Cleverminer} pro jazyk Python. Pracovala jsem pouze se vzorem dat jednoho měsíce a s~kategorií produktů \emph{Velmi čerstvé}, zastoupena 48 \% a \emph{Čerstvé}, zastoupena 52 \% ve vybraných datech. Princip metod, které se používají v~knihovně, a důležité pojmy týkající se GUHA procedur jsou popsány v~sekci \ref*{sec:Teorie:Guha}. Vstupními daty pro metodu GUHA byla tabulka zaznamenaných shrinků rozšířená o číselníky a sloupce s podíly zastoupení shrinků na tržbách. Tento dataset je popsán v sekci \ref{sec:priprava}.
+Pomocí metody \emph{4ftMiner}, která je jednou z~metod procedury GUHA jsem provedla analýzu shrinků produktu. Metoda umožňuje odhalit zajímavé vzory chování, které jsou obsažené v~datech ale lze je vztáhnout na celkovou zkoumanou množinu. Implementace metody se nachází v~knihovně \emph{Cleverminer} pro jazyk Python. Princip metod, které se používají v~knihovně, a důležité pojmy týkající se GUHA procedur jsou popsány v~sekci \ref*{sec:Teorie:Guha}. Vstupními daty pro metodu GUHA byla tabulka zaznamenaných shrinků rozšířená o číselníky a sloupce s~podíly zastoupení shrinků na tržbách. Tento dataset je popsán v~sekci \ref{sec:priprava}.
+Pracovala jsem pouze se vzorem dat jednoho měsíce a s~kategoriemi produktů \emph{Velmi čerstvé}, zastoupena 48 \% a \emph{Čerstvé}, zastoupena 52 \% ve vybraných datech a se shrinky typu prošlé a zkažené zboží. 
 
+První část této kapitoly se věnuje hypotézám, které mohou platit o shrincích. Hypotéza je přeformulována jako asociační pravidlo, které je následně ověřeno metodou GUHA. Druhá část se věnuje zkoumání konkrétních produktů, u kterých pomocí korelační analýzy, popsané v~kapitole \ref*{ch:korelacnianalyza}, nebyla zjištěna možná příčina shrinku.
 % Zkoumaný dataset se záznamy shrinků produktů jsem rozšířila o další sledované sloupce, které dávají do srovnání hodnotu shrinku a objem tržeb. Vytvořila jsem takto sloupce: podíl shrinku na celkových tržbách prodejny, podíl shrinku na týdenních tržbách shrinkovaného produktu na prodejně, podíl shrinku a tržeb v~kategorii úrovně 1.
 
-Na základě zastoupení jednotlivých typů shrinků, kde prošlé a zkažené zboží zaujímá téměř 65 \% shrinků, se následující analýzy zaměřují pouze na tento typ, viz tab. \ref*{tab:shrinkyZastoupeni}.
-
-\begin{table}[hbtp!]
-    \begin{center}
-            \captionsetup{justification=centering}
-    \caption{Zastoupení vybraných shrinků ve zkoumaných datech \\(kategorie Čertvé a Velmi čerstvé).}
-    \begin{tabular}{l r}
-        Typ shrinku & Zastoupení v~kategoriích [\%]\\
-        \midrule
-        Prošlé a zkažené zboží & $64{,}97$ \\
-        Potravinová banka & $23{,}72$ \\
-         Poškození & $6{,}26$ \\
-        Zvířecí útulky & $2{,}69$ \\
-        Kompostéry &  $2{,}36$ \\
-        \end{tabular}
-    \label{tab:shrinkyZastoupeni}
-\end{center}
-\end{table}
-
-Metoda pracuje pouze s~kategorickými hodnotami, proto bylo nutné kategorizovat sloupce s~hodnotou shrinku, s~množstvím shrinkovaných produktů a s~jednotlivými podíly. Na obrázcích \ref*{obr:nb:hist} až \ref{obr:nb:hist5} jsou zobrazené četnosti záznamů v~kategoriích.
+Metoda 4ftMiner pracuje pouze s~kategorickými hodnotami, proto bylo nutné kategorizovat sloupce s~hodnotou shrinku, s~množstvím shrinkovaných produktů a s~jednotlivými podíly. Na obrázcích \ref*{obr:nb:hist} až \ref{obr:nb:hist5} jsou zobrazené četnosti záznamů v~kategoriích.
 
 \begin{figure}[h!]
     \centering
     \begin{minipage}[b]{.55\textwidth}
       \centering
       \captionsetup{justification=centering}
-
       \includegraphics[width=\textwidth]{obrazky/grafy/histogram/newplot(2).png}
       \vspace*{-3em}
       \caption{Histogram pro hodnoty \\ velikosti shrinku v~peněžních jednotkách.}
@@ -47,9 +29,7 @@ Metoda pracuje pouze s~kategorickými hodnotami, proto bylo nutné kategorizovat
         \label{obr:nb:hist2}
     \end{minipage}
     \vspace*{-2em}
-
 \end{figure}
-
 
 \begin{figure}[h!]
     \centering
@@ -66,7 +46,6 @@ Metoda pracuje pouze s~kategorickými hodnotami, proto bylo nutné kategorizovat
     \begin{minipage}[b]{.55\textwidth}
         \centering
         \captionsetup{justification=centering}
-  
         \includegraphics[width=\textwidth]{obrazky/grafy/histogram/newplot(3).png}
         \vspace*{-3em}
         \caption{Histogram podílu shrinku \\a tržeb v~kategorii úrovně 1.}
@@ -239,7 +218,7 @@ Asociační pravidlo má tvar:
 Nejedná se o porovnání s~celkovými tržbami prodejny, ale pouze o týdenní tržbu těch produktů, které měly zaznamenaný v~daném týdnu shrink.
 Kategorie Drobné občerstvení má podíl shrinku na svých tžbách v~84 \% ze zaznamenaných případů mezi 10-40 \%.
 Cukrářské výrobky  mají podíl shrinku v~74 \% zaznamenaných případech také mezi 10-40 \%.
-Banány mají podíl shrinku na tržbách banánů v daném týdnu v~80 \% ze svých zaznamenaných případech do 1 \%. To znamená, že se jedná o malou část svého prodeje,
+Banány mají podíl shrinku na tržbách banánů v~daném týdnu v~80 \% ze svých zaznamenaných případech do 1 \%. To znamená, že se jedná o malou část svého prodeje,
 Více než 30 tis. záznamůs se týká kategorie Citrusů a kategorie Jádrovin. Přibližně 65 \% těchto záznamů je podíl shrinku do 1 \% na tržbách těchto produktů.
 
 Dále pro tuto hypotézu bylo oběřováno podmíněné asociační pravidlo:
@@ -247,15 +226,15 @@ Dále pro tuto hypotézu bylo oběřováno podmíněné asociační pravidlo:
     \varphi_{\mbox{\,\footnotesize Hierarchie3}} \Rightarrow \psi_{\mbox{\,\footnotesize Podíl shrinku na svých tržbách}} | \chi_{\mbox{\,\footnotesize Shrink}}
 \end{equation} 
 
-Následující tvrzení platí s více než 83\% konfidencí.
-Pokud mezi produkty, kterým byl zaznamenán dražší shrink, tj. 30-60 pěněžních jednotek, jsou produkty z kategorie Jogurty, tak podíl shrinku na jejich tržbách je mezi 10-40 \%. Totéž tvrzení platí i pro kategorii Drobného občerstvení.
+Následující tvrzení platí s~více než 83\% konfidencí.
+Pokud mezi produkty, kterým byl zaznamenán dražší shrink, tj. 30-60 peněžních jednotek, jsou produkty z~kategorie Jogurty, tak podíl shrinku na jejich tržbách je mezi 10-40 \%. Totéž tvrzení platí i pro kategorii Drobného občerstvení.
 Pokud mezi produkty, kterým byl zaznamenán levný shrink, tj. do 10 peněžních jednotek, je ovoce, tak jejich share shrinku na tržbách je do 1 \%. To samé platí o pro kategorii Kořenová zelenina.
 
 \vspace*{1em}
 
 \textbf{Hypotéza č. 7: Kategorie má vliv na zastoupení shrinku na celkových tržbách prodejny v~dané kategorii úrovně 1.}
 
-S pravděpodobností vyšší než 50 \% se toto tvrzení potvrdilo pouze u kategorie Bylinky z~úrovně 4, kdy shrink této kategorie tvoří 0.002 \% až 0.005 \% tržeb na prodejnách v kategorii Velmi čerstvé v prvním levelu produktové hierarchie.
+S pravděpodobností vyšší než 50 \% se toto tvrzení potvrdilo pouze u kategorie Bylinky z~úrovně 4, kdy shrink této kategorie tvoří 0.002 \% až 0.005 \% tržeb na prodejnách v~kategorii Velmi čerstvé v~první úrovni produktové hierarchie.
 
 \vspace*{1em}
 
@@ -267,3 +246,10 @@ Asociační pravidlo je následovné:
 \end{equation} 
 
 Záznamy uskutečněné ve středu, čtvrtek a pátek v~poslední čtvrtině měsíce, takových je přes 100 tisíc, se ze 67\% konfidencí týkají malých prodejen.
+
+\section{Produkty nepopsané korelační analýzou}
+
+Pomocí korelační analýzy byly zkoumány tři kategorie ze čtvrté úrovně produktové hierarchie, které měly zaznamenané za sledované období nejvyšší hodnotu shrinku. Jedná se o kategorie Masné výrobky -- pultový prodej, Slané pečivo a Plodová zelenina. Díky korelační analýze lze produkty z vybrané kategorie rozdělit do pěti skupin, podle toho zda hodnota shrinku produktů koreluje s tržbami jiných produktů. Jedna ze zmíněných skupin je přiřazena produktům, u kterých se nepodařilo touto metodou shrink vysvětlit. Také vzhledem k tomu, že je metoda založena na výpočtu korelace, je nutné provést na vypočtené koeficienty statistické testy významnosti. Pro některé produkty tak nelze vyslovit hypotézu o jejich zařazení do skupiny, neboť obdržený koeficient není statisticky významný. Popis metody a výsledků pro vybrané kategorie je v kapitole \ref*{ch:korelacnianalyza}.
+
+V této části jsem nástroji Cleverminer předala data týkající se pouze produktů, pro které nebyl koeficient korelace statisticky významný, nebo nebyla nalezena žádná souvislost s tržbami ostatních produktů v rámci kategorie.
+
