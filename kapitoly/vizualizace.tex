@@ -156,6 +156,33 @@ První část se věnuje pozorování na celých datech. tj. pozorovaná data za
 
 \subsection*{Pozorování na celých datech}
 
+Pořadí zastoupení shrinků jednotlivých kategorií první úrovně hierarchie na celkových tržbách v datech lze vidět na obrázku \ref*{obr:PBI:vysL1}. Je vidět, že kategorie Velmi čerstvé a Čerstvé jsou výrazně více zastoupeny než zbylé kategorie. Tabulka \ref*{tab:PBI:vysL1} obsahuje agregované důležité metriky podle sedmi hlavních kategorií.
 
+\begin{figure}[h!]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=.4\textwidth]{obrazky/PBI/vys_L1.png}
+    \caption{Power BI report -- Zastoupení kategorií na celkových tržbách ve sledovaném období.}
+    \label{obr:PBI:vysL1}
+\end{figure}
+
+\begin{table}[!ht]
+    \centering
+    \caption{Tabulka základních metrik pro kategorie první úrovně produktové hierarchie.}
+
+    \begin{tabular}{l|lllll}
+        Kategorie & Hodnota \par shrinku & Počet záznamů & Podíl na \par tržbách kategorie& Podíl na \par celkových tržbách& Tržby \par kategorie \\ 
+        \midrule
+        Very Fresh & -9879792 & 672189 & "1,8928" & "0,5600" & -1237048059 \\ 
+        Fresh & -4429461 & 474405 & "1,1298" & "0,2511" & -929181583 \\ 
+        Dry & -492461 & 51018 & "0,0814" & "0,0279" & -1434220659 \\ 
+        Cosmetics & -64028 & 3875 & "0,0546" & "0,0036 " & -277861782 \\ 
+        Non-food & -47914 & 3799 & "0,0672" & "0,0027 " & -168868638 \\ 
+        Other & -13572 & 307 & "0,3724" & "0,0008" & -8637684 \\ 
+        Tobacco & -546 & 30 & "0,0010" & "0,0000 " & -125734644 \\ 
+    \end{tabular}
+    \label{tab:PBI:vysL1}
+
+\end{table}
 
 \label{sec:vizualizace:vysl}

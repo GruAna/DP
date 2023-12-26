@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1703612921 "c:/Users/uzivatel/Documents/skola/DP/DP_Gruberova.tex" "DP_Gruberova.pdf" "DP_Gruberova" 1703612935
+["pdflatex"] 1703614326 "c:/Users/uzivatel/Documents/skola/DP/DP_Gruberova.tex" "DP_Gruberova.pdf" "DP_Gruberova" 1703614338
   "C:/Users/uzivatel/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1689942807 82686 2381c3433487640bf26aa76a10db7eb2 ""
   "C:/Users/uzivatel/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1667471210 10789789 02d9a8b514ec08d575e4cf0e33c1259e ""
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc" 1256929440 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
@@ -250,10 +250,10 @@
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656233319 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1650047684 2245 c8a4088d07cffc2e5207730c738edd76 ""
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1650047684 20785 71a3d72ab517959a6979c27e6176bec1 ""
-  "DP_Gruberova.aux" 1703612934 29584 a2e4c790b812ff35bc89363331292d3d "pdflatex"
-  "DP_Gruberova.out" 1703612934 5496 c67b6f2b4378a8c976b41fd52dedf663 "pdflatex"
+  "DP_Gruberova.aux" 1703614337 30320 c85adc00eb50dd96b0431d35021e8cee "pdflatex"
+  "DP_Gruberova.out" 1703614337 5496 b075988ed6749b2281b62625888bf180 "pdflatex"
   "DP_Gruberova.tex" 1703585200 10729 1001f2a22f7f2adc9d75cc5c1ebac3d2 ""
-  "DP_Gruberova.toc" 1703612934 3901 f27543f455b27ae1fab6f65282e83b3a "pdflatex"
+  "DP_Gruberova.toc" 1703614337 3901 4a12d37e83808e47a4506b53e74a2d14 "pdflatex"
   "c:/Users/uzivatel/Documents/skola/DP/DP_Gruberova.tex" 1703585200 10729 1001f2a22f7f2adc9d75cc5c1ebac3d2 ""
   "kapitoly/analyzy_mesic.tex" 1703585165 33330 99f0c70396c5dafb946b91fa5748362e ""
   "kapitoly/cleverminer.tex" 1703612919 31569 3f6ef032d4cfb4d6d8be5145a87fb2a3 ""
@@ -263,7 +263,7 @@
   "kapitoly/shrinky.tex" 1703242425 8528 586cb9a689a0da5be6523109089f7d04 ""
   "kapitoly/teorie.tex" 1702985984 16536 ac2de1b6389dbe5ea9b008e273267168 ""
   "kapitoly/uvod.tex" 1700990233 641 19c2b09fedf71c20b96afed370eeb120 ""
-  "kapitoly/vizualizace.tex" 1703608782 16783 71eee70377f41540c71733ab0b55e3a4 ""
+  "kapitoly/vizualizace.tex" 1703614323 18366 614785f2b094356512a216b02f6e21a7 ""
   "kapitoly/zaver.tex" 1667468236 19 a36f3ccfd7f6727b2df83bb47daf5060 ""
   "obrazky/3M.jpg" 1668955934 51246 7ca27bd8a57acc9bf708462b4e30e569 ""
   "obrazky/GUHA/GUHA1.pdf" 1702985984 27657 db175e68c42ea6bf163e8085e709796b ""
@@ -278,6 +278,7 @@
   "obrazky/PBI/storesSFF.png" 1703252783 132537 423f7a52dc62f0b8e9bd26742826128b ""
   "obrazky/PBI/tabulkaukzka.png" 1703247408 30976 03e3643109ec7973dd00109bcdec43f4 ""
   "obrazky/PBI/timeSFF.png" 1703256231 95215 aa90e8e3628e7eb9350633b815afccbf ""
+  "obrazky/PBI/vys_L1.png" 1703613490 12771 fd471af22d7ce05eab495e27a2b949bf ""
   "obrazky/PCA.pdf" 1702985984 32330 6b6ecae047d290ead86253d5ee8f020c ""
   "obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf" 1702985984 1556523 47d95be89e7de1b8601acd4020aa0e50 ""
   "obrazky/grafy/histogram/newplot(1).png" 1702985984 25787 1f1c65276375de71b6ec5a01842615c2 ""
