@@ -216,12 +216,12 @@ Asociační pravidlo má tvar:
 \end{equation}
 
 Nejedná se o porovnání s~celkovými tržbami prodejny, ale pouze o týdenní tržbu těch produktů, které měly zaznamenaný v~daném týdnu shrink.
-Kategorie Drobné občerstvení má podíl shrinku na svých tžbách v~84 \% ze zaznamenaných případů mezi 10-40 \%.
+Kategorie Drobné občerstvení má podíl shrinku na svých tržbách v~84 \% ze zaznamenaných případů mezi 10-40 \%.
 Cukrářské výrobky  mají podíl shrinku v~74 \% zaznamenaných případech také mezi 10-40 \%.
 Banány mají podíl shrinku na tržbách banánů v~daném týdnu v~80 \% ze svých zaznamenaných případech do 1 \%. To znamená, že se jedná o malou část svého prodeje,
-Více než 30 tis. záznamůs se týká kategorie Citrusů a kategorie Jádrovin. Přibližně 65 \% těchto záznamů je podíl shrinku do 1 \% na tržbách těchto produktů.
+Více než 30 tis. záznamů se týká kategorie Citrusů a kategorie Jádrovin. Přibližně 65 \% těchto záznamů je podíl shrinku do 1 \% na tržbách těchto produktů.
 
-Dále pro tuto hypotézu bylo oběřováno podmíněné asociační pravidlo:
+Dále pro tuto hypotézu bylo ověřováno podmíněné asociační pravidlo:
 \begin{equation}
     \varphi_{\mbox{\,\footnotesize Hierarchie3}} \Rightarrow \psi_{\mbox{\,\footnotesize Podíl shrinku na svých tržbách}} | \chi_{\mbox{\,\footnotesize Shrink}}
 \end{equation} 
@@ -242,8 +242,9 @@ S pravděpodobností vyšší než 50 \% se toto tvrzení potvrdilo pouze u kate
 
 Asociační pravidlo je následovné:
 \begin{equation}
-    \varphi_{\mbox{\,\footnotesize }} \Rightarrow \psi_{\mbox{\,\footnotesize Podíl shrinku na svých tržbách}} | \chi_{\mbox{\,\footnotesize Shrink}}
+    \varphi_{\mbox{\,\footnotesize Den v týdnu}} \land  \varphi_{\mbox{\,\footnotesize Čtvtina měsíce}} \Rightarrow \psi_{\mbox{\,\footnotesize Typ prodejny}}
 \end{equation} 
+V případě antecedentu je možné uvažovat minimální délku jeden boolovský atribut, maximální dva. Je tedy možné, že nalezené pravidlo se může týkat pouze jednoho ze dvou boolovský atributů v antecedentu.
 
 Záznamy uskutečněné ve středu, čtvrtek a pátek v~poslední čtvrtině měsíce, takových je přes 100 tisíc, se ze 67\% konfidencí týkají malých prodejen.
 
@@ -252,4 +253,149 @@ Záznamy uskutečněné ve středu, čtvrtek a pátek v~poslední čtvrtině mě
 Pomocí korelační analýzy byly zkoumány tři kategorie ze čtvrté úrovně produktové hierarchie, které měly zaznamenané za sledované období nejvyšší hodnotu shrinku. Jedná se o kategorie Masné výrobky -- pultový prodej, Slané pečivo a Plodová zelenina. Díky korelační analýze lze produkty z vybrané kategorie rozdělit do pěti skupin, podle toho zda hodnota shrinku produktů koreluje s tržbami jiných produktů. Jedna ze zmíněných skupin je přiřazena produktům, u kterých se nepodařilo touto metodou shrink vysvětlit. Také vzhledem k tomu, že je metoda založena na výpočtu korelace, je nutné provést na vypočtené koeficienty statistické testy významnosti. Pro některé produkty tak nelze vyslovit hypotézu o jejich zařazení do skupiny, neboť obdržený koeficient není statisticky významný. Popis metody a výsledků pro vybrané kategorie je v kapitole \ref*{ch:korelacnianalyza}.
 
 V této části jsem nástroji Cleverminer předala data týkající se pouze produktů, pro které nebyl koeficient korelace statisticky významný, nebo nebyla nalezena žádná souvislost s tržbami ostatních produktů v rámci kategorie.
+
+Antecedent asociačního pravidla obsahuje boolovské atributy: 
+$    \varphi_{\mbox{\,\footnotesize Produkt }}      $ , 
+$    \varphi_{\mbox{\,\footnotesize Typ promoakce}} $ a 
+$    \varphi_{\mbox{\,\footnotesize Prodej}}$. 
+Z těchto atributů mohlo být vybráno jeden až tři atributy pro vytvoření asociační pravidla. Sukcedent byl tvořen všemi možnými sloupci ve vstupních datech a skládat se mohl z jednoho až čtyř boolovských atributů těchto sloupců.
+
+\textbf{Masné produkty -- pultový prodej}
+
+Všechny produkty měly zaznamenaný shrink do jednoho kusu. 
+Z produktů, které neměly statisticky významný koeficient, sedm z nich bylo evidovaných pouze v okrese hlavní město Praha a jedná se o produkty, které nebyly v promoakci, ale zároveň měli evidované prodeje během sledovaného období. Pro pět z nich dále platí, že s více než $80\%$ konfidencí pochází záznamy z menších prodejen.
+Pro produkt Klobása ostravská platí, že pokud byl v období po promoakci byl vyhazován na malých prodejnách ($97\%$ konfidence), zatímco na velkých prodejných byl vyhazován, když v promoakci nebyl ($89\%$ konfidence). 
+O produktu Slanina uzená lze tvrdit z dat, že s $63\%$ konfidencí se vyhazuje na malých prodejnách. Všechny záznamy se týkají nepromočního období produktu. $40\%$ dat bylo zaznamenáno v poslední čtvrtině sledovaného měsíce. 
+Produkt Salám točený pikantní bylo zjištěno, že byl vyhazován se $ 73\%$ konfidencí na malých prodejnách, a to jak během probíhající promoakce, tak po ní  i v období, kdy v promoakci nebyl. 
+
+Co se týče deseti produktů, u kterých nebyla zjištěna závislost na prodejích ostatních produktů, až na jeden produkt, všechny tyto produkty neměly ve sledovaném období promoakci, ale měly záznamy o prodejích v tomto období. Čtyři produkty byly zaznamenány na velkých prodejnách, jeden z nich pouze na prodejnách v Praze. $81\%$ záznamů produktu Párky královské, byly zaznamenány v první čtvrtině v měsíci, kdy nebyly v promoakci. Naopak pro Šunku prosciutto platí, že v 60\% záznamů byla vyhazována pouze na konci měsíce a z $94\%$ pouze na malých prodejnách. Pro zbylé produkty nebylo nalezeno žádné pravidlo s vysokou konfidencí z důvodu velmi malého počtu záznamů -- méně něž pět záznamů.
+
+%  27571774 26835624 Všechny záznamy se týkaly pouze regionu Praha, a to v objemu do jednoho kusu.
+% 1     7 1.000 +0.000 product_id(27571774) & saled(True) => region(Praha) | ---
+% 2     7 1.000 +0.000 product_id(27571774) & saled(True) => size_bins((500000,2000000)) | ---
+% 3     7 1.000 +0.000 product_id(27571774) & saled(True) => amount_bins((-0.99,0)) | ---
+% 4     7 1.000 +0.000 product_id(27571774) & saled(True) & promo(no promo) => region(Praha) | ---
+% 5     7 1.000 +0.000 product_id(27571774) & saled(True) & promo(no promo) => size_bins((500000,2000000)) | ---
+% 6     7 1.000 +0.000 product_id(27571774) & saled(True) & promo(no promo) => amount_bins((-0.99,0)) | ---
+% 7     7 1.000 +0.000 product_id(27571774) & promo(no promo) => region(Praha) | ---
+% 8     7 1.000 +0.000 product_id(27571774) & promo(no promo) => size_bins((500000,2000000)) | ---
+% 9     7 1.000 +0.000 product_id(27571774) & promo(no promo) => amount_bins((-0.99,0)) | ---
+% 10     7 1.000 +0.000 saled(True) & promo(no promo) => region(Praha) | ---
+% 11     7 1.000 +0.000 saled(True) & promo(no promo) => size_bins((500000,2000000)) | ---
+% 12     7 1.000 +0.000 saled(True) & promo(no promo) => amount_bins((-0.99,0)) | ---
+% 26835587 27571798 26448664 25961225 25069518- SM
+
+% 20408756
+% 1   474 0.960 +0.000 product_id(20408756) & saled(True) => amount_bins((-0.99,0)) | ---
+% 2   259 0.970 +0.313 product_id(20408756) & saled(True) & promo(after_promo) => warehouse_type(SM) | ---
+% 3   259 0.970 +0.011 product_id(20408756) & saled(True) & promo(after_promo) => amount_bins((-0.99,0)) | ---
+% 4   117 0.886 +2.394 product_id(20408756) & saled(True) & promo(no promo) => warehouse_type(HM) | ---
+% 5   124 0.939 -0.021 product_id(20408756) & saled(True) & promo(no promo) => amount_bins((-0.99,0)) | ---
+% 6   259 0.970 +0.313 product_id(20408756) & promo(after_promo) => warehouse_type(SM) | ---
+% 7   259 0.970 +0.011 product_id(20408756) & promo(after_promo) => amount_bins((-0.99,0)) | ---
+% 8   117 0.886 +2.394 product_id(20408756) & promo(no promo) => warehouse_type(HM) | ---
+% 9   124 0.939 -0.021 product_id(20408756) & promo(no promo) => amount_bins((-0.99,0)) | ---
+% 10   259 0.970 +0.313 saled(True) & promo(after_promo) => warehouse_type(SM) | ---
+% 11   259 0.970 +0.011 saled(True) & promo(after_promo) => amount_bins((-0.99,0)) | ---
+% 12   117 0.886 +2.394 saled(True) & promo(no promo) => warehouse_type(HM) | ---
+% 13   124 0.939 -0.021 saled(True) & promo(no promo) => amount_bins((-0.99,0)) | ---
+
+% 20402082
+% RULEID BASE  CONF  AAD    Rule
+%      1   314 0.981 +0.000 product_id(20402082) & saled(True) => amount_bins((-0.99,0)) | ---
+%      2   314 0.981 +0.000 product_id(20402082) & saled(True) & promo(no promo) => amount_bins((-0.99,0)) | ---
+%      3   314 0.981 +0.000 product_id(20402082) & promo(no promo) => amount_bins((-0.99,0)) | ---
+%      4   314 0.981 +0.000 saled(True) & promo(no promo) => amount_bins((-0.99,0)) | ---
+%      1   201 0.628 +0.000 product_id(20402082) & saled(True) => warehouse_type(SM) | ---
+
+
+%      26771380
+%      RULEID BASE  CONF  AAD    Rule
+%      1  1555 0.729 +0.000 product_id(26771380) & saled(True) => warehouse_type(SM) | ---
+%      2  2100 0.984 +0.000 product_id(26771380) & saled(True) => amount_bins((-0.99,0)) | ---
+%      3   526 0.728 +1.952 product_id(26771380) & saled(True) & promo(after_promo) => quarter(2) | ---
+%      4   706 0.976 -0.008 product_id(26771380) & saled(True) & promo(after_promo) => amount_bins((-0.99,0)) | ---
+%      5   684 0.936 +0.284 product_id(26771380) & saled(True) & promo(no promo) => warehouse_type(SM) | ---
+%      6   722 0.988 +0.004 product_id(26771380) & saled(True) & promo(no promo) => amount_bins((-0.99,0)) | ---
+%      7   503 0.740 +2.138 product_id(26771380) & saled(True) & promo(promo) => quarter(1) | ---
+%      8   491 0.722 -0.009 product_id(26771380) & saled(True) & promo(promo) => warehouse_type(SM) | ---
+%      9   672 0.988 +0.004 product_id(26771380) & saled(True) & promo(promo) => amount_bins((-0.99,0)) | ---
+%     10   526 0.728 +1.952 product_id(26771380) & promo(after_promo) => quarter(2) | ---
+%     11   706 0.976 -0.008 product_id(26771380) & promo(after_promo) => amount_bins((-0.99,0)) | ---
+%     12   684 0.936 +0.284 product_id(26771380) & promo(no promo) => warehouse_type(SM) | ---
+%     13   722 0.988 +0.004 product_id(26771380) & promo(no promo) => amount_bins((-0.99,0)) | ---
+%     14   503 0.740 +2.138 product_id(26771380) & promo(promo) => quarter(1) | ---
+%     15   491 0.722 -0.009 product_id(26771380) & promo(promo) => warehouse_type(SM) | ---
+%     16   672 0.988 +0.004 product_id(26771380) & promo(promo) => amount_bins((-0.99,0)) | ---
+%     17   526 0.728 +1.952 saled(True) & promo(after_promo) => quarter(2) | ---
+%     18   706 0.976 -0.008 saled(True) & promo(after_promo) => amount_bins((-0.99,0)) | ---
+%     19   684 0.936 +0.284 saled(True) & promo(no promo) => warehouse_type(SM) | ---
+%     20   722 0.988 +0.004 saled(True) & promo(no promo) => amount_bins((-0.99,0)) | ---
+%     21   503 0.740 +2.138 saled(True) & promo(promo) => quarter(1) | ---
+%     22   491 0.722 -0.009 saled(True) & promo(promo) => warehouse_type(SM) | ---
+%     23   672 0.988 +0.004 saled(True) & promo(promo) => amount_bins((-0.99,0)) | ---
+
+%     none
+%     27739174 PROSCIUTTO COTTO VÁHALA
+%     1  1355 0.601 +0.000 product_id(27739174) & saled(True) => quarter(4) | ---
+%     2  2115 0.938 +0.000 product_id(27739174) & saled(True) => warehouse_type(SM) | ---
+%     3  2256 1.000 +0.000 product_id(27739174) & saled(True) => amount_bins((-0.99,0)) | ---
+%     4  1355 0.601 +0.000 product_id(27739174) & saled(True) & promo(no promo) => quarter(4) | ---
+%     5  2115 0.938 +0.000 product_id(27739174) & saled(True) & promo(no promo) => warehouse_type(SM) | ---
+%     6  2256 1.000 +0.000 product_id(27739174) & saled(True) & promo(no promo) => amount_bins((-0.99,0)) | ---
+%     7  1355 0.601 +0.000 product_id(27739174) & promo(no promo) => quarter(4) | ---
+%     8  2115 0.938 +0.000 product_id(27739174) & promo(no promo) => warehouse_type(SM) | ---
+%     9  2256 1.000 +0.000 product_id(27739174) & promo(no promo) => amount_bins((-0.99,0)) | ---
+%    10  1355 0.601 +0.000 saled(True) & promo(no promo) => quarter(4) | ---
+%    11  2115 0.938 +0.000 saled(True) & promo(no promo) => warehouse_type(SM) | ---
+%    12  2256 1.000 +0.000 saled(True) & promo(no promo) => amount_bins((-0.99,0)) | ---
+
+% 26831824 jeden záznam  ZIPSER KLOBÁSA S JELENÍM MASEM
+
+% 22601247 ŠUNKOVÁ KLOBÁSA
+% 1   759 0.990 +0.000 product_id(22601247) & saled(True) => amount_bins((-0.99,0)) | ---
+% 2   221 0.940 +0.364 product_id(22601247) & saled(True) & promo(after_promo) => warehouse_type(SM) | ---
+% 3   220 0.936 +0.363 product_id(22601247) & saled(True) & promo(after_promo) => warehouse_type(SM) & amount_bins((-0.99,0)) | ---
+% 4   234 0.996 +0.006 product_id(22601247) & saled(True) & promo(after_promo) => amount_bins((-0.99,0)) | ---
+% 5   203 0.898 +1.895 product_id(22601247) & saled(True) & promo(no promo) => warehouse_type(HM) | ---
+% 6   197 0.872 +1.882 product_id(22601247) & saled(True) & promo(no promo) => warehouse_type(HM) & amount_bins((-0.99,0)) | ---
+% 7   220 0.973 -0.016 product_id(22601247) & saled(True) & promo(no promo) => amount_bins((-0.99,0)) | ---
+% 8   285 0.931 +0.350 product_id(22601247) & saled(True) & promo(promo) => warehouse_type(SM) | ---
+% 9   284 0.928 +0.351 product_id(22601247) & saled(True) & promo(promo) => warehouse_type(SM) & amount_bins((-0.99,0)) | ---
+% 10   305 0.997 +0.007 product_id(22601247) & saled(True) & promo(promo) => amount_bins((-0.99,0)) | ---
+% 11   221 0.940 +0.364 product_id(22601247) & promo(after_promo) => warehouse_type(SM) | ---
+% 12   220 0.936 +0.363 product_id(22601247) & promo(after_promo) => warehouse_type(SM) & amount_bins((-0.99,0)) | ---
+% 13   234 0.996 +0.006 product_id(22601247) & promo(after_promo) => amount_bins((-0.99,0)) | ---
+% 14   203 0.898 +1.895 product_id(22601247) & promo(no promo) => warehouse_type(HM) | ---
+% 15   197 0.872 +1.882 product_id(22601247) & promo(no promo) => warehouse_type(HM) & amount_bins((-0.99,0)) | ---
+% 16   220 0.973 -0.016 product_id(22601247) & promo(no promo) => amount_bins((-0.99,0)) | ---
+% 17   285 0.931 +0.350 product_id(22601247) & promo(promo) => warehouse_type(SM) | ---
+% 18   284 0.928 +0.351 product_id(22601247) & promo(promo) => warehouse_type(SM) & amount_bins((-0.99,0)) | ---
+% 19   305 0.997 +0.007 product_id(22601247) & promo(promo) => amount_bins((-0.99,0)) | ---
+% 20   221 0.940 +0.364 saled(True) & promo(after_promo) => warehouse_type(SM) | ---
+% 21   220 0.936 +0.363 saled(True) & promo(after_promo) => warehouse_type(SM) & amount_bins((-0.99,0)) | ---
+% 22   234 0.996 +0.006 saled(True) & promo(after_promo) => amount_bins((-0.99,0)) | ---
+% 23   203 0.898 +1.895 saled(True) & promo(no promo) => warehouse_type(HM) | ---
+% 24   197 0.872 +1.882 saled(True) & promo(no promo) => warehouse_type(HM) & amount_bins((-0.99,0)) | ---
+% 25   220 0.973 -0.016 saled(True) & promo(no promo) => amount_bins((-0.99,0)) | ---
+% 26   285 0.931 +0.350 saled(True) & promo(promo) => warehouse_type(SM) | ---
+% 27   284 0.928 +0.351 saled(True) & promo(promo) => warehouse_type(SM) & amount_bins((-0.99,0)) | ---
+% 28   305 0.997 +0.007 saled(True) & promo(promo) => amount_bins((-0.99,0)) | ---
+
+% 26807089 KRÁLOVSKÉ PÁRKY
+% 1   130 0.833 +0.219 product_id(26807089) & size_bins((0,10000)) => warehouse_type(SM) | ---
+% 2   130 0.833 +0.219 product_id(26807089) & size_bins((0,10000)) & saled(True) => warehouse_type(SM) | ---
+% 3   160 0.804 +0.176 product_id(26807089) & size_bins((100000,500000)) => warehouse_type(SM) | ---
+% 4   160 0.804 +0.176 product_id(26807089) & size_bins((100000,500000)) & saled(True) => warehouse_type(SM) | ---
+% 5   237 0.814 +2.644 product_id(26807089) & saled(True) & promo(no promo) => quarter(1) | ---
+% 6   237 0.814 +2.644 product_id(26807089) & promo(no promo) => quarter(1) | ---
+% 7   130 0.833 +0.219 size_bins((0,10000)) & saled(True) => warehouse_type(SM) | ---
+% 8   160 0.804 +0.176 size_bins((100000,500000)) & saled(True) => warehouse_type(SM) | ---
+% 9   237 0.814 +2.644 saled(True) & promo(no promo) => quarter(1) | ---
+
+% 27737033 hodnota do mezi 10 a  20 peneznich jednotek  POMLÁZKOVÁ KLOBÁSA OA
+% 27722930 praha velké prodejny, bez promoce SALÁM CHORIZO
+% 27736982 prodávané, velké prodejny, bez promoce  SLAVNOSTNÍ KLOBÁSA
+% 27738504 prodávané, velké prodejny, bez promoce SULCOVÝ DORT "LE BUFFET"
+% 27738733 prodávané, velké prodejny, bez promoce  PRAVÁ UZENÁ ORAVSKÁ SLANINA
 

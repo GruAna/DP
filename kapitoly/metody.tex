@@ -311,7 +311,7 @@ Pro podrobnější popis procedur je nejprve třeba definovat několik pojmů, s
 
     \item \textbf{Literál} -- Základní boolovský atribut nebo jeho negace.
     \item \textbf{Dílčí cedent} -- Konjunkce nebo disjunkce literálů.
-    \item \textbf{Cedent} -- Jedná se o konjunkci dílčích cedentů. Příkladem cedentu je booleovský atribut, který vznikl konkujnkcí a disjunkcí dalších atributů.
+    \item \textbf{Cedent} -- Jedná se o konjunkci dílčích cedentů. Příkladem cedentu je booleovský atribut, který vznikl konjunkcí a disjunkcí dalších atributů.
 
 \end{itemize}
 
@@ -380,7 +380,7 @@ Pro podmíněné AP $\varphi \approx \psi | \chi$ platí obdobné vztahy. Předp
 
 V dokumentaci \cite{bib:GUHA} je popsáno sedm procedur -- \emph{4ft-Miner,  SD4ft-Miner, CF-Miner, SDCF-Miner,  KL-Miner,  SDKL-Miner,  Ac4ft-Miner} \cite{bib:GUHA}. V knihovně v jazyce Python jsou implementované pouze metody \emph{4ft-Miner, SD4ft-Miner, CF-Miner} \cite{bib:GUHAclever}. V této práci jsem použila metodu pouze první metodu, proto další je další teoretický popis věnován pouze metodě \emph{4ft-Miner}.
 
-Tato procedura pracuje s AP $\varphi \approx \psi$, nebo s podmíněnými AP $\varphi \approx \psi | \chi$. V knihovně \emph{Cleverminer} lze v hlavní funkci \texttt{cleverminer} předat vstupní DataFrame s daty, který reprezentuje vstupní matici dat, další parametr je jedna ze tří implementovaných procedur, dále seznam podmínek pro vyhodnocení tvrzení, vyplnutí optimalizace, limit pro výsledná tvrzení a seznam cedentů. Cedenty jsou rozdělny na antecedenty (parametr \texttt{ante}, tj. boolovský atribut $\varphi$), sukcedenty (parametr \texttt{succ}, tj. atribut $\psi$) a podmínky (parametr \texttt{cond}, tj. boolovský atribut $\chi$).
+Tato procedura pracuje s AP $\varphi \approx \psi$, nebo s podmíněnými AP $\varphi \approx \psi | \chi$. V knihovně \emph{Cleverminer} lze v hlavní funkci \texttt{cleverminer} předat vstupní DataFrame s daty, který reprezentuje vstupní matici dat, další parametr je jedna ze tří implementovaných procedur, dále seznam podmínek pro vyhodnocení tvrzení, vypnutí optimalizace, limit pro výsledná tvrzení a seznam cedentů. Cedenty jsou rozděleny na antecedenty (parametr \texttt{ante}, tj. boolovský atribut $\varphi$), sukcedenty (parametr \texttt{succ}, tj. atribut $\psi$) a podmínky (parametr \texttt{cond}, tj. boolovský atribut $\chi$).
 Každý z boolovských atributů libovolného typu cedentu může mít tyto atributy:
 \begin{itemize}
     \itemsep0em
@@ -392,7 +392,7 @@ Každý z boolovských atributů libovolného typu cedentu může mít tyto atri
 
 Příznaky musí být kategorické a musí být možné je seřadit. Druhá vlastnost je třeba pro vybírání více kategorií v jednom cedentu určitými způsoby selekce. Pro textové řetězce reprezentující kategorie jsou názvy kategorií řazeny podle abecedy.\cite{bib:GUHAclever}
 
-Pro názornost jsou dále uvedeny příklady pro jendotlivé druhy atributu \texttt{type}. Nechť je dán příznak $\mathbf{A}$ s kategoriemi 1, 2, 3, 4, 5 a parametry jsou definovány následovně: \texttt{minlen=1}, \texttt{minlen=3}. Pokud je typ \texttt{one}, bere se jedna z kategorií daného příznaku, tuto kategorii je třeba specifikovat. Pro typ \texttt{subset} jsou vybrány všechny následující možnosti:
+Pro názornost jsou dále uvedeny příklady pro jednotlivé druhy atributu \texttt{type}. Nechť je dán příznak $\mathbf{A}$ s kategoriemi 1, 2, 3, 4, 5 a parametry jsou definovány následovně: \texttt{minlen=1}, \texttt{minlen=3}. Pokud je typ \texttt{one}, bere se jedna z kategorií daného příznaku, tuto kategorii je třeba specifikovat. Pro typ \texttt{subset} jsou vybrány všechny následující možnosti:
 \begin{itemize}
     \itemsep0em
     \item Délka je rovna 1 --  $\mathbf{A(1), A(2), A(3), A(4), A(5)}.$
@@ -416,9 +416,9 @@ Pro typ \texttt{lcut} se vybírají možnosti:
     \item Délka je rovna 2 --  $\mathbf{A(1, 2)}.$
     \item Délka je rovna 3 --  $\mathbf{A(1, 2, 3)}$.\cite{bib:GUHA}
 \end{itemize}
-Anlogicky pro typ \texttt{rcut}.
+Analogicky pro typ \texttt{rcut}.
 
-Literály v rámci cedentů lze také kombinovat obdobnými způsoby. Opět lze přiřa-\\dit minimální a maximální délku, typ pro kombinování leterálů je výběr konkunkce, nebo disjunkce. Tyto monžosti lze zpecifikovat pro antecedenty, sukcedenty i pod-\\mínky. Zadání podmínek není nezbytné v atributech funkce \texttt{cleverminer}.
+Literály v rámci cedentů lze také kombinovat obdobnými způsoby. Opět lze přiřa-\\dit minimální a maximální délku, typ pro kombinování literálů je výběr konjunkce, nebo disjunkce. Tyto možnosti lze specifikovat pro antecedenty, sukcedenty i pod-\\mínky. Zadání podmínek není nezbytné v atributech funkce \texttt{cleverminer}.
 
 Další parametry, které lze předat této funkci jsou:
 \begin{itemize}
