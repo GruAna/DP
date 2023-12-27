@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  27 DEC 2023 10:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  27 DEC 2023 14:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1592,19 +1592,67 @@ File: obrazky/PBI/productdetail.png Graphic file (type png)
 Package pdftex.def Info: obrazky/PBI/productdetail.png  used on input line 147.
 (pdftex.def)             Requested size: 426.79134pt x 238.19365pt.
  [84 <./obrazky/PBI/timeSFF.png> <./obrazky/PBI/productdetail.png>]
-<obrazky/PBI/vys_L1.png, id=1313, 364.36125pt x 282.30469pt>
+Overfull \hbox (1.03906pt too wide) in paragraph at lines 160--163
+\OT1/lmr/m/n/12 ^^Tcerstv^^Se a []Cerstv^^Se jsou v^^Syrazn^^Te v^^S^^Pce za-stou-peny ne^^Tz zbyl^^Se ka-te-go-rie. Na t^^Sem^^Tze obr^^Sazku
+ []
+
+<obrazky/PBI/vys_L1.png, id=1313, 617.30624pt x 208.52907pt>
 File: obrazky/PBI/vys_L1.png Graphic file (type png)
 <use obrazky/PBI/vys_L1.png>
-Package pdftex.def Info: obrazky/PBI/vys_L1.png  used on input line 164.
-(pdftex.def)             Requested size: 256.0774pt x 198.41313pt.
+Package pdftex.def Info: obrazky/PBI/vys_L1.png  used on input line 167.
+(pdftex.def)             Requested size: 426.79134pt x 144.17476pt.
+<obrazky/PBI/l3l4.png, id=1314, 168.63pt x 61.4295pt>
+File: obrazky/PBI/l3l4.png Graphic file (type png)
+<use obrazky/PBI/l3l4.png>
+Package pdftex.def Info: obrazky/PBI/l3l4.png  used on input line 175.
+(pdftex.def)             Requested size: 426.79134pt x 155.478pt.
 
-Overfull \hbox (16.86772pt too wide) in paragraph at lines 173--186
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (16.86772pt too wide) in paragraph at lines 186--199
  [][] 
  []
 
-) [85 <./obrazky/PBI/vys_L1.png>] [86] (kapitoly/zaver.tex) [87
 
-] (tex/bibliografie1.tex [88
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[85 <./obrazky/PBI/vys_L1.png>]
+Overfull \hbox (31.70483pt too wide) in paragraph at lines 206--221
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<obrazky/PBI/location.png, id=1322, 270.7716pt x 92.7465pt>
+File: obrazky/PBI/location.png Graphic file (type png)
+<use obrazky/PBI/location.png>
+Package pdftex.def Info: obrazky/PBI/location.png  used on input line 227.
+(pdftex.def)             Requested size: 426.79134pt x 146.19821pt.
+
+Underfull \vbox (badness 3108) has occurred while \output is active []
+
+ [86 <./obrazky/PBI/l3l4.png>]
+<obrazky/PBI/vsLoc.png, id=1330, 99.2508pt x 114.9093pt>
+File: obrazky/PBI/vsLoc.png Graphic file (type png)
+<use obrazky/PBI/vsLoc.png>
+Package pdftex.def Info: obrazky/PBI/vsLoc.png  used on input line 239.
+(pdftex.def)             Requested size: 106.69783pt x 123.53033pt.
+<obrazky/PBI/normTypes.png, id=1331, 101.6598pt x 54.4434pt>
+File: obrazky/PBI/normTypes.png Graphic file (type png)
+<use obrazky/PBI/normTypes.png>
+Package pdftex.def Info: obrazky/PBI/normTypes.png  used on input line 246.
+(pdftex.def)             Requested size: 213.39566pt x 114.2863pt.
+ [87 <./obrazky/PBI/location.png>]
+<obrazky/PBI/topwhs.png, id=1339, 145.5036pt x 57.3342pt>
+File: obrazky/PBI/topwhs.png Graphic file (type png)
+<use obrazky/PBI/topwhs.png>
+Package pdftex.def Info: obrazky/PBI/topwhs.png  used on input line 257.
+(pdftex.def)             Requested size: 426.79134pt x 168.17642pt.
+) [88 <./obrazky/PBI/vsLoc.png> <./obrazky/PBI/normTypes.png> <./obrazky/PBI/topwhs.png>] (kapitoly/zaver.tex) [89
+
+] (tex/bibliografie1.tex [90
 
 
 ]
@@ -1637,7 +1685,7 @@ Underfull \hbox (badness 6893) in paragraph at lines 35--36
 \OT1/lmr/m/n/12 Di-plo-mov^^Sa pr^^Sace. Olo-mouc: UPOL. 2013 [cit. 2023-12-18]. Do-stupn^^Se
  []
 
-[89]
+[91]
 Underfull \hbox (badness 3601) in paragraph at lines 52--53
 []\OT1/lmr/m/n/12 ABDI, Herv^^Se, VA-LEN-TIN, Do-mi-nique. \OT1/lmr/m/it/12 Mul-tiple corre-spon-dence ana-ly-
  []
@@ -1652,7 +1700,7 @@ Underfull \hbox (badness 3679) in paragraph at lines 52--53
 \OT1/lmr/m/n/12 [cit. 2023-03-05]. Do-stupn^^Se z: []$\OT1/lmtt/m/n/12 https : / / personal . utdallas . edu / []Herve /
  []
 
-[90]
+[92]
 Underfull \hbox (badness 5288) in paragraph at lines 92--93
 []\OT1/lmr/m/n/12 BAIJAYANTA, Roy., \OT1/lmr/m/it/12 All about Ca-te-go-ri-cal Va-ri-a-ble En-co-ding  \OT1/lmr/m/n/12 [on-
  []
@@ -1717,9 +1765,9 @@ Underfull \hbox (badness 1137) in paragraph at lines 123--124
 \OT1/lmr/m/n/12 line]. [cit. 2023-12-10]. Do-stupn^^Se z: []$\OT1/lmtt/m/n/12 https : / / docs . scipy . org / doc / scipy /
  []
 
-[91]) [92]
+[93]) [94]
 P\v {r}\'{\i }loha A.
-[93
+[95
 
 ] (DP_Gruberova.aux)
 
@@ -1729,20 +1777,20 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `DP_Gruberova.out' has not changed.
-(rerunfilecheck)             Checksum: B075988ED6749B2281B62625888BF180;5496.
+(rerunfilecheck)             Checksum: 63A3204609EE7A5BD5F7DE0BBD8DBF09;5496.
  ) 
 Here is how much of TeX's memory you used:
- 29831 strings out of 475380
- 553846 string characters out of 2775356
- 1627258 words of memory out of 3000000
- 50161 multiletter control sequences out of 15000+600000
+ 29880 strings out of 475380
+ 554924 string characters out of 2775356
+ 1628145 words of memory out of 3000000
+ 50197 multiletter control sequences out of 15000+600000
  560424 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,17n,94p,2358b,2310s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}<C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmib10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on DP_Gruberova.pdf (93 pages, 4385256 bytes).
+Output written on DP_Gruberova.pdf (95 pages, 4489011 bytes).
 PDF statistics:
- 1598 PDF objects out of 1728 (max. 8388607)
- 403 named destinations out of 1000 (max. 500000)
- 570 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1622 PDF objects out of 1728 (max. 8388607)
+ 411 named destinations out of 1000 (max. 500000)
+ 595 words of extra memory for PDF output out of 10000 (max. 10000000)
 
