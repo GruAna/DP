@@ -13,7 +13,7 @@ Do Power BI souboru jsem pomocí integrovaného nástroje PowerQuery nahrála up
 
 Datový model tabulek, které jsou vstupem do reportu je znázorněný na obrázku \ref{obr:datmod}. Mezi jednotlivými tabulkami jsou znázorněny vazby -- jejich mohutnost a směr. Tabulka \emph{metrics}, která není navázaná na žádnou jinou tabulku obsahuje výpočetní metriky, které vychází z~dat v~modelu, metriky se dále používají ve vizualizacích.
 
-\begin{figure}[hbtp!]
+\begin{figure}[h!]
     \centering
     \captionsetup{justification=centering}
     \includegraphics[width=\textwidth]{obrazky/PBI/datmodel.png}
@@ -46,7 +46,7 @@ První stránka obsahuje přehled týkající se všech typů shrinků v~rámci 
 
 Na grafu označeném č. 2, je znázorněno jak velký podíl shrinku na tržbách mají jednotlivé kategorie. Zároveň je barevně označeno, jakou měrou je hodnota zastoupená na malých či velkých prodejnách. Defaultní nastavení vizuálu je zobrazení kategorií úrovně 1, díky funkcionalitě nástroje Power BI je možné postoupit v~hierarchii kategorií níže viz \ref*{obr:PBI:drill}. První graf zobrazuje defaultní pohled, na druhém je vidět výsledek pokud uživatel klikne na ikonu $\downdownarrows$ \emph{přechod k~podrobnostem všech polí}. V~takovém případě se postoupí na další úroveň hierarchie napříč všemi kategoriemi. Třetí graf ukazuje stav, kterého uživatel docílí, pokud zaklikne ikonu $\downarrow$ \emph{přechod k~podrobnostem jednoho pole}\footnote{Anglicky se přechod k~podrobnostem jednoho pole v~nástroji Power BI označuje jako \emph{drill down}.}. V~takovém případě, poté co uživatel klikne na jednu z~kategorií v~grafu (její název nebo příslušný datový pruh), se zobrazí nižší úroveň hierarchie, ale pouze takové kategorie, které jsou podkategorií vybrané kategorie. 
 Další graf (č. 3) ukazuje jaký je podíl shrinku na tržbách pro malé a velké prodejny. V~tomto vizuálu po zvolení přechodu k~podrobnostem se rozbalí hodnoty podílu pro jednotlivé typy shrinků. Opět jako v~předchozím případě lze postupovat buď pouze pro jeden typ prodejen nebo oba.
-Pokud uživatel nezvolí \emph{přechod k~podrobnostem jednoho pole} ve vizuálu, ale klikne na datový element ve vizuálu, všechny vizuály na stránkau se křížově vyfiltrují nebo křížově zvýrazní. Rozdíl mezi těmito dvěma akcemi je v~sekci \ref*{sec:PBI}. 
+Pokud uživatel nezvolí \emph{přechod k~podrobnostem jednoho pole} ve vizuálu, ale klikne na datový element ve vizuálu, všechny vizuály na stránku se křížově vyfiltrují nebo křížově zvýrazní. Rozdíl mezi těmito dvěma akcemi je v~sekci \ref*{sec:PBI}. 
 \begin{figure}[h!]
     \centering
     \captionsetup{justification=centering}

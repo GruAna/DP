@@ -149,9 +149,9 @@ První způsob MCA aplikuje základní algoritmus korespondenční analýzy na m
 
 % https://www.analyticsvidhya.com/blog/2021/10/an-introduction-to-particle-swarm-optimization-algorithm/
 
-\subsection{Korelační analýza}
+\section{Korelační analýza}
 \label{sec:Teoriekorelace}
-\subsubsection{Korelační koeficient}
+\subsection{Korelační koeficient}
 
 Pojem korelace obecně znamená vzájemný vztah mezi dvěma veličinami. Pokud se jedna veličina mění, pak se mění dle míry korelace i druhá veličina. Samotná korelace ale neurčuje míru vztahu, ani směr vztahu. Tedy která veličina je příčinou a která důsledkem. Tuto vlastnost popisuje kauzalita. Míra korelace mezi dvěma veličinami je určena pomocí korelačního koeficientu. Existuje více způsobů měření míry korelace, v následující části jsou popsány vybrané z nich.\cite{bib:MB}
 
@@ -193,7 +193,7 @@ kde $d_i = (x_{ri} - y_{ri})$ je diference pořadí hodnot veličin $X$ a $Y$.\c
 
 Jak je patrné ze vzorců pro oba korelační koeficienty tato míra lze aplikovat pouze na numerické veličiny. V případě kategorických veličin by bylo potřeba je převést na číselné hodnoty. K tomu slouží řada metod. Mezi dva nejznámější způsoby překódo-\\vání kategorických proměných patří one-hot kódování a label kódování. V případě one-hot kódování se ale může počet proměnných výrazně zvýšit, pokud v datech existují příznaky s větším počtem unikátních kategorií. Pro druhý zmíněný způsob kódování je nevýhodou fakt, že přiřazením čísel od 0 do $n$, kde $n$ je počet kategorií v příznaků, se kategorickým hodnotám přiřadí pořadí, které ale v datech vůbec nemusí být a tudíž je tato nová informace v datech na obtíž \cite{bib:encoding}. Proto jsou v další části této sekce uvedeny vybrané způsoby měření závislosti dvou kategorických proměnných.
 
-\subsubsection{Další způsoby měření závislosti}
+\subsection{Další způsoby měření závislosti}
 
 Pro měření míry závislosti dvou kategorických proměnných lze použít \emph{Cramerovo V}, dále značeno jako $V$. 
 Hodnota koeficientu se pohybuje mezi 0 a 1. 1 znamená dokonalou závislost mezi proměnnými, 0 neznamená žádnou závislost. Tento koeficient nemůže nabýt negativní hodnoty, tj. neexistuje negativní závislost. Stejně jako předchozí koeficienty pro korelaci je $V$ symetrické a nezáleží na pořadí veličin.\cite{bib:correl,bib:MB}
@@ -251,7 +251,7 @@ Míra, která dovede změřit asymetrickou závislost kategorických proměnnýc
     U(X,Y) = U(X|Y) = \frac{H(X)-H(X-Y)}{H(X)}.
 \end{equation}
 
-\subsection{Ostatní použité pojmy}
+\section*{Ostatní použité pojmy}
 
 Při analýze dat lze narazit na problém multikolinearity. \emph{Multikolinearita} je vzájemná lineární závislost vysvětlujících proměnných. Jeli $\mathbf{A}$ matice dat (vysvětlujích proměnných bez předpovídaného sloupce), pak multikolinearita v datech existuje, pokud platí rovnice pro alespň jedno nenulové $c_i$: $c_1\bm{a}_1 + ... + c_k\bm{a}_k$, kde $c_i$ jsou konstanty a $\bm{a}_i$ sloupce matice reprezentující jednotlivé příznaky, $k$ počet sloupců matice, tj. počet příznaků. V realných datech stačí, když je daná rovnice přibližně splněna.\cite{bib:MB}
 
@@ -261,13 +261,13 @@ Měřítkem multikolinearity je \emph{rozptylový inflační faktor} (zkratka VI
 \end{equation}
 kde $R_i^2$ je koeficient determinace $i$-tého sloupce. Ten říká, jak velkou část variability závislé proměnné je možné vysvětlit.\cite{bib:multi}
 
-\subsection{Metoda GUHA}
+\section{Metoda GUHA}
 \label{sec:Teorie:Guha}
 
 Metoda GUHA je původní česká metoda používaná pro nexplorační analýzu dat.
 První článek o této metodě vyšel v roce 1966. V současné době je jedním znejrozáshlejších implementací metody systém LISp-Miner. Jedná se o software vyvíjený na Fakultě informatiky a statistiky Vysoké školy ekonomické v Praze, kde se zároveň používá pro výuku a výzkum dobývaní znalostí z databází \cite{bib:GUHA}. Zároveň je také implementována knihovna \emph{CleverMiner} v jazyce Python, která disponuje částí funkcionalit softwaru LISp-Miner.
 
-\subsubsection{Základní princip metody}
+\subsection{Základní princip metody}
 
 Cílem metody GUHA je získat z pozorovaných dat všechny vztahy, které jsou jsou pravdivé pro množinu objektů, ze které pochází zkoumaná data. Vyuižívají se k tomu statistické testy hypotéz, které dovolují na základě platnosti určitého tvrzení o vzorku dat přijmout tvrzení o celé množině objektů. Pravdivé tvrzení o celé množině dat se nazývá \emph{teoretické tvrzení}. Tvrzení o vzorku dat se nazývá \emph{observační tvrzení}. Vztah $1:1$ mezi těmito tvrzeními zprostředkovávají statistické testy, znázorněno na obr. \ref*{obr:met:GUHA1}.\cite{bib:GUHA}
 
@@ -289,7 +289,7 @@ Základní postup GUHA procedury je na obrázku \ref*{obr:met:GUHA2}. Vstupem pr
     \label{obr:met:GUHA2}
 \end{figure}
 
-\subsubsection{Důležité pojmy}
+\subsection{Důležité pojmy}
 
 
 % Uvažujeme potenciálně nekonečnou množinu objektů. Metoda předpokládá výsledky existenci pozorování této množiny reprezentované v~matici dat. Cílem je získat všechny zajímavé vztahy, které jsou pravdové pro celou množinu objektů
@@ -376,7 +376,7 @@ Pro podmíněné AP $\varphi \approx \psi | \chi$ platí obdobné vztahy. Předp
     \end{aligned}
 \end{equation}
 
-\subsubsection{Procedury}
+\subsection{Procedury}
 
 V dokumentaci \cite{bib:GUHA} je popsáno sedm procedur -- \emph{4ft-Miner,  SD4ft-Miner, CF-Miner, SDCF-Miner,  KL-Miner,  SDKL-Miner,  Ac4ft-Miner} \cite{bib:GUHA}. V knihovně v jazyce Python jsou implementované pouze metody \emph{4ft-Miner, SD4ft-Miner, CF-Miner} \cite{bib:GUHAclever}. V této práci jsem použila metodu pouze první metodu, proto další je další teoretický popis věnován pouze metodě \emph{4ft-Miner}.
 
@@ -475,6 +475,34 @@ cleverminer(df = data,
                     }
             )
 \end{lstlisting}
+
+\section{Nástroje}
+
+\subsection{Pyhton -- Jupyter Notebook}
+Veškeré výpočty probíhaly v jazyce Python. Metoda GUHA ve verzi Pythonu 3.10, ostatní výpočty a příprava dat ve verzi 3.9. Kód byl napsán a spouštěn v nástroji\emph{ Jupyter Notebook}. Všechny informace o tomto nástroji jsem čerpala z dokumentace tohoto nástroje \cite{bib:JN}. Jedná se o alternativu ke konzoli jazyka Python. Jupter Notebooky jsou interaktivní a umožňují psát a spuštět blok po \emph{buňkách}. Buňky jsou sdruženy v souboru s příponou \emph{ipynb}, ve skutečnosti se jedná o JSON soubor. V souboru je uložený kód a zároveň i naposledy spuštěné výstupy jednotlivých buněk. 
+
+Výhodou Jupyter Notebooku oproti klasické konzoli je, že podporuje odsazování, zvýrazňování syntaxe, zobrazení obrázků, HTML prvků nebo \LaTeX výrazů přímo ve výstupu pod kódem. Dále je možné soubor dobře dokumentovat pomocí jazyka Markdown. Tento značkovací jazyk není omezený jen na prostý text, jako jsou klasické komentáře v kódu. Díky němu lze soubor strukturovat do sekcí různmách úrovní. Vytvořen je tak přehlednější kód. 
+
+Za zmínku také stojí, že dalšími základními programovacími jazyky, které je možné spouštět v Noteboocích jsou R a Julia. Další jazyky lze spouštět pomocí speciálního jádra pro příslušný jazyk.
+
+S Jupyter Notebooky jsem pracovala v editoru Visual Studio Code, který podporuje řadu programovacích jazyků. Knihovnu Cleverminer jsem spouštěla v prostředí Google Colaboratory, které podporuje pouze Jupyter Notebooky.
+
+\subsection*{Databáze}
+Data společnosti jsou uložená v MySQL databázi, ke které jsem přistupovala pomocí nástroje HeidiSQL, což je open-sourcový nástroj pro práci s databázovými tabulkami. Z tohoto programu je data možné vyexportovat do formátu CSV. S exportovanými soubory jsem dále pracovala v Pythonu.
+
+\subsection{Power BI}
+
+Pro vizualizaci dat jsem použila nástroj Power BI Desktop, dále už jen Power BI. Tato aplikace umožňuje vytvořit business intelligence report pro sledovaná data.
+
+Power BI pro práci s daty využívá dva jazyky -- jazyk M a jazyk DAX. První jmenovaný lze použít při nahrávání dat a jejich zpracování, pro běžnou práci není nutné tento jazyk přímo psát, jelikož se generuje na základě kroků v GUI aplikace. Druhý jmenovaný se používá přímo ve vizualizační části. 
+
+TODO
+\subsubsection*{Metriky}
+
+\subsubsection*{Typy grafů}
+
+% !!!! TODO:
+
 
 
 % \subsection{Genetický algoritmus}
