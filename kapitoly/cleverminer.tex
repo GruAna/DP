@@ -80,7 +80,7 @@ Asociační pravidlo má tvar:
     \varphi_{\mbox{\,\footnotesize Den v~týdnu}} \land \varphi_{\,\mbox{\footnotesize Typ promoakce}} \Rightarrow \psi_{\mbox{\,\footnotesize Množství}}
 \end{equation}
 
-V ukázce kódu \ref*{code:cleverminerH1} jsou uvedené parametry pro spuštění metody. Konfidence byla zvolena 80 \%. Výsledky běhu jsou uvedené v~tabulce \ref*{tab:H1vysl}. Z této tabulky lze vyčíst, že pro vybrané dny v~týdnu -- pondělí, úterý, středa, čtvrtek a neděle, tj. nikoli pro pátek a sobotu -- a pro produkty, které byly v~den záznamu týden po promoakci platí, že 80 \% těchto záznamů bylo v~množství do jednoho kusu. To znamená, že se jedná o produkty, které jsou vážené. Jejich přepočet na kusovou jendotku tedy může být menší než jeden celý kus. Podle dalšího zkoumání dat jsem zjistila, že se jedná především o kategorii \emph{Masné výrobky} ze třetí úrovně hierarchie.
+V ukázce kódu \ref*{code:cleverminerH1} jsou uvedené parametry pro spuštění metody. Konfidence byla zvolena 80 \%. Výsledky běhu jsou uvedené v~tabulce \ref*{tab:H1vysl}. Z~této tabulky lze vyčíst, že pro vybrané dny v~týdnu -- pondělí, úterý, středa, čtvrtek a neděle, tj. nikoli pro pátek a sobotu -- a pro produkty, které byly v~den záznamu týden po promoakci platí, že 80 \% těchto záznamů bylo v~množství do jednoho kusu. To znamená, že se jedná o produkty, které jsou vážené. Jejich přepočet na kusovou jednotku tedy může být menší než jeden celý kus. Podle dalšího zkoumání dat jsem zjistila, že se jedná především o kategorii \emph{Masné výrobky} ze třetí úrovně hierarchie.
 
 
 \begin{lstlisting}[language=Python, style=mystyle, label={code:cleverminerH1}, caption={Hypotéza č. 1, funkce \texttt{cleverminer}.}]
@@ -141,7 +141,7 @@ cleverminer(df = data,
 
 \vspace*{1em}
 
-\textbf{Hypotéza č. 2: Kategorie shrinkovaného zboži je závislá na typu promoakce a dni v~týdnu}
+\textbf{Hypotéza č. 2: Kategorie shrinkovaného zboží je závislá na typu promoakce a dni v~týdnu}
 
 Asociační pravidlo má tvar:
 \begin{equation}
@@ -149,7 +149,7 @@ Asociační pravidlo má tvar:
 \end{equation}
 kde označením Hierarchie3 jsou myšleny kategorie na třetí úrovni produktové hierarchie, obdobně pro pojem Hierarchie4.
 
-Parametry předané funkci jsou podobné jako u předchozí hypotézy. Ze záznamů, které se byly porvedeny v~pondělí, úterý nebo neděli a týkaly se produktů, které byly v~rozmezí  jednoho týdne po promoakci, bylo více než 75 \% z~kategorie Masné výrobky -- pultový prodej ze čtvrté úrovně produktové hierarchie. Pokud je vynechána ze vstupních dat tato kategorie, pak maximální konfidence 31 \% byla dosažena pro kategorii Slaného pečivo v~záznamech, které byly provedeny v~sobotu a týkaly se produktů zcela mimo promoakci. Jiné významné závislosti podle dat nebyly nalezeny.
+Parametry předané funkci jsou podobné jako u předchozí hypotézy. Ze záznamů, které se byly provedeny v~pondělí, úterý nebo neděli a týkaly se produktů, které byly v~rozmezí  jednoho týdne po promoakci, bylo více než 75 \% z~kategorie Masné výrobky -- pultový prodej ze čtvrté úrovně produktové hierarchie. Pokud je vynechána ze vstupních dat tato kategorie, pak maximální konfidence 31 \% byla dosažena pro kategorii Slaného pečivo v~záznamech, které byly provedeny v~sobotu a týkaly se produktů zcela mimo promoakci. Jiné významné závislosti podle dat nebyly nalezeny.
 
 \vspace*{1em}
 
@@ -162,9 +162,9 @@ Asociační pravidlo má tvar:
 
 60 \% záznamů týkajících se okresů Jindřichův Hradec, Ústí nad Labem, Písek nebo Strakonice tvoří shrinky z~kategorie \emph{Masné výrobky}. Pro záznamy z~okresu Kladno, které jsou zároveň evidovány velkými prodejnami kategorie Masné výrobky byla zastoupena až téměř 70 \%. Necelými 70 \% je tato kategorie zastoupená také v~záznamech v~malých prodejnách v~okrese Praha-východ.
 
-Pokud úplně vynecháme kategorie Masné produkty ze vstupních dat, pak se nejčastěji ve výsledcích objevovala kategorie \emph{Pečivo}. Pro záznamy z~velkých prodejen v~okrese Pardubice nebo Plzeň-město Pečivo zaujímalo přes 60 \% těchto záznamů. Nad 50 \% záznamů pro okresy Bruntál, Olomouuc, Příbram nebo Uherské Hradiště. 50 \% záznamů náleželo kategroii Pečivo také v~záznamech z~malých prodejen v~okrese Klatovy, Náchod nebo Přerov.
+Pokud úplně vynecháme kategorie Masné výrobky ze vstupních dat, pak se nejčastěji ve výsledcích objevovala kategorie \emph{Pečivo}. Pro záznamy z~velkých prodejen v~okrese Pardubice nebo Plzeň-město Pečivo zaujímalo přes 60 \% těchto záznamů. Nad 50 \% záznamů pro okresy Bruntál, Olomouc, Příbram nebo Uherské Hradiště. 50 \% záznamů náleželo kategorii Pečivo také v~záznamech z~malých prodejen v~okrese Klatovy, Náchod nebo Přerov.
 
-Po vynechání kategorie Pečivo již dostáváme maximální konfidenci 33 \%, a to pro kategorii Zelenina ve zbylých záznamech z~okresu Ostrava-město, Kroměříž, Hradec Králové nebo Karvinná.
+Po vynechání kategorie Pečivo již dostáváme maximální konfidenci 33 \%, a to pro kategorii Zelenina ve zbylých záznamech z~okresu Ostrava-město, Kroměříž, Hradec Králové nebo Karviná.
 
 \vspace*{1em}
 
@@ -185,8 +185,8 @@ Asociační pravidlo pro úroveň produktové hierarchie 3 má následující tv
 \end{equation}
 
 % Nejprve je vhodné ukázat kolik činí četnost vybraných kategorií v~datech.
-Kategorie Masné produkty byla zaznamenána téměř 300 tisíckrát, a v~94 procentech se jednalo o množství odpovídající do jednoho balení. Podkategorie Masné produkty -- pultový prodej má 99 \% svých záznamů do jednoho kusu.
-Pokud se vyhazují čerstvé ryby, tak v~94 \% jeich záznamů je to množství do jednoho kusů. Kategorie Drobné občerstvení %Tapas
+Kategorie Masné výrobky byla zaznamenána téměř 300 tisíckrát, a v~94 procentech se jednalo o množství odpovídající do jednoho balení. Podkategorie Masné výrobky -- pultový prodej má 99 \% svých záznamů do jednoho kusu.
+Pokud se vyhazují čerstvé ryby, tak v~94 \% svých záznamů je to množství do jednoho kusů. Kategorie Drobné občerstvení %Tapas
  se vyhazuje v~89 \% po jednom kusu (obvykle se jedná o sendviče a bagety)
 Kategorie Vejce se vyhazuje v~82 \% po jednom kusu balení
 Kategorie Pečivo se vyhazuje v~56 \% v~počtu kusů do 10~kusů v~až 94~tis. záznamech.
@@ -201,10 +201,10 @@ Asociační pravidlo má tvar:
     \varphi_{\mbox{\,\footnotesize Hierarchie4}} \Rightarrow \psi_{\mbox{\,\footnotesize Shrink}}
 \end{equation}
 
-Pokud se vyhazují čerstvé ryby, tak v~téměř 80 \% případech záznamů jsou ztracené náklady jednoho záznamu vyšší, a to v~rozmezí 60-150 pěněžních jednotek.
-Pokud se vyhazuje kategorie Červené maso, tak z~téměř 60 \% je ztráta v~rozsahu 60-150 jendotek.
-Kategorie Chlazený pultový prodej, která obsahuje např. čerstvé chlebíčky, saláty a pochutiny, se v~50 \% vyhazuje v~hodnotě do 10 pěněžních jendotek. Jedná se tedy o nižší částky, které jsou ale časté. Záznamů této kategorie bylo evidováno $12{,}5$ tisíc.
-Cukrářské výrobky byly evidovány v~1835 záznamech. 66 \% těchto záznamů mělo hodnotu mezi 10 a 20 pěněžními jednotkami.
+Pokud se vyhazují čerstvé ryby, tak v~téměř 80 \% případech záznamů jsou ztracené náklady jednoho záznamu vyšší, a to v~rozmezí 60-150 peněžních jednotek.
+Pokud se vyhazuje kategorie Červené maso, tak z~téměř 60 \% je ztráta v~rozsahu 60-150 jednotek.
+Kategorie Chlazený pultový prodej, která obsahuje např. čerstvé chlebíčky, saláty a pochutiny, se v~50 \% vyhazuje v~hodnotě do 10 peněžních jednotek. Jedná se tedy o nižší částky, které jsou ale časté. Záznamů této kategorie bylo evidováno $12{,}5$ tisíc.
+Cukrářské výrobky byly evidovány v~1835 záznamech. 66 \% těchto záznamů mělo hodnotu mezi 10 a 20 peněžními jednotkami.
 
 \vspace*{1em}
 
@@ -242,35 +242,54 @@ S pravděpodobností vyšší než 50 \% se toto tvrzení potvrdilo pouze u kate
 
 Asociační pravidlo je následovné:
 \begin{equation}
-    \varphi_{\mbox{\,\footnotesize Den v týdnu}} \land  \varphi_{\mbox{\,\footnotesize Čtvtina měsíce}} \Rightarrow \psi_{\mbox{\,\footnotesize Typ prodejny}}
+    \varphi_{\mbox{\,\footnotesize Den v~týdnu}} \land  \varphi_{\mbox{\,\footnotesize Čtvtina měsíce}} \Rightarrow \psi_{\mbox{\,\footnotesize Typ prodejny}}
 \end{equation} 
-V případě antecedentu je možné uvažovat minimální délku jeden boolovský atribut, maximální dva. Je tedy možné, že nalezené pravidlo se může týkat pouze jednoho ze dvou boolovský atributů v antecedentu.
+V případě antecedentu je možné uvažovat minimální délku jeden boolovský atribut, maximální dva. Je tedy možné, že nalezené pravidlo se může týkat pouze jednoho ze dvou boolovský atributů v~antecedentu.
 
-Záznamy uskutečněné ve středu, čtvrtek a pátek v~poslední čtvrtině měsíce, takových je přes 100 tisíc, se ze 67\% konfidencí týkají malých prodejen.
+Záznamy uskutečněné ve středu, čtvrtek a pátek v~poslední čtvrtině měsíce, se ze 67\% konfidencí týkají malých prodejen.
+
+\textbf{Další hypotézy}
+
+Dále byly uvažovány hypotézy:
+\begin{itemize}
+    \itemsep 0em
+    \item Ve větších prodejnách ve velkých městech se vyhazuje více typů produktů.
+    \item Velké prodejny vyhazují širší spektrum produktů než malé prodejny.
+    \item Na některých v některých lokalitách mají často velký shrink.
+\end{itemize}
+
+Pro tyto hypotézy ale nebylo nalezeno žádné dostatečně silné, tj. s konfidencí vyšší než 40 \%, asociační pravidlo.
 
 \section{Produkty nepopsané korelační analýzou}
 
-Pomocí korelační analýzy byly zkoumány tři kategorie ze čtvrté úrovně produktové hierarchie, které měly zaznamenané za sledované období nejvyšší hodnotu shrinku. Jedná se o kategorie Masné výrobky -- pultový prodej, Slané pečivo a Plodová zelenina. Díky korelační analýze lze produkty z vybrané kategorie rozdělit do pěti skupin, podle toho zda hodnota shrinku produktů koreluje s tržbami jiných produktů. Jedna ze zmíněných skupin je přiřazena produktům, u kterých se nepodařilo touto metodou shrink vysvětlit. Také vzhledem k tomu, že je metoda založena na výpočtu korelace, je nutné provést na vypočtené koeficienty statistické testy významnosti. Pro některé produkty tak nelze vyslovit hypotézu o jejich zařazení do skupiny, neboť obdržený koeficient není statisticky významný. Popis metody a výsledků pro vybrané kategorie je v kapitole \ref*{ch:korelacnianalyza}.
+% byly zkoumány tři kategorie ze čtvrté úrovně produktové hierarchie, které měly zaznamenané za sledované období nejvyšší hodnotu shrinku. Jedná se o kategorie Masné výrobky -- pultový prodej, Slané pečivo a Plodová zelenina. 
+Pomocí korelační analýzy korelační analýzy lze produkty z~vybrané kategorie rozdělit do pěti skupin podle toho, zda hodnota shrinku produktů koreluje s~tržbami jiných produktů. Jedna ze zmíněných skupin je přiřazena produktům, u kterých se nepodařilo touto metodou shrink vysvětlit. Také vzhledem k~tomu, že je metoda založena na výpočtu korelace, je nutné provést na vypočtené koeficienty statistické testy významnosti. Pro některé produkty tak nelze vyslovit hypotézu o jejich zařazení do skupiny, neboť obdržený koeficient není statisticky významný. Popis metody a výsledků pro vybrané kategorie je v~kapitole \ref*{ch:korelacnianalyza}.
 
-V této části jsem nástroji Cleverminer předala data týkající se pouze produktů, pro které nebyl koeficient korelace statisticky významný, nebo nebyla nalezena žádná souvislost s tržbami ostatních produktů v rámci kategorie.
+V této části jsem nástroji Cleverminer předala data týkající se pouze produktů, pro které nebyl koeficient korelace statisticky významný, nebo nebyla nalezena žádná souvislost s~tržbami ostatních produktů v~rámci kategorie.
 
 Antecedent asociačního pravidla obsahuje boolovské atributy: 
 $    \varphi_{\mbox{\,\footnotesize Produkt }}      $ , 
 $    \varphi_{\mbox{\,\footnotesize Typ promoakce}} $ a 
 $    \varphi_{\mbox{\,\footnotesize Prodej}}$. 
-Z těchto atributů mohlo být vybráno jeden až tři atributy pro vytvoření asociační pravidla. Sukcedent byl tvořen všemi možnými sloupci ve vstupních datech a skládat se mohl z jednoho až čtyř boolovských atributů těchto sloupců.
+Z těchto atributů mohlo být vybráno jeden až tři atributy pro vytvoření asociační pravidla. Sukcedent byl tvořen všemi možnými sloupci ve vstupních datech a skládat se mohl z~jednoho až čtyř boolovských atributů těchto sloupců.
 
-\textbf{Masné produkty -- pultový prodej}
-
+% \textbf{Masné výrobky -- pultový prodej}
+Výsledky zkoumání produktů, u kterých nebyla pomocí korelační analýzy odhalena závislost, jsou popsány na kategorii čtvrté úrovně Masné výrobky -- pultový prodej. Jedná se celkem o dvacet produktů.
 Všechny produkty měly zaznamenaný shrink do jednoho kusu. 
-Z produktů, které neměly statisticky významný koeficient, sedm z nich bylo evidovaných pouze v okrese hlavní město Praha a jedná se o produkty, které nebyly v promoakci, ale zároveň měli evidované prodeje během sledovaného období. Pro pět z nich dále platí, že s více než $80\%$ konfidencí pochází záznamy z menších prodejen.
-Pro produkt Klobása ostravská platí, že pokud byl v období po promoakci byl vyhazován na malých prodejnách ($97\%$ konfidence), zatímco na velkých prodejných byl vyhazován, když v promoakci nebyl ($89\%$ konfidence). 
-O produktu Slanina uzená lze tvrdit z dat, že s $63\%$ konfidencí se vyhazuje na malých prodejnách. Všechny záznamy se týkají nepromočního období produktu. $40\%$ dat bylo zaznamenáno v poslední čtvrtině sledovaného měsíce. 
-Produkt Salám točený pikantní bylo zjištěno, že byl vyhazován se $ 73\%$ konfidencí na malých prodejnách, a to jak během probíhající promoakce, tak po ní  i v období, kdy v promoakci nebyl. 
+Z~produktů, které neměly statisticky významný koeficient, sedm z~nich bylo evidovaných pouze v~okrese hlavní město Praha a jedná se o produkty, které nebyly v~promoakci, ale zároveň měli evidované prodeje během sledovaného období. Pro pět z~nich dále platí, že s~více než $80\%$ konfidencí pochází záznamy z~menších prodejen.
+Pro produkt Klobása ostravská platí, že pokud byl v~období po promoakci byl vyhazován na malých prodejnách ($97\%$ konfidence), zatímco na velkých prodejných byl vyhazován, když v~promoakci nebyl ($89\%$ konfidence). 
+O produktu Slanina uzená lze tvrdit z~dat, že s~$63\%$ konfidencí se vyhazuje na malých prodejnách. Všechny záznamy se týkají nepromočního období produktu. $40\%$ dat bylo zaznamenáno v~poslední čtvrtině sledovaného měsíce. 
+Produkt Salám točený pikantní bylo zjištěno, že byl vyhazován se $ 73\%$ konfidencí na malých prodejnách, a to jak během probíhající promoakce, tak po ní  i v~období, kdy v~promoakci nebyl. 
 
-Co se týče deseti produktů, u kterých nebyla zjištěna závislost na prodejích ostatních produktů, až na jeden produkt, všechny tyto produkty neměly ve sledovaném období promoakci, ale měly záznamy o prodejích v tomto období. Čtyři produkty byly zaznamenány na velkých prodejnách, jeden z nich pouze na prodejnách v Praze. $81\%$ záznamů produktu Párky královské, byly zaznamenány v první čtvrtině v měsíci, kdy nebyly v promoakci. Naopak pro Šunku prosciutto platí, že v 60\% záznamů byla vyhazována pouze na konci měsíce a z $94\%$ pouze na malých prodejnách. Pro zbylé produkty nebylo nalezeno žádné pravidlo s vysokou konfidencí z důvodu velmi malého počtu záznamů -- méně něž pět záznamů.
+Co se týče deseti produktů, u kterých nebyla zjištěna závislost na prodejích ostatních produktů, až na jeden produkt, všechny tyto produkty neměly ve sledovaném období promoakci, ale měly záznamy o prodejích v~tomto období. Čtyři produkty byly zaznamenány na velkých prodejnách, jeden z~nich pouze na prodejnách v~Praze. $81\%$ záznamů produktu Párky královské, byly zaznamenány v~první čtvrtině v~měsíci, kdy nebyly v~promoakci. Naopak pro Šunku prosciutto platí, že v~60\% záznamů byla vyhazována pouze na konci měsíce a z~$94\%$ pouze na malých prodejnách. Pro zbylé produkty nebylo nalezeno žádné pravidlo s~vysokou konfidencí z~důvodu velmi malého počtu záznamů -- méně něž pět záznamů.
 
-%  27571774 26835624 Všechny záznamy se týkaly pouze regionu Praha, a to v objemu do jednoho kusu.
+\section*{Shrnutí}
+
+Pomocí metody Cleverminer bylo prozkoumáno jedenáct hypotéz týkajících se dat se záznamy shrinků. Tři hypotézy se pomocí metody 4ftMiner nepodařilo potvrdit, zbylé hypotézy našly, alespoň pro část záznamů oporu v datech.
+Dále se tato kapitola zabývala hledáním pravdivých tvrzeních pro produkty, u kterých nebyla nalezena závislost pomocí korelační analýzy. V tomto případě asociační pravidlo předpokládalo ID těchto produktů a typ promoakce a údaj o existenci prodeje. Sukcedentem pak mohl být jakýkoli jiný sloupec vstupních dat. Výsledky byly diskutovány pro jednu ze zkoumaných kategorií čtvrté úrovně. Pro jiné kategorie by byl postup analogický.
+Je ale důležité zmínit, že produkty, u kterých nebyl výsledek korelační analýzy statisticky významný, bylo často velmi málo záznamů -- v řádu jednotek, maximálně nízkých desítek.
+
+%  27571774 26835624 Všechny záznamy se týkaly pouze regionu Praha, a to v~objemu do jednoho kusu.
 % 1     7 1.000 +0.000 product_id(27571774) & saled(True) => region(Praha) | ---
 % 2     7 1.000 +0.000 product_id(27571774) & saled(True) => size_bins((500000,2000000)) | ---
 % 3     7 1.000 +0.000 product_id(27571774) & saled(True) => amount_bins((-0.99,0)) | ---
@@ -398,4 +417,3 @@ Co se týče deseti produktů, u kterých nebyla zjištěna závislost na prodej
 % 27736982 prodávané, velké prodejny, bez promoce  SLAVNOSTNÍ KLOBÁSA
 % 27738504 prodávané, velké prodejny, bez promoce SULCOVÝ DORT "LE BUFFET"
 % 27738733 prodávané, velké prodejny, bez promoce  PRAVÁ UZENÁ ORAVSKÁ SLANINA
-
