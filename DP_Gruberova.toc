@@ -45,7 +45,7 @@
 \contentsline {subsection}{\numberline {7.1.1}Metriky}{78}{subsection.7.1.1}%
 \contentsline {subsection}{\numberline {7.1.2}Reporting}{79}{subsection.7.1.2}%
 \contentsline {section}{\numberline {7.2}Výsledky}{85}{section.7.2}%
-\contentsline {chapter}{Závěr}{89}{chapter*.86}%
-\contentsline {chapter}{Literatura}{90}{chapter*.86}%
-\contentsline {chapter}{Přílohy}{95}{chapter*.87}%
-\contentsline {chapter}{\numberline {A}Obsah přiloženého CD}{95}{appendix.A}%
+\contentsline {chapter}{Závěr}{91}{chapter*.88}%
+\contentsline {chapter}{Literatura}{92}{chapter*.88}%
+\contentsline {chapter}{Přílohy}{97}{chapter*.89}%
+\contentsline {chapter}{\numberline {A}Obsah přiloženého CD}{97}{appendix.A}%

@@ -249,16 +249,40 @@ Na obrázku \ref*{obr:PBI:types} nahoře je zobrazen jaký je podíl celkového 
     \end{minipage}
 \end{figure}
 
-Pro většinu prodejen platí, že největší část hodnoty zaznamenaných shrinků tvoří prošlé a zkažené zboží, případně zboží darované potravinové bance. Neobvyklé zastoupení shrinků ale vykazují prodejny s ID 19 (velká prodejna) a 126 (malá prodejna)m, kdy největší část zboží je kompostována a téměř žádné není vyhozeno jako shrink pro prošlé zboží. Ukázka grafů je na obrázku \ref*{obr:PBI:topwhs}.
+Pro většinu prodejen platí, že největší část hodnoty zaznamenaných shrinků tvoří prošlé a zkažené zboží, případně zboží darované potravinové bance. Neobvyklé zastoupení shrinků ale vykazují malé prodejny s ID 19 (Brno) a 126 (okres Třebíč), kdy největší část zboží je kompostována a téměř žádné není vyhozeno jako shrink prošlého zboží. Ukázka grafů je na obrázku \ref*{obr:PBI:topwhs}. V levé části obrázku jsou dva grafy. Jeden zobrazuje průměrnou hodnotu shrinku pro jednu prodejnu, a tedy i průměrné zastoupení typů shrinku. Druhý obsahuje součet hodnot shrinků přes všechny prodejny.
 
 \begin{figure}[h!]
     \centering
     \captionsetup{justification=centering}
     \includegraphics[width=\textwidth]{obrazky/PBI/topwhs.png}
-    \caption{Power BI report -- Prodejny s nejvyšší hodnotou ukazatelů -- ztracené náklady a podíl shrinku na tržbách.}
+    \caption{Power BI report -- Hodnota shrinku pro typ prodejny). Prodejny s nejvyšší hodnotou ukazatelů (vpravo) -- ztracené náklady a podíl shrinku na tržbách.}
     \label{obr:PBI:topwhs}
 \end{figure}
 
 \subsection*{Pozorování pro vybraná data}
 
-Další část se věnuje pouze datům, která se týkají kategorií Velmi čerstvé a Čerstvé a shrinku prošlé a zkažené zboží.
+Další část se věnuje pouze datům, která se týkají kategorií Velmi čerstvé a Čerstvé a shrinku prošlé a zkažené zboží. Evidovaný shrink má pouze na těchto kategoriích hodnotu $9{,}2$ mil. peněžních jednotek. 
+Na grafu \ref*{obr:PBI:porovnani} je vidět, že malé prodejny mají ve většině nižší hodnotu shrinku, ale podíl na shrinku na tržbách mají vyšší než velké prodejny. Prodejny s velmi nízkými shrinky mají i nízký podíl shrinku na tržbách. 
+Největší ztracené náklady byly evidovány u velké prodejny s ID 198 v Praze, nicméně podíl tohoto shrinku na celkových tržbách je pouhých $0{,}23 \%$, což je jeden z nejnižších. Zároveň se jedná o prodejnu s nejvyššími tržbami. Zatímco prodejna 675 velká prodejna v okrese Uherské Hradiště má třetí nejvyšší hodnotu shrinku a zároveň i nejvyšší podíl shrinku na tržbách $1{,}68 \%$ mezi velkými prodejnami. 
+Nejvyšší podíl shrinku na svých tržbách byl evidován u malé prodejny 23, které se nachází v Brně, nicméně hodnota shrinku je nízká. Druhý nejvyšší podíl má malá pražská prodejna.
+Z grafu je patrné, že čtyři malé prodejny mají podobné tržby jako velké prodejny. Jedná se o dvě prodejny v Praze a prodejny v okrese Litoměřice a Jablonec nad Nisou, tyto pražské prodejny mají vyšší podíl shrinku než zbylé dvě prodejny.
+Z hlediska umístění prodejen do krajů a okresů nebyl v datech na této úrovni detailu objeven žádný vzor.
+
+\begin{figure}[h!]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=\textwidth]{obrazky/PBI/porovnaniprodejen.png}
+    \caption{Power BI report -- Velikost shrinku na prodejně versus podíl shrinku na tržbách. Velikost zobrazeného bodu ukazuje výši tržeb na prodejně}
+    \label{obr:PBI:porovnani}
+\end{figure}
+
+Graf \ref*{obr:PBI:velikost} zobrazuje průměrnou hodnotu shrinků na prodejně podle obydlenosti města, kde se nachází. Pro malé prodejny velikosti shrinku nejsou příliš rozdílné vzhledem k počtu obyvatel, kde se prodejna nachází. Pro velké prodejny platí, že ve městech do deseti tisíc obyvatel bývá hodnota shrinku vyšší než ve  městech s více obyvateli.
+
+\begin{figure}[h!]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=.8\textwidth]{obrazky/PBI/citysize.png}
+    \caption{Power BI report -- Průměrná hodnota shrinku prodejen podle velikosti měst, ve které se nachází prodejna}
+    \label{obr:PBI:velikost}
+\end{figure}
+
