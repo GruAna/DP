@@ -320,8 +320,9 @@ Pro testování funkcí jsem použila knihovnu \emph{pytest} jazyka Python. Test
 \section{Výsledky}
 
 Analýza se týká pouze dat jednoho měsíce a kategorií produktů první úrovně \emph{Velmi čerstvé}, zastoupena 48 \% a \emph{Čerstvé}, zastoupena 52 \% ve vybraných datech. Data obsahují pouze jeden typ shrinku -- prošlé a zkažené zboží, který zaujímá téměř 65 \% shrinků pro dané kategorie. Zastoupení typů shrinků, které zabírají v datech více jak dvě procenta se nachází v tabulce \ref*{tab:shrinkyZastoupeni}.
-Zaměřila jsem se na kategorie ze čtvrté úrovně, a to prvních deset kategorií s~nejvyšší hodnotou shrinků (tj. s~nejvyšší zaznamenanou ztrátou). V práci jsou popsány výsledky pouze tří kategorií -- Masné výrobky - pultový prodej, Slané pečivo a Plodová zelenina. Na třetím místě byla kategorie Sladké pečivo, ale kvůli podobnosti s~druhou kategorií, jsem zvolila následující kategorii v~pořadí vzhledem k~hodnotě shrinku.
-V tabulce \ref*{tab:lostcost4} jsou procentuální hodnoty zastoupení čtyř kategorií mezi ostatními kategoriemi úrovně 4 podle velikosti shrinku. %% TODO upravit hodnoty !!!
+Zaměřila jsem se na kategorie ze čtvrté úrovně, a to prvních deset kategorií s~nejvyšší hodnotou shrinků (tj. s~nejvyšší zaznamenanou ztrátou). V práci jsou popsány výsledky pouze tří kategorií -- Masné výrobky -- pultový prodej, Slané pečivo a Plodová zelenina. Na třetím místě byla kategorie Sladké pečivo, ale kvůli podobnosti s~druhou kategorií, jsem zvolila následující kategorii v~pořadí vzhledem k~hodnotě shrinku.
+V tabulce \ref*{tab:lostcost4} jsou procentuální hodnoty zastoupení čtyř kategorií mezi ostatními kategoriemi úrovně 4 podle velikosti shrinku. 
+
 \begin{table}[h!]
     \begin{center}
             \captionsetup{justification=centering}
@@ -347,10 +348,10 @@ V tabulce \ref*{tab:lostcost4} jsou procentuální hodnoty zastoupení čtyř ka
         Kategorie & Zastoupení [\%] \\
 
     \hline
-    Masné výrobky - pultový prodej & 19 \\
-    Slané pečivo&  $16{,}07$\\
-    Sladké pečivo&   $7{,}90$\\
-    Plodová zelenina&   $7{,}88$\\
+    Masné výrobky -- pultový prodej &$ 26{,}27$ \\
+    Slané pečivo&  $12{,}12$\\
+    Sladké pečivo&   $6{,}82$\\
+    Plodová zelenina&   $5{,}65$\\
     \end{tabular}
     \label{tab:lostcost4}
     \end{table}
@@ -366,7 +367,7 @@ Z~uvedených počtů produktů u jednotlivých kategoriích pro různé ukazatel
     \centering
     \captionsetup{justification=centering}
     \includegraphics[width=\textwidth]{obrazky/kor_maso.pdf}
-    \caption{Počet produktů z~kategorie Masné výrobky - pultový prodej roztříděné pomocí korelační analýzy v~závislosti na různých ukazatelích.}
+    \caption{Počet produktů z~kategorie Masné výrobky -- pultový prodej roztříděné pomocí korelační analýzy v~závislosti na různých ukazatelích.}
     \label{obr:kategCorrPorovnani}
 \end{figure}
 
@@ -396,7 +397,7 @@ Z~uvedených počtů produktů u jednotlivých kategoriích pro různé ukazatel
 %     \multicolumn{1}{l}{} & \multicolumn{2}{c}{Všechny prodeje} & \multicolumn{2}{c}{Prodeje v~promoakci}  & \multicolumn{2}{c}{Prodeje v~a po promoakci} \\
 %     Kategorie & Stejný den & Další den & Stejný den & Další den & Stejný den & Další den \\
 %     \midrule
-%     \multicolumn{7}{c}{Masné výrobky - pultový prodej} \\
+%     \multicolumn{7}{c}{Masné výrobky -- pultový prodej} \\
 %     \midrule
 %     P           & 96   & 96   & 96   & 96   & 96   & 96   \\
 %     O           & 1     & 1   & 2   & 2   & 2   & 2   \\
@@ -414,7 +415,7 @@ Z~uvedených počtů produktů u jednotlivých kategoriích pro různé ukazatel
 %     \label{tab:kategCorrPorovnani}
 % \end{table}
 
-\textbf{Masné výrobky - pultový prodej}
+\textbf{Masné výrobky -- pultový prodej}
 
 Shrink byl zaznamenaný u 111 produktů v~této kategorii úrovně 4. 88 produktů bylo klasifikováno jako kategorie N, deset jako kategorie X, dva jako kategorie O, jeden jako V. U zbylých deseti produktů nebyl koeficient korelace statisticky významný, a proto nejde u těchto produktů vyslovit hypotézu pro jejich zařazení. Korelace mezi hodnotou shrinku a promočními tržbami je na obr. \ref*{obr:corr:maso}.
 
@@ -426,7 +427,7 @@ Dále jsem zkoumala podkategorie Masných výrobků. Porovnávala jsem prodeje v
     \centering
     \captionsetup{justification=centering}
     \includegraphics[width=.8\textwidth]{obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf}
-    \caption{Závislost mezi tržbami produktu a tržbami ostatních produktů v~kategorii během promoakce (Masné výrobky - pultový prodej).}
+    \caption{Závislost mezi tržbami produktu a tržbami ostatních produktů v~kategorii během promoakce (Masné výrobky -- pultový prodej).}
     \label{obr:corr:maso}
 \end{figure}
 
@@ -434,7 +435,7 @@ Dále jsem zkoumala podkategorie Masných výrobků. Porovnávala jsem prodeje v
 
 Shrink byl zaznamenaný u 246 produktů. 124 produktů bylo klasifikováno jako kategorie N, 16 jako kategorie X, 28 jako kategorie O, jeden jako P. Pro 77 produktů nebyl koeficient korelace statisticky významný. Jako produkt, který si způsobuje shrinky sám, byl označený obyčejný rohlík. Rohlík se tedy vyhazuje více čím vyšší jsou jeho vlastní tržby. Celkově patří tento produkt mezi ty s~největšími shrinky.
 
-Produkty, které byly zařazeny do kategorie X, tj. takové, u kterých nebyl koeficient korelace dostatečně velký, byly všechno produkty, které neměly během sledovaného období žádný prodej (promoční, či nepromoční).
+Produkty, které byly zařazeny do kategorie X, tj. takové, u kterých nebyl koeficient korelace dostatečně velký, byly produkty, které neměly během sledovaného období žádný prodej (promoční, či nepromoční).
 
 % Produkty, které patří do kategorie O:
 % pletýnka adélka, pletýnka malena, pletýnka sypaná mákem, pletýnka sypaná solí a km., bramborové pečivo s~cibulí, veka cupeko kb, rohlík grahamový aspec, rohlík pivní ora, rohlík staročeský, rohlík obilný mam, rohlík na strouh.karlova, rohl.n str.penam, houska mašek, houska raženka, bageta rust.poh., bageta s~grahamem, bageta chlebová, banketka cereální, dalamánek, kostka cereál malena, ciabatta mini natural, twistr se sýrem a špenatem, anglický rohlík, 

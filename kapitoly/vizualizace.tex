@@ -76,20 +76,22 @@ U čísel 5 a 6 jsou umístěny filtry -- pro typ prodejny a pro typ shrinku. Vy
 
 \subsubsection*{Prodejny}
 
-Další stránka zobrazuje prodejny a k~nim příslušné ukazatele. Uživatel může filtrovat prodejny podle typu, kraje nebo okresu. Dále je možné filtrovat také podle kategorií. V~tabulce lze zobrazit údaje agregovaně podle lokalit nebo přímo pro jednotlivé prodejny. Sloupce tabulky jsou rozdělené na hodnoty týkající se malých nebo velkých prodejen a poté celkové hodnoty pro oba typy. Ukázka této stránky je na obr.~\ref*{obr:PBI:stores}.
+Další stránka zobrazuje prodejny a k~nim příslušné ukazatele. Uživatel může filtrovat prodejny podle typu, kraje nebo okresu. Dále je možné filtrovat také podle kategorií. V~tabulce lze zobrazit údaje agregovaně podle lokalit nebo přímo pro jednotlivé prodejny. Sloupce tabulky jsou rozdělené na hodnoty týkající se malých nebo velkých prodejen a poté celkové hodnoty pro oba typy. Graf stromová mapa pod číslem 1, obsahuje kraje, resp. vybrané okresy, ve kterých se nachází prodejny. Plocha příslušné lokality zabírá tolik procent obsahu grafu, kolik procent tvoří hodnota shrinků v této lokalitě. Graf č. 2 porovnává zaznamenaný shrink s počtem prodejen v regionu. 
+Ukázka této stránky je na obr.~\ref*{obr:PBI:stores}.
 
 \begin{figure}[h!]
     \centering
     \captionsetup{justification=centering}
-    \includegraphics[width=\textwidth]{obrazky/PBI/stores.png}
+    \includegraphics[width=\textwidth]{obrazky/PBI/storesall.png}
     \caption{Power BI reporting pro zobrazení údajů o shrincích z~pohledu prodejen.}
     \label{obr:PBI:stores}
 \end{figure}
 
-\subsubsection*{Prodejny - Velmi čerstvé a Čerstvé}
+\subsubsection*{Prodejny -- Velmi čerstvé a Čerstvé}
 
 Na této stránce reportu jsou vizuály pro analýzu chování shrinků z~hlediska prodejen již pouze pro kategorie Čerstvé a Velmi čerstvé viz obr.~\ref*{obr:PBI:storesSFF}. V~nastavení reportu v~sekci filtrů je možné vybrat i další kategorie, nicméně tato práce se věnuje především analýze těchto dvou kategorií, a tak jsou již předfiltrované tyto kategorie. Opět je možné filtrovat prodejny podle jejich atributů. Také je možné v~horní části stránky vybrat sledovaný shrink (č. 1) -- shrinky jsou pro lepší přehlednost barevně odlišené. 
-Stránka dále obsahuje graf č. 2, který vizualizuje zastoupení shrinků podle hodnoty shrinku (tj. ztracené náklady), graf porovnání velkých a malých prodejen podle podílu shrinku na jejich tržbách (č. 3). Pod tímto grafem jsou prodejny porovnané podle jejich ztracených nákladů. Zároveň je datový pruh barevně rozdělený podle typu shrinku (barva je shodná s~barvou shrinku, kterou má přiřazenou nahoře na stránce). 
+Stránka dále obsahuje graf č. 2, který vizualizuje zastoupení shrinků podle hodnoty shrinku (tj. ztracené náklady). 
+ Graf porovnání velkých a malých prodejen podle absolutního zaznamenaného shrinku na všech prodejnách a graf průměrné hodnoty shrinku na prodejně pro oba typy prodejen (č. 3). Pod tímto grafem jsou prodejny porovnané podle jejich ztracených nákladů. Zároveň je datový pruh barevně rozdělený podle typu shrinku (barva je shodná s~barvou shrinku, kterou má přiřazenou nahoře na stránce). 
 
 Graf označený č. 4 zobrazuje ztrátu vlivem shrinku podle velikosti měst, ve kterých se prodejny nachází. Graf umožňuje přejít k~podrobnostem, a to typu prodejny a konkrétním prodejnám. Zbylé grafy na stránce zobrazují konkrétní prodejny podle ukazatelů - hodnota shrinku, podíl shrinku na celkových tržbách prodejny, podíl shrinku na tržbách kategorií Velmi čerstvé a čerstvé na sledované prodejně. Grafy jsou rozdělené podle typu prodejen, datové pruhy jsou opět poměrově rozdělené podle zastoupení typů shrinků.
 
@@ -101,16 +103,16 @@ Graf označený č. 4 zobrazuje ztrátu vlivem shrinku podle velikosti měst, ve
     \label{obr:PBI:storesSFF}
 \end{figure}
 
-\subsubsection*{Kategorie - Velmi čerstvé a Čerstvé}
+\subsubsection*{Kategorie -- Velmi čerstvé a Čerstvé}
 
-Další stránka zobrazuje data kategorií Velmi čerstvé a Čerstvé podle dalších příznaků. Grafy označené jedničkou zobrazují podíl shrinku na celkových tržbách z~pohledu typu promoakce a podle kategorie (z libovolné úrovně až k~detailu produktu), zároveň je datovým pruhům přiřazeno zastoupení typu shrinku. Tabulka s~č. 2 říká, kolik unikátních produktů bylo shrinkováno podle typu prodejny, od typu jde dá-\\le přejít přes lokaci k~samotným prodejnám. Graf č. 3. ukazuje počet záznamů evidovaných v~daný den v~týdnu, legenda zároveň určuje, v~které části měsíce to bylo. 
+Další stránka zobrazuje data kategorií Velmi čerstvé a Čerstvé podle dalších přízna-\\ků. Grafy označené jedničkou zobrazují podíl shrinku na celkových tržbách podle kategorie (z~libovolné úrovně až k~detailu produktu) a také zastoupení typu promoakce produktů v~záznamech, zároveň je datovým pruhům přiřazeno zastoupení typu shrinku. Graf označený dvojkou zobrazuje závislost ztracených nákladů a podílu shrinku na tržbách pouze daného produktu. Zobrazeny jsou pouze ty produkty, kde je ztráta vyšší než daná hodnota a podíl vyšší než 20 \%. Produkty jsou barevně odlišené podle kategorie, do které patří. Tabulka vlevo od grafu 2 říká, kolik unikátních produktů bylo shrinkováno podle typu prodejny, od typu jde dále přejít přes lokaci k~samotným prodejnám. Graf č. 3. ukazuje počet záznamů evidovaných v~daný den v~týdnu, legenda zároveň určuje, v~které části měsíce to bylo. 
 
 \begin{figure}[h!]
     \centering
     \captionsetup{justification=centering}
-    \includegraphics[width=\textwidth]{obrazky/PBI/levelsSFF.png}
+    \includegraphics[width=\textwidth]{obrazky/PBI/levelsSFFkopie.png}
     \caption{Zobrazení údajů o shrincích kategorie Čerstvé a Velmi čerstvé \\ se zaměřením na kategorie a produkty.}
-    \label{obr:PBI:storesSFF}
+    \label{obr:PBI:levelsSFF}
 \end{figure}
 
 Tabulka č. 4 přiřazuje vybrané ukazatele k~jednotlivým typů shrinku. Další tabulka má tyto údaje ale přiřazené podle typu promoakce produktu, který je evidován v~záznamu shrinku. Následující tabulky se týkají již konkrétních kategorií a produktů, z~produktu se lze přesunout na další stránku věnující se detailu pouze jednoho produktu (viz obr.~\ref*{obr:PBI:drilldetail}). Sledován je podíl shrinku na tržbách prodejny, na tržbách produktu na prodejne, výskyt v~záznamech, ztracená tržba a její procentuální zastoupení. Na stránce jsou i jako v~předešlých případech filtry a souhrnné údaje.
@@ -123,7 +125,7 @@ Tabulka č. 4 přiřazuje vybrané ukazatele k~jednotlivým typů shrinku. Dalš
     \label{obr:PBI:drilldetail}
 \end{figure}
 
-\subsubsection*{Čas - Velmi čerstvé a Čerstvé}
+\subsubsection*{Čas -- Velmi čerstvé a Čerstvé}
 
 Na další stránce jsou data porovnávána vzhledem k~datumu záznamu -- ke dni v~týdnu a části měsíce. Na této stránce, kromě filtrování typů jako v~předchozích případech, může uživatel určit pro který ukazatel budou grafy zobrazeny. Vybrat lze ze ztracených nákladů, podílu shrinku na celkových tržbách prodejny a z~podílu shrinku na tržbách v~dané kategorie a případně v~části měsíce, viz č. 1 na obr.~\ref*{obr:PBI:timeSFF}. Zbylé grafy jsou rozděleny na tři části -- podle typu shrinku, podle umístění prodejen a podle typu prodejny. V každé části je přehled, který říká v~jakém poměru tyto příznaky jsou (v závislosti na zvoleném ukazateli). Dále jsou pro každou část je ukazatel z~pohledu dne v~týdnu nebo části měsíce, kdy byl shrink zaznamenán. 
 
