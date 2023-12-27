@@ -156,12 +156,12 @@ První část se věnuje pozorování na celých datech. tj. pozorovaná data za
 
 \subsection*{Pozorování na celých datech}
 
-Pořadí zastoupení shrinků jednotlivých kategorií první úrovně hierarchie na celkových tržbách v datech lze vidět na obrázku \ref*{obr:PBI:vysL1}. Je vidět, že kategorie Velmi čerstvé a Čerstvé jsou výrazně více zastoupeny než zbylé kategorie. Tabulka \ref*{tab:PBI:vysL1} obsahuje agregované důležité metriky podle sedmi hlavních kategorií.
+Pořadí zastoupení shrinků jednotlivých kategorií první úrovně hierarchie na celkových tržbách v datech lze vidět na obrázku \ref*{obr:PBI:vysL1}. Je vidět, že kategorie Velmi čerstvé a Čerstvé jsou výrazně více zastoupeny než zbylé kategorie. Tabulka \ref*{tab:PBI:vysL1} obsahuje agregované důležité metriky podle sedmi hlavních kategorií. Kategorie Velmi čerstvé má nejvíce evidovaných záznamů, rovněž nejvyšší oba podíly na tržbách i největší celkovou ztrátu způsobenou shrinkem. Hodnota shrinku činí téměř dvě procenta tržeb kategorie. Co se týče tržeb za tuto kategorii, jedná se o druhou kategorii s nejvyššími tržbami ve sledovaném období. Vyšší tržby má pouze kategorie Suché, kde ale ztráta u tohoto typu zboží je více než dvacetkrát menší. Kategorie Čerstvé se vyskytuje téměř v půl milionu záznamů. Hodnota shrinků produktů je více než jedno procento tržeb této kategorie. Zbylé kategorie mají velmi malé zastoupení v datech a význam vzhledem ke svým tržbám.
 
 \begin{figure}[h!]
     \centering
     \captionsetup{justification=centering}
-    \includegraphics[width=.4\textwidth]{obrazky/PBI/vys_L1.png}
+    \includegraphics[width=.6\textwidth]{obrazky/PBI/vys_L1.png}
     \caption{Power BI report -- Zastoupení kategorií na celkových tržbách ve sledovaném období.}
     \label{obr:PBI:vysL1}
 \end{figure}
@@ -170,19 +170,19 @@ Pořadí zastoupení shrinků jednotlivých kategorií první úrovně hierarchi
     \centering
     \caption{Tabulka základních metrik pro kategorie první úrovně produktové hierarchie.}
 
-    \begin{tabular}{l|lllll}
-        Kategorie & Hodnota \par shrinku & Počet záznamů & Podíl na \par tržbách kategorie& Podíl na \par celkových tržbách& Tržby \par kategorie \\ 
+    \begin{tabular}{l rrrrr}
+        Kategorie & \vtop{\hbox{\strut Hodnota}\hbox{\strut shrinku}}  & \vtop{\hbox{\strut Počet}\hbox{\strut záznamů}}  &  \vtop{\hbox{\strut Podíl na }\hbox{\strut tržbách}\hbox{\strut  kategorie [\%]}} & \vtop{\hbox{\strut Podíl na }\hbox{\strut celkových}\hbox{\strut  tržbách [\%]}}& \vtop{\hbox{\strut Tržby}\hbox{\strut kategorie}}  \\ 
         \midrule
-        Very Fresh & -9879792 & 672189 & "1,8928" & "0,5600" & -1237048059 \\ 
-        Fresh & -4429461 & 474405 & "1,1298" & "0,2511" & -929181583 \\ 
-        Dry & -492461 & 51018 & "0,0814" & "0,0279" & -1434220659 \\ 
-        Cosmetics & -64028 & 3875 & "0,0546" & "0,0036 " & -277861782 \\ 
-        Non-food & -47914 & 3799 & "0,0672" & "0,0027 " & -168868638 \\ 
-        Other & -13572 & 307 & "0,3724" & "0,0008" & -8637684 \\ 
-        Tobacco & -546 & 30 & "0,0010" & "0,0000 " & -125734644 \\ 
+        Velmi čerstvé & $9\,879\,792$ & $672\,189$ & $1{,}8928$ & $0{,}5600$ & $1\,23 7\, $mil. \\ %048\,059$ \\ 
+        Čerstvé & $4\,429\,461$ & $474\,405$ & $1{,}1298$ & $0{,}2511$ & $929\, $mil. \\ %181\,583$ \\ 
+        Suché & $492\,461$ & $51\,018$ & $0{,}0814$ & $0{,}0279$ & $1\,434\, $mil. \\ %220\,659$ \\ 
+        % \vtop{\hbox{\strut Kosmetika}\hbox{\strut  a drogerie}} & $64\,028$ & $3\,875$ & $0{,}0546$ & $0{,}0036$  & $277\, $mil. \\ %861\,782 $\\ 
+        Kosmetika a drogerie & $64\,028$ & $3\,875$ & $0{,}0546$ & $0{,}0036$  & $277\, $mil. \\ %861\,782 $\\ 
+        Nepotravinářské & $47\,914$ & $3\,799$ &$ 0{,}0672$ & $0{,}0027$  & $168\, $mil. \\ %868\,638$ \\ 
+        Ostatní & $13\,572$ & $307$ & $0{,}3724$ & $0{,}0008$ & $8\, $mil. \\ %637\,684$ \\ 
+        Tabák & $546$ & $30$ &$ 0{,}0010$ & $0{,}0000$  & $125\, $mil. \\ %734\,644$ \\ 
     \end{tabular}
     \label{tab:PBI:vysL1}
-
 \end{table}
 
 \label{sec:vizualizace:vysl}
