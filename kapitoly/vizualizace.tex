@@ -236,7 +236,7 @@ Na obrázku \ref*{obr:PBI:types} nahoře je zobrazen jaký je podíl celkového 
     \begin{minipage}{.5\textwidth}
         \centering
         \captionsetup{justification=centering}
-        \includegraphics[width=0.5\textwidth]{obrazky/PBI/vsLoc.png}
+        \includegraphics[width=\textwidth]{obrazky/PBI/vsLoc.png}
         \caption{Power BI report -- Porovnání hodnoty shrinku a počtu prodejen pro jednotlivé kraje.}
         \label{obr:PBI:locvs}
     \end{minipage}%
@@ -282,7 +282,18 @@ Graf \ref*{obr:PBI:velikost} zobrazuje průměrnou hodnotu shrinků na prodejně
     \centering
     \captionsetup{justification=centering}
     \includegraphics[width=.8\textwidth]{obrazky/PBI/citysize.png}
-    \caption{Power BI report -- Průměrná hodnota shrinku prodejen podle velikosti měst, ve které se nachází prodejna}
+    \caption{Power BI report -- Průměrná hodnota shrinku prodejen podle velikosti měst, ve které se nachází prodejna.}
     \label{obr:PBI:velikost}
 \end{figure}
 
+Z pohledu času záznamu, tj. dne v týdnu a čtvrtiny měsíce platí, že nejvyšší shrinky jsou evidovány poslední čtvrtinu měsíce. Důvodem může být to, že část výrobků má datum expirace uvedené ve formátu měsíc-rok, což znamená, že zboží prochází posledním dnem v měsíci. Dalším důvodem může být, že před začátkem nového měsíce zaměstnanci  evidují více záznamů. Například se může jednat i o shrinky, které se uskutečnili dříve, ale až s koncem měsíce byly nahrány do systému. Nejvyšší hodnota shrinků je evidována v pátek, zatímco nejnižší v neděli, pondělí a úterý.
+
+Na grafu \ref*{obr:PBI:promo} je procentuální zastoupení evidovaných shrinků vzhledem k typu promoakce. Nejvíce záznamů se týká produktů bez promoakce, zároveň lze vidět, že Velmi čerstvé  produkty byly ve sledovaném období v promoakci méně než Čerstvé produkty.
+
+\begin{figure}[h!]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=.8\textwidth]{obrazky/PBI/promotype.png}
+    \caption{Power BI report -- Počet záznamů podle typu promoakce shrinkovaného produktu.}
+    \label{obr:PBI:promo}
+\end{figure}
