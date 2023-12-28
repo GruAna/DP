@@ -16,22 +16,22 @@
 \contentsline {subsection}{\numberline {2.2.1}Korela\IeC {\v c}n\IeC {\'\i } koeficient}{23}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Dal\IeC {\v s}\IeC {\'\i } zp\IeC {\r u}soby m\IeC {\v e}\IeC {\v r}en\IeC {\'\i } z\IeC {\'a}vislosti}{24}{subsection.2.2.2}
 \contentsline {section}{\numberline {2.3}Metoda GUHA}{26}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Z\IeC {\'a}kladn\IeC {\'\i } princip metody}{26}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.1}Z\IeC {\'a}kladn\IeC {\'\i } princip metody}{27}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}D\IeC {\r u}le\IeC {\v z}it\IeC {\'e} pojmy}{27}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}Procedury}{29}{subsection.2.3.3}
-\contentsline {section}{\numberline {2.4}N\IeC {\'a}stroje}{31}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Pyhton -- Jupyter Notebook}{31}{subsection.2.4.1}
+\contentsline {section}{\numberline {2.4}N\IeC {\'a}stroje}{32}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Pyhton -- Jupyter Notebook}{32}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}Power BI}{32}{subsection.2.4.2}
-\contentsline {chapter}{\numberline {3}Shrink}{35}{chapter.3}
-\contentsline {section}{\numberline {3.1}Definice}{35}{section.3.1}
-\contentsline {section}{\numberline {3.2}Typy shrink\IeC {\r u}}{35}{section.3.2}
-\contentsline {chapter}{\numberline {4}Zpracov\IeC {\'a}n\IeC {\'\i } dat}{39}{chapter.4}
-\contentsline {section}{\numberline {4.1}Popis obdr\IeC {\v z}en\IeC {\'y}ch dat}{39}{section.4.1}
-\contentsline {subsubsection}{\IeC {\v C}\IeC {\'\i }seln\IeC {\'\i }ky}{39}{section*.25}
-\contentsline {subsubsection}{Tabulky transakc\IeC {\'\i }}{41}{section*.27}
-\contentsline {subsubsection}{Dal\IeC {\v s}\IeC {\'\i } datov\IeC {\'e} zdroje}{42}{section*.28}
-\contentsline {section}{\numberline {4.2}P\IeC {\v r}\IeC {\'\i }prava vzorku dat pro dal\IeC {\v s}\IeC {\'\i } anal\IeC {\'y}zy}{43}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}V\IeC {\'y}b\IeC {\v e}r dat}{43}{subsection.4.2.1}
+\contentsline {chapter}{\numberline {3}Shrink}{37}{chapter.3}
+\contentsline {section}{\numberline {3.1}Definice}{37}{section.3.1}
+\contentsline {section}{\numberline {3.2}Typy shrink\IeC {\r u}}{37}{section.3.2}
+\contentsline {chapter}{\numberline {4}Zpracov\IeC {\'a}n\IeC {\'\i } dat}{41}{chapter.4}
+\contentsline {section}{\numberline {4.1}Popis obdr\IeC {\v z}en\IeC {\'y}ch dat}{41}{section.4.1}
+\contentsline {subsubsection}{\IeC {\v C}\IeC {\'\i }seln\IeC {\'\i }ky}{41}{section*.28}
+\contentsline {subsubsection}{Tabulky transakc\IeC {\'\i }}{43}{section*.30}
+\contentsline {subsubsection}{Dal\IeC {\v s}\IeC {\'\i } datov\IeC {\'e} zdroje}{44}{section*.31}
+\contentsline {section}{\numberline {4.2}P\IeC {\v r}\IeC {\'\i }prava vzorku dat pro dal\IeC {\v s}\IeC {\'\i } anal\IeC {\'y}zy}{45}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}V\IeC {\'y}b\IeC {\v e}r dat}{45}{subsection.4.2.1}
 \contentsline {chapter}{\numberline {5}Korela\IeC {\v c}n\IeC {\'\i } anal\IeC {\'y}za}{55}{chapter.5}
 \contentsline {section}{\numberline {5.1}Postup}{55}{section.5.1}
 \contentsline {section}{\numberline {5.2}Implementace}{57}{section.5.2}
@@ -47,7 +47,7 @@
 \contentsline {subsection}{\numberline {7.1.1}Metriky}{80}{subsection.7.1.1}
 \contentsline {subsection}{\numberline {7.1.2}Reporting}{81}{subsection.7.1.2}
 \contentsline {section}{\numberline {7.2}V\IeC {\'y}sledky}{86}{section.7.2}
-\contentsline {chapter}{Z\IeC {\'a}v\IeC {\v e}r}{95}{chapter*.93}
-\contentsline {chapter}{Literatura}{96}{chapter*.93}
-\contentsline {chapter}{P\IeC {\v r}\IeC {\'\i }lohy}{101}{chapter*.94}
+\contentsline {chapter}{Z\IeC {\'a}v\IeC {\v e}r}{95}{chapter*.96}
+\contentsline {chapter}{Literatura}{96}{chapter*.96}
+\contentsline {chapter}{P\IeC {\v r}\IeC {\'\i }lohy}{101}{chapter*.97}
 \contentsline {chapter}{\numberline {A}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD}{101}{appendix.A}

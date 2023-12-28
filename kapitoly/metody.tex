@@ -191,7 +191,7 @@ Pokud předpokládáme, že pořadí hodnot je unikátní, tj. neexistují v~rá
 \end{equation}
 kde $d_i = (x_{ri} - y_{ri})$ je diference pořadí hodnot veličin $X$ a $Y$.\cite{bib:MB,bib:correlation}
 
-Jak je patrné ze vzorců pro oba korelační koeficienty tato míra lze aplikovat pouze na numerické veličiny. V~případě kategorických veličin by bylo potřeba je převést na číselné hodnoty. K~tomu slouží řada metod. Mezi dva nejznámější způsoby překódo-\\vání kategorických proměných patří one-hot kódování a label kódování. V~případě one-hot kódování se ale může počet proměnných výrazně zvýšit, pokud v~datech existují příznaky s~větším počtem unikátních kategorií. Pro druhý zmíněný způsob kódování je nevýhodou fakt, že přiřazením čísel od 0 do $n$, kde $n$ je počet kategorií v~příznaků, se kategorickým hodnotám přiřadí pořadí, které ale v~datech vůbec nemusí být a tudíž je tato nová informace v~datech na obtíž \cite{bib:encoding}. Proto jsou v~další části této sekce uvedeny vybrané způsoby měření závislosti dvou kategorických proměnných.
+Jak je patrné ze vzorců pro oba korelační koeficienty tato míra lze aplikovat pouze na numerické veličiny. V~případě kategorických veličin by bylo potřeba je převést na číselné hodnoty. K~tomu slouží řada metod. Mezi dva nejznámější způsoby překódo-\\vání kategorických proměných patří one-hot kódování a label kódování. V~případě one-hot kódování se ale může počet proměnných výrazně zvýšit, pokud v~datech existují příznaky s~větším počtem unikátních kategorií. Pro druhý zmíněný způsob kódování je nevýhodou fakt, že přiřazením čísel od 0 do $n$, kde $n$ je počet kategorií v~příznaků, se kategorickým hodnotám přiřadí pořadí, které ale v~datech vůbec nemusí být a tudíž je tato nová informace v~datech na obtíž. Další možností je předělat kategorické hodnoty na spojité hodnoty pomocí cílového sloupec (tj. vysvětlované proměnné), tímto způsobem ale může dojít k zanesení informace o předpovídaném sloupci přímo do vysvětlujících proměnných. \cite{bib:encoding}. Proto jsou v~další části této sekce uvedeny vybrané způsoby měření závislosti dvou kategorických proměnných.
 
 \subsection{Další způsoby měření závislosti}
 
@@ -491,6 +491,7 @@ S Jupyter Notebooky jsem pracovala v~editoru Visual Studio Code, který podporuj
 Data společnosti jsou uložená v~MySQL databázi, ke které jsem přistupovala pomocí nástroje HeidiSQL, což je open-sourcový nástroj pro práci s~databázovými tabulkami. Z~tohoto programu je data možné vyexportovat do formátu CSV. S exportovanými soubory jsem dále pracovala v~Pythonu.
 
 \subsection{Power BI}
+\label{sec:PBI}
 
 Pro vizualizaci dat jsem použila nástroj Power BI Desktop, dále už jen Power BI. Tato aplikace umožňuje vytvořit business intelligence report pro sledovaná data. Data je možné nahrát z~různých datových zdrojů, poté z~nich vytvořit datový model. Na základě tohoto modelu pak lze vytvářet reporty s~nejrůznějšími vizuály. Aplikace má rozsáhlou online dokumentaci, a~to i v~českém jazyce. Veškeré informace o Power BI jsou čerpány z~této dokumentace \cite{bib:PBI}. 
 
@@ -526,6 +527,61 @@ Míru lze buď přímo vložit jako vstup do vizuálu nebo ji použít v~definic
 
 \subsubsection*{Typy vizuálů}
 
+Aplikace nabízí přes dvacet základních vizuálů a stovky vizuálů dostupných ke stažení. V následující části jsou představeny vybrané vizuály, které jsou použité v reportu pro data analyzovaná v této práci. 
+
+Základní graf je graf sloupcový, případně pruhový, které lze dále rozlišit na skládaný, skupoinový a 100\% skládaný graf. Rozdíly mezi těmito grafy jsou na obr. \ref*{obr:PBI:grafy}. Se sloupcovým grafem souvisí i graf kombinovaný, který obsahuje jak sloupce s hodnotami, tak spojnici pro zobrazení jiných hodnot. Takový graf má tedy dvě rozdílné osy $y$, které mohou mít různá měřítka, ale pouze jednu společnou osu $x$.
+
+\begin{figure}[h!]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=\textwidth]{obrazky/PBIteorie/sloupcove_grafy.png}
+    \caption{Základní typy sloupcových grafů. 
+    Zdroj: \cite{bib:PBIgrafy}, upraveno.}
+    \label{obr:PBI:grafy}
+\end{figure}
+
+Další klasický graf je graf bodový, který zobrazuje body v průsečíku číselných hodnot $x$  a $y$. Osy mohou mít opět různá měřítka. Z bodového grafu vychází tzv. bublinový graf, který ale navíc může zobrazit ještě třetí rozměr v datech, a to v podobě velikosti bodů -- bublin. Tvar a poměr velikostí zobrazených bodů, resp. bublin je možné upravovat, stejně tak jejich barvu. Ukázka je na obr. \ref*{obr:PBI:grafybod}.
+
+\begin{figure}[h!]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=.9\textwidth]{obrazky/PBIteorie/power-bi-compare-charts.png}
+    \caption{Základní typy bodových grafů. 
+    Zdroj: \cite{bib:PBI}, upraveno.}
+    \label{obr:PBI:grafybod}
+\end{figure}
+
+Zajímavým vizuálem je mapa stromové struktury. Díky tomuto vizuálu je možné zachytit hierarchická data a poměrové zastoupení kategorií v datech. Každá kategorie je reprezentována jako obdélník, označuje se pojmem větev. Každý obdélník může obsahovat své podkategorie, označené jako listy. Příklad je na obr. \ref*{obr:PBImapa}.
+
+Formou vizuálu jsou i tabulky, matice a tzv. karty - jednočíselné nebo víceřádkové. Karty se používají pro zobrazení sledované celkové hodnoty, např. celkový počet produktů. Dále karta může obsahovat název sledované hodnoty. Příklad je uveden na obr. \ref*{obr:PBIkarty}. 
+Rozdíl mezi tabulkou a maticí je ten, že tabulce lze předávat pouze sloupce a případné číselné hodnoty se spočítají podle agregace v předchozích sloupcích. Tabulka může obsahovat záhlaví a řádek s celkovými součty. Matice na rozdíl od obyčejné tabulky umožňuje stupňovité nahlížení na data. Pokud definujeme více vstupních sloupců z dat jako řádky matice, lze pak záhlaví jendotlivých názvů řádků rozbalit pro větší detail. Příklad tabulky je na obr.         \ref*{obr:PBItab.}
+
+\begin{figure}[hbtp!]
+    \centering
+    \begin{minipage}{.4\textwidth}
+        \centering
+        \captionsetup{justification=centering}
+        \includegraphics[width=\textwidth]{obrazky/PBIteorie/power-bi-treemap-category-tooltip.png}
+        \caption{Mapa stromové struktury s tooltipem. Zdroj: \cite{bib:PBI}.}
+        \label{obr:PBImapa}
+    \end{minipage}%
+    \hspace*{0.4em}
+    \begin{minipage}{.2\textwidth}
+        \centering
+        \captionsetup{justification=centering}
+        \includegraphics[width=\textwidth]{obrazky/PBIteorie/kartastoresSFF.png}
+        \caption{Ukázka vizuálů jednořádková karta (vlevo) a víceřádková karta (vpravo). Zdroj: vlastní.}
+        \label{obr:PBIkarty}
+    \end{minipage}%
+    \hspace*{0.4em}
+    \begin{minipage}{.4\textwidth}
+        \centering
+        \captionsetup{justification=centering}
+        \includegraphics[width=\textwidth]{obrazky/PBIteorie/power-bi-expansion-state.png}
+        \caption{Ukázka vizuálu matice. Zdroj: \cite{bib:PBI}.}
+        \label{obr:PBItab.}
+    \end{minipage}
+\end{figure}
 % !!!! TODO:
 
 
