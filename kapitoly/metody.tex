@@ -13,7 +13,7 @@
 
 \subsection{Analýza hlavních komponent}
 
-Analýza hlavních komponent (anglicky \emph{Principal component analysis}, dále jako PCA) je statistická metoda využívaná pro pro extrakci proměnných, redukci vícedimenzio-\\nálních dat nebo vizualizaci dat. Lze ji aplikovat pouze na kvantitativní data s numerickými, spojitými hodnotami, neboť metoda využívá lineární algebraické techniky, jako je například kovarianční matice, pro jejíž výpočet se předpokládají spojité hodnoty. 
+Analýza hlavních komponent (anglicky \emph{Principal component analysis}, dále jako PCA) je statistická metoda využívaná pro pro extrakci proměnných, redukci vícedimenzio-\\nálních dat nebo vizualizaci dat. Lze ji aplikovat pouze na kvantitativní data s~numerickými, spojitými hodnotami, neboť metoda využívá lineární algebraické techniky, jako je například kovarianční matice, pro jejíž výpočet se předpokládají spojité hodnoty. 
 
 Jednotlivá pozorování obsažená v~datech bývají popsána několika různými příznaky. Tyto příznaky jsou často vzájemně korelované a obsahují šum. Metoda PCA dovede extrahovat pouze důležité informace z~proměnných a snížit šum. K~tomu je třeba vypočítat nové ortogonální proměnné, nazývané hlavní komponenty, které se získají jako lineární kombinace původních proměnných \cite{bib:PCA1}. Hlavní komponenty reprezentují směry největšího rozptylu původních dat a jsou řazeny podle své významnosti. Jinými slovy, první hlavní komponenta zachycuje co nejvíce variability v~datech, druhá hlavní komponenta zachycuje co nejvíce variability, která nebyla zachycena první hlavní komponentou, pro zbylé komponenty analogicky. \cite{bib:PCA3}
 %, jinými slovy se jedná o přímku,  které nesou největší informaci o datech. Hlavní komponentu si lze představit jako novou osu, která umožňuje vidět data v~takovém rozložení, že rozdíly mezi pozorováními jsou lépe patrné.  %https://builtin.com/data-science/step-step-explanation-principal-component-analysis
@@ -40,7 +40,7 @@ Optimální vektor $\bm{a}_1$ je takový vektor, který maximalizuje výběrový
 \begin{equation}
     D(y_{11}, \ldots, y_{1N}) = \bm{a}_1^\top \mathbf{C} \bm{a}_1
 \end{equation}
-můžeme maximalizační úlohu vyřešit pomocí metody Lagrangeových multiplikátorů. Lagrageova funkce s parametrem $\lambda_1$ má následující tvar
+můžeme maximalizační úlohu vyřešit pomocí metody Lagrangeových multiplikátorů. Lagrageova funkce s~parametrem $\lambda_1$ má následující tvar
 \begin{equation}
     \mathcal{L}(\bm{a}_1, \lambda_1) = \bm{a}_1^\top \mathbf{C} \bm{a}_1 - \lambda_1(\bm{a}_1^\top\bm{a}_1 - 1).
 \end{equation}
@@ -66,7 +66,7 @@ Druhá hlavní komponenta
 \begin{equation}
     y_{2i} = \bm{a}_2^\top (\bm{x}_i - \bar{\bm{x}}), \quad \mbox{pro } i=1,\ldots,N,
 \end{equation}
-se vypočte obdobným způsobem s přidanou podmínkou ortogonality vzhledem~k první hlavní komponentě -- druhá hlavní komponenta nesmí být korelovaná s předchozí, první hlavní komponentou. Potom popisuje druhý největší možný rozptyl v~datech. Znázornění dvou hlavních komponent ve dvoudimenzionálním prostoru je vyobrazeno na obrázku \ref*{obr:met:PCA1}.
+se vypočte obdobným způsobem s~přidanou podmínkou ortogonality vzhledem~k první hlavní komponentě -- druhá hlavní komponenta nesmí být korelovaná s~předchozí, první hlavní komponentou. Potom popisuje druhý největší možný rozptyl v~datech. Znázornění dvou hlavních komponent ve dvoudimenzionálním prostoru je vyobrazeno na obrázku \ref*{obr:met:PCA1}.
 Vektor  $\bm{a}_2$ se opět získá jako jednotkový vlastní vektor kovarianční matice $\mathbf{C}$ příslušící druhému největšímu vlastnímu číslu $\lambda_2$.\cite{bib:PCA1, bib:PCA3} %https://builtin.com/data-science/step-step-explanation-principal-component-analysis
 
 \begin{figure}[hbtp!]
@@ -84,12 +84,12 @@ kde $\mathbf{Y}$ obsahuje komponenty $\bm{y}_{1}, \bm{y}_{2}, \ldots$, $\mathbf{
 
 \subsection{Korespondenční analýza}
 
-Vícenásobná korespondenční analýza (anglicky \emph{Multiple correspondence analysis}, dále jako MCA) je metoda, která umožňuje popsat vztahy mezi daty, které jsou popsané kategorickými proměnnými, vytvořením kontingenční tabulky. V případě, že se popisuje vzájemná relace pouze dvou proměnných, se použije základní korespondenční analýza\footnote{anglicky \emph{correspondence analysis} (CA)}. MCA je alternativou~k PCA, pokud jsou analyzovanými daty kategorická data. \cite{bib:MCA1}
+Vícenásobná korespondenční analýza (anglicky \emph{Multiple correspondence analysis}, dále jako MCA) je metoda, která umožňuje popsat vztahy mezi daty, které jsou popsané kategorickými proměnnými, vytvořením kontingenční tabulky. V~případě, že se popisuje vzájemná relace pouze dvou proměnných, se použije základní korespondenční analýza\footnote{anglicky \emph{correspondence analysis} (CA)}. MCA je alternativou~k PCA, pokud jsou analyzovanými daty kategorická data. \cite{bib:MCA1}
 
 % \subsubsection{Princip korespondenční analýzy}
 \subsubsection{Značení}
 %https://statmath.wu.ac.at/courses/CAandRelMeth/caipA.pdf
-Nechť $\mathbf{N}$ je matice dat s rozměry $I\times J$, kde I odpovídá počtu pozorování a J je počet kategorií. %asi pocet kategorii, najit !!!
+Nechť $\mathbf{N}$ je matice dat s~rozměry $I\times J$, kde I odpovídá počtu pozorování a J je počet kategorií. %asi pocet kategorii, najit !!!
 Matice $\mathbf{N}$ je převedena na korespondenční matici $\mathbf{P}$ vydělením matice $\mathbf{N}$ jejím celkovým součtem $n = \sum_{i=1}^{I} \sum_{j=1}^{J} n_{ij}=\mathbf{1}^\top_I \mathbf{N}\mathbf{1}_J$. To zaručuje, že součet prvků matice $\mathbf{P}$ je roven jedné. Tyto kroky lze shrnout následujícím matematickým zápisem
 \begin{equation}
     \mathbf{P} = \frac{1}{n}\mathbf{N}, \qquad \mathbf{P} = \{p_{ij}\},  \qquad  \sum_{i=1}^{I} \sum_{j=1}^{J} p_{ij} = 1.
@@ -153,9 +153,9 @@ První způsob MCA aplikuje základní algoritmus korespondenční analýzy na m
 \label{sec:Teoriekorelace}
 \subsection{Korelační koeficient}
 
-Pojem korelace obecně znamená vzájemný vztah mezi dvěma veličinami. Pokud se jedna veličina mění, pak se mění dle míry korelace i druhá veličina. Samotná korelace ale neurčuje míru vztahu, ani směr vztahu. Tedy která veličina je příčinou a která důsledkem. Tuto vlastnost popisuje kauzalita. Míra korelace mezi dvěma veličinami je určena pomocí korelačního koeficientu. Existuje více způsobů měření míry korelace, v následující části jsou popsány vybrané z nich.\cite{bib:MB}
+Pojem korelace obecně znamená vzájemný vztah mezi dvěma veličinami. Pokud se jedna veličina mění, pak se mění dle míry korelace i druhá veličina. Samotná korelace ale neurčuje míru vztahu, ani směr vztahu. Tedy která veličina je příčinou a která důsledkem. Tuto vlastnost popisuje kauzalita. Míra korelace mezi dvěma veličinami je určena pomocí korelačního koeficientu. Existuje více způsobů měření míry korelace, v~následující části jsou popsány vybrané z~nich.\cite{bib:MB}
 
-Nejčastěji používaným koeficientem pro měření korelace je \emph{Pearsonův korelační koeficient}. Nechť $X$ a $Y$ jsou náhodné veličiny s realizacemi $x_1, x_2, \ldots$ a $y_1, y_2, \ldots$, potom hodnota Pearsonova koeficientu se vypočítá jako:
+Nejčastěji používaným koeficientem pro měření korelace je \emph{Pearsonův korelační koeficient}. Nechť $X$ a $Y$ jsou náhodné veličiny s~realizacemi $x_1, x_2, \ldots$ a $y_1, y_2, \ldots$, potom hodnota Pearsonova koeficientu se vypočítá jako:
 \begin{equation}
     r_p = \frac{\mathrm{cov}(X,Y)}{\sigma_X\sigma_Y} = 
     \frac{ \sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y}) }
@@ -172,11 +172,11 @@ Nejčastěji používaným koeficientem pro měření korelace je \emph{Pearson�
 \end{equation}
 kde $\bar{x}, \bar{y}$ jsou výběrové průměry, $s_x, s_y$ výběrové směrodatné odchylky.\cite{bib:MB}
 
-Tento koeficient měří lineární vztah mezi dvěma proměnnými. Hodnoty se pohybují v intervalu $\langle -1, 1 \rangle$. Krajní hodnoty znamenají dokonalou lineární závislost. Pokud je koeficient roven 1, pak pokud roste jedna veličina, roste i hodnota druhé veličiny. Pokud je koeficient roven -1, potom s rostoucí hodnotu jedné veličiny, klesá hodnota druhé. Zatímco je-li hodnota koeficientu rovna nule, veličiny jsou lineárně zcela nekorelované. Pro výpočet totoho koeficientu je předpokládána normalita zkoumaných dat.\cite{bib:MB}
+Tento koeficient měří lineární vztah mezi dvěma proměnnými. Hodnoty se pohybují v~intervalu $\langle -1, 1 \rangle$. Krajní hodnoty znamenají dokonalou lineární závislost. Pokud je koeficient roven 1, pak pokud roste jedna veličina, roste i hodnota druhé veličiny. Pokud je koeficient roven -1, potom s~rostoucí hodnotu jedné veličiny, klesá hodnota druhé. Zatímco je-li hodnota koeficientu rovna nule, veličiny jsou lineárně zcela nekorelované. Pro výpočet totoho koeficientu je předpokládána normalita zkoumaných dat.\cite{bib:MB}
 
 Další koeficient, který měří korelaci mezi dvěma veličinami, je \emph{Spearmanův korelační koeficient}. Tento neparametrický koeficient měří nelineární závislost dvou veličin, určuje, jak moc jejich vztah odpovídá monotónní funkci. Spearmanův koeficient je robustní vůči odlehlým hodnotám a nevyžaduje normalitu dat, protože pracuje se seřazenými hodnotami obou veličin. Hodnoty opět leží mezi $-1$ a $1$ a platí pro mě analogická tvrzení jako Pearsonův korelační koeficient.\cite{bib:MB,bib:correlation}
 
-Nechť $X$ a $Y$ jsou náhodné veličiny s realizacemi $x_1, x_2, \ldots$ a $y_1, y_2, \ldots$ a číslo $x_{ri}$ je pořadí čísla $x_i$ v rámci všech hodnot veličiny $X$, číslo $y_{ri}$ je pořadí čísla $y_i$ v rámci všech hodnot veličiny $Y$. $\bar{x}_r, \bar{y}_r$ jsou průměrná pořadí a $s_{x_r}, s_{y_r}$ příslušné směrodatné odchylky. Vztah pro výpočet Spearmanova koeficientu je:
+Nechť $X$ a $Y$ jsou náhodné veličiny s~realizacemi $x_1, x_2, \ldots$ a $y_1, y_2, \ldots$ a číslo $x_{ri}$ je pořadí čísla $x_i$ v~rámci všech hodnot veličiny $X$, číslo $y_{ri}$ je pořadí čísla $y_i$ v~rámci všech hodnot veličiny $Y$. $\bar{x}_r, \bar{y}_r$ jsou průměrná pořadí a $s_{x_r}, s_{y_r}$ příslušné směrodatné odchylky. Vztah pro výpočet Spearmanova koeficientu je:
 \begin{equation}
     r_s =
     \frac{ \sum_{i=1}^{n}x_iy_i - n\bar{x}_r\bar{y}_r }
@@ -184,24 +184,24 @@ Nechť $X$ a $Y$ jsou náhodné veličiny s realizacemi $x_1, x_2, \ldots$ a $y_
           (n-1) s_{x_r} s_{y_r}
     }.
 \end{equation}
-Pokud předpokládáme, že pořadí hodnot je unikátní, tj. neexistují v rámci jedné veličiny hodnoty realizace se stejnou hodnotou, pak lze vzorec pro výpočet Spearmanova korelačního koeficientu zjednodušit na:
+Pokud předpokládáme, že pořadí hodnot je unikátní, tj. neexistují v~rámci jedné veličiny hodnoty realizace se stejnou hodnotou, pak lze vzorec pro výpočet Spearmanova korelačního koeficientu zjednodušit na:
 \begin{equation}
     r_s = 1-
     \frac{ 6 \sum_{i=1}^{n}d_i^2 }{n(n^2-1)},
 \end{equation}
 kde $d_i = (x_{ri} - y_{ri})$ je diference pořadí hodnot veličin $X$ a $Y$.\cite{bib:MB,bib:correlation}
 
-Jak je patrné ze vzorců pro oba korelační koeficienty tato míra lze aplikovat pouze na numerické veličiny. V případě kategorických veličin by bylo potřeba je převést na číselné hodnoty. K tomu slouží řada metod. Mezi dva nejznámější způsoby překódo-\\vání kategorických proměných patří one-hot kódování a label kódování. V případě one-hot kódování se ale může počet proměnných výrazně zvýšit, pokud v datech existují příznaky s větším počtem unikátních kategorií. Pro druhý zmíněný způsob kódování je nevýhodou fakt, že přiřazením čísel od 0 do $n$, kde $n$ je počet kategorií v příznaků, se kategorickým hodnotám přiřadí pořadí, které ale v datech vůbec nemusí být a tudíž je tato nová informace v datech na obtíž \cite{bib:encoding}. Proto jsou v další části této sekce uvedeny vybrané způsoby měření závislosti dvou kategorických proměnných.
+Jak je patrné ze vzorců pro oba korelační koeficienty tato míra lze aplikovat pouze na numerické veličiny. V~případě kategorických veličin by bylo potřeba je převést na číselné hodnoty. K~tomu slouží řada metod. Mezi dva nejznámější způsoby překódo-\\vání kategorických proměných patří one-hot kódování a label kódování. V~případě one-hot kódování se ale může počet proměnných výrazně zvýšit, pokud v~datech existují příznaky s~větším počtem unikátních kategorií. Pro druhý zmíněný způsob kódování je nevýhodou fakt, že přiřazením čísel od 0 do $n$, kde $n$ je počet kategorií v~příznaků, se kategorickým hodnotám přiřadí pořadí, které ale v~datech vůbec nemusí být a tudíž je tato nová informace v~datech na obtíž \cite{bib:encoding}. Proto jsou v~další části této sekce uvedeny vybrané způsoby měření závislosti dvou kategorických proměnných.
 
 \subsection{Další způsoby měření závislosti}
 
 Pro měření míry závislosti dvou kategorických proměnných lze použít \emph{Cramerovo V}, dále značeno jako $V$. 
 Hodnota koeficientu se pohybuje mezi 0 a 1. 1 znamená dokonalou závislost mezi proměnnými, 0 neznamená žádnou závislost. Tento koeficient nemůže nabýt negativní hodnoty, tj. neexistuje negativní závislost. Stejně jako předchozí koeficienty pro korelaci je $V$ symetrické a nezáleží na pořadí veličin.\cite{bib:correl,bib:MB}
 
-Pro dvě zkoumané veličin $X, Y$ s hodnotami $x_1, x_2, \ldots, x_r$ a $y_1, y_2, \ldots, y_s$ existuje kontingenční tabulka $\mathbf{K}$ těchto veličin, jejíž prvky jsou četnosti hodnot proměnných $n_{ij}$,tj. kdy byly pozorovány hodnoty pro dvojici $(x_i, y_j)$. $r$, resp. $s$ je počet řádků, resp. sloupců kontingenční tabulky $\mathbf{K}$.
+Pro dvě zkoumané veličin $X, Y$ s~hodnotami $x_1, x_2, \ldots, x_r$ a $y_1, y_2, \ldots, y_s$ existuje kontingenční tabulka $\mathbf{K}$ těchto veličin, jejíž prvky jsou četnosti hodnot proměnných $n_{ij}$,tj. kdy byly pozorovány hodnoty pro dvojici $(x_i, y_j)$. $r$, resp. $s$ je počet řádků, resp. sloupců kontingenční tabulky $\mathbf{K}$.
 Vzorec pro Cramerovo $V$ má tvar:
 \begin{equation}
-    V = \sqrt{\frac{\chi^2 / n}{min(r-1, s-1)}},
+    V~= \sqrt{\frac{\chi^2 / n}{min(r-1, s-1)}},
 \end{equation}
 kde statistika $\chi^2$ se výpočítá následovně
 \begin{equation}
@@ -220,7 +220,7 @@ formace jevu $X$. \cite{bib:MI2} Pokud je pravděpodobnost každé realizace ste
     I(x)=- \log p_{X}(x).
  \end{equation}
 
-Množství informace celého jevu je popsáno entropií náhodné veličiny. Entropie $H(X)$ náhodné veličiny $X$ s hodnotami $x_1, x_2, \ldots $ s pravděpodobnostní funkcí $p(x)$ je rovna: \cite{bib:MI2,bib:literatura}
+Množství informace celého jevu je popsáno entropií náhodné veličiny. Entropie $H(X)$ náhodné veličiny $X$ s~hodnotami $x_1, x_2, \ldots $ s~pravděpodobnostní funkcí $p(x)$ je rovna: \cite{bib:MI2,bib:literatura}
  \begin{equation}
     H(X) = -\sum_x p_{X}(x) \log p_{X}(x).
  \end{equation}
@@ -229,7 +229,7 @@ Nechť je dán vektor $(X,Y)$, kde $X$, resp. $Y$ je náhodná veličina nabýva
 \begin{equation}
     H(X,Y) = -\sum_{(x,y)} p_{XY}(x,y) \log p_{XY}(x,y).
  \end{equation}
-Podmíněná entropie s předpokladem $p_Y(y)>0$: \cite{bib:MI3}
+Podmíněná entropie s~předpokladem $p_Y(y)>0$: \cite{bib:MI3}
 \begin{equation}
     H(X|Y=y) = -\sum_{(x,y)} p_{X|Y}(x|y) \log p_{X|Y}(x|y),
     \label{eq:podmEntropie}
@@ -246,16 +246,16 @@ Vzájemná informace měří ztrátu informace v~důsledku závislosti $X$ a $Y$
     I(X;Y) = \sum_{(x,y)} + \log \frac{p_{X\vert Y}(x\vert y)}{p_X(x)}
 \end{equation}
 
-Míra, která dovede změřit asymetrickou závislost kategorických proměnných se nazý-//vá \emph{Thielovo U}, které se někdy označuje jako koeficient nejistoty. Pro jeho výpočet se používá podmíněná entropie, viz vztah \ref{eq:podmEntropie}. Thielovo $U$  nabývá hodnot z intervalu $\langle 0, 1 \rangle$, kde 0 neznamená žásnou závislost a 1 dokonalou závislost. Hodnota není symetrická, tj. $U(X,Y)\neq U(Y,X)$, proto se může používat značení, které určuje směr závislosti -- $U(X,Y) = U(X|Y)$. Vzorec pro výpočet koeficientu $U$ je: \cite{bib:thiel,bib:correl}
+Míra, která dovede změřit asymetrickou závislost kategorických proměnných se nazý-//vá \emph{Thielovo U}, které se někdy označuje jako koeficient nejistoty. Pro jeho výpočet se používá podmíněná entropie, viz vztah \ref{eq:podmEntropie}. Thielovo $U$  nabývá hodnot z~intervalu $\langle 0, 1 \rangle$, kde 0 neznamená žásnou závislost a 1 dokonalou závislost. Hodnota není symetrická, tj. $U(X,Y)\neq U(Y,X)$, proto se může používat značení, které určuje směr závislosti -- $U(X,Y) = U(X|Y)$. Vzorec pro výpočet koeficientu $U$ je: \cite{bib:thiel,bib:correl}
 \begin{equation}
     U(X,Y) = U(X|Y) = \frac{H(X)-H(X-Y)}{H(X)}.
 \end{equation}
 
 \section*{Ostatní použité pojmy}
 
-Při analýze dat lze narazit na problém multikolinearity. \emph{Multikolinearita} je vzájemná lineární závislost vysvětlujících proměnných. Jeli $\mathbf{A}$ matice dat (vysvětlujích proměnných bez předpovídaného sloupce), pak multikolinearita v datech existuje, pokud platí rovnice pro alespň jedno nenulové $c_i$: $c_1\bm{a}_1 + ... + c_k\bm{a}_k$, kde $c_i$ jsou konstanty a $\bm{a}_i$ sloupce matice reprezentující jednotlivé příznaky, $k$ počet sloupců matice, tj. počet příznaků. V realných datech stačí, když je daná rovnice přibližně splněna.\cite{bib:MB}
+Při analýze dat lze narazit na problém multikolinearity. \emph{Multikolinearita} je vzájemná lineární závislost vysvětlujících proměnných. Jeli $\mathbf{A}$ matice dat (vysvětlujích proměnných bez předpovídaného sloupce), pak multikolinearita v~datech existuje, pokud platí rovnice pro alespň jedno nenulové $c_i$: $c_1\bm{a}_1 + ... + c_k\bm{a}_k$, kde $c_i$ jsou konstanty a $\bm{a}_i$ sloupce matice reprezentující jednotlivé příznaky, $k$ počet sloupců matice, tj. počet příznaků. V~realných datech stačí, když je daná rovnice přibližně splněna.\cite{bib:MB}
 
-Měřítkem multikolinearity je \emph{rozptylový inflační faktor} (zkratka VIF z anglického variance inflation factor). Možné hodnoty pro koeficient jsou 1 až libovolné číslo větší než jedna, 1 znamená nezávislost. Nad určitou hodnotu koeficientu, v literatuře \cite{bib:multi} je uvedeno už číslo větší než 5, je značná multikolinearita již přítomna v datech. Koeficient má pro $i$-tý sloupec matice $\mathbf{A}$ tvar:
+Měřítkem multikolinearity je \emph{rozptylový inflační faktor} (zkratka VIF z~anglického variance inflation factor). Možné hodnoty pro koeficient jsou 1 až libovolné číslo větší než jedna, 1 znamená nezávislost. Nad určitou hodnotu koeficientu, v~literatuře \cite{bib:multi} je uvedeno už číslo větší než 5, je značná multikolinearita již přítomna v~datech. Koeficient má pro $i$-tý sloupec matice $\mathbf{A}$ tvar:
 \begin{equation}
     VIF_i = \frac{1}{1-R_i^2},
 \end{equation}
@@ -265,21 +265,21 @@ kde $R_i^2$ je koeficient determinace $i$-tého sloupce. Ten říká, jak velkou
 \label{sec:Teorie:Guha}
 
 Metoda GUHA je původní česká metoda používaná pro nexplorační analýzu dat.
-První článek o této metodě vyšel v roce 1966. V současné době je jedním znejrozáshlejších implementací metody systém LISp-Miner. Jedná se o software vyvíjený na Fakultě informatiky a statistiky Vysoké školy ekonomické v Praze, kde se zároveň používá pro výuku a výzkum dobývaní znalostí z databází \cite{bib:GUHA}. Zároveň je také implementována knihovna \emph{CleverMiner} v jazyce Python, která disponuje částí funkcionalit softwaru LISp-Miner.
+První článek o této metodě vyšel v~roce 1966. V~současné době je jedním znejrozáshlejších implementací metody systém LISp-Miner. Jedná se o software vyvíjený na Fakultě informatiky a statistiky Vysoké školy ekonomické v~Praze, kde se zároveň používá pro výuku a výzkum dobývaní znalostí z~databází \cite{bib:GUHA}. Zároveň je také implementována knihovna \emph{CleverMiner} v~jazyce Python, která disponuje částí funkcionalit softwaru LISp-Miner.
 
 \subsection{Základní princip metody}
 
-Cílem metody GUHA je získat z pozorovaných dat všechny vztahy, které jsou jsou pravdivé pro množinu objektů, ze které pochází zkoumaná data. Vyuižívají se k tomu statistické testy hypotéz, které dovolují na základě platnosti určitého tvrzení o vzorku dat přijmout tvrzení o celé množině objektů. Pravdivé tvrzení o celé množině dat se nazývá \emph{teoretické tvrzení}. Tvrzení o vzorku dat se nazývá \emph{observační tvrzení}. Vztah $1:1$ mezi těmito tvrzeními zprostředkovávají statistické testy, znázorněno na obr. \ref*{obr:met:GUHA1}.\cite{bib:GUHA}
+Cílem metody GUHA je získat z~pozorovaných dat všechny vztahy, které jsou jsou pravdivé pro množinu objektů, ze které pochází zkoumaná data. Vyuižívají se k~tomu statistické testy hypotéz, které dovolují na základě platnosti určitého tvrzení o vzorku dat přijmout tvrzení o celé množině objektů. Pravdivé tvrzení o celé množině dat se nazývá \emph{teoretické tvrzení}. Tvrzení o vzorku dat se nazývá \emph{observační tvrzení}. Vztah $1:1$ mezi těmito tvrzeními zprostředkovávají statistické testy, znázorněno na obr. \ref*{obr:met:GUHA1}.\cite{bib:GUHA}
 
 \begin{figure}[hbtp!]
     \centering
     \captionsetup{justification=centering}
     \includegraphics[width=.5\textwidth]{obrazky/GUHA/GUHA1.pdf}
-    \caption{Vztah mezi tvrzeními vzorku dat a celých dat v metodě GUHA. Zdroj: vlastní.}
+    \caption{Vztah mezi tvrzeními vzorku dat a celých dat v~metodě GUHA. Zdroj: vlastní.}
     \label{obr:met:GUHA1}
 \end{figure}
 
-Základní postup GUHA procedury je na obrázku \ref*{obr:met:GUHA2}. Vstupem pro procedury jsou vstupní data a parametry, které definují množinu relevantních tvrzení. Na základě definice jsou vytvořena všechna relevantní observační tvrzení, která jsou verifikována podle dat. Výstupem jsou pak všechna všechna prosté observační tvrzení vycházející ze vstupů. Prosté relevantní  tvrzení je takové tvrzení, které je pravdivé ve vstupních datech a zároveň neplyne již z uvedeného jiného tvrzení ve výstupu.\cite{bib:GUHA}
+Základní postup GUHA procedury je na obrázku \ref*{obr:met:GUHA2}. Vstupem pro procedury jsou vstupní data a parametry, které definují množinu relevantních tvrzení. Na základě definice jsou vytvořena všechna relevantní observační tvrzení, která jsou verifikována podle dat. Výstupem jsou pak všechna všechna prosté observační tvrzení vycházející ze vstupů. Prosté relevantní  tvrzení je takové tvrzení, které je pravdivé ve vstupních datech a zároveň neplyne již z~uvedeného jiného tvrzení ve výstupu.\cite{bib:GUHA}
 
 \begin{figure}[hbtp!]
     \centering
@@ -294,7 +294,7 @@ Základní postup GUHA procedury je na obrázku \ref*{obr:met:GUHA2}. Vstupem pr
 
 % Uvažujeme potenciálně nekonečnou množinu objektů. Metoda předpokládá výsledky existenci pozorování této množiny reprezentované v~matici dat. Cílem je získat všechny zajímavé vztahy, které jsou pravdové pro celou množinu objektů
 
-Pro podrobnější popis procedur je nejprve třeba definovat několik pojmů, se kterými se v procedurách pracuje. Metoda pracuje s nádledujícími pojmy \cite{bib:GUHA}:
+Pro podrobnější popis procedur je nejprve třeba definovat několik pojmů, se kterými se v~procedurách pracuje. Metoda pracuje s~nádledujícími pojmy \cite{bib:GUHA}:
 
 \begin{itemize}
     \itemsep0em
@@ -320,19 +320,19 @@ Další pojmy se týkají vztahů, se kterými procedury pracují \cite{bib:GUHA
 
 \begin{itemize}
     \itemsep0em
-    \item \textbf{Asociační pravidlo} -- Výraz $\mathrm{X} \rightarrow \mathrm{Y}$, kde $\mathrm{X}$ a $\mathrm{Y}$ jsou konjunkce dvojic atribut a jeho hodnota. Dále v textu je použivaná pro tento pojem zkratka AP.
+    \item \textbf{Asociační pravidlo} -- Výraz $\mathrm{X} \rightarrow \mathrm{Y}$, kde $\mathrm{X}$ a $\mathrm{Y}$ jsou konjunkce dvojic atribut a jeho hodnota. Dále v~textu je použivaná pro tento pojem zkratka AP.
     \item \textbf{Konfidence AP} -- Podíl počtu řádků, které splňují A a zároveň S a počtu řádků, které splňují pouze S.
     \item \textbf{Podpora AP} -- Podíl počtu řádků, které splňují A a zároveň S a počtu řádků vstupní matice dat.
 \end{itemize}
 
-Častou úlohou pro dobývání AP je nalezení všech AP, u kterých je hodnota konfidence a podpory AP větší nebo rovna danému prahu. V rámci GUHA se AP zkoumají jako vztah dvou obecných boolovských atributů, které jsou odvozené ze sloupců vstupní matice. GUHA asociační pravidlo (GUHA AP) je 
+Častou úlohou pro dobývání AP je nalezení všech AP, u kterých je hodnota konfidence a podpory AP větší nebo rovna danému prahu. V~rámci GUHA se AP zkoumají jako vztah dvou obecných boolovských atributů, které jsou odvozené ze sloupců vstupní matice. GUHA asociační pravidlo (GUHA AP) je 
 výraz 
 \begin{equation}
     \varphi \approx \psi, 
 \end{equation}
-kde $\varphi, \psi$ jsou boolovské atributy, které nemají obsažený žádný společný boolovský atribut. $\varphi$ se nazývá \emph{antecedent} a $\phi$ \emph{sukcedent}\footnote{Antecedent, jako cedent, který předchází a sukcedent, jako cedent, který následuje.}. Symbol $\approx$ odpovídá \emph{4ft-kvantifikátoru}, viz dále v této sekci. Existují také podmíněná GUHA AP, která mají tvar  $\varphi \approx \psi | \chi$, kde $\chi$ je boolovský atribut.\cite{bib:GUHA}
+kde $\varphi, \psi$ jsou boolovské atributy, které nemají obsažený žádný společný boolovský atribut. $\varphi$ se nazývá \emph{antecedent} a $\phi$ \emph{sukcedent}\footnote{Antecedent, jako cedent, který předchází a sukcedent, jako cedent, který následuje.}. Symbol $\approx$ odpovídá \emph{4ft-kvantifikátoru}, viz dále v~této sekci. Existují také podmíněná GUHA AP, která mají tvar  $\varphi \approx \psi | \chi$, kde $\chi$ je boolovský atribut.\cite{bib:GUHA}
 
-Pravdivost GUHA AP v matici dat $\mathbf{M}$ se určuje pomocí tzv. \emph{4ft-tabulky}. Nechť je dána matice vstupních dat $\mathbf{M}$, antecedent $\varphi$, sukcedent $\psi$. Pak \emph{4ft-tabulka} $\mathrm{4ft}(\varphi,\psi,\mathbf{M})$ je definována jako čtveřice čísel $(a,b,c,d)$, pro které platí:
+Pravdivost GUHA AP v~matici dat $\mathbf{M}$ se určuje pomocí tzv. \emph{4ft-tabulky}. Nechť je dána matice vstupních dat $\mathbf{M}$, antecedent $\varphi$, sukcedent $\psi$. Pak \emph{4ft-tabulka} $\mathrm{4ft}(\varphi,\psi,\mathbf{M})$ je definována jako čtveřice čísel $(a,b,c,d)$, pro které platí:
 \begin{itemize}
     \itemsep0em
     \item $a$ je počet řádků matice $M$, které splňují oba boolovské atributy $\varphi, \psi$.
@@ -340,12 +340,12 @@ Pravdivost GUHA AP v matici dat $\mathbf{M}$ se určuje pomocí tzv. \emph{4ft-t
     \item $c$ je počet řádků matice $M$, které nesplňují $\varphi$, ale splňují $\psi$.
     \item $d$ je počet řádků matice $M$, které nesplňují ani jeden atribut $\varphi, \psi$.\cite{bib:GUHA}
 \end{itemize}
-Reprezentace této tabulky je zobrazena v tab. \ref*{tab:GUHA:tabulka}.
+Reprezentace této tabulky je zobrazena v~tab. \ref*{tab:GUHA:tabulka}.
 
 \begin{table}[hbtp!]
     \begin{center}
             \captionsetup{justification=centering}
-    \caption{\emph{4ft-tabulka} matice $\mathbf{M}$ s asociačním pravidlem $\varphi \approx \psi$.}
+    \caption{\emph{4ft-tabulka} matice $\mathbf{M}$ s~asociačním pravidlem $\varphi \approx \psi$.}
     \begin{tabular}{c|c|c}
         $\mathbf{M}$ & $ \;\psi \;$& $\neg\,\psi$ \\
         \hline
@@ -357,42 +357,42 @@ Reprezentace této tabulky je zobrazena v tab. \ref*{tab:GUHA:tabulka}.
 \end{center}
 \end{table}
 
-\emph{4ft-kvanitifikátor}, symbol $\approx$, definuje podmínku, která se týká hodnot $(a,b,c,d)$ v \emph{4ft-tabulce}. Kvantifikátor je formálně definovaný pomocí funkce $F_\approx$, která každé čtveřici nezáporných čísel přiřazuje hodnotu $1$, resp. $0$ pokud je, resp. není podmínka splněna. Zapisujeme $F_\approx(a,b,c,d)$ nebo zkráceně $\approx(a,b,c,d)$.\cite{bib:GUHA}
+\emph{4ft-kvanitifikátor}, symbol $\approx$, definuje podmínku, která se týká hodnot $(a,b,c,d)$ v~\emph{4ft-tabulce}. Kvantifikátor je formálně definovaný pomocí funkce $F_\approx$, která každé čtveřici nezáporných čísel přiřazuje hodnotu $1$, resp. $0$ pokud je, resp. není podmínka splněna. Zapisujeme $F_\approx(a,b,c,d)$ nebo zkráceně $\approx(a,b,c,d)$.\cite{bib:GUHA}
 \begin{equation}
 \begin{aligned}
-    \mbox{GUHA AP } & \varphi \approx \psi \mbox{ je pravdivé v matici dat }\mathbf{M} \\
+    \mbox{GUHA AP } & \varphi \approx \psi \mbox{ je pravdivé v~matici dat }\mathbf{M} \\
     & \Leftrightarrow \approx(a,b,c,d) = 1 \mbox{, formálně zapsáno jako } \mathrm{Val}(\varphi \approx \psi) = 1.   \\
     \vspace*{.5em} \\
-    \mbox{GUHA AP } & \varphi \approx \psi \mbox{ je nepravdivé v matici dat }\mathbf{M} \\
+    \mbox{GUHA AP } & \varphi \approx \psi \mbox{ je nepravdivé v~matici dat }\mathbf{M} \\
    & \Leftrightarrow \approx(a,b,c,d) = 1 \mbox{, formálně zapsáno jako } \mathrm{Val}(\varphi \approx \psi) = 1. 
 \end{aligned}
 \end{equation}
 
-Pro podmíněné AP $\varphi \approx \psi | \chi$ platí obdobné vztahy. Předpokládáme však, že boolovský atribut $\chi$ nemá ani jeden společný .atribut s atributy $\varphi$ a $\psi$. Platí tvrzení \cite{bib:GUHA}:
+Pro podmíněné AP $\varphi \approx \psi | \chi$ platí obdobné vztahy. Předpokládáme však, že boolovský atribut $\chi$ nemá ani jeden společný .atribut s~atributy $\varphi$ a $\psi$. Platí tvrzení \cite{bib:GUHA}:
 \begin{equation}
     \begin{aligned}
         &\mbox{Nechť } \mathbf{M} \mbox{ je matice vstupních dat, } \varphi,\psi,\chi  \mbox{ boolovské atributy, } \approx \mbox{ kvantifikátor.} \\
-        & \mbox{Podmíněné AP } \varphi \approx \psi | \chi \; \mbox{je pravdivé v } \mathbf{M} \Leftrightarrow \varphi \approx \psi \; \mbox{ je pravdivé v matici } \mathbf{M|}\chi.
+        & \mbox{Podmíněné AP } \varphi \approx \psi | \chi \; \mbox{je pravdivé v~} \mathbf{M} \Leftrightarrow \varphi \approx \psi \; \mbox{ je pravdivé v~matici } \mathbf{M|}\chi.
     \end{aligned}
 \end{equation}
 
 \subsection{Procedury}
 
-V dokumentaci \cite{bib:GUHA} je popsáno sedm procedur -- \emph{4ft-Miner,  SD4ft-Miner, CF-Miner, SDCF-Miner,  KL-Miner,  SDKL-Miner,  Ac4ft-Miner} \cite{bib:GUHA}. V knihovně v jazyce Python jsou implementované pouze metody \emph{4ft-Miner, SD4ft-Miner, CF-Miner} \cite{bib:GUHAclever}. V této práci jsem použila metodu pouze první metodu, proto další je další teoretický popis věnován pouze metodě \emph{4ft-Miner}.
+V dokumentaci \cite{bib:GUHA} je popsáno sedm procedur -- \emph{4ft-Miner,  SD4ft-Miner, CF-Miner, SDCF-Miner,  KL-Miner,  SDKL-Miner,  Ac4ft-Miner} \cite{bib:GUHA}. V~knihovně v~jazyce Python jsou implementované pouze metody \emph{4ft-Miner, SD4ft-Miner, CF-Miner} \cite{bib:GUHAclever}. V~této práci jsem použila metodu pouze první metodu, proto další je další teoretický popis věnován pouze metodě \emph{4ft-Miner}.
 
-Tato procedura pracuje s AP $\varphi \approx \psi$, nebo s podmíněnými AP $\varphi \approx \psi | \chi$. V knihovně \emph{Cleverminer} lze v hlavní funkci \texttt{cleverminer} předat vstupní DataFrame s daty, který reprezentuje vstupní matici dat, další parametr je jedna ze tří implementovaných procedur, dále seznam podmínek pro vyhodnocení tvrzení, vypnutí optimalizace, limit pro výsledná tvrzení a seznam cedentů. Cedenty jsou rozděleny na antecedenty (parametr \texttt{ante}, tj. boolovský atribut $\varphi$), sukcedenty (parametr \texttt{succ}, tj. atribut $\psi$) a podmínky (parametr \texttt{cond}, tj. boolovský atribut $\chi$).
-Každý z boolovských atributů libovolného typu cedentu může mít tyto atributy:
+Tato procedura pracuje s~AP $\varphi \approx \psi$, nebo s~podmíněnými AP $\varphi \approx \psi | \chi$. V~knihovně \emph{Cleverminer} lze v~hlavní funkci \texttt{cleverminer} předat vstupní DataFrame s~daty, který reprezentuje vstupní matici dat, další parametr je jedna ze tří implementovaných procedur, dále seznam podmínek pro vyhodnocení tvrzení, vypnutí optimalizace, limit pro výsledná tvrzení a seznam cedentů. Cedenty jsou rozděleny na antecedenty (parametr \texttt{ante}, tj. boolovský atribut $\varphi$), sukcedenty (parametr \texttt{succ}, tj. atribut $\psi$) a podmínky (parametr \texttt{cond}, tj. boolovský atribut $\chi$).
+Každý z~boolovských atributů libovolného typu cedentu může mít tyto atributy:
 \begin{itemize}
     \itemsep0em
-    \item \texttt{name} -- Název příznaku matice, tj. název sloupce v DataFramu.
-    \item \texttt{type} -- Jakým pravidlem se řídí výběr více kategorií v příznaku. Jedna z hodnot \texttt{subset, lcut, rcut, seq, one}. 
-    \item \texttt{minlen} -- Minimální počet kategorií v daném příznaku.
-    \item \texttt{maxlen} -- Maximální počet kategorií v daném příznaku.\cite{bib:GUHAclever}
+    \item \texttt{name} -- Název příznaku matice, tj. název sloupce v~DataFramu.
+    \item \texttt{type} -- Jakým pravidlem se řídí výběr více kategorií v~příznaku. Jedna z~hodnot \texttt{subset, lcut, rcut, seq, one}. 
+    \item \texttt{minlen} -- Minimální počet kategorií v~daném příznaku.
+    \item \texttt{maxlen} -- Maximální počet kategorií v~daném příznaku.\cite{bib:GUHAclever}
 \end{itemize}
 
-Příznaky musí být kategorické a musí být možné je seřadit. Druhá vlastnost je třeba pro vybírání více kategorií v jednom cedentu určitými způsoby selekce. Pro textové řetězce reprezentující kategorie jsou názvy kategorií řazeny podle abecedy.\cite{bib:GUHAclever}
+Příznaky musí být kategorické a musí být možné je seřadit. Druhá vlastnost je třeba pro vybírání více kategorií v~jednom cedentu určitými způsoby selekce. Pro textové řetězce reprezentující kategorie jsou názvy kategorií řazeny podle abecedy.\cite{bib:GUHAclever}
 
-Pro názornost jsou dále uvedeny příklady pro jednotlivé druhy atributu \texttt{type}. Nechť je dán příznak $\mathbf{A}$ s kategoriemi 1, 2, 3, 4, 5 a parametry jsou definovány následovně: \texttt{minlen=1}, \texttt{minlen=3}. Pokud je typ \texttt{one}, bere se jedna z kategorií daného příznaku, tuto kategorii je třeba specifikovat. Pro typ \texttt{subset} jsou vybrány všechny následující možnosti:
+Pro názornost jsou dále uvedeny příklady pro jednotlivé druhy atributu \texttt{type}. Nechť je dán příznak $\mathbf{A}$ s~kategoriemi 1, 2, 3, 4, 5 a parametry jsou definovány následovně: \texttt{minlen=1}, \texttt{minlen=3}. Pokud je typ \texttt{one}, bere se jedna z~kategorií daného příznaku, tuto kategorii je třeba specifikovat. Pro typ \texttt{subset} jsou vybrány všechny následující možnosti:
 \begin{itemize}
     \itemsep0em
     \item Délka je rovna 1 --  $\mathbf{A(1), A(2), A(3), A(4), A(5)}.$
@@ -418,19 +418,19 @@ Pro typ \texttt{lcut} se vybírají možnosti:
 \end{itemize}
 Analogicky pro typ \texttt{rcut}.
 
-Literály v rámci cedentů lze také kombinovat obdobnými způsoby. Opět lze přiřa-\\dit minimální a maximální délku, typ pro kombinování literálů je výběr konjunkce, nebo disjunkce. Tyto možnosti lze specifikovat pro antecedenty, sukcedenty i pod-\\mínky. Zadání podmínek není nezbytné v atributech funkce \texttt{cleverminer}.
+Literály v~rámci cedentů lze také kombinovat obdobnými způsoby. Opět lze přiřa-\\dit minimální a maximální délku, typ pro kombinování literálů je výběr konjunkce, nebo disjunkce. Tyto možnosti lze specifikovat pro antecedenty, sukcedenty i pod-\\mínky. Zadání podmínek není nezbytné v~atributech funkce \texttt{cleverminer}.
 
 Další parametry, které lze předat této funkci jsou:
 \begin{itemize}
     \itemsep0em
-    \item \texttt{Base} -- Minimální počet řádků, které splňují antecedenty i sukcedenty (číslo $a$ v tabulce \ref*{tab:GUHA:tabulka}).
-    \item \texttt{RelBase} -- Hodnota Base vydělená celkovým počtem řádků dat (případně počtem řádků v matici s aplikovanou podmínkou).
-    \item \texttt{conf} -- Konfidence, pravděpodobnost $/mathrm{P}(\psi|\varphi)$. Jinými slovy procen--\\tuální zastoupení řádků, které vyhovují $\psi$ (sukcendentům) z těch řádků, které vyhovují i $\varphi$ (antecendtům).
+    \item \texttt{Base} -- Minimální počet řádků, které splňují antecedenty i sukcedenty (číslo $a$ v~tabulce \ref*{tab:GUHA:tabulka}).
+    \item \texttt{RelBase} -- Hodnota Base vydělená celkovým počtem řádků dat (případně počtem řádků v~matici s~aplikovanou podmínkou).
+    \item \texttt{conf} -- Konfidence, pravděpodobnost $/mathrm{P}(\psi|\varphi)$. Jinými slovy procen--\\tuální zastoupení řádků, které vyhovují $\psi$ (sukcendentům) z~těch řádků, které vyhovují i $\varphi$ (antecendtům).
     \item \texttt{aad} (nadprůměrná závislost) -- Jak moc $\varphi$ zvyšuje  pravděpodobnost $\psi$. Kolikrát se zvýší pravděpodobnost splnění sukcedentů, když se vezmou pouze záznamy, které vyhovují antecentům, oproti všem záznamům minus 1.
     \item \texttt{bad} (podprůměrná závislost) -- Jak moc $\varphi$ snižuje  pravděpodobnost $\psi$.
 \end{itemize}
 
-Příklad volání funkce \texttt{cleverminer} je sepsaný v ukázce kódu č. \ref*{code:cleverminer}.
+Příklad volání funkce \texttt{cleverminer} je sepsaný v~ukázce kódu č. \ref*{code:cleverminer}.
 \begin{lstlisting}[language=Python, style=mystyle, label={code:cleverminer}, caption={Příklad volání funkce \texttt{cleverminer}.}]
 cleverminer(df = data,
             proc = "4ftMiner", 
@@ -479,27 +479,52 @@ cleverminer(df = data,
 \section{Nástroje}
 
 \subsection{Pyhton -- Jupyter Notebook}
-Veškeré výpočty probíhaly v jazyce Python. Metoda GUHA ve verzi Pythonu 3.10, ostatní výpočty a příprava dat ve verzi 3.9. Kód byl napsán a spouštěn v nástroji\emph{ Jupyter Notebook}. Všechny informace o tomto nástroji jsem čerpala z dokumentace tohoto nástroje \cite{bib:JN}. Jedná se o alternativu ke konzoli jazyka Python. Jupter Notebooky jsou interaktivní a umožňují psát a spuštět blok po \emph{buňkách}. Buňky jsou sdruženy v souboru s příponou \emph{ipynb}, ve skutečnosti se jedná o JSON soubor. V souboru je uložený kód a zároveň i naposledy spuštěné výstupy jednotlivých buněk. 
+Veškeré výpočty probíhaly v~jazyce Python. Metoda GUHA ve verzi Pythonu 3.10, ostatní výpočty a příprava dat ve verzi 3.9. Kód byl napsán a spouštěn v~nástroji\emph{ Jupyter Notebook}. Všechny informace o tomto nástroji jsem čerpala z~dokumentace tohoto nástroje \cite{bib:JN}. Jedná se o alternativu ke konzoli jazyka Python. Jupter Notebooky jsou interaktivní a umožňují psát a spuštět blok po \emph{buňkách}. Buňky jsou sdruženy v~souboru s~příponou \emph{ipynb}, ve skutečnosti se jedná o JSON soubor. V~souboru je uložený kód a zároveň i naposledy spuštěné výstupy jednotlivých buněk. 
 
-Výhodou Jupyter Notebooku oproti klasické konzoli je, že podporuje odsazování, zvýrazňování syntaxe, zobrazení obrázků, HTML prvků nebo \LaTeX výrazů přímo ve výstupu pod kódem. Dále je možné soubor dobře dokumentovat pomocí jazyka Markdown. Tento značkovací jazyk není omezený jen na prostý text, jako jsou klasické komentáře v kódu. Díky němu lze soubor strukturovat do sekcí různmách úrovní. Vytvořen je tak přehlednější kód. 
+Výhodou Jupyter Notebooku oproti klasické konzoli je, že podporuje odsazování, zvýrazňování syntaxe, zobrazení obrázků, HTML prvků nebo \LaTeX výrazů přímo ve výstupu pod kódem. Dále je možné soubor dobře dokumentovat pomocí jazyka Markdown. Tento značkovací jazyk není omezený jen na prostý text, jako jsou klasické komentáře v~kódu. Díky němu lze soubor strukturovat do sekcí různmách úrovní. Vytvořen je tak přehlednější kód. 
 
-Za zmínku také stojí, že dalšími základními programovacími jazyky, které je možné spouštět v Noteboocích jsou R a Julia. Další jazyky lze spouštět pomocí speciálního jádra pro příslušný jazyk.
+Za zmínku také stojí, že dalšími základními programovacími jazyky, které je možné spouštět v~Noteboocích jsou R a Julia. Další jazyky lze spouštět pomocí speciálního jádra pro příslušný jazyk.
 
-S Jupyter Notebooky jsem pracovala v editoru Visual Studio Code, který podporuje řadu programovacích jazyků. Knihovnu Cleverminer jsem spouštěla v prostředí Google Colaboratory, které podporuje pouze Jupyter Notebooky.
+S Jupyter Notebooky jsem pracovala v~editoru Visual Studio Code, který podporuje řadu programovacích jazyků. Knihovnu Cleverminer jsem spouštěla v~prostředí Google Colaboratory, které podporuje pouze Jupyter Notebooky.
 
 \subsection*{Databáze}
-Data společnosti jsou uložená v MySQL databázi, ke které jsem přistupovala pomocí nástroje HeidiSQL, což je open-sourcový nástroj pro práci s databázovými tabulkami. Z tohoto programu je data možné vyexportovat do formátu CSV. S exportovanými soubory jsem dále pracovala v Pythonu.
+Data společnosti jsou uložená v~MySQL databázi, ke které jsem přistupovala pomocí nástroje HeidiSQL, což je open-sourcový nástroj pro práci s~databázovými tabulkami. Z~tohoto programu je data možné vyexportovat do formátu CSV. S exportovanými soubory jsem dále pracovala v~Pythonu.
 
 \subsection{Power BI}
 
-Pro vizualizaci dat jsem použila nástroj Power BI Desktop, dále už jen Power BI. Tato aplikace umožňuje vytvořit business intelligence report pro sledovaná data.
+Pro vizualizaci dat jsem použila nástroj Power BI Desktop, dále už jen Power BI. Tato aplikace umožňuje vytvořit business intelligence report pro sledovaná data. Data je možné nahrát z~různých datových zdrojů, poté z~nich vytvořit datový model. Na základě tohoto modelu pak lze vytvářet reporty s~nejrůznějšími vizuály. Aplikace má rozsáhlou online dokumentaci, a~to i v~českém jazyce. Veškeré informace o Power BI jsou čerpány z~této dokumentace \cite{bib:PBI}. 
 
-Power BI pro práci s daty využívá dva jazyky -- jazyk M a jazyk DAX. První jmenovaný lze použít při nahrávání dat a jejich zpracování, pro běžnou práci není nutné tento jazyk přímo psát, jelikož se generuje na základě kroků v GUI aplikace. Druhý jmenovaný se používá přímo ve vizualizační části. 
+Power BI má tři možná zobrazení -- reporty, data, model. V reportovací části je možné vytvářet interaktivní vizualizace vstupních dat a sestavit tak i vícestránkový report. V sekci data jsou zobrazené všechny řádky aktuálně vybrané tabulky. Uživatel může v~tabulce vyhledávat pomocí filtrů, může přidávat nové sloupce, měnit datové typy sloupců, ale nemůže změnit hdonotu existujících dat v~tabulce. V sekci model se nachází grafické znázornění datového modelu včetně vztahů mezi jednotlicými tabulkami a jejich sloupci. uživatel může měnit -- odebírat, přidávat, měnit kardinalitu vazeb mezi nimi.
 
-TODO
-\subsubsection*{Metriky}
+Power BI pro práci s~daty využívá dva jazyky -- jazyk M a jazyk DAX (Data Analysis Expressions). První jmenovaný lze použít při nahrávání dat a jejich zpracování, jazyk se generuje na základě kroků v~GUI aplikace, nebo je možné psát příkazy ve vestavěném editory. Druhý jmenovaný se používá přímo ve vizualizační části pro vytváření nových sloupců a metrik, obsahuje přes 200 předdefinovaných funkcí, které jsou podobné funkcím v~aplikaci Microsoft Excel.
 
-\subsubsection*{Typy grafů}
+\subsubsection*{Nahrání dat}
+
+Data lze do reportu nahrát tabulková data z~mnkoha typů zdrojů. Je možné se např. připojit přímo k~databázi, získat data z~webu, z~cloudového úložiště, z~textového souboru, souboru z~nástroje Microsoft Excel nebo je také možné spustit Python či R kód, který vytváří data. Nahraná data je možné předzpracovávat v~editoru Power Query, který je součástí Power BI Deskotop. Dále jsou uvedeny příklady úprav v~editoru. Je možné nastavovat záhlaví tabulky, vybírat relevantní řádky a sloupce, přidávat nové sloupce pomocí příkazu v~jazyce M. Tabulku s~daty je možné rozdělit na více tabulek, nebo naopak více tabulek sloučit do jedné, odstranit řádky s~chybějícími hodnotami nebo hodnoty nahradit. V nástroji lze také vytvářet funkce a proměnné např. pro vygenerování tabulky kalendáře.
+
+Editor zaznamenává provedené změny na datech. Jednotlivé kroky tak lze později případně přeskočit, upravit  nebo lze mezi úpravy vložit nový krok. Posloupnost kroků je ale důležitá, neboť kroky se provádějí postupně. Vložený krok může tedy v~některých případech způsobit chybné vykonání následujících kroků. Na obr. \ref*{obr:PBI:PQ} se nachází ukázka z~editoru Power Query.
+
+Po uložení upravených dat v~editoru se transformovaný model zobrazí v~aplikaci Power BI, kde lze s~daty dále pracovat. Úpravu dat, který model obsahuje lze provádět pouze v~nástroji Power Query. Do editoru lze přistupovat opakovaně i během vytváření reportu, může ale nastat sitace, kdy úprava vstupních dat změní model takovým způsobem, že vizuály přestanou správně fungovat.
+
+\begin{figure}[h!]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=\textwidth]{obrazky/PBIteorie/query-overview-with-data-connection.png}
+    \caption{Ukázka nástroje Power Query. \\1 -- Možné interakce s~daty. 2 -- Seznam nahraných tabulek, případně proměných \\a funkcí. 3 -- Ukázka vybraných dat. 4 -- Seznam kroků a vlastností. 
+    Zdroj: \cite{bib:PBI}.}
+    \label{obr:PBI:PQ}
+\end{figure}
+
+\subsubsection*{Míry}
+
+\emph{Míry}, někdy nazývané \emph{metriky} v~Power BI umožňují uživateli reportu sledovat ukazatele, které jsou relevantní pro zkoumaná data. Jedná se o výpočty na datech vytvářené pomocí jazyka DAX. Vypočítaná hodnota míry se mění podle toho, které konkrétní řádky tabulek vstupují do výpočtu, tj. jaké je vizuálu zvolená agregace a vstupní pole. K~přepočítávání dochází automaticky při interakci s~daty v~reportu. Vytvořené metriky jsou zobrazeny vedle seznamu tabulek a sloupců, které se nachází v~datovém modelu. Pro přehlednost jsou ale označeny ikonou. Z~důvodu přehlednosti je ale lepší míry přiřadit do samostatné tabulky, které neobsahuje vstupní data, ale pouze vytvořené míry.
+
+Základní dvě možnosti jak vytvořit metriku jsou -- napsat do řádku vzorců výraz v~jazyce DAX nebo vytvořit tzv. rychlou míru pomocí dialogového okna. Rychlé míry mají ale tu nevýhodu, že nabízí pouze základní operace s~daty jako např. průměr, rozptyl, extrémy, matematické operace nebo převody datumů. 
+Při vkládání dat do vizuálu jsou k~dispozici automatické míry, které se neukládají do seznamu měr v~reportu, ale vstupují pouze do vybraného vizuálu. Velmi častou používaná je míra pro počet záznamů, nebo unikátní počet záznamů.
+
+Míru lze buď přímo vložit jako vstup do vizuálu nebo ji použít v~definici jiné míry.
+
+\subsubsection*{Typy vizuálů}
 
 % !!!! TODO:
 
@@ -513,7 +538,7 @@ TODO
 
 % Bitový řetězec populace se vyhodnotí pomocí cílové funkce (objective function). Hodnota cílové funkce pak určuje hodnotu fitness daného řešení. Fitness je možné uvažovat jako minimalizační nebo maximalizační kritérium.
 
-% Dále se vyberou dva rodiče podle své fitness hodnoty, kteří se mezi sebou zkříží a jejich potomek vstoupí do další iterace. Jeden ze způsobů výběru je vybrat k~náhodných populací a znich vybrat populaci s nejvyšším fitness. Křížení rodičů je pravděpodobnostní, takže v~některých případech ,ůže vzniknout potomek stejný jako jeho rodič. Obvykle se hyperparametr pro křížení se nastavuje na vyšší hodnoty např. 80 nebo 90 \%. Dalším parametrem je mutace, ta určuje zda přenesený bit zmutuje nebo ne. Jeho hodnota se nastavuje jako $1/L$, kde $L$ je délka řetězce.
+% Dále se vyberou dva rodiče podle své fitness hodnoty, kteří se mezi sebou zkříží a jejich potomek vstoupí do další iterace. Jeden ze způsobů výběru je vybrat k~náhodných populací a znich vybrat populaci s~nejvyšším fitness. Křížení rodičů je pravděpodobnostní, takže v~některých případech ,ůže vzniknout potomek stejný jako jeho rodič. Obvykle se hyperparametr pro křížení se nastavuje na vyšší hodnoty např. 80 nebo 90 \%. Dalším parametrem je mutace, ta určuje zda přenesený bit zmutuje nebo ne. Jeho hodnota se nastavuje jako $1/L$, kde $L$ je délka řetězce.
 
 
 
