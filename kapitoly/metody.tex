@@ -191,7 +191,7 @@ Pokud předpokládáme, že pořadí hodnot je unikátní, tj. neexistují v~rá
 \end{equation}
 kde $d_i = (x_{ri} - y_{ri})$ je diference pořadí hodnot veličin $X$ a $Y$.\cite{bib:MB,bib:correlation}
 
-Jak je patrné ze vzorců pro oba korelační koeficienty tato míra lze aplikovat pouze na numerické veličiny. V~případě kategorických veličin by bylo potřeba je převést na číselné hodnoty. K~tomu slouží řada metod. Mezi dva nejznámější způsoby překódo-\\vání kategorických proměných patří one-hot kódování a label kódování. V~případě one-hot kódování se ale může počet proměnných výrazně zvýšit, pokud v~datech existují příznaky s~větším počtem unikátních kategorií. Pro druhý zmíněný způsob kódování je nevýhodou fakt, že přiřazením čísel od 0 do $n$, kde $n$ je počet kategorií v~příznaků, se kategorickým hodnotám přiřadí pořadí, které ale v~datech vůbec nemusí být a tudíž je tato nová informace v~datech na obtíž. Další možností je předělat kategorické hodnoty na spojité hodnoty pomocí cílového sloupec (tj. vysvětlované proměnné), tímto způsobem ale může dojít k zanesení informace o předpovídaném sloupci přímo do vysvětlujících proměnných. \cite{bib:encoding}. Proto jsou v~další části této sekce uvedeny vybrané způsoby měření závislosti dvou kategorických proměnných.
+Jak je patrné ze vzorců pro oba korelační koeficienty tato míra lze aplikovat pouze na numerické veličiny. V~případě kategorických veličin by bylo potřeba je převést na číselné hodnoty. K~tomu slouží řada metod. Mezi dva nejznámější způsoby překódo-\\vání kategorických proměných patří one-hot kódování a label kódování. V~případě one-hot kódování se ale může počet proměnných výrazně zvýšit, pokud v~datech existují příznaky s~větším počtem unikátních kategorií. Pro druhý zmíněný způsob kódování je nevýhodou fakt, že přiřazením čísel od 0 do $n$, kde $n$ je počet kategorií v~příznaků, se kategorickým hodnotám přiřadí pořadí, které ale v~datech vůbec nemusí být a tudíž je tato nová informace v~datech na obtíž. Další možností je předělat kategorické hodnoty na spojité hodnoty pomocí cílového sloupec (tj. vysvětlované proměnné), tímto způsobem ale může dojít k~zanesení informace o předpovídaném sloupci přímo do vysvětlujících proměnných. \cite{bib:encoding}. Proto jsou v~další části této sekce uvedeny vybrané způsoby měření závislosti dvou kategorických proměnných.
 
 \subsection{Další způsoby měření závislosti}
 
@@ -321,8 +321,8 @@ Další pojmy se týkají vztahů, se kterými procedury pracují \cite{bib:GUHA
 \begin{itemize}
     \itemsep0em
     \item \textbf{Asociační pravidlo} -- Výraz $\mathrm{X} \rightarrow \mathrm{Y}$, kde $\mathrm{X}$ a $\mathrm{Y}$ jsou konjunkce dvojic atribut a jeho hodnota. Dále v~textu je použivaná pro tento pojem zkratka AP.
-    \item \textbf{Konfidence AP} -- Podíl počtu řádků, které splňují A a zároveň S a počtu řádků, které splňují pouze S.
-    \item \textbf{Podpora AP} -- Podíl počtu řádků, které splňují A a zároveň S a počtu řádků vstupní matice dat.
+    \item \textbf{Konfidence AP} -- Podíl počtu řádků, které splňují antecedent a zároveň sukcedent a počtu řádků, které splňují pouze sukcedent.
+    \item \textbf{Podpora AP} -- Podíl počtu řádků, které splňují antecedent a zároveň sukcedent a počtu řádků vstupní matice dat.
 \end{itemize}
 
 Častou úlohou pro dobývání AP je nalezení všech AP, u kterých je hodnota konfidence a podpory AP větší nebo rovna danému prahu. V~rámci GUHA se AP zkoumají jako vztah dvou obecných boolovských atributů, které jsou odvozené ze sloupců vstupní matice. GUHA asociační pravidlo (GUHA AP) je 
@@ -478,7 +478,7 @@ cleverminer(df = data,
 
 \section{Nástroje}
 
-\subsection{Pyhton -- Jupyter Notebook}
+\subsection{Python -- Jupyter Notebook}
 Veškeré výpočty probíhaly v~jazyce Python. Metoda GUHA ve verzi Pythonu 3.10, ostatní výpočty a příprava dat ve verzi 3.9. Kód byl napsán a spouštěn v~nástroji\emph{ Jupyter Notebook}. Všechny informace o tomto nástroji jsem čerpala z~dokumentace tohoto nástroje \cite{bib:JN}. Jedná se o alternativu ke konzoli jazyka Python. Jupter Notebooky jsou interaktivní a umožňují psát a spuštět blok po \emph{buňkách}. Buňky jsou sdruženy v~souboru s~příponou \emph{ipynb}, ve skutečnosti se jedná o JSON soubor. V~souboru je uložený kód a zároveň i naposledy spuštěné výstupy jednotlivých buněk. 
 
 Výhodou Jupyter Notebooku oproti klasické konzoli je, že podporuje odsazování, zvýrazňování syntaxe, zobrazení obrázků, HTML prvků nebo \LaTeX výrazů přímo ve výstupu pod kódem. Dále je možné soubor dobře dokumentovat pomocí jazyka Markdown. Tento značkovací jazyk není omezený jen na prostý text, jako jsou klasické komentáře v~kódu. Díky němu lze soubor strukturovat do sekcí různmách úrovní. Vytvořen je tak přehlednější kód. 
@@ -488,20 +488,20 @@ Za zmínku také stojí, že dalšími základními programovacími jazyky, kter
 S Jupyter Notebooky jsem pracovala v~editoru Visual Studio Code, který podporuje řadu programovacích jazyků. Knihovnu Cleverminer jsem spouštěla v~prostředí Google Colaboratory, které podporuje pouze Jupyter Notebooky.
 
 \subsection*{Databáze}
-Data společnosti jsou uložená v~MySQL databázi, ke které jsem přistupovala pomocí nástroje HeidiSQL, což je open-sourcový nástroj pro práci s~databázovými tabulkami. Z~tohoto programu je data možné vyexportovat do formátu CSV. S exportovanými soubory jsem dále pracovala v~Pythonu.
+Data společnosti jsou uložená v~MySQL databázi, ke které jsem přistupovala pomocí nástroje HeidiSQL, což je open-sourcový nástroj pro práci s~databázovými tabulkami. Z~tohoto programu je data možné vyexportovat do formátu CSV. S~exportovanými soubory jsem dále pracovala v~Pythonu.
 
 \subsection{Power BI}
 \label{sec:PBI}
 
 Pro vizualizaci dat jsem použila nástroj Power BI Desktop, dále už jen Power BI. Tato aplikace umožňuje vytvořit business intelligence report pro sledovaná data. Data je možné nahrát z~různých datových zdrojů, poté z~nich vytvořit datový model. Na základě tohoto modelu pak lze vytvářet reporty s~nejrůznějšími vizuály. Aplikace má rozsáhlou online dokumentaci, a~to i v~českém jazyce. Veškeré informace o Power BI jsou čerpány z~této dokumentace \cite{bib:PBI}. 
 
-Power BI má tři možná zobrazení -- reporty, data, model. V reportovací části je možné vytvářet interaktivní vizualizace vstupních dat a sestavit tak i vícestránkový report. V sekci data jsou zobrazené všechny řádky aktuálně vybrané tabulky. Uživatel může v~tabulce vyhledávat pomocí filtrů, může přidávat nové sloupce, měnit datové typy sloupců, ale nemůže změnit hdonotu existujících dat v~tabulce. V sekci model se nachází grafické znázornění datového modelu včetně vztahů mezi jednotlicými tabulkami a jejich sloupci. uživatel může měnit -- odebírat, přidávat, měnit kardinalitu vazeb mezi nimi.
+Power BI má tři možná zobrazení -- reporty, data, model. V~reportovací části je možné vytvářet interaktivní vizualizace vstupních dat a sestavit tak i vícestránkový report. Do reportů lze přidávat vizuály pro konkrétní data a míry, upravovat vzhled a vlastnosti vizuálu. Také lze nastovat datové filtry, které se týkají buď konkrétního vizuálu, celé stránky nebo napříč celým reportem. V~sekci data jsou zobrazené všechny řádky aktuálně vybrané tabulky. Uživatel může v~tabulce vyhledávat pomocí filtrů, může přidávat nové sloupce, měnit datové typy sloupců, ale nemůže změnit hdonotu existujících dat v~tabulce. V~sekci model se nachází grafické znázornění datového modelu včetně vztahů mezi jednotlicými tabulkami a jejich sloupci. uživatel může měnit -- odebírat, přidávat, měnit kardinalitu vazeb mezi nimi.
 
 Power BI pro práci s~daty využívá dva jazyky -- jazyk M a jazyk DAX (Data Analysis Expressions). První jmenovaný lze použít při nahrávání dat a jejich zpracování, jazyk se generuje na základě kroků v~GUI aplikace, nebo je možné psát příkazy ve vestavěném editory. Druhý jmenovaný se používá přímo ve vizualizační části pro vytváření nových sloupců a metrik, obsahuje přes 200 předdefinovaných funkcí, které jsou podobné funkcím v~aplikaci Microsoft Excel.
 
 \subsubsection*{Nahrání dat}
 
-Data lze do reportu nahrát tabulková data z~mnkoha typů zdrojů. Je možné se např. připojit přímo k~databázi, získat data z~webu, z~cloudového úložiště, z~textového souboru, souboru z~nástroje Microsoft Excel nebo je také možné spustit Python či R kód, který vytváří data. Nahraná data je možné předzpracovávat v~editoru Power Query, který je součástí Power BI Deskotop. Dále jsou uvedeny příklady úprav v~editoru. Je možné nastavovat záhlaví tabulky, vybírat relevantní řádky a sloupce, přidávat nové sloupce pomocí příkazu v~jazyce M. Tabulku s~daty je možné rozdělit na více tabulek, nebo naopak více tabulek sloučit do jedné, odstranit řádky s~chybějícími hodnotami nebo hodnoty nahradit. V nástroji lze také vytvářet funkce a proměnné např. pro vygenerování tabulky kalendáře.
+Data lze do reportu nahrát tabulková data z~mnkoha typů zdrojů. Je možné se např. připojit přímo k~databázi, získat data z~webu, z~cloudového úložiště, z~textového souboru, souboru z~nástroje Microsoft Excel nebo je také možné spustit Python či R kód, který vytváří data. Nahraná data je možné předzpracovávat v~editoru Power Query, který je součástí Power BI Deskotop. Dále jsou uvedeny příklady úprav v~editoru. Je možné nastavovat záhlaví tabulky, vybírat relevantní řádky a sloupce, přidávat nové sloupce pomocí příkazu v~jazyce M. Tabulku s~daty je možné rozdělit na více tabulek, nebo naopak více tabulek sloučit do jedné, odstranit řádky s~chybějícími hodnotami nebo hodnoty nahradit. V~nástroji lze také vytvářet funkce a proměnné např. pro vygenerování tabulky kalendáře.
 
 Editor zaznamenává provedené změny na datech. Jednotlivé kroky tak lze později případně přeskočit, upravit  nebo lze mezi úpravy vložit nový krok. Posloupnost kroků je ale důležitá, neboť kroky se provádějí postupně. Vložený krok může tedy v~některých případech způsobit chybné vykonání následujících kroků. Na obr. \ref*{obr:PBI:PQ} se nachází ukázka z~editoru Power Query.
 
@@ -527,9 +527,9 @@ Míru lze buď přímo vložit jako vstup do vizuálu nebo ji použít v~definic
 
 \subsubsection*{Typy vizuálů}
 
-Aplikace nabízí přes dvacet základních vizuálů a stovky vizuálů dostupných ke stažení. V následující části jsou představeny vybrané vizuály, které jsou použité v reportu pro data analyzovaná v této práci. 
+Aplikace nabízí přes dvacet základních vizuálů a stovky vizuálů dostupných ke stažení. V~následující části jsou představeny vybrané vizuály, které jsou použité v~reportu pro data analyzovaná v~této práci. 
 
-Základní graf je graf sloupcový, případně pruhový, které lze dále rozlišit na skládaný, skupoinový a 100\% skládaný graf. Rozdíly mezi těmito grafy jsou na obr. \ref*{obr:PBI:grafy}. Se sloupcovým grafem souvisí i graf kombinovaný, který obsahuje jak sloupce s hodnotami, tak spojnici pro zobrazení jiných hodnot. Takový graf má tedy dvě rozdílné osy $y$, které mohou mít různá měřítka, ale pouze jednu společnou osu $x$.
+Základní graf je graf sloupcový, případně pruhový, které lze dále rozlišit na skládaný, skupoinový a 100\% skládaný graf. Rozdíly mezi těmito grafy jsou na obr. \ref*{obr:PBI:grafy}. Se sloupcovým grafem souvisí i graf kombinovaný, který obsahuje jak sloupce s~hodnotami, tak spojnici pro zobrazení jiných hodnot. Takový graf má tedy dvě rozdílné osy $y$, které mohou mít různá měřítka, ale pouze jednu společnou osu $x$.
 
 \begin{figure}[h!]
     \centering
@@ -540,7 +540,7 @@ Základní graf je graf sloupcový, případně pruhový, které lze dále rozli
     \label{obr:PBI:grafy}
 \end{figure}
 
-Další klasický graf je graf bodový, který zobrazuje body v průsečíku číselných hodnot $x$  a $y$. Osy mohou mít opět různá měřítka. Z bodového grafu vychází tzv. bublinový graf, který ale navíc může zobrazit ještě třetí rozměr v datech, a to v podobě velikosti bodů -- bublin. Tvar a poměr velikostí zobrazených bodů, resp. bublin je možné upravovat, stejně tak jejich barvu. Ukázka je na obr. \ref*{obr:PBI:grafybod}.
+Další klasický graf je graf bodový, který zobrazuje body v~průsečíku číselných hodnot $x$  a $y$. Osy mohou mít opět různá měřítka. Z bodového grafu vychází tzv. bublinový graf, který ale navíc může zobrazit ještě třetí rozměr v~datech, a to v~podobě velikosti bodů -- bublin. Tvar a poměr velikostí zobrazených bodů, resp. bublin je možné upravovat, stejně tak jejich barvu. Ukázka je na obr. \ref*{obr:PBI:grafybod}.
 
 \begin{figure}[h!]
     \centering
@@ -551,11 +551,11 @@ Další klasický graf je graf bodový, který zobrazuje body v průsečíku č�
     \label{obr:PBI:grafybod}
 \end{figure}
 
-Zajímavým vizuálem je mapa stromové struktury. Díky tomuto vizuálu je možné zachytit hierarchická data a poměrové zastoupení kategorií v datech. Každá kategorie je reprezentována jako obdélník, označuje se pojmem větev. Každý obdélník může obsahovat své podkategorie, označené jako listy. Příklad je na obr. \ref*{obr:PBImapa}.
+Zajímavým vizuálem je mapa stromové struktury. Díky tomuto vizuálu je možné zachytit hierarchická data a poměrové zastoupení kategorií v~datech. Každá kategorie je reprezentována jako obdélník, označuje se pojmem větev. Každý obdélník může obsahovat své podkategorie, označené jako listy. Příklad je na obr. \ref*{obr:PBImapa}.
 
 Formou vizuálu jsou i tabulky, matice a tzv. karty - jednočíselné nebo víceřádkové. Karty se používají pro zobrazení sledované celkové hodnoty, např. celkový počet produktů. Dále karta může obsahovat název sledované hodnoty. Příklad je uveden na obr. \ref*{obr:PBIkarty}. 
-Rozdíl mezi tabulkou a maticí je ten, že tabulce lze předávat pouze sloupce a případné číselné hodnoty se spočítají podle agregace v předchozích sloupcích. Tabulka může obsahovat záhlaví a řádek s celkovými součty. Matice na rozdíl od obyčejné tabulky umožňuje stupňovité nahlížení na data. Pokud definujeme více vstupních sloupců z dat jako řádky matice, lze pak záhlaví jendotlivých názvů řádků rozbalit pro větší detail. Příklad tabulky je na obr.         \ref*{obr:PBItab.}. 
-Příkladem vizuálu jsou i filtry, které lze zobrazit přímo vedle jiných vizuálů a které mohou ovlivnit vizuály na dané stránce. Filtr může být v podobě dlaždic, senzamu nebo osy v případě, že se jedná o filtrování časových údajů.
+Rozdíl mezi tabulkou a maticí je ten, že tabulce lze předávat pouze sloupce a případné číselné hodnoty se spočítají podle agregace v~předchozích sloupcích. Tabulka může obsahovat záhlaví a řádek s~celkovými součty. Matice na rozdíl od obyčejné tabulky umožňuje stupňovité nahlížení na data. Pokud definujeme více vstupních sloupců z~dat jako řádky matice, lze pak záhlaví jendotlivých názvů řádků rozbalit pro větší detail. Příklad tabulky je na obr.         \ref*{obr:PBItab.}. 
+Příkladem vizuálu jsou i filtry, které lze zobrazit přímo vedle jiných vizuálů a které mohou ovlivnit vizuály na dané stránce. Filtr může být v~podobě dlaždic, senzamu nebo osy v~případě, že se jedná o filtrování časových údajů.
 
 \begin{figure}[hbtp!]
     \centering
@@ -563,7 +563,7 @@ Příkladem vizuálu jsou i filtry, které lze zobrazit přímo vedle jiných vi
         \centering
         \captionsetup{justification=centering}
         \includegraphics[width=\textwidth]{obrazky/PBIteorie/power-bi-treemap-category-tooltip.png}
-        \caption{Mapa stromové struktury s tooltipem. Zdroj: \cite{bib:PBI}.}
+        \caption{Mapa stromové struktury s~tooltipem. Zdroj: \cite{bib:PBI}.}
         \label{obr:PBImapa}
     \end{minipage}%
     \hspace*{0.4em}
@@ -584,18 +584,18 @@ Příkladem vizuálu jsou i filtry, které lze zobrazit přímo vedle jiných vi
     \end{minipage}
 \end{figure}
 
-Ve vizuálech je možnost tooltipu, tedy zobrazení doplňující informace po najetí kurzorem myši na příslušné datové pole, viz obr. \ref*{obr:PBImapa}. Hodnoty, které se zobrazují si uživatel definuje sám. Další velmi výhodnou funkcionalitou Power BI je přechod k podrobnostem více polí a jednoho pole. První možnost je znázorněna na obr.     \ref*{obr:PBIdrillall}. V tomto případě se při kliknutí na ikonu $\downdownarrows$ na vizuálu zobrazí data pro další úroveň hierachie. Druhý způsob zobrazí další úroveň hierarchie, která se týká pouze jednoho vybraného pole. Pro zapnutí této volby u vizuálu je třeba zvolit volbu přechodu k podrobnostem pro jedno pole a poté pole vybrat kurzorem myši. Stejného efektu lze docílit kliknutím pravého tlačítka myši na pole a vybrat příslušnou volbu, tím se přechod rovnou provede. Ikona $\uparrow$ v obou případech přechází na vyšší hierarchii.
+Ve vizuálech je možnost tooltipu, tedy zobrazení doplňující informace po najetí kurzorem myši na příslušné datové pole, viz obr. \ref*{obr:PBImapa}. Hodnoty, které se zobrazují si uživatel definuje sám. Další velmi výhodnou funkcionalitou Power BI je přechod k~podrobnostem více polí a jednoho pole. První možnost je znázorněna na obr.     \ref*{obr:PBIdrillall}. V~tomto případě se při kliknutí na ikonu $\downdownarrows$ na vizuálu zobrazí data pro další úroveň hierachie. Druhý způsob zobrazí další úroveň hierarchie, která se týká pouze jednoho vybraného pole. Pro zapnutí této volby u vizuálu je třeba zvolit volbu přechodu k~podrobnostem pro jedno pole a poté pole vybrat kurzorem myši. Stejného efektu lze docílit kliknutím pravého tlačítka myši na pole a vybrat příslušnou volbu, tím se přechod rovnou provede. Ikona $\uparrow$ v~obou případech přechází na vyšší hierarchii.
 
 \begin{figure}[h!]
     \centering
     \captionsetup{justification=centering}
     \includegraphics[width=.9\textwidth]{obrazky/PBIteorie/power-bi-drill-path.png}
-    \caption{Přechod k podrobnostem více polí. 
+    \caption{Přechod k~podrobnostem více polí. 
     Zdroj: \cite{bib:PBI}.}
     \label{obr:PBIdrillall}
 \end{figure}
 
-Křížové filtrování je další důležitá funkcionalita Power BI. Při kliknutí kurzorem myši na určité pole v jednom vizuálu se křížově vyfiltrují pole v ostatních vizuálech na stránce. Jinými slovy jsou odebrána všechna datová pole ve vizuálech, která se netýkají hodnoty ve vybraném poli a dojde k přepočítání zobrazených měr a ukazatelů. Vedle křížového filtrování existuje ještě křížové zvýraznění. V takovém případě pole ostatních, nevybraných dat z vizuálů nezmizí, ale potlačena a vybraná data zvýrazněna. 
+Křížové filtrování je další důležitá funkcionalita Power BI. Při kliknutí kurzorem myši na určité pole v~jednom vizuálu se křížově vyfiltrují pole v~ostatních vizuálech na stránce. Jinými slovy jsou odebrána všechna datová pole ve vizuálech, která se netýkají hodnoty ve vybraném poli a dojde k~přepočítání zobrazených měr a ukazatelů. Vedle křížového filtrování existuje ještě křížové zvýraznění. V~takovém případě pole ostatních, nevybraných dat z~vizuálů nezmizí, ale potlačena a vybraná data zvýrazněna. 
 
 Nástroj Power BI disponuje mnoha dalšími funkcionalitami a vizuály, které umožňují analyzovat data a  vytvářet komplexní business intelligence reporty. Přehled všech funkcionalit této aplikace není ale předmětem této práce.
 

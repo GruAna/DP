@@ -16,7 +16,7 @@
 \BOOKMARK [2][-]{subsection.2.3.2}{Dule\236it\351 pojmy}{section.2.3}% 16
 \BOOKMARK [2][-]{subsection.2.3.3}{Procedury}{section.2.3}% 17
 \BOOKMARK [1][-]{section.2.4}{N\341stroje}{chapter.2}% 18
-\BOOKMARK [2][-]{subsection.2.4.1}{Pyhton \205 Jupyter Notebook}{section.2.4}% 19
+\BOOKMARK [2][-]{subsection.2.4.1}{Python \205 Jupyter Notebook}{section.2.4}% 19
 \BOOKMARK [2][-]{subsection.2.4.2}{Power BI}{section.2.4}% 20
 \BOOKMARK [0][-]{chapter.3}{Shrink}{}% 21
 \BOOKMARK [1][-]{section.3.1}{Definice}{chapter.3}% 22
@@ -25,21 +25,21 @@
 \BOOKMARK [1][-]{section.4.1}{Popis obdr\236en\375ch dat}{chapter.4}% 25
 \BOOKMARK [1][-]{section.4.2}{Pr\355prava vzorku dat pro dal\235\355 anal\375zy}{chapter.4}% 26
 \BOOKMARK [2][-]{subsection.4.2.1}{V\375ber dat}{section.4.2}% 27
-\BOOKMARK [0][-]{chapter.5}{Korelacn\355 anal\375za}{}% 28
-\BOOKMARK [1][-]{section.5.1}{Postup}{chapter.5}% 29
-\BOOKMARK [1][-]{section.5.2}{Implementace}{chapter.5}% 30
-\BOOKMARK [2][-]{subsection.5.2.1}{Vstupy a v\375stupy}{section.5.2}% 31
-\BOOKMARK [2][-]{subsection.5.2.2}{Spu\235ten\355 anal\375zy}{section.5.2}% 32
-\BOOKMARK [2][-]{subsection.5.2.3}{Popis funkc\355 a struktura k\363du}{section.5.2}% 33
-\BOOKMARK [1][-]{section.5.3}{V\375sledky}{chapter.5}% 34
-\BOOKMARK [0][-]{chapter.6}{Anal\375za pomoc\355 metody 4ftMiner}{}% 35
-\BOOKMARK [1][-]{section.6.1}{Hypot\351zy}{chapter.6}% 36
-\BOOKMARK [1][-]{section.6.2}{Produkty nepopsan\351 korelacn\355 anal\375zou}{chapter.6}% 37
-\BOOKMARK [0][-]{chapter.7}{Vizualizace dat}{}% 38
-\BOOKMARK [1][-]{section.7.1}{Popis re\235en\355}{chapter.7}% 39
-\BOOKMARK [2][-]{subsection.7.1.1}{Metriky}{section.7.1}% 40
-\BOOKMARK [2][-]{subsection.7.1.2}{Reporting}{section.7.1}% 41
-\BOOKMARK [1][-]{section.7.2}{V\375sledky}{chapter.7}% 42
+\BOOKMARK [0][-]{chapter.5}{Vizualizace dat}{}% 28
+\BOOKMARK [1][-]{section.5.1}{Popis re\235en\355}{chapter.5}% 29
+\BOOKMARK [2][-]{subsection.5.1.1}{Metriky}{section.5.1}% 30
+\BOOKMARK [2][-]{subsection.5.1.2}{Reporting}{section.5.1}% 31
+\BOOKMARK [1][-]{section.5.2}{V\375sledky}{chapter.5}% 32
+\BOOKMARK [0][-]{chapter.6}{Korelacn\355 anal\375za}{}% 33
+\BOOKMARK [1][-]{section.6.1}{Postup}{chapter.6}% 34
+\BOOKMARK [1][-]{section.6.2}{Implementace}{chapter.6}% 35
+\BOOKMARK [2][-]{subsection.6.2.1}{Vstupy a v\375stupy}{section.6.2}% 36
+\BOOKMARK [2][-]{subsection.6.2.2}{Spu\235ten\355 anal\375zy}{section.6.2}% 37
+\BOOKMARK [2][-]{subsection.6.2.3}{Popis funkc\355 a struktura k\363du}{section.6.2}% 38
+\BOOKMARK [1][-]{section.6.3}{V\375sledky}{chapter.6}% 39
+\BOOKMARK [0][-]{chapter.7}{Anal\375za pomoc\355 metody 4ftMiner}{}% 40
+\BOOKMARK [1][-]{section.7.1}{Hypot\351zy}{chapter.7}% 41
+\BOOKMARK [1][-]{section.7.2}{Produkty nepopsan\351 korelacn\355 anal\375zou}{chapter.7}% 42
 \BOOKMARK [0][-]{chapter*.97}{Z\341ver}{}% 43
 \BOOKMARK [0][-]{chapter*.97}{Literatura}{}% 44
 \BOOKMARK [0][-]{chapter*.98}{Pr\355lohy}{}% 45
