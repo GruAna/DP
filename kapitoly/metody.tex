@@ -554,7 +554,8 @@ Další klasický graf je graf bodový, který zobrazuje body v průsečíku č�
 Zajímavým vizuálem je mapa stromové struktury. Díky tomuto vizuálu je možné zachytit hierarchická data a poměrové zastoupení kategorií v datech. Každá kategorie je reprezentována jako obdélník, označuje se pojmem větev. Každý obdélník může obsahovat své podkategorie, označené jako listy. Příklad je na obr. \ref*{obr:PBImapa}.
 
 Formou vizuálu jsou i tabulky, matice a tzv. karty - jednočíselné nebo víceřádkové. Karty se používají pro zobrazení sledované celkové hodnoty, např. celkový počet produktů. Dále karta může obsahovat název sledované hodnoty. Příklad je uveden na obr. \ref*{obr:PBIkarty}. 
-Rozdíl mezi tabulkou a maticí je ten, že tabulce lze předávat pouze sloupce a případné číselné hodnoty se spočítají podle agregace v předchozích sloupcích. Tabulka může obsahovat záhlaví a řádek s celkovými součty. Matice na rozdíl od obyčejné tabulky umožňuje stupňovité nahlížení na data. Pokud definujeme více vstupních sloupců z dat jako řádky matice, lze pak záhlaví jendotlivých názvů řádků rozbalit pro větší detail. Příklad tabulky je na obr.         \ref*{obr:PBItab.}
+Rozdíl mezi tabulkou a maticí je ten, že tabulce lze předávat pouze sloupce a případné číselné hodnoty se spočítají podle agregace v předchozích sloupcích. Tabulka může obsahovat záhlaví a řádek s celkovými součty. Matice na rozdíl od obyčejné tabulky umožňuje stupňovité nahlížení na data. Pokud definujeme více vstupních sloupců z dat jako řádky matice, lze pak záhlaví jendotlivých názvů řádků rozbalit pro větší detail. Příklad tabulky je na obr.         \ref*{obr:PBItab.}. 
+Příkladem vizuálu jsou i filtry, které lze zobrazit přímo vedle jiných vizuálů a které mohou ovlivnit vizuály na dané stránce. Filtr může být v podobě dlaždic, senzamu nebo osy v případě, že se jedná o filtrování časových údajů.
 
 \begin{figure}[hbtp!]
     \centering
@@ -582,6 +583,22 @@ Rozdíl mezi tabulkou a maticí je ten, že tabulce lze předávat pouze sloupce
         \label{obr:PBItab.}
     \end{minipage}
 \end{figure}
+
+Ve vizuálech je možnost tooltipu, tedy zobrazení doplňující informace po najetí kurzorem myši na příslušné datové pole, viz obr. \ref*{obr:PBImapa}. Hodnoty, které se zobrazují si uživatel definuje sám. Další velmi výhodnou funkcionalitou Power BI je přechod k podrobnostem více polí a jednoho pole. První možnost je znázorněna na obr.     \ref*{obr:PBIdrillall}. V tomto případě se při kliknutí na ikonu $\downdownarrows$ na vizuálu zobrazí data pro další úroveň hierachie. Druhý způsob zobrazí další úroveň hierarchie, která se týká pouze jednoho vybraného pole. Pro zapnutí této volby u vizuálu je třeba zvolit volbu přechodu k podrobnostem pro jedno pole a poté pole vybrat kurzorem myši. Stejného efektu lze docílit kliknutím pravého tlačítka myši na pole a vybrat příslušnou volbu, tím se přechod rovnou provede. Ikona $\uparrow$ v obou případech přechází na vyšší hierarchii.
+
+\begin{figure}[h!]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=.9\textwidth]{obrazky/PBIteorie/power-bi-drill-path.png}
+    \caption{Přechod k podrobnostem více polí. 
+    Zdroj: \cite{bib:PBI}.}
+    \label{obr:PBIdrillall}
+\end{figure}
+
+Křížové filtrování je další důležitá funkcionalita Power BI. Při kliknutí kurzorem myši na určité pole v jednom vizuálu se křížově vyfiltrují pole v ostatních vizuálech na stránce. Jinými slovy jsou odebrána všechna datová pole ve vizuálech, která se netýkají hodnoty ve vybraném poli a dojde k přepočítání zobrazených měr a ukazatelů. Vedle křížového filtrování existuje ještě křížové zvýraznění. V takovém případě pole ostatních, nevybraných dat z vizuálů nezmizí, ale potlačena a vybraná data zvýrazněna. 
+
+Nástroj Power BI disponuje mnoha dalšími funkcionalitami a vizuály, které umožňují analyzovat data a  vytvářet komplexní business intelligence reporty. Přehled všech funkcionalit této aplikace není ale předmětem této práce.
+
 % !!!! TODO:
 
 

@@ -27,9 +27,9 @@
 \contentsline {section}{\numberline {3.2}Typy shrink\IeC {\r u}}{37}{section.3.2}
 \contentsline {chapter}{\numberline {4}Zpracov\IeC {\'a}n\IeC {\'\i } dat}{41}{chapter.4}
 \contentsline {section}{\numberline {4.1}Popis obdr\IeC {\v z}en\IeC {\'y}ch dat}{41}{section.4.1}
-\contentsline {subsubsection}{\IeC {\v C}\IeC {\'\i }seln\IeC {\'\i }ky}{41}{section*.28}
-\contentsline {subsubsection}{Tabulky transakc\IeC {\'\i }}{43}{section*.30}
-\contentsline {subsubsection}{Dal\IeC {\v s}\IeC {\'\i } datov\IeC {\'e} zdroje}{44}{section*.31}
+\contentsline {subsubsection}{\IeC {\v C}\IeC {\'\i }seln\IeC {\'\i }ky}{41}{section*.29}
+\contentsline {subsubsection}{Tabulky transakc\IeC {\'\i }}{43}{section*.31}
+\contentsline {subsubsection}{Dal\IeC {\v s}\IeC {\'\i } datov\IeC {\'e} zdroje}{44}{section*.32}
 \contentsline {section}{\numberline {4.2}P\IeC {\v r}\IeC {\'\i }prava vzorku dat pro dal\IeC {\v s}\IeC {\'\i } anal\IeC {\'y}zy}{45}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}V\IeC {\'y}b\IeC {\v e}r dat}{45}{subsection.4.2.1}
 \contentsline {chapter}{\numberline {5}Korela\IeC {\v c}n\IeC {\'\i } anal\IeC {\'y}za}{55}{chapter.5}
@@ -47,7 +47,7 @@
 \contentsline {subsection}{\numberline {7.1.1}Metriky}{80}{subsection.7.1.1}
 \contentsline {subsection}{\numberline {7.1.2}Reporting}{81}{subsection.7.1.2}
 \contentsline {section}{\numberline {7.2}V\IeC {\'y}sledky}{86}{section.7.2}
-\contentsline {chapter}{Z\IeC {\'a}v\IeC {\v e}r}{95}{chapter*.96}
-\contentsline {chapter}{Literatura}{96}{chapter*.96}
-\contentsline {chapter}{P\IeC {\v r}\IeC {\'\i }lohy}{101}{chapter*.97}
+\contentsline {chapter}{Z\IeC {\'a}v\IeC {\v e}r}{95}{chapter*.97}
+\contentsline {chapter}{Literatura}{96}{chapter*.97}
+\contentsline {chapter}{P\IeC {\v r}\IeC {\'\i }lohy}{101}{chapter*.98}
 \contentsline {chapter}{\numberline {A}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD}{101}{appendix.A}
