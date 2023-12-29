@@ -1,9 +1,22 @@
 \section{Příprava vzorku dat pro další analýzy}
 \label{sec:priprava}
-Data z~výše popsaných tabulek bylo potřeba sloučit do jedné tabulky, aby nad nimi bylo možné provést analýzy. Napojení dat bylo provedeno v~Jupyter Noteboocích v~jazyce Python. Na tabulku s~evidovanými shrinky bylo třeba napojit číselníky. Podle názvů prodejen byly napojeny na prodejny demografické údaje. Údaje o počtu obyvatelích, jsem rozdělila do pěti kategorií. s~Z data transakce bylo extrahováno datum pro den a na základě jeho hodnoty bylo určeno do jaké čtvrtiny měsíce patří. Z~data transakce také bylo odvozeno o jaký den v~týdnu se jedná pomocí funkce v~Python knihovně\emph{pandas}.
+Data z~výše popsaných tabulek bylo potřeba sloučit do jedné tabulky, aby nad nimi bylo možné provést analýzy. Napojení dat bylo provedeno v~Jupyter Noteboocích v~jazyce Python. Na tabulku s~evidovanými shrinky bylo třeba napojit číselníky. Podle názvů prodejen byly napojeny na prodejny demografické údaje. Údaje o počtu obyvatelích, jsem rozdělila do pěti kategorií. Z data transakce bylo extrahováno datum pro den a na základě jeho hodnoty bylo určeno do jaké čtvrtiny měsíce patří. Z~data také bylo odvozeno o jaký den v~týdnu se jedná pomocí funkce v~Python knihovně\emph{pandas}.
 
-Zkoumaný dataset se záznamy shrinků produktů jsem rozšířila o další sledované sloupce, které dávají do srovnání hodnotu shrinku a objem tržeb. Vytvořila jsem takto sloupce: podíl shrinku na celkových tržbách prodejny, podíl shrinku na týden-\\ních tržbách shrinkovaného produktu na prodejně, podíl shrinku a tržeb v~kategorii úrovně 1. Tabulka tržeb byla získaná z~tabulky \emph{transakce}, pro ID transakcí, které odpovídají prodejům. Tabulka byla agregovaná podle sloupců: prodejna, datum transakce, čtvrtina měsíce, kategorie z~úrovně 1.
+Na data se zaznamenanými shrinky jsem napojila data o promoakcích a každý řádek označila jednou ze tří hodnot -- žádná promoakce, promoakce, po promoakci. Hodnota \emph{po promoakci} označuje záznamy, které byly evidovány do jednoho týdne po ukončené promoakci na dané prodejně pro daný produkt. 
 
+
+Zkoumaný dataset se záznamy shrinků produktů jsem rozšířila o další sledované sloupce, které dávají do srovnání hodnotu shrinku a objem tržeb. Vytvořila jsem takto sloupce: 
+\begin{itemize}
+    \itemsep 0em
+    \item Podíl shrinku na celkových tržbách prodejny
+    \item Podíl shrinku na tržbách shrinkovaného produktu na prodejně
+    \item Podíl shrinku a tržeb v~kategorii úrovně 1 na prodejně
+\end{itemize}
+
+Hodnoty ve sloupci byly vypočítány jako hodnota shrinku na jednom řádku vydělená příslušnými tržbami. 
+    Tabulka tržeb byla získaná z~tabulky \emph{transakce}, pro ID transakcí, které odpovídají prodejům. Tabulka byla agregovaná podle sloupců: prodejna, čtvrt měsíce, kategorie první úrovně.
+
+S tržbami produktu souvisí i sloupec Prodej, který nabývá logických hodnot \emph{true, false}, podle toho, zda se produkt v dané období vůbec prodával nebo ne.
 % Následující část text bude věnována rozboru dat pro typ shrinku \emph{prošlé a zkažené zboží} pro kategorie Velmi čerstvé a Čerstvé z~produktové hierarchie úrovně 1.
 % v~období jednoho kalendářního měsíce.
 
@@ -20,42 +33,41 @@ Každý řádek odpovídá jednomu záznamu v~databázi shrinku daného produktu
 \begin{itemize}
     \itemsep-0.34em
     \item ID prodejny -- kategorická proměnná
+    \item Typ prodejny -- kategorická proměnná
+    \item Okres -- kategorická proměnná
+    \item Kraj -- kategorická proměnná
+    \item Počet obyvatel v lokalitě -- kategorická proměnná
     \item ID produktu -- kategorická proměnná
-    \item datum transakce -- kategorická proměnná
+    \item Datum transakce -- kategorická proměnná
     \item ID shrinku -- kategorická proměnná
-    \item 1 -- kategorická proměnná
-    \item 2 -- kategorická proměnná
-    \item 4 -- kategorická proměnná
-    \item 5 -- kategorická proměnná
-    \item 6 -- kategorická proměnná
-    \item Expirace -- kategorická proměnná
-    \item Een v~týdnu -- kategorická proměnná
-    \item Číslo den -- kategorická proměnná
+    \item 1 (úroveň) -- kategorická proměnná
+    \item 2 (úroveň) -- kategorická proměnná
+    \item 3 (úroveň) -- kategorická proměnná
+    \item 4 (úroveň) -- kategorická proměnná
+    \item 5 (úroveň) -- kategorická proměnná
+    \item 6 (úroveň) -- kategorická proměnná
+    \item Typ promoakce -- kategorická proměnná
+    \item Prodej -- kategorická proměnná
+    % \item Expirace -- kategorická proměnná
+    \item Den v~týdnu -- kategorická proměnná
+    % \item Číslo dne -- kategorická proměnná
     \item Čtvrt měsíce (rozdělení měsíce na čtyři části) -- kategorická proměnná
     \item Množství -- spojitá proměnná
-    \item Ztracená nákladová cena -- spojitá proměnná
+    \item Ztracené náklady (označováno také jako hodnota shrinku) -- spojitá proměnná
+    \item Podíl na tržbách produktu -- spojitá proměnná
+    \item Podíl na celkových tržbách -- spojitá proměnná
+    \item Podíl na tržbách kategorie z úrovně 1 -- spojitá proměnná
 \end{itemize}
-Původní sloupec datum jsem rozdělila na tři jiné proměnné, a to den v~týdnu, číslo dne a období v~měsíci a sloupec datum jsem vynechala. 
-% Z~důvodu vysokého počtu záznamů a odlišné povahy dvou typů shrinků jsem data dále rozdělila na shrinky typu damages a shrinky typu inventory. 
+% Původní sloupec datum jsem rozdělila ještě na dvě jiné proměnné, a to den v~týdnu a období v~měsíci.
+%  a sloupec datum jsem vynechala. 
 
-
-% \subsection*{Damages shrinky}
 
 \subsection{Výběr dat}
 % výběr dle zastoupení shrinků a kategorií produktů a dle outlierů.
 
-Nejprve jsem graficky analyzovala zastoupení shrinků v~závislosti na vybraných proměnných pomocí nástroje Power BI, viz obr. \ref*{obr:rok:g:zastoupeni1} a \ref*{obr:rok:g:zastoupenish1}. Více o analýze v~tomto nástroji je v~kapitole \ref{ch:vizualizace}. V~návaznosti na zjištěné zastoupení shrinků v~datech jsem se rozhodla vybrat pouze nejvíce zastoupený typ shrinku, který tvoří více jak 62~\% celkových nákladů. Ponechaný byl tedy pouze shirnk \emph{prošlé a zkažené zboží}. Obdobně jsem přistupovala k~záznamům i z~hlediska kategorie produktu úrovně 1, jelikož z~grafu je patrné, že majoritní zastoupení mají pouze dvě kategorie, a to kategorie Velmi čerstvé a Čerstvé. Všechny záznamy se zbylými kategoriemi jsem z~datasetu pro další analýzy odstranila. Těmito kroky byl zredukován původní počet řádků datasetu na % TODO ověřit číslo
-necelých jeden a půl milionu řádků.
+Nejprve jsem graficky analyzovala zastoupení shrinků v~závislosti na vybraných proměnných pomocí nástroje Power BI, viz obr. \ref*{obr:rok:g:zastoupeni1} a \ref*{obr:rok:g:zastoupenish1}. Více o analýze v~tomto nástroji je v~kapitole \ref{ch:vizualizace}. V~návaznosti na zjištěné zastoupení shrinků v~datech jsem se rozhodla vybrat pouze nejvíce zastoupený typ shrinku, který tvoří více jak 62~\% celkových nákladů. Ponechaný byl tedy pouze shirnk \emph{prošlé a zkažené zboží}. Sloupec s~ ID shrinku lze proto z~dat vynechat.
 
-\begin{figure}[hbtp!]
-    \centering
-    \captionsetup{justification=centering}
-    \includegraphics[width=\textwidth]{obrazky/grafy/zastoupeniL1.png}
-    \caption{Zastoupení kategorií úrovně 1 v~datech \\ z~března roku 2023 podle hodnoty shrinku.}
-    \label{obr:rok:g:zastoupeni1}
-\end{figure}
-
-\begin{figure}[hbtp!]
+\begin{figure}[h!]
     \centering
     \captionsetup{justification=centering}
     \includegraphics[width=\textwidth]{obrazky/grafy/zastoupenishrinky.png}
@@ -63,11 +75,24 @@ necelých jeden a půl milionu řádků.
     \label{obr:rok:g:zastoupenish1}
 \end{figure}
 
-Jako cílové sloupce (\emph{target} sloupce) jsem určila sloupec s~typem shrinku, množstvím produktu a nákladovou cenou. Zbylých jedenáct sloupců slouží jako vysvětlující pro-\linebreak měnné, dále budou označovány jako příznaky pro cílový sloupec. Všechny vybrané příznaky jsou kategorické proměnné, které lze dále rozdělit na nominální a ordinální. Nominální proměnné jsou ID prodejny, ID produktu a kategorie produktové hierarchie. Ordinální proměnné jsou den v~týdnu, číslo dne a období měsíce. Ordinální příznaky jsem přeznačila tak, aby každá obsahovala pouze hodnoty od nuly do $n_p$, kde $n_p$ je počet kategorií v~$p$-tém příznaku. 
+Obdobně jsem přistupovala k~záznamům i z~hlediska kategorie produktu úrovně 1, jelikož z~grafu je patrné, že majoritní zastoupení mají pouze dvě kategorie, a to kategorie Velmi čerstvé a Čerstvé. Všechny záznamy se zbylými kategoriemi jsem z~datasetu pro další analýzy odstranila. Těmito kroky byl zredukován původní počet řádků datasetu na % TODO ověřit číslo
+necelých jeden a půl milionu řádků.
+
+\begin{figure}[h!]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=\textwidth]{obrazky/grafy/zastoupeniL1.png}
+    \caption{Zastoupení kategorií úrovně 1 v~datech \\ z~března roku 2023 podle hodnoty shrinku.}
+    \label{obr:rok:g:zastoupeni1}
+\end{figure}
+
+
+
+Jako cílové sloupce (\emph{target} sloupce) jsem určila sloupce s~ množstvím produktu, hdonotou shrinku a podíly. Zbylé sloupce slouží jako vysvětlující pro-\linebreak měnné, dále budou označovány jako příznaky pro cílové sloupce. Všechny vybrané příznaky jsou kategorické proměnné, které lze dále rozdělit na nominální a ordinální. Nominální proměnné jsou ID prodejny, typ prodejny, typ promoakce, prodej, ID produktu, kategorie produktové hierarchie a údaje o lokalitách. Ordinální proměnné jsou den v~týdnu a období měsíce. Ordinální příznaky jsem přeznačila tak, aby každá obsahovala pouze hodnoty od nuly do $n_p$, kde $n_p$ je počet kategorií v~$p$-tém příznaku. 
 
 Pro další postup bylo vhodné přesunout se z~nominálních kategorických hodnot na číselné hodnoty. Pro tyto účely jsem zvolila metodu kódování podle cílového sloupce.  %!!! TODO odkaz do teorie, princip meotdy je vysvětlený v~kapitole...
 Neboť toto kódování na numerické hodnoty zachovává velikost datového souboru, to je klíčové vzhledem k~tomu, že nominální proměnné ve zkoumaných datech obsahují velký počet kategorií. 
-Např. počet unikátních produktů v~datech je více než 19 tisíc, což odpovídá stejnému počtu kategorií pro tuto proměnnou. Pokud bych použila one-hot kódování\footnote{One-hot kódování převádí kategorické hodnoty na numerické takovým způsobem že pro každou kategorii vytvoří samostatný sloupec s~binárními hodnotami, kde 1 odpovídá dané kategorii a 0 zbylým kategoriím.}  mohlo by dojít k~zásadnímu zvýšení počtu sloupců v~datech, v~tomto případě až o desítky tisíc. \emph{Kódování podle cílovího sloupce} je podobné převodu, který jsem použila pro ordinální proměnné. Avšak na rozdíl od něj, hodnota, která je kategorii přiřazena, souvisí se zastoupením této skupiny v~cílovém sloupci a nesouvisí s~uspořádáním hodnot uvnitř příznaku. Nevýhodou je, že takto upravená data mohou být náchylná na overfitting. 
+Např. počet unikátních produktů v~datech je více než 19 tisíc, což odpovídá stejnému počtu kategorií pro tuto proměnnou. Pokud bych použila one-hot kódování\footnote{One-hot kódování převádí kategorické hodnoty na numerické takovým způsobem že pro každou kategorii vytvoří samostatný sloupec s~binárními hodnotami, kde 1 odpovídá dané kategorii a 0 zbylým kategoriím.}  mohlo by dojít k~zásadnímu zvýšení počtu sloupců v~datech, v~tomto případě až o desítky tisíc. Kódování podle cílového sloupce je podobné převodu, který jsem použila pro ordinální proměnné. Avšak na rozdíl od něj, hodnota, která je kategorii přiřazena, souvisí se zastoupením této skupiny v~cílovém sloupci a nesouvisí s~uspořádáním hodnot uvnitř příznaku. Nevýhodou je, že takto upravená data mohou být náchylná na overfitting a zanést do vysvětlujíích proměnných nové infromace o vysvětlované proměnné. 
 % proto je potřeba při predikování použít křížovou validaci.\cite{bib:encoding}
 
 % warehouse_id 339
@@ -86,7 +111,7 @@ Např. počet unikátních produktů v~datech je více než 19 tisíc, což odpo
 % day 31
 % quarter_of_month 5
 
-Dále jsem se zabývala identifikací odlehlých hodnot. Nejprve jsem vizualizovala hodnoty pomocí grafu pro vybrané proměnné, obrázky \ref*{obr:rok:g:outlierN}. Z~grafu je patrné, že problémová je proměnná s~ID prodejny (na grafu vystupuje pod názvem \texttt{warehouse\_id}). Prodejny, které tvoří outliery mohou být malé prodejny, které kvůli menšímu počtu celkových produktů neevidují větší počet shrinků. % !!! TODO jakeho grafu 
+Dále jsem se zabývala identifikací odlehlých hodnot. Nejprve jsem vizualizovala hodnoty pomocí grafu. Ukázka grafu je na obr. \ref*{obr:rok:g:outlierN}. Z~grafu je patrné, že problémová je proměnná s~ID prodejny. Prodejny, které tvoří outliery mohou být malé prodejny, které kvůli menšímu počtu celkových produktů neevidují větší počet shrinků. % !!! TODO jakeho grafu 
 
 \begin{figure}[hbtp!]
     % \centering
@@ -108,7 +133,7 @@ Dále jsem se zabývala identifikací odlehlých hodnot. Nejprve jsem vizualizov
     % \end{minipage}
 \end{figure}
 
-Pomocí Tukeyho testu jsem identifikovala přes $150\ 000$ outlierů pro příznak ID prodejny %(\texttt{warehouse\_id})
+Pomocí Tukeyho testu, implementovaného v jazyce Python, jsem identifikovala přes $150\ 000$ outlierů pro příznak ID prodejny %(\texttt{warehouse\_id})
 , čímž se dataset zredukoval. S~tímto krokem klesl i počet ostatních outlierů.
 
 V dalším kroku jsem se zaměřila na míru závislosti mezi proměnnými. Použitým metodám je věnována sekce v~teoretické části \ref{sec:Teoriekorelace}. 
@@ -133,7 +158,7 @@ Jako první metodu jsem zvolila  $\chi^2$ statistiku. Vzhledem k~vysokému počt
 %     \label{obr:nb:pearson}
 % \end{figure}
 Použila jsem proto míru vzájemné informace, která říká, jaká je podobnost mezi dvěma proměnnými \cite{bib:scikit}.
-Matice vypočítaných koeficientů je na obr. \ref*{obr:nb:MI}. Jedná se o symetrickou vlastnost, proto jsou hodnoty pod a nad diagonálou stejné. Z~výsledků je opět vidět, že ID produktu sdílí informaci s~úrovněmi kategorizace tím více, čím je kategorizace jemnější.
+Matice vypočítaných koeficientů je na obr. \ref*{obr:nb:MI}. Jedná se o symetrickou vlastnost, proto jsou hodnoty pod a nad diagonálou stejné. Z~výsledků je opět vidět, že ID produktu sdílí informaci s~úrovněmi kategorizace tím více, čím je kategorizace jemnější, což logické z povahy hierarchického stromu kategorií. Obdobně tomu je i u ID prodejny a údajích o lokalitě a datumových údajích. Jinak jsou hdonoty vzájemné informace nízké.
 
 \begin{figure}[h!]
     \centering
@@ -144,6 +169,8 @@ Matice vypočítaných koeficientů je na obr. \ref*{obr:nb:MI}. Jedná se o sym
 
 Dále jsem pro znázornění vztahu mezi proměnnými použila koeficient Cramerovo $V$. Koeficient jsem postupně počítala pro každou dvojici příznaků. Koeficient nabývá hodnot mezi 0 a 1. Číslo blízké nule indikuje, že mezi proměnnými není asociace, číslo blízké jedničce vysokou závislost \cite{bib:statology}. Na obr. \ref*{obr:nb:cramers} lze vidět, že pro kategorie 1 až 6 a ID produktu je hodnota koeficientu po zaokrouhlení vždy rovna jedné. Vysoká závislost je pak i mezi příznakem promoakce a ID produktu. Dále logicky mezi datem transakce a dnem v~týdnu a obdobím v~měsíci. ID prodejny je extrémně závislé s~demografickými údaji o lokalitách a typem prodejny.
 
+Mírná závislost se také ukázala mezi typem promoakce a ID produktu nebo mezi ID produktu a ID prodejny, dále mezi ID prodejny a první úrovní hierarchie.
+
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{obrazky/pripravadat/correlation_matrix_cramers-everything-SFF-stores_targets002.pdf}
@@ -151,7 +178,7 @@ Dále jsem pro znázornění vztahu mezi proměnnými použila koeficient Cramer
     \label{obr:nb:cramers}
 \end{figure}
 
-Další statistikou spočtenou na datech je Theilovo $U$ (neboli koeficient nejistoty), který opět nabývá hodnot mezi 0 a 1 a měří vztah mezi dvěma proměnnými. Na rozdíl od předchozích statistik tento koeficient není symetrický a z~výsledků lze vyvodit, ze které proměnné ze dvou zkoumaných můžeme vyvodit informaci o druhé proměnné \cite{bib:correl}. Z~výsledků zobrazených v~matici na obr. \ref*{obr:nb:thiels} plyne, že z~ID produktu lze vyvodit část informace o kategoriích. Zatímco úrovně 1 a 2 o ID produktu mnoho informace nenesou. Jak bylo ukázáno i v~předchozích statistikách a jak vyplývá z~logiky pro získání dne v~týdnu a období měsíce, číslo dne nese informaci o těchto dvou příznacích.
+Další statistikou spočtenou na datech je Theilovo $U$ (neboli koeficient nejistoty), který opět nabývá hodnot mezi 0 a 1 a měří vztah mezi dvěma proměnnými. Na rozdíl od předchozích statistik tento koeficient není symetrický a z~výsledků lze vyvodit, ze které proměnné ze dvou zkoumaných můžeme vyvodit informaci o druhé proměnné \cite{bib:correl}. Z~výsledků zobrazených v~matici na obr. \ref*{obr:nb:thiels} plyne, že z~ID produktu lze vyvodit část informace o kategoriích. Zatímco úrovně 1 a 2 o ID produktu mnoho informace nenesou, což logické. Jak bylo ukázáno i v~předchozích statistikách a jak vyplývá z~logiky pro získání dne v~týdnu a období měsíce, číslo dne nese informaci o těchto dvou příznacích.
 
 \begin{figure}[h!]
     \centering
@@ -160,18 +187,19 @@ Další statistikou spočtenou na datech je Theilovo $U$ (neboli koeficient neji
     \label{obr:nb:thiels}
 \end{figure}
 
-Z vypočítaných statistik na datasetu je patrné, že některé příznaky jsou významně závislé, a proto je třeba je z~dat odstranit. Kandidáti na vynechání jsou kategorie 2, 4, 6 a číslo dne. 
+Z vypočítaných statistik na datasetu je patrné, že některé příznaky jsou významně závislé, a proto je třeba je z~dat odstranit. Kandidáti na vynechání jsou kategorie 2, 3, 5, 6, počet obyvatel a kraj. 
 % V~dalších testech budou také vybráni kandidáti a v~závěru vyhodnotím, které příznaky byly podle aplikovaných metod vybrány jako vhodné k~vynechání a které nikoli.
 %  TODO  !!!!
 
-V dalším testu jsem otestovala multikolinearitu dat pomocí rozptylového inflačního faktoru (VIF). Jako hraniční faktor jsem zvolila hodnotu 40 VIF. 
+V dalším testu jsem otestovala multikolinearitu dat pomocí rozptylového inflačního faktoru (VIF). Jako hraniční faktor jsem zvolila hodnotu 5 VIF, nad kterou již může být závažný problém multikolinearity.\cite{bib:MB}
 % TODO opravdu az takhle trochu min
 Vysvětlující proměnné jsem odebírala z~datasetu postupně a odebírání jsem ukončila až, když hodnota VIF nebyla nižší než hraniční.
-Tímto došlo k~redukci příznaků z~jedenácti na pět, a to na kategorii 1, číslo dne, období měsíce, ID prodejny a den v~týdnu. Hodnoty koeficientu VIF na datech jsou na obr. \ref*{obr:nb:vif}. 
+Tímto došlo k~redukci příznaků. Kategorie 1,2,3,5 
+Hodnoty koeficientu VIF na datech jsou na obr. \ref*{obr:nb:vif}. 
 
 \begin{figure}[h!]
       \centering
-      \includegraphics[width=.6\textwidth]{obrazky/zntb/VIF.png} % SEM DAT NOVY OBRAZEK TODO
+      \includegraphics[width=.6\textwidth]{obrazky/zntb/VIF2.png} % SEM DAT NOVY OBRAZEK TODO
       \caption{Rozptylový inflační faktor.}
       \label{obr:nb:vif}
 

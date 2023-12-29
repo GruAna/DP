@@ -29,25 +29,25 @@
 \contentsline {section}{\numberline {4.1}Popis obdr\IeC {\v z}en\IeC {\'y}ch dat}{41}{section.4.1}
 \contentsline {subsubsection}{\IeC {\v C}\IeC {\'\i }seln\IeC {\'\i }ky}{41}{section*.43}
 \contentsline {subsubsection}{Tabulky transakc\IeC {\'\i }}{43}{section*.45}
-\contentsline {subsubsection}{Dal\IeC {\v s}\IeC {\'\i } datov\IeC {\'e} zdroje}{44}{section*.46}
+\contentsline {subsubsection}{Dal\IeC {\v s}\IeC {\'\i } datov\IeC {\'e} zdroje}{45}{section*.46}
 \contentsline {section}{\numberline {4.2}P\IeC {\v r}\IeC {\'\i }prava vzorku dat pro dal\IeC {\v s}\IeC {\'\i } anal\IeC {\'y}zy}{45}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}V\IeC {\'y}b\IeC {\v e}r dat}{45}{subsection.4.2.1}
-\contentsline {chapter}{\numberline {5}Vizualizace dat}{55}{chapter.5}
-\contentsline {section}{\numberline {5.1}Popis \IeC {\v r}e\IeC {\v s}en\IeC {\'\i }}{55}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Metriky}{56}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Reporting}{57}{subsection.5.1.2}
-\contentsline {section}{\numberline {5.2}V\IeC {\'y}sledky}{62}{section.5.2}
-\contentsline {chapter}{\numberline {6}Korela\IeC {\v c}n\IeC {\'\i } anal\IeC {\'y}za}{71}{chapter.6}
-\contentsline {section}{\numberline {6.1}Postup}{71}{section.6.1}
-\contentsline {section}{\numberline {6.2}Implementace}{73}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Vstupy a v\IeC {\'y}stupy}{73}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Spu\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } anal\IeC {\'y}zy}{74}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}Popis funkc\IeC {\'\i } a struktura k\IeC {\'o}du}{75}{subsection.6.2.3}
-\contentsline {section}{\numberline {6.3}V\IeC {\'y}sledky}{82}{section.6.3}
-\contentsline {chapter}{\numberline {7}Anal\IeC {\'y}za pomoc\IeC {\'\i } metody 4ftMiner}{87}{chapter.7}
-\contentsline {section}{\numberline {7.1}Hypot\IeC {\'e}zy}{87}{section.7.1}
-\contentsline {section}{\numberline {7.2}Produkty nepopsan\IeC {\'e} korela\IeC {\v c}n\IeC {\'\i } anal\IeC {\'y}zou}{93}{section.7.2}
-\contentsline {chapter}{Z\IeC {\'a}v\IeC {\v e}r}{95}{chapter*.111}
-\contentsline {chapter}{Literatura}{96}{chapter*.111}
-\contentsline {chapter}{P\IeC {\v r}\IeC {\'\i }lohy}{100}{chapter*.112}
-\contentsline {chapter}{\numberline {A}Popis p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'y}ch soubor\IeC {\r u}}{100}{appendix.A}
+\contentsline {subsection}{\numberline {4.2.1}V\IeC {\'y}b\IeC {\v e}r dat}{46}{subsection.4.2.1}
+\contentsline {chapter}{\numberline {5}Vizualizace dat}{56}{chapter.5}
+\contentsline {section}{\numberline {5.1}Popis \IeC {\v r}e\IeC {\v s}en\IeC {\'\i }}{56}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Metriky}{57}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Reporting}{58}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}V\IeC {\'y}sledky}{63}{section.5.2}
+\contentsline {chapter}{\numberline {6}Korela\IeC {\v c}n\IeC {\'\i } anal\IeC {\'y}za}{72}{chapter.6}
+\contentsline {section}{\numberline {6.1}Postup}{72}{section.6.1}
+\contentsline {section}{\numberline {6.2}Implementace}{74}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Vstupy a v\IeC {\'y}stupy}{74}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Spu\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } anal\IeC {\'y}zy}{75}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Popis funkc\IeC {\'\i } a struktura k\IeC {\'o}du}{76}{subsection.6.2.3}
+\contentsline {section}{\numberline {6.3}V\IeC {\'y}sledky}{83}{section.6.3}
+\contentsline {chapter}{\numberline {7}Anal\IeC {\'y}za pomoc\IeC {\'\i } metody 4ftMiner}{88}{chapter.7}
+\contentsline {section}{\numberline {7.1}Hypot\IeC {\'e}zy}{88}{section.7.1}
+\contentsline {section}{\numberline {7.2}Produkty nepopsan\IeC {\'e} korela\IeC {\v c}n\IeC {\'\i } anal\IeC {\'y}zou}{94}{section.7.2}
+\contentsline {chapter}{Z\IeC {\'a}v\IeC {\v e}r}{96}{chapter*.111}
+\contentsline {chapter}{Literatura}{97}{chapter*.111}
+\contentsline {chapter}{P\IeC {\v r}\IeC {\'\i }lohy}{101}{chapter*.112}
+\contentsline {chapter}{\numberline {A}Popis p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'y}ch soubor\IeC {\r u}}{101}{appendix.A}
