@@ -138,9 +138,9 @@ Hlavní komponenta sloupců $\mathbf{G}$ je rovna
 
 \subsubsection*{Výpočetní algoritmus MCA}
 
-Předpokládejme, že původní matice kategorických dat má tvar $N\times Q$, tj. $N$ pozorování a $Q$ proměnných. Matici dat převedeme na indikátorovou matici. Indikátorová matice  $\mathbf{Z} $ je vytvořena tak, že kategorická data jsou rozepsána do pomocných proměnných. Pokud $q$tá proměnná je má $J_q$ typů kategorií, tak příslušná indikátorová matice bude mít $J = \sum_{q=1}^{Q}J_q$ sloupců a $N$. Tzn. počet proměnných byl tímto rozepsáním rozšířen z~počtu původních $Q$ proměnných na $J$ proměnných.
+Předpokládejme, že původní matice kategorických dat má tvar $N\times Q$, tj. $N$ pozorování a $Q$ proměnných. Matici dat převedeme na indikátorovou matici. Indikátorová matice  $\mathbf{Z} $ je vytvořena tak, že kategorická data jsou rozepsána do pomocných pro-\\měnných. Pokud $q$tá proměnná má $J_q$ typů kategorií, tak příslušná indikátorová matice bude mít $J = \sum_{q=1}^{Q}J_q$ sloupců a $N$. Tzn. počet proměnných byl tímto rozepsáním rozšířen z~počtu původních $Q$ proměnných na $J$ proměnných.
 % Klasická MCA má dvě podoby.
-První způsob MCA aplikuje základní algoritmus korespondenční analýzy na matici  $\mathbf{Z}$, takto se získají souřadnice pro N pozorování a J kategorií.
+První způsob MCA aplikuje základní algoritmus korespondenční analýzy na matici  $\mathbf{Z}$, takto se získají souřadnice pro $N$ pozorování a $J$ kategorií.
 
 % https://towardsdatascience.com/famd-how-to-generalize-pca-to-categorical-and-numerical-data-2ddbeb2b9210 
 % https://arrow.tudublin.ie/cgi/viewcontent.cgi?article=1227&context=scschcomdis
@@ -583,6 +583,8 @@ Příkladem vizuálu jsou i filtry, které lze zobrazit přímo vedle jiných vi
         \label{obr:PBItab.}
     \end{minipage}
 \end{figure}
+
+\subsubsection*{Vybrané funkcionality}
 
 Ve vizuálech je možnost tooltipu, tedy zobrazení doplňující informace po najetí kurzorem myši na příslušné datové pole, viz obr. \ref*{obr:PBImapa}. Hodnoty, které se zobrazují si uživatel definuje sám. Další velmi výhodnou funkcionalitou Power BI je přechod k~podrobnostem více polí a jednoho pole. První možnost je znázorněna na obr.     \ref*{obr:PBIdrillall}. V~tomto případě se při kliknutí na ikonu $\downdownarrows$ na vizuálu zobrazí data pro další úroveň hierachie. Druhý způsob zobrazí další úroveň hierarchie, která se týká pouze jednoho vybraného pole. Pro zapnutí této volby u vizuálu je třeba zvolit volbu přechodu k~podrobnostem pro jedno pole a poté pole vybrat kurzorem myši. Stejného efektu lze docílit kliknutím pravého tlačítka myši na pole a vybrat příslušnou volbu, tím se přechod rovnou provede. Ikona $\uparrow$ v~obou případech přechází na vyšší hierarchii.
 

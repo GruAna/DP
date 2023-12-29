@@ -27,9 +27,9 @@
 \contentsline {section}{\numberline {3.2}Typy shrink\IeC {\r u}}{37}{section.3.2}
 \contentsline {chapter}{\numberline {4}Zpracov\IeC {\'a}n\IeC {\'\i } dat}{41}{chapter.4}
 \contentsline {section}{\numberline {4.1}Popis obdr\IeC {\v z}en\IeC {\'y}ch dat}{41}{section.4.1}
-\contentsline {subsubsection}{\IeC {\v C}\IeC {\'\i }seln\IeC {\'\i }ky}{41}{section*.42}
-\contentsline {subsubsection}{Tabulky transakc\IeC {\'\i }}{43}{section*.44}
-\contentsline {subsubsection}{Dal\IeC {\v s}\IeC {\'\i } datov\IeC {\'e} zdroje}{44}{section*.45}
+\contentsline {subsubsection}{\IeC {\v C}\IeC {\'\i }seln\IeC {\'\i }ky}{41}{section*.43}
+\contentsline {subsubsection}{Tabulky transakc\IeC {\'\i }}{43}{section*.45}
+\contentsline {subsubsection}{Dal\IeC {\v s}\IeC {\'\i } datov\IeC {\'e} zdroje}{44}{section*.46}
 \contentsline {section}{\numberline {4.2}P\IeC {\v r}\IeC {\'\i }prava vzorku dat pro dal\IeC {\v s}\IeC {\'\i } anal\IeC {\'y}zy}{45}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}V\IeC {\'y}b\IeC {\v e}r dat}{45}{subsection.4.2.1}
 \contentsline {chapter}{\numberline {5}Vizualizace dat}{55}{chapter.5}
@@ -47,7 +47,7 @@
 \contentsline {chapter}{\numberline {7}Anal\IeC {\'y}za pomoc\IeC {\'\i } metody 4ftMiner}{87}{chapter.7}
 \contentsline {section}{\numberline {7.1}Hypot\IeC {\'e}zy}{87}{section.7.1}
 \contentsline {section}{\numberline {7.2}Produkty nepopsan\IeC {\'e} korela\IeC {\v c}n\IeC {\'\i } anal\IeC {\'y}zou}{93}{section.7.2}
-\contentsline {chapter}{Z\IeC {\'a}v\IeC {\v e}r}{95}{chapter*.110}
-\contentsline {chapter}{Literatura}{96}{chapter*.110}
-\contentsline {chapter}{P\IeC {\v r}\IeC {\'\i }lohy}{100}{chapter*.111}
-\contentsline {chapter}{\numberline {A}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD}{100}{appendix.A}
+\contentsline {chapter}{Z\IeC {\'a}v\IeC {\v e}r}{95}{chapter*.111}
+\contentsline {chapter}{Literatura}{96}{chapter*.111}
+\contentsline {chapter}{P\IeC {\v r}\IeC {\'\i }lohy}{100}{chapter*.112}
+\contentsline {chapter}{\numberline {A}Popis p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'y}ch soubor\IeC {\r u}}{100}{appendix.A}
