@@ -44,7 +44,7 @@ Původní sloupec datum jsem rozdělila na tři jiné proměnné, a to den v~tý
 \subsection{Výběr dat}
 % výběr dle zastoupení shrinků a kategorií produktů a dle outlierů.
 
-Nejprve jsem graficky analyzovala zastoupení shrinků v~závislosti na vybraných proměnných pomocí nástroje Power BI, viz obr. \ref*{obr:rok:g:zastoupeni1} a \ref*{obr:rok:g:zastoupenish1}. Více o analýze v~tomto nástroji je v~kapitole \ref{ch:vizualizace}. V~návaznosti na zjištěné zastoupení shrinků v~datech jsem se rozhodla vybrat pouze nejvíce zastoupený typ shrinku, který tvoří více jak 62 \% celkových nákladů. Ponechaný byl tedy pouze shirnk \emph{prošlé a zkažené zboží}. Obdobně jsem přistupovala k~záznamům i z~hlediska kategorie produktu úrovně 1, jelikož z~grafu je patrné, že majoritní zastoupení mají pouze dvě kategorie, a to kategorie Velmi čerstvé a Čerstvé. Všechny záznamy se zbylými kategoriemi jsem z~datasetu pro další analýzy odstranila. Těmito kroky byl zredukován původní počet řádků datasetu na % TODO ověřit číslo
+Nejprve jsem graficky analyzovala zastoupení shrinků v~závislosti na vybraných proměnných pomocí nástroje Power BI, viz obr. \ref*{obr:rok:g:zastoupeni1} a \ref*{obr:rok:g:zastoupenish1}. Více o analýze v~tomto nástroji je v~kapitole \ref{ch:vizualizace}. V~návaznosti na zjištěné zastoupení shrinků v~datech jsem se rozhodla vybrat pouze nejvíce zastoupený typ shrinku, který tvoří více jak 62~\% celkových nákladů. Ponechaný byl tedy pouze shirnk \emph{prošlé a zkažené zboží}. Obdobně jsem přistupovala k~záznamům i z~hlediska kategorie produktu úrovně 1, jelikož z~grafu je patrné, že majoritní zastoupení mají pouze dvě kategorie, a to kategorie Velmi čerstvé a Čerstvé. Všechny záznamy se zbylými kategoriemi jsem z~datasetu pro další analýzy odstranila. Těmito kroky byl zredukován původní počet řádků datasetu na % TODO ověřit číslo
 necelých jeden a půl milionu řádků.
 
 \begin{figure}[hbtp!]
@@ -194,7 +194,7 @@ Předtím než jsem metodu aplikovala jsem otestovala předpoklad homoskedastici
 
 Na obrázcích \ref*{obr:nb:pca_roztyl_komponetn} a \ref*{obr:nb:pca_kum_roztyl_komponetn} je znázorněno prvních deset komponent a rozptyl který v~datech vysvětlují. 
 % Na základě hodnot jsem vybrala prvních deset komponent. 
-Desátá komponenta (označená č. 9) spolu s~předchozími vysvětluje téměř 80 \% variability dat. V~dalším kroku jsem vypočítala příspěvky příznaků k~těmto komponentám a vybrala jsem ty příznaky, které přispívají nejvíce. Jejich příspěvek je znázorněný na obr. \ref*{obr:nb:pca_prispevek}. Na základě výsledků analýzy hlavních komponent lze říci, že nejvíce rozptylu v~datech nesou příznaky -- ID prodejny, den v~týdnu, expirace, den a období v~měsíci.
+Desátá komponenta (označená č. 9) spolu s~předchozími vysvětluje téměř 80~\% variability dat. V~dalším kroku jsem vypočítala příspěvky příznaků k~těmto komponentám a vybrala jsem ty příznaky, které přispívají nejvíce. Jejich příspěvek je znázorněný na obr. \ref*{obr:nb:pca_prispevek}. Na základě výsledků analýzy hlavních komponent lze říci, že nejvíce rozptylu v~datech nesou příznaky -- ID prodejny, den v~týdnu, expirace, den a období v~měsíci.
 % TODO tohle cele predlat na nova data.
 %byly vybrány jako vhodné příznaky pro další práci s~daty tyto příznaky - ID prodejny, den v~týdnu, expirace, den a období v~měsíci.
 
@@ -227,7 +227,7 @@ Desátá komponenta (označená č. 9) spolu s~předchozími vysvětluje témě�
     
 Jak již bylo zmíněno pro redukci dimenzionality, příp. výběr proměnných, u kategorických dat lze použít metodu MCA, opět jsem využila implementaci z~knihovny \emph{Prince}. 
 V této implementaci jsou nominální kategorické hodnoty kódovány tak, že narůstá počet sloupců, a proto bylo nutné, vzhledem k~nárokům na paměť k~uložení matice, omezit množství dat. 
-Vybrala jsem náhodný 20\% vzorek dat, na které jsem MCA aplikovala. Vypočítala jsem prvních pět komponent, které dohromady popisují 79 \% variability dat. Jelikož byla každá kategorie chápána jako samostatná proměnná příspěvky jednotlivých příznaků ke komponentám byly rozmístěny mezi všechny kategorie, nikoli k~jednotlivým příznakům. 
+Vybrala jsem náhodný 20\% vzorek dat, na které jsem MCA aplikovala. Vypočítala jsem prvních pět komponent, které dohromady popisují 79~\% variability dat. Jelikož byla každá kategorie chápána jako samostatná proměnná příspěvky jednotlivých příznaků ke komponentám byly rozmístěny mezi všechny kategorie, nikoli k~jednotlivým příznakům. 
 % Po agregaci podle původních příznaků největší příspěvek mělo ID produktu, kategorie 6, 5, 4, zatímco nejmenší ID prodejny, 1, den v~týdnu a období měsíce. Tyto výsledky je třeba brát se zvážením neboť výpočty probíhali na řádově menším vzorku než u předchozích metod.
 Z obrázků \ref*{obr:nb:mca_roztyl_komponetn} až \ref*{obr:nb:mca_prispevek} je vidět, že výsledky jsou obdobné jako pro předchozí metodu.
 
@@ -281,7 +281,7 @@ Korelované jsou hodnoty ID produktu, 6, 5, 4 a expirace. Dále také z~označen
 
 Následující sloupce byly získány podle hodnoty rozptylového inflačního faktoru. Touto metodou byl navržen i sloupec s~číslem dne, ten však z~důvodů korelace nebyl zahrnutý -- úroveň 1, období měsíce, ID prodejny a den v~týdnu.
     
-Metodou PCA bylo zjištěno, které příznaky nejvíce přispívají ke komponentám, které popisují téměř 96 \% rozptylu v~původních datech - jedná se o příznaky ID prodejny, den v~týdnu, období v~měsíci a číslo dne. 
+Metodou PCA bylo zjištěno, které příznaky nejvíce přispívají ke komponentám, které popisují téměř 96~\% rozptylu v~původních datech - jedná se o příznaky ID prodejny, den v~týdnu, období v~měsíci a číslo dne. 
 Naopak metoda MCA vybrala kategorie 4 až 6 jako důležité. Sloučením a přihlédnutím ke korelačním koeficientům byly vybráno pět příznaků -- 
     ID prodejny, den v~týdnu, období v~měsíci, 5.
 
@@ -296,7 +296,7 @@ Naopak metoda MCA vybrala kategorie 4 až 6 jako důležité. Sloučením a při
     \item[1.2.] 5, období měsíce, ID prodejny a den v~týdnu
     \item[1.3.] 4, období měsíce, ID prodejny a den v~týdnu
     \end{enumerate}
-    \item Metodou PCA bylo zjištěno, které příznaky nejvíce přispívají ke komponentám, které popisují téměř 96 \% rozptylu v~původních datech - jedná se o příznaky ID prodejny, den v~týdnu, období v~měsíci a číslo dne. Naopak metoda MCA vybrala kategorie 4 až 6 jako důležité. Sloučením a přihlédnutím ke korelačním koeficientům byly vybráno pět příznaků
+    \item Metodou PCA bylo zjištěno, které příznaky nejvíce přispívají ke komponentám, které popisují téměř 96~\% rozptylu v~původních datech - jedná se o příznaky ID prodejny, den v~týdnu, období v~měsíci a číslo dne. Naopak metoda MCA vybrala kategorie 4 až 6 jako důležité. Sloučením a přihlédnutím ke korelačním koeficientům byly vybráno pět příznaků
     \begin{enumerate}
         \item[2.1.] ID prodejny, den v~týdnu, období v~měsíci, 5.
     \end{enumerate}
@@ -388,7 +388,7 @@ Naopak metoda MCA vybrala kategorie 4 až 6 jako důležité. Sloučením a při
 % \end{table}
 
 
-% Nejlepších výsledků dosahuje klasifikátor gradient boosting. Přesnost na testovacích datech je téměř 84 \%. V~obou metodách, které využívají rozhodovací stromy, jsem implementovala ladění parametrů. Na následujících obrázcích 
+% Nejlepších výsledků dosahuje klasifikátor gradient boosting. Přesnost na testovacích datech je téměř 84~\%. V~obou metodách, které využívají rozhodovací stromy, jsem implementovala ladění parametrů. Na následujících obrázcích 
 % je znázorněna závislost mezi jednotlivými hodnotami parametrů a dosažené přesnosti.
 
 % V~případě random forest klasifikátoru se jedná o parametry, které určují počet stromů, hloubku stromu, minimální počet vzorků, který má obsahovat list a minimální počet vzorků, kdy se může rozdělit uzel stromu. Pro klasifikátor gradient boosting byly také laděny parametry pro počet stromů, hloubku a dále míru učení.

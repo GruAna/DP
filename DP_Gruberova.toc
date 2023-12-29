@@ -1,53 +1,53 @@
 \babel@toc {czech}{}
-\contentsline {chapter}{\IeC {\'U}vod}{11}{chapter*.2}
-\contentsline {chapter}{\numberline {1}Logistika}{13}{chapter.1}
-\contentsline {section}{\numberline {1.1}Definice logistiky}{13}{section.1.1}
-\contentsline {section}{\numberline {1.2}\IeC {\v S}t\IeC {\'\i }hl\IeC {\'a} logistika}{13}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}Toyota Production System}{14}{subsection.1.2.1}
-\contentsline {subsection}{\numberline {1.2.2}Pl\IeC {\'y}tv\IeC {\'a}n\IeC {\'\i } v~logistick\IeC {\'y}ch procesech}{18}{subsection.1.2.2}
-\contentsline {chapter}{\numberline {2}Pou\IeC {\v z}it\IeC {\'e} metody}{23}{chapter.2}
-\contentsline {section}{\numberline {2.1}Redukce dimenzionality}{23}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Anal\IeC {\'y}za hlavn\IeC {\'\i }ch komponent}{23}{subsection.2.1.1}
-\contentsline {subsubsection}{Princip}{23}{section*.21}
-\contentsline {subsection}{\numberline {2.1.2}Koresponden\IeC {\v c}n\IeC {\'\i } anal\IeC {\'y}za}{25}{subsection.2.1.2}
-\contentsline {subsubsection}{Zna\IeC {\v c}en\IeC {\'\i }}{25}{section*.23}
-\contentsline {subsubsection}{V\IeC {\'y}po\IeC {\v c}etn\IeC {\'\i } algoritmus z\IeC {\'a}kladn\IeC {\'\i } koresponde\IeC {\v c}n\IeC {\'\i } anal\IeC {\'y}zy}{26}{section*.24}
-\contentsline {section}{\numberline {2.2}Korela\IeC {\v c}n\IeC {\'\i } anal\IeC {\'y}za}{27}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Korela\IeC {\v c}n\IeC {\'\i } koeficient}{27}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Dal\IeC {\v s}\IeC {\'\i } zp\IeC {\r u}soby m\IeC {\v e}\IeC {\v r}en\IeC {\'\i } z\IeC {\'a}vislosti}{28}{subsection.2.2.2}
-\contentsline {section}{\numberline {2.3}Metoda GUHA}{30}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Z\IeC {\'a}kladn\IeC {\'\i } princip metody}{31}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}D\IeC {\r u}le\IeC {\v z}it\IeC {\'e} pojmy}{31}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Procedury}{33}{subsection.2.3.3}
-\contentsline {section}{\numberline {2.4}N\IeC {\'a}stroje}{36}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Python -- Jupyter Notebook}{36}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Power BI}{36}{subsection.2.4.2}
-\contentsline {chapter}{\numberline {3}Shrink}{41}{chapter.3}
-\contentsline {section}{\numberline {3.1}Definice}{41}{section.3.1}
-\contentsline {section}{\numberline {3.2}Typy shrink\IeC {\r u}}{41}{section.3.2}
-\contentsline {chapter}{\numberline {4}Zpracov\IeC {\'a}n\IeC {\'\i } dat}{45}{chapter.4}
-\contentsline {section}{\numberline {4.1}Popis obdr\IeC {\v z}en\IeC {\'y}ch dat}{45}{section.4.1}
-\contentsline {subsubsection}{\IeC {\v C}\IeC {\'\i }seln\IeC {\'\i }ky}{45}{section*.42}
-\contentsline {subsubsection}{Tabulky transakc\IeC {\'\i }}{47}{section*.44}
-\contentsline {subsubsection}{Dal\IeC {\v s}\IeC {\'\i } datov\IeC {\'e} zdroje}{48}{section*.45}
-\contentsline {section}{\numberline {4.2}P\IeC {\v r}\IeC {\'\i }prava vzorku dat pro dal\IeC {\v s}\IeC {\'\i } anal\IeC {\'y}zy}{49}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}V\IeC {\'y}b\IeC {\v e}r dat}{49}{subsection.4.2.1}
-\contentsline {chapter}{\numberline {5}Vizualizace dat}{59}{chapter.5}
-\contentsline {section}{\numberline {5.1}Popis \IeC {\v r}e\IeC {\v s}en\IeC {\'\i }}{59}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Metriky}{60}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Reporting}{61}{subsection.5.1.2}
-\contentsline {section}{\numberline {5.2}V\IeC {\'y}sledky}{66}{section.5.2}
-\contentsline {chapter}{\numberline {6}Korela\IeC {\v c}n\IeC {\'\i } anal\IeC {\'y}za}{75}{chapter.6}
-\contentsline {section}{\numberline {6.1}Postup}{75}{section.6.1}
-\contentsline {section}{\numberline {6.2}Implementace}{77}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Vstupy a v\IeC {\'y}stupy}{77}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Spu\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } anal\IeC {\'y}zy}{78}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}Popis funkc\IeC {\'\i } a struktura k\IeC {\'o}du}{79}{subsection.6.2.3}
-\contentsline {section}{\numberline {6.3}V\IeC {\'y}sledky}{86}{section.6.3}
-\contentsline {chapter}{\numberline {7}Anal\IeC {\'y}za pomoc\IeC {\'\i } metody 4ftMiner}{91}{chapter.7}
-\contentsline {section}{\numberline {7.1}Hypot\IeC {\'e}zy}{91}{section.7.1}
-\contentsline {section}{\numberline {7.2}Produkty nepopsan\IeC {\'e} korela\IeC {\v c}n\IeC {\'\i } anal\IeC {\'y}zou}{97}{section.7.2}
-\contentsline {chapter}{Z\IeC {\'a}v\IeC {\v e}r}{99}{chapter*.110}
-\contentsline {chapter}{Literatura}{100}{chapter*.110}
-\contentsline {chapter}{P\IeC {\v r}\IeC {\'\i }lohy}{105}{chapter*.111}
-\contentsline {chapter}{\numberline {A}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD}{105}{appendix.A}
+\contentsline {chapter}{\IeC {\'U}vod}{9}{chapter*.2}
+\contentsline {chapter}{\numberline {1}Logistika}{10}{chapter.1}
+\contentsline {section}{\numberline {1.1}Definice logistiky}{10}{section.1.1}
+\contentsline {section}{\numberline {1.2}\IeC {\v S}t\IeC {\'\i }hl\IeC {\'a} logistika}{10}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Toyota Production System}{11}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Pl\IeC {\'y}tv\IeC {\'a}n\IeC {\'\i } v~logistick\IeC {\'y}ch procesech}{15}{subsection.1.2.2}
+\contentsline {chapter}{\numberline {2}Pou\IeC {\v z}it\IeC {\'e} metody}{19}{chapter.2}
+\contentsline {section}{\numberline {2.1}Redukce dimenzionality}{19}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Anal\IeC {\'y}za hlavn\IeC {\'\i }ch komponent}{19}{subsection.2.1.1}
+\contentsline {subsubsection}{Princip}{19}{section*.21}
+\contentsline {subsection}{\numberline {2.1.2}Koresponden\IeC {\v c}n\IeC {\'\i } anal\IeC {\'y}za}{21}{subsection.2.1.2}
+\contentsline {subsubsection}{Zna\IeC {\v c}en\IeC {\'\i }}{21}{section*.23}
+\contentsline {subsubsection}{V\IeC {\'y}po\IeC {\v c}etn\IeC {\'\i } algoritmus z\IeC {\'a}kladn\IeC {\'\i } koresponde\IeC {\v c}n\IeC {\'\i } anal\IeC {\'y}zy}{22}{section*.24}
+\contentsline {section}{\numberline {2.2}Korela\IeC {\v c}n\IeC {\'\i } anal\IeC {\'y}za}{23}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Korela\IeC {\v c}n\IeC {\'\i } koeficient}{23}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Dal\IeC {\v s}\IeC {\'\i } zp\IeC {\r u}soby m\IeC {\v e}\IeC {\v r}en\IeC {\'\i } z\IeC {\'a}vislosti}{24}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Metoda GUHA}{26}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Z\IeC {\'a}kladn\IeC {\'\i } princip metody}{27}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}D\IeC {\r u}le\IeC {\v z}it\IeC {\'e} pojmy}{27}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Procedury}{29}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}N\IeC {\'a}stroje}{32}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Python -- Jupyter Notebook}{32}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Power BI}{32}{subsection.2.4.2}
+\contentsline {chapter}{\numberline {3}Shrink}{37}{chapter.3}
+\contentsline {section}{\numberline {3.1}Definice}{37}{section.3.1}
+\contentsline {section}{\numberline {3.2}Typy shrink\IeC {\r u}}{37}{section.3.2}
+\contentsline {chapter}{\numberline {4}Zpracov\IeC {\'a}n\IeC {\'\i } dat}{41}{chapter.4}
+\contentsline {section}{\numberline {4.1}Popis obdr\IeC {\v z}en\IeC {\'y}ch dat}{41}{section.4.1}
+\contentsline {subsubsection}{\IeC {\v C}\IeC {\'\i }seln\IeC {\'\i }ky}{41}{section*.42}
+\contentsline {subsubsection}{Tabulky transakc\IeC {\'\i }}{43}{section*.44}
+\contentsline {subsubsection}{Dal\IeC {\v s}\IeC {\'\i } datov\IeC {\'e} zdroje}{44}{section*.45}
+\contentsline {section}{\numberline {4.2}P\IeC {\v r}\IeC {\'\i }prava vzorku dat pro dal\IeC {\v s}\IeC {\'\i } anal\IeC {\'y}zy}{45}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}V\IeC {\'y}b\IeC {\v e}r dat}{45}{subsection.4.2.1}
+\contentsline {chapter}{\numberline {5}Vizualizace dat}{55}{chapter.5}
+\contentsline {section}{\numberline {5.1}Popis \IeC {\v r}e\IeC {\v s}en\IeC {\'\i }}{55}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Metriky}{56}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Reporting}{57}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}V\IeC {\'y}sledky}{62}{section.5.2}
+\contentsline {chapter}{\numberline {6}Korela\IeC {\v c}n\IeC {\'\i } anal\IeC {\'y}za}{71}{chapter.6}
+\contentsline {section}{\numberline {6.1}Postup}{71}{section.6.1}
+\contentsline {section}{\numberline {6.2}Implementace}{73}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Vstupy a v\IeC {\'y}stupy}{73}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Spu\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } anal\IeC {\'y}zy}{74}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Popis funkc\IeC {\'\i } a struktura k\IeC {\'o}du}{75}{subsection.6.2.3}
+\contentsline {section}{\numberline {6.3}V\IeC {\'y}sledky}{82}{section.6.3}
+\contentsline {chapter}{\numberline {7}Anal\IeC {\'y}za pomoc\IeC {\'\i } metody 4ftMiner}{87}{chapter.7}
+\contentsline {section}{\numberline {7.1}Hypot\IeC {\'e}zy}{87}{section.7.1}
+\contentsline {section}{\numberline {7.2}Produkty nepopsan\IeC {\'e} korela\IeC {\v c}n\IeC {\'\i } anal\IeC {\'y}zou}{93}{section.7.2}
+\contentsline {chapter}{Z\IeC {\'a}v\IeC {\v e}r}{95}{chapter*.110}
+\contentsline {chapter}{Literatura}{96}{chapter*.110}
+\contentsline {chapter}{P\IeC {\v r}\IeC {\'\i }lohy}{100}{chapter*.111}
+\contentsline {chapter}{\numberline {A}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD}{100}{appendix.A}
