@@ -253,9 +253,9 @@ Desátá komponenta (označená č. 9) spolu s~předchozími vysvětluje témě�
     
 Jak již bylo zmíněno pro redukci dimenzionality, příp. výběr proměnných, u kategorických dat lze použít metodu MCA, opět jsem využila implementaci z~knihovny \emph{Prince}. 
 V této implementaci jsou nominální kategorické hodnoty kódovány tak, že narůstá počet sloupců, což náročnější na výpočetní výkon. Vzhledem k tomu, že jsem nanlýzy spouštěla na obyčejném osobním počítači, bylo proto nutné, vzhledem k~nárokům na paměť k~uložení matice, omezit množství dat. 
-Vybrala jsem náhodný 20\% vzorek dat, na které jsem MCA aplikovala. Vypočítala jsem prvních pět komponent, které dohromady popisují 79~\% variability dat. Jelikož byla každá kategorie chápána jako samostatná proměnná příspěvky jednotlivých příznaků ke komponentám byly rozmístěny mezi všechny kategorie, nikoli k~jednotlivým příznakům. 
+Vybrala jsem náhodný 20\% vzorek dat, na které jsem MCA aplikovala. Vypočítala jsem prvních pět komponent, které dohromady popisují 79~\% variability dat. Jelikož byla každá kategorie chápána jako samostatná proměnná příspěvky jednotlivých příznaků ke komponentám byly rozmístěny mezi všechny kategorie, nikoli k~jednotlivým příznakům, takže je třeba pak příznaky zpětně agregovat.
 % Po agregaci podle původních příznaků největší příspěvek mělo ID produktu, kategorie 6, 5, 4, zatímco nejmenší ID prodejny, 1, den v~týdnu a období měsíce. Tyto výsledky je třeba brát se zvážením neboť výpočty probíhali na řádově menším vzorku než u předchozích metod.
-Z obrázků \ref*{obr:nb:mca_roztyl_komponetn} až \ref*{obr:nb:mca_prispevek} je vidět, že výsledky jsou obdobné jako pro předchozí metodu.
+N obrázcéch \ref*{obr:nb:mca_roztyl_komponetn} a \ref*{obr:nb:mca_kum_roztyl_komponetn} se nachází výsledky pro jeden běh metody MCA.
 
 \begin{figure}[hbtp!]
     \centering
@@ -277,12 +277,12 @@ Z obrázků \ref*{obr:nb:mca_roztyl_komponetn} až \ref*{obr:nb:mca_prispevek} j
     \end{minipage}
     \end{figure}
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=.6\textwidth]{obrazky/pripravadat/mca-prispevky.png}
-    \caption{Příspěvek proměnných ke komponentám 0 až 5.}
-    \label{obr:nb:mca_prispevek}
-\end{figure}
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[width=.6\textwidth]{obrazky/pripravadat/mca-prispevky.png}
+%     \caption{Příspěvek proměnných ke komponentám 0 až 5.}
+%     \label{obr:nb:mca_prispevek}
+% \end{figure}
 
 
 % warehouse_id        0.024256

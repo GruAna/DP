@@ -1,6 +1,13 @@
 \chapter{Korelační analýza}
 \label{ch:korelacnianalyza}
-Tato kapitola se věnuje popisu korelační analýzy pro zjištění důvodu shrinků produktů. Tuto analýzu je možné spustit na data libovolné společnosti, pokud obsahují vstupy, které jsou definované dále. Analýza byla napsána v~jazyce Python, jako sada funkcí sdružená do modulu. Ukázka volání funkcí pro spuštění analýzy je pak vytvořená v~Jupyter Notebooku. V~této kapitole je popsána implementace funkcí a princip analýzy. Analýza se hodnotí korelací mezi hodnotou shrinku a tržbami, na základě výsledku roztřídí produkty ve vstupních datech do několika kategorií. 
+Tato kapitola se věnuje popisu korelační analýzy pro zjištění důvodu shrinků produktů. Tuto analýzu je možné spustit na data libovolné společnosti, pokud obsahují vstupy, které jsou definované dále. Analýza byla napsána v~jazyce Python, jako sada funkcí sdružená do modulu. Ukázka volání funkcí pro spuštění analýzy je pak vytvořená v~Jupyter Notebooku. V~této kapitole je popsána implementace funkcí a princip analýzy. 
+
+Na základě analýz dat popsaným v sekcích \ref*{sec:priprava}, \ref*{sec:vizualizace:vysl}, \ref*{sec:hypo} nebyl nalezen jednoznačný ukazatel, který by umožnil obecně charakterizovat příčiny vzniku shrinků pouze ze záznamů o jednom produktu. Proto vznikla myšlenka porovnávat zaznamenaný shrink  jednoho produktu s~jinými produkty, konkrétně s~ jejich začleněním do promoakcí v~ daném období a s~tržbami. 
+Další analýza proto hodnotí korelaci mezi hodnotou shrinku a tržbami. Na základě získanéých výsledků roztřídí produkty ve vstupních datech do několika kategorií, podle toho jaký vliv na ně mají ostatní produkty.
+
+Je důležité mít na paměti, že korelace neznamená kauzalitu. Avšak z~ businessového pohledu na zkoumanou situaci si dovolíme předpokládat, že z~ hodnot korelace mezi sledovanými veličinami lze vyvodit alespoň částečnou příčinu vzniku shrinku produktu.
+
+Pro účely této analýzy bylo potřeba získat z~ databáze tabulku týkající se všech prodejů za měsíc březen roku 2023 bez agregace na prodejny nebo části měsíce. 
 
 % Je možné specifikovat úroveň kategorie, na které se analýza spočítá. Dále je třeba určit konkrétní název kategorie.
 
@@ -89,19 +96,21 @@ Všechny záznamové tabulky musí pokrývat stejné časové období. Období m
 Tabulka produktové hierarchie obsahuje ID produktu, jeho název a libovolně hluboký strom hierarchií. Každá úroveň stromu má vlastní sloupec. Všechny úrovně jsou vyplněné pro každý produkt, tato podmínka je nutná jen pro kategorie, které bude chtít uživatel využít při analýze. 
 Tabulka s~hierarchií produktů slouží k~tomu, aby mohla být napojena na ostatní tabulky a data se pak mohla vyfiltrovat pouze na záznamy týkající se vybrané kategorie.
 
-Před spuštěním hlavní výpočetní části musí uživatel vypsat konkrétní pojmenování sloupců v~tabulce do proměnných. Sloupce, které v~různých tabulkách označují tytéž hodnoty, musí mít stejný název. V~následujícím kódu \ref*{code:colnames} je ukázka zadání. V~komentářích je slovní popis o jaký sloupec se jedná. Sloupec by však měl být jasný přímo z~názvu proměnné.
+Před spuštěním hlavní výpočetní části musí uživatel vypsat konkrétní pojmenování sloupců v~tabulce do proměnných. Sloupce, které v~různých tabulkách označují tytéž hodnoty, musí mít stejný název. 
+% V~následujícím kódu \ref*{code:colnames} je ukázka zadání.
+ V~komentářích je slovní popis o jaký sloupec se jedná. Sloupec by však měl být jasný přímo z~názvu proměnné.
 
-\begin{lstlisting}[language=Python, style=mystyle, label={code:colnames}, caption={Definice konkrétních názvů sloupců.}]
-product_col      = "product_id"             # Product ID column
-product_name_col = "name"                   # Product name column
-whs_id_col       = "warehouse_id"           # Store ID column
-date_col         = "date_of_transaction"    # Date of transactions column - for sales and shrinks tables
-value_col_shrink = "cost_value"             # Column with value of shrinks (shrink table)
-value_col_sales  = "cost_value"             # Column with value of total sales (sales table)
-promo_col_from   = "promotion_date_from"    # Starting date of promotion (promotion table)
-promo_col_to     = "promotion_date_to"      # Starting date of promotion (promotion table)
-categories       = ["L3","L4","L5","L6", "name"]  # Categories that we want to map to product ID (product hierarchy) 
-\end{lstlisting}
+% \begin{lstlisting}[language=Python, style=mystyle, label={code:colnames}, caption={Definice konkrétních názvů sloupců.}]
+% product_col      = "product_id"             # Product ID column
+% product_name_col = "name"                   # Product name column
+% whs_id_col       = "warehouse_id"           # Store ID column
+% date_col         = "date_of_transaction"    # Date of transactions column - for sales and shrinks tables
+% value_col_shrink = "cost_value"             # Column with value of shrinks (shrink table)
+% value_col_sales  = "cost_value"             # Column with value of total sales (sales table)
+% promo_col_from   = "promotion_date_from"    # Starting date of promotion (promotion table)
+% promo_col_to     = "promotion_date_to"      # Starting date of promotion (promotion table)
+% categories       = ["L3","L4","L5","L6", "name"]  # Categories that we want to map to product ID (product hierarchy) 
+% \end{lstlisting}
 
 Uživatel dále zadefinuje formát data, který se používá v~datumových sloupcích, aby se tyto sloupce mohly převést z~textového řetězce na typ \texttt{datetime}. V~proměnné \texttt{category\_column} je třeba vybrat jednu kategorii (název sloupce). Na této úrovni se poté budou procházet jednotlivé kategorie, v~rámci každé z~nich se pak budou porovnávat a třídit produkty. V~dalších proměnných může uživatel změnit umístění tj. název složky, kam se ukládají výsledky kategorizace a grafy. Složky s~těmito názvy se vytvoří jako podsložky aktuální cesty.
 
