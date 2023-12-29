@@ -194,7 +194,7 @@ Z vypočítaných statistik na datasetu je patrné, že některé příznaky jso
 V dalším testu jsem otestovala multikolinearitu dat pomocí rozptylového inflačního faktoru (VIF). Jako hraniční faktor jsem zvolila hodnotu 5 VIF, nad kterou již může být závažný problém multikolinearity.\cite{bib:MB}
 % TODO opravdu az takhle trochu min
 Vysvětlující proměnné jsem odebírala z~datasetu postupně a odebírání jsem ukončila až, když hodnota VIF nebyla nižší než hraniční.
-Tímto došlo k~redukci příznaků. Kategorie 1,2,3,5 
+Tímto došlo k~redukci příznaků. Příznaky 1,2,3,5, kraj, prodej, okres měly hodnotu VIF vyšší než 5. Příznaky datum, ID produktu, ID prodejny byly těsně pod hodnotou prahu.
 Hodnoty koeficientu VIF na datech jsou na obr. \ref*{obr:nb:vif}. 
 
 \begin{figure}[h!]
@@ -205,8 +205,8 @@ Hodnoty koeficientu VIF na datech jsou na obr. \ref*{obr:nb:vif}.
 
     \end{figure}
 
-Jako další metodu po výběr příznaků jsem vypočítala hodnotu koeficientů vzájemné informace mezi všemi příznaky s~cílovým sloupcem - ID shrinku. Na obrázku \ref*{obr:nb:MI_FS} lze vidět, jak jednotlivé proměnné souvisí s~cílovým sloupcem. 
-Zde můžeme vidět, že významnost příznaku ID prodejny klesla o téměř polovinu. Nejvíce informace je sdíleno s~ID produktu, kategorií 6, dále 5, 4, 2. Příznaky související s~časovými údaji podle tohoto kritéria nenesou mnoho společné informace.
+Jako další metodu po výběr příznaků jsem vypočítala hodnotu koeficientů vzájemné informace mezi všemi příznaky s~cílovými sloupci. Na obrázku \ref*{obr:nb:MI_FS} lze vidět, jak jednotlivé proměnné souvisí s~cílovými sloupci. 
+Zde lze vidět, že příznak ID prodejny nese malou část informace o cílových sloupcích. Nejvíce informace je sdíleno s~ID produktu a kategoriemi. Ostatní příznaky podle tohoto kritéria nemají mnoho společné informace.
 
 \begin{figure}[h!]
     \centering
@@ -222,13 +222,11 @@ Předtím než jsem metodu aplikovala jsem otestovala předpoklad homoskedastici
 
 Na obrázcích \ref*{obr:nb:pca_roztyl_komponetn} a \ref*{obr:nb:pca_kum_roztyl_komponetn} je znázorněno prvních deset komponent a rozptyl který v~datech vysvětlují. 
 % Na základě hodnot jsem vybrala prvních deset komponent. 
-Desátá komponenta (označená č. 9) spolu s~předchozími vysvětluje téměř 80~\% variability dat. V~dalším kroku jsem vypočítala příspěvky příznaků k~těmto komponentám a vybrala jsem ty příznaky, které přispívají nejvíce. Jejich příspěvek je znázorněný na obr. \ref*{obr:nb:pca_prispevek}. Na základě výsledků analýzy hlavních komponent lze říci, že nejvíce rozptylu v~datech nesou příznaky -- ID prodejny, den v~týdnu, expirace, den a období v~měsíci.
-% TODO tohle cele predlat na nova data.
-%byly vybrány jako vhodné příznaky pro další práci s~daty tyto příznaky - ID prodejny, den v~týdnu, expirace, den a období v~měsíci.
+Desátá komponenta (označená č. 9) spolu s~předchozími vysvětluje téměř 80~\% variability dat. V~dalším kroku jsem vypočítala příspěvky příznaků k~těmto komponentám a vybrala jsem ty příznaky, které přispívají nejvíce. Jejich příspěvek je znázorněný na obr. \ref*{obr:nb:pca_prispevek}. Na základě výsledků analýzy hlavních komponent lze říci, že nejvíce rozptylu v~datech nesou příznaky -- ID prodejny, datum transakce, typ prodejny, počet obyvatel, úroveň L6, čtvrtina mesíce, kraj, ID produktu. Příznaky typ promoakce, den v~týdnu, okres, úroveň 2 a prodej nepřispívají každý ani deseti procenty ke komeponentám.
 
 \begin{figure}[hbtp!]
     \centering
-    \begin{minipage}[t]{.5\textwidth}
+    \begin{minipage}[t]{.466\textwidth}
       \centering
       \captionsetup{justification=centering}
 
@@ -254,7 +252,7 @@ Desátá komponenta (označená č. 9) spolu s~předchozími vysvětluje témě�
 \end{figure}
     
 Jak již bylo zmíněno pro redukci dimenzionality, příp. výběr proměnných, u kategorických dat lze použít metodu MCA, opět jsem využila implementaci z~knihovny \emph{Prince}. 
-V této implementaci jsou nominální kategorické hodnoty kódovány tak, že narůstá počet sloupců, a proto bylo nutné, vzhledem k~nárokům na paměť k~uložení matice, omezit množství dat. 
+V této implementaci jsou nominální kategorické hodnoty kódovány tak, že narůstá počet sloupců, což náročnější na výpočetní výkon. Vzhledem k tomu, že jsem nanlýzy spouštěla na obyčejném osobním počítači, bylo proto nutné, vzhledem k~nárokům na paměť k~uložení matice, omezit množství dat. 
 Vybrala jsem náhodný 20\% vzorek dat, na které jsem MCA aplikovala. Vypočítala jsem prvních pět komponent, které dohromady popisují 79~\% variability dat. Jelikož byla každá kategorie chápána jako samostatná proměnná příspěvky jednotlivých příznaků ke komponentám byly rozmístěny mezi všechny kategorie, nikoli k~jednotlivým příznakům. 
 % Po agregaci podle původních příznaků největší příspěvek mělo ID produktu, kategorie 6, 5, 4, zatímco nejmenší ID prodejny, 1, den v~týdnu a období měsíce. Tyto výsledky je třeba brát se zvážením neboť výpočty probíhali na řádově menším vzorku než u předchozích metod.
 Z obrázků \ref*{obr:nb:mca_roztyl_komponetn} až \ref*{obr:nb:mca_prispevek} je vidět, že výsledky jsou obdobné jako pro předchozí metodu.
@@ -305,37 +303,40 @@ Na základě předchozích metod bylo z~původních příznaků datasetu
 vybráno několik příznaků, které popisují hodnotu shrinku.
 Vzhledem k~tomu, že různé metody vybraly různé příznaky, níže je sepsáno shrnutí, které říká, jaké příznaku jsou na základě zkoumaných dat relevantní vzhledem k~naměřeným hodnotám shrinku. 
 
-Korelované jsou hodnoty ID produktu, 6, 5, 4 a expirace. Dále také z~označení dne lze určit období měsíce. Ze zmíněných korelovaných příznaků není proto vhodné začlenit více než jeden příznak. Pokud je tato myšlenka aplikována na výsledky metod PCA a MCA a výsledků zjištěných pomocí hraniční hodnoty VIF.
+Závislé jsou hodnoty ID produktu a úrovně produktové hierachie. Dále také z~datumu lze určit období měsíce i den v~týdnu. ID produktu je závislé s umístěním prodejny a vlastnostmi lokality a typem prodejny.  Ze zmíněných korelovaných příznaků stačí použít pouze část příznaků, pokud je tato úvaha aplikována na výsledky metod PCA a MCA a výsledků zjištěných pomocí hraniční hodnoty VIF.
 
-Následující sloupce byly získány podle hodnoty rozptylového inflačního faktoru. Touto metodou byl navržen i sloupec s~číslem dne, ten však z~důvodů korelace nebyl zahrnutý -- úroveň 1, období měsíce, ID prodejny a den v~týdnu.
+Následující sloupce byly získány podle hodnoty rozptylového inflačního faktoru -- úroveň 4, ID produktu, počet obyvatel, období měsíce, typ promoakce, den v~týdnu a prodej. Touto metodou byl navržena i úroveň 6, ta však z~důvodů korelace nebyla zahrnuta. Také hraniční ID prodejny a kraj byly proto vynechány. 
     
-Metodou PCA bylo zjištěno, které příznaky nejvíce přispívají ke komponentám, které popisují téměř 96~\% rozptylu v~původních datech - jedná se o příznaky ID prodejny, den v~týdnu, období v~měsíci a číslo dne. 
-Naopak metoda MCA vybrala kategorie 4 až 6 jako důležité. Sloučením a přihlédnutím ke korelačním koeficientům byly vybráno pět příznaků -- 
-    ID prodejny, den v~týdnu, období v~měsíci, 5.
+Metodou PCA bylo zjištěno, které příznaky nejvíce přispívají ke komponentám, které popisují téměř 96~\% rozptylu v~původních datech. Po vynechání závislých příznaků se jedná o příznaky -- ID prodejny, datum transakce, typ prodejny, počet obyvatel, úroveň L6, čtvrtina mesíce, kraj, ID produktu. 
+% Naopak metoda MCA vybrala kategorie 4 až 6 jako důležité. Sloučením a přihlédnutím ke korelačním koeficientům byly vybráno pět příznaků -- 
+    % ID prodejny, den v~týdnu, období v~měsíci, 5.
 
-\begin{enumerate}
-    \item Následující sloupce byly získány podle hodnoty rozptylového inflačního faktoru. Touto metodou byl navržen i sloupec s~číslem dne, ten však z~důvodů korelace nebyl zahrnutý
-    \begin{enumerate}
-        \item[1.1.] 1, období měsíce, ID prodejny a den v~týdnu.
-    \end{enumerate}
+
+Díky výběru příznaků různými metodami, lze říci, které vlastnosti mohou být důleži-\\té vzhledem k~zjišťování příznaků shrinků ze zaznamenaných dat. Vybrané příznaky mohou sloužit jako základ pro vyslovení hypotéz.
+
+% \begin{enumerate}
+%     \item Následující sloupce byly získány podle hodnoty rozptylového inflačního faktoru. Touto metodou byl navržen i sloupec s~číslem dne, ten však z~důvodů korelace nebyl zahrnutý
+%     \begin{enumerate}
+%         \item[1.1.] 1, období měsíce, ID prodejny a den v~týdnu.
+%     \end{enumerate}
     
-    \item[] K~této variantě existují i dvě alternativy, ve kterých je obměněna úroveň kategorizace produktu:     
-    \begin{enumerate}
-    \item[1.2.] 5, období měsíce, ID prodejny a den v~týdnu
-    \item[1.3.] 4, období měsíce, ID prodejny a den v~týdnu
-    \end{enumerate}
-    \item Metodou PCA bylo zjištěno, které příznaky nejvíce přispívají ke komponentám, které popisují téměř 96~\% rozptylu v~původních datech - jedná se o příznaky ID prodejny, den v~týdnu, období v~měsíci a číslo dne. Naopak metoda MCA vybrala kategorie 4 až 6 jako důležité. Sloučením a přihlédnutím ke korelačním koeficientům byly vybráno pět příznaků
-    \begin{enumerate}
-        \item[2.1.] ID prodejny, den v~týdnu, období v~měsíci, 5.
-    \end{enumerate}
-    \item[] Tato varianta příznaků byla ještě rozšířena o příznaky, které se týkají produktů. Přidané příznaky jsou spolu korelované, přesto 
-    \begin{enumerate}
-    \item[2.2.] ID prodejny, den v~týdnu, období v~měsíci, 5, 2
-    \item[2.3.] ID prodejny, den v~týdnu, období v~měsíci, 5, 2, ID produktu
-    \item[2.4.] ID prodejny, den v~týdnu, období v~měsíci, 2, ID produktu
-    \item[] 2,5, obdobi v~mesici,  ID prodejny, den v~týdnu, ID produktu, target
-    \end{enumerate}
-\end{enumerate}
+%     \item[] K~této variantě existují i dvě alternativy, ve kterých je obměněna úroveň kategorizace produktu:     
+%     \begin{enumerate}
+%     \item[1.2.] 5, období měsíce, ID prodejny a den v~týdnu
+%     \item[1.3.] 4, období měsíce, ID prodejny a den v~týdnu
+%     \end{enumerate}
+%     \item Metodou PCA bylo zjištěno, které příznaky nejvíce přispívají ke komponentám, které popisují téměř 96~\% rozptylu v~původních datech - jedná se o příznaky ID prodejny, den v~týdnu, období v~měsíci a číslo dne. Naopak metoda MCA vybrala kategorie 4 až 6 jako důležité. Sloučením a přihlédnutím ke korelačním koeficientům byly vybráno pět příznaků
+%     \begin{enumerate}
+%         \item[2.1.] ID prodejny, den v~týdnu, období v~měsíci, 5.
+%     \end{enumerate}
+%     \item[] Tato varianta příznaků byla ještě rozšířena o příznaky, které se týkají produktů. Přidané příznaky jsou spolu korelované, přesto 
+%     \begin{enumerate}
+%     \item[2.2.] ID prodejny, den v~týdnu, období v~měsíci, 5, 2
+%     \item[2.3.] ID prodejny, den v~týdnu, období v~měsíci, 5, 2, ID produktu
+%     \item[2.4.] ID prodejny, den v~týdnu, období v~měsíci, 2, ID produktu
+%     \item[] 2,5, obdobi v~mesici,  ID prodejny, den v~týdnu, ID produktu, target
+%     \end{enumerate}
+% \end{enumerate}
 
 % Zda je možné z~vybraných příznaků předpovídat hodnotu shrinku, jsem ověřila metodou gradient boosting. Tato metoda je implementovaná v~knihovně \emph{scikit-learn} v~Pythonu.
 % Bylo otestováno všech sedm možných výběrů. 
