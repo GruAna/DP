@@ -1,0 +1,68 @@
+\babel@toc {czech}{}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces P\IeC {\v r}\IeC {\'\i }klady pl\IeC {\'y}tv\IeC {\'a}n\IeC {\'\i } Muda, Mura a Muri p\IeC {\v r}i transportu \IeC {\v s}esti tun materi\IeC {\'a}lu.\cite {bib:LW3}\relax }}{15}{figure.caption.7}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Zn\IeC {\'a}zorn\IeC {\v e}n\IeC {\'\i } dvou hlavn\IeC {\'\i }ch komponent na pro dv\IeC {\v e} prom\IeC {\v e}nn\IeC {\'e}. Zdroj: vlastn\IeC {\'\i }.\relax }}{21}{figure.caption.22}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Vztah mezi tvrzen\IeC {\'\i }mi vzorku dat a cel\IeC {\'y}ch dat v~metod\IeC {\v e} GUHA. Zdroj: vlastn\IeC {\'\i }.\relax }}{27}{figure.caption.27}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Z\IeC {\'a}kladn\IeC {\'\i } postup procdury GUHA. Zdroj: vlastn\IeC {\'\i }.\relax }}{27}{figure.caption.28}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Uk\IeC {\'a}zka n\IeC {\'a}stroje Power Query. 1 -- Mo\IeC {\v z}n\IeC {\'e} interakce s~daty. 2 -- Seznam nahran\IeC {\'y}ch tabulek, p\IeC {\v r}\IeC {\'\i }padn\IeC {\v e} prom\IeC {\v e}n\IeC {\'y}ch a funkc\IeC {\'\i }. 3 -- Uk\IeC {\'a}zka vybran\IeC {\'y}ch dat. 4 -- Seznam krok\IeC {\r u} a vlastnost\IeC {\'\i }. Zdroj: \cite {bib:PBI}.\relax }}{34}{figure.caption.32}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Z\IeC {\'a}kladn\IeC {\'\i } typy sloupcov\IeC {\'y}ch graf\IeC {\r u}. Zdroj: \cite {bib:PBIgrafy}, upraveno.\relax }}{35}{figure.caption.35}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Z\IeC {\'a}kladn\IeC {\'\i } typy bodov\IeC {\'y}ch graf\IeC {\r u}. Zdroj: \cite {bib:PBI}, upraveno.\relax }}{35}{figure.caption.36}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Mapa stromov\IeC {\'e} struktury s~tooltipem. Zdroj: \cite {bib:PBI}.\relax }}{36}{figure.caption.37}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Uk\IeC {\'a}zka vizu\IeC {\'a}l\IeC {\r u} jedno\IeC {\v r}\IeC {\'a}dkov\IeC {\'a} karta (vlevo) a v\IeC {\'\i }ce\IeC {\v r}\IeC {\'a}dkov\IeC {\'a} karta (vpravo). Zdroj: vlastn\IeC {\'\i }.\relax }}{36}{figure.caption.37}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Uk\IeC {\'a}zka vizu\IeC {\'a}lu matice. Zdroj: \cite {bib:PBI}.\relax }}{36}{figure.caption.37}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces P\IeC {\v r}echod k~podrobnostem v\IeC {\'\i }ce pol\IeC {\'\i }. Zdroj: \cite {bib:PBI}.\relax }}{36}{figure.caption.39}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Topologie shrink\IeC {\r u}. Zdroj: \cite {bib:shrink2}\relax }}{38}{figure.caption.40}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Zastoupen\IeC {\'\i } typ\IeC {\r u} shrink\IeC {\r u} zp\IeC {\r u}soben\IeC {\'y}ch \IeC {\v s}kodami v~datech z~b\IeC {\v r}ezna roku 2023 podle hodnoty shrinku.\relax }}{47}{figure.caption.47}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Zastoupen\IeC {\'\i } kategori\IeC {\'\i } \IeC {\'u}rovn\IeC {\v e} 1 v~datech z~b\IeC {\v r}ezna roku 2023 podle hodnoty shrinku.\relax }}{47}{figure.caption.48}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Zn\IeC {\'a}zorn\IeC {\v e}n\IeC {\'\i } odlehl\IeC {\'y}ch hodnot pro vybran\IeC {\'e} nomin\IeC {\'a}ln\IeC {\'\i } p\IeC {\v r}\IeC {\'\i }znaky.\relax }}{48}{figure.caption.49}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Matice koeficient\IeC {\r u} vz\IeC {\'a}jemn\IeC {\'e} informace mezi p\IeC {\v r}\IeC {\'\i }znaky.\relax }}{49}{figure.caption.50}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Matice koeficient\IeC {\r u} Cramerovo $V$ pro kategorick\IeC {\'e} p\IeC {\v r}\IeC {\'\i }znaky.\relax }}{50}{figure.caption.51}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Matice koeficient\IeC {\r u} Theilovo $U$ mezi p\IeC {\v r}\IeC {\'\i }znaky.\relax }}{51}{figure.caption.52}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Rozptylov\IeC {\'y} infla\IeC {\v c}n\IeC {\'\i } faktor.\relax }}{52}{figure.caption.53}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Vz\IeC {\'a}jemn\IeC {\'a} informace mezi p\IeC {\v r}\IeC {\'\i }znaky c\IeC {\'\i }lov\IeC {\'y}mi sloupci.\relax }}{52}{figure.caption.54}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces PCA - vysv\IeC {\v e}tlen\IeC {\'y} rozptyl hlavn\IeC {\'\i }ch komponent.\relax }}{53}{figure.caption.55}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces PCA - kumulativn\IeC {\'\i } vysv\IeC {\v e}tlen\IeC {\'y} rozptyl hlavn\IeC {\'\i }ch komponent.\relax }}{53}{figure.caption.55}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces P\IeC {\v r}\IeC {\'\i }sp\IeC {\v e}vek prom\IeC {\v e}nn\IeC {\'y}ch ke komponent\IeC {\'a}m 0 a\IeC {\v z} 10.\relax }}{53}{figure.caption.56}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces MCA - vysv\IeC {\v e}tlen\IeC {\'y} rozptyl hlavn\IeC {\'\i }ch komponent.\relax }}{54}{figure.caption.57}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces MCA - kumulativn\IeC {\'\i } vysv\IeC {\v e}tlen\IeC {\'y} rozptyl hlavn\IeC {\'\i }ch komponent.\relax }}{54}{figure.caption.57}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces P\IeC {\v r}\IeC {\'\i }sp\IeC {\v e}vek prom\IeC {\v e}nn\IeC {\'y}ch ke komponent\IeC {\'a}m 0 a\IeC {\v z} 5.\relax }}{55}{figure.caption.58}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Datov\IeC {\'y} model tabulek v~Power BI reportu.\relax }}{57}{figure.caption.60}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Power BI reporting pro zobrazen\IeC {\'\i } \IeC {\'u}daj\IeC {\r u} o shrinc\IeC {\'\i }ch.\relax }}{59}{figure.caption.62}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Uk\IeC {\'a}zka interakce grafu z\IeC {\'a}znam\IeC {\r u} shrinku pro p\IeC {\v r}\IeC {\'\i }stupy k~r\IeC {\r u}zn\IeC {\'y}m \IeC {\'u}rovn\IeC {\'\i }m produktov\IeC {\'e} hierarchie.\relax }}{59}{figure.caption.63}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Detail tabulky vybran\IeC {\'e} ukazatele pro jednotliv\IeC {\'e} kategorie v~produktov\IeC {\'e} hierarchii.\relax }}{60}{figure.caption.64}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Power BI reporting pro zobrazen\IeC {\'\i } \IeC {\'u}daj\IeC {\r u} o shrinc\IeC {\'\i }ch z~pohledu prodejen.\relax }}{60}{figure.caption.66}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Power BI reporting pro zobrazen\IeC {\'\i } \IeC {\'u}daj\IeC {\r u} o shrinc\IeC {\'\i }ch kategorie \IeC {\v C}erstv\IeC {\'e} a Velmi \IeC {\v c}erstv\IeC {\'e} z~pohledu prodejen.\relax }}{61}{figure.caption.68}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Zobrazen\IeC {\'\i } \IeC {\'u}daj\IeC {\r u} o shrinc\IeC {\'\i }ch kategorie \IeC {\v C}erstv\IeC {\'e} a Velmi \IeC {\v c}erstv\IeC {\'e} se zam\IeC {\v e}\IeC {\v r}en\IeC {\'\i }m na kategorie a produkty.\relax }}{62}{figure.caption.70}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Proklik na str\IeC {\'a}nku s~detailem produktu.\relax }}{62}{figure.caption.71}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Zobrazen\IeC {\'\i } \IeC {\'u}daj\IeC {\r u} o shrinc\IeC {\'\i }ch kategorie \IeC {\v C}erstv\IeC {\'e} a Velmi \IeC {\v c}erstv\IeC {\'e} se zam\IeC {\v e}\IeC {\v r}en\IeC {\'\i }m na \IeC {\v c}asov\IeC {\'e} \IeC {\'u}daje.\relax }}{63}{figure.caption.73}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Power BI report -- Detail produktu.\relax }}{64}{figure.caption.75}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Power BI report -- Zastoupen\IeC {\'\i } kategori\IeC {\'\i } na celkov\IeC {\'y}ch tr\IeC {\v z}b\IeC {\'a}ch ve sledovan\IeC {\'e}m obdob\IeC {\'\i } (vlevo) a porovn\IeC {\'a}n\IeC {\'\i } vzhledem k~velikosti prodejen (vpravo).\relax }}{65}{figure.caption.77}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Power BI report -- Zastoupen\IeC {\'\i } kategori\IeC {\'\i } 3. a 4. \IeC {\'u}rovn\IeC {\v e} na celkov\IeC {\'y}ch tr\IeC {\v z}b\IeC {\'a}ch ve sledovan\IeC {\'e}m obdob\IeC {\'\i }.\relax }}{65}{figure.caption.78}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Power BI report -- Zobrazen\IeC {\'\i } kraj\IeC {\r u} podle velikosti hodnoty shrinku (vlevo) a po\IeC {\v c}et prodejen v~regionu (vpravo).\relax }}{67}{figure.caption.81}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Power BI report -- Porovn\IeC {\'a}n\IeC {\'\i } hodnoty shrinku a po\IeC {\v c}tu prodejen pro jednotliv\IeC {\'e} kraje.\relax }}{67}{figure.caption.82}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Power BI report -- Porovn\IeC {\'a}n\IeC {\'\i } typ\IeC {\r u} prodejen z~hlediska pod\IeC {\'\i }lu shrinku na tr\IeC {\v z}b\IeC {\'a}ch (naho\IeC {\v r}e) a pr\IeC {\r u}m\IeC {\v e}rn\IeC {\'e} velikosti shrinku jedn\IeC {\'e} prodejny v~kategorii.\relax }}{67}{figure.caption.82}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Power BI report -- Hodnota shrinku pro typ prodejny). Prodejny s~nejvy\IeC {\v s}\IeC {\v s}\IeC {\'\i } hodnotou ukazatel\IeC {\r u} (vpravo) -- ztracen\IeC {\'e} n\IeC {\'a}klady a pod\IeC {\'\i }l shrinku na tr\IeC {\v z}b\IeC {\'a}ch.\relax }}{68}{figure.caption.83}
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Power BI report -- Velikost shrinku na prodejn\IeC {\v e} versus pod\IeC {\'\i }l shrinku na tr\IeC {\v z}b\IeC {\'a}ch. Velikost zobrazen\IeC {\'e}ho bodu ukazuje v\IeC {\'y}\IeC {\v s}i tr\IeC {\v z}eb na prodejn\IeC {\v e}\relax }}{69}{figure.caption.85}
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Power BI report -- Pr\IeC {\r u}m\IeC {\v e}rn\IeC {\'a} hodnota shrinku prodejen podle velikosti m\IeC {\v e}st, ve kter\IeC {\'e} se nach\IeC {\'a}z\IeC {\'\i } prodejna.\relax }}{69}{figure.caption.86}
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Power BI report -- Po\IeC {\v c}et z\IeC {\'a}znam\IeC {\r u} vzhledem ke dni v t\IeC {\'y}dnu a \IeC {\v c}tvrtin\IeC {\v e} m\IeC {\v e}s\IeC {\'\i }ce.\relax }}{69}{figure.caption.87}
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Power BI report -- Po\IeC {\v c}et z\IeC {\'a}znam\IeC {\r u} podle typu promoakce shrinkovan\IeC {\'e}ho produktu.\relax }}{70}{figure.caption.88}
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Power BI report -- Ztracen\IeC {\'e} n\IeC {\'a}klady (hodnota shrinku) vs Pod\IeC {\'\i }l shrinku produktu na tr\IeC {\v z}b\IeC {\'a}ch produktu. Velikost bod\IeC {\r u} odpov\IeC {\'\i }d\IeC {\'a} po\IeC {\v c}tu z\IeC {\'a}znam\IeC {\r u}.\relax }}{70}{figure.caption.89}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Kategorizace produkt\IeC {\r u} podle korelace hodnoty shrinku s~tr\IeC {\v z}bami.\relax }}{74}{figure.caption.90}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Struktura soubor\IeC {\r u} pro k\IeC {\'o}d zpracov\IeC {\'a}vaj\IeC {\'\i }c\IeC {\'\i } korela\IeC {\v c}n\IeC {\'\i } anal\IeC {\'y}zu.\relax }}{76}{figure.caption.91}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Po\IeC {\v c}et produkt\IeC {\r u} z~kategorie Masn\IeC {\'e} v\IeC {\'y}robky -- pultov\IeC {\'y} prodej rozt\IeC {\v r}\IeC {\'\i }d\IeC {\v e}n\IeC {\'e} pomoc\IeC {\'\i } korela\IeC {\v c}n\IeC {\'\i } anal\IeC {\'y}zy v~z\IeC {\'a}vislosti na r\IeC {\r u}zn\IeC {\'y}ch ukazatel\IeC {\'\i }ch.\relax }}{85}{figure.caption.102}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Po\IeC {\v c}et produkt\IeC {\r u} z~kategorie Slan\IeC {\'e} pe\IeC {\v c}ivo rozt\IeC {\v r}\IeC {\'\i }d\IeC {\v e}n\IeC {\'e} pomoc\IeC {\'\i } korela\IeC {\v c}n\IeC {\'\i } anal\IeC {\'y}zy v~z\IeC {\'a}vislosti na r\IeC {\r u}zn\IeC {\'y}ch ukazatel\IeC {\'\i }ch.\relax }}{86}{figure.caption.103}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Po\IeC {\v c}et produkt\IeC {\r u} z~kategorie Plodov\IeC {\'a} zelenina rozt\IeC {\v r}\IeC {\'\i }d\IeC {\v e}n\IeC {\'e} pomoc\IeC {\'\i } korela\IeC {\v c}n\IeC {\'\i } anal\IeC {\'y}zy v~z\IeC {\'a}vislosti na r\IeC {\r u}zn\IeC {\'y}ch ukazatel\IeC {\'\i }ch.\relax }}{86}{figure.caption.104}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Z\IeC {\'a}vislost mezi tr\IeC {\v z}bami produktu a tr\IeC {\v z}bami ostatn\IeC {\'\i }ch produkt\IeC {\r u} v~kategorii b\IeC {\v e}hem promoakce (Masn\IeC {\'e} v\IeC {\'y}robky -- pultov\IeC {\'y} prodej).\relax }}{87}{figure.caption.105}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Vizualizace v\IeC {\'y}sledk\IeC {\r u} rozd\IeC {\v e}len\IeC {\'\i } p\IeC {\v r}i\IeC {\v r}azen\IeC {\'y}ch kategori\IeC {\'\i } pro kategorii produkt\IeC {\r u} Masn\IeC {\'e} v\IeC {\'y}robky -- pultov\IeC {\'y} prodej.\relax }}{87}{figure.caption.106}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Histogram pro hodnoty velikosti shrinku v~pen\IeC {\v e}\IeC {\v z}n\IeC {\'\i }ch jednotk\IeC {\'a}ch.\relax }}{90}{figure.caption.107}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Histogram pro hodnoty objemu shrinku v~kusech.\relax }}{90}{figure.caption.107}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Histogram pod\IeC {\'\i }lu shrinku na tr\IeC {\v z}b\IeC {\'a}ch shrinkovan\IeC {\'e}ho produktu.\relax }}{90}{figure.caption.108}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Histogram pod\IeC {\'\i }lu shrinku a tr\IeC {\v z}eb v~kategorii \IeC {\'u}rovn\IeC {\v e} 1.\relax }}{90}{figure.caption.108}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Histogram pod\IeC {\'\i }lu shrinku na celkov\IeC {\'y}ch tr\IeC {\v z}b\IeC {\'a}ch prodejny.\relax }}{90}{figure.caption.109}
+\addvspace {10\p@ }

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2021.4.4)  30 DEC 2023 17:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2021.4.4)  30 DEC 2023 18:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1242,21 +1242,21 @@ Package csquotes Info: Redefining alias 'default' -> 'czech'.
  (/home/anna/Documents/skola/DP/text/DP_Gruberova.aux)
 \openout1 = `DP_Gruberova.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 120.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 121.
  (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -1327,7 +1327,7 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-Package hyperref Info: Link coloring OFF on input line 120.
+Package hyperref Info: Link coloring OFF on input line 121.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -1335,9 +1335,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count336
 )
-LaTeX Info: Redefining \ref on input line 120.
-LaTeX Info: Redefining \pageref on input line 120.
-LaTeX Info: Redefining \nameref on input line 120.
+LaTeX Info: Redefining \ref on input line 121.
+LaTeX Info: Redefining \pageref on input line 121.
+LaTeX Info: Redefining \nameref on input line 121.
  (/home/anna/Documents/skola/DP/text/DP_Gruberova.out) (/home/anna/Documents/skola/DP/text/DP_Gruberova.out)
 \@outlinefile=\write4
 \openout4 = `DP_Gruberova.out'.
@@ -1347,68 +1347,68 @@ Package caption Info: listings package is loaded.
 Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count337
-Package csquotes Info: Redefining character " on input line 120.
+Package csquotes Info: Redefining character " on input line 121.
  ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 131.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 132.
  (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 131.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 132.
  (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 131.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 132.
  (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 131.
+(Font)              <12> on input line 132.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 131.
+(Font)              <8> on input line 132.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 131.
-LaTeX Font Info:    Try loading font information for U+msa on input line 131.
+(Font)              <6> on input line 132.
+LaTeX Font Info:    Try loading font information for U+msa on input line 132.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 131.
+LaTeX Font Info:    Try loading font information for U+msb on input line 132.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<symbol_cvut_konturova_verze_cb.pdf, id=190, 126.78566pt x 96.54268pt>
+<symbol_cvut_konturova_verze_cb.pdf, id=191, 126.78566pt x 96.54268pt>
 File: symbol_cvut_konturova_verze_cb.pdf Graphic file (type pdf)
 <use symbol_cvut_konturova_verze_cb.pdf>
-Package pdftex.def Info: symbol_cvut_konturova_verze_cb.pdf  used on input line 136.
+Package pdftex.def Info: symbol_cvut_konturova_verze_cb.pdf  used on input line 137.
 (pdftex.def)             Requested size: 126.78534pt x 96.54243pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 147.
+(Font)              <14.4> on input line 148.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 147.
+(Font)              <10> on input line 148.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 147.
+(Font)              <7> on input line 148.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} </home/anna/Documents/skola/DP/text/symbol_cvut_konturova_verze_cb.pdf>]
 
 pdfTeX warning: pdflatex (file /home/anna/Documents/skola/DP/text/ZadaniDPRadova.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<ZadaniDPRadova.pdf, id=201, 844.65562pt x 596.98032pt>
+<ZadaniDPRadova.pdf, id=202, 844.65562pt x 596.98032pt>
 File: ZadaniDPRadova.pdf Graphic file (type pdf)
 <use ZadaniDPRadova.pdf>
-Package pdftex.def Info: ZadaniDPRadova.pdf  used on input line 166.
-(pdftex.def)             Requested size: 844.65356pt x 596.97885pt.
-
-
-pdfTeX warning: pdflatex (file /home/anna/Documents/skola/DP/text/ZadaniDPRadova.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-File: ZadaniDPRadova.pdf Graphic file (type pdf)
-<use ZadaniDPRadova.pdf>
-Package pdftex.def Info: ZadaniDPRadova.pdf  used on input line 166.
+Package pdftex.def Info: ZadaniDPRadova.pdf  used on input line 167.
 (pdftex.def)             Requested size: 844.65356pt x 596.97885pt.
 
 
 pdfTeX warning: pdflatex (file /home/anna/Documents/skola/DP/text/ZadaniDPRadova.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 File: ZadaniDPRadova.pdf Graphic file (type pdf)
 <use ZadaniDPRadova.pdf>
-Package pdftex.def Info: ZadaniDPRadova.pdf  used on input line 166.
+Package pdftex.def Info: ZadaniDPRadova.pdf  used on input line 167.
+(pdftex.def)             Requested size: 844.65356pt x 596.97885pt.
+
+
+pdfTeX warning: pdflatex (file /home/anna/Documents/skola/DP/text/ZadaniDPRadova.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+File: ZadaniDPRadova.pdf Graphic file (type pdf)
+<use ZadaniDPRadova.pdf>
+Package pdftex.def Info: ZadaniDPRadova.pdf  used on input line 167.
 (pdftex.def)             Requested size: 844.65356pt x 596.97885pt.
 
 
@@ -1416,26 +1416,26 @@ pdfTeX warning: pdflatex (file /home/anna/Documents/skola/DP/text/ZadaniDPRadova
 
 
 pdfTeX warning: pdflatex (file /home/anna/Documents/skola/DP/text/ZadaniDPRadova.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<ZadaniDPRadova.pdf, id=205, page=2, 844.65562pt x 596.98032pt>
+<ZadaniDPRadova.pdf, id=206, page=2, 844.65562pt x 596.98032pt>
 File: ZadaniDPRadova.pdf Graphic file (type pdf)
 <use ZadaniDPRadova.pdf, page 2>
-Package pdftex.def Info: ZadaniDPRadova.pdf , page2 used on input line 166.
+Package pdftex.def Info: ZadaniDPRadova.pdf , page2 used on input line 167.
 (pdftex.def)             Requested size: 844.65356pt x 596.97885pt.
 File: ZadaniDPRadova.pdf Graphic file (type pdf)
 <use ZadaniDPRadova.pdf, page 2>
-Package pdftex.def Info: ZadaniDPRadova.pdf , page2 used on input line 166.
+Package pdftex.def Info: ZadaniDPRadova.pdf , page2 used on input line 167.
 (pdftex.def)             Requested size: 844.65356pt x 596.97885pt.
 File: ZadaniDPRadova.pdf Graphic file (type pdf)
 <use ZadaniDPRadova.pdf, page 2>
-Package pdftex.def Info: ZadaniDPRadova.pdf , page2 used on input line 166.
+Package pdftex.def Info: ZadaniDPRadova.pdf , page2 used on input line 167.
 (pdftex.def)             Requested size: 844.65356pt x 596.97885pt.
 File: ZadaniDPRadova.pdf Graphic file (type pdf)
 <use ZadaniDPRadova.pdf, page 2>
-Package pdftex.def Info: ZadaniDPRadova.pdf , page2 used on input line 166.
+Package pdftex.def Info: ZadaniDPRadova.pdf , page2 used on input line 167.
 (pdftex.def)             Requested size: 844.65356pt x 596.97885pt.
 File: ZadaniDPRadova.pdf Graphic file (type pdf)
 <use ZadaniDPRadova.pdf, page 2>
-Package pdftex.def Info: ZadaniDPRadova.pdf , page2 used on input line 166.
+Package pdftex.def Info: ZadaniDPRadova.pdf , page2 used on input line 167.
 (pdftex.def)             Requested size: 844.65356pt x 596.97885pt.
 [2
 
@@ -1443,24 +1443,24 @@ Package pdftex.def Info: ZadaniDPRadova.pdf , page2 used on input line 166.
  </home/anna/Documents/skola/DP/text/ZadaniDPRadova.pdf>]
 
 pdfTeX warning: pdflatex (file /home/anna/Documents/skola/DP/text/ZadaniDPRadova.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<ZadaniDPRadova.pdf, id=216, page=1, 844.65562pt x 596.98032pt>
+<ZadaniDPRadova.pdf, id=217, page=1, 844.65562pt x 596.98032pt>
 File: ZadaniDPRadova.pdf Graphic file (type pdf)
 <use ZadaniDPRadova.pdf, page 1>
-Package pdftex.def Info: ZadaniDPRadova.pdf , page1 used on input line 166.
+Package pdftex.def Info: ZadaniDPRadova.pdf , page1 used on input line 167.
 (pdftex.def)             Requested size: 844.65356pt x 596.97885pt.
 File: ZadaniDPRadova.pdf Graphic file (type pdf)
 <use ZadaniDPRadova.pdf, page 1>
-Package pdftex.def Info: ZadaniDPRadova.pdf , page1 used on input line 166.
+Package pdftex.def Info: ZadaniDPRadova.pdf , page1 used on input line 167.
 (pdftex.def)             Requested size: 844.65356pt x 596.97885pt.
 File: ZadaniDPRadova.pdf Graphic file (type pdf)
 <use ZadaniDPRadova.pdf, page 1>
-Package pdftex.def Info: ZadaniDPRadova.pdf , page1 used on input line 166.
+Package pdftex.def Info: ZadaniDPRadova.pdf , page1 used on input line 167.
 (pdftex.def)             Requested size: 844.65356pt x 596.97885pt.
 [3 </home/anna/Documents/skola/DP/text/ZadaniDPRadova.pdf>] [4] [5]
 \odstavecbox=\box71
 \vyskaodstavce=\skip129
 
-Overfull \hbox (55.43954pt too wide) in paragraph at lines 237--256
+Overfull \hbox (55.43954pt too wide) in paragraph at lines 238--257
 [][] 
  []
 
@@ -1499,7 +1499,7 @@ Overfull \hbox (2.45068pt too wide) in paragraph at lines 65--66
  []
 
 [13]
-<obrazky/3M.jpg, id=370, 361.35pt x 307.74976pt>
+<obrazky/3M.jpg, id=371, 361.35pt x 307.74976pt>
 File: obrazky/3M.jpg Graphic file (type jpg)
 <use obrazky/3M.jpg>
 Package pdftex.def Info: obrazky/3M.jpg  used on input line 77.
@@ -1532,7 +1532,7 @@ Overfull \hbox (9.72482pt too wide) in paragraph at lines 68--71
 \OT1/lmr/m/n/12 prvn^^S^^P hlavn^^S^^P kom-po-nent^^Te -- druh^^Sa hlavn^^S^^P kom-po-nenta nesm^^S^^P b^^Syt ko-re-lo-van^^Sa s p^^Tredchoz^^S^^P,
  []
 
-<obrazky/PCA.pdf, id=430, 231.74579pt x 167.6664pt>
+<obrazky/PCA.pdf, id=431, 231.74579pt x 167.6664pt>
 File: obrazky/PCA.pdf Graphic file (type pdf)
 <use obrazky/PCA.pdf>
 Package pdftex.def Info: obrazky/PCA.pdf  used on input line 74.
@@ -1576,12 +1576,12 @@ Overfull \hbox (21.52158pt too wide) in paragraph at lines 256--257
  []
 
 [26]
-<obrazky/GUHA/GUHA1.pdf, id=565, 209.8239pt x 62.15219pt>
+<obrazky/GUHA/GUHA1.pdf, id=566, 209.8239pt x 62.15219pt>
 File: obrazky/GUHA/GUHA1.pdf Graphic file (type pdf)
 <use obrazky/GUHA/GUHA1.pdf>
 Package pdftex.def Info: obrazky/GUHA/GUHA1.pdf  used on input line 277.
 (pdftex.def)             Requested size: 213.39566pt x 63.21324pt.
-<obrazky/GUHA/GUHA2.pdf, id=567, 210.7875pt x 94.4328pt>
+<obrazky/GUHA/GUHA2.pdf, id=568, 210.7875pt x 94.4328pt>
 File: obrazky/GUHA/GUHA2.pdf Graphic file (type pdf)
 <use obrazky/GUHA/GUHA2.pdf>
 Package pdftex.def Info: obrazky/GUHA/GUHA2.pdf  used on input line 287.
@@ -1629,7 +1629,7 @@ Overfull \hbox (1.17906pt too wide) in paragraph at lines 498--499
  []
 
 [32]
-<obrazky/PBIteorie/query-overview-with-data-connection.png, id=688, 923.70094pt x 450.9347pt>
+<obrazky/PBIteorie/query-overview-with-data-connection.png, id=689, 923.70094pt x 450.9347pt>
 File: obrazky/PBIteorie/query-overview-with-data-connection.png Graphic file (type png)
 <use obrazky/PBIteorie/query-overview-with-data-connection.png>
 Package pdftex.def Info: obrazky/PBIteorie/query-overview-with-data-connection.png  used on input line 513.
@@ -1639,7 +1639,7 @@ Package pdftex.def Info: obrazky/PBIteorie/query-overview-with-data-connection.p
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [33]
-<obrazky/PBIteorie/sloupcove_grafy.png, id=698, 245.9589pt x 95.8782pt>
+<obrazky/PBIteorie/sloupcove_grafy.png, id=699, 245.9589pt x 95.8782pt>
 File: obrazky/PBIteorie/sloupcove_grafy.png Graphic file (type png)
 <use obrazky/PBIteorie/sloupcove_grafy.png>
 Package pdftex.def Info: obrazky/PBIteorie/sloupcove_grafy.png  used on input line 537.
@@ -1649,22 +1649,22 @@ Package pdftex.def Info: obrazky/PBIteorie/sloupcove_grafy.png  used on input li
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [34 </home/anna/Documents/skola/DP/text/obrazky/PBIteorie/query-overview-with-data-connection.png>]
-<obrazky/PBIteorie/power-bi-compare-charts.png, id=709, 652.4375pt x 222.8325pt>
+<obrazky/PBIteorie/power-bi-compare-charts.png, id=710, 652.4375pt x 222.8325pt>
 File: obrazky/PBIteorie/power-bi-compare-charts.png Graphic file (type png)
 <use obrazky/PBIteorie/power-bi-compare-charts.png>
 Package pdftex.def Info: obrazky/PBIteorie/power-bi-compare-charts.png  used on input line 548.
 (pdftex.def)             Requested size: 384.10959pt x 131.19122pt.
-<obrazky/PBIteorie/power-bi-treemap-category-tooltip.png, id=712, 297.11pt x 161.60374pt>
+<obrazky/PBIteorie/power-bi-treemap-category-tooltip.png, id=713, 297.11pt x 161.60374pt>
 File: obrazky/PBIteorie/power-bi-treemap-category-tooltip.png Graphic file (type png)
 <use obrazky/PBIteorie/power-bi-treemap-category-tooltip.png>
 Package pdftex.def Info: obrazky/PBIteorie/power-bi-treemap-category-tooltip.png  used on input line 565.
 (pdftex.def)             Requested size: 170.71393pt x 92.85732pt.
-<obrazky/PBIteorie/kartastoresSFF.png, id=715, 43.6029pt x 26.9808pt>
+<obrazky/PBIteorie/kartastoresSFF.png, id=716, 43.6029pt x 26.9808pt>
 File: obrazky/PBIteorie/kartastoresSFF.png Graphic file (type png)
 <use obrazky/PBIteorie/kartastoresSFF.png>
 Package pdftex.def Info: obrazky/PBIteorie/kartastoresSFF.png  used on input line 573.
 (pdftex.def)             Requested size: 85.35696pt x 52.819pt.
-<obrazky/PBIteorie/power-bi-expansion-state.png, id=716, 354.123pt x 184.2885pt>
+<obrazky/PBIteorie/power-bi-expansion-state.png, id=717, 354.123pt x 184.2885pt>
 File: obrazky/PBIteorie/power-bi-expansion-state.png Graphic file (type png)
 <use obrazky/PBIteorie/power-bi-expansion-state.png>
 Package pdftex.def Info: obrazky/PBIteorie/power-bi-expansion-state.png  used on input line 581.
@@ -1675,7 +1675,7 @@ Overfull \hbox (14.61534pt too wide) in paragraph at lines 562--585
  []
 
 [35 </home/anna/Documents/skola/DP/text/obrazky/PBIteorie/sloupcove_grafy.png> </home/anna/Documents/skola/DP/text/obrazky/PBIteorie/power-bi-compare-charts.png>]
-<obrazky/PBIteorie/power-bi-drill-path.png, id=728, 434.37282pt x 93.34875pt>
+<obrazky/PBIteorie/power-bi-drill-path.png, id=729, 434.37282pt x 93.34875pt>
 File: obrazky/PBIteorie/power-bi-drill-path.png Graphic file (type png)
 <use obrazky/PBIteorie/power-bi-drill-path.png>
 Package pdftex.def Info: obrazky/PBIteorie/power-bi-drill-path.png  used on input line 594.
@@ -1687,7 +1687,7 @@ Package hyperref Warning: Composite letter `\textring+u'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textring' on input line 15.
 
-<obrazky/typyshirnku.png, id=746, 933.4875pt x 670.505pt>
+<obrazky/typyshirnku.png, id=747, 933.4875pt x 670.505pt>
 File: obrazky/typyshirnku.png Graphic file (type png)
 <use obrazky/typyshirnku.png>
 Package pdftex.def Info: obrazky/typyshirnku.png  used on input line 23.
@@ -1740,7 +1740,7 @@ Package hyperref Warning: Composite letter `\textasciicaron+e'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textasciicaron' on input line 65.
 
-<obrazky/grafy/zastoupenishrinky.png, id=804, 572.1375pt x 205.5178pt>
+<obrazky/grafy/zastoupenishrinky.png, id=805, 572.1375pt x 205.5178pt>
 File: obrazky/grafy/zastoupenishrinky.png Graphic file (type png)
 <use obrazky/grafy/zastoupenishrinky.png>
 Package pdftex.def Info: obrazky/grafy/zastoupenishrinky.png  used on input line 73.
@@ -1748,7 +1748,7 @@ Package pdftex.def Info: obrazky/grafy/zastoupenishrinky.png  used on input line
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<obrazky/grafy/zastoupeniL1.png, id=805, 535.2497pt x 205.5178pt>
+<obrazky/grafy/zastoupeniL1.png, id=806, 535.2497pt x 205.5178pt>
 File: obrazky/grafy/zastoupeniL1.png Graphic file (type png)
 <use obrazky/grafy/zastoupeniL1.png>
 Package pdftex.def Info: obrazky/grafy/zastoupeniL1.png  used on input line 84.
@@ -1762,12 +1762,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--92
  []
 
 [46] [47 </home/anna/Documents/skola/DP/text/obrazky/grafy/zastoupenishrinky.png> </home/anna/Documents/skola/DP/text/obrazky/grafy/zastoupeniL1.png>]
-<obrazky/zntb/box_nominal.png, id=820, 448.7967pt x 313.6518pt>
+<obrazky/zntb/box_nominal.png, id=821, 448.7967pt x 313.6518pt>
 File: obrazky/zntb/box_nominal.png Graphic file (type png)
 <use obrazky/zntb/box_nominal.png>
 Package pdftex.def Info: obrazky/zntb/box_nominal.png  used on input line 122.
 (pdftex.def)             Requested size: 256.0774pt x 178.97002pt.
-<obrazky/pripravadat/matrix_MI-everything-SFF-storesFETURES-002.pdf, id=823, 639.10106pt x 525.74101pt>
+<obrazky/pripravadat/matrix_MI-everything-SFF-storesFETURES-002.pdf, id=824, 639.10106pt x 525.74101pt>
 File: obrazky/pripravadat/matrix_MI-everything-SFF-storesFETURES-002.pdf Graphic file (type pdf)
 <use obrazky/pripravadat/matrix_MI-everything-SFF-storesFETURES-002.pdf>
 Package pdftex.def Info: obrazky/pripravadat/matrix_MI-everything-SFF-storesFETURES-002.pdf  used on input line 165.
@@ -1777,7 +1777,7 @@ Package pdftex.def Info: obrazky/pripravadat/matrix_MI-everything-SFF-storesFETU
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [48 </home/anna/Documents/skola/DP/text/obrazky/zntb/box_nominal.png>]
-<obrazky/pripravadat/correlation_matrix_cramers-everything-SFF-stores_targets002.pdf, id=832, 742.66399pt x 692.21422pt>
+<obrazky/pripravadat/correlation_matrix_cramers-everything-SFF-stores_targets002.pdf, id=833, 742.66399pt x 692.21422pt>
 File: obrazky/pripravadat/correlation_matrix_cramers-everything-SFF-stores_targets002.pdf Graphic file (type pdf)
 <use obrazky/pripravadat/correlation_matrix_cramers-everything-SFF-stores_targets002.pdf>
 Package pdftex.def Info: obrazky/pripravadat/correlation_matrix_cramers-everything-SFF-stores_targets002.pdf  used on input line 176.
@@ -1786,7 +1786,7 @@ Package pdftex.def Info: obrazky/pripravadat/correlation_matrix_cramers-everythi
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<obrazky/pripravadat/theils_u-002.png, id=834, 641.7576pt x 580.3281pt>
+<obrazky/pripravadat/theils_u-002.png, id=835, 641.7576pt x 580.3281pt>
 File: obrazky/pripravadat/theils_u-002.png Graphic file (type png)
 <use obrazky/pripravadat/theils_u-002.png>
 Package pdftex.def Info: obrazky/pripravadat/theils_u-002.png  used on input line 185.
@@ -1799,7 +1799,7 @@ Overfull \hbox (0.25345pt too wide) in paragraph at lines 194--199
 \OT1/lmr/m/n/12 b^^Syt z^^Sava^^Tzn^^Sy probl^^Sem multikolinearity.[[]] Vysv^^Tetluj^^S^^Pc^^S^^P prom^^Tenn^^Se jsem odeb^^S^^Prala z da-
  []
 
-<obrazky/zntb/VIF2.png, id=891, 438.63875pt x 399.4925pt>
+<obrazky/zntb/VIF2.png, id=892, 438.63875pt x 399.4925pt>
 File: obrazky/zntb/VIF2.png Graphic file (type png)
 <use obrazky/zntb/VIF2.png>
 Package pdftex.def Info: obrazky/zntb/VIF2.png  used on input line 202.
@@ -1807,7 +1807,7 @@ Package pdftex.def Info: obrazky/zntb/VIF2.png  used on input line 202.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<obrazky/pripravadat/matrix_MI-everything-SFF-stores-002.pdf, id=892, 350.6715pt x 487.53331pt>
+<obrazky/pripravadat/matrix_MI-everything-SFF-stores-002.pdf, id=893, 350.6715pt x 487.53331pt>
 File: obrazky/pripravadat/matrix_MI-everything-SFF-stores-002.pdf Graphic file (type pdf)
 <use obrazky/pripravadat/matrix_MI-everything-SFF-stores-002.pdf>
 Package pdftex.def Info: obrazky/pripravadat/matrix_MI-everything-SFF-stores-002.pdf  used on input line 213.
@@ -1816,17 +1816,17 @@ Package pdftex.def Info: obrazky/pripravadat/matrix_MI-everything-SFF-stores-002
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [50 </home/anna/Documents/skola/DP/text/obrazky/pripravadat/correlation_matrix_cramers-everything-SFF-stores_targets002.pdf>] [51 </home/anna/Documents/skola/DP/text/obrazky/pripravadat/theils_u-002.png>]
-<obrazky/pripravadat/pca-roztyl_komponetn.png, id=950, 406.8801pt x 328.1058pt>
+<obrazky/pripravadat/pca-roztyl_komponetn.png, id=951, 406.8801pt x 328.1058pt>
 File: obrazky/pripravadat/pca-roztyl_komponetn.png Graphic file (type png)
 <use obrazky/pripravadat/pca-roztyl_komponetn.png>
 Package pdftex.def Info: obrazky/pripravadat/pca-roztyl_komponetn.png  used on input line 233.
 (pdftex.def)             Requested size: 198.88622pt x 160.37773pt.
-<obrazky/pripravadat/pca-kum_roztyl_komponetn.png, id=951, 435.7881pt x 328.1058pt>
+<obrazky/pripravadat/pca-kum_roztyl_komponetn.png, id=952, 435.7881pt x 328.1058pt>
 File: obrazky/pripravadat/pca-kum_roztyl_komponetn.png Graphic file (type png)
 <use obrazky/pripravadat/pca-kum_roztyl_komponetn.png>
 Package pdftex.def Info: obrazky/pripravadat/pca-kum_roztyl_komponetn.png  used on input line 241.
 (pdftex.def)             Requested size: 213.39566pt x 160.6681pt.
-<obrazky/pripravadat/pca-prispevky.png, id=952, 406.8801pt x 416.9979pt>
+<obrazky/pripravadat/pca-prispevky.png, id=953, 406.8801pt x 416.9979pt>
 File: obrazky/pripravadat/pca-prispevky.png Graphic file (type png)
 <use obrazky/pripravadat/pca-prispevky.png>
 Package pdftex.def Info: obrazky/pripravadat/pca-prispevky.png  used on input line 249.
@@ -1836,17 +1836,17 @@ Package pdftex.def Info: obrazky/pripravadat/pca-prispevky.png  used on input li
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [52 </home/anna/Documents/skola/DP/text/obrazky/zntb/VIF2.png> </home/anna/Documents/skola/DP/text/obrazky/pripravadat/matrix_MI-everything-SFF-stores-002.pdf>] [53 </home/anna/Documents/skola/DP/text/obrazky/pripravadat/pca-roztyl_komponetn.png> </home/anna/Documents/skola/DP/text/obrazky/pripravadat/pca-kum_roztyl_komponetn.png> </home/anna/Documents/skola/DP/text/obrazky/pripravadat/pca-prispevky.png>]
-<obrazky/pripravadat/mca-roztyl_komponetn.png, id=1017, 418.4433pt x 328.1058pt>
+<obrazky/pripravadat/mca-roztyl_komponetn.png, id=1018, 418.4433pt x 328.1058pt>
 File: obrazky/pripravadat/mca-roztyl_komponetn.png Graphic file (type png)
 <use obrazky/pripravadat/mca-roztyl_komponetn.png>
 Package pdftex.def Info: obrazky/pripravadat/mca-roztyl_komponetn.png  used on input line 267.
 (pdftex.def)             Requested size: 213.39566pt x 167.32674pt.
-<obrazky/pripravadat/mca-kum_roztyl_komponetn.png, id=1018, 470.4777pt x 328.1058pt>
+<obrazky/pripravadat/mca-kum_roztyl_komponetn.png, id=1019, 470.4777pt x 328.1058pt>
 File: obrazky/pripravadat/mca-kum_roztyl_komponetn.png Graphic file (type png)
 <use obrazky/pripravadat/mca-kum_roztyl_komponetn.png>
 Package pdftex.def Info: obrazky/pripravadat/mca-kum_roztyl_komponetn.png  used on input line 275.
 (pdftex.def)             Requested size: 213.39566pt x 148.81775pt.
-<obrazky/pripravadat/mca-prispevky.png, id=1019, 406.8801pt x 418.4433pt>
+<obrazky/pripravadat/mca-prispevky.png, id=1020, 406.8801pt x 418.4433pt>
 File: obrazky/pripravadat/mca-prispevky.png Graphic file (type png)
 <use obrazky/pripravadat/mca-prispevky.png>
 Package pdftex.def Info: obrazky/pripravadat/mca-prispevky.png  used on input line 283.
@@ -1862,7 +1862,7 @@ Package hyperref Warning: Composite letter `\textasciicaron+r'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textasciicaron' on input line 6.
 
-<obrazky/PBI/datmodel.png, id=1036, 840.13875pt x 584.1825pt>
+<obrazky/PBI/datmodel.png, id=1037, 840.13875pt x 584.1825pt>
 File: obrazky/PBI/datmodel.png Graphic file (type png)
 <use obrazky/PBI/datmodel.png>
 Package pdftex.def Info: obrazky/PBI/datmodel.png  used on input line 19.
@@ -1873,7 +1873,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [56
 
 ] [57 </home/anna/Documents/skola/DP/text/obrazky/PBI/datmodel.png>]
-<obrazky/PBI/overview.png, id=1048, 295.5843pt x 166.221pt>
+<obrazky/PBI/overview.png, id=1049, 295.5843pt x 166.221pt>
 File: obrazky/PBI/overview.png Graphic file (type png)
 <use obrazky/PBI/overview.png>
 Package pdftex.def Info: obrazky/PBI/overview.png  used on input line 53.
@@ -1883,12 +1883,12 @@ Package pdftex.def Info: obrazky/PBI/overview.png  used on input line 53.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [58]
-<obrazky/PBI/Catdrilldown.png, id=1055, 295.5843pt x 92.2647pt>
+<obrazky/PBI/Catdrilldown.png, id=1056, 295.5843pt x 92.2647pt>
 File: obrazky/PBI/Catdrilldown.png Graphic file (type png)
 <use obrazky/PBI/Catdrilldown.png>
 Package pdftex.def Info: obrazky/PBI/Catdrilldown.png  used on input line 64.
 (pdftex.def)             Requested size: 426.79134pt x 133.2285pt.
-<obrazky/PBI/tabulkaukzka.png, id=1056, 170.3163pt x 57.3342pt>
+<obrazky/PBI/tabulkaukzka.png, id=1057, 170.3163pt x 57.3342pt>
 File: obrazky/PBI/tabulkaukzka.png Graphic file (type png)
 <use obrazky/PBI/tabulkaukzka.png>
 Package pdftex.def Info: obrazky/PBI/tabulkaukzka.png  used on input line 72.
@@ -1898,35 +1898,35 @@ Package pdftex.def Info: obrazky/PBI/tabulkaukzka.png  used on input line 72.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [59 </home/anna/Documents/skola/DP/text/obrazky/PBI/overview.png> </home/anna/Documents/skola/DP/text/obrazky/PBI/Catdrilldown.png>]
-<obrazky/PBI/storesall.png, id=1066, 312.4473pt x 174.6525pt>
+<obrazky/PBI/storesall.png, id=1067, 312.4473pt x 174.6525pt>
 File: obrazky/PBI/storesall.png Graphic file (type png)
 <use obrazky/PBI/storesall.png>
 Package pdftex.def Info: obrazky/PBI/storesall.png  used on input line 85.
 (pdftex.def)             Requested size: 426.79134pt x 238.57425pt.
  [60 </home/anna/Documents/skola/DP/text/obrazky/PBI/tabulkaukzka.png> </home/anna/Documents/skola/DP/text/obrazky/PBI/storesall.png>]
-<obrazky/PBI/storesSFF.png, id=1075, 288.5982pt x 162.6075pt>
+<obrazky/PBI/storesSFF.png, id=1076, 288.5982pt x 162.6075pt>
 File: obrazky/PBI/storesSFF.png Graphic file (type png)
 <use obrazky/PBI/storesSFF.png>
 Package pdftex.def Info: obrazky/PBI/storesSFF.png  used on input line 101.
 (pdftex.def)             Requested size: 426.79134pt x 240.47173pt.
-<obrazky/PBI/levelsSFFkopie.png, id=1076, 292.2117pt x 163.5711pt>
+<obrazky/PBI/levelsSFFkopie.png, id=1077, 292.2117pt x 163.5711pt>
 File: obrazky/PBI/levelsSFFkopie.png Graphic file (type png)
 <use obrazky/PBI/levelsSFFkopie.png>
 Package pdftex.def Info: obrazky/PBI/levelsSFFkopie.png  used on input line 113.
 (pdftex.def)             Requested size: 426.79134pt x 238.92163pt.
  [61 </home/anna/Documents/skola/DP/text/obrazky/PBI/storesSFF.png>]
-<obrazky/PBI/detaildrill.png, id=1085, 100.4553pt x 42.1575pt>
+<obrazky/PBI/detaildrill.png, id=1086, 100.4553pt x 42.1575pt>
 File: obrazky/PBI/detaildrill.png Graphic file (type png)
 <use obrazky/PBI/detaildrill.png>
 Package pdftex.def Info: obrazky/PBI/detaildrill.png  used on input line 123.
 (pdftex.def)             Requested size: 192.0548pt x 80.59987pt.
  [62 </home/anna/Documents/skola/DP/text/obrazky/PBI/levelsSFFkopie.png> </home/anna/Documents/skola/DP/text/obrazky/PBI/detaildrill.png>]
-<obrazky/PBI/timeSFF.png, id=1094, 292.2117pt x 163.5711pt>
+<obrazky/PBI/timeSFF.png, id=1095, 292.2117pt x 163.5711pt>
 File: obrazky/PBI/timeSFF.png Graphic file (type png)
 <use obrazky/PBI/timeSFF.png>
 Package pdftex.def Info: obrazky/PBI/timeSFF.png  used on input line 135.
 (pdftex.def)             Requested size: 426.79134pt x 238.92163pt.
-<obrazky/PBI/productdetail.png, id=1095, 315.0972pt x 175.857pt>
+<obrazky/PBI/productdetail.png, id=1096, 315.0972pt x 175.857pt>
 File: obrazky/PBI/productdetail.png Graphic file (type png)
 <use obrazky/PBI/productdetail.png>
 Package pdftex.def Info: obrazky/PBI/productdetail.png  used on input line 149.
@@ -1940,7 +1940,7 @@ Overfull \hbox (1.03906pt too wide) in paragraph at lines 162--165
 \OT1/lmr/m/n/12 ^^Tcerstv^^Se a []Cerstv^^Se jsou v^^Syrazn^^Te v^^S^^Pce za-stou-peny ne^^Tz zbyl^^Se ka-te-go-rie. Na t^^Sem^^Tze obr^^Sazku
  []
 
-<obrazky/PBI/vys_L1.png, id=1103, 617.30624pt x 208.52907pt>
+<obrazky/PBI/vys_L1.png, id=1104, 617.30624pt x 208.52907pt>
 File: obrazky/PBI/vys_L1.png Graphic file (type png)
 <use obrazky/PBI/vys_L1.png>
 Package pdftex.def Info: obrazky/PBI/vys_L1.png  used on input line 169.
@@ -1948,7 +1948,7 @@ Package pdftex.def Info: obrazky/PBI/vys_L1.png  used on input line 169.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<obrazky/PBI/l3l4.png, id=1104, 168.63pt x 61.4295pt>
+<obrazky/PBI/l3l4.png, id=1105, 168.63pt x 61.4295pt>
 File: obrazky/PBI/l3l4.png Graphic file (type png)
 <use obrazky/PBI/l3l4.png>
 Package pdftex.def Info: obrazky/PBI/l3l4.png  used on input line 177.
@@ -1969,7 +1969,7 @@ Overfull \hbox (4.2173pt too wide) in paragraph at lines 208--223
  [][] 
  []
 
-<obrazky/PBI/location.png, id=1120, 270.7716pt x 92.7465pt>
+<obrazky/PBI/location.png, id=1121, 270.7716pt x 92.7465pt>
 File: obrazky/PBI/location.png Graphic file (type png)
 <use obrazky/PBI/location.png>
 Package pdftex.def Info: obrazky/PBI/location.png  used on input line 229.
@@ -1977,18 +1977,18 @@ Package pdftex.def Info: obrazky/PBI/location.png  used on input line 229.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<obrazky/PBI/vsLoc.png, id=1121, 99.2508pt x 114.9093pt>
+<obrazky/PBI/vsLoc.png, id=1122, 99.2508pt x 114.9093pt>
 File: obrazky/PBI/vsLoc.png Graphic file (type png)
 <use obrazky/PBI/vsLoc.png>
 Package pdftex.def Info: obrazky/PBI/vsLoc.png  used on input line 241.
 (pdftex.def)             Requested size: 213.39566pt x 247.06244pt.
-<obrazky/PBI/normTypes.png, id=1122, 101.6598pt x 54.4434pt>
+<obrazky/PBI/normTypes.png, id=1123, 101.6598pt x 54.4434pt>
 File: obrazky/PBI/normTypes.png Graphic file (type png)
 <use obrazky/PBI/normTypes.png>
 Package pdftex.def Info: obrazky/PBI/normTypes.png  used on input line 248.
 (pdftex.def)             Requested size: 213.39566pt x 114.2863pt.
 [66]
-<obrazky/PBI/topwhs.png, id=1129, 223.7961pt x 57.3342pt>
+<obrazky/PBI/topwhs.png, id=1130, 223.7961pt x 57.3342pt>
 File: obrazky/PBI/topwhs.png Graphic file (type png)
 <use obrazky/PBI/topwhs.png>
 Package pdftex.def Info: obrazky/PBI/topwhs.png  used on input line 259.
@@ -1998,7 +1998,7 @@ Package pdftex.def Info: obrazky/PBI/topwhs.png  used on input line 259.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [67 </home/anna/Documents/skola/DP/text/obrazky/PBI/location.png> </home/anna/Documents/skola/DP/text/obrazky/PBI/vsLoc.png> </home/anna/Documents/skola/DP/text/obrazky/PBI/normTypes.png>]
-<obrazky/PBI/porovnaniprodejen.png, id=1140, 306.4248pt x 165.2574pt>
+<obrazky/PBI/porovnaniprodejen.png, id=1141, 306.4248pt x 165.2574pt>
 File: obrazky/PBI/porovnaniprodejen.png Graphic file (type png)
 <use obrazky/PBI/porovnaniprodejen.png>
 Package pdftex.def Info: obrazky/PBI/porovnaniprodejen.png  used on input line 276.
@@ -2007,7 +2007,7 @@ Package pdftex.def Info: obrazky/PBI/porovnaniprodejen.png  used on input line 2
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<obrazky/PBI/citysize.png, id=1141, 158.2713pt x 65.043pt>
+<obrazky/PBI/citysize.png, id=1142, 158.2713pt x 65.043pt>
 File: obrazky/PBI/citysize.png Graphic file (type png)
 <use obrazky/PBI/citysize.png>
 Package pdftex.def Info: obrazky/PBI/citysize.png  used on input line 286.
@@ -2015,7 +2015,7 @@ Package pdftex.def Info: obrazky/PBI/citysize.png  used on input line 286.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<obrazky/PBI/time.png, id=1142, 104.7915pt x 60.225pt>
+<obrazky/PBI/time.png, id=1143, 104.7915pt x 60.225pt>
 File: obrazky/PBI/time.png Graphic file (type png)
 <use obrazky/PBI/time.png>
 Package pdftex.def Info: obrazky/PBI/time.png  used on input line 296.
@@ -2028,12 +2028,12 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: Text page 69 contains only floats.
 
 [69 </home/anna/Documents/skola/DP/text/obrazky/PBI/porovnaniprodejen.png> </home/anna/Documents/skola/DP/text/obrazky/PBI/citysize.png> </home/anna/Documents/skola/DP/text/obrazky/PBI/time.png>]
-<obrazky/PBI/promotype.png, id=1160, 157.7895pt x 47.6982pt>
+<obrazky/PBI/promotype.png, id=1161, 157.7895pt x 47.6982pt>
 File: obrazky/PBI/promotype.png Graphic file (type png)
 <use obrazky/PBI/promotype.png>
 Package pdftex.def Info: obrazky/PBI/promotype.png  used on input line 306.
 (pdftex.def)             Requested size: 341.43436pt x 103.21721pt.
-<obrazky/PBI/l3pprductshare.png, id=1161, 157.3077pt x 96.1191pt>
+<obrazky/PBI/l3pprductshare.png, id=1162, 157.3077pt x 96.1191pt>
 File: obrazky/PBI/l3pprductshare.png Graphic file (type png)
 <use obrazky/PBI/l3pprductshare.png>
 Package pdftex.def Info: obrazky/PBI/l3pprductshare.png  used on input line 316.
@@ -2048,7 +2048,7 @@ Package hyperref Warning: Composite letter `\textasciicaron+c'
 [72
 
 ]
-<obrazky/grafy/matice_korelace_typy_DP_colored.pdf, id=1178, 363.27718pt x 221.8689pt>
+<obrazky/grafy/matice_korelace_typy_DP_colored.pdf, id=1179, 363.27718pt x 221.8689pt>
 File: obrazky/grafy/matice_korelace_typy_DP_colored.pdf Graphic file (type pdf)
 <use obrazky/grafy/matice_korelace_typy_DP_colored.pdf>
 Package pdftex.def Info: obrazky/grafy/matice_korelace_typy_DP_colored.pdf  used on input line 50.
@@ -2060,7 +2060,7 @@ Package hyperref Warning: Composite letter `\textasciicaron+e'
 (hyperref)                removing `\textasciicaron' on input line 122.
 
 [75]
-<obrazky/strukturaslozky.pdf, id=1207, 125.5089pt x 152.4897pt>
+<obrazky/strukturaslozky.pdf, id=1208, 125.5089pt x 152.4897pt>
 File: obrazky/strukturaslozky.pdf Graphic file (type pdf)
 <use obrazky/strukturaslozky.pdf>
 Package pdftex.def Info: obrazky/strukturaslozky.pdf  used on input line 143.
@@ -2117,12 +2117,12 @@ Overfull \hbox (0.52849pt too wide) in paragraph at lines 373--374
  []
 
 [84]
-<obrazky/kor_maso.pdf, id=1270, 426.63388pt x 221.8689pt>
+<obrazky/kor_maso.pdf, id=1271, 426.63388pt x 221.8689pt>
 File: obrazky/kor_maso.pdf Graphic file (type pdf)
 <use obrazky/kor_maso.pdf>
 Package pdftex.def Info: obrazky/kor_maso.pdf  used on input line 383.
 (pdftex.def)             Requested size: 426.79134pt x 221.95297pt.
-<obrazky/kor_pec.pdf, id=1271, 423.50218pt x 221.8689pt>
+<obrazky/kor_pec.pdf, id=1272, 423.50218pt x 221.8689pt>
 File: obrazky/kor_pec.pdf Graphic file (type pdf)
 <use obrazky/kor_pec.pdf>
 Package pdftex.def Info: obrazky/kor_pec.pdf  used on input line 391.
@@ -2131,7 +2131,7 @@ Package pdftex.def Info: obrazky/kor_pec.pdf  used on input line 391.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<obrazky/kor_zel.pdf, id=1272, 423.50218pt x 221.8689pt>
+<obrazky/kor_zel.pdf, id=1273, 423.50218pt x 221.8689pt>
 File: obrazky/kor_zel.pdf Graphic file (type pdf)
 <use obrazky/kor_zel.pdf>
 Package pdftex.def Info: obrazky/kor_zel.pdf  used on input line 399.
@@ -2139,7 +2139,7 @@ Package pdftex.def Info: obrazky/kor_zel.pdf  used on input line 399.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<obrazky/grafy/categorization_charts/categorization_charts_L4_PROCMEAT.png, id=1273, 462.528pt x 346.896pt>
+<obrazky/grafy/categorization_charts/categorization_charts_L4_PROCMEAT.png, id=1274, 462.528pt x 346.896pt>
 File: obrazky/grafy/categorization_charts/categorization_charts_L4_PROCMEAT.png Graphic file (type png)
 <use obrazky/grafy/categorization_charts/categorization_charts_L4_PROCMEAT.png>
 Package pdftex.def Info: obrazky/grafy/categorization_charts/categorization_charts_L4_PROCMEAT.png  used on input line 439.
@@ -2148,7 +2148,7 @@ Package pdftex.def Info: obrazky/grafy/categorization_charts/categorization_char
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [85 </home/anna/Documents/skola/DP/text/obrazky/kor_maso.pdf>]
-<obrazky/zntb/vysledekMASO.png, id=1294, 469.755pt x 481.8pt>
+<obrazky/zntb/vysledekMASO.png, id=1295, 469.755pt x 481.8pt>
 File: obrazky/zntb/vysledekMASO.png Graphic file (type png)
 <use obrazky/zntb/vysledekMASO.png>
 Package pdftex.def Info: obrazky/zntb/vysledekMASO.png  used on input line 453.
@@ -2163,12 +2163,12 @@ LaTeX Warning: Text page 87 contains only floats.
 
 [87 </home/anna/Documents/skola/DP/text/obrazky/grafy/categorization_charts/categorization_charts_L4_PROCMEAT.png> </home/anna/Documents/skola/DP/text/obrazky/zntb/vysledekMASO.png>]) (/home/anna/Documents/skola/DP/text/kapitoly/cleverminer.tex [88]
 Kapitola 7.
-<obrazky/grafy/histogram/newplot(2).png, id=1343, 615.29875pt x 526.96875pt>
+<obrazky/grafy/histogram/newplot(2).png, id=1344, 615.29875pt x 526.96875pt>
 File: obrazky/grafy/histogram/newplot(2).png Graphic file (type png)
 <use obrazky/grafy/histogram/newplot(2).png>
 Package pdftex.def Info: obrazky/grafy/histogram/newplot(2).png  used on input line 17.
 (pdftex.def)             Requested size: 234.73653pt x 201.03821pt.
-<obrazky/grafy/histogram/newplot(1).png, id=1344, 615.29875pt x 526.96875pt>
+<obrazky/grafy/histogram/newplot(1).png, id=1345, 615.29875pt x 526.96875pt>
 File: obrazky/grafy/histogram/newplot(1).png Graphic file (type png)
 <use obrazky/grafy/histogram/newplot(1).png>
 Package pdftex.def Info: obrazky/grafy/histogram/newplot(1).png  used on input line 26.
@@ -2181,12 +2181,12 @@ Overfull \hbox (21.79312pt too wide) in paragraph at lines 14--32
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<obrazky/grafy/histogram/newplot.png, id=1345, 615.29875pt x 526.96875pt>
+<obrazky/grafy/histogram/newplot.png, id=1346, 615.29875pt x 526.96875pt>
 File: obrazky/grafy/histogram/newplot.png Graphic file (type png)
 <use obrazky/grafy/histogram/newplot.png>
 Package pdftex.def Info: obrazky/grafy/histogram/newplot.png  used on input line 40.
 (pdftex.def)             Requested size: 234.73653pt x 201.03821pt.
-<obrazky/grafy/histogram/newplot(3).png, id=1346, 615.29875pt x 526.96875pt>
+<obrazky/grafy/histogram/newplot(3).png, id=1347, 615.29875pt x 526.96875pt>
 File: obrazky/grafy/histogram/newplot(3).png Graphic file (type png)
 <use obrazky/grafy/histogram/newplot(3).png>
 Package pdftex.def Info: obrazky/grafy/histogram/newplot(3).png  used on input line 49.
@@ -2199,7 +2199,7 @@ Overfull \hbox (21.79312pt too wide) in paragraph at lines 36--55
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<obrazky/grafy/histogram/newplot(4).png, id=1347, 580.1675pt x 437.635pt>
+<obrazky/grafy/histogram/newplot(4).png, id=1348, 580.1675pt x 437.635pt>
 File: obrazky/grafy/histogram/newplot(4).png Graphic file (type png)
 <use obrazky/grafy/histogram/newplot(4).png>
 Package pdftex.def Info: obrazky/grafy/histogram/newplot(4).png  used on input line 60.
@@ -2261,7 +2261,7 @@ Overfull \hbox (22.62723pt too wide) in paragraph at lines 270--275
 
 Package hyperref Warning: Composite letter `\textasciicaron+e'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 293.
+(hyperref)                removing `\textasciicaron' on input line 294.
 
 (/home/anna/Documents/skola/DP/text/kapitoly/zaver.tex
 Overfull \hbox (17.29578pt too wide) in paragraph at lines 1--2
@@ -2285,7 +2285,49 @@ Overfull \hbox (3.97304pt too wide) in paragraph at lines 19--21
 []\OT1/lmr/m/n/12 V n^^Savaznosti na tuto pr^^Saci lze otes-tov^^Sano cel^^Se port-fo-lio vy-bran^^Se spole^^Tcnosti. Navr^^Tzen^^Sy
  []
 
-) [98] (/home/anna/Documents/skola/DP/text/tex/bibliografie1.tex
+) [98] (/home/anna/Documents/skola/DP/text/DP_Gruberova.lof
+Overfull \hbox (15.00342pt too wide) in paragraph at lines 12--12
+ [][] [][]\OT1/lmr/m/n/12 Uk^^Sazka vizu^^Sal^^Wu jedno^^Tr^^Sadkov^^Sa karta (vlevo) a v^^S^^Pce^^Tr^^Sadkov^^Sa karta (vpravo). 
+ []
+
+[99
+
+]
+Overfull \hbox (12.19835pt too wide) in paragraph at lines 35--35
+ [][] [][]\OT1/lmr/m/n/12 Uk^^Sazka in-ter-akce grafu z^^Saznam^^Wu shrinku pro p^^Tr^^S^^Pstupy k r^^Wuzn^^Sym ^^Surovn^^S^^Pm 
+ []
+
+[100]
+Overfull \hbox (5.56432pt too wide) in paragraph at lines 53--53
+ [][] [][]\OT1/lmr/m/n/12 Power BI re-port -- Ztra-cen^^Se n^^Saklady (hod-nota shrinku) vs Pod^^S^^Pl shrinku 
+ []
+
+
+Overfull \hbox (3.15338pt too wide) in paragraph at lines 57--57
+ [][] [][]\OT1/lmr/m/n/12 Po^^Tcet pro-dukt^^Wu z ka-te-go-rie Masn^^Se v^^Syrobky -- pul-tov^^Sy pro-dej rozt^^Tr^^S^^Pd^^Ten^^Se 
+ []
+
+)
+\tf@lof=\write6
+\openout6 = `DP_Gruberova.lof'.
+
+ [101] (/home/anna/Documents/skola/DP/text/DP_Gruberova.lot
+Overfull \hbox (12.59254pt too wide) in paragraph at lines 16--16
+ [][] [][]\OT1/lmr/m/n/12 Zastoupen^^S^^P vy-bran^^Sych shrink^^Wu ve zkou-man^^Sych da-tech (ka-te-go-rie []Cerstv^^Se 
+ []
+
+
+Overfull \hbox (8.09015pt too wide) in paragraph at lines 17--17
+ \OT1/lmr/m/n/12 za-stou-pen^^S^^P za-zna-me-nan^^Se hod-noty shrinku na v^^Tsech evi-do-van^^Sych shrinc^^S^^Pch.[] [][]  
+ []
+
+)
+\tf@lot=\write7
+\openout7 = `DP_Gruberova.lot'.
+
+ [102
+
+] (/home/anna/Documents/skola/DP/text/tex/bibliografie1.tex
 Underfull \hbox (badness 10000) in paragraph at lines 23--24
 []\OT1/lmr/m/n/12 What is the di-f-fe-rence be-tween Lo-gis-tics and Sup-ply Chain Ma-
  []
@@ -2315,7 +2357,7 @@ Underfull \hbox (badness 6893) in paragraph at lines 35--36
 \OT1/lmr/m/n/12 Di-plo-mov^^Sa pr^^Sace. Olo-mouc: UPOL. 2013 [cit. 2023-12-18]. Do-stupn^^Se
  []
 
-[99
+[103
 
 
 ]
@@ -2333,7 +2375,7 @@ Underfull \hbox (badness 3679) in paragraph at lines 52--53
 \OT1/lmr/m/n/12 [cit. 2023-03-05]. Do-stupn^^Se z: []$\OT1/lmtt/m/n/12 https : / / personal . utdallas . edu / []Herve /
  []
 
-[100]
+[104]
 Underfull \hbox (badness 5288) in paragraph at lines 92--93
 []\OT1/lmr/m/n/12 BAIJAYANTA, Roy., \OT1/lmr/m/it/12 All about Ca-te-go-ri-cal Va-ri-a-ble En-co-ding  \OT1/lmr/m/n/12 [on-
  []
@@ -2408,52 +2450,52 @@ Underfull \hbox (badness 1924) in paragraph at lines 135--136
 \OT1/lmr/m/n/12 2021. [cit. 2023-12-28]. Do-stupn^^Se z: []$\OT1/lmtt/m/n/12 https : / / www . enjoysharepoint . com /
  []
 
-[101]) [102]
+[105]) [106]
 
 Package hyperref Warning: Composite letter `\textasciicaron+r'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 309.
+(hyperref)                removing `\textasciicaron' on input line 316.
 
 P\v {r}\'{\i }loha A.
 
 Package hyperref Warning: Composite letter `\textasciicaron+r'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 315.
+(hyperref)                removing `\textasciicaron' on input line 322.
 
 
 Package hyperref Warning: Composite letter `\textring+u'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textring' on input line 315.
+(hyperref)                removing `\textring' on input line 322.
 
-[103
+[107
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 325.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 325.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 332.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 332.
  (/home/anna/Documents/skola/DP/text/DP_Gruberova.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 325.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 325.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 332.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 332.
 Package rerunfilecheck Info: File `DP_Gruberova.out' has not changed.
-(rerunfilecheck)             Checksum: 91D92390BDC64C67B4387294C9A59073;3062.
+(rerunfilecheck)             Checksum: 1357E139F158620265B16436A1CE73BA;3062.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 325.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 332.
  ) 
 Here is how much of TeX's memory you used:
- 32853 strings out of 494848
- 609132 string characters out of 6178431
- 998655 words of memory out of 5000000
- 35111 multiletter control sequences out of 15000+600000
+ 32867 strings out of 494848
+ 609427 string characters out of 6178431
+ 998646 words of memory out of 5000000
+ 35113 multiletter control sequences out of 15000+600000
  621062 words of font info for 102 fonts, out of 8000000 for 9000
  46 hyphenation exceptions out of 8191
  62i,20n,78p,10458b,1415s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmmib10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on /home/anna/Documents/skola/DP/text/DP_Gruberova.pdf (103 pages, 4783756 bytes).
+Output written on /home/anna/Documents/skola/DP/text/DP_Gruberova.pdf (107 pages, 4794482 bytes).
 PDF statistics:
- 1700 PDF objects out of 1728 (max. 8388607)
- 1288 compressed objects within 13 object streams
- 445 named destinations out of 1000 (max. 500000)
+ 1835 PDF objects out of 2073 (max. 8388607)
+ 1417 compressed objects within 15 object streams
+ 451 named destinations out of 1000 (max. 500000)
  711 words of extra memory for PDF output out of 10000 (max. 10000000)
 

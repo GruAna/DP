@@ -632,6 +632,12 @@ INPUT /home/anna/Documents/skola/DP/text/obrazky/grafy/histogram/newplot(4).png
 INPUT /home/anna/Documents/skola/DP/text/obrazky/grafy/histogram/newplot(4).png
 INPUT /home/anna/Documents/skola/DP/text/kapitoly/zaver.tex
 INPUT /home/anna/Documents/skola/DP/text/kapitoly/zaver.tex
+INPUT /home/anna/Documents/skola/DP/text/DP_Gruberova.lof
+INPUT /home/anna/Documents/skola/DP/text/DP_Gruberova.lof
+OUTPUT /home/anna/Documents/skola/DP/text/DP_Gruberova.lof
+INPUT /home/anna/Documents/skola/DP/text/DP_Gruberova.lot
+INPUT /home/anna/Documents/skola/DP/text/DP_Gruberova.lot
+OUTPUT /home/anna/Documents/skola/DP/text/DP_Gruberova.lot
 INPUT /home/anna/Documents/skola/DP/text/tex/bibliografie1.tex
 INPUT /home/anna/Documents/skola/DP/text/tex/bibliografie1.tex
 INPUT /home/anna/Documents/skola/DP/text/DP_Gruberova.aux
