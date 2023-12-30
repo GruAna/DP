@@ -17,7 +17,7 @@ Pro účely této analýzy bylo potřeba získat z~ databáze tabulku týkajíc�
 % úrovně 4, neboť nižší kategorie ve většině případů produkty již dále nedělí, ale pouze specifikují popis kategorie na   
 
 \section{Postup}
-\label{sec:korpostup}
+\label{sec:kor:postup}
 V rámci analýzy se porovnávají pouze záznamy produktů, které se vyskytují ve stejné kategorii. Jedno pozorování je na agregované na produkt, prodejnu a den záznamu. Základní hypotéza je, že shrink produktu může být ovlivněn promoakcemi jiných produktů v~kategorii.
 
 Hodnotu shrinku jsem porovnávala s~následujícími ukazateli. 
@@ -81,7 +81,7 @@ Pro výpočet korelačního koeficientu je ještě třeba ověřit předpoklady.
 
 \section{Implementace}
 
-V~této části je uveden přesný postup pro získání kategorizace produktů. Kód je napsaný v~jazyce Python. Součástí kódu je výběr kategorií, které jsou zkoumány, propojení dat shrinků, prodejů a promoakcí, výpočet korelace a ověření předpokladů, statistické testování a rozřazení produktů.
+V~této části je uveden přesný postup pro získání kategorizace produktů. Kód je napsaný v~jazyce Python verze 3.9. Součástí kódu je výběr kategorií, které jsou zkoumány, propojení dat shrinků, prodejů a promoakcí, výpočet korelace a ověření předpokladů, statistické testování a rozřazení produktů.
 
 % UML diagram pro analýzu.
 
@@ -147,7 +147,9 @@ Kód pro korelační analýzu je umístěn ve složce \texttt{shrink\_categoriza
 
 Funkce jsou rozčleněny do modulů podle toho, na jaký výpočet jsou zaměřené. Každá funkce má je zdokumentovaná pomocí docstring obsaženého ve své definici. Dokumentace funkce se skládá ze stručného popisu, co funkce dělá, jaké má vstupní parametry a jaký je jejich význam a co funkce vrací. Funkce jsou otestované pomocí unit testů.
 
-Pro práci s~tabulkovými daty, které jsou hlavním vstupem, jsem použila balíček \emph{pandas} jazyka Python.
+Pro práci s~tabulkovými daty, které jsou hlavním vstupem, jsem použila balíček \emph{pandas} jazyka Python. 
+Pro otestování důležitých funkcí jsem použila knihovnu \emph{pytest}. 
+
 
 % \emph{V~závorce je nástin toho, co budu popisovat (TBD)}
 
@@ -319,11 +321,14 @@ Funkce pak vrátí DataFrame s~takto označenými a kategorizovanými produkty.
 \subsubsection*{Pomocné funkce}
 
 Funkce \texttt{create\_folder} vytvoří složku se zadaným jménem v~aktuální cestě, pouze pokud již taková složka neexistuje. Další pomocná funkce je \texttt{format\_date}, která využívá funkci z~knihovny \emph{pandas} \texttt{to\_datetime}. 
-Pro základní vizualizaci jsem vytvořila funkci, která pomocí knihovny \emph{matplotlib} vytváří bodový graf dvou proměn-\\ných. Graf je buď uložen nebo zobrazený při spuštění funkce. Funkci lze předat DataFrame a názvy dvou sloupců, které reprezentují vstupy pro osy $x$ a $y$ grafu. Další vstupy jsou názvy os a grafu, případně název souboru, pokud uživatel graf uložit. 
+Pro základní vizualizaci korelace mezi sloupci jsem vytvořila funkci, která pomocí knihovny \emph{matplotlib} vytváří bodový graf dvou proměn-\\ných. Graf je buď uložen nebo zobrazený při spuštění funkce. Funkci lze předat DataFrame a názvy dvou sloupců, které reprezentují vstupy pro osy $x$ a $y$ grafu. Další vstupy jsou názvy os a grafu, případně název souboru, pokud uživatel graf uložit.
 
-\textbf{Testování}
+Pro vizualizaci výsledků byla implementována funkce \texttt{create\_waffle\_chart}, pomocí knihovny \emph{plotly}. Tato knihovna umožňuje vytvářet interaktivní grafy pro pro-\\ středí Jupyter Notebook. Výsledky jsou zobrazené pomocí tzv. vaflového grafu. Jednotlivé produkty jsou zobrazeny jako buňky v~mřížce. Jsou barevně odlišené podle   typu kategorie, do které byl produkt klasifikován. Výhodou tohoto typu grafu je, že na první pohled lze vidět relativní četnost jednotlivých kategorií. Při najetí na pole mřížky se zobrazí tooltip (při zobrazení grafu v~Jupyter Notebooku, ve kterém je vytvoření grafu spouštěno) s infromacemi o produktu. Vedle grafu je zobrazena legenda, která kromě názvu příslušné kategorie zobrazuje kolik procent tato kategorie v~ dané skupině produkt tvoří. Ukázka se nachází v~ sekci s~výsledky na obr. \ref*{obr:kor:vyslMASO}.
 
-Pro testování funkcí jsem použila knihovnu \emph{pytest} jazyka Python. Testy lze spustit příkazem \texttt{python -m pytest tests} v~kořenovém adresáři projektu.
+% \textbf{Testování}
+
+% Pro testování důležitých funkcí jsem použila knihovnu \emph{pytest} jazyka Python. 
+% Testy lze spustit příkazem \texttt{python -m pytest tests} v~kořenovém adresáři projektu.
 
 
 \section{Výsledky}
@@ -428,17 +433,28 @@ Z~uvedených počtů produktů u jednotlivých kategoriích pro různé ukazatel
 
 Shrink byl zaznamenaný u 111 produktů v~této kategorii úrovně 4. 88 produktů bylo klasifikováno jako kategorie N, deset jako kategorie X, dva jako kategorie O, jeden jako V. U zbylých deseti produktů nebyl koeficient korelace statisticky významný, a proto nejde u těchto produktů vyslovit hypotézu pro jejich zařazení. Korelace mezi hodnotou shrinku a promočními tržbami je na obr. \ref*{obr:corr:maso}.
 
+\begin{figure}[h!]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=.8\textwidth]{obrazky/grafy/categorization_charts/categorization_charts_L4_PROCMEAT.png}
+    \caption{Závislost mezi tržbami produktu a tržbami ostatních produktů \\ v~kategorii během promoakce (Masné výrobky -- pultový prodej).}
+    \label{obr:corr:maso}
+\end{figure}
+
 Produkty, které patří do kategorie O: Velikonoční klobása a Velikonoční šunka - jedná se zcela jistě o sezónní výrobky. Produkt, který byl označen jako výprodejový jsou Párky (Kuřecí striptýzky). Šest produktů z~kategorie nemělo během sledovaného období žádné evidované prodeje, všechny byly klasifikovány jako kategorie X, tedy hodota koeficientu korelace neznamenala závislost. %{TODO: vyjmenovat i další produkty, které si způsobují samy, ale je to většina produktů a salámy, šunky, z~kategorie...} 
 
 Dále jsem zkoumala podkategorie Masných výrobků. Porovnávala jsem prodeje v~rámci kategorií na šesté úrovni produktové hierarchie. V~podkategroii Salámy s~krátkou dobou spotřeby se kategorizace potvrdila. Pro kategorii, do níž patří sezónní výrobky - Netučné masné výrobky, nově z~této podkategorie byl jako kategorie O označen i produkt Kladenská pečeně.
 
+Na obr. \ref*{obr:kor:vyslMASO} se nachází vizualizace získaných výsledků vygenerovaný pomocí Python knihovny \emph{plotly}. Při najetí na příslušné políčko (v~Jupyter Notebooku) se zobrazí údaje o produktu.
+
 \begin{figure}[h!]
     \centering
     \captionsetup{justification=centering}
-    \includegraphics[width=.8\textwidth]{obrazky/grafy/categorization_charts/categorization_charts_L4_PROC MEAT SERVICE.pdf}
-    \caption{Závislost mezi tržbami produktu a tržbami ostatních produktů v~kategorii během promoakce (Masné výrobky -- pultový prodej).}
-    \label{obr:corr:maso}
+    \includegraphics[width=.7\textwidth]{obrazky/zntb/vysledekMASO.png}
+    \caption{Vizualizace výsledků rozdělení přiřazených kategorií \\ pro kategorii produktů Masné výrobky -- pultový prodej.}
+    \label{obr:kor:vyslMASO}
 \end{figure}
+
 
 \textbf{Slané pečivo}
 

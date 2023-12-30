@@ -44,10 +44,10 @@
 \contentsline {subsection}{\numberline {6.2.2}Spu\IeC {\v s}t\IeC {\v e}n\IeC {\'\i } anal\IeC {\'y}zy}{75}{subsection.6.2.2}
 \contentsline {subsection}{\numberline {6.2.3}Popis funkc\IeC {\'\i } a struktura k\IeC {\'o}du}{76}{subsection.6.2.3}
 \contentsline {section}{\numberline {6.3}V\IeC {\'y}sledky}{83}{section.6.3}
-\contentsline {chapter}{\numberline {7}Anal\IeC {\'y}za pomoc\IeC {\'\i } metody 4ftMiner}{88}{chapter.7}
-\contentsline {section}{\numberline {7.1}Hypot\IeC {\'e}zy}{88}{section.7.1}
-\contentsline {section}{\numberline {7.2}Produkty nepopsan\IeC {\'e} korela\IeC {\v c}n\IeC {\'\i } anal\IeC {\'y}zou}{94}{section.7.2}
-\contentsline {chapter}{Z\IeC {\'a}v\IeC {\v e}r}{96}{chapter*.111}
-\contentsline {chapter}{Literatura}{98}{chapter*.111}
-\contentsline {chapter}{P\IeC {\v r}\IeC {\'\i }lohy}{102}{chapter*.112}
-\contentsline {chapter}{\numberline {A}Popis p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'y}ch soubor\IeC {\r u}}{102}{appendix.A}
+\contentsline {chapter}{\numberline {7}Anal\IeC {\'y}za pomoc\IeC {\'\i } metody 4ftMiner}{89}{chapter.7}
+\contentsline {section}{\numberline {7.1}Hypot\IeC {\'e}zy}{89}{section.7.1}
+\contentsline {section}{\numberline {7.2}Produkty nepopsan\IeC {\'e} korela\IeC {\v c}n\IeC {\'\i } anal\IeC {\'y}zou}{95}{section.7.2}
+\contentsline {chapter}{Z\IeC {\'a}v\IeC {\v e}r}{97}{chapter*.112}
+\contentsline {chapter}{Literatura}{99}{chapter*.112}
+\contentsline {chapter}{P\IeC {\v r}\IeC {\'\i }lohy}{103}{chapter*.113}
+\contentsline {chapter}{\numberline {A}Popis p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'y}ch soubor\IeC {\r u}}{103}{appendix.A}
