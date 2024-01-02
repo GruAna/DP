@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  2 JAN 2024 16:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  2 JAN 2024 19:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1035,52 +1035,86 @@ Overfull \hbox (55.43954pt too wide) in paragraph at lines 238--257
 ]
 Kapitola 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 10.
+(Font)              <5> on input line 12.
 [10
 
 ]
-Overfull \hbox (0.99144pt too wide) in paragraph at lines 23--24
+Overfull \hbox (5.42259pt too wide) in paragraph at lines 23--24
+\OT1/lmr/m/n/12 dodr^^Tzov^^San^^S^^P vz^^Sajemn^^Seho re-spektu mezi v^^Tsemi odd^^Telen^^S^^Pmi spole^^Tcnosti. T^^S^^Pm jsou my^^Tsleni
+ []
+
+
+Overfull \hbox (0.99144pt too wide) in paragraph at lines 25--26
 []\OT1/lmr/m/n/12 V TPS je pl^^Sytv^^San^^S^^P rozd^^Teleno do t^^Tr^^S^^P ka-te-gori^^S^^P -- Muda (pl^^Sytv^^San^^S^^P), Mura (ne-vyv^^Sa^^Tzenost)
  []
 
 [11]
-Overfull \hbox (9.30437pt too wide) in paragraph at lines 33--34
+Overfull \hbox (9.30437pt too wide) in paragraph at lines 35--36
 \OT1/lmr/m/n/12 trans-port nav^^S^^Pc m^^Wu^^Tze v^^Sest k po^^Tskozen^^S^^P pro-duktu. P^^Tr^^S^^Pkladem to-hoto typu pl^^Sytv^^San^^S^^P
  []
 
-
-Overfull \hbox (3.13338pt too wide) in paragraph at lines 45--46
+[12]
+Overfull \hbox (3.13338pt too wide) in paragraph at lines 47--48
 \OT1/lmr/m/n/12 skladu, kdy polo^^Tzky, ke kter^^Sym se nej^^Tcast^^Teji p^^Tristupuje, jsou v m^^Sen^^Te p^^Tr^^S^^Pstupn^^Sych
  []
 
-[12]
-Overfull \hbox (2.45068pt too wide) in paragraph at lines 65--66
+[13]
+Overfull \hbox (2.45068pt too wide) in paragraph at lines 67--68
 \OT1/lmr/m/n/12 toku. Lze iden-ti-fi-ko-vat i ta-kov^^Se zdroje pl^^Sytv^^San^^S^^P, kter^^Se ne-sou-vi-sej^^S^^P p^^Tr^^S^^Pmo s in-forma^^Tcn^^S^^Pm
  []
 
-[13]
 <obrazky/3M.jpg, id=368, 361.35pt x 307.74976pt>
 File: obrazky/3M.jpg Graphic file (type jpg)
 <use obrazky/3M.jpg>
-Package pdftex.def Info: obrazky/3M.jpg  used on input line 77.
+Package pdftex.def Info: obrazky/3M.jpg  used on input line 79.
 (pdftex.def)             Requested size: 384.10959pt x 327.13356pt.
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [14] [15 <./obrazky/3M.jpg>]
-Overfull \hbox (0.58249pt too wide) in paragraph at lines 108--109
+Overfull \hbox (0.58249pt too wide) in paragraph at lines 110--111
 \OT1/lmr/m/n/12 typu Muda, tedy ^^Tze se jedn^^Sa o zbyte^^Tcn^^Se pl^^Sytv^^San^^S^^P. Ne ale ka^^Tzd^^Se skla-dov^^San^^S^^P je zbyte^^Tcn^^Se,
  []
 
-[16] [17]) (kapitoly/metody.tex [18]
+[16] [17] (kapitoly/shrinky.tex [18]
+<obrazky/typyshirnku.png, id=415, 933.4875pt x 670.505pt>
+File: obrazky/typyshirnku.png Graphic file (type png)
+<use obrazky/typyshirnku.png>
+Package pdftex.def Info: obrazky/typyshirnku.png  used on input line 24.
+(pdftex.def)             Requested size: 426.79134pt x 306.55353pt.
+
+Overfull \hbox (7.10553pt too wide) in paragraph at lines 29--30
+[]\OT1/lmr/m/n/12 Vybran^^Sa spole^^Tcnost rozli^^Tsuje ve sv^^Sych da-tech t^^Tri ka-te-go-rie shrinku -- shrinky zp^^Wusoben^^Se
+ []
+
+[19] [20 <./obrazky/typyshirnku.png>]
+Overfull \hbox (9.77362pt too wide) in paragraph at lines 53--65
+[][] 
+ []
+
+
+Underfull \hbox (badness 3919) in paragraph at lines 73--74
+\OT1/lmr/m/n/12 nebo z^^Sakazn^^S^^Pkem (kdy nelze uplat-nit re-kla-maci na
+ []
+
+
+Underfull \hbox (badness 1132) in paragraph at lines 79--80
+[]|\OT1/lmr/m/n/12 Odpis po-tra-vin^^Sa^^Trsk^^Seho zbo^^Tz^^S^^P, kter^^Se bylo da-rov^^Sano do
+ []
+
+
+Overfull \hbox (9.77362pt too wide) in paragraph at lines 70--84
+[][] 
+ []
+
+)) (kapitoly/metody.tex [21] [22]
 Kapitola 2.
 
 Overfull \hbox (2.02165pt too wide) in paragraph at lines 16--17
 \OT1/lmr/m/n/12 Anal^^Syza hlavn^^S^^Pch kom-po-nent (an-g-licky \OT1/lmr/m/it/12 Prin-ci-pal com-po-nent ana-ly-sis\OT1/lmr/m/n/12 , d^^Sale jako PCA)
  []
 
-[19
+[23
 
 ]
 Overfull \hbox (10.85513pt too wide) in paragraph at lines 33--34
@@ -1092,23 +1126,23 @@ Overfull \hbox (9.72482pt too wide) in paragraph at lines 68--71
 \OT1/lmr/m/n/12 prvn^^S^^P hlavn^^S^^P kom-po-nent^^Te -- druh^^Sa hlavn^^S^^P kom-po-nenta nesm^^S^^P b^^Syt ko-re-lo-van^^Sa s p^^Tredchoz^^S^^P,
  []
 
-<obrazky/PCA.pdf, id=428, 231.74579pt x 167.6664pt>
+<obrazky/PCA.pdf, id=461, 231.74579pt x 167.6664pt>
 File: obrazky/PCA.pdf Graphic file (type pdf)
 <use obrazky/PCA.pdf>
 Package pdftex.def Info: obrazky/PCA.pdf  used on input line 74.
 (pdftex.def)             Requested size: 298.75262pt x 216.16772pt.
-[20] [21 <./obrazky/PCA.pdf>] [22] [23] [24] [25]
+[24] [25 <./obrazky/PCA.pdf>] [26] [27] [28] [29]
 Overfull \hbox (21.52158pt too wide) in paragraph at lines 256--257
 \OT1/lmr/m/n/12 line^^Sarn^^S^^P z^^Savislost vysv^^Tetluj^^S^^Pc^^S^^Pch prom^^Tenn^^Sych. Jeli $\OT1/lmr/bx/n/12 A$ \OT1/lmr/m/n/12 ma-tice dat (vysv^^Tetluj^^S^^Pch prom^^Tenn^^Sych
  []
 
-[26]
-<obrazky/GUHA/GUHA1.pdf, id=562, 209.8239pt x 62.15219pt>
+[30]
+<obrazky/GUHA/GUHA1.pdf, id=595, 209.8239pt x 62.15219pt>
 File: obrazky/GUHA/GUHA1.pdf Graphic file (type pdf)
 <use obrazky/GUHA/GUHA1.pdf>
 Package pdftex.def Info: obrazky/GUHA/GUHA1.pdf  used on input line 277.
 (pdftex.def)             Requested size: 213.39566pt x 63.21324pt.
-<obrazky/GUHA/GUHA2.pdf, id=564, 210.7875pt x 94.4328pt>
+<obrazky/GUHA/GUHA2.pdf, id=597, 210.7875pt x 94.4328pt>
 File: obrazky/GUHA/GUHA2.pdf Graphic file (type pdf)
 <use obrazky/GUHA/GUHA2.pdf>
 Package pdftex.def Info: obrazky/GUHA/GUHA2.pdf  used on input line 287.
@@ -1116,7 +1150,7 @@ Package pdftex.def Info: obrazky/GUHA/GUHA2.pdf  used on input line 287.
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 301.
  (C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [27 <./obrazky/GUHA/GUHA1.pdf> <./obrazky/GUHA/GUHA2.pdf>]
+) [31 <./obrazky/GUHA/GUHA1.pdf> <./obrazky/GUHA/GUHA2.pdf>]
 Overfull \hbox (3.38776pt too wide) in paragraph at lines 332--334
 \OT1/lmr/m/n/12 atri-but. $\OML/lmm/m/it/12 '$ \OT1/lmr/m/n/12 se naz^^Syv^^Sa \OT1/lmr/m/it/12 an-te-ce-dent \OT1/lmr/m/n/12 a $\OML/lmm/m/it/12 ^^^$ \OT1/lmr/m/it/12 suk-ce-dent[][][]\OT1/lmr/m/n/12 . Sym-bol $\OMS/lmsy/m/n/12 ^^Y$ \OT1/lmr/m/n/12 od-pov^^S^^Pd^^Sa \OT1/lmr/m/it/12 4ft-kvantifik^^Satoru\OT1/lmr/m/n/12 ,
  []
@@ -1128,15 +1162,15 @@ Overfull \hbox (6.75342pt too wide) in paragraph at lines 335--336
 
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 348.
-[28]
+[32]
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 383.
  (C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [29] (C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+) [33] (C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 434.
- [30] [31]
+ [34] [35]
 Overfull \hbox (8.48395pt too wide) in paragraph at lines 498--499
 \OT1/lmr/m/n/12 zm^^Tenit hdo-notu exis-tuj^^S^^Pc^^S^^Pch dat v ta-bulce. V sekci mo-del se nach^^Saz^^S^^P gra-fick^^Se zn^^Sazorn^^Ten^^S^^P
  []
@@ -1146,35 +1180,35 @@ Overfull \hbox (1.17906pt too wide) in paragraph at lines 498--499
 \OT1/lmr/m/n/12 da-tov^^Seho mo-delu v^^Tcetn^^Te vztah^^Wu mezi jed-not-lic^^Symi ta-bul-kami a je-jich sloupci. u^^Tzivatel
  []
 
-[32]
-<obrazky/PBIteorie/query-overview-with-data-connection.png, id=685, 923.70094pt x 450.9347pt>
+[36]
+<obrazky/PBIteorie/query-overview-with-data-connection.png, id=718, 923.70094pt x 450.9347pt>
 File: obrazky/PBIteorie/query-overview-with-data-connection.png Graphic file (type png)
 <use obrazky/PBIteorie/query-overview-with-data-connection.png>
 Package pdftex.def Info: obrazky/PBIteorie/query-overview-with-data-connection.png  used on input line 513.
 (pdftex.def)             Requested size: 426.79134pt x 208.35449pt.
- [33 <./obrazky/PBIteorie/query-overview-with-data-connection.png>]
-<obrazky/PBIteorie/sloupcove_grafy.png, id=696, 245.9589pt x 95.8782pt>
+ [37 <./obrazky/PBIteorie/query-overview-with-data-connection.png>]
+<obrazky/PBIteorie/sloupcove_grafy.png, id=729, 245.9589pt x 95.8782pt>
 File: obrazky/PBIteorie/sloupcove_grafy.png Graphic file (type png)
 <use obrazky/PBIteorie/sloupcove_grafy.png>
 Package pdftex.def Info: obrazky/PBIteorie/sloupcove_grafy.png  used on input line 537.
 (pdftex.def)             Requested size: 426.79134pt x 166.38193pt.
- [34 <./obrazky/PBIteorie/sloupcove_grafy.png>]
-<obrazky/PBIteorie/power-bi-compare-charts.png, id=708, 652.4375pt x 222.8325pt>
+ [38 <./obrazky/PBIteorie/sloupcove_grafy.png>]
+<obrazky/PBIteorie/power-bi-compare-charts.png, id=741, 652.4375pt x 222.8325pt>
 File: obrazky/PBIteorie/power-bi-compare-charts.png Graphic file (type png)
 <use obrazky/PBIteorie/power-bi-compare-charts.png>
 Package pdftex.def Info: obrazky/PBIteorie/power-bi-compare-charts.png  used on input line 548.
 (pdftex.def)             Requested size: 384.10959pt x 131.19122pt.
-<obrazky/PBIteorie/power-bi-treemap-category-tooltip.png, id=711, 297.11pt x 161.60374pt>
+<obrazky/PBIteorie/power-bi-treemap-category-tooltip.png, id=744, 297.11pt x 161.60374pt>
 File: obrazky/PBIteorie/power-bi-treemap-category-tooltip.png Graphic file (type png)
 <use obrazky/PBIteorie/power-bi-treemap-category-tooltip.png>
 Package pdftex.def Info: obrazky/PBIteorie/power-bi-treemap-category-tooltip.png  used on input line 565.
 (pdftex.def)             Requested size: 170.71393pt x 92.85732pt.
-<obrazky/PBIteorie/kartastoresSFF.png, id=714, 43.6029pt x 26.9808pt>
+<obrazky/PBIteorie/kartastoresSFF.png, id=747, 43.6029pt x 26.9808pt>
 File: obrazky/PBIteorie/kartastoresSFF.png Graphic file (type png)
 <use obrazky/PBIteorie/kartastoresSFF.png>
 Package pdftex.def Info: obrazky/PBIteorie/kartastoresSFF.png  used on input line 573.
 (pdftex.def)             Requested size: 85.35696pt x 52.819pt.
-<obrazky/PBIteorie/power-bi-expansion-state.png, id=715, 354.123pt x 184.2885pt>
+<obrazky/PBIteorie/power-bi-expansion-state.png, id=748, 354.123pt x 184.2885pt>
 File: obrazky/PBIteorie/power-bi-expansion-state.png Graphic file (type png)
 <use obrazky/PBIteorie/power-bi-expansion-state.png>
 Package pdftex.def Info: obrazky/PBIteorie/power-bi-expansion-state.png  used on input line 581.
@@ -1184,48 +1218,14 @@ Overfull \hbox (14.61534pt too wide) in paragraph at lines 562--585
  []$[]$|  $[]$|  $[]$ 
  []
 
-[35 <./obrazky/PBIteorie/power-bi-compare-charts.png> <./obrazky/PBIteorie/power-bi-treemap-category-tooltip.png> <./obrazky/PBIteorie/kartastoresSFF.png> <./obrazky/PBIteorie/power-bi-expansion-state.png>]
-<obrazky/PBIteorie/power-bi-drill-path.png, id=727, 434.37282pt x 93.34875pt>
+[39 <./obrazky/PBIteorie/power-bi-compare-charts.png> <./obrazky/PBIteorie/power-bi-treemap-category-tooltip.png> <./obrazky/PBIteorie/kartastoresSFF.png> <./obrazky/PBIteorie/power-bi-expansion-state.png>]
+<obrazky/PBIteorie/power-bi-drill-path.png, id=760, 434.37282pt x 93.34875pt>
 File: obrazky/PBIteorie/power-bi-drill-path.png Graphic file (type png)
 <use obrazky/PBIteorie/power-bi-drill-path.png>
 Package pdftex.def Info: obrazky/PBIteorie/power-bi-drill-path.png  used on input line 594.
 (pdftex.def)             Requested size: 384.10959pt x 82.55167pt.
-) (poznamky.tex) (kapitoly/shrinky.tex [36 <./obrazky/PBIteorie/power-bi-drill-path.png (PNG copy)>]
+) (poznamky.tex) (kapitoly/data.tex [40 <./obrazky/PBIteorie/power-bi-drill-path.png (PNG copy)>]
 Kapitola 3.
-<obrazky/typyshirnku.png, id=742, 933.4875pt x 670.505pt>
-File: obrazky/typyshirnku.png Graphic file (type png)
-<use obrazky/typyshirnku.png>
-Package pdftex.def Info: obrazky/typyshirnku.png  used on input line 23.
-(pdftex.def)             Requested size: 426.79134pt x 306.55353pt.
-[37
-
-]
-Overfull \hbox (7.10553pt too wide) in paragraph at lines 28--29
-[]\OT1/lmr/m/n/12 Vybran^^Sa spole^^Tcnost rozli^^Tsuje ve sv^^Sych da-tech t^^Tri ka-te-go-rie shrinku -- shrinky zp^^Wusoben^^Se
- []
-
-[38 <./obrazky/typyshirnku.png>]
-Overfull \hbox (9.77362pt too wide) in paragraph at lines 52--64
-[][] 
- []
-
-
-Underfull \hbox (badness 3919) in paragraph at lines 72--73
-\OT1/lmr/m/n/12 nebo z^^Sakazn^^S^^Pkem (kdy nelze uplat-nit re-kla-maci na
- []
-
-
-Underfull \hbox (badness 1132) in paragraph at lines 78--79
-[]|\OT1/lmr/m/n/12 Odpis po-tra-vin^^Sa^^Trsk^^Seho zbo^^Tz^^S^^P, kter^^Se bylo da-rov^^Sano do
- []
-
-
-Overfull \hbox (9.77362pt too wide) in paragraph at lines 69--83
-[][] 
- []
-
-) (kapitoly/data.tex [39] [40]
-Kapitola 4.
 [41
 
 ] [42]
@@ -1351,7 +1351,7 @@ Package pdftex.def Info: obrazky/pripravadat/mca-prispevky.png  used on input li
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [54 <./obrazky/pripravadat/mca-roztyl_komponetn.png> <./obrazky/pripravadat/mca-kum_roztyl_komponetn.png>])) (kapitoly/vizualizace.tex [55 <./obrazky/pripravadat/mca-prispevky.png>]
-Kapitola 5.
+Kapitola 4.
 <obrazky/PBI/datmodel.png, id=1031, 840.13875pt x 584.1825pt>
 File: obrazky/PBI/datmodel.png Graphic file (type png)
 <use obrazky/PBI/datmodel.png>
@@ -1529,7 +1529,7 @@ File: obrazky/PBI/l3pprductshare.png Graphic file (type png)
 Package pdftex.def Info: obrazky/PBI/l3pprductshare.png  used on input line 316.
 (pdftex.def)             Requested size: 341.43436pt x 208.65836pt.
 ) [70 <./obrazky/PBI/promotype.png> <./obrazky/PBI/l3pprductshare.png>] (kapitoly/korelace.tex [71]
-Kapitola 6.
+Kapitola 5.
 [72
 
 ]
@@ -1645,7 +1645,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: Text page 87 contains only floats.
 
 [87 <./obrazky/grafy/categorization_charts/categorization_charts_L4_PROCMEAT.png> <./obrazky/zntb/vysledekMASO.png>]) (kapitoly/cleverminer.tex [88]
-Kapitola 7.
+Kapitola 6.
 <obrazky/grafy/histogram/newplot(2).png, id=1336, 615.29875pt x 526.96875pt>
 File: obrazky/grafy/histogram/newplot(2).png Graphic file (type png)
 <use obrazky/grafy/histogram/newplot(2).png>
@@ -1757,24 +1757,24 @@ Overfull \hbox (18.99352pt too wide) in paragraph at lines 19--21
  []
 
 ) [98] (DP_Gruberova.lof
-Overfull \hbox (15.00342pt too wide) in paragraph at lines 12--12
+Overfull \hbox (15.00342pt too wide) in paragraph at lines 13--13
  [][] [][]\OT1/lmr/m/n/12 Uk^^Sazka vizu^^Sal^^Wu jedno^^Tr^^Sadkov^^Sa karta (vlevo) a v^^S^^Pce^^Tr^^Sadkov^^Sa karta (vpravo). 
  []
 
 [99
 
 ]
-Overfull \hbox (12.19835pt too wide) in paragraph at lines 35--35
+Overfull \hbox (12.19835pt too wide) in paragraph at lines 34--34
  [][] [][]\OT1/lmr/m/n/12 Uk^^Sazka in-ter-akce grafu z^^Saznam^^Wu shrinku pro p^^Tr^^S^^Pstupy k r^^Wuzn^^Sym ^^Surovn^^S^^Pm 
  []
 
 [100]
-Overfull \hbox (5.56432pt too wide) in paragraph at lines 53--53
+Overfull \hbox (5.56432pt too wide) in paragraph at lines 52--52
  [][] [][]\OT1/lmr/m/n/12 Power BI re-port -- Ztra-cen^^Se n^^Saklady (hod-nota shrinku) vs Pod^^S^^Pl shrinku 
  []
 
 
-Overfull \hbox (3.15338pt too wide) in paragraph at lines 57--57
+Overfull \hbox (3.15338pt too wide) in paragraph at lines 56--56
  [][] [][]\OT1/lmr/m/n/12 Po^^Tcet pro-dukt^^Wu z ka-te-go-rie Masn^^Se v^^Syrobky -- pul-tov^^Sy pro-dej rozt^^Tr^^S^^Pd^^Ten^^Se 
  []
 
@@ -1783,12 +1783,12 @@ Overfull \hbox (3.15338pt too wide) in paragraph at lines 57--57
 \openout6 = `DP_Gruberova.lof'.
 
  [101] (DP_Gruberova.lot
-Overfull \hbox (12.59254pt too wide) in paragraph at lines 16--16
+Overfull \hbox (12.59254pt too wide) in paragraph at lines 15--15
  [][] [][]\OT1/lmr/m/n/12 Zastoupen^^S^^P vy-bran^^Sych shrink^^Wu ve zkou-man^^Sych da-tech (ka-te-go-rie []Cerstv^^Se 
  []
 
 
-Overfull \hbox (8.09015pt too wide) in paragraph at lines 17--17
+Overfull \hbox (8.09015pt too wide) in paragraph at lines 16--16
  \OT1/lmr/m/n/12 za-stou-pen^^S^^P za-zna-me-nan^^Se hod-noty shrinku na v^^Tsech evi-do-van^^Sych shrinc^^S^^Pch.[] [][]  
  []
 
@@ -1930,18 +1930,18 @@ P\v {r}\'{\i }loha A.
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `DP_Gruberova.out' has not changed.
-(rerunfilecheck)             Checksum: C8133E70DED42EE50BBFC0123DE98BA1;6591.
+(rerunfilecheck)             Checksum: 78D523BBE1C09EF3DEE0BF5E7BB74026;6659.
  ) 
 Here is how much of TeX's memory you used:
  30032 strings out of 475380
- 559278 string characters out of 2775356
- 1632974 words of memory out of 3000000
+ 559302 string characters out of 2775356
+ 1633039 words of memory out of 3000000
  50291 multiletter control sequences out of 15000+600000
  560424 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,19n,94p,2358b,2310s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}<C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmib10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on DP_Gruberova.pdf (107 pages, 5000407 bytes).
+Output written on DP_Gruberova.pdf (107 pages, 5000737 bytes).
 PDF statistics:
  1845 PDF objects out of 2073 (max. 8388607)
  451 named destinations out of 1000 (max. 500000)

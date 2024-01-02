@@ -80,7 +80,7 @@ Asociační pravidlo má tvar:
     \varphi_{\mbox{\,\footnotesize Den v~týdnu}} \land \varphi_{\,\mbox{\footnotesize Typ promoakce}} \Rightarrow \psi_{\mbox{\,\footnotesize Množství}}
 \end{equation}
 
-V ukázce kódu \ref*{code:cleverminerH1} jsou uvedené parametry pro spuštění metody. Konfidence byla zvolena 80~\%. Výsledky běhu jsou uvedené v~tabulce \ref*{tab:H1vysl}. Z~této tabulky lze vyčíst, že pro vybrané dny v~týdnu -- pondělí, úterý, středa, čtvrtek a neděle, tj. nikoli pro pátek a sobotu -- a pro produkty, které byly v~den záznamu týden po promoakci platí, že 80~\% těchto záznamů bylo v~množství do jednoho kusu. To znamená, že se jedná o produkty, které jsou vážené. Jejich přepočet na kusovou jednotku tedy může být menší než jeden celý kus. Podle dalšího zkoumání dat jsem zjistila, že se jedná především o kategorii \emph{Masné výrobky} ze třetí úrovně hierarchie.
+V ukázce kódu \ref*{code:cleverminerH1} jsou uvedené parametry pro spuštění metody. Konfidence byla zvolena 80~\%. Výsledky běhu jsou uvedené v~tabulce \ref*{tab:H1vysl}. Z~této tabulky lze vyčíst, že pro vybrané dny v~týdnu -- pondělí, úterý, středa, čtvrtek a neděle, tj. nikoli pro pátek a sobotu -- a pro produkty, které byly v~den záznamu týden po promoakci platí, že 80~\% těchto záznamů bylo v~množství do jednoho kusu. Podle dalšího zkoumání dat jsem zjistila, že se jedná především o kategorii \emph{Masné výrobky} ze třetí úrovně hierarchie.
 
 
 \begin{lstlisting}[language=Python, style=mystyle, label={code:cleverminerH1}, caption={Hypotéza č. 1, funkce \texttt{cleverminer}.}]
