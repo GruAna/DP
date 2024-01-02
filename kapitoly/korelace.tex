@@ -30,9 +30,10 @@ Hodnotu shrinku jsem porovnávala s~následujícími ukazateli.
     \item Součet tržeb všech ostatních produktů v~kategorii, které byly v~daný den v~promoakci nebo byly v~rozmezí jednoho týdne po promoakci.
 \end{itemize}
 
-Ke každému ukazateli, jsem ještě vytvořila analogický ukazatel, který uvažoval zpoždění shrinku. V~takovém ukazateli, se nebrala hodnota prodeje ze stejného dne, jako byl den záznamu shrinku, ale hodnota z~předchozího dne. Důvodem pro vytvoření takových ukazatelů byla hypotéza, že shrink se může projevit až další den po uskutečněných tržbách. Důvodem může být to, že 
+Ke každému ukazateli, jsem ještě vytvořila analogický ukazatel, který uvažoval zpoždění shrinku. V~takovém ukazateli, se nebrala hodnota prodeje ze stejného dne, jako byl den záznamu shrinku, ale hodnota z~předchozího dne. Důvodem pro vytvoření takových ukazatelů byla hypotéza, že shrink se může projevit až další den po uskutečněných tržbách. 
+%Důvodem může být to, že 
 
-Na základě korelační analýzy je možné roztřídit produkty v~kategorii do pěti skupin:
+Na základě korelační analýzy je možné roztřídit produkty v~kategorii do šesti skupin:
 \begin{itemize}
     \itemsep0em 
     \item[] \textbf{Kategorie P} - Produkty, které si samy způsobují shrink.
@@ -40,6 +41,7 @@ Na základě korelační analýzy je možné roztřídit produkty v~kategorii do
     \item[] \textbf{Kategorie X} - Produkty, jejichž shrink se nepodařilo vysvětlit pomocí korelační analýzy.
     \item[] \textbf{Kategorie V} - Produkty, které jsou úspěšné ve výprodejích. Produkt se hodně prodává a zároveň má malé shrinky.
     \item[] \textbf{Kategorie N} - Produkty, jejichž shrink je nezávislý na svých tržbách i tržbách ostatních produktů v~kategorii. Shrink zůstává v~podobném poměru, tj. pokud jsou tržby vyšší je i shrink vyšší, pokud jsou tržby nižší, je nižší i shrink.
+    \item[] \textbf{Kategorie F} - Produkty, u nichž nebyl koeficient korelace statisticky významný.
 \end{itemize}
 
 Na obrázku \ref*{obr:ctg:g:kategorizace1} je znázorněno rozdělení produktů vzhledem ke korelačnímu koeficientu. Kategorie jsou pro lepší orientaci na obrázku oddělené i barevně, zároveň s~popisem je u každé části i písmenné označení kategorie. 

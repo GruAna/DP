@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  2 JAN 2024 13:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  2 JAN 2024 16:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1533,65 +1533,69 @@ Kapitola 6.
 [72
 
 ]
+Overfull \hbox (8.0077pt too wide) in paragraph at lines 44--45
+[]\OT1/lmr/bx/n/12 Kategorie F \OT1/lmr/m/n/12 - Pro-dukty, u nich^^Tz ne-byl koe-fi-ci-ent ko-re-lace sta-tis-ticky v^^Syznamn^^Sy. 
+ []
+
 <obrazky/grafy/matice_korelace_typy_DP_colored.pdf, id=1172, 363.27718pt x 221.8689pt>
 File: obrazky/grafy/matice_korelace_typy_DP_colored.pdf Graphic file (type pdf)
 <use obrazky/grafy/matice_korelace_typy_DP_colored.pdf>
-Package pdftex.def Info: obrazky/grafy/matice_korelace_typy_DP_colored.pdf  used on input line 50.
+Package pdftex.def Info: obrazky/grafy/matice_korelace_typy_DP_colored.pdf  used on input line 52.
 (pdftex.def)             Requested size: 426.79134pt x 260.67566pt.
- [73] [74 <./obrazky/grafy/matice_korelace_typy_DP_colored.pdf>] [75]
+[73] [74 <./obrazky/grafy/matice_korelace_typy_DP_colored.pdf>] [75]
 <obrazky/strukturaslozky.pdf, id=1201, 125.5089pt x 152.4897pt>
 File: obrazky/strukturaslozky.pdf Graphic file (type pdf)
 <use obrazky/strukturaslozky.pdf>
-Package pdftex.def Info: obrazky/strukturaslozky.pdf  used on input line 143.
+Package pdftex.def Info: obrazky/strukturaslozky.pdf  used on input line 145.
 (pdftex.def)             Requested size: 128.0387pt x 155.57233pt.
  [76 <./obrazky/strukturaslozky.pdf>] [77]
-Underfull \hbox (badness 10000) in paragraph at lines 234--234
+Underfull \hbox (badness 10000) in paragraph at lines 236--236
 []|\OT1/lmr/m/n/12 Za^^Tc^^Satek
  []
 
 
-Overfull \hbox (6.7365pt too wide) in paragraph at lines 234--234
+Overfull \hbox (6.7365pt too wide) in paragraph at lines 236--236
 []|\OT1/lmr/m/n/12 Identifik^^Sator
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 245--245
+Underfull \hbox (badness 10000) in paragraph at lines 247--247
 []|\OT1/lmr/m/n/12 Datum
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 245--245
+Underfull \hbox (badness 10000) in paragraph at lines 247--247
 []|\OT1/lmr/m/n/12 Za^^Tc^^Satek
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 245--245
+Underfull \hbox (badness 10000) in paragraph at lines 247--247
 []\OT1/lmr/m/n/12 fik^^Sator
  []
 
 
-LaTeX Warning: Float too large for page by 42.00403pt on input line 258.
+LaTeX Warning: Float too large for page by 42.00403pt on input line 260.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--268
+Underfull \hbox (badness 10000) in paragraph at lines 270--270
 []|\OT1/lmr/m/n/12 Datum
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--268
+Underfull \hbox (badness 10000) in paragraph at lines 270--270
 []|\OT1/lmr/m/n/12 Za^^Tc^^Satek
  []
 
 
-LaTeX Warning: Reference `label' on page 78 undefined on input line 283.
+LaTeX Warning: Reference `label' on page 78 undefined on input line 285.
 
 [78] [79] [80] [81]
-Overfull \hbox (0.65588pt too wide) in paragraph at lines 313--314
+Overfull \hbox (0.65588pt too wide) in paragraph at lines 315--316
 \OT1/lmr/m/n/12 taFramu. Funkce \OT1/lmtt/m/n/12 categorize[]products \OT1/lmr/m/n/12 rozt^^Tr^^S^^Pd^^S^^P pro-dukty do p^^Teti ka-te-gori^^S^^P: \OT1/lmtt/m/n/12 itself,
  []
 
 [82] [83]
-Overfull \hbox (0.52849pt too wide) in paragraph at lines 373--374
+Overfull \hbox (0.52849pt too wide) in paragraph at lines 375--376
 \OT1/lmr/m/n/12 hodla jsem se tedy zv^^Sy^^Tsit hla-dinu v^^Syznamnosti na 10 %. Zv^^Sy^^Tsen^^S^^P hla-diny v^^Syznamnosti
  []
 
@@ -1599,12 +1603,12 @@ Overfull \hbox (0.52849pt too wide) in paragraph at lines 373--374
 <obrazky/kor_maso.pdf, id=1263, 426.63388pt x 221.8689pt>
 File: obrazky/kor_maso.pdf Graphic file (type pdf)
 <use obrazky/kor_maso.pdf>
-Package pdftex.def Info: obrazky/kor_maso.pdf  used on input line 383.
+Package pdftex.def Info: obrazky/kor_maso.pdf  used on input line 385.
 (pdftex.def)             Requested size: 426.79134pt x 221.95297pt.
 <obrazky/kor_pec.pdf, id=1264, 423.50218pt x 221.8689pt>
 File: obrazky/kor_pec.pdf Graphic file (type pdf)
 <use obrazky/kor_pec.pdf>
-Package pdftex.def Info: obrazky/kor_pec.pdf  used on input line 391.
+Package pdftex.def Info: obrazky/kor_pec.pdf  used on input line 393.
 (pdftex.def)             Requested size: 426.79134pt x 223.59152pt.
 
 
@@ -1613,7 +1617,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <obrazky/kor_zel.pdf, id=1265, 423.50218pt x 221.8689pt>
 File: obrazky/kor_zel.pdf Graphic file (type pdf)
 <use obrazky/kor_zel.pdf>
-Package pdftex.def Info: obrazky/kor_zel.pdf  used on input line 399.
+Package pdftex.def Info: obrazky/kor_zel.pdf  used on input line 401.
 (pdftex.def)             Requested size: 426.79134pt x 223.59152pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1621,7 +1625,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <obrazky/grafy/categorization_charts/categorization_charts_L4_PROCMEAT.png, id=1266, 462.528pt x 346.896pt>
 File: obrazky/grafy/categorization_charts/categorization_charts_L4_PROCMEAT.png Graphic file (type png)
 <use obrazky/grafy/categorization_charts/categorization_charts_L4_PROCMEAT.png>
-Package pdftex.def Info: obrazky/grafy/categorization_charts/categorization_charts_L4_PROCMEAT.png  used on input line 439.
+Package pdftex.def Info: obrazky/grafy/categorization_charts/categorization_charts_L4_PROCMEAT.png  used on input line 441.
 (pdftex.def)             Requested size: 341.43436pt x 256.09029pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1630,7 +1634,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <obrazky/zntb/vysledekMASO.png, id=1287, 469.755pt x 481.8pt>
 File: obrazky/zntb/vysledekMASO.png Graphic file (type png)
 <use obrazky/zntb/vysledekMASO.png>
-Package pdftex.def Info: obrazky/zntb/vysledekMASO.png  used on input line 453.
+Package pdftex.def Info: obrazky/zntb/vysledekMASO.png  used on input line 455.
 (pdftex.def)             Requested size: 298.75262pt x 306.4101pt.
 
 
@@ -1937,7 +1941,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  99i,19n,94p,2358b,2310s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}<C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmib10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on DP_Gruberova.pdf (107 pages, 5000370 bytes).
+Output written on DP_Gruberova.pdf (107 pages, 5000407 bytes).
 PDF statistics:
  1845 PDF objects out of 2073 (max. 8388607)
  451 named destinations out of 1000 (max. 500000)
