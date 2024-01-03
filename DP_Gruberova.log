@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  3 JAN 2024 10:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  3 JAN 2024 12:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1695,7 +1695,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: Text page 90 contains only floats.
 
-[90 <./obrazky/grafy/histogram/newplot(2).png> <./obrazky/grafy/histogram/newplot(1).png> <./obrazky/grafy/histogram/newplot.png> <./obrazky/grafy/histogram/newplot(3).png> <./obrazky/grafy/histogram/newplot(4).png>]
+[90 <./obrazky/grafy/histogram/newplot(2).png> <./obrazky/grafy/histogram/newplot(1).png> <./obrazky/grafy/histogram/newplot.png> <./obrazky/grafy/histogram/newplot(3).png> <./obrazky/grafy/histogram/newplot(4).png>] [91]
 Underfull \hbox (badness 4608) in paragraph at lines 127--128
 []|\OT1/lmr/m/n/12 weekday(0) $\OMS/lmsy/m/n/12 ^$ \OT1/lmr/m/n/12 promo(after[]promo) $\OMS/lmsy/m/n/12 )$
  []
@@ -1731,49 +1731,96 @@ Underfull \hbox (badness 4608) in paragraph at lines 137--138
  []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
 Overfull \hbox (9.86154pt too wide) in paragraph at lines 143--144
 \OT1/lmr/m/n/12 o^^Tcek^^Savan^^Sych pro-dej^^Wu. T^^Syk^^Sa se to p^^Tredev^^Ts^^S^^Pm z^^Sasobov^^San^^S^^P masn^^Sych v^^Syrobk^^Wu prod^^Savan^^Sych
  []
 
-[91] [92] [93]
-Overfull \hbox (7.77353pt too wide) in paragraph at lines 221--226
+[92] [93]
+Overfull \hbox (0.39009pt too wide) in paragraph at lines 202--203
+\OT1/lmr/m/n/12 do-stupn^^Sych m^^S^^Pstech pro-dejny a m^^Tela by b^^Syt pra-vi-deln^^Te dopl^^Tnov^^Sana na m^^S^^Psto um^^S^^Pst^^Ten^^S^^P
+ []
+
+
+Overfull \hbox (7.77353pt too wide) in paragraph at lines 229--234
 \OT1/lmr/m/n/12 mezi 10-40 %. Cukr^^Sa^^Trsk^^Se v^^Syrobky maj^^S^^P pod^^S^^Pl shrinku v 74 % za-zna-me-nan^^Sych p^^Tr^^S^^Ppadech
  []
 
-[94]
-Underfull \hbox (badness 10000) in paragraph at lines 286--286
-[]|\OT1/lmr/m/n/12 8. []Casov^^Se ^^Sudaje
+[94] [95]
+Underfull \hbox (badness 10000) in paragraph at lines 293--293
+[]|\OT1/lmr/m/n/12 Typ pro-mo-akce a den
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 286--286
-\OT1/lmr/m/n/12 ovliv^^Tnuj^^S^^P po^^Tr^^S^^Pzen^^S^^P
+Underfull \hbox (badness 10000) in paragraph at lines 295--296
+[]|\OT1/lmr/m/n/12 Kategorie: Masn^^Se v^^Syrobky,
  []
 
 
-Underfull \hbox (badness 1418) in paragraph at lines 287--287
-[]|\OT1/lmr/m/n/12 9. Velk^^Se pro-dejny a
+Underfull \hbox (badness 5302) in paragraph at lines 296--296
+[]|[]\OT1/lmr/m/n/12 Cetnost vy-ha-zov^^San^^S^^P podle
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 288--288
-[]|\OT1/lmr/m/n/12 10. Spek-trum pro-
+Underfull \hbox (badness 10000) in paragraph at lines 296--297
+[]|\OT1/lmr/m/n/12 Kategorie: Masn^^Se v^^Syrobky,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 288--288
-\OT1/lmr/m/n/12 dukt^^Wu na velk^^Sych
+Underfull \hbox (badness 10000) in paragraph at lines 297--298
+[]|\OT1/lmr/m/n/12 N^^Sakladn^^Sa ka-te-go-rie: Ryby,
  []
 
 
-Overfull \hbox (22.62723pt too wide) in paragraph at lines 301--306
+Underfull \hbox (badness 10000) in paragraph at lines 297--298
+[]\OT1/lmr/m/n/12 Cerven^^Se maso, Pul-tov^^Se
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--298
+[]|\OT1/lmr/m/n/12 Pod^^S^^Pl shrinku na sv^^Sych
+ []
+
+
+Underfull \hbox (badness 1205) in paragraph at lines 298--298
+\OT1/lmr/m/n/12 tr^^Tzb^^Sach pro ka-te-go-rie pro-
+ []
+
+
+Underfull \hbox (badness 1418) in paragraph at lines 298--299
+[]|\OT1/lmr/m/n/12 Kategorie s vy^^Ts^^Ts^^S^^Pm pod^^S^^Plem:
+ []
+
+
+Underfull \hbox (badness 7064) in paragraph at lines 298--299
+\OT1/lmr/m/n/12 v^^Syrobky, Jo-gurty, Ka-te-go-rie
+ []
+
+
+Underfull \hbox (badness 4205) in paragraph at lines 299--299
+[]|\OT1/lmr/m/n/12 Pod^^S^^Pl shrinku na tr^^Tzb^^Sach
+ []
+
+
+Underfull \hbox (badness 1622) in paragraph at lines 300--300
+[]|\OT1/lmr/m/n/12 Den z^^Saznamu m^^Sa vliv na
+ []
+
+
+Underfull \hbox (badness 2799) in paragraph at lines 300--301
+[]|\OT1/lmr/m/n/12 Pravidlo na-le-zeno pro velk^^Se
+ []
+
+
+Overfull \hbox (3.48381pt too wide) in paragraph at lines 290--306
+ [][] 
+ []
+
+
+Overfull \hbox (22.62723pt too wide) in paragraph at lines 315--320
 []\OT1/lmr/m/n/12 Antecedent aso-cia^^Tcn^^S^^Pho pra-vi-dla ob-sa-huje bo-o-lovsk^^Se atri-buty: $\OML/lmm/m/it/12 '[]$ \OT1/lmr/m/n/12 , $\OML/lmm/m/it/12 '[]$
  []
 
-[95] [96]) [97] (kapitoly/zaver.tex
+[96] [97]) [98] (kapitoly/zaver.tex
 Overfull \hbox (17.29578pt too wide) in paragraph at lines 1--2
 \OT1/lmr/m/n/12 C^^S^^Plem pr^^Sace bylo nal^^Sezt mo^^Tzn^^Se p^^Tr^^S^^P^^Tciny vzniku shirnk^^Wu pro-duktu pro vy-bra-nou spole^^Tcnost
  []
@@ -1788,26 +1835,26 @@ Overfull \hbox (3.1037pt too wide) in paragraph at lines 16--18
 \OT1/lmr/m/n/12 a tr^^Tzbami. Jedn^^Sa se jak o tr^^Tzby shrin-ko-van^^Seho pro-duktu, tak promo^^Tcn^^S^^P tr^^Tzby ostatn^^S^^Pch
  []
 
-[98
+[99
 
 ]
 Overfull \hbox (18.99352pt too wide) in paragraph at lines 19--21
 \OT1/lmr/m/n/12 k ostatn^^S^^Pm pro-dukt^^Wum by mohl b^^Syt p^^Treveden do sob^^Testa^^Tcn^^Seho n^^Sastroje, kter^^Sy nevy^^Tzaduje
  []
 
-) [99] (DP_Gruberova.lof
+) [100] (DP_Gruberova.lof
 Overfull \hbox (15.00342pt too wide) in paragraph at lines 13--13
  [][] [][]\OT1/lmr/m/n/12 Uk^^Sazka vizu^^Sal^^Wu jedno^^Tr^^Sadkov^^Sa karta (vlevo) a v^^S^^Pce^^Tr^^Sadkov^^Sa karta (vpravo). 
  []
 
-[100
+[101
 
 ]
 Overfull \hbox (12.19835pt too wide) in paragraph at lines 34--34
  [][] [][]\OT1/lmr/m/n/12 Uk^^Sazka in-ter-akce grafu z^^Saznam^^Wu shrinku pro p^^Tr^^S^^Pstupy k r^^Wuzn^^Sym ^^Surovn^^S^^Pm 
  []
 
-[101]
+[102]
 Overfull \hbox (5.56432pt too wide) in paragraph at lines 52--52
  [][] [][]\OT1/lmr/m/n/12 Power BI re-port -- Ztra-cen^^Se n^^Saklady (hod-nota shrinku) vs Pod^^S^^Pl shrinku 
  []
@@ -1821,7 +1868,7 @@ Overfull \hbox (3.15338pt too wide) in paragraph at lines 56--56
 \tf@lof=\write6
 \openout6 = `DP_Gruberova.lof'.
 
- [102] (DP_Gruberova.lot
+ [103] (DP_Gruberova.lot
 Overfull \hbox (12.59254pt too wide) in paragraph at lines 15--15
  [][] [][]\OT1/lmr/m/n/12 Zastoupen^^S^^P vy-bran^^Sych shrink^^Wu ve zkou-man^^Sych da-tech (ka-te-go-rie []Cerstv^^Se 
  []
@@ -1835,7 +1882,7 @@ Overfull \hbox (8.09015pt too wide) in paragraph at lines 16--16
 \tf@lot=\write7
 \openout7 = `DP_Gruberova.lot'.
 
- [103
+ [104
 
 ] (tex/bibliografie1.tex
 Underfull \hbox (badness 10000) in paragraph at lines 23--24
@@ -1867,7 +1914,7 @@ Underfull \hbox (badness 6893) in paragraph at lines 35--36
 \OT1/lmr/m/n/12 Di-plo-mov^^Sa pr^^Sace. Olo-mouc: UPOL. 2013 [cit. 2023-12-18]. Do-stupn^^Se
  []
 
-[104
+[105
 
 
 ]
@@ -1885,7 +1932,7 @@ Underfull \hbox (badness 3679) in paragraph at lines 52--53
 \OT1/lmr/m/n/12 [cit. 2023-03-05]. Do-stupn^^Se z: []$\OT1/lmtt/m/n/12 https : / / personal . utdallas . edu / []Herve /
  []
 
-[105]
+[106]
 Underfull \hbox (badness 5288) in paragraph at lines 92--93
 []\OT1/lmr/m/n/12 BAIJAYANTA, Roy., \OT1/lmr/m/it/12 All about Ca-te-go-ri-cal Va-ri-a-ble En-co-ding  \OT1/lmr/m/n/12 [on-
  []
@@ -1960,9 +2007,9 @@ Underfull \hbox (badness 1924) in paragraph at lines 135--136
 \OT1/lmr/m/n/12 2021. [cit. 2023-12-28]. Do-stupn^^Se z: []$\OT1/lmtt/m/n/12 https : / / www . enjoysharepoint . com /
  []
 
-[106]) [107]
+[107]) [108]
 P\v {r}\'{\i }loha A.
-[108
+[109
 
 ] (DP_Gruberova.aux)
 
@@ -1975,8 +2022,8 @@ Package rerunfilecheck Info: File `DP_Gruberova.out' has not changed.
 (rerunfilecheck)             Checksum: 4BB94975648A1BB114D9370B2A60978E;6659.
  ) 
 Here is how much of TeX's memory you used:
- 30039 strings out of 475380
- 559395 string characters out of 2775356
+ 30040 strings out of 475380
+ 559403 string characters out of 2775356
  1633218 words of memory out of 3000000
  50293 multiletter control sequences out of 15000+600000
  560424 words of font info for 109 fonts, out of 8000000 for 9000
@@ -1986,9 +2033,9 @@ Here is how much of TeX's memory you used:
 pdfTeX warning (dest): name{Hfootnote.11} has been referenced but does not exist, replaced by a fixed one
 
 {C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}<C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmib10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on DP_Gruberova.pdf (108 pages, 5010554 bytes).
+Output written on DP_Gruberova.pdf (109 pages, 5015222 bytes).
 PDF statistics:
- 1861 PDF objects out of 2073 (max. 8388607)
- 456 named destinations out of 1000 (max. 500000)
+ 1868 PDF objects out of 2073 (max. 8388607)
+ 457 named destinations out of 1000 (max. 500000)
  711 words of extra memory for PDF output out of 10000 (max. 10000000)
 

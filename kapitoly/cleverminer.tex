@@ -4,7 +4,7 @@
 Pomocí metody \emph{4ftMiner}, která je jednou z~metod procedury GUHA jsem provedla analýzu shrinků produktu. Metoda umožňuje odhalit zajímavé vzory chování, které jsou obsažené v~datech ale lze je vztáhnout na celkovou zkoumanou množinu. Implementace metody se nachází v~knihovně \emph{Cleverminer} pro jazyk Python. Princip metod, které se používají v~knihovně, a důležité pojmy týkající se GUHA procedur jsou popsány v~sekci \ref*{sec:Teorie:Guha}. Vstupními daty pro metodu GUHA byla tabulka zaznamenaných shrinků rozšířená o číselníky a sloupce s~podíly zastoupení shrinků na tržbách. Tento dataset je popsán v~sekci \ref{sec:priprava}.
 Pracovala jsem pouze se vzorem dat jednoho měsíce a s~kategoriemi produktů \emph{Velmi čerstvé}, zastoupena 48~\% a \emph{Čerstvé}, zastoupena 52~\% ve vybraných datech a se shrinky typu prošlé a zkažené zboží. 
 
-První část této kapitoly se věnuje hypotézám, které mohou platit o shrincích. Hypotéza je přeformulována jako asociační pravidlo, které je následně ověřeno metodou GUHA. Druhá část se věnuje zkoumání konkrétních produktů, u kterých pomocí korelační analýzy, popsané v~kapitole \ref*{ch:korelacnianalyza}, nebyla zjištěna možná příčina shrinku.
+První část této kapitoly se věnuje hypotézám, které mohou platit o shrincích. Hypotéza je přeformulována jako asociační pravidlo, které je následně ověřeno metodou GUHA. Poté je navrženo stručné doporučení, jak by se mohly vyřešit takto zjištěné shrinky.  Na závěr je uvedeno shrnutí hypotéz v~tabulce \ref*{tab:hypotezy}. Druhá část kapitoly se věnuje zkoumání konkrétních produktů, u kterých pomocí korelační analýzy, popsané v~kapitole \ref*{ch:korelacnianalyza}, nebyla zjištěna možná příčina shrinku.
 % Zkoumaný dataset se záznamy shrinků produktů jsem rozšířila o další sledované sloupce, které dávají do srovnání hodnotu shrinku a objem tržeb. Vytvořila jsem takto sloupce: podíl shrinku na celkových tržbách prodejny, podíl shrinku na týdenních tržbách shrinkovaného produktu na prodejně, podíl shrinku a tržeb v~kategorii úrovně 1.
 
 Metoda 4ftMiner pracuje pouze s~kategorickými hodnotami, proto bylo nutné kategorizovat sloupce s~hodnotou shrinku, s~množstvím shrinkovaných produktů a s~jednotlivými podíly. Na obrázcích \ref*{obr:nb:hist} až \ref{obr:nb:hist5} jsou zobrazené četnosti záznamů v~kategoriích.
@@ -80,7 +80,7 @@ Asociační pravidlo má tvar:
     \varphi_{\mbox{\,\footnotesize Den v~týdnu}} \land \varphi_{\,\mbox{\footnotesize Typ promoakce}} \Rightarrow \psi_{\mbox{\,\footnotesize Množství}}
 \end{equation}
 
-V ukázce kódu \ref*{code:cleverminerH1} jsou uvedené parametry pro spuštění metody. Konfidence byla zvolena 80~\%. Výsledky běhu jsou uvedené v~tabulce \ref*{tab:H1vysl}, pro jeden záznam v~tabulce je uvedena slovní interpretace nalezeného asociačního pravidla. Označení \emph{Základ} údává počet nalezených řádků, pro které platí příslušné pravidlo\footnote{Zbylé pojmy jsou vysvětleny v teoretické části \label{sec:clever:pojmy}.}.  Z~této tabulky lze vyčíst, že pro dny záznamu ve vybrané dny v~týdnu -- pondělí, úterý, středa, čtvrtek a neděle, tj. nikoli pro pátek a sobotu -- a zároveň pro produkty, které byly v~den záznamu týden po promoakci platí, že 80~\% těchto záznamů bylo v~množství do jednoho kusu. Podle dalšího zkoumání dat jsem zjistila, že se jedná především o kategorii \emph{Masné výrobky} ze třetí úrovně hierarchie.
+V ukázce kódu \ref*{code:cleverminerH1} jsou uvedené parametry pro spuštění metody. Konfidence byla zvolena 80~\%. Výsledky běhu jsou uvedené v~tabulce \ref*{tab:H1vysl}, pro jeden záznam v~tabulce je uvedena slovní interpretace nalezeného asociačního pravidla. Označení \emph{Základ} údává počet nalezených řádků, pro které platí příslušné pravidlo\footnote{Zbylé pojmy jsou vysvětleny v~teoretické části \label{sec:clever:pojmy}.}.  Z~této tabulky lze vyčíst, že pro dny záznamu ve vybrané dny v~týdnu -- pondělí, úterý, středa, čtvrtek a neděle, tj. nikoli pro pátek a sobotu -- a zároveň pro produkty, které byly v~den záznamu týden po promoakci platí, že 80~\% těchto záznamů bylo v~množství do jednoho kusu. Podle dalšího zkoumání dat jsem zjistila, že se jedná především o kategorii \emph{Masné výrobky} ze třetí úrovně hierarchie.
 
 
 \begin{lstlisting}[language=Python, style=mystyle, label={code:cleverminerH1}, caption={Hypotéza č. 1, funkce \texttt{cleverminer}.}]
@@ -125,7 +125,7 @@ cleverminer(df = data,
             Základ ($a$) & Konfidence & AAD & AP \\
             \midrule
 19765 & 0.821 & $+0.623$ & weekday(0) $\land$ promo(after\_promo) $\Rightarrow$ amount\_bins((-0.99,0)) \\
-& & & {\footnotesize{\textit{Pokud byl shrink zaznamenaný v pondělí a~zároveň se týkal produktu, který byl týden po promoakci, pak se zaznamenalo množství do jednoho kusu\footnote{Shrinkované množství je v datech zaznamenané v záporných číslech.}. }}} \\
+& & & {\footnotesize{\textit{Pokud byl shrink zaznamenaný v~pondělí a~zároveň se týkal produktu, který byl týden po promoakci, pak se zaznamenalo množství do jednoho kusu\footnote{Shrinkované množství je v~datech zaznamenané v~záporných číslech.}. }}} \\
 39271 & 0.820 & +0.622 & weekday(0, 1)  $\land$ promo(after\_promo) $\Rightarrow$ amount\_bins((-0.99,0)) \\
 63920 & 0.815 & +0.613 & weekday(0, 1, 2)  $\land$ promo(after\_promo) $\Rightarrow$ amount\_bins((-0.99,0)) \\
 19506 & 0.820 & +0.621 & weekday(1)  $\land$ promo(after\_promo) $\Rightarrow$ amount\_bins((-0.99,0)) \\
@@ -154,6 +154,8 @@ kde označením Hierarchie3 jsou myšleny kategorie na třetí úrovni produktov
 
 Parametry předané funkci jsou podobné jako u předchozí hypotézy. Ze záznamů, které se byly provedeny v~pondělí, úterý nebo neděli a týkaly se produktů, které byly v~rozmezí  jednoho týdne po promoakci, bylo více než 75~\% z~kategorie Masné výrobky -- pultový prodej ze čtvrté úrovně produktové hierarchie. Pokud je vynechána ze vstupních dat tato kategorie, pak maximální konfidence 31~\% byla dosažena pro kategorii Slaného pečivo v~záznamech, které byly provedeny v~sobotu a týkaly se produktů zcela mimo promoakci. Jiné významné závislosti podle dat nebyly nalezeny.
 
+Zdá se, že promoakce nemá vliv na shrinkovanou kategorii. Společnost by tedy mohla některé produkty ze zjištěné kategorie umístit do promoakce a mohlo by to snížit shrink
+
 \vspace*{1em}
 
 \textbf{Hypotéza č. 3: Na některých lokalitách vyhazují často stejné produkty}
@@ -168,6 +170,8 @@ Asociační pravidlo má tvar:
 Pokud úplně vynecháme kategorie Masné výrobky ze vstupních dat, pak se nejčastěji ve výsledcích objevovala kategorie \emph{Pečivo}. Pro záznamy z~velkých prodejen v~okrese Pardubice nebo Plzeň-město Pečivo zaujímalo přes 60~\% těchto záznamů. Nad 50~\% záznamů pro okresy Bruntál, Olomouc, Příbram nebo Uherské Hradiště. 50~\% záznamů náleželo kategorii Pečivo také v~záznamech z~malých prodejen v~okrese Klatovy, Náchod nebo Přerov.
 
 Po vynechání kategorie Pečivo již dostáváme maximální konfidenci 33~\%, a to pro kategorii Zelenina ve zbylých záznamech z~okresu Ostrava-město, Kroměříž, Hradec Králové nebo Karviná.
+
+Doporučení pro společnost je, aby se zaměřila na konkrétní dvojice produkt-prodejna pro zjištěné kategorie a lokality. Může zde docházet k~určitému nestandardnímu chování jak na straně zaměstnavatelů, tak na straně poptávky.
 
 \vspace*{1em}
 
@@ -195,6 +199,8 @@ Kategorie Vejce se vyhazuje v~82~\% po jednom kusu balení
 Kategorie Pečivo se vyhazuje v~56~\% v~počtu kusů do 10~kusů v~až 94~tis. záznamech.
 Kategorie Jádroviny\footnote{Jádroviny jsou druh ovoce, patří sem např. jablka a hrušky.} se vyhazuje 74~\% případech svých záznamů (14 000 záznamů) v~množství do jednoho kusu. I zde se jedná přepočet váženého množství na kusy.
 
+Pokud je shrink evidovaný po kusech, mohlo by pomoci u těchto čerstvých výrobků -- maso, ryby, vejce -- snížit nabízené množství na prodejnách. V~případě vajec může ke shrinku dojít z~důvodu křehkosti tohoto zboží, řešením by tedy mohla být bezpečnější manipulace. To lze ovlivnit v~případě zaměstnanců, aby se případnému rozbití zabránilo na straně zákazníka, vejce by např. měla být uskladněna na dobře dostupných místech prodejny a měla by být pravidelně doplňována na místo umístění velkého množství vajec na jedno místo. Návrh na recyklaci ovoce je uveden u hypotézy č. 6.
+
 \vspace*{1em}
 
 \textbf{Hypotéza č. 5: Některé vyhazované kategorie produktů jsou výrazně nákladnější.}
@@ -204,10 +210,12 @@ Asociační pravidlo má tvar:
     \varphi_{\mbox{\,\footnotesize Hierarchie4}} \Rightarrow \psi_{\mbox{\,\footnotesize Shrink}}
 \end{equation}
 
-Pokud se vyhazují čerstvé ryby, tak v~téměř 80~\% případech záznamů jsou ztracené náklady jednoho záznamu vyšší, a to v~rozmezí 60-150 peněžních jednotek.
+Pokud se vyhazují Čerstvé ryby, tak v~téměř 80~\% případech záznamů jsou ztracené náklady jednoho záznamu vyšší, a to v~rozmezí 60-150 peněžních jednotek.
 Pokud se vyhazuje kategorie Červené maso, tak z~téměř 60~\% je ztráta v~rozsahu 60-150 jednotek.
 Kategorie Chlazený pultový prodej, která obsahuje např. čerstvé chlebíčky, saláty a pochutiny, se v~50~\% vyhazuje v~hodnotě do 10 peněžních jednotek. Jedná se tedy o nižší částky, které jsou ale časté. Záznamů této kategorie bylo evidováno $12{,}5$ tisíc.
 Cukrářské výrobky byly evidovány v~1835 záznamech. 66~\% těchto záznamů mělo hodnotu mezi 10 a 20 peněžními jednotkami.
+
+Tato hypotéza odhalila tři hodnotné kategorie. Doporučení pro společnost by mohlo být, aby porovnala pořizovací a prodejní cenu a marži, která ji z~toho plyne. Za zvážení potom stojí, zda by se nevyplatilo cenu lehce snížit, aby si produkt koupilo více zákazníků. Dalším řešením také může být snížení zaváženého množství na prodejny. 
 
 \vspace*{1em}
 
@@ -231,7 +239,11 @@ Dále pro tuto hypotézu bylo ověřováno podmíněné asociační pravidlo:
 
 Následující tvrzení platí s~více než 83\% konfidencí.
 Pokud mezi produkty, kterým byl zaznamenán dražší shrink, tj. 30-60 peněžních jednotek, jsou produkty z~kategorie Jogurty, tak podíl shrinku na jejich tržbách je mezi 10-40~\%. Totéž tvrzení platí i pro kategorii Drobného občerstvení.
-Pokud mezi produkty, kterým byl zaznamenán levný shrink, tj. do 10 peněžních jednotek, je ovoce, tak jejich share shrinku na tržbách je do 1~\%. To samé platí o pro kategorii Kořenová zelenina.
+Pokud mezi produkty, kterým byl zaznamenán levný shrink, tj. do 10 peněžních jednotek, je ovoce, tak jejich podíl shrinku na tržbách je do 1~\%. To samé platí o pro kategorii Kořenová zelenina.
+
+U konkrétních výrobků, které mají vysoký podíl shrinku na svých tržbách a zároveň se jedná o dražší produkty, lze usuzovat, že od nějaké hodnoty jsou tyto produkty celkově ztrátové pro společnost. Stojí za zvážení, zda by nebylo lepší tyto produkty odstranit zcela z~portfolia, nebo omezit kolik se těchto produktů objedná. Další možností je prodávat produkty pouze jako limitovanou akci a výrazně produkty promovat.
+
+V případě levných shrinků, které se týkají hlavně ovoce, je vidět, že produkty jsou velmi prodávané a shrink je přirozený, neboť ovoce podléhá rychlejší zkáze. Za zvážení ale stojí recyklovat ovoce jako surovinu pro výrobu dalších produktů. To může buď společnost provozovat sama, pokud má výrobní část, anebo surovinu prodávat se sníženou cenou partnerům.
 
 \vspace*{1em}
 
@@ -239,19 +251,21 @@ Pokud mezi produkty, kterým byl zaznamenán levný shrink, tj. do 10 peněžní
 
 S pravděpodobností vyšší než 50~\% se toto tvrzení potvrdilo pouze u kategorie Bylinky z~úrovně 4, kdy shrink této kategorie tvoří 0.002~\% až 0.005~\% tržeb na prodejnách v~kategorii Velmi čerstvé v~první úrovni produktové hierarchie.
 
+Vzhledem k~tomu, že se hypotéza potvrdila pouze u jedné kategorie, společnost by se mohla cíleně zaměřit pouze na ni. Např. testovat v~jakém stavu jsou zákazníci ochotni koupit čerstvé bylinky na různých prodejnách a zda to nesouvisí s~prodejní cenou. 
+
 \vspace*{1em}
 
 \textbf{Hypotéza č. 8: Den v~týdnu nebo čtvrtina měsíce mají vliv na záznamy.}
 
 Asociační pravidlo je následovné:
 \begin{equation}
-    \varphi_{\mbox{\,{\footnotesize Den v týdnu}}} \land  \varphi_{\mbox{\,{\footnotesize Čtvtina měsíce}}} \Rightarrow \psi_{\mbox{\,{\footnotesize Typ prodejny}}}
+    \varphi_{\mbox{\,{\footnotesize Den v~týdnu}}} \land  \varphi_{\mbox{\,{\footnotesize Čtvtina měsíce}}} \Rightarrow \psi_{\mbox{\,{\footnotesize Typ prodejny}}}
 \end{equation} 
 V případě antecedentu je možné uvažovat minimální délku jeden boolovský atribut, maximální dva. Je tedy možné, že nalezené pravidlo se může týkat pouze jednoho ze dvou boolovský atributů v~antecedentu.
 
 Záznamy uskutečněné ve středu, čtvrtek a pátek v~poslední čtvrtině měsíce, se ze 67\% konfidencí týkají malých prodejen.
 
-
+Bylo by vhodné, aby společnost porovnala kolik zboží je zaváženo na malé a velké prodejny a zda toto množství odráží tržby prodejny.
 
 \textbf{Další hypotézy}
 
@@ -260,33 +274,33 @@ Dále byly uvažovány hypotézy:
     \itemsep 0em
     \item Hypotéza č. 9: Ve větších prodejnách ve velkých městech se vyhazuje více typů produktů.
     \item Hypotéza č. 10: Velké prodejny vyhazují širší spektrum produktů než malé prodejny.
-    \item Hypotéza č. 11: Na některých v některých lokalitách mají často velký shrink.
+    \item Hypotéza č. 11: Na některých v~některých lokalitách mají často velký shrink.
 \end{itemize}
 
 Pro tyto hypotézy ale nebylo nalezeno žádné dostatečně silné, tj. s~konfidencí vyšší než 40~\%, asociační pravidlo.
 
 \subsection*{Shrnutí ověření hypotéz}
 
-V tabulce j
+V tabulce \ref*{tab:hypotezy} se nachází stručný souhrn jednotlivých hypotéz. Název hypotézy je zkrácen a v komentáři je uvedeno, pro které kategorie, resp. hodnoty se pravidlo potvrdilo.  
 
 \begin{table}[hbtp!]
     \centering
     \captionsetup{justification=centering}
     \caption{Shrnutí ověření hypotéz na vzorových datech společnosti.}
-    \begin{tabular}{p{4cm} cc}
-    \textbf{Označení hypotézy} & \textbf{Potvrzena} & \textbf{Komentář} \\
+    \begin{tabular}{l p{5.2cm} c p{5.6cm}}
+    \multicolumn{2}{l}{\textbf{Označení a popis hypotézy}}  & \textbf{Potvrzena} & \textbf{Komentář} \\
     \midrule
-    1.  &  \cmark     &        \\
-    2.  &  \cmark     &        \\
-    3.  &  \cmark     &        \\
-    4.  &  \cmark     &        \\
-    5.  &  \cmark     &        \\
-    6.  &  \cmark     &        \\
-    7.  &  \cmark     &        \\
-    8. Časové údaje ovlivňují pořízení záznamu &  \cmark     &        \\
-    9. Velké prodejny a velká města &  \xmark     &        \\
-    10. Spektrum produktů na velkých prodejnách &  \xmark     &        \\
-    11. Lokalita &  \xmark     &        \\
+    1.  &  Typ promoakce a den v~týdnu mají vliv na objem shrinku&  \cmark     & Masné výrobky po promoakci        \\
+    2.  &  Typ promoakce má vliv na shrinkovanou kategorii &  \cmark     &   Jedná se především o produkty mimo promoakci    \\
+    3.  &  Lokalita má vliv na četnost konkrétních kategorií &  \cmark     &   Kategorie: Masné výrobky, Pečivo     \\
+    4.  &  Četnost vyhazování podle kategorie produktů &  \cmark     &  Kategorie:  Masné výrobky, Ryby, Pečivo, Vejce, Jádrové ovoce   \\
+    5.  &  Hodnota shrinkovaných kategorií &  \cmark     & Nákladná kategorie: Ryby, Červené maso, Pultové občerstvení      \\
+    6.  & Podíl shrinku na svých tržbách pro kategorie produktů &  \cmark     &   Kategorie s~vyšším podílem: Drobné občerstvení, Cukrářské výrobky, Jogurty,  Kategorie s~nižším podílem: Ovoce     \\
+    7.  & Podíl shrinku na tržbách hlavní kategorie pro kategorie produktů &  \cmark     &  Pouze kategorie Bylinky      \\
+    8.  & Den záznamu má vliv na počet shrinků &  \cmark     &  Pravidlo nalezeno pro velké prodejny a záznamy ve středu, čtvrtek, pátek.       \\
+    9.  & Velké prodejny a velká města vyhazují více produktů &  \xmark     &        \\
+    10. &  Spektrum produktů na \par velkých prodejnách \strut &  \xmark     &        \\
+    11. &  Lokalita má vliv na velikost shrinku &  \xmark     &        \\
     \end{tabular}
     \label{tab:hypotezy}
 \end{table}
@@ -316,9 +330,9 @@ Co se týče deseti produktů, u kterých nebyla zjištěna závislost na prodej
 
 \section*{Shrnutí}
 
-Pomocí metody Cleverminer bylo prozkoumáno jedenáct hypotéz týkajících se dat se záznamy shrinků. Tři hypotézy se pomocí metody 4ftMiner nepodařilo potvrdit, zbylé hypotézy našly, alespoň pro část záznamů oporu v datech.
-Dále se tato kapitola zabývala hledáním pravdivých tvrzeních pro produkty, u kterých nebyla nalezena závislost pomocí korelační analýzy. V tomto případě asociační pravidlo předpokládalo ID těchto produktů a typ promoakce a údaj o existenci prodeje. Sukcedentem pak mohl být jakýkoli jiný sloupec vstupních dat. Výsledky byly diskutovány pro jednu ze zkoumaných kategorií čtvrté úrovně. Pro jiné kategorie by byl postup analogický.
-Je ale důležité zmínit, že produkty, u kterých nebyl výsledek korelační analýzy statisticky významný, bylo často velmi málo záznamů -- v řádu jednotek, maximálně nízkých desítek.
+Pomocí metody Cleverminer bylo prozkoumáno jedenáct hypotéz týkajících se dat se záznamy shrinků. Tři hypotézy se pomocí metody 4ftMiner nepodařilo potvrdit, zbylé hypotézy našly, alespoň pro část záznamů oporu v~datech.
+Dále se tato kapitola zabývala hledáním pravdivých tvrzeních pro produkty, u kterých nebyla nalezena závislost pomocí korelační analýzy. V~tomto případě asociační pravidlo předpokládalo ID těchto produktů a typ promoakce a údaj o existenci prodeje. Sukcedentem pak mohl být jakýkoli jiný sloupec vstupních dat. Výsledky byly diskutovány pro jednu ze zkoumaných kategorií čtvrté úrovně. Pro jiné kategorie by byl postup analogický.
+Je ale důležité zmínit, že produkty, u kterých nebyl výsledek korelační analýzy statisticky významný, bylo často velmi málo záznamů -- v~řádu jednotek, maximálně nízkých desítek.
 
 %  27571774 26835624 Všechny záznamy se týkaly pouze regionu Praha, a to v~objemu do jednoho kusu.
 % 1     7 1.000 +0.000 product_id(27571774) & saled(True) => region(Praha) | ---
