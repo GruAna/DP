@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  2 JAN 2024 19:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  3 JAN 2024 10:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -812,7 +812,11 @@ Package csquotes Info: Redefining alias 'default' -> 'czech'.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 121.
  (C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (DP_Gruberova.aux)
+) (DP_Gruberova.aux
+
+LaTeX Warning: Label `sec:clever:pojmy' multiply defined.
+
+)
 \openout1 = `DP_Gruberova.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 121.
@@ -1697,22 +1701,22 @@ Underfull \hbox (badness 4608) in paragraph at lines 127--128
  []
 
 
-Underfull \hbox (badness 4608) in paragraph at lines 130--131
+Underfull \hbox (badness 4608) in paragraph at lines 132--133
 []|\OT1/lmr/m/n/12 weekday(1) $\OMS/lmsy/m/n/12 ^$ \OT1/lmr/m/n/12 promo(after[]promo) $\OMS/lmsy/m/n/12 )$
  []
 
 
-Underfull \hbox (badness 4608) in paragraph at lines 133--134
+Underfull \hbox (badness 4608) in paragraph at lines 135--136
 []|\OT1/lmr/m/n/12 weekday(2) $\OMS/lmsy/m/n/12 ^$ \OT1/lmr/m/n/12 promo(after[]promo) $\OMS/lmsy/m/n/12 )$
  []
 
 
-Underfull \hbox (badness 4608) in paragraph at lines 135--136
+Underfull \hbox (badness 4608) in paragraph at lines 137--138
 []|\OT1/lmr/m/n/12 weekday(3) $\OMS/lmsy/m/n/12 ^$ \OT1/lmr/m/n/12 promo(after[]promo) $\OMS/lmsy/m/n/12 )$
  []
 
 
-Underfull \hbox (badness 4608) in paragraph at lines 136--137
+Underfull \hbox (badness 4608) in paragraph at lines 138--139
 []|\OT1/lmr/m/n/12 weekday(6) $\OMS/lmsy/m/n/12 ^$ \OT1/lmr/m/n/12 promo(after[]promo) $\OMS/lmsy/m/n/12 )$
  []
 
@@ -1720,16 +1724,16 @@ Underfull \hbox (badness 4608) in paragraph at lines 136--137
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [91] [92] [93]
-Overfull \hbox (7.77353pt too wide) in paragraph at lines 218--223
+Overfull \hbox (7.77353pt too wide) in paragraph at lines 221--226
 \OT1/lmr/m/n/12 mezi 10-40 %. Cukr^^Sa^^Trsk^^Se v^^Syrobky maj^^S^^P pod^^S^^Pl shrinku v 74 % za-zna-me-nan^^Sych p^^Tr^^S^^Ppadech
  []
 
-[94]
-Overfull \hbox (22.62723pt too wide) in paragraph at lines 270--275
+[94] [95]
+Overfull \hbox (22.62723pt too wide) in paragraph at lines 298--303
 []\OT1/lmr/m/n/12 Antecedent aso-cia^^Tcn^^S^^Pho pra-vi-dla ob-sa-huje bo-o-lovsk^^Se atri-buty: $\OML/lmm/m/it/12 '[]$ \OT1/lmr/m/n/12 , $\OML/lmm/m/it/12 '[]$
  []
 
-[95]) [96] (kapitoly/zaver.tex
+[96]) [97] (kapitoly/zaver.tex
 Overfull \hbox (17.29578pt too wide) in paragraph at lines 1--2
 \OT1/lmr/m/n/12 C^^S^^Plem pr^^Sace bylo nal^^Sezt mo^^Tzn^^Se p^^Tr^^S^^P^^Tciny vzniku shirnk^^Wu pro-duktu pro vy-bra-nou spole^^Tcnost
  []
@@ -1744,26 +1748,26 @@ Overfull \hbox (3.1037pt too wide) in paragraph at lines 16--18
 \OT1/lmr/m/n/12 a tr^^Tzbami. Jedn^^Sa se jak o tr^^Tzby shrin-ko-van^^Seho pro-duktu, tak promo^^Tcn^^S^^P tr^^Tzby ostatn^^S^^Pch
  []
 
-[97
+[98
 
 ]
 Overfull \hbox (18.99352pt too wide) in paragraph at lines 19--21
 \OT1/lmr/m/n/12 k ostatn^^S^^Pm pro-dukt^^Wum by mohl b^^Syt p^^Treveden do sob^^Testa^^Tcn^^Seho n^^Sastroje, kter^^Sy nevy^^Tzaduje
  []
 
-) [98] (DP_Gruberova.lof
+) [99] (DP_Gruberova.lof
 Overfull \hbox (15.00342pt too wide) in paragraph at lines 13--13
  [][] [][]\OT1/lmr/m/n/12 Uk^^Sazka vizu^^Sal^^Wu jedno^^Tr^^Sadkov^^Sa karta (vlevo) a v^^S^^Pce^^Tr^^Sadkov^^Sa karta (vpravo). 
  []
 
-[99
+[100
 
 ]
 Overfull \hbox (12.19835pt too wide) in paragraph at lines 34--34
  [][] [][]\OT1/lmr/m/n/12 Uk^^Sazka in-ter-akce grafu z^^Saznam^^Wu shrinku pro p^^Tr^^S^^Pstupy k r^^Wuzn^^Sym ^^Surovn^^S^^Pm 
  []
 
-[100]
+[101]
 Overfull \hbox (5.56432pt too wide) in paragraph at lines 52--52
  [][] [][]\OT1/lmr/m/n/12 Power BI re-port -- Ztra-cen^^Se n^^Saklady (hod-nota shrinku) vs Pod^^S^^Pl shrinku 
  []
@@ -1777,7 +1781,7 @@ Overfull \hbox (3.15338pt too wide) in paragraph at lines 56--56
 \tf@lof=\write6
 \openout6 = `DP_Gruberova.lof'.
 
- [101] (DP_Gruberova.lot
+ [102] (DP_Gruberova.lot
 Overfull \hbox (12.59254pt too wide) in paragraph at lines 15--15
  [][] [][]\OT1/lmr/m/n/12 Zastoupen^^S^^P vy-bran^^Sych shrink^^Wu ve zkou-man^^Sych da-tech (ka-te-go-rie []Cerstv^^Se 
  []
@@ -1791,7 +1795,7 @@ Overfull \hbox (8.09015pt too wide) in paragraph at lines 16--16
 \tf@lot=\write7
 \openout7 = `DP_Gruberova.lot'.
 
- [102
+ [103
 
 ] (tex/bibliografie1.tex
 Underfull \hbox (badness 10000) in paragraph at lines 23--24
@@ -1823,7 +1827,7 @@ Underfull \hbox (badness 6893) in paragraph at lines 35--36
 \OT1/lmr/m/n/12 Di-plo-mov^^Sa pr^^Sace. Olo-mouc: UPOL. 2013 [cit. 2023-12-18]. Do-stupn^^Se
  []
 
-[103
+[104
 
 
 ]
@@ -1841,7 +1845,7 @@ Underfull \hbox (badness 3679) in paragraph at lines 52--53
 \OT1/lmr/m/n/12 [cit. 2023-03-05]. Do-stupn^^Se z: []$\OT1/lmtt/m/n/12 https : / / personal . utdallas . edu / []Herve /
  []
 
-[104]
+[105]
 Underfull \hbox (badness 5288) in paragraph at lines 92--93
 []\OT1/lmr/m/n/12 BAIJAYANTA, Roy., \OT1/lmr/m/it/12 All about Ca-te-go-ri-cal Va-ri-a-ble En-co-ding  \OT1/lmr/m/n/12 [on-
  []
@@ -1916,29 +1920,35 @@ Underfull \hbox (badness 1924) in paragraph at lines 135--136
 \OT1/lmr/m/n/12 2021. [cit. 2023-12-28]. Do-stupn^^Se z: []$\OT1/lmtt/m/n/12 https : / / www . enjoysharepoint . com /
  []
 
-[105]) [106]
+[106]) [107]
 P\v {r}\'{\i }loha A.
-[107
+[108
 
 ] (DP_Gruberova.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `DP_Gruberova.out' has not changed.
-(rerunfilecheck)             Checksum: 78D523BBE1C09EF3DEE0BF5E7BB74026;6659.
+(rerunfilecheck)             Checksum: 4BB94975648A1BB114D9370B2A60978E;6659.
  ) 
 Here is how much of TeX's memory you used:
- 30032 strings out of 475380
- 559302 string characters out of 2775356
- 1633039 words of memory out of 3000000
- 50291 multiletter control sequences out of 15000+600000
+ 30039 strings out of 475380
+ 559395 string characters out of 2775356
+ 1633239 words of memory out of 3000000
+ 50293 multiletter control sequences out of 15000+600000
  560424 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,19n,94p,2358b,2310s stack positions out of 10000i,1000n,20000p,200000b,80000s
+
+pdfTeX warning (dest): name{Hfootnote.11} has been referenced but does not exist, replaced by a fixed one
+
 {C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}<C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmib10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on DP_Gruberova.pdf (107 pages, 5000733 bytes).
+Output written on DP_Gruberova.pdf (108 pages, 5006696 bytes).
 PDF statistics:
- 1845 PDF objects out of 2073 (max. 8388607)
- 451 named destinations out of 1000 (max. 500000)
+ 1856 PDF objects out of 2073 (max. 8388607)
+ 456 named destinations out of 1000 (max. 500000)
  711 words of extra memory for PDF output out of 10000 (max. 10000000)
 

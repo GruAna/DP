@@ -264,12 +264,12 @@ kde $R_i^2$ je koeficient determinace $i$-tého sloupce. Ten říká, jak velkou
 \section{Metoda GUHA}
 \label{sec:Teorie:Guha}
 
-Metoda GUHA je původní česká metoda používaná pro nexplorační analýzu dat.
-První článek o této metodě vyšel v~roce 1966. V~současné době je jedním znejrozáshlejších implementací metody systém LISp-Miner. Jedná se o software vyvíjený na Fakultě informatiky a statistiky Vysoké školy ekonomické v~Praze, kde se zároveň používá pro výuku a výzkum dobývaní znalostí z~databází \cite{bib:GUHA}. Zároveň je také implementována knihovna \emph{CleverMiner} v~jazyce Python, která disponuje částí funkcionalit softwaru LISp-Miner.
+Metoda GUHA je původní česká metoda používaná pro neexplorační analýzu dat.
+První článek o této metodě vyšel v~roce 1966. V~současné době je jedním z nejrozsáhlejších implementací metody systém LISp-Miner. Jedná se o software vyvíjený na Fakultě informatiky a statistiky Vysoké školy ekonomické v~Praze, kde se zároveň používá pro výuku a výzkum dobývaní znalostí z~databází \cite{bib:GUHA}. Zároveň je také implementována knihovna \emph{CleverMiner} v~jazyce Python, která disponuje částí funkcionalit softwaru LISp-Miner.
 
 \subsection{Základní princip metody}
 
-Cílem metody GUHA je získat z~pozorovaných dat všechny vztahy, které jsou jsou pravdivé pro množinu objektů, ze které pochází zkoumaná data. Vyuižívají se k~tomu statistické testy hypotéz, které dovolují na základě platnosti určitého tvrzení o vzorku dat přijmout tvrzení o celé množině objektů. Pravdivé tvrzení o celé množině dat se nazývá \emph{teoretické tvrzení}. Tvrzení o vzorku dat se nazývá \emph{observační tvrzení}. Vztah $1:1$ mezi těmito tvrzeními zprostředkovávají statistické testy, znázorněno na obr. \ref*{obr:met:GUHA1}.\cite{bib:GUHA}
+Cílem metody GUHA je získat z~pozorovaných dat všechny vztahy, které jsou jsou pravdivé pro množinu objektů, ze které pochází zkoumaná data. Využívají se k~tomu statistické testy hypotéz, které dovolují na základě platnosti určitého tvrzení o vzorku dat přijmout tvrzení o celé množině objektů. Pravdivé tvrzení o celé množině dat se nazývá \emph{teoretické tvrzení}. Tvrzení o vzorku dat se nazývá \emph{observační tvrzení}. Vztah $1:1$ mezi těmito tvrzeními zprostředkovávají statistické testy, znázorněno na obr. \ref*{obr:met:GUHA1}.\cite{bib:GUHA}
 
 \begin{figure}[hbtp!]
     \centering
@@ -285,7 +285,7 @@ Základní postup GUHA procedury je na obrázku \ref*{obr:met:GUHA2}. Vstupem pr
     \centering
     \captionsetup{justification=centering}
     \includegraphics[width=.5\textwidth]{obrazky/GUHA/GUHA2.pdf}
-    \caption{Základní postup procdury GUHA. Zdroj: vlastní.}
+    \caption{Základní postup procedury GUHA. Zdroj: vlastní.}
     \label{obr:met:GUHA2}
 \end{figure}
 
@@ -294,7 +294,7 @@ Základní postup GUHA procedury je na obrázku \ref*{obr:met:GUHA2}. Vstupem pr
 
 % Uvažujeme potenciálně nekonečnou množinu objektů. Metoda předpokládá výsledky existenci pozorování této množiny reprezentované v~matici dat. Cílem je získat všechny zajímavé vztahy, které jsou pravdové pro celou množinu objektů
 
-Pro podrobnější popis procedur je nejprve třeba definovat několik pojmů, se kterými se v~procedurách pracuje. Metoda pracuje s~nádledujícími pojmy \cite{bib:GUHA}:
+Pro podrobnější popis procedur je nejprve třeba definovat několik pojmů, se kterými se v~procedurách pracuje. Metoda pracuje s~násdledujícími pojmy \cite{bib:GUHA}:
 
 \begin{itemize}
     \itemsep0em
@@ -320,7 +320,7 @@ Další pojmy se týkají vztahů, se kterými procedury pracují \cite{bib:GUHA
 
 \begin{itemize}
     \itemsep0em
-    \item \textbf{Asociační pravidlo} -- Výraz $\mathrm{X} \rightarrow \mathrm{Y}$, kde $\mathrm{X}$ a $\mathrm{Y}$ jsou konjunkce dvojic atribut a jeho hodnota. Dále v~textu je použivaná pro tento pojem zkratka AP.
+    \item \textbf{Asociační pravidlo} -- Výraz $\mathrm{X} \rightarrow \mathrm{Y}$, kde $\mathrm{X}$ a $\mathrm{Y}$ jsou konjunkce dvojic atribut a jeho hodnota. Dále v~textu je používaná pro tento pojem zkratka AP.
     \item \textbf{Konfidence AP} -- Podíl počtu řádků, které splňují antecedent a zároveň sukcedent a počtu řádků, které splňují pouze sukcedent.
     \item \textbf{Podpora AP} -- Podíl počtu řádků, které splňují antecedent a zároveň sukcedent a počtu řádků vstupní matice dat.
 \end{itemize}
@@ -377,7 +377,7 @@ Pro podmíněné AP $\varphi \approx \psi | \chi$ platí obdobné vztahy. Předp
 \end{equation}
 
 \subsection{Procedury}
-
+\label{sec:clever:pojmy}
 V dokumentaci \cite{bib:GUHA} je popsáno sedm procedur -- \emph{4ft-Miner,  SD4ft-Miner, CF-Miner, SDCF-Miner,  KL-Miner,  SDKL-Miner,  Ac4ft-Miner} \cite{bib:GUHA}. V~knihovně v~jazyce Python jsou implementované pouze metody \emph{4ft-Miner, SD4ft-Miner, CF-Miner} \cite{bib:GUHAclever}. V~této práci jsem použila metodu pouze první metodu, proto další je další teoretický popis věnován pouze metodě \emph{4ft-Miner}.
 
 Tato procedura pracuje s~AP $\varphi \approx \psi$, nebo s~podmíněnými AP $\varphi \approx \psi | \chi$. V~knihovně \emph{Cleverminer} lze v~hlavní funkci \texttt{cleverminer} předat vstupní DataFrame s~daty, který reprezentuje vstupní matici dat, další parametr je jedna ze tří implementovaných procedur, dále seznam podmínek pro vyhodnocení tvrzení, vypnutí optimalizace, limit pro výsledná tvrzení a seznam cedentů. Cedenty jsou rozděleny na antecedenty (parametr \texttt{ante}, tj. boolovský atribut $\varphi$), sukcedenty (parametr \texttt{succ}, tj. atribut $\psi$) a podmínky (parametr \texttt{cond}, tj. boolovský atribut $\chi$).
@@ -423,11 +423,11 @@ Literály v~rámci cedentů lze také kombinovat obdobnými způsoby. Opět lze 
 Další parametry, které lze předat této funkci jsou:
 \begin{itemize}
     \itemsep0em
-    \item \texttt{Base} -- Minimální počet řádků, které splňují antecedenty i sukcedenty (číslo $a$ v~tabulce \ref*{tab:GUHA:tabulka}).
-    \item \texttt{RelBase} -- Hodnota Base vydělená celkovým počtem řádků dat (případně počtem řádků v~matici s~aplikovanou podmínkou).
-    \item \texttt{conf} -- Konfidence, pravděpodobnost $/mathrm{P}(\psi|\varphi)$. Jinými slovy procen--\\tuální zastoupení řádků, které vyhovují $\psi$ (sukcendentům) z~těch řádků, které vyhovují i $\varphi$ (antecendtům).
-    \item \texttt{aad} (nadprůměrná závislost) -- Jak moc $\varphi$ zvyšuje  pravděpodobnost $\psi$. Kolikrát se zvýší pravděpodobnost splnění sukcedentů, když se vezmou pouze záznamy, které vyhovují antecentům, oproti všem záznamům minus 1.
-    \item \texttt{bad} (podprůměrná závislost) -- Jak moc $\varphi$ snižuje  pravděpodobnost $\psi$.
+    \item \texttt{Base} (základ) -- Minimální počet řádků, které splňují antecedenty i sukcedenty (číslo $a$ v~tabulce \ref*{tab:GUHA:tabulka}).
+    \item \texttt{RelBase} (relativní základ) -- Hodnota základu vydělená celkovým počtem řádků dat (případně počtem řádků v~matici s~aplikovanou podmínkou).
+    \item \texttt{conf} (Konfidence) -- Pravděpodobnost $/mathrm{P}(\psi|\varphi)$. Jinými slovy procen--\\tuální zastoupení řádků, které vyhovují $\psi$ (sukcendentům) z~těch řádků, které vyhovují i $\varphi$ (antecendtům).
+    \item \texttt{AAD} (nadprůměrná závislost) -- Jak moc $\varphi$ zvyšuje  pravděpodobnost $\psi$. Kolikrát se zvýší pravděpodobnost splnění sukcedentů, když se vezmou pouze záznamy, které vyhovují antecentům, oproti všem záznamům minus 1.
+    \item \texttt{BAD} (podprůměrná závislost) -- Jak moc $\varphi$ snižuje  pravděpodobnost $\psi$.
 \end{itemize}
 
 Příklad volání funkce \texttt{cleverminer} je sepsaný v~ukázce kódu č. \ref*{code:cleverminer}.
