@@ -80,7 +80,7 @@ Asociační pravidlo má tvar:
     \varphi_{\mbox{\,\footnotesize Den v~týdnu}} \land \varphi_{\,\mbox{\footnotesize Typ promoakce}} \Rightarrow \psi_{\mbox{\,\footnotesize Množství}}
 \end{equation}
 
-V ukázce kódu \ref*{code:cleverminerH1} jsou uvedené parametry pro spuštění metody. Konfidence byla zvolena 80~\%. Výsledky běhu jsou uvedené v~tabulce \ref*{tab:H1vysl}, pro jeden záznam v~tabulce je uvedena slovní interpretace nalezeného asociačního pravidla. Označení \emph{Základ} údává počet nalezených řádků, pro které platí příslušné pravidlo\footnote{Zbylé pojmy jsou vysvětleny v teoretické části \label{sec:clever:pojmy}.}.  Z~této tabulky lze vyčíst, že pro vybrané dny v~týdnu -- pondělí, úterý, středa, čtvrtek a neděle, tj. nikoli pro pátek a sobotu -- a pro produkty, které byly v~den záznamu týden po promoakci platí, že 80~\% těchto záznamů bylo v~množství do jednoho kusu. Podle dalšího zkoumání dat jsem zjistila, že se jedná především o kategorii \emph{Masné výrobky} ze třetí úrovně hierarchie.
+V ukázce kódu \ref*{code:cleverminerH1} jsou uvedené parametry pro spuštění metody. Konfidence byla zvolena 80~\%. Výsledky běhu jsou uvedené v~tabulce \ref*{tab:H1vysl}, pro jeden záznam v~tabulce je uvedena slovní interpretace nalezeného asociačního pravidla. Označení \emph{Základ} údává počet nalezených řádků, pro které platí příslušné pravidlo\footnote{Zbylé pojmy jsou vysvětleny v teoretické části \label{sec:clever:pojmy}.}.  Z~této tabulky lze vyčíst, že pro dny záznamu ve vybrané dny v~týdnu -- pondělí, úterý, středa, čtvrtek a neděle, tj. nikoli pro pátek a sobotu -- a zároveň pro produkty, které byly v~den záznamu týden po promoakci platí, že 80~\% těchto záznamů bylo v~množství do jednoho kusu. Podle dalšího zkoumání dat jsem zjistila, že se jedná především o kategorii \emph{Masné výrobky} ze třetí úrovně hierarchie.
 
 
 \begin{lstlisting}[language=Python, style=mystyle, label={code:cleverminerH1}, caption={Hypotéza č. 1, funkce \texttt{cleverminer}.}]
@@ -125,8 +125,7 @@ cleverminer(df = data,
             Základ ($a$) & Konfidence & AAD & AP \\
             \midrule
 19765 & 0.821 & $+0.623$ & weekday(0) $\land$ promo(after\_promo) $\Rightarrow$ amount\_bins((-0.99,0)) \\
-\multicolumn{4}{c}{{\footnotesize{\textit{Pokud byl shrink zaznamenaný v pondělí a zároveň se týkal produktu,}}}} \\
-\multicolumn{4}{c}{{\footnotesize{\textit{který byl týden po promoakci, pak se zaznamanlo množství do jednoho kusu\footnote{Shrinkované množství je v datech zaznamenané v záporných číslech.}.}}}}\\
+& & & {\footnotesize{\textit{Pokud byl shrink zaznamenaný v pondělí a~zároveň se týkal produktu, který byl týden po promoakci, pak se zaznamenalo množství do jednoho kusu\footnote{Shrinkované množství je v datech zaznamenané v záporných číslech.}. }}} \\
 39271 & 0.820 & +0.622 & weekday(0, 1)  $\land$ promo(after\_promo) $\Rightarrow$ amount\_bins((-0.99,0)) \\
 63920 & 0.815 & +0.613 & weekday(0, 1, 2)  $\land$ promo(after\_promo) $\Rightarrow$ amount\_bins((-0.99,0)) \\
 19506 & 0.820 & +0.621 & weekday(1)  $\land$ promo(after\_promo) $\Rightarrow$ amount\_bins((-0.99,0)) \\
@@ -141,7 +140,8 @@ cleverminer(df = data,
 \end{center}
 \end{table}
 
-Ná základě výsledků této hypotézy lze společnosti doporučit, aby se přezkoumala frekvenci zásobování produktů pro prodejen na začátku týdne
+Ná základě výsledků této hypotézy lze společnosti doporučit, aby se přezkoumala frekvenci zásobování produktů do prodejen na začátku týdne a upravila ji podle očekávaných prodejů. Týká se to především zásobování masných výrobků prodávaných na váhu.
+
 \vspace*{1em}
 
 \textbf{Hypotéza č. 2: Kategorie shrinkovaného zboží je závislá na typu promoakce a dni v~týdnu}
@@ -245,11 +245,13 @@ S pravděpodobností vyšší než 50~\% se toto tvrzení potvrdilo pouze u kate
 
 Asociační pravidlo je následovné:
 \begin{equation}
-    \varphi_{\mbox{\,\footnotesize Den v~týdnu}} \land  \varphi_{\mbox{\,\footnotesize Čtvtina měsíce}} \Rightarrow \psi_{\mbox{\,\footnotesize Typ prodejny}}
+    \varphi_{\mbox{\,{\footnotesize Den v týdnu}}} \land  \varphi_{\mbox{\,{\footnotesize Čtvtina měsíce}}} \Rightarrow \psi_{\mbox{\,{\footnotesize Typ prodejny}}}
 \end{equation} 
 V případě antecedentu je možné uvažovat minimální délku jeden boolovský atribut, maximální dva. Je tedy možné, že nalezené pravidlo se může týkat pouze jednoho ze dvou boolovský atributů v~antecedentu.
 
 Záznamy uskutečněné ve středu, čtvrtek a pátek v~poslední čtvrtině měsíce, se ze 67\% konfidencí týkají malých prodejen.
+
+
 
 \textbf{Další hypotézy}
 
@@ -261,7 +263,7 @@ Dále byly uvažovány hypotézy:
     \item Hypotéza č. 11: Na některých v některých lokalitách mají často velký shrink.
 \end{itemize}
 
-Pro tyto hypotézy ale nebylo nalezeno žádné dostatečně silné, tj. s konfidencí vyšší než 40~\%, asociační pravidlo.
+Pro tyto hypotézy ale nebylo nalezeno žádné dostatečně silné, tj. s~konfidencí vyšší než 40~\%, asociační pravidlo.
 
 \subsection*{Shrnutí ověření hypotéz}
 
@@ -271,22 +273,23 @@ V tabulce j
     \centering
     \captionsetup{justification=centering}
     \caption{Shrnutí ověření hypotéz na vzorových datech společnosti.}
-    \begin{tabular}{ccc}
-    \textbf{Číslo hypotézy} & \textbf{Potvrzena} & \textbf{Komentář} \\
+    \begin{tabular}{p{4cm} cc}
+    \textbf{Označení hypotézy} & \textbf{Potvrzena} & \textbf{Komentář} \\
     \midrule
-    1.1. & 79{,}27                & 79{,}15\\
-    1.2. & 82{,}88                & 82{,}77\\
-    1.3. & 82{,}80                & 82{,}67\\
-    2.1. & 83{,}21                & 83{,}07\\
-    2.2. & 83{,}38                & 83{,}30\\
-    2.3. & 83{,}67                & 83{,}54\\
-    2.4. & 83{,}44                & 83{,}33    \\
-    2.5 & 83,60&                    83,45      
+    1.  &  \cmark     &        \\
+    2.  &  \cmark     &        \\
+    3.  &  \cmark     &        \\
+    4.  &  \cmark     &        \\
+    5.  &  \cmark     &        \\
+    6.  &  \cmark     &        \\
+    7.  &  \cmark     &        \\
+    8. Časové údaje ovlivňují pořízení záznamu &  \cmark     &        \\
+    9. Velké prodejny a velká města &  \xmark     &        \\
+    10. Spektrum produktů na velkých prodejnách &  \xmark     &        \\
+    11. Lokalita &  \xmark     &        \\
     \end{tabular}
     \label{tab:hypotezy}
 \end{table}
-
-
 
 \section{Produkty nepopsané korelační analýzou}
 
