@@ -1,7 +1,8 @@
 \chapter{Vizualizace dat}
 \label{ch:vizualizace}
 
-Očištěná data vybrané společnosti obsahující záznamy shrinků, které byly způsobeny škodami, jsem vizualizovala v~nástroji Power BI, který se používá pro business intelligence analýzu. Vytvořila jsem report, který umožňuje pomocí interaktivních grafů analyzovat data. První část této kapitoly se věnuje technickému popisu reportu, zatímco druhá část shrnuje výsledky analýzy plynoucí z~reportu.
+Očištěná data vybrané společnosti obsahující záznamy shrinků, jsem vizualizovala v~nástroji Power BI, který se používá pro business intelligence analýzu. Vizualizace se týká pouze těch shrinků, které spadají do kategorie \emph{shrinky způsobené škodami}, přehled dělení shrinků se nachází v~části \label{sec:shrinkyTypy}
+. Vytvořila jsem report, který umožňuje pomocí interaktivních grafů analyzovat data. První část této kapitoly se věnuje technickému popisu reportu, zatímco druhá část shrnuje výsledky analýzy plynoucí z~reportu.
 
 \section{Popis řešení}
 \label{sec:vizualizace:popis}
@@ -115,7 +116,7 @@ Další stránka zobrazuje data kategorií Velmi čerstvé a Čerstvé podle dal
     \label{obr:PBI:levelsSFF}
 \end{figure}
 
-Tabulka č. 4 přiřazuje vybrané ukazatele k~jednotlivým typů shrinku. Další tabulka má tyto údaje ale přiřazené podle typu promoakce produktu, který je evidován v~záznamu shrinku. Následující tabulky se týkají již konkrétních kategorií a produktů, z~produktu se lze přesunout na další stránku věnující se detailu pouze jednoho produktu (viz obr.~\ref*{obr:PBI:drilldetail}). Sledován je podíl shrinku na tržbách prodejny, na tržbách produktu na prodejne, výskyt v~záznamech, ztracená tržba a její procentuální zastoupení. Na stránce jsou i jako v~předešlých případech filtry a souhrnné údaje.
+Tabulka č. 4 přiřazuje vybrané ukazatele k~jednotlivým typům shrinku. Další tabulka obsahuje také tyto údaje ale přiřazené podle typu promoakce produktu, který je evidován v~záznamu shrinku. Následující tabulky se týkají již konkrétních kategorií a produktů, z~produktu se lze přesunout na další stránku věnující se detailu pouze jednoho produktu (viz obr.~\ref*{obr:PBI:drilldetail}). Sledován je podíl shrinku na tržbách prodejny, na tržbách produktu na prodejne, výskyt v~záznamech, ztracená tržba a její procentuální zastoupení. Na stránce jsou i jako v~předešlých případech filtry a souhrnné údaje.
 
 \begin{figure}[h!]
     \centering
@@ -127,7 +128,7 @@ Tabulka č. 4 přiřazuje vybrané ukazatele k~jednotlivým typů shrinku. Dalš
 
 \subsubsection*{Čas -- Velmi čerstvé a Čerstvé}
 
-Na další stránce jsou data porovnávána vzhledem k~datumu záznamu -- ke dni v~týdnu a části měsíce. Na této stránce, kromě filtrování typů jako v~předchozích případech, může uživatel určit pro který ukazatel budou grafy zobrazeny. Vybrat lze ze ztracených nákladů, podílu shrinku na celkových tržbách prodejny a z~podílu shrinku na tržbách v~dané kategorie a případně v~části měsíce, viz č. 1 na obr.~\ref*{obr:PBI:timeSFF}. Zbylé grafy jsou rozděleny na tři části -- podle typu shrinku, podle umístění prodejen a podle typu prodejny. V každé části je přehled, který říká v~jakém poměru tyto příznaky jsou (v závislosti na zvoleném ukazateli). Dále jsou pro každou část je ukazatel z~pohledu dne v~týdnu nebo části měsíce, kdy byl shrink zaznamenán. 
+Na další stránce jsou data porovnávána vzhledem k~datu záznamu, tj. ke dni v~týdnu a části měsíce. Na této stránce, kromě filtrování typů jako v~předchozích případech, může uživatel určit pro který ukazatel budou grafy zobrazeny. Vybrat lze ze ztracených nákladů, podílu shrinku na celkových tržbách prodejny a z~podílu shrinku na tržbách v~dané kategorii a případně v~části měsíce, viz č. 1 na obr.~\ref*{obr:PBI:timeSFF}. Zbylé grafy jsou rozděleny na tři části -- podle typu shrinku, podle umístění prodejen a podle typu prodejny. V každé části je přehled, který říká v~jakém poměru tyto příznaky jsou (v~závislosti na zvoleném ukazateli). Každá část zobrazuje poměry v~porovnání s~dny v~ týdnu, resp. s~částmi měsíce.
 
 \begin{figure}[h!]
     \centering
@@ -139,9 +140,9 @@ Na další stránce jsou data porovnávána vzhledem k~datumu záznamu -- ke dni
 
 \subsubsection*{Detail produktu}
 
-Poslední stránka je věnovaná analýze konkrétního produktu, snímek je na obr. \ref*{obr:PBI:detail}. Je zobrazené zastoupení produktu podel typu prodejny a podle kraje z~pohledu ztracených nákladů (č. 1). Dále je na této stránce tabulka (č. 2) se záznamy agregovaná podle data záznamu. Každý řádek s~datem lze dále rozbalit pro detail o jaký typ shrinku se jednalo, k~jednotlivým řádkům jsou napočítané vybrané ukazatele. Další tabulka (č. 3) ukazuje, jaký podíl na tržbách produktu a celkových tržbách má který typ shrinku. 
+Poslední stránka je věnovaná analýze konkrétního produktu, snímek je na obr. \ref*{obr:PBI:detail}. Je zobrazené zastoupení produktu podle typu prodejny a podle kraje z~pohledu ztracených nákladů (č. 1). Dále je na této stránce tabulka (č. 2) se záznamy agregovaná podle data záznamu. Každý řádek s~datem lze dále rozbalit pro detail o jaký typ shrinku se jednalo, k~jednotlivým řádkům jsou napočítané vybrané ukazatele. Další tabulka (č. 3) ukazuje, jaký podíl na tržbách produktu a celkových tržbách má který typ shrinku. 
 
-Zbylé grafy ukazují konkrétní prodejny, které měli největší podíl shrinku tohoto produktu na svých tržbách, opět celkových i produktových. Dále jak je shrink tohoto produktu rozložený do dní v~týdnu, resp. do částí v~měsíci (č. 4).
+Zbylé grafy ukazují konkrétní prodejny, které měly největší podíl shrinku tohoto produktu na svých tržbách, opět celkových i produktových. Dále jak je shrink tohoto produktu rozložený do dní v~týdnu, resp. do částí v~měsíci (č. 4).
 
 \begin{figure}[h!]
     \centering
@@ -154,14 +155,14 @@ Zbylé grafy ukazují konkrétní prodejny, které měli největší podíl shri
 \section{Výsledky}
 \label{sec:vizualizace:vysl}
 
-Díky Power BI reportu je možné snadno zjistit, které kategorie či produkty jsou zastoupené více než jiné, nebo které prodejny mají vysoký podíl shrinku na svých tržbách a v~jakém okrese ke shrinkům dochází nejčastěji. Tato sekce obsahuje popis zjištěných informací z~dat , a to včetně ukázek konkrétních vizualizací, ze kterých pozorování vychází.
+Díky Power BI reportu je možné snadno zjistit, které kategorie či produkty jsou zastoupené více než jiné, nebo které prodejny mají vysoký podíl shrinku na svých tržbách a v~jakém okrese ke shrinkům dochází nejčastěji. Tato sekce obsahuje popis zjištěných informací z~dat, a to včetně ukázek konkrétních vizualizací, ze kterých pozorování vychází.
 První část se věnuje pozorování na celých datech. tj. pozorovaná data za měsíc březen roku 2023, všech evidovaných shrinků způsobených škodami. Druhá část popisuje chování produktů v~kategorii Čerstvé a Velmi čerstvé a typu shrinku prošlé a zkažené zboží.
 
 \subsection*{Pozorování na celých datech}
 
 Pořadí zastoupení shrinků jednotlivých kategorií první úrovně hierarchie na celkových tržbách v~datech lze vidět na obrázku \ref*{obr:PBI:vysL1}. Je vidět, že kategorie Velmi čerstvé a Čerstvé jsou výrazně více zastoupeny než zbylé kategorie. Na témže obrázku se nachází i porovnání hodnot vzhledem k~velikosti prodejen. 
 Malé prodejny mají v~kategoriích s~nejvyšším podílem shrinků na tržbách větší podíl než velké prodejny.
-Na náseldujícím obrázku \ref*{obr:PBI:vysL34} je zobrazeno zastoupení kategorií třetí a čtvrté úrovně opět s~porovnáním pro oba typy prodejen. Všechny zobrazené kategorie jsou podkategoriemi skupin Velmi čerstvé nebo Čerstvé.
+Na následujícím obrázku \ref*{obr:PBI:vysL34} je zobrazeno zastoupení kategorií třetí a čtvrté úrovně opět s~porovnáním pro oba typy prodejen. Všechny zobrazené kategorie jsou podkategoriemi skupin Velmi čerstvé nebo Čerstvé.
 
 \begin{figure}[h!]
     \centering
@@ -180,7 +181,7 @@ Na náseldujícím obrázku \ref*{obr:PBI:vysL34} je zobrazeno zastoupení kateg
 \end{figure}
 
 
-Tabulka \ref*{tab:PBI:vysL1} obsahuje agregované důležité metriky podle sedmi hlavních kategorií. Kategorie Velmi čerstvé má nejvíce evidovaných záznamů, rovněž nejvyšší oba podíly na tržbách i největší celkovou ztrátu způsobenou shrinkem. Hodnota shrinku činí téměř dvě procenta tržeb kategorie. Co se týče tržeb za tuto kategorii, jedná se o druhou kategorii s~nejvyššími tržbami ve sledovaném období. Vyšší tržby má pouze kategorie Suché, kde ale ztráta u tohoto typu zboží je více než dvacetkrát menší. Kategorie Čerstvé se vyskytuje téměř v~půl milionu záznamů. Hodnota shrinků produktů je více než jedno procento tržeb této kategorie. Zbylé kategorie mají velmi malé zastoupení v~datech a význam vzhledem ke svým tržbám.
+Tabulka \ref*{tab:PBI:vysL1} obsahuje agregované důležité metriky podle sedmi hlavních kategorií. Kategorie Velmi čerstvé má nejvíce evidovaných záznamů, rovněž nejvyšší oba podíly na tržbách i největší celkovou ztrátu způsobenou shrinkem. Hodnota shrinku činí téměř dvě procenta tržeb kategorie. Co se týče tržeb za tuto kategorii, jedná se o druhou kategorii s~nejvyššími tržbami ve sledovaném období. Vyšší tržby má pouze kategorie Suché, kde ale relativní ztráta u tohoto typu zboží je více než dvacetkrát menší. Kategorie Čerstvé se vyskytuje téměř v~půl milionu záznamů. Hodnota shrinků produktů je více než jedno procento tržeb této kategorie. Zbylé kategorie mají velmi malé zastoupení v~datech a význam vzhledem ke svým tržbám.
 
 \begin{table}[!h]
     \centering
@@ -200,7 +201,7 @@ Tabulka \ref*{tab:PBI:vysL1} obsahuje agregované důležité metriky podle sedm
     \label{tab:PBI:vysL1}
 \end{table}
 
-Další tabulka \ref*{tab:PBI:vysSh} obsahuje hodnoty ukazatelů k~jednotlivým typům shrinků. Lze vidět, že Prošlé a zkažené zboží tvoří 62~\% všech shrinků z~pohledu ztracených nákladů. Necelými 24~\% jsou zastoupené produkty, které byly věnovány potravinovým bankám. Jedná se sice o druhý nejčastější shrink v~záznamech, nicméně toto zboží není vyhozeno zcela, ale je předáno dále. Pro společnost se jedná stále ztracený zisk, ale zboží je dál efektivně využito a nedochází tak k~plýtvání jako takovému. Další typy shrinků nejsou dohromady netvoří ani 15~\% všech ztracených nákladů. Potravinová banka je evidována z~96~\% u produktů z~kategorie Velmi čerstvé a jedná se především o podkategorie Pečivo (62~\%), Zelenina (19~\%) a Ovoce ($12{,}5$~\%).
+Další tabulka \ref*{tab:PBI:vysSh} obsahuje hodnoty ukazatelů k~jednotlivým typům shrinků. Lze vidět, že Prošlé a zkažené zboží tvoří 62~\% všech shrinků z~pohledu ztracených nákladů. Necelými 24~\% jsou zastoupené produkty, které byly věnovány potravinovým bankám. Jedná se sice o druhý nejčastější shrink v~záznamech, nicméně toto zboží není vyhozeno zcela, ale je předáno dále. Pro společnost se jedná stále ztracený zisk, ale zboží je dál efektivně využito a nedochází tak k~plýtvání jako takovému. Další typy shrinků dohromady netvoří ani 15~\% všech ztracených nákladů. Potravinová banka je evidována z~96~\% u produktů z~kategorie Velmi čerstvé a jedná se především o podkategorie Pečivo (62~\%), Zelenina (19~\%) a Ovoce ($12{,}5$~\%).
 
 \begin{table}[h!]
     \centering

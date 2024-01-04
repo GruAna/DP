@@ -1,6 +1,6 @@
 \section{Příprava vzorku dat pro další analýzy}
 \label{sec:priprava}
-Data z~výše popsaných tabulek bylo potřeba sloučit do jedné tabulky, aby nad nimi bylo možné provést analýzy. Napojení dat bylo provedeno v~Jupyter Noteboocích v~jazyce Python. Na tabulku s~evidovanými shrinky bylo třeba napojit číselníky. Podle názvů prodejen byly napojeny na prodejny demografické údaje. Údaje o počtu obyvatelích, jsem rozdělila do pěti kategorií. Z data transakce bylo extrahováno datum pro den a na základě jeho hodnoty bylo určeno do jaké čtvrtiny měsíce patří. Z~data také bylo odvozeno o jaký den v~týdnu se jedná pomocí funkce v~Python knihovně\emph{pandas}.
+Data z~výše popsaných tabulek bylo potřeba sloučit do jedné tabulky, aby nad nimi bylo možné provést analýzy. Napojení dat bylo provedeno v~Jupyter Noteboocích v~jazyce Python. Na tabulku s~evidovanými shrinky bylo třeba napojit číselníky. Podle názvů prodejen byly napojeny na prodejny demografické údaje. Údaje o počtu obyvatelích, jsem rozdělila do pěti kategorií. Z~data transakce bylo extrahováno datum pro den a na základě jeho hodnoty bylo určeno do jaké čtvrtiny měsíce patří. Z~data také bylo odvozeno o jaký den v~týdnu se jedná pomocí funkce v~Python knihovně \emph{pandas}.
 
 Na data se zaznamenanými shrinky jsem napojila data o promoakcích a každý řádek označila jednou ze tří hodnot -- žádná promoakce, promoakce, po promoakci. Hodnota \emph{po promoakci} označuje záznamy, které byly evidovány do jednoho týdne po ukončené promoakci na dané prodejně pro daný produkt. 
 
@@ -16,7 +16,7 @@ Zkoumaný dataset se záznamy shrinků produktů jsem rozšířila o další sle
 Hodnoty ve sloupci byly vypočítány jako hodnota shrinku na jednom řádku vydělená příslušnými tržbami. 
     Tabulka tržeb byla získaná z~tabulky \emph{transakce}, pro ID transakcí, které odpovídají prodejům. Tabulka byla agregovaná podle sloupců: prodejna, čtvrt měsíce, kategorie první úrovně.
 
-S tržbami produktu souvisí i sloupec Prodej, který nabývá logických hodnot \emph{true, false}, podle toho, zda se produkt v dané období vůbec prodával nebo ne.
+S tržbami produktu souvisí i sloupec Prodej, který nabývá logických hodnot \emph{true, false}, podle toho, zda se produkt v~dané období vůbec prodával nebo ne.
 % Následující část text bude věnována rozboru dat pro typ shrinku \emph{prošlé a zkažené zboží} pro kategorie Velmi čerstvé a Čerstvé z~produktové hierarchie úrovně 1.
 % v~období jednoho kalendářního měsíce.
 
@@ -36,7 +36,7 @@ Každý řádek odpovídá jednomu záznamu v~databázi shrinku daného produktu
     \item Typ prodejny -- kategorická proměnná
     \item Okres -- kategorická proměnná
     \item Kraj -- kategorická proměnná
-    \item Počet obyvatel v lokalitě -- kategorická proměnná
+    \item Počet obyvatel v~lokalitě -- kategorická proměnná
     \item ID produktu -- kategorická proměnná
     \item Datum transakce -- kategorická proměnná
     \item ID shrinku -- kategorická proměnná
@@ -47,7 +47,7 @@ Každý řádek odpovídá jednomu záznamu v~databázi shrinku daného produktu
     \item 5 (úroveň) -- kategorická proměnná
     \item 6 (úroveň) -- kategorická proměnná
     \item Typ promoakce -- kategorická proměnná
-    \item Prodej -- kategorická proměnná
+    \item Prodej -- kategorická proměnná \footnote{Příznak \emph{prodej} je v~implementaci označen jako \emph{saled}.}
     % \item Expirace -- kategorická proměnná
     \item Den v~týdnu -- kategorická proměnná
     % \item Číslo dne -- kategorická proměnná
@@ -56,7 +56,7 @@ Každý řádek odpovídá jednomu záznamu v~databázi shrinku daného produktu
     \item Ztracené náklady (označováno také jako hodnota shrinku) -- spojitá proměnná
     \item Podíl na tržbách produktu -- spojitá proměnná
     \item Podíl na celkových tržbách -- spojitá proměnná
-    \item Podíl na tržbách kategorie z úrovně 1 -- spojitá proměnná
+    \item Podíl na tržbách kategorie z~úrovně 1 -- spojitá proměnná
 \end{itemize}
 % Původní sloupec datum jsem rozdělila ještě na dvě jiné proměnné, a to den v~týdnu a období v~měsíci.
 %  a sloupec datum jsem vynechala. 
@@ -88,11 +88,11 @@ necelých jeden a půl milionu řádků.
 
 
 
-Jako cílové sloupce (\emph{target} sloupce) jsem určila sloupce s~ množstvím produktu, hdonotou shrinku a podíly. Zbylé sloupce slouží jako vysvětlující pro-\linebreak měnné, dále budou označovány jako příznaky pro cílové sloupce. Všechny vybrané příznaky jsou kategorické proměnné, které lze dále rozdělit na nominální a ordinální. Nominální proměnné jsou ID prodejny, typ prodejny, typ promoakce, prodej, ID produktu, kategorie produktové hierarchie a údaje o lokalitách. Ordinální proměnné jsou den v~týdnu a období měsíce. Ordinální příznaky jsem přeznačila tak, aby každá obsahovala pouze hodnoty od nuly do $n_p$, kde $n_p$ je počet kategorií v~$p$-tém příznaku. 
+Jako cílové sloupce (\emph{target}) jsem určila sloupce s~ množstvím produktu, hodnotou shrinku a podíly. Zbylé sloupce slouží jako vysvětlující proměnné, dále budou označovány jako příznaky pro cílové sloupce. Všechny vybrané příznaky jsou kategorické proměnné, které lze dále rozdělit na nominální a ordinální. Nominální proměnné jsou ID prodejny, typ prodejny, typ promoakce, prodej, ID produktu, kategorie produktové hierarchie a údaje o lokalitách. Ordinální proměnné jsou den v~týdnu a období měsíce. Ordinální příznaky jsem přeznačila tak, aby každá obsahovala pouze hodnoty od nuly do $n_p$, kde $n_p$ je počet kategorií v~$p$-tém příznaku. 
 
 Pro další postup bylo vhodné přesunout se z~nominálních kategorických hodnot na číselné hodnoty. Pro tyto účely jsem zvolila metodu kódování podle cílového sloupce.  %!!! TODO odkaz do teorie, princip meotdy je vysvětlený v~kapitole...
 Neboť toto kódování na numerické hodnoty zachovává velikost datového souboru, to je klíčové vzhledem k~tomu, že nominální proměnné ve zkoumaných datech obsahují velký počet kategorií. 
-Např. počet unikátních produktů v~datech je více než 19 tisíc, což odpovídá stejnému počtu kategorií pro tuto proměnnou. Pokud bych použila one-hot kódování\footnote{One-hot kódování převádí kategorické hodnoty na numerické takovým způsobem že pro každou kategorii vytvoří samostatný sloupec s~binárními hodnotami, kde 1 odpovídá dané kategorii a 0 zbylým kategoriím.}  mohlo by dojít k~zásadnímu zvýšení počtu sloupců v~datech, v~tomto případě až o desítky tisíc. Kódování podle cílového sloupce je podobné převodu, který jsem použila pro ordinální proměnné. Avšak na rozdíl od něj, hodnota, která je kategorii přiřazena, souvisí se zastoupením této skupiny v~cílovém sloupci a nesouvisí s~uspořádáním hodnot uvnitř příznaku. Nevýhodou je, že takto upravená data mohou být náchylná na overfitting a zanést do vysvětlujíích proměnných nové infromace o vysvětlované proměnné. 
+Např. počet unikátních produktů v~datech je více než 19 tisíc, což odpovídá stejnému počtu kategorií pro tuto proměnnou. Pokud bych použila one-hot kódování\footnote{One-hot kódování převádí kategorické hodnoty na numerické takovým způsobem že pro každou kategorii vytvoří samostatný sloupec s~binárními hodnotami, kde 1 odpovídá dané kategorii a 0 zbylým kategoriím.}  mohlo by dojít k~zásadnímu zvýšení počtu sloupců v~datech, v~tomto případě až o desítky tisíc. Kódování podle cílového sloupce je podobné převodu, který jsem použila pro ordinální proměnné. Avšak na rozdíl od něj, hodnota, která je kategorii přiřazena, souvisí se zastoupením této skupiny v~cílovém sloupci a nesouvisí s~uspořádáním hodnot uvnitř příznaku. Nevýhodou je, že takto upravená data mohou být náchylná na overfitting a zanést do vysvětlujících proměnných nové informace o vysvětlované proměnné. 
 % proto je potřeba při predikování použít křížovou validaci.\cite{bib:encoding}
 
 % warehouse_id 339
@@ -133,7 +133,7 @@ Dále jsem se zabývala identifikací odlehlých hodnot. Nejprve jsem vizualizov
     % \end{minipage}
 \end{figure}
 
-Pomocí Tukeyho testu, implementovaného v jazyce Python, jsem identifikovala přes $150\ 000$ outlierů pro příznak ID prodejny %(\texttt{warehouse\_id})
+Pomocí Tukeyho testu, implementovaného v~jazyce Python, jsem identifikovala přes $150\ 000$ outlierů pro příznak ID prodejny %(\texttt{warehouse\_id})
 , čímž se dataset zredukoval. S~tímto krokem klesl i počet ostatních outlierů.
 
 V dalším kroku jsem se zaměřila na míru závislosti mezi proměnnými. Použitým metodám je věnována sekce v~teoretické části \ref{sec:Teoriekorelace}. 
@@ -158,7 +158,7 @@ Jako první metodu jsem zvolila  $\chi^2$ statistiku. Vzhledem k~vysokému počt
 %     \label{obr:nb:pearson}
 % \end{figure}
 Použila jsem proto míru vzájemné informace, která říká, jaká je podobnost mezi dvěma proměnnými \cite{bib:scikit}.
-Matice vypočítaných koeficientů je na obr. \ref*{obr:nb:MI}. Jedná se o symetrickou vlastnost, proto jsou hodnoty pod a nad diagonálou stejné. Z~výsledků je opět vidět, že ID produktu sdílí informaci s~úrovněmi kategorizace tím více, čím je kategorizace jemnější, což logické z povahy hierarchického stromu kategorií. Obdobně tomu je i u ID prodejny a údajích o lokalitě a datumových údajích. Jinak jsou hdonoty vzájemné informace nízké.
+Matice vypočítaných koeficientů je na obr. \ref*{obr:nb:MI}. Jedná se o symetrickou vlastnost, proto jsou hodnoty pod a nad diagonálou stejné. Z~výsledků je opět vidět, že ID produktu sdílí informaci s~úrovněmi kategorizace tím více, čím je kategorizace jemnější, což logické z~povahy hierarchického stromu kategorií. Obdobně tomu je i u ID prodejny a údajích o lokalitě a datumových údajích. Jinak jsou hdonoty vzájemné informace nízké.
 
 \begin{figure}[h!]
     \centering
@@ -252,11 +252,11 @@ Desátá komponenta (označená č. 9) spolu s~předchozími vysvětluje témě�
 \end{figure}
     
 Jak již bylo zmíněno pro redukci dimenzionality, příp. výběr proměnných, u kategorických dat lze použít metodu MCA, opět jsem využila implementaci z~knihovny \emph{Prince}. 
-V~této implementaci jsou nominální kategorické hodnoty kódovány tak, že narůstá počet sloupců, což náročnější na výpočetní výkon. Vzhledem k tomu, že jsem nanlýzy spouštěla na obyčejném osobním počítači, bylo proto nutné, vzhledem k~nárokům na paměť k~uložení matice, omezit množství dat. Odebrala jsem kategorie 5 a 6, které jsou velmi korelované s~ID produktu a vybrala jsem náhodný 20\% vzorek dat, na které jsem MCA aplikovala. Náhodný výběr jsem několikrát opakovala, aby bylo možné výsledek považovat za důvěryhodný. Ve výsledných příspěvcích ke komponentám se v závislosti na vybraných datech měnilo pořadí pouze příznaků, které měly blízké hodnoty příspěvku. Příznaky s malým příspěvkem neměli v žádném z~provedených běhů vyšší příspěvek než 10 \%. Přesto je třeba brát rozdělení dat v~úvahu při porovnávání výsledků s jinými metodami.
+V~této implementaci jsou nominální kategorické hodnoty kódovány tak, že narůstá počet sloupců, což náročnější na výpočetní výkon. Vzhledem k~tomu, že jsem analýzy spouštěla na běžném osobním počítači, bylo proto nutné, vzhledem k~nárokům na paměť k~uložení matice, omezit množství dat. Odebrala jsem kategorie 5 a 6, které jsou velmi korelované s~ID produktu a vybrala jsem náhodný 20\% vzorek dat, na které jsem MCA aplikovala. Náhodný výběr jsem několikrát opakovala, aby bylo možné výsledek považovat za důvěryhodný. Ve výsledných příspěvcích ke komponentám se v~závislosti na vybraných datech měnilo pořadí pouze příznaků, které měly blízké hodnoty příspěvku. Příznaky s~malým příspěvkem neměly v~žádném z~provedených běhů vyšší příspěvek než 10 \%. Přesto je třeba brát rozdělení dat v~úvahu při porovnávání výsledků s~jinými metodami.
 
 Vypočítala jsem prvních pět komponent, které dohromady popisují 79~\% variability dat. Jelikož byla každá kategorie chápána jako samostatná proměnná příspěvky jednotlivých příznaků ke komponentám byly rozmístěny mezi všechny kategorie, nikoli k~jednotlivým příznakům, takže je třeba pak příznaky zpětně agregovat.
-Po agregaci podle původních příznaků největší příspěvek mělo ID prodejny, okres, ID produktu, kraj a kategorie 4, 3. Zatímco nejmenší datum, den v~týdnu , období měsíce, typ prodejny a prodej. Tyto výsledky je třeba brát se zvážením neboť výpočty probíhali na řádově menším vzorku než u předchozích metod.
-N obrázcéch \ref*{obr:nb:mca_roztyl_komponetn} a \ref*{obr:nb:mca_kum_roztyl_komponetn} se nachází výsledky pro jeden běh metody MCA.
+Po agregaci podle původních příznaků největší příspěvek mělo ID prodejny, okres, ID produktu, kraj a kategorie 4, 3. Zatímco nejmenší datum, den v~týdnu, období měsíce, typ prodejny a prodej. Tyto výsledky je třeba brát se zvážením neboť výpočty probíhaly na řádově menším vzorku než u předchozích metod.
+N obrázcích \ref*{obr:nb:mca_roztyl_komponetn} a \ref*{obr:nb:mca_kum_roztyl_komponetn} se nachází výsledky pro jeden běh metody MCA.
 
 \begin{figure}[hbtp!]
     \centering
@@ -304,11 +304,11 @@ Na základě předchozích metod bylo z~původních příznaků datasetu
 vybráno několik příznaků, které popisují hodnotu shrinku.
 Vzhledem k~tomu, že různé metody vybraly různé příznaky, níže je sepsáno shrnutí, které říká, jaké příznaku jsou na základě zkoumaných dat relevantní vzhledem k~naměřeným hodnotám shrinku. 
 
-Závislé jsou hodnoty ID produktu a úrovně produktové hierachie. Dále také z~datumu lze určit období měsíce i den v~týdnu. ID produktu je závislé s umístěním prodejny a vlastnostmi lokality a typem prodejny.  Ze zmíněných korelovaných příznaků stačí použít pouze část příznaků, pokud je tato úvaha aplikována na výsledky metod PCA a MCA a výsledků zjištěných pomocí hraniční hodnoty VIF.
+Závislé jsou hodnoty ID produktu a úrovně produktové hierarchie. Dále také z~data lze určit období měsíce i den v~týdnu. ID produktu je závislé s~umístěním prodejny a vlastnostmi lokality a typem prodejny.  Ze zmíněných korelovaných příznaků stačí použít pouze část příznaků, pokud je tato úvaha aplikována na výsledky metod PCA a MCA a výsledků zjištěných pomocí hraniční hodnoty VIF.
 
 Následující sloupce byly získány podle hodnoty rozptylového inflačního faktoru -- úroveň 4, ID produktu, počet obyvatel, období měsíce, typ promoakce, den v~týdnu a prodej. Touto metodou byl navržena i úroveň 6, ta však z~důvodů korelace nebyla zahrnuta. Také hraniční ID prodejny a kraj byly proto vynechány. 
     
-Metodou PCA bylo zjištěno, které příznaky nejvíce přispívají ke komponentám, které popisují téměř 96~\% rozptylu v~původních datech. Po vynechání závislých příznaků se jedná o příznaky -- ID prodejny, datum transakce, typ prodejny, počet obyvatel, úroveň L6, čtvrtina mesíce, kraj, ID produktu. 
+Metodou PCA bylo zjištěno, které příznaky nejvíce přispívají ke komponentám, které popisují téměř 96~\% rozptylu v~původních datech. Po vynechání závislých příznaků se jedná o příznaky -- ID prodejny, datum transakce, typ prodejny, počet obyvatel, úroveň L6, čtvrtina měsíce, kraj, ID produktu. 
 % Naopak metoda MCA vybrala kategorie 4 až 6 jako důležité. Sloučením a přihlédnutím ke korelačním koeficientům byly vybráno pět příznaků -- 
     % ID prodejny, den v~týdnu, období v~měsíci, 5.
 

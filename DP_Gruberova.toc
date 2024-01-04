@@ -36,7 +36,7 @@
 \contentsline {section}{\numberline {4.1}Popis řešení}{56}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Metriky}{57}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Reporting}{58}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Výsledky}{63}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Výsledky}{64}{section.4.2}%
 \contentsline {chapter}{\numberline {5}Korelační analýza}{72}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Postup}{72}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Implementace}{74}{section.5.2}%
