@@ -47,7 +47,7 @@ Každý řádek odpovídá jednomu záznamu v~databázi shrinku daného produktu
     \item 5 (úroveň) -- kategorická proměnná
     \item 6 (úroveň) -- kategorická proměnná
     \item Typ promoakce -- kategorická proměnná
-    \item Prodej -- kategorická proměnná \footnote{Příznak \emph{prodej} je v~implementaci označen jako \emph{saled}.}
+    \item Prodej\footnote{Příznak \emph{prodej} je v~implementaci označen jako \emph{saled}.} -- kategorická proměnná
     % \item Expirace -- kategorická proměnná
     \item Den v~týdnu -- kategorická proměnná
     % \item Číslo dne -- kategorická proměnná
@@ -70,7 +70,7 @@ Nejprve jsem graficky analyzovala zastoupení shrinků v~závislosti na vybraný
 \begin{figure}[h!]
     \centering
     \captionsetup{justification=centering}
-    \includegraphics[width=\textwidth]{obrazky/grafy/zastoupenishrinky.png}
+    \includegraphics[width=0.96\textwidth]{obrazky/grafy/zastoupenishrinky.png}
     \caption{Zastoupení typů shrinků způsobených škodami v~datech \\ z~března roku 2023 podle hodnoty shrinku.}
     \label{obr:rok:g:zastoupenish1}
 \end{figure}
@@ -81,18 +81,16 @@ necelých jeden a půl milionu řádků.
 \begin{figure}[h!]
     \centering
     \captionsetup{justification=centering}
-    \includegraphics[width=\textwidth]{obrazky/grafy/zastoupeniL1.png}
+    \includegraphics[width=0.98\textwidth]{obrazky/grafy/zastoupeniL1.png}
     \caption{Zastoupení kategorií úrovně 1 v~datech \\ z~března roku 2023 podle hodnoty shrinku.}
     \label{obr:rok:g:zastoupeni1}
 \end{figure}
-
-
 
 Jako cílové sloupce (\emph{target}) jsem určila sloupce s~ množstvím produktu, hodnotou shrinku a podíly. Zbylé sloupce slouží jako vysvětlující proměnné, dále budou označovány jako příznaky pro cílové sloupce. Všechny vybrané příznaky jsou kategorické proměnné, které lze dále rozdělit na nominální a ordinální. Nominální proměnné jsou ID prodejny, typ prodejny, typ promoakce, prodej, ID produktu, kategorie produktové hierarchie a údaje o lokalitách. Ordinální proměnné jsou den v~týdnu a období měsíce. Ordinální příznaky jsem přeznačila tak, aby každá obsahovala pouze hodnoty od nuly do $n_p$, kde $n_p$ je počet kategorií v~$p$-tém příznaku. 
 
 Pro další postup bylo vhodné přesunout se z~nominálních kategorických hodnot na číselné hodnoty. Pro tyto účely jsem zvolila metodu kódování podle cílového sloupce.  %!!! TODO odkaz do teorie, princip meotdy je vysvětlený v~kapitole...
 Neboť toto kódování na numerické hodnoty zachovává velikost datového souboru, to je klíčové vzhledem k~tomu, že nominální proměnné ve zkoumaných datech obsahují velký počet kategorií. 
-Např. počet unikátních produktů v~datech je více než 19 tisíc, což odpovídá stejnému počtu kategorií pro tuto proměnnou. Pokud bych použila one-hot kódování\footnote{One-hot kódování převádí kategorické hodnoty na numerické takovým způsobem že pro každou kategorii vytvoří samostatný sloupec s~binárními hodnotami, kde 1 odpovídá dané kategorii a 0 zbylým kategoriím.}  mohlo by dojít k~zásadnímu zvýšení počtu sloupců v~datech, v~tomto případě až o desítky tisíc. Kódování podle cílového sloupce je podobné převodu, který jsem použila pro ordinální proměnné. Avšak na rozdíl od něj, hodnota, která je kategorii přiřazena, souvisí se zastoupením této skupiny v~cílovém sloupci a nesouvisí s~uspořádáním hodnot uvnitř příznaku. Nevýhodou je, že takto upravená data mohou být náchylná na overfitting a zanést do vysvětlujících proměnných nové informace o vysvětlované proměnné. 
+Např. počet unikátních produktů v~datech je více než 19 tisíc, což odpovídá stejnému počtu kategorií pro tuto proměnnou. Pokud bych použila one-hot kódování\footnote{One-hot kódování převádí kategorické hodnoty na numerické tak, že pro každou kategorii vytvoří samostatný sloupec s~binárními hodnotami, kde 1 odpovídá dané kategorii a 0 zbylým kategoriím.}  mohlo by dojít k~zásadnímu zvýšení počtu sloupců v~datech, v~tomto případě až o desítky tisíc. Kódování podle cílového sloupce je podobné převodu, který jsem použila pro ordinální proměnné. Avšak na rozdíl od něj, hodnota, která je kategorii přiřazena, souvisí se zastoupením této skupiny v~cílovém sloupci a nesouvisí s~uspořádáním hodnot uvnitř příznaku. Nevýhodou je, že takto upravená data mohou být náchylná na overfitting a zanést do vysvětlujících proměnných nové informace o vysvětlované proměnné. 
 % proto je potřeba při predikování použít křížovou validaci.\cite{bib:encoding}
 
 % warehouse_id 339
