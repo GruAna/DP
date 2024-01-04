@@ -39,11 +39,11 @@
 \contentsline {section}{\numberline {4.2}Výsledky}{64}{section.4.2}%
 \contentsline {chapter}{\numberline {5}Korelační analýza}{72}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Postup}{72}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Implementace}{74}{section.5.2}%
+\contentsline {section}{\numberline {5.2}Implementace}{75}{section.5.2}%
 \contentsline {subsection}{\numberline {5.2.1}Vstupy a výstupy}{75}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Spuštění analýzy}{75}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.2}Spuštění analýzy}{76}{subsection.5.2.2}%
 \contentsline {subsection}{\numberline {5.2.3}Popis funkcí a struktura kódu}{76}{subsection.5.2.3}%
-\contentsline {section}{\numberline {5.3}Výsledky}{83}{section.5.3}%
+\contentsline {section}{\numberline {5.3}Výsledky}{84}{section.5.3}%
 \contentsline {chapter}{\numberline {6}Analýza pomocí metody 4ftMiner}{89}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Hypotézy}{89}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Produkty nepopsané korelační analýzou}{96}{section.6.2}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  4 JAN 2024 15:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  4 JAN 2024 16:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1534,12 +1534,12 @@ Overfull \hbox (8.0077pt too wide) in paragraph at lines 44--45
 []\OT1/lmr/bx/n/12 Kategorie F \OT1/lmr/m/n/12 - Pro-dukty, u nich^^Tz ne-byl koe-fi-ci-ent ko-re-lace sta-tis-ticky v^^Syznamn^^Sy. 
  []
 
-<obrazky/grafy/matice_korelace_typy_DP_colored.pdf, id=1172, 363.27718pt x 221.8689pt>
-File: obrazky/grafy/matice_korelace_typy_DP_colored.pdf Graphic file (type pdf)
-<use obrazky/grafy/matice_korelace_typy_DP_colored.pdf>
-Package pdftex.def Info: obrazky/grafy/matice_korelace_typy_DP_colored.pdf  used on input line 52.
-(pdftex.def)             Requested size: 426.79134pt x 260.67566pt.
-[73] [74 <./obrazky/grafy/matice_korelace_typy_DP_colored.pdf>] [75]
+<obrazky/grafy/matice_korelace_typy_DP.pdf, id=1172, 354.36388pt x 221.8689pt>
+File: obrazky/grafy/matice_korelace_typy_DP.pdf Graphic file (type pdf)
+<use obrazky/grafy/matice_korelace_typy_DP.pdf>
+Package pdftex.def Info: obrazky/grafy/matice_korelace_typy_DP.pdf  used on input line 52.
+(pdftex.def)             Requested size: 426.79134pt x 267.22987pt.
+[73] [74 <./obrazky/grafy/matice_korelace_typy_DP.pdf>] [75]
 <obrazky/strukturaslozky.pdf, id=1201, 125.5089pt x 152.4897pt>
 File: obrazky/strukturaslozky.pdf Graphic file (type pdf)
 <use obrazky/strukturaslozky.pdf>
@@ -1573,7 +1573,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 247--247
 
 LaTeX Warning: Float too large for page by 42.00403pt on input line 260.
 
-
+[78] [79]
 Underfull \hbox (badness 10000) in paragraph at lines 270--270
 []|\OT1/lmr/m/n/12 Datum
  []
@@ -1584,14 +1584,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 270--270
  []
 
 
-LaTeX Warning: Reference `label' on page 78 undefined on input line 285.
+LaTeX Warning: Reference `label' on page 80 undefined on input line 285.
 
-[78] [79] [80] [81]
+[80] [81] [82]
 Overfull \hbox (0.65588pt too wide) in paragraph at lines 315--316
 \OT1/lmr/m/n/12 taFramu. Funkce \OT1/lmtt/m/n/12 categorize[]products \OT1/lmr/m/n/12 rozt^^Tr^^S^^Pd^^S^^P pro-dukty do p^^Teti ka-te-gori^^S^^P: \OT1/lmtt/m/n/12 itself,
  []
 
-[82] [83]
+[83]
 Overfull \hbox (0.52849pt too wide) in paragraph at lines 375--376
 \OT1/lmr/m/n/12 hodla jsem se tedy zv^^Sy^^Tsit hla-dinu v^^Syznamnosti na 10 %. Zv^^Sy^^Tsen^^S^^P hla-diny v^^Syznamnosti
  []
@@ -1627,8 +1627,8 @@ Package pdftex.def Info: obrazky/grafy/categorization_charts/categorization_char
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[85 <./obrazky/kor_maso.pdf>]
-<obrazky/zntb/vysledekMASO.png, id=1287, 469.755pt x 481.8pt>
+[85 <./obrazky/kor_maso.pdf>] [86 <./obrazky/kor_pec.pdf> <./obrazky/kor_zel.pdf>]
+<obrazky/zntb/vysledekMASO.png, id=1321, 469.755pt x 481.8pt>
 File: obrazky/zntb/vysledekMASO.png Graphic file (type png)
 <use obrazky/zntb/vysledekMASO.png>
 Package pdftex.def Info: obrazky/zntb/vysledekMASO.png  used on input line 455.
@@ -1637,11 +1637,7 @@ Package pdftex.def Info: obrazky/zntb/vysledekMASO.png  used on input line 455.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[86 <./obrazky/kor_pec.pdf> <./obrazky/kor_zel.pdf>]
-
-LaTeX Warning: Text page 87 contains only floats.
-
-[87 <./obrazky/grafy/categorization_charts/categorization_charts_L4_PROCMEAT.png> <./obrazky/zntb/vysledekMASO.png>]) (kapitoly/cleverminer.tex [88]
+) (kapitoly/cleverminer.tex [87 <./obrazky/grafy/categorization_charts/categorization_charts_L4_PROCMEAT.png>] [88 <./obrazky/zntb/vysledekMASO.png>]
 Kapitola 6.
 <obrazky/grafy/histogram/newplot(2).png, id=1336, 615.29875pt x 526.96875pt>
 File: obrazky/grafy/histogram/newplot(2).png Graphic file (type png)
@@ -1823,24 +1819,9 @@ Overfull \hbox (17.29578pt too wide) in paragraph at lines 1--2
 \OT1/lmr/m/n/12 C^^S^^Plem pr^^Sace bylo nal^^Sezt mo^^Tzn^^Se p^^Tr^^S^^P^^Tciny vzniku shirnk^^Wu pro-duktu pro vy-bra-nou spole^^Tcnost
  []
 
-
-Overfull \hbox (8.22125pt too wide) in paragraph at lines 1--2
-\OT1/lmr/m/n/12 a d^^Sale vy-tvo^^Trit pro-to-typ ^^Tre^^Tsen^^S^^P pro apli-kov^^San^^S^^P dan^^Se anal^^Syzy na data dal^^Ts^^S^^Pch spole^^Tcnost^^S^^P. 
- []
-
-
-Overfull \hbox (3.1037pt too wide) in paragraph at lines 16--18
-\OT1/lmr/m/n/12 a tr^^Tzbami. Jedn^^Sa se jak o tr^^Tzby shrin-ko-van^^Seho pro-duktu, tak promo^^Tcn^^S^^P tr^^Tzby ostatn^^S^^Pch
- []
-
 [99
 
-]
-Overfull \hbox (18.99352pt too wide) in paragraph at lines 19--21
-\OT1/lmr/m/n/12 k ostatn^^S^^Pm pro-dukt^^Wum by mohl b^^Syt p^^Treveden do sob^^Testa^^Tcn^^Seho n^^Sastroje, kter^^Sy nevy^^Tzaduje
- []
-
-) [100] (DP_Gruberova.lof
+]) [100] (DP_Gruberova.lof
 Overfull \hbox (15.00342pt too wide) in paragraph at lines 13--13
  [][] [][]\OT1/lmr/m/n/12 Uk^^Sazka vizu^^Sal^^Wu jedno^^Tr^^Sadkov^^Sa karta (vlevo) a v^^S^^Pce^^Tr^^Sadkov^^Sa karta (vpravo). 
  []
@@ -2021,7 +2002,7 @@ Package rerunfilecheck Info: File `DP_Gruberova.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  30040 strings out of 475380
- 559403 string characters out of 2775356
+ 559347 string characters out of 2775356
  1633209 words of memory out of 3000000
  50293 multiletter control sequences out of 15000+600000
  560424 words of font info for 109 fonts, out of 8000000 for 9000
@@ -2031,7 +2012,7 @@ Here is how much of TeX's memory you used:
 pdfTeX warning (dest): name{Hfootnote.11} has been referenced but does not exist, replaced by a fixed one
 
 {C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}<C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmib10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on DP_Gruberova.pdf (109 pages, 5015389 bytes).
+Output written on DP_Gruberova.pdf (109 pages, 5015458 bytes).
 PDF statistics:
  1868 PDF objects out of 2073 (max. 8388607)
  457 named destinations out of 1000 (max. 500000)
