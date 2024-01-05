@@ -47,7 +47,7 @@
 \contentsline {chapter}{\numberline {6}Analýza pomocí metody 4ftMiner}{90}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Hypotézy}{90}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Produkty nepopsané korelační analýzou}{97}{section.6.2}%
-\contentsline {chapter}{Závěr}{100}{chapter*.114}%
-\contentsline {chapter}{Literatura}{106}{chapter*.116}%
-\contentsline {chapter}{Přílohy}{110}{chapter*.117}%
+\contentsline {chapter}{Závěr}{100}{chapter*.115}%
+\contentsline {chapter}{Literatura}{106}{chapter*.117}%
+\contentsline {chapter}{Přílohy}{110}{chapter*.118}%
 \contentsline {chapter}{\numberline {A}Popis přiložených souborů}{110}{appendix.A}%

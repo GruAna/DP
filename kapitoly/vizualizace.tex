@@ -71,7 +71,7 @@ U čísel 5 a 6 jsou umístěny filtry -- pro typ prodejny a pro typ shrinku. Vy
     \centering
     \captionsetup{justification=centering}
     \includegraphics[width=\textwidth]{obrazky/PBI/tabulkaukzka.png}
-    \caption{Detail tabulky vybrané ukazatele pro jednotlivé kategorie \\ v~produktové hierarchii.}
+    \caption{Power BI -- Detail tabulky vybrané ukazatele pro jednotlivé kategorie \\ v~produktové hierarchii.}
     \label{obr:PBI:tab1}
 \end{figure}
 
@@ -112,7 +112,7 @@ Další stránka zobrazuje data kategorií Velmi čerstvé a Čerstvé podle dal
     \centering
     \captionsetup{justification=centering}
     \includegraphics[width=\textwidth]{obrazky/PBI/levelsSFFkopie.png}
-    \caption{Zobrazení údajů o shrincích kategorie Čerstvé a Velmi čerstvé \\ se zaměřením na kategorie a produkty.}
+    \caption{Power BI -- Zobrazení údajů o shrincích kategorie Čerstvé a Velmi čerstvé \\ se zaměřením na kategorie a produkty.}
     \label{obr:PBI:levelsSFF}
 \end{figure}
 
@@ -122,7 +122,7 @@ Tabulka č. 4 přiřazuje vybrané ukazatele k~jednotlivým typům shrinku. Dal�
     \centering
     \captionsetup{justification=centering}
     \includegraphics[width=0.45\textwidth]{obrazky/PBI/detaildrill.png}
-    \caption{Proklik na stránku s~detailem produktu.}
+    \caption{Power BI -- Proklik na stránku s~detailem produktu.}
     \label{obr:PBI:drilldetail}
 \end{figure}
 
@@ -134,7 +134,7 @@ Na další stránce jsou data porovnávána vzhledem k~datu záznamu, tj. ke dni
     \centering
     \captionsetup{justification=centering}
     \includegraphics[width=\textwidth]{obrazky/PBI/timeSFF.png}
-    \caption{Zobrazení údajů o shrincích kategorie Čerstvé a Velmi čerstvé \\ se zaměřením na časové údaje.}
+    \caption{Power BI -- Zobrazení údajů o shrincích kategorie Čerstvé a Velmi čerstvé \\ se zaměřením na časové údaje.}
     \label{obr:PBI:timeSFF}
 \end{figure}
 
@@ -224,6 +224,7 @@ Typ shrinku          & \vtop{\hbox{\strut Hodnota}\hbox{\strut shrinku}}  & \vto
 \end{table}
 
 Obrázek \ref*{obr:PBI:loc} obsahuje graf typu stromová mapa. Na grafu jsou zobrazeny kraje České republiky, případně okresy s~nejvyššími hodnotami shrinku. Pole příslušného kraje zabírá tolik procent grafu, kolik zaujímá evidovaný shrink. Necelých 25~\% z~celkového hodnoty všech zaznamenaných shrinků patří do kraje Hlavní město Praha. Dalších téměř 25~\% tvoří kraje Jihomoravský a Moravskoslezský v~podobném poměru. Největší zastoupení v~těchto krajích mají okresy příslušející jejich krajským městům. Záznamy ze Středočeského kraje tvoří $8{,}2$~\% ztracených nákladů. Každý z~krajů Zlínský, Ústecký, Olomoucký tvoří necelých $6$~\%. Zbylé kraje jednotlivě zaujímají méně jak $5$~\% na celkovém shrinku. Na grafu \ref*{obr:PBI:locvs} je porovnání hodnoty shrinku a počtu prodejen pro kraje, je vidět, že tyto dva ukazatele spolu souvisí.
+
 \begin{figure}[h!]
     \centering
     \captionsetup{justification=centering}
@@ -231,6 +232,20 @@ Obrázek \ref*{obr:PBI:loc} obsahuje graf typu stromová mapa. Na grafu jsou zob
     \caption{Power BI report -- Zobrazení krajů podle velikosti hodnoty shrinku (vlevo) a počet prodejen v~regionu (vpravo).}
     \label{obr:PBI:loc}
 \end{figure}
+
+Na dalším obrázku \ref*{obr:PBI:norm} jsou zobrazeny průměrné údaje na jednu prodejnu v~daném kraji. Porovnána je průměrná velikost shrinku na prodejně a podíl tohoto shrinku na průměrných tržbách v~kraji. Z~grafu lze vidět, že podle průměrných hodnot v~krajích: Olomoucký, Pardubický a Plzeňský. V~těchto oblastech je podíl shrinku na tržbách výrazně nižší než v~jiných krajích. V~těchto třech krajích a ještě v~ Karlovarském a Zlínském kraji je průměrná hodnota shrinku nižší u ostatních krajů. Nejvyšší hodnoty podílů jsou pro kraje Karlovarské, Královehradecký, Ústecký. Průměrná hodnota shrinku je nejvyšší u krajů Středočeský a Ústecký. 
+Data se týkají všech shrinků způsobených škodami a celého produktového portfolia.
+
+Na základě dvou předešlých pozorování by bylo vhodné se zaměřit na prodejny v~Karlovarském a Královehradeckém kraji.
+
+\begin{figure}[h!]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=\textwidth]{obrazky/PBI/normalized.png}
+    \caption{Power BI report -- Zobrazení krajů podle průměrné hodnoty shrinku na jednu prodejnu v porovnání s podílem shrinku na průměrných tržbách kraje.}
+    \label{obr:PBI:norm}
+\end{figure}
+
 
 Na obrázku \ref*{obr:PBI:types} nahoře je zobrazen jaký je podíl celkového shrinku na tržbách všech prodejen daného typu. V~dolní části je poměr normalizované hodnoty shrinku na prodejnách obou typů -- tj. průměrně jedna velká prodejna  tvoří 65~\% evidovaných shrinků, zatímco malé prodejny zbylých 35~\%.
 
