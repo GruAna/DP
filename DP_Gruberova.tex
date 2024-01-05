@@ -321,10 +321,90 @@ V \kde\ dne .................... &........................................ \\	% 
 
 \chapter{Popis přiložených souborů}
 %
-\texttt{data} -- složka se vzorovými datovými zdroji pro spuštění korelační analýzy.
+data -- složka se vzorovými datovými zdroji pro spuštění korelační analýzy. Obsahuje soubory:
+\begin{itemize}
+  \itemsep0em
+  \item move-other.csv
+  \item move-sell.csv
+  \item product-and-category.csv
+  \item promo.csv
+\end{itemize}
 
-\texttt{Categorization} -- složka se zdrojovými kódy naimplementovaného modulu 
+shrink\_categorization -- složka se zdrojovými kódy implementovaného modulu funkcí. Struktura složky je následující:
+\begin{itemize}
+  \itemsep0em
+  \item functions
+  \begin{itemize}
+    \itemsep0em
+    \item \_\_init\_\_.py
+    \item correlation.py
+    \item process\_data.py
+    \item promoaction.py
+    \item utils.py
+  \end{itemize}
+  \item tests
+  \begin{itemize}
+    \itemsep0em
+    \item \_\_init\_\_.py
+    \item test\_correlation.py
+    \item test\_process\_data.py
+    \item test\_promoaction.py
+    \item test\_utils.py
+  \end{itemize}
+  \item run\_analysis.ipynb
+  \item promo.csv
+\end{itemize}
 
+
+
+\chapter{Překlad pojmů z praktické části}
+\label{slovnik}
+V praktické části jsou názvy příznaků uvedeny anglicky. Ne vždy se jedná o doslovný překlad do anglického jazyka, ale pouze o použité označení v~anglickém jazyce. V~ případě, že bylo použito více označení, jsou uvedena všechna.
+\small
+\begin{longtable}[h!]{lp{8cm}}
+  \textbf{Česky} & \textbf{Anglicky} \\
+  \midrule
+  \endhead
+  ID prodejny &  Store ID  \\
+  Typ prodejny &  Store type  \\
+  Okres &   Region \\
+  Kraj &  Big region  \\
+  Počet obyvatel v~lokalitě & City size, příp. Size bins \\
+  ID produktu &  Product ID  \\
+  Datum transakce &  Date of transaction  \\
+  ID shrinku &  Shrink ID  \\
+  1 (úroveň) &  L1  \\
+  2 (úroveň) &  L2  \\
+  3 (úroveň) &  L3  \\
+  4 (úroveň) &  L4  \\
+  5 (úroveň) &  L5  \\
+  6 (úroveň) &  L6  \\
+  Typ promoakce &  Promotion type  \\
+  Prodej &  Saled  \\
+  Den v~týdnu &  Weekday  \\
+  Čtvrt měsíce  &  Quarter, příp. Quarter of month  \\
+  Množství &  Amount  \\
+  Ztracené náklady & Lost Cost, příp. Cost value   \\
+  Podíl na tržbách produktu &  Product share, příp. Cost value share  \\
+  Podíl na celkových tržbách &  Share on Store Revenue, příp. Store cost value share  \\
+  Podíl na tržbách kategorie z~úrovně 1 &  Share, příp. L1 cost value share   \\
+  Velmi čerstvé & Very fresh \\
+  Čerstvé & Fresh \\
+  Suché & Dry \\
+  Kosmetika a drogerie &  Cosmetics \\
+  Nepotravinářské & Non-food \\
+  Ostatní & Other \\
+  Tabák & Tobacco \\
+  Poškození               &  Damage  \\
+                Prošlé a zkažené zboží  &   Spoiled and expired   \\
+                Zákaznické reklamace   &  Customer complaint \\
+                Reklamace  centrálního skladu    &  Warehouse complaint  \\
+                Kompostéry              &   Composted \\
+                Potravinová banka       &  Food bank   \\
+                Zvířecí útulky          &   Pets     \\
+                Poškození vnějšími  vlivy    & Destroyed -- external \\
+                Zničení & Destroyed \\
+\end{longtable}
 %
 % \input{priloha_A.tex} % text vkládán ze souboru, kde je i příkaz \chapter{...}
 

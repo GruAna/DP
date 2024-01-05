@@ -51,3 +51,4 @@
 \contentsline {chapter}{Literatura}{106}{chapter*.117}%
 \contentsline {chapter}{Přílohy}{110}{chapter*.118}%
 \contentsline {chapter}{\numberline {A}Popis přiložených souborů}{110}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Překlad pojmů z praktické části}{111}{appendix.B}%

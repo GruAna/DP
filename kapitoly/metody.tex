@@ -30,7 +30,7 @@ a výběrová kovarianční matice $\mathbf{C}$
     \mathbf{\mathbf{C}} = \frac{1}{N} \sum_{i=1}^{N} (\bm{x}_i - \bar{\bm{x}}).
 \end{equation}
 
-První hlavní komponentu, která popisuje největší rozptyl dat označíme $y_{1i}$ a vypočteme následovně jako lineární kombinaci původních proměnných
+První hlavní komponentu, která popisuje největší rozptyl dat označíme $y_{1i}$ a vypočte-\\me následovně jako lineární kombinaci původních proměnných
 \begin{equation}
     y_{1i} = \bm{a}_1^\top (\bm{x}_i - \bar{\bm{x}}), \quad \mbox{pro } i=1,\ldots,N,
 \end{equation}
@@ -40,7 +40,7 @@ Optimální vektor $\bm{a}_1$ je takový vektor, který maximalizuje výběrový
 \begin{equation}
     D(y_{11}, \ldots, y_{1N}) = \bm{a}_1^\top \mathbf{C} \bm{a}_1
 \end{equation}
-můžeme maximalizační úlohu vyřešit pomocí metody Lagrangeových multiplikátorů. Lagrageova funkce s~parametrem $\lambda_1$ má následující tvar
+můžeme maximalizační úlohu vyřešit pomocí metody Lagrangeových multiplikátorů. Lagrangeova funkce s~parametrem $\lambda_1$ má následující tvar
 \begin{equation}
     \mathcal{L}(\bm{a}_1, \lambda_1) = \bm{a}_1^\top \mathbf{C} \bm{a}_1 - \lambda_1(\bm{a}_1^\top\bm{a}_1 - 1).
 \end{equation}
@@ -66,7 +66,7 @@ Druhá hlavní komponenta
 \begin{equation}
     y_{2i} = \bm{a}_2^\top (\bm{x}_i - \bar{\bm{x}}), \quad \mbox{pro } i=1,\ldots,N,
 \end{equation}
-se vypočte obdobným způsobem s~přidanou podmínkou ortogonality vzhledem~k první hlavní komponentě -- druhá hlavní komponenta nesmí být korelovaná s~předchozí, první hlavní komponentou. Potom popisuje druhý největší možný rozptyl v~datech. Znázornění dvou hlavních komponent ve dvoudimenzionálním prostoru je vyobrazeno na obrázku \ref*{obr:met:PCA1}.
+se vypočte obdobným způsobem s~přidanou podmínkou ortogonality vzhledem k~první hlavní komponentě -- druhá hlavní komponenta nesmí být korelovaná s~před-\\chozí, první hlavní komponentou. Potom popisuje druhý největší možný rozptyl v~datech. Znázornění dvou hlavních komponent ve dvoudimenzionálním prostoru je vyobrazeno na obrázku \ref*{obr:met:PCA1}.
 Vektor  $\bm{a}_2$ se opět získá jako jednotkový vlastní vektor kovarianční matice $\mathbf{C}$ příslušící druhému největšímu vlastnímu číslu $\lambda_2$.\cite{bib:PCA1, bib:PCA3} %https://builtin.com/data-science/step-step-explanation-principal-component-analysis
 
 \begin{figure}[hbtp!]
@@ -246,14 +246,14 @@ Vzájemná informace měří ztrátu informace v~důsledku závislosti $X$ a $Y$
     I(X;Y) = \sum_{(x,y)} + \log \frac{p_{X\vert Y}(x\vert y)}{p_X(x)}
 \end{equation}
 
-Míra, která dovede změřit asymetrickou závislost kategorických proměnných se nazý-//vá \emph{Thielovo U}, které se někdy označuje jako koeficient nejistoty. Pro jeho výpočet se používá podmíněná entropie, viz vztah \ref{eq:podmEntropie}. Thielovo $U$  nabývá hodnot z~intervalu $\langle 0, 1 \rangle$, kde 0 neznamená žásnou závislost a 1 dokonalou závislost. Hodnota není symetrická, tj. $U(X,Y)\neq U(Y,X)$, proto se může používat značení, které určuje směr závislosti -- $U(X,Y) = U(X|Y)$. Vzorec pro výpočet koeficientu $U$ je: \cite{bib:thiel,bib:correl}
+Míra, která dovede změřit asymetrickou závislost kategorických proměnných se nazý-//vá \emph{Thielovo U}, které se někdy označuje jako koeficient nejistoty. Pro jeho výpočet se používá podmíněná entropie, viz vztah \ref{eq:podmEntropie}. Thielovo $U$  nabývá hodnot z~intervalu $\langle 0, 1 \rangle$, kde 0 neznamená žádnou závislost a 1 dokonalou závislost. Hodnota není symetrická, tj. $U(X,Y)\neq U(Y,X)$, proto se může používat značení, které určuje směr závislosti -- $U(X,Y) = U(X|Y)$. Vzorec pro výpočet koeficientu $U$ je: \cite{bib:thiel,bib:correl}
 \begin{equation}
     U(X,Y) = U(X|Y) = \frac{H(X)-H(X-Y)}{H(X)}.
 \end{equation}
 
 \section*{Ostatní použité pojmy}
 
-Při analýze dat lze narazit na problém multikolinearity. \emph{Multikolinearita} je vzájemná lineární závislost vysvětlujících proměnných. Jeli $\mathbf{A}$ matice dat (vysvětlujích proměnných bez předpovídaného sloupce), pak multikolinearita v~datech existuje, pokud platí rovnice pro alespň jedno nenulové $c_i$: $c_1\bm{a}_1 + ... + c_k\bm{a}_k$, kde $c_i$ jsou konstanty a $\bm{a}_i$ sloupce matice reprezentující jednotlivé příznaky, $k$ počet sloupců matice, tj. počet příznaků. V~realných datech stačí, když je daná rovnice přibližně splněna.\cite{bib:MB}
+Při analýze dat lze narazit na problém multikolinearity. \emph{Multikolinearita} je vzájemná lineární závislost vysvětlujících proměnných. Jeli $\mathbf{A}$ matice dat (vysvětlujících pro-\\měnných bez předpovídaného sloupce), pak multikolinearita v~datech existuje, pokud platí rovnice pro alespoň jedno nenulové $c_i$: $c_1\bm{a}_1 + ... + c_k\bm{a}_k$, kde $c_i$ jsou konstanty a $\bm{a}_i$ sloupce matice reprezentující jednotlivé příznaky, $k$ počet sloupců matice, tj. počet příznaků. V~reálných datech stačí, když je daná rovnice přibližně splněna.\cite{bib:MB}
 
 Měřítkem multikolinearity je \emph{rozptylový inflační faktor} (zkratka VIF z~anglického variance inflation factor). Možné hodnoty pro koeficient jsou 1 až libovolné číslo větší než jedna, 1 znamená nezávislost. Nad určitou hodnotu koeficientu, v~literatuře \cite{bib:multi} je uvedeno už číslo větší než 5, je značná multikolinearita již přítomna v~datech. Koeficient má pro $i$-tý sloupec matice $\mathbf{A}$ tvar:
 \begin{equation}

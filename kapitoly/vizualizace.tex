@@ -223,7 +223,7 @@ Typ shrinku          & \vtop{\hbox{\strut Hodnota}\hbox{\strut shrinku}}  & \vto
 \label{tab:PBI:vysSh}
 \end{table}
 
-Obrázek \ref*{obr:PBI:loc} obsahuje graf typu stromová mapa. Na grafu jsou zobrazeny kraje České republiky, případně okresy s~nejvyššími hodnotami shrinku. Pole příslušného kraje zabírá tolik procent grafu, kolik zaujímá evidovaný shrink. Necelých 25~\% z~celkového hodnoty všech zaznamenaných shrinků patří do kraje Hlavní město Praha. Dalších téměř 25~\% tvoří kraje Jihomoravský a Moravskoslezský v~podobném poměru. Největší zastoupení v~těchto krajích mají okresy příslušející jejich krajským městům. Záznamy ze Středočeského kraje tvoří $8{,}2$~\% ztracených nákladů. Každý z~krajů Zlínský, Ústecký, Olomoucký tvoří necelých $6$~\%. Zbylé kraje jednotlivě zaujímají méně jak $5$~\% na celkovém shrinku. Na grafu \ref*{obr:PBI:locvs} je porovnání hodnoty shrinku a počtu prodejen pro kraje, je vidět, že tyto dva ukazatele spolu souvisí.
+Obrázek \ref*{obr:PBI:loc} obsahuje graf typu stromová mapa. Na grafu jsou zobrazeny kraje České republiky, případně okresy s~nejvyššími hodnotami shrinku. Pole příslušného kraje zabírá tolik procent grafu, kolik zaujímá součet evidovaných shrinků. Necelých 25~\% z~celkového hodnoty všech zaznamenaných shrinků patří do kraje Hlavní město Praha. Dalších téměř 25~\% tvoří kraje Jihomoravský a Moravskoslezský v~podobném poměru. Největší zastoupení v~těchto krajích mají okresy příslušející jejich krajským městům. Záznamy ze Středočeského kraje tvoří $8{,}2$~\% ztracených nákladů. Každý z~krajů Zlínský, Ústecký, Olomoucký tvoří necelých $6$~\%. Zbylé kraje jednotlivě zaujímají méně jak $5$~\% na celkovém shrinku. Na grafu \ref*{obr:PBI:locvs} je porovnání hodnoty shrinku a počtu prodejen pro kraje, je vidět, že tyto dva ukazatele spolu souvisí.
 
 \begin{figure}[h!]
     \centering
@@ -236,13 +236,13 @@ Obrázek \ref*{obr:PBI:loc} obsahuje graf typu stromová mapa. Na grafu jsou zob
 Na dalším obrázku \ref*{obr:PBI:norm} jsou zobrazeny průměrné údaje na jednu prodejnu v~daném kraji. Porovnána je průměrná velikost shrinku na prodejně a podíl tohoto shrinku na průměrných tržbách v~kraji. Z~grafu lze vidět, že podle průměrných hodnot v~krajích: Olomoucký, Pardubický a Plzeňský. V~těchto oblastech je podíl shrinku na tržbách výrazně nižší než v~jiných krajích. V~těchto třech krajích a ještě v~ Karlovarském a Zlínském kraji je průměrná hodnota shrinku nižší u ostatních krajů. Nejvyšší hodnoty podílů jsou pro kraje Karlovarské, Královehradecký, Ústecký. Průměrná hodnota shrinku je nejvyšší u krajů Středočeský a Ústecký. 
 Data se týkají všech shrinků způsobených škodami a celého produktového portfolia.
 
-Na základě dvou předešlých pozorování by bylo vhodné se zaměřit na prodejny v~Karlovarském a Královehradeckém kraji.
+Na základě předešlých pozorování by bylo vhodné se zaměřit na prodejny v~Karlovarském a Královehradeckém kraji a porovnat proces zásobování, chování jejich zaměstnanců a nakupujících s~ prodejnami v~krajích, kde je nízký shrink a nízký podíl na tržbách.
 
 \begin{figure}[h!]
     \centering
     \captionsetup{justification=centering}
     \includegraphics[width=\textwidth]{obrazky/PBI/normalized.png}
-    \caption{Power BI report -- Zobrazení krajů podle průměrné hodnoty shrinku na jednu prodejnu v porovnání s podílem shrinku na průměrných tržbách kraje.}
+    \caption{Power BI report -- Zobrazení krajů podle průměrné hodnoty shrinku \\ na jednu prodejnu v porovnání s podílem shrinku na průměrných tržbách kraje.}
     \label{obr:PBI:norm}
 \end{figure}
 
@@ -251,14 +251,14 @@ Na obrázku \ref*{obr:PBI:types} nahoře je zobrazen jaký je podíl celkového 
 
 \begin{figure}[hbtp!]
     \centering
-    \begin{minipage}{.5\textwidth}
+    \begin{minipage}{.45\textwidth}
         \centering
         \captionsetup{justification=centering}
         \includegraphics[width=\textwidth]{obrazky/PBI/vsLoc.png}
         \caption{Power BI report -- Porovnání hodnoty shrinku a počtu prodejen \\pro jednotlivé kraje.}
         \label{obr:PBI:locvs}
     \end{minipage}%
-    \begin{minipage}{.5\textwidth}
+    \begin{minipage}{.55\textwidth}
         \centering
         \captionsetup{justification=centering}
         \includegraphics[width=\textwidth]{obrazky/PBI/normTypes.png}
