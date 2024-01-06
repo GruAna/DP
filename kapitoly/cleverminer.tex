@@ -82,20 +82,17 @@ Asociační pravidlo má tvar:
 
 V ukázce kódu \ref*{code:cleverminerH1} jsou uvedené parametry pro spuštění metody. Konfidence byla zvolena 80~\%. Výsledky běhu jsou uvedené v~tabulce \ref*{tab:H1vysl}, pro jeden záznam v~tabulce je uvedena slovní interpretace nalezeného asociačního pravidla. Označení \emph{Základ} udává počet nalezených řádků, pro které platí příslušné pravidlo\footnote{Zbylé pojmy jsou vysvětleny v~teoretické části \label{sec:clever:pojmy}.}.  Z~této tabulky lze vyčíst, že pro dny záznamu ve vybrané dny v~týdnu -- pondělí, úterý, středa, čtvrtek a neděle, tj. nikoli pro pátek a sobotu -- a zároveň pro produkty, které byly v~den záznamu týden po promoakci platí, že 80~\% těchto záznamů bylo v~množství do jednoho kusu. Podle dalšího zkoumání dat jsem zjistila, že se jedná především o kategorii \emph{Masné výrobky} ze třetí úrovně hierarchie.
 
-
 \begin{lstlisting}[language=Python, style=mystyle, label={code:cleverminerH1}, caption={Hypotéza č. 1, funkce \texttt{cleverminer}.}]
 cleverminer(df = data,
             proc = "4ftMiner", 
             quantifiers = {"conf":0.8, "Base":1000},
-            ante = {
-                    "attributes":
+            ante = {"attributes":
                     [
                         {
                             "name":"weekday", 
                             "type":"seq", 
                             "minlen":1, "maxlen":3
-                        },
-                        {
+                       },{
                             "name":"promo", 
                             "type":"sec", 
                             "minlen":1, "maxlen":1
@@ -103,8 +100,7 @@ cleverminer(df = data,
                     ], 
                     "minlen":2, "maxlen":2, "type":"con"
                     },
-            succ = {
-                    "attributes":
+            succ = {"attributes":
                     [
                         {
                             "name":"amount_bins", 
@@ -117,28 +113,37 @@ cleverminer(df = data,
             )
     \end{lstlisting}
 
+    \begin{center}
     \begin{table}[h!]
-        \begin{center}
-                \captionsetup{justification=centering}
+        \captionsetup{justification=centering}
+
+        \begin{threeparttable}
         \caption{Výstup funkce \texttt{cleverminer} pro hypotézu 1.}
-        \begin{tabular}{rrrp{7.5cm}}
-            Základ ($a$) & Konfidence & AAD & AP \\
+        \begin{tabular}{rrrp{8cm}}
+                Základ & Konfidence & AAD & AP \\
             \midrule
-19765 & 0.821 & $+0.623$ & weekday(0) $\land$ promo(after\_promo) $\Rightarrow$ amount\_bins((-0.99,0)) \\
-& & & {\footnotesize{\textit{Pokud byl shrink zaznamenaný v~pondělí a~zároveň se týkal produktu, který byl týden po promoakci, pak se zaznamenalo množství do jednoho kusu\footnote{Shrinkované množství je v~datech zaznamenané v~záporných číslech.}. }}} \\
-39271 & 0.820 & +0.622 & weekday(0, 1)  $\land$ promo(after\_promo) $\Rightarrow$ amount\_bins((-0.99,0)) \\
-63920 & 0.815 & +0.613 & weekday(0, 1, 2)  $\land$ promo(after\_promo) $\Rightarrow$ amount\_bins((-0.99,0)) \\
-19506 & 0.820 & +0.621 & weekday(1)  $\land$ promo(after\_promo) $\Rightarrow$ amount\_bins((-0.99,0)) \\
-44155 & 0.813 & +0.608 & weekday(1, 2)  $\land$ promo(after\_promo) $\Rightarrow$ amount\_bins((-0.99,0)) \\
-68666 & 0.810 & +0.603 & weekday(1, 2, 3)  $\land$ promo(after\_promo) $\Rightarrow$ amount\_bins((-0.99,0)) \\
-24649 & 0.808 & +0.598 & weekday(2)  $\land$ promo(after\_promo) $\Rightarrow$ amount\_bins((-0.99,0)) \\
-49160 & 0.806 & +0.595 & weekday(2, 3)  $\land$ promo(after\_promo) $\Rightarrow$ amount\_bins((-0.99,0)) \\
-24511 & 0.805 & +0.593 &weekday(3) $\land$ promo(after\_promo) $\Rightarrow$ amount\_bins((-0.99,0)) \\
-18864 & 0.813 & +0.608 &weekday(6)  $\land$ promo(after\_promo) $\Rightarrow$ amount\_bins((-0.99,0)) \\
-    \end{tabular}
+                19765 & 0.821 & $+0.623$ & weekday(0) $\land$ promo(after\_promo) $\Rightarrow$ amount\_bins((-0.99,0)) \\
+                & & & {\footnotesize{\textit{Pokud byl shrink zaznamenaný v~pondělí a~zároveň se týkal produktu, který byl týden po promoakci, pak se zaznamenalo množství do jednoho kusu\tnote{2}. }}} \\
+                39271 & 0.820 & +0.622 & weekday(0, 1)  $\land$ promo(after\_promo) $\Rightarrow$ amount\_bins((-0.99,0)) \\
+                63920 & 0.815 & +0.613 & weekday(0, 1, 2)  $\land$ promo(after\_promo) $\Rightarrow$ amount\_bins((-0.99,0)) \\
+                19506 & 0.820 & +0.621 & weekday(1)  $\land$ promo(after\_promo) $\Rightarrow$ amount\_bins((-0.99,0)) \\
+                44155 & 0.813 & +0.608 & weekday(1, 2)  $\land$ promo(after\_promo) $\Rightarrow$ amount\_bins((-0.99,0)) \\
+                68666 & 0.810 & +0.603 & weekday(1, 2, 3)  $\land$ promo(after\_promo) $\Rightarrow$ amount\_bins((-0.99,0)) \\
+                24649 & 0.808 & +0.598 & weekday(2)  $\land$ promo(after\_promo) $\Rightarrow$ amount\_bins((-0.99,0)) \\
+                49160 & 0.806 & +0.595 & weekday(2, 3)  $\land$ promo(after\_promo) $\Rightarrow$ amount\_bins((-0.99,0)) \\
+                24511 & 0.805 & +0.593 &weekday(3) $\land$ promo(after\_promo) $\Rightarrow$ amount\_bins((-0.99,0)) \\
+                18864 & 0.813 & +0.608 &weekday(6)  $\land$ promo(after\_promo) $\Rightarrow$ amount\_bins((-0.99,0)) \\
+                \bottomrule
+                \vspace*{-2em}
 \label{tab:H1vysl}
-\end{center}
+        \end{tabular}
+    \begin{tablenotes}
+    \item[2] {\footnotesize{Shrinkované množství je v~datech zaznamenané v~záporných číslech.}}
+    \end{tablenotes}
+\end{threeparttable}
 \end{table}
+\end{center}
+
 
 Ná základě výsledků této hypotézy lze společnosti doporučit, aby se přezkoumala frekvenci zásobování produktů do prodejen na začátku týdne a upravila ji podle očekávaných prodejů. Týká se to především zásobování masných výrobků prodávaných na váhu.
 
@@ -154,7 +159,7 @@ kde označením Hierarchie3 jsou myšleny kategorie na třetí úrovni produktov
 
 Parametry předané funkci jsou podobné jako u předchozí hypotézy. Ze záznamů, které se byly provedeny v~pondělí, úterý nebo neděli a týkaly se produktů, které byly v~rozmezí  jednoho týdne po promoakci, bylo více než 75~\% z~kategorie Masné výrobky -- pultový prodej ze čtvrté úrovně produktové hierarchie. Pokud je vynechána ze vstupních dat tato kategorie, pak maximální konfidence 31~\% byla dosažena pro kategorii Slaného pečivo v~záznamech, které byly provedeny v~sobotu a týkaly se produktů zcela mimo promoakci. Jiné významné závislosti podle dat nebyly nalezeny.
 
-Zdá se, že promoakce nemá vliv na shrinkovanou kategorii. Společnost by tedy mohla některé produkty ze zjištěné kategorie umístit do promoakce a mohlo by to snížit shrink
+Zdá se, že promoakce nemá vliv na shrinkovanou kategorii. Společnost by tedy mohla některé produkty z~kategorií, u kterých se potvrdila závislost na dni v~týdnu a zároveň nebyly v~promoakci, umístit do krátkodobé promoakce v~daný den. Mohlo by to vést k~vyšším prodejům a tedy menšímu shrinku.
 
 \vspace*{1em}
 
@@ -165,13 +170,14 @@ Asociační pravidlo má tvar:
     \varphi_{\mbox{\,\footnotesize Typ prodejny}} \land \varphi_{\,\mbox{\footnotesize Okres}} \Rightarrow \psi_{\mbox{\,\footnotesize Množství}}
 \end{equation}
 
-60~\% záznamů týkajících se okresů Jindřichův Hradec, Ústí nad Labem, Písek nebo Strakonice tvoří shrinky z~kategorie \emph{Masné výrobky}. Pro záznamy z~okresu Kladno, které jsou zároveň evidovány velkými prodejnami kategorie Masné výrobky byla zastoupena až téměř 70~\%. Necelými 70~\% je tato kategorie zastoupená také v~záznamech v~malých prodejnách v~okrese Praha-východ.
+60~\% záznamů týkajících se okresů Jindřichův Hradec, Ústí nad Labem, Písek nebo Strakonice tvoří shrinky z~kategorie \emph{Masné výrobky}. Tato kategorie byla necelými 70~\% také zastoupena téměř
+ v~ záznamech velkých prodejen z~okresu Kladno. Podobné zastoupení měla také v~záznamech malých prodejen v~okrese Praha-východ.
 
 Pokud úplně vynecháme kategorie Masné výrobky ze vstupních dat, pak se nejčastěji ve výsledcích objevovala kategorie \emph{Pečivo}. Pro záznamy z~velkých prodejen v~okrese Pardubice nebo Plzeň-město Pečivo zaujímalo přes 60~\% těchto záznamů. Nad 50~\% záznamů pro okresy Bruntál, Olomouc, Příbram nebo Uherské Hradiště. 50~\% záznamů náleželo kategorii Pečivo také v~záznamech z~malých prodejen v~okrese Klatovy, Náchod nebo Přerov.
 
 Po vynechání kategorie Pečivo již dostáváme maximální konfidenci 33~\%, a to pro kategorii Zelenina ve zbylých záznamech z~okresu Ostrava-město, Kroměříž, Hradec Králové nebo Karviná.
 
-Doporučení pro společnost je, aby se zaměřila na konkrétní dvojice produkt-prodejna pro zjištěné kategorie a lokality. Může zde docházet k~určitému nestandardnímu chování jak na straně zaměstnavatelů, tak na straně poptávky.
+Doporučení pro společnost je, aby se zaměřila na konkrétní dvojice produkt-prodejna pro zjištěné kategorie a lokality. Může zde docházet k~určitému nestandardnímu chování jak na straně zaměstnanců, tak na straně poptávky.
 
 \vspace*{1em}
 
@@ -197,7 +203,7 @@ Pokud se vyhazují čerstvé ryby, tak v~94~\% svých záznamů je to množství
  se vyhazuje v~89~\% po jednom kusu (obvykle se jedná o sendviče a bagety)
 Kategorie Vejce se vyhazuje v~82~\% po jednom kusu balení
 Kategorie Pečivo se vyhazuje v~56~\% v~počtu kusů do 10~kusů v~až 94~tis. záznamech.
-Kategorie Jádroviny\footnote{Jádroviny jsou druh ovoce, patří sem např. jablka a hrušky.} se vyhazuje 74~\% případech svých záznamů (14 000 záznamů) v~množství do jednoho kusu. I zde se jedná přepočet váženého množství na kusy.
+Kategorie Jádroviny\footnote{Jádroviny jsou druh ovoce, patří sem např. jablka a hrušky.} se vyhazuje 74~\% případech svých záznamů (14 000 záznamů) v~množství do jednoho kusu. Jedná se o přepočet váženého množství na kusy.
 
 Pokud je shrink evidovaný po kusech, mohlo by pomoci u těchto čerstvých výrobků -- maso, ryby, vejce -- snížit nabízené množství na prodejnách. V~případě vajec může ke shrinku dojít z~důvodu křehkosti tohoto zboží, řešením by tedy mohla být bezpečnější manipulace. To lze ovlivnit v~případě zaměstnanců, aby se případnému rozbití zabránilo na straně zákazníka, vejce by např. měla být uskladněna na dobře dostupných místech prodejny a měla by být pravidelně doplňována na místo umístění velkého množství vajec na jedno místo. Návrh na recyklaci ovoce je uveden u hypotézy č. 6.
 
@@ -239,7 +245,7 @@ Dále pro tuto hypotézu bylo ověřováno podmíněné asociační pravidlo:
 
 Následující tvrzení platí s~více než 83\% konfidencí.
 Pokud mezi produkty, kterým byl zaznamenán dražší shrink, tj. 30-60 peněžních jednotek, jsou produkty z~kategorie Jogurty, tak podíl shrinku na jejich tržbách je mezi 10-40~\%. Totéž tvrzení platí i pro kategorii Drobného občerstvení.
-Pokud mezi produkty, kterým byl zaznamenán levný shrink, tj. do 10 peněžních jednotek, je ovoce, tak jejich podíl shrinku na tržbách je do 1~\%. To samé platí o pro kategorii Kořenová zelenina.
+Pokud mezi produkty, kterým byl zaznamenán levný shrink, tj. do 10 peněžních jednotek, je ovoce, tak jejich podíl shrinku na tržbách je do 1~\%. To samé platí pro kategorii Kořenová zelenina.
 
 U konkrétních výrobků, které mají vysoký podíl shrinku na svých tržbách a zároveň se jedná o dražší produkty, lze usuzovat, že od nějaké hodnoty jsou tyto produkty celkově ztrátové pro společnost. Stojí za zvážení, zda by nebylo lepší tyto produkty odstranit zcela z~portfolia, nebo omezit kolik se těchto produktů objedná. Další možností je prodávat produkty pouze jako limitovanou akci a výrazně produkty promovat.
 
@@ -274,7 +280,7 @@ Dále byly uvažovány hypotézy:
     \itemsep 0em
     \item Hypotéza č. 9: Ve větších prodejnách ve velkých městech se vyhazuje více typů produktů.
     \item Hypotéza č. 10: Velké prodejny vyhazují širší spektrum produktů než malé prodejny.
-    \item Hypotéza č. 11: Na některých v~některých lokalitách mají často velký shrink.
+    \item Hypotéza č. 11: V~některých lokalitách mají často velký shrink.
 \end{itemize}
 
 Pro tyto hypotézy ale nebylo nalezeno žádné dostatečně silné, tj. s~konfidencí vyšší než 40~\%, asociační pravidlo.
@@ -283,7 +289,7 @@ Pro tyto hypotézy ale nebylo nalezeno žádné dostatečně silné, tj. s~konfi
 
 V tabulce \ref*{tab:hypotezy} se nachází stručný souhrn jednotlivých hypotéz. Název hypotézy je zkrácen a v komentáři je uvedeno, pro které kategorie, resp. hodnoty se pravidlo potvrdilo.  
 
-\begin{table}[hbtp!]
+\begin{table}[h!]
     \centering
     \captionsetup{justification=centering}
     \caption{Shrnutí ověření hypotéz na vzorových datech společnosti.}
@@ -322,9 +328,9 @@ Z těchto atributů mohlo být vybráno jeden až tři atributy pro vytvoření 
 Výsledky zkoumání produktů, u kterých nebyla pomocí korelační analýzy odhalena závislost, jsou popsány na kategorii čtvrté úrovně Masné výrobky -- pultový prodej. Jedná se celkem o dvacet produktů.
 Všechny produkty měly zaznamenaný shrink do jednoho kusu. 
 Z~produktů, které neměly statisticky významný koeficient, sedm z~nich bylo evidovaných pouze v~okrese hlavní město Praha a jedná se o produkty, které nebyly v~promoakci, ale zároveň měli evidované prodeje během sledovaného období. Pro pět z~nich dále platí, že s~více než $80\%$ konfidencí pochází záznamy z~menších prodejen.
-Pro produkt Klobása ostravská platí, že pokud byl v~období po promoakci byl vyhazován na malých prodejnách ($97\%$ konfidence), zatímco na velkých prodejných byl vyhazován, když v~promoakci nebyl ($89\%$ konfidence). 
+Pro produkt Klobása ostravská platí, že pokud byl v~období po promoakci, byl vyhazován na malých prodejnách ($97\%$ konfidence), zatímco na velkých prodejnách byl vyhazován, když v~promoakci nebyl ($89\%$ konfidence). 
 O produktu Slanina uzená lze tvrdit z~dat, že s~$63\%$ konfidencí se vyhazuje na malých prodejnách. Všechny záznamy se týkají nepromočního období produktu. $40\%$ dat bylo zaznamenáno v~poslední čtvrtině sledovaného měsíce. 
-Produkt Salám točený pikantní bylo zjištěno, že byl vyhazován se $ 73\%$ konfidencí na malých prodejnách, a to jak během probíhající promoakce, tak po ní  i v~období, kdy v~promoakci nebyl. 
+Pro produkt Salám točený pikantní bylo zjištěno, že byl vyhazován se $ 73\%$ konfidencí na malých prodejnách, a to jak během probíhající promoakce, tak po ní  i v~období, kdy v~promoakci nebyl. 
 
 Co se týče deseti produktů, u kterých nebyla zjištěna závislost na prodejích ostatních produktů, až na jeden produkt, všechny tyto produkty neměly ve sledovaném období promoakci, ale měly záznamy o prodejích v~tomto období. Čtyři produkty byly zaznamenány na velkých prodejnách, jeden z~nich pouze na prodejnách v~Praze. $81\%$ záznamů produktu Párky královské, byly zaznamenány v~první čtvrtině v~měsíci, kdy nebyly v~promoakci. Naopak pro Šunku prosciutto platí, že v~60\% záznamů byla vyhazována pouze na konci měsíce a z~$94\%$ pouze na malých prodejnách. Pro zbylé produkty nebylo nalezeno žádné pravidlo s~vysokou konfidencí z~důvodu velmi malého počtu záznamů -- méně něž pět záznamů.
 
@@ -332,7 +338,7 @@ Co se týče deseti produktů, u kterých nebyla zjištěna závislost na prodej
 
 Pomocí metody Cleverminer bylo prozkoumáno jedenáct hypotéz týkajících se dat se záznamy shrinků. Tři hypotézy se pomocí metody 4ftMiner nepodařilo potvrdit, zbylé hypotézy našly, alespoň pro část záznamů oporu v~datech.
 Dále se tato kapitola zabývala hledáním pravdivých tvrzeních pro produkty, u kterých nebyla nalezena závislost pomocí korelační analýzy. V~tomto případě asociační pravidlo předpokládalo ID těchto produktů a typ promoakce a údaj o existenci prodeje. Sukcedentem pak mohl být jakýkoli jiný sloupec vstupních dat. Výsledky byly diskutovány pro jednu ze zkoumaných kategorií čtvrté úrovně. Pro jiné kategorie by byl postup analogický.
-Je ale důležité zmínit, že produkty, u kterých nebyl výsledek korelační analýzy statisticky významný, bylo často velmi málo záznamů -- v~řádu jednotek, maximálně nízkých desítek.
+Je ale důležité zmínit, že produkty, u kterých nebyl výsledek korelační analýzy statisticky významný, měly často velmi málo záznamů -- v~řádu jednotek, maximálně nízkých desítek.
 
 %  27571774 26835624 Všechny záznamy se týkaly pouze regionu Praha, a to v~objemu do jednoho kusu.
 % 1     7 1.000 +0.000 product_id(27571774) & saled(True) => region(Praha) | ---

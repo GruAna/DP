@@ -1817,6 +1817,7 @@ INPUT .\obrazky\grafy\histogram\newplot(4).png
 INPUT .\obrazky\grafy\histogram\newplot(4).png
 INPUT .\obrazky\grafy\histogram\newplot(4).png
 INPUT .\obrazky\grafy\histogram\newplot(4).png
+INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmri7.tfm
 INPUT .\kapitoly\zaver.tex
 INPUT kapitoly\zaver.tex
 INPUT .\kapitoly\zaver.tex
@@ -1836,9 +1837,9 @@ INPUT tex\bibliografie1.tex
 INPUT DP_Gruberova.aux
 INPUT .\DP_Gruberova.out
 INPUT .\DP_Gruberova.out
+INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rmtt.enc
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathit.enc
-INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-ts1.enc
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathex.enc
@@ -1874,6 +1875,8 @@ INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmri
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmri10.pfb
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmri12.pfb
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmri12.pfb
+INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmri7.pfb
+INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmri7.pfb
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy10.pfb
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy10.pfb
 INPUT C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy8.pfb
