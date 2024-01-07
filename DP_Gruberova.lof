@@ -14,57 +14,57 @@
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Ukázka vizuálu matice. Zdroj: \cite {bib:PBI}.\relax }}{41}{figure.caption.40}%
 \contentsline {figure}{\numberline {2.10}{\ignorespaces Přechod k~podrobnostem více polí. Zdroj: \cite {bib:PBI}.\relax }}{41}{figure.caption.42}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Zastoupení typů shrinků způsobených škodami v~datech z~března roku 2023 podle hodnoty shrinku.\relax }}{48}{figure.caption.47}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Zastoupení kategorií úrovně 1 v~datech z~března roku 2023 podle hodnoty shrinku.\relax }}{48}{figure.caption.48}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Znázornění odlehlých hodnot pro vybrané nominální příznaky.\relax }}{49}{figure.caption.49}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Matice koeficientů vzájemné informace mezi příznaky.\relax }}{50}{figure.caption.50}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Matice koeficientů Cramerovo $V$ pro kategorické příznaky.\relax }}{51}{figure.caption.51}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Matice koeficientů Theilovo $U$ mezi příznaky.\relax }}{52}{figure.caption.52}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Rozptylový inflační faktor.\relax }}{53}{figure.caption.53}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Vzájemná informace mezi příznaky cílovými sloupci.\relax }}{53}{figure.caption.54}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces PCA - vysvětlený rozptyl hlavních komponent.\relax }}{54}{figure.caption.55}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces PCA - kumulativní vysvětlený rozptyl hlavních komponent.\relax }}{54}{figure.caption.55}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Příspěvek proměnných ke komponentám 0 až 10.\relax }}{54}{figure.caption.56}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces MCA - vysvětlený rozptyl hlavních komponent.\relax }}{55}{figure.caption.57}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces MCA - kumulativní vysvětlený rozptyl hlavních komponent.\relax }}{55}{figure.caption.57}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Příspěvek proměnných ke komponentám 0 až 5.\relax }}{56}{figure.caption.58}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Zastoupení typů shrinků způsobených škodami v~datech z~března roku 2023 podle hodnoty shrinku.\relax }}{49}{figure.caption.47}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Zastoupení kategorií úrovně 1 v~datech z~března roku 2023 podle hodnoty shrinku.\relax }}{49}{figure.caption.48}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Znázornění odlehlých hodnot pro vybrané nominální příznaky.\relax }}{50}{figure.caption.49}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Matice koeficientů vzájemné informace mezi příznaky.\relax }}{51}{figure.caption.50}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Matice koeficientů Cramerovo $V$ pro kategorické příznaky.\relax }}{52}{figure.caption.51}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Matice koeficientů Theilovo $U$ mezi příznaky.\relax }}{53}{figure.caption.52}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Rozptylový inflační faktor.\relax }}{54}{figure.caption.53}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Vzájemná informace mezi příznaky cílovými sloupci.\relax }}{54}{figure.caption.54}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces PCA - vysvětlený rozptyl hlavních komponent.\relax }}{55}{figure.caption.55}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces PCA - kumulativní vysvětlený rozptyl hlavních komponent.\relax }}{55}{figure.caption.55}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Příspěvek proměnných ke komponentám 0 až 10.\relax }}{55}{figure.caption.56}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces MCA - vysvětlený rozptyl hlavních komponent.\relax }}{56}{figure.caption.57}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces MCA - kumulativní vysvětlený rozptyl hlavních komponent.\relax }}{56}{figure.caption.57}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Příspěvek proměnných ke komponentám 0 až 5.\relax }}{57}{figure.caption.58}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Datový model tabulek v~Power BI reportu.\relax }}{58}{figure.caption.60}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Power BI reporting pro zobrazení údajů o shrincích.\relax }}{60}{figure.caption.62}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Ukázka interakce grafu záznamů shrinku pro přístupy k~různým úrovním produktové hierarchie.\relax }}{61}{figure.caption.63}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Power BI -- Detail tabulky vybrané ukazatele pro jednotlivé kategorie v~produktové hierarchii.\relax }}{61}{figure.caption.64}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Power BI reporting pro zobrazení údajů o shrincích z~pohledu prodejen.\relax }}{62}{figure.caption.66}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Power BI reporting pro zobrazení údajů o shrincích kategorie Čerstvé a Velmi čerstvé z~pohledu prodejen.\relax }}{62}{figure.caption.68}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Power BI -- Zobrazení údajů o shrincích kategorie Čerstvé a Velmi čerstvé se zaměřením na kategorie a produkty.\relax }}{63}{figure.caption.70}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Power BI -- Proklik na stránku s~detailem produktu.\relax }}{64}{figure.caption.71}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Power BI -- Zobrazení údajů o shrincích kategorie Čerstvé a Velmi čerstvé se zaměřením na časové údaje.\relax }}{64}{figure.caption.73}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Power BI report -- Detail produktu.\relax }}{65}{figure.caption.75}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Power BI report -- Zastoupení kategorií na celkových tržbách ve sledovaném období (vlevo) a porovnání vzhledem k~velikosti prodejen (vpravo).\relax }}{66}{figure.caption.77}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Power BI report -- Zastoupení kategorií 3. a 4. úrovně na celkových tržbách ve sledovaném období.\relax }}{66}{figure.caption.78}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Power BI report -- Zobrazení krajů podle velikosti hodnoty shrinku (vlevo) a počet prodejen v~regionu (vpravo).\relax }}{68}{figure.caption.81}%
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Power BI report -- Zobrazení krajů podle průměrné hodnoty shrinku na jednu prodejnu v porovnání s podílem shrinku na průměrných tržbách kraje.\relax }}{69}{figure.caption.82}%
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Power BI report -- Porovnání hodnoty shrinku a počtu prodejen pro jednotlivé kraje.\relax }}{69}{figure.caption.83}%
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Power BI report -- Porovnání typů prodejen z~hlediska podílu shrinku na tržbách (nahoře) a průměrné velikosti shrinku jedné prodejny v~kategorii.\relax }}{69}{figure.caption.83}%
-\contentsline {figure}{\numberline {4.17}{\ignorespaces Power BI report -- Hodnota shrinku pro typ prodejny). Prodejny s~nejvyšší hodnotou ukazatelů (vpravo) -- ztracené náklady a podíl shrinku na tržbách.\relax }}{70}{figure.caption.84}%
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Power BI report -- Velikost shrinku na prodejně versus podíl shrinku na tržbách. Velikost zobrazeného bodu ukazuje výši tržeb na prodejně\relax }}{70}{figure.caption.86}%
-\contentsline {figure}{\numberline {4.19}{\ignorespaces Power BI report -- Průměrná hodnota shrinku prodejen podle velikosti měst, ve které se nachází prodejna.\relax }}{71}{figure.caption.87}%
-\contentsline {figure}{\numberline {4.20}{\ignorespaces Power BI report -- Počet záznamů vzhledem ke dni v~týdnu a čtvrtině měsíce.\relax }}{71}{figure.caption.88}%
-\contentsline {figure}{\numberline {4.21}{\ignorespaces Power BI report -- Počet záznamů podle typu promoakce shrinkovaného produktu.\relax }}{72}{figure.caption.89}%
-\contentsline {figure}{\numberline {4.22}{\ignorespaces Power BI report -- Ztracené náklady (hodnota shrinku) vs Podíl shrinku produktu na tržbách produktu. Velikost bodů odpovídá počtu záznamů.\relax }}{72}{figure.caption.90}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Datový model tabulek v~Power BI reportu.\relax }}{59}{figure.caption.60}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Power BI reporting pro zobrazení údajů o shrincích.\relax }}{61}{figure.caption.62}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Ukázka interakce grafu záznamů shrinku pro přístupy k~různým úrovním produktové hierarchie.\relax }}{62}{figure.caption.63}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Power BI -- Detail tabulky vybrané ukazatele pro jednotlivé kategorie v~produktové hierarchii.\relax }}{62}{figure.caption.64}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Power BI reporting pro zobrazení údajů o shrincích z~pohledu prodejen.\relax }}{63}{figure.caption.66}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Power BI reporting pro zobrazení údajů o shrincích kategorie Čerstvé a Velmi čerstvé z~pohledu prodejen.\relax }}{63}{figure.caption.68}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Power BI -- Zobrazení údajů o shrincích kategorie Čerstvé a Velmi čerstvé se zaměřením na kategorie a produkty.\relax }}{64}{figure.caption.70}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Power BI -- Proklik na stránku s~detailem produktu.\relax }}{65}{figure.caption.71}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Power BI -- Zobrazení údajů o shrincích kategorie Čerstvé a Velmi čerstvé se zaměřením na časové údaje.\relax }}{65}{figure.caption.73}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Power BI report -- Detail produktu.\relax }}{66}{figure.caption.75}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Power BI report -- Zastoupení kategorií na celkových tržbách ve sledovaném období (vlevo) a porovnání vzhledem k~velikosti prodejen (vpravo).\relax }}{67}{figure.caption.77}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Power BI report -- Zastoupení kategorií 3. a 4. úrovně na celkových tržbách ve sledovaném období.\relax }}{67}{figure.caption.78}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Power BI report -- Zobrazení krajů podle velikosti hodnoty shrinku (vlevo) a počet prodejen v~regionu (vpravo).\relax }}{69}{figure.caption.81}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Power BI report -- Zobrazení krajů podle průměrné hodnoty shrinku na jednu prodejnu v porovnání s podílem shrinku na průměrných tržbách kraje.\relax }}{70}{figure.caption.82}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Power BI report -- Porovnání hodnoty shrinku a počtu prodejen pro jednotlivé kraje.\relax }}{70}{figure.caption.83}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Power BI report -- Porovnání typů prodejen z~hlediska podílu shrinku na tržbách (nahoře) a průměrné velikosti shrinku jedné prodejny v~kategorii.\relax }}{70}{figure.caption.83}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Power BI report -- Hodnota shrinku pro typ prodejny). Prodejny s~nejvyšší hodnotou ukazatelů (vpravo) -- ztracené náklady a podíl shrinku na tržbách.\relax }}{71}{figure.caption.84}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Power BI report -- Velikost shrinku na prodejně versus podíl shrinku na tržbách. Velikost zobrazeného bodu ukazuje výši tržeb na prodejně\relax }}{71}{figure.caption.86}%
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Power BI report -- Průměrná hodnota shrinku prodejen podle velikosti měst, ve které se nachází prodejna.\relax }}{72}{figure.caption.87}%
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Power BI report -- Počet záznamů vzhledem ke dni v~týdnu a čtvrtině měsíce.\relax }}{72}{figure.caption.88}%
+\contentsline {figure}{\numberline {4.21}{\ignorespaces Power BI report -- Počet záznamů podle typu promoakce shrinkovaného produktu.\relax }}{73}{figure.caption.89}%
+\contentsline {figure}{\numberline {4.22}{\ignorespaces Power BI report -- Ztracené náklady (hodnota shrinku) vs Podíl shrinku produktu na tržbách produktu. Velikost bodů odpovídá počtu záznamů.\relax }}{73}{figure.caption.90}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Kategorizace produktů podle korelace hodnoty shrinku s~tržbami.\relax }}{75}{figure.caption.91}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Diagram aktivit znázorňující navržený postup pro kategorizaci produktů vzhledem k jejich shrinku.\relax }}{77}{figure.caption.92}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Struktura souborů pro kód zpracovávající korelační analýzu.\relax }}{79}{figure.caption.93}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Počet produktů z~kategorie Masné výrobky -- pultový prodej roztříděné pomocí korelační analýzy v~závislosti na různých ukazatelích.\relax }}{88}{figure.caption.104}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Počet produktů z~kategorie Slané pečivo roztříděné pomocí korelační analýzy v~závislosti na různých ukazatelích.\relax }}{88}{figure.caption.105}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Počet produktů z~kategorie Plodová zelenina roztříděné pomocí korelační analýzy v~závislosti na různých ukazatelích.\relax }}{89}{figure.caption.106}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Závislost mezi tržbami produktu a tržbami ostatních produktů v~kategorii během promoakce (Masné výrobky -- pultový prodej).\relax }}{89}{figure.caption.107}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Vizualizace výsledků rozdělení přiřazených kategorií pro kategorii produktů Masné výrobky -- pultový prodej.\relax }}{90}{figure.caption.108}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Kategorizace produktů podle korelace hodnoty shrinku s~tržbami.\relax }}{76}{figure.caption.91}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Diagram aktivit znázorňující navržený postup pro kategorizaci produktů vzhledem k jejich shrinku.\relax }}{78}{figure.caption.92}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Struktura souborů pro kód zpracovávající korelační analýzu.\relax }}{80}{figure.caption.93}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Počet produktů z~kategorie Masné výrobky -- pultový prodej roztříděné pomocí korelační analýzy v~závislosti na různých ukazatelích.\relax }}{89}{figure.caption.104}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Počet produktů z~kategorie Slané pečivo roztříděné pomocí korelační analýzy v~závislosti na různých ukazatelích.\relax }}{89}{figure.caption.105}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Počet produktů z~kategorie Plodová zelenina roztříděné pomocí korelační analýzy v~závislosti na různých ukazatelích.\relax }}{90}{figure.caption.106}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Závislost mezi tržbami produktu a tržbami ostatních produktů v~kategorii během promoakce (Masné výrobky -- pultový prodej).\relax }}{90}{figure.caption.107}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Vizualizace výsledků rozdělení přiřazených kategorií pro kategorii produktů Masné výrobky -- pultový prodej.\relax }}{91}{figure.caption.108}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Histogram pro hodnoty velikosti shrinku v~peněžních jednotkách.\relax }}{92}{figure.caption.109}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Histogram pro hodnoty objemu shrinku v~kusech.\relax }}{92}{figure.caption.109}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Histogram podílu shrinku na tržbách shrinkovaného produktu.\relax }}{92}{figure.caption.110}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Histogram podílu shrinku a tržeb v~kategorii úrovně 1.\relax }}{92}{figure.caption.110}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Histogram podílu shrinku na celkových tržbách prodejny.\relax }}{92}{figure.caption.111}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Histogram pro hodnoty velikosti shrinku v~peněžních jednotkách.\relax }}{93}{figure.caption.109}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Histogram pro hodnoty objemu shrinku v~kusech.\relax }}{93}{figure.caption.109}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Histogram podílu shrinku na tržbách shrinkovaného produktu.\relax }}{93}{figure.caption.110}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Histogram podílu shrinku a tržeb v~kategorii úrovně 1.\relax }}{93}{figure.caption.110}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Histogram podílu shrinku na celkových tržbách prodejny.\relax }}{93}{figure.caption.111}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

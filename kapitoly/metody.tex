@@ -1,6 +1,6 @@
 \chapter{Použité metody}
 
-První část této kapitoly se věnuje teoretickému popisu použitých metod v~této práci. Nejprve jsou
+První část této kapitoly se věnuje teoretickému popisu použitých metod v~této práci. Nejprve jsou uvedené vybrané metody pro redukci dimenzionality, poté způsoby měření závislosti. Další část se věnuje metodě GUHA. Zbytek kapitoly se týká nástrojů, které jsem používala při tvorbě této diplomové práce.
 % korelace
 % ortogonální
 % kontingencni tabulka (vicenasobna)
@@ -479,7 +479,7 @@ cleverminer(df = data,
 
 \section{Nástroje}
 
-
+Tato část se věnuje popisu použitého softwaru, a to především popisu  nástroje Microsoft Power BI pro vytváření interaktivních reportů.
 
 \subsection{Python -- Jupyter Notebook}
 Veškeré výpočty probíhaly v~jazyce Python. Metoda GUHA ve verzi Pythonu 3.10, ostatní výpočty a příprava dat ve verzi 3.9. Kód byl napsán a spouštěn v~nástroji\emph{ Jupyter Notebook}. Všechny informace o tomto nástroji jsem čerpala z~dokumentace tohoto nástroje \cite{bib:JN}. Jedná se o alternativu ke konzoli jazyka Python. Jupter Notebooky jsou interaktivní a umožňují psát a spuštět blok po \emph{buňkách}. Buňky jsou sdruženy v~souboru s~příponou \emph{ipynb}, ve skutečnosti se jedná o JSON soubor. V~souboru je uložený kód a zároveň i naposledy spuštěné výstupy jednotlivých buněk. 
@@ -498,7 +498,7 @@ Data společnosti jsou uložená v~MySQL databázi, ke které jsem přistupovala
 
 Pro vizualizaci dat jsem použila nástroj Power BI Desktop, dále už jen Power BI. Tato aplikace umožňuje vytvořit business intelligence report pro sledovaná data. Data je možné nahrát z~různých datových zdrojů, poté z~nich vytvořit datový model. Na základě tohoto modelu pak lze vytvářet reporty s~nejrůznějšími vizuály. Aplikace má rozsáhlou online dokumentaci, a~to i v~českém jazyce. Veškeré informace o Power BI jsou čerpány z~této dokumentace \cite{bib:PBI}. 
 
-Power BI má tři možná zobrazení -- reporty, data, model. V~reportovací části je možné vytvářet interaktivní vizualizace vstupních dat a sestavit tak i vícestránkový report. Do reportů lze přidávat vizuály pro konkrétní data a míry, upravovat vzhled a vlastnosti vizuálu. Také lze nastovat datové filtry, které se týkají buď konkrétního vizuálu, celé stránky nebo napříč celým reportem. V~sekci data jsou zobrazené všechny řádky aktuálně vybrané tabulky. Uživatel může v~tabulce vyhledávat pomocí filtrů, může přidávat nové sloupce, měnit datové typy sloupců, ale nemůže změnit hdonotu existujících dat v~tabulce. V~sekci model se nachází grafické znázornění datového modelu včetně vztahů mezi jednotlicými tabulkami a jejich sloupci. uživatel může měnit -- odebírat, přidávat, měnit kardinalitu vazeb mezi nimi.
+Power BI má tři možná zobrazení -- reporty, data, model. V~reportovací části je možné vytvářet interaktivní vizualizace vstupních dat a sestavit tak i vícestránkový report. Do reportů lze přidávat vizuály pro konkrétní data a míry, upravovat vzhled a vlastnosti vizuálu. Také lze nastovat datové filtry, které se týkají buď konkrétního vizuálu, celé stránky nebo napříč celým reportem. V~sekci data jsou zobrazené všechny řádky aktuálně vybrané tabulky. Uživatel může v~tabulce vyhledávat pomocí filtrů, může přidávat nové sloupce, měnit datové typy sloupců, ale nemůže změnit hodnotu existujících dat v~tabulce. V~sekci model se nachází grafické znázornění datového modelu včetně vztahů mezi jednotlicými tabulkami a jejich sloupci. uživatel může měnit -- odebírat, přidávat, měnit kardinalitu vazeb mezi nimi.
 
 Power BI pro práci s~daty využívá dva jazyky -- jazyk M a jazyk DAX (Data Analysis Expressions). První jmenovaný lze použít při nahrávání dat a jejich zpracování, jazyk se generuje na základě kroků v~GUI aplikace, nebo je možné psát příkazy ve vestavěném editory. Druhý jmenovaný se používá přímo ve vizualizační části pro vytváření nových sloupců a metrik, obsahuje přes 200 předdefinovaných funkcí, které jsou podobné funkcím v~aplikaci Microsoft Excel.
 

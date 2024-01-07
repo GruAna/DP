@@ -25,30 +25,30 @@
 \contentsline {section}{\numberline {2.4}Nástroje}{37}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}Python -- Jupyter Notebook}{37}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}Power BI}{37}{subsection.2.4.2}%
-\contentsline {chapter}{\numberline {3}Zpracování dat}{42}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Popis obdržených dat}{42}{section.3.1}%
-\contentsline {subsubsection}{Číselníky}{43}{section*.43}%
-\contentsline {subsubsection}{Tabulky transakcí}{45}{section*.45}%
-\contentsline {subsubsection}{Další datové zdroje}{46}{section*.46}%
-\contentsline {section}{\numberline {3.2}Příprava vzorku dat pro další analýzy}{46}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Výběr dat}{47}{subsection.3.2.1}%
-\contentsline {chapter}{\numberline {4}Vizualizace dat}{57}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Popis řešení}{57}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Metriky}{58}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Reporting}{59}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Výsledky}{65}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Korelační analýza}{73}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Postup}{73}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Implementace}{76}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Vstupy a výstupy}{76}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Spuštění analýzy}{78}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Popis funkcí a struktura kódu}{78}{subsection.5.2.3}%
-\contentsline {section}{\numberline {5.3}Výsledky}{86}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Analýza pomocí metody 4ftMiner}{91}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Hypotézy}{93}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Produkty nepopsané korelační analýzou}{98}{section.6.2}%
-\contentsline {chapter}{Závěr}{101}{chapter*.117}%
-\contentsline {chapter}{Literatura}{107}{chapter*.119}%
-\contentsline {chapter}{Přílohy}{111}{chapter*.120}%
-\contentsline {chapter}{\numberline {A}Popis přiložených souborů}{111}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Překlad pojmů z praktické části}{112}{appendix.B}%
+\contentsline {chapter}{\numberline {3}Zpracování dat}{43}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Popis obdržených dat}{43}{section.3.1}%
+\contentsline {subsubsection}{Číselníky}{44}{section*.43}%
+\contentsline {subsubsection}{Tabulky transakcí}{46}{section*.45}%
+\contentsline {subsubsection}{Další datové zdroje}{47}{section*.46}%
+\contentsline {section}{\numberline {3.2}Příprava vzorku dat pro další analýzy}{47}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Výběr dat}{48}{subsection.3.2.1}%
+\contentsline {chapter}{\numberline {4}Vizualizace dat}{58}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Popis řešení}{58}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Metriky}{59}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Reporting}{60}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Výsledky}{66}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Korelační analýza}{74}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Postup}{74}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Implementace}{77}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Vstupy a výstupy}{77}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Spuštění analýzy}{79}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Popis funkcí a struktura kódu}{79}{subsection.5.2.3}%
+\contentsline {section}{\numberline {5.3}Výsledky}{87}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Analýza pomocí metody 4ftMiner}{92}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Hypotézy}{94}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Produkty nepopsané korelační analýzou}{99}{section.6.2}%
+\contentsline {chapter}{Závěr}{102}{chapter*.117}%
+\contentsline {chapter}{Literatura}{108}{chapter*.119}%
+\contentsline {chapter}{Přílohy}{112}{chapter*.120}%
+\contentsline {chapter}{\numberline {A}Popis přiložených souborů}{112}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Překlad pojmů z praktické části}{113}{appendix.B}%
