@@ -26,23 +26,27 @@ Reporting je zpracován v~angličtině, takže i dříve popsané názvy kategor
 
 \subsection{Metriky}
 
-Power BI nabízí uživatelům reportu širokou interakci s~vizuály. Díky metrikám se zobrazené hodnoty přepočítávají podle aktuálních filtrů nebo podle vybraných dat. 
+Power BI nabízí uživatelům reportu širokou interakci s~vizuály. Díky metrikám se zobrazené hodnoty přepočítávají podle aktuálních filtrů nebo podle vybraných dat. Dále je popsán význam vybraných metrik.
 
 \begin{itemize}
     \itemsep-0.3em
     \item     \textbf{Lost Cost} -- Základní metrika s~hodnotou shrinku ze vstupních dat.
+    \item     \textbf{Lost Cost Normalized} -- Průměrná výše shrinku na jednu prodejnu.
     \item     \textbf{Product Share} -- Základní metrika, obsahuje podíl shrinku na tržbách produktu (přímo ze vstupních dat). Pokud je ve vizuálu agregovaná např. na kategorii nebo prodejnu, vypočítá se její průměr.
     \item     \textbf{Share} -- Základní metrika, obsahuje podíl shrinku na tržbách produktu. Pokud je ve vizuálu agregovaná na prodejnu jedná se celkový evidovaný shrink prodejny dělený tržbou dané prodejny. Pokud je agregovaný podle typu shrinku jedná se o podíl součtu hodnot všech záznamů daného typu a tržeb všech prodejen. Bude-li agregace probíhat zároveň na typu shrinku a na kategorii z~úrovně 1, pak je podíl spočítaný vzhledem k~této kategorii typu shrinku zároveň. 
     \item     \textbf{Share on Store Revenue} -- Základní metrika, obsahuje podíl shrinku na celkových tržbách produktu. Tj. pokud je agregace např. podle prodejny a podle kategorie jedná se o podíl všech shrinků produktu z~dané kategorie vydělený celkovými tržbami vybrané prodejny. (Zatímco v~předchozí metrice by se jednalo o tržby pouze za vybranou kategorii.)
-    \item     \textbf{Revenue of Stores} -- Celková tržba prodejny za celé sledované období
+    \item     \textbf{Share on Store Revenue} -- Průměrný podíl shrinku na průměrných celkových tržbách prodejny.
+    \item     \textbf{Revenue of Stores} -- Celková tržba prodejny za celé sledované období.
+    \item     \textbf{Revenue of Stores Normalized} -- Průměrná celková tržba prodejny za sledované období.
     \item     \textbf{Revenue} -- Základní metrika s~hodnotou tržeb prodejny rozdělená podle části měsíce podle kategorií z~úrovně 1 a  ze vstupních dat.
     \item     \textbf{Number of Recorded Shrinks} -- Počet záznamů shrinků.
 \end{itemize}
 
 \subsection{Reporting}
 
-\subsubsection*{Přehled}
+V následující části jsou popsány jednotlivé stránky interaktivního reportu vytvoře-\\ného v~softwaru MS Power BI.
 
+\subsubsection*{Přehled}
 První stránka obsahuje přehled týkající se všech typů shrinků v~rámci kategorie shrinky způsobené škodami, přehled je v~tabulce \ref*{tab:sh:dam} v~kapitole \ref*{ch:shrinky}. Na obr.~\ref*{obr:PBI:overview} je snímek této stránky, pro lepší orientaci při popisu jsem na snímek přidala označující čísla. Na této stránce jsou vyfiltrované všechny kategorie, shrinky i prodejny. V~levé části jsou uvedeny souhrnné informace pro vyfiltrované záznamy (tj. implicitně nic vyfiltrováno není, jedná se o celkové hodnoty) (č. 1). 
 
 Na grafu označeném č. 2, je znázorněno jak velký podíl shrinku na tržbách mají jednotlivé kategorie. Zároveň je barevně označeno, jakou měrou je hodnota zastoupená na malých či velkých prodejnách. Defaultní nastavení vizuálu je zobrazení kategorií úrovně 1, díky funkcionalitě nástroje Power BI je možné postoupit v~hierarchii kategorií níže viz \ref*{obr:PBI:drill}. První graf zobrazuje defaultní pohled, na druhém je vidět výsledek pokud uživatel klikne na ikonu $\downdownarrows$ \emph{přechod k~podrobnostem všech polí}. V~takovém případě se postoupí na další úroveň hierarchie napříč všemi kategoriemi. Třetí graf ukazuje stav, kterého uživatel docílí, pokud zaklikne ikonu $\downarrow$ \emph{přechod k~podrobnostem jednoho pole}\footnote{Anglicky se přechod k~podrobnostem jednoho pole v~nástroji Power BI označuje jako \emph{drill down}.}. V~takovém případě, poté co uživatel klikne na jednu z~kategorií v~grafu (její název nebo příslušný datový pruh), se zobrazí nižší úroveň hierarchie, ale pouze takové kategorie, které jsou podkategorií vybrané kategorie. 
