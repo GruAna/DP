@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1704638993 "c:/Users/uzivatel/Documents/skola/DP/DP_Gruberova.tex" "DP_Gruberova.pdf" "DP_Gruberova" 1704639002
+["pdflatex"] 1704645165 "c:/Users/uzivatel/Documents/skola/DP/DP_Gruberova.tex" "DP_Gruberova.pdf" "DP_Gruberova" 1704645174
   "C:/Users/uzivatel/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1703668710 82686 2381c3433487640bf26aa76a10db7eb2 ""
   "C:/Users/uzivatel/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1667471210 10789789 02d9a8b514ec08d575e4cf0e33c1259e ""
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc" 1256929440 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
@@ -254,14 +254,14 @@
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656233319 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1650047684 2245 c8a4088d07cffc2e5207730c738edd76 ""
   "C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1650047684 20785 71a3d72ab517959a6979c27e6176bec1 ""
-  "DP_Gruberova.aux" 1704639001 40537 e015ae6e73e8f83453952bbf29bf2b59 "pdflatex"
-  "DP_Gruberova.lof" 1704639001 10930 e67402be9482f5132307b34b16ad310e "pdflatex"
-  "DP_Gruberova.lot" 1704639001 2211 a2ac30a7e457fd706ec71b49bd0a52d2 "pdflatex"
-  "DP_Gruberova.out" 1704639001 6886 5021cfe371a42fb86059ce7bbf3d3d20 "pdflatex"
-  "DP_Gruberova.tex" 1704635775 13933 bd1f4c4891d3d63a2776c24f178c3950 ""
-  "DP_Gruberova.toc" 1704639001 4277 be39232276c96702353607d5de84281f "pdflatex"
+  "DP_Gruberova.aux" 1704645173 40537 e015ae6e73e8f83453952bbf29bf2b59 "pdflatex"
+  "DP_Gruberova.lof" 1704645173 10930 e67402be9482f5132307b34b16ad310e "pdflatex"
+  "DP_Gruberova.lot" 1704645173 2211 a2ac30a7e457fd706ec71b49bd0a52d2 "pdflatex"
+  "DP_Gruberova.out" 1704645173 6886 5021cfe371a42fb86059ce7bbf3d3d20 "pdflatex"
+  "DP_Gruberova.tex" 1704645164 13936 7247cd38847a4c63a659af6d031f8e5c ""
+  "DP_Gruberova.toc" 1704645173 4277 be39232276c96702353607d5de84281f "pdflatex"
   "ZadaniDPRadova.pdf" 1704196860 910036 f4f2737e74a00c5b75ea6ad1b4b4e1c1 ""
-  "c:/Users/uzivatel/Documents/skola/DP/DP_Gruberova.tex" 1704635775 13933 bd1f4c4891d3d63a2776c24f178c3950 ""
+  "c:/Users/uzivatel/Documents/skola/DP/DP_Gruberova.tex" 1704645164 13936 7247cd38847a4c63a659af6d031f8e5c ""
   "kapitoly/analyzy_mesic.tex" 1704636264 36545 4249fc7e277504616864d44950d1cfe4 ""
   "kapitoly/cleverminer.tex" 1704547457 39360 f1a67262811ae97e01731740aba6bf5d ""
   "kapitoly/data.tex" 1704375540 13191 12558af44cd6528006d3c0d45e9c836e ""
@@ -336,7 +336,7 @@
   "poznamky.tex" 0 -1 0 ""
   "symbol_cvut_konturova_verze_cb.pdf" 1667468236 11278 cbc829789351b189a368bb313dedba7c ""
   "tex/bibliografie1.tex" 1704196860 10363 d14710380a4cb1c128d7c87fbb541813 ""
-  "tex/makra.tex" 1704638263 27491 59ffcc5483847a4049d165fa87ca702c ""
+  "tex/makra.tex" 1704644992 27491 59ffcc5483847a4049d165fa87ca702c ""
   (generated)
   "DP_Gruberova.aux"
   "DP_Gruberova.lof"
