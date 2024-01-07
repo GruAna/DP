@@ -85,10 +85,18 @@ Pro výpočet korelačního koeficientu je ještě třeba ověřit předpoklady.
 
 \section{Implementace}
 
-V~této části je uveden přesný postup pro získání kategorizace produktů. Kód je napsaný v~jazyce Python verze 3.9. Součástí kódu je výběr kategorií, které jsou zkoumány, propojení dat shrinků, prodejů a promoakcí, výpočet korelace a ověření předpokladů, statistické testování a rozřazení produktů.
+V~této části je uveden přesný postup pro získání kategorizace produktů. Kód je napsaný v~jazyce Python verze 3.9. Součástí kódu je výběr kategorií, které jsou zkoumány, propojení dat shrinků, prodejů a promoakcí, výpočet korelace a ověření předpokladů, statistické testování a rozřazení produktů. Na obrázku 
+ \ref{obr:flowchartUML} je UML diagram, který znázorňuje implementovaný postup pro ohodnocení shrinkovaných produktů. 
+
+\begin{figure}[h!]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=0.90\textwidth]{obrazky/flowchart1.pdf}
+    \caption{Diagram aktivit znázorňující navržený postup pro kategorizaci\\  produktů vzhledem k jejich shrinku.}
+    \label{obr:flowchartUML}
+\end{figure}
 
 % UML diagram pro analýzu.
-
 \subsection{Vstupy a výstupy}
 \label{ss:vstupyvystupy}
 
@@ -149,10 +157,9 @@ Kód pro korelační analýzu je umístěn ve složce \texttt{shrink\_categoriza
     \label{obr:strukturaslozky}
 \end{figure}
 
-Funkce jsou rozčleněny do modulů podle toho, na jaký výpočet jsou zaměřené. Každá funkce má je zdokumentovaná pomocí docstring obsaženého ve své definici. Dokumentace funkce se skládá ze stručného popisu, co funkce dělá, jaké má vstupní parametry a jaký je jejich význam a co funkce vrací. Funkce jsou otestované pomocí unit testů.
-
-Pro práci s~tabulkovými daty, které jsou hlavním vstupem, jsem použila balíček \emph{pandas} jazyka Python. 
+Funkce jsou rozčleněny do modulů podle toho, na jaký výpočet jsou zaměřené. Každá funkce má je zdokumentovaná pomocí docstring obsaženého ve své definici. Dokumentace funkce se skládá ze stručného popisu, co funkce dělá, jaké má vstupní parametry a jaký je jejich význam a co funkce vrací. 
 Pro otestování důležitých funkcí jsem použila knihovnu \emph{pytest}. 
+Pro práci s~tabulkovými daty, které jsou hlavním vstupem, jsem použila balíček \emph{pandas} jazyka Python. 
 
 
 % \emph{V~závorce je nástin toho, co budu popisovat (TBD)}

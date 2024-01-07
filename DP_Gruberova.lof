@@ -53,17 +53,18 @@
 \contentsline {figure}{\numberline {4.22}{\ignorespaces Power BI report -- Ztracené náklady (hodnota shrinku) vs Podíl shrinku produktu na tržbách produktu. Velikost bodů odpovídá počtu záznamů.\relax }}{72}{figure.caption.90}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Kategorizace produktů podle korelace hodnoty shrinku s~tržbami.\relax }}{75}{figure.caption.91}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Struktura souborů pro kód zpracovávající korelační analýzu.\relax }}{78}{figure.caption.92}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Počet produktů z~kategorie Masné výrobky -- pultový prodej roztříděné pomocí korelační analýzy v~závislosti na různých ukazatelích.\relax }}{87}{figure.caption.103}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Počet produktů z~kategorie Slané pečivo roztříděné pomocí korelační analýzy v~závislosti na různých ukazatelích.\relax }}{87}{figure.caption.104}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Počet produktů z~kategorie Plodová zelenina roztříděné pomocí korelační analýzy v~závislosti na různých ukazatelích.\relax }}{88}{figure.caption.105}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Závislost mezi tržbami produktu a tržbami ostatních produktů v~kategorii během promoakce (Masné výrobky -- pultový prodej).\relax }}{88}{figure.caption.106}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Vizualizace výsledků rozdělení přiřazených kategorií pro kategorii produktů Masné výrobky -- pultový prodej.\relax }}{89}{figure.caption.107}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Diagram aktivit znázorňující navržený postup pro kategorizaci produktů vzhledem k jejich shrinku.\relax }}{77}{figure.caption.92}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Struktura souborů pro kód zpracovávající korelační analýzu.\relax }}{79}{figure.caption.93}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Počet produktů z~kategorie Masné výrobky -- pultový prodej roztříděné pomocí korelační analýzy v~závislosti na různých ukazatelích.\relax }}{88}{figure.caption.104}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Počet produktů z~kategorie Slané pečivo roztříděné pomocí korelační analýzy v~závislosti na různých ukazatelích.\relax }}{88}{figure.caption.105}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Počet produktů z~kategorie Plodová zelenina roztříděné pomocí korelační analýzy v~závislosti na různých ukazatelích.\relax }}{89}{figure.caption.106}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Závislost mezi tržbami produktu a tržbami ostatních produktů v~kategorii během promoakce (Masné výrobky -- pultový prodej).\relax }}{89}{figure.caption.107}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Vizualizace výsledků rozdělení přiřazených kategorií pro kategorii produktů Masné výrobky -- pultový prodej.\relax }}{90}{figure.caption.108}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Histogram pro hodnoty velikosti shrinku v~peněžních jednotkách.\relax }}{91}{figure.caption.108}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Histogram pro hodnoty objemu shrinku v~kusech.\relax }}{91}{figure.caption.108}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Histogram podílu shrinku na tržbách shrinkovaného produktu.\relax }}{91}{figure.caption.109}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Histogram podílu shrinku a tržeb v~kategorii úrovně 1.\relax }}{91}{figure.caption.109}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Histogram podílu shrinku na celkových tržbách prodejny.\relax }}{91}{figure.caption.110}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Histogram pro hodnoty velikosti shrinku v~peněžních jednotkách.\relax }}{92}{figure.caption.109}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Histogram pro hodnoty objemu shrinku v~kusech.\relax }}{92}{figure.caption.109}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Histogram podílu shrinku na tržbách shrinkovaného produktu.\relax }}{92}{figure.caption.110}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Histogram podílu shrinku a tržeb v~kategorii úrovně 1.\relax }}{92}{figure.caption.110}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Histogram podílu shrinku na celkových tržbách prodejny.\relax }}{92}{figure.caption.111}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

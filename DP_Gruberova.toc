@@ -41,14 +41,14 @@
 \contentsline {section}{\numberline {5.1}Postup}{73}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Implementace}{76}{section.5.2}%
 \contentsline {subsection}{\numberline {5.2.1}Vstupy a výstupy}{76}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Spuštění analýzy}{77}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Popis funkcí a struktura kódu}{77}{subsection.5.2.3}%
-\contentsline {section}{\numberline {5.3}Výsledky}{85}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Analýza pomocí metody 4ftMiner}{90}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Hypotézy}{90}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Produkty nepopsané korelační analýzou}{97}{section.6.2}%
-\contentsline {chapter}{Závěr}{100}{chapter*.116}%
-\contentsline {chapter}{Literatura}{106}{chapter*.118}%
-\contentsline {chapter}{Přílohy}{110}{chapter*.119}%
-\contentsline {chapter}{\numberline {A}Popis přiložených souborů}{110}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Překlad pojmů z praktické části}{111}{appendix.B}%
+\contentsline {subsection}{\numberline {5.2.2}Spuštění analýzy}{78}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Popis funkcí a struktura kódu}{78}{subsection.5.2.3}%
+\contentsline {section}{\numberline {5.3}Výsledky}{86}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Analýza pomocí metody 4ftMiner}{91}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Hypotézy}{91}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Produkty nepopsané korelační analýzou}{98}{section.6.2}%
+\contentsline {chapter}{Závěr}{101}{chapter*.117}%
+\contentsline {chapter}{Literatura}{107}{chapter*.119}%
+\contentsline {chapter}{Přílohy}{111}{chapter*.120}%
+\contentsline {chapter}{\numberline {A}Popis přiložených souborů}{111}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Překlad pojmů z praktické části}{112}{appendix.B}%
