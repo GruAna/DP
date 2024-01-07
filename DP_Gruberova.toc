@@ -13,17 +13,17 @@
 \contentsline {subsection}{\numberline {2.1.1}Analýza hlavních komponent}{24}{subsection.2.1.1}%
 \contentsline {subsubsection}{Princip}{24}{section*.24}%
 \contentsline {subsection}{\numberline {2.1.2}Korespondenční analýza}{26}{subsection.2.1.2}%
-\contentsline {subsubsection}{Značení}{26}{section*.26}%
+\contentsline {subsubsection}{Značení}{27}{section*.26}%
 \contentsline {subsubsection}{Výpočetní algoritmus základní korespondeční analýzy}{27}{section*.27}%
 \contentsline {section}{\numberline {2.2}Korelační analýza}{28}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Korelační koeficient}{28}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Další způsoby měření závislosti}{29}{subsection.2.2.2}%
 \contentsline {section}{\numberline {2.3}Metoda GUHA}{31}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Základní princip metody}{31}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.1}Základní princip metody}{32}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Důležité pojmy}{32}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}Procedury}{34}{subsection.2.3.3}%
-\contentsline {section}{\numberline {2.4}Nástroje}{36}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Python -- Jupyter Notebook}{36}{subsection.2.4.1}%
+\contentsline {section}{\numberline {2.4}Nástroje}{37}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Python -- Jupyter Notebook}{37}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}Power BI}{37}{subsection.2.4.2}%
 \contentsline {chapter}{\numberline {3}Zpracování dat}{42}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Popis obdržených dat}{42}{section.3.1}%
@@ -45,7 +45,7 @@
 \contentsline {subsection}{\numberline {5.2.3}Popis funkcí a struktura kódu}{78}{subsection.5.2.3}%
 \contentsline {section}{\numberline {5.3}Výsledky}{86}{section.5.3}%
 \contentsline {chapter}{\numberline {6}Analýza pomocí metody 4ftMiner}{91}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Hypotézy}{91}{section.6.1}%
+\contentsline {section}{\numberline {6.1}Hypotézy}{93}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Produkty nepopsané korelační analýzou}{98}{section.6.2}%
 \contentsline {chapter}{Závěr}{101}{chapter*.117}%
 \contentsline {chapter}{Literatura}{107}{chapter*.119}%

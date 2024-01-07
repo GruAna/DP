@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  7 JAN 2024 17:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  7 JAN 2024 17:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1096,63 +1096,63 @@ Overfull \hbox (9.77362pt too wide) in paragraph at lines 71--85
 )) (kapitoly/metody.tex [22] [23]
 Kapitola 2.
 
-Overfull \hbox (2.02165pt too wide) in paragraph at lines 16--17
+Overfull \hbox (2.02165pt too wide) in paragraph at lines 17--18
 \OT1/lmr/m/n/12 Anal^^Syza hlavn^^S^^Pch kom-po-nent (an-g-licky \OT1/lmr/m/it/12 Prin-ci-pal com-po-nent ana-ly-sis\OT1/lmr/m/n/12 , d^^Sale jako PCA)
  []
 
 [24
 
 ]
-Overfull \hbox (5.22092pt too wide) in paragraph at lines 68--71
+Overfull \hbox (5.22092pt too wide) in paragraph at lines 69--72
 \OT1/lmr/m/n/12 se vypo^^Tcte ob-dobn^^Sym zp^^Wusobem s p^^Tridanou podm^^S^^Pnkou or-to-go-na-lity vzhle-dem k prvn^^S^^P
  []
 
-<obrazky/PCA.pdf, id=470, 231.74579pt x 167.6664pt>
+<obrazky/PCA.pdf, id=467, 231.74579pt x 167.6664pt>
 File: obrazky/PCA.pdf Graphic file (type pdf)
 <use obrazky/PCA.pdf>
-Package pdftex.def Info: obrazky/PCA.pdf  used on input line 74.
+Package pdftex.def Info: obrazky/PCA.pdf  used on input line 75.
 (pdftex.def)             Requested size: 298.75262pt x 216.16772pt.
 [25] [26 <./obrazky/PCA.pdf>] [27] [28] [29] [30] [31]
 <obrazky/GUHA/GUHA1.pdf, id=605, 209.8239pt x 62.15219pt>
 File: obrazky/GUHA/GUHA1.pdf Graphic file (type pdf)
 <use obrazky/GUHA/GUHA1.pdf>
-Package pdftex.def Info: obrazky/GUHA/GUHA1.pdf  used on input line 277.
+Package pdftex.def Info: obrazky/GUHA/GUHA1.pdf  used on input line 278.
 (pdftex.def)             Requested size: 213.39566pt x 63.21324pt.
 <obrazky/GUHA/GUHA2.pdf, id=607, 210.7875pt x 94.4328pt>
 File: obrazky/GUHA/GUHA2.pdf Graphic file (type pdf)
 <use obrazky/GUHA/GUHA2.pdf>
-Package pdftex.def Info: obrazky/GUHA/GUHA2.pdf  used on input line 287.
+Package pdftex.def Info: obrazky/GUHA/GUHA2.pdf  used on input line 288.
 (pdftex.def)             Requested size: 213.39566pt x 95.60258pt.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 301.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 302.
  (C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [32 <./obrazky/GUHA/GUHA1.pdf> <./obrazky/GUHA/GUHA2.pdf>]
-Overfull \hbox (3.38776pt too wide) in paragraph at lines 332--334
+Overfull \hbox (3.38776pt too wide) in paragraph at lines 333--335
 \OT1/lmr/m/n/12 atri-but. $\OML/lmm/m/it/12 '$ \OT1/lmr/m/n/12 se naz^^Syv^^Sa \OT1/lmr/m/it/12 an-te-ce-dent \OT1/lmr/m/n/12 a $\OML/lmm/m/it/12 ^^^$ \OT1/lmr/m/it/12 suk-ce-dent[][][]\OT1/lmr/m/n/12 . Sym-bol $\OMS/lmsy/m/n/12 ^^Y$ \OT1/lmr/m/n/12 od-pov^^S^^Pd^^Sa \OT1/lmr/m/it/12 4ft-kvantifik^^Satoru\OT1/lmr/m/n/12 ,
  []
 
 
-Overfull \hbox (6.75342pt too wide) in paragraph at lines 335--336
+Overfull \hbox (6.75342pt too wide) in paragraph at lines 336--337
 \OT1/lmr/m/n/12 d^^Sana ma-tice vstupn^^S^^Pch dat $\OT1/lmr/bx/n/12 M$\OT1/lmr/m/n/12 , an-te-ce-dent $\OML/lmm/m/it/12 '$\OT1/lmr/m/n/12 , suk-ce-dent $\OML/lmm/m/it/12  $\OT1/lmr/m/n/12 . Pak \OT1/lmr/m/it/12 4ft-tabulka $[]\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 ';  ; \OT1/lmr/bx/n/12 M\OT1/lmr/m/n/12 )$
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 348.
+(Font)              <10.95> on input line 349.
 [33]
-LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 383.
+LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 384.
  (C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [34] (C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+) [34] [35] (C:\Users\uzivatel\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 434.
- [35] [36]
-Overfull \hbox (8.48395pt too wide) in paragraph at lines 498--499
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 435.
+ [36]
+Overfull \hbox (8.48395pt too wide) in paragraph at lines 501--502
 \OT1/lmr/m/n/12 zm^^Tenit hdo-notu exis-tuj^^S^^Pc^^S^^Pch dat v ta-bulce. V sekci mo-del se nach^^Saz^^S^^P gra-fick^^Se zn^^Sazorn^^Ten^^S^^P
  []
 
 
-Overfull \hbox (1.17906pt too wide) in paragraph at lines 498--499
+Overfull \hbox (1.17906pt too wide) in paragraph at lines 501--502
 \OT1/lmr/m/n/12 da-tov^^Seho mo-delu v^^Tcetn^^Te vztah^^Wu mezi jed-not-lic^^Symi ta-bul-kami a je-jich sloupci. u^^Tzivatel
  []
 
@@ -1160,47 +1160,55 @@ Overfull \hbox (1.17906pt too wide) in paragraph at lines 498--499
 <obrazky/PBIteorie/query-overview-with-data-connection.png, id=728, 923.70094pt x 450.9347pt>
 File: obrazky/PBIteorie/query-overview-with-data-connection.png Graphic file (type png)
 <use obrazky/PBIteorie/query-overview-with-data-connection.png>
-Package pdftex.def Info: obrazky/PBIteorie/query-overview-with-data-connection.png  used on input line 513.
+Package pdftex.def Info: obrazky/PBIteorie/query-overview-with-data-connection.png  used on input line 516.
 (pdftex.def)             Requested size: 426.79134pt x 208.35449pt.
- [38 <./obrazky/PBIteorie/query-overview-with-data-connection.png>]
-<obrazky/PBIteorie/sloupcove_grafy.png, id=738, 245.9589pt x 95.8782pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[38]
+<obrazky/PBIteorie/sloupcove_grafy.png, id=737, 245.9589pt x 95.8782pt>
 File: obrazky/PBIteorie/sloupcove_grafy.png Graphic file (type png)
 <use obrazky/PBIteorie/sloupcove_grafy.png>
-Package pdftex.def Info: obrazky/PBIteorie/sloupcove_grafy.png  used on input line 537.
+Package pdftex.def Info: obrazky/PBIteorie/sloupcove_grafy.png  used on input line 540.
 (pdftex.def)             Requested size: 426.79134pt x 166.38193pt.
- [39 <./obrazky/PBIteorie/sloupcove_grafy.png>]
-<obrazky/PBIteorie/power-bi-compare-charts.png, id=750, 652.4375pt x 222.8325pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[39 <./obrazky/PBIteorie/query-overview-with-data-connection.png>]
+<obrazky/PBIteorie/power-bi-compare-charts.png, id=747, 652.4375pt x 222.8325pt>
 File: obrazky/PBIteorie/power-bi-compare-charts.png Graphic file (type png)
 <use obrazky/PBIteorie/power-bi-compare-charts.png>
-Package pdftex.def Info: obrazky/PBIteorie/power-bi-compare-charts.png  used on input line 548.
+Package pdftex.def Info: obrazky/PBIteorie/power-bi-compare-charts.png  used on input line 551.
 (pdftex.def)             Requested size: 384.10959pt x 131.19122pt.
-<obrazky/PBIteorie/power-bi-treemap-category-tooltip.png, id=753, 297.11pt x 161.60374pt>
+<obrazky/PBIteorie/power-bi-treemap-category-tooltip.png, id=750, 297.11pt x 161.60374pt>
 File: obrazky/PBIteorie/power-bi-treemap-category-tooltip.png Graphic file (type png)
 <use obrazky/PBIteorie/power-bi-treemap-category-tooltip.png>
-Package pdftex.def Info: obrazky/PBIteorie/power-bi-treemap-category-tooltip.png  used on input line 565.
+Package pdftex.def Info: obrazky/PBIteorie/power-bi-treemap-category-tooltip.png  used on input line 568.
 (pdftex.def)             Requested size: 170.71393pt x 92.85732pt.
-<obrazky/PBIteorie/kartastoresSFF.png, id=756, 43.6029pt x 26.9808pt>
+<obrazky/PBIteorie/kartastoresSFF.png, id=753, 43.6029pt x 26.9808pt>
 File: obrazky/PBIteorie/kartastoresSFF.png Graphic file (type png)
 <use obrazky/PBIteorie/kartastoresSFF.png>
-Package pdftex.def Info: obrazky/PBIteorie/kartastoresSFF.png  used on input line 573.
+Package pdftex.def Info: obrazky/PBIteorie/kartastoresSFF.png  used on input line 576.
 (pdftex.def)             Requested size: 85.35696pt x 52.819pt.
-<obrazky/PBIteorie/power-bi-expansion-state.png, id=757, 354.123pt x 184.2885pt>
+<obrazky/PBIteorie/power-bi-expansion-state.png, id=754, 354.123pt x 184.2885pt>
 File: obrazky/PBIteorie/power-bi-expansion-state.png Graphic file (type png)
 <use obrazky/PBIteorie/power-bi-expansion-state.png>
-Package pdftex.def Info: obrazky/PBIteorie/power-bi-expansion-state.png  used on input line 581.
+Package pdftex.def Info: obrazky/PBIteorie/power-bi-expansion-state.png  used on input line 584.
 (pdftex.def)             Requested size: 170.71393pt x 88.84271pt.
 
-Overfull \hbox (14.61534pt too wide) in paragraph at lines 562--585
+Overfull \hbox (14.61534pt too wide) in paragraph at lines 565--588
  []$[]$|  $[]$|  $[]$ 
  []
 
-[40 <./obrazky/PBIteorie/power-bi-compare-charts.png> <./obrazky/PBIteorie/power-bi-treemap-category-tooltip.png> <./obrazky/PBIteorie/kartastoresSFF.png> <./obrazky/PBIteorie/power-bi-expansion-state.png>]
-<obrazky/PBIteorie/power-bi-drill-path.png, id=769, 434.37282pt x 93.34875pt>
+[40 <./obrazky/PBIteorie/sloupcove_grafy.png> <./obrazky/PBIteorie/power-bi-compare-charts.png>]
+<obrazky/PBIteorie/power-bi-drill-path.png, id=766, 434.37282pt x 93.34875pt>
 File: obrazky/PBIteorie/power-bi-drill-path.png Graphic file (type png)
 <use obrazky/PBIteorie/power-bi-drill-path.png>
-Package pdftex.def Info: obrazky/PBIteorie/power-bi-drill-path.png  used on input line 594.
+Package pdftex.def Info: obrazky/PBIteorie/power-bi-drill-path.png  used on input line 597.
 (pdftex.def)             Requested size: 384.10959pt x 82.55167pt.
-) (poznamky.tex) (kapitoly/data.tex [41 <./obrazky/PBIteorie/power-bi-drill-path.png (PNG copy)>]
+) (poznamky.tex) (kapitoly/data.tex [41 <./obrazky/PBIteorie/power-bi-treemap-category-tooltip.png> <./obrazky/PBIteorie/kartastoresSFF.png> <./obrazky/PBIteorie/power-bi-expansion-state.png> <./obrazky/PBIteorie/power-bi-drill-path.png (PNG copy)>]
 Kapitola 3.
 [42
 
@@ -1691,140 +1699,140 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: Text page 92 contains only floats.
 
-[92 <./obrazky/grafy/histogram/newplot(2).png> <./obrazky/grafy/histogram/newplot(1).png> <./obrazky/grafy/histogram/newplot.png> <./obrazky/grafy/histogram/newplot(3).png> <./obrazky/grafy/histogram/newplot(4).png>]
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
+[92 <./obrazky/grafy/histogram/newplot(2).png> <./obrazky/grafy/histogram/newplot(1).png> <./obrazky/grafy/histogram/newplot.png> <./obrazky/grafy/histogram/newplot(3).png> <./obrazky/grafy/histogram/newplot(4).png>] [93]
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
 []|\OT1/lmr/m/n/12 weekday(0) $\OMS/lmsy/m/n/12 ^$ \OT1/lmr/m/n/12 promo(after[]promo) $\OMS/lmsy/m/n/12 )$
  []
 
 
-Underfull \hbox (badness 2285) in paragraph at lines 127--128
+Underfull \hbox (badness 2285) in paragraph at lines 129--130
 []|\OT1/lmr/m/n/12 weekday(0, 1) $\OMS/lmsy/m/n/12 ^$ \OT1/lmr/m/n/12 promo(after[]promo) $\OMS/lmsy/m/n/12 )$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
 []|\OT1/lmr/m/n/12 weekday(1) $\OMS/lmsy/m/n/12 ^$ \OT1/lmr/m/n/12 promo(after[]promo) $\OMS/lmsy/m/n/12 )$
  []
 
 
-Underfull \hbox (badness 2285) in paragraph at lines 130--131
+Underfull \hbox (badness 2285) in paragraph at lines 132--133
 []|\OT1/lmr/m/n/12 weekday(1, 2) $\OMS/lmsy/m/n/12 ^$ \OT1/lmr/m/n/12 promo(after[]promo) $\OMS/lmsy/m/n/12 )$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--133
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
 []|\OT1/lmr/m/n/12 weekday(2) $\OMS/lmsy/m/n/12 ^$ \OT1/lmr/m/n/12 promo(after[]promo) $\OMS/lmsy/m/n/12 )$
  []
 
 
-Underfull \hbox (badness 2285) in paragraph at lines 133--134
+Underfull \hbox (badness 2285) in paragraph at lines 135--136
 []|\OT1/lmr/m/n/12 weekday(2, 3) $\OMS/lmsy/m/n/12 ^$ \OT1/lmr/m/n/12 promo(after[]promo) $\OMS/lmsy/m/n/12 )$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 134--135
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
 []|\OT1/lmr/m/n/12 weekday(3) $\OMS/lmsy/m/n/12 ^$ \OT1/lmr/m/n/12 promo(after[]promo) $\OMS/lmsy/m/n/12 )$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
 []|\OT1/lmr/m/n/12 weekday(6) $\OMS/lmsy/m/n/12 ^$ \OT1/lmr/m/n/12 promo(after[]promo) $\OMS/lmsy/m/n/12 )$
  []
 
-[93]
-Overfull \hbox (9.86154pt too wide) in paragraph at lines 148--149
+
+Overfull \hbox (9.86154pt too wide) in paragraph at lines 150--151
 \OT1/lmr/m/n/12 o^^Tcek^^Savan^^Sych pro-dej^^Wu. T^^Syk^^Sa se to p^^Tredev^^Ts^^S^^Pm z^^Sasobov^^San^^S^^P masn^^Sych v^^Syrobk^^Wu prod^^Savan^^Sych
  []
 
 [94] [95]
-Overfull \hbox (0.39009pt too wide) in paragraph at lines 208--209
+Overfull \hbox (0.39009pt too wide) in paragraph at lines 210--211
 \OT1/lmr/m/n/12 do-stupn^^Sych m^^S^^Pstech pro-dejny a m^^Tela by b^^Syt pra-vi-deln^^Te dopl^^Tnov^^Sana na m^^S^^Psto um^^S^^Pst^^Ten^^S^^P
  []
 
-
-Overfull \hbox (7.77353pt too wide) in paragraph at lines 235--240
+[96]
+Overfull \hbox (7.77353pt too wide) in paragraph at lines 237--242
 \OT1/lmr/m/n/12 mezi 10-40 %. Cukr^^Sa^^Trsk^^Se v^^Syrobky maj^^S^^P pod^^S^^Pl shrinku v 74 % za-zna-me-nan^^Sych p^^Tr^^S^^Ppadech
  []
 
-[96] [97]
-Underfull \hbox (badness 10000) in paragraph at lines 299--299
+[97]
+Underfull \hbox (badness 10000) in paragraph at lines 301--301
 []|\OT1/lmr/m/n/12 Typ pro-mo-akce a den
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--302
+Underfull \hbox (badness 10000) in paragraph at lines 303--304
 []|\OT1/lmr/m/n/12 Kategorie: Masn^^Se v^^Syrobky,
  []
 
 
-Underfull \hbox (badness 5302) in paragraph at lines 302--302
+Underfull \hbox (badness 5302) in paragraph at lines 304--304
 []|[]\OT1/lmr/m/n/12 Cetnost vy-ha-zov^^San^^S^^P podle
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 302--303
+Underfull \hbox (badness 10000) in paragraph at lines 304--305
 []|\OT1/lmr/m/n/12 Kategorie: Masn^^Se v^^Syrobky,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--304
+Underfull \hbox (badness 10000) in paragraph at lines 305--306
 []|\OT1/lmr/m/n/12 N^^Sakladn^^Sa ka-te-go-rie: Ryby,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--304
+Underfull \hbox (badness 10000) in paragraph at lines 305--306
 []\OT1/lmr/m/n/12 Cerven^^Se maso, Pul-tov^^Se
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--304
+Underfull \hbox (badness 10000) in paragraph at lines 306--306
 []|\OT1/lmr/m/n/12 Pod^^S^^Pl shrinku na sv^^Sych
  []
 
 
-Underfull \hbox (badness 1205) in paragraph at lines 304--304
+Underfull \hbox (badness 1205) in paragraph at lines 306--306
 \OT1/lmr/m/n/12 tr^^Tzb^^Sach pro ka-te-go-rie pro-
  []
 
 
-Underfull \hbox (badness 1418) in paragraph at lines 304--305
+Underfull \hbox (badness 1418) in paragraph at lines 306--307
 []|\OT1/lmr/m/n/12 Kategorie s vy^^Ts^^Ts^^S^^Pm pod^^S^^Plem:
  []
 
 
-Underfull \hbox (badness 7064) in paragraph at lines 304--305
+Underfull \hbox (badness 7064) in paragraph at lines 306--307
 \OT1/lmr/m/n/12 v^^Syrobky, Jo-gurty, Ka-te-go-rie
  []
 
 
-Underfull \hbox (badness 4205) in paragraph at lines 305--305
+Underfull \hbox (badness 4205) in paragraph at lines 307--307
 []|\OT1/lmr/m/n/12 Pod^^S^^Pl shrinku na tr^^Tzb^^Sach
  []
 
 
-Underfull \hbox (badness 1622) in paragraph at lines 306--306
+Underfull \hbox (badness 1622) in paragraph at lines 308--308
 []|\OT1/lmr/m/n/12 Den z^^Saznamu m^^Sa vliv na
  []
 
 
-Underfull \hbox (badness 2799) in paragraph at lines 306--307
+Underfull \hbox (badness 2799) in paragraph at lines 308--309
 []|\OT1/lmr/m/n/12 Pravidlo na-le-zeno pro velk^^Se
  []
 
 
-Overfull \hbox (3.48381pt too wide) in paragraph at lines 296--312
+Overfull \hbox (3.48381pt too wide) in paragraph at lines 298--314
  [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Overfull \hbox (22.62723pt too wide) in paragraph at lines 321--326
+[98]
+Overfull \hbox (22.62723pt too wide) in paragraph at lines 323--328
 []\OT1/lmr/m/n/12 Antecedent aso-cia^^Tcn^^S^^Pho pra-vi-dla ob-sa-huje bo-o-lovsk^^Se atri-buty: $\OML/lmm/m/it/12 '[]$ \OT1/lmr/m/n/12 , $\OML/lmm/m/it/12 '[]$
  []
 
-[98] [99]) [100] (kapitoly/zaver.tex [101
+[99]) [100] (kapitoly/zaver.tex [101
 
 ]) [102] (DP_Gruberova.lof
 Overfull \hbox (15.00342pt too wide) in paragraph at lines 13--13
@@ -2022,13 +2030,13 @@ Package rerunfilecheck Info: File `DP_Gruberova.out' has not changed.
 Here is how much of TeX's memory you used:
  30072 strings out of 475380
  559906 string characters out of 2775356
- 1635547 words of memory out of 3000000
+ 1634102 words of memory out of 3000000
  50316 multiletter control sequences out of 15000+600000
  564646 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,19n,94p,2358b,2310s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 99i,19n,94p,2358b,2196s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}<C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmib10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri7.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt8.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/uzivatel/AppData/Local/Programs/MiKTeX/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on DP_Gruberova.pdf (113 pages, 5424017 bytes).
+Output written on DP_Gruberova.pdf (113 pages, 5424147 bytes).
 PDF statistics:
  1780 PDF objects out of 2073 (max. 8388607)
  463 named destinations out of 1000 (max. 500000)

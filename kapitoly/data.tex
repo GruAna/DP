@@ -18,8 +18,8 @@ Základní číselník s~údaji o produktech, se nachází v~tabulce \emph{produ
 
 \begin{itemize}
     \itemsep0em 
-    \item \textbf{ID produktu}
-    \item \textbf{ID prodejní varianty} -- Určuje o jaký typ balení daného produktu se jedná    
+    \item \textbf{ID produktu} -- Označení produktu.
+    \item \textbf{ID prodejní varianty} -- Určuje o jaký typ balení daného produktu se jedná.
     % \item \textbf{Expirace} -- Expirace produktu ve dnech (hodnoty 0, 999 a NULL označují neomezenou expiraci)
     \item \textbf{ID kategorie} -- Kategorie produktu v~číselné struktuře (pro lepší interpretaci, o jakou kategorii zboží se jedná, je vhodnější použít strukturu podle úrovní, kterou lze získat napojením na tabulku \emph{produkt\_kategorie}.)
     \item \textbf{Aktivní} --  Zda je tento produkt stále aktivní v~portfoliu, nebo se jedná o produkt, který se již neprodává
@@ -62,7 +62,7 @@ kde $m$ je hmotnost produktu. Ze vzorce vyplývá, že může vyjít neceločís
 Číselník prodejen je obsažen v~tabulce \emph{prodejny}. Vybrala jsem z~tabulky následující sloupce. Opět bylo třeba vybrat pouze ty prodejny, které jsou aktivní.
 \begin{itemize}
     \itemsep0em 
-    \item \textbf{ID prodejny} -- Označení prodejny nebo skladu
+    \item \textbf{ID prodejny} -- Označení prodejny nebo skladu.
     \item \textbf{Název} -- Název prodejny, který obsahuje název města, kde se prodejna nachází.
     \item \textbf{ID kategorie prodejny} -- Do jaké kategorie prodejna nebo sklad patří - zda se jedná o malou nebo velkou prodejnu nebo o sklad. Zavřené prodejny mají hodnotu v~tomto sloupci prázdnou.
 \end{itemize}
@@ -70,7 +70,7 @@ kde $m$ je hmotnost produktu. Ze vzorce vyplývá, že může vyjít neceločís
 S číselníkem prodejen souvisí číselník pro jejich zařazení do skupin \emph{prodejny\_skupiny}. Skupiny se mohou v~čase měnit. Pro analýzu jsou relevantní tyto sloupce:
 \begin{itemize}
     \itemsep0em 
-    \item \textbf{ID prodejny} -- Označení prodejny nebo skladu
+    \item \textbf{ID prodejny} -- Označení prodejny nebo skladu.
     \item \textbf{ID skupiny prodejen} -- Prodejny jsou sdruženy do skupin. Ty se například používají pro hromadné objednávání, nebo pro plánování promoakcí. 
 \end{itemize}    
 
